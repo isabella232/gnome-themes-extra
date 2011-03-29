@@ -1188,6 +1188,7 @@ PanelApplet GtkToggleButton:prelight {
 
 NaTrayApplet {
     -NaTrayApplet-icon-padding: 12;
+    -NaTrayApplet-icon-size: 16;
 }
 
 WnckPager, WnckTasklist {
