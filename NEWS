@@ -1,3 +1,9 @@
+3.0.0
+=====
+
+Don't propagate an 1px separator width to the whole toolbar
+Add icon-size property for NaTrayApplet
+
 2.91.93
 =======
 
