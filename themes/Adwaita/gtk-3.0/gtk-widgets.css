@@ -970,7 +970,7 @@ GtkIconView.view.cell:selected:focused {
 }
 
 .view {
-    background-color: @theme_bg_color;
+    background-color: shade (@theme_base_color, 0.96);
     color: @theme_fg_color;
     border-radius: 0;
     border-width: 3;
@@ -1127,7 +1127,7 @@ GtkCalendar.highlight {
 
 .sidebar,
 .sidebar.view {
-    background-color: shade (@theme_base_color, 0.95);
+    background-color: shade (@theme_bg_color, 0.99);
 }
 
 ApDocView, /* Abiword */
