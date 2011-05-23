@@ -1,3 +1,10 @@
+3.0.2
+=====
+Reduce padding in WM decorations
+Fix fallback Metacity WM theme
+Fix maximized windows WM decorations
+Add a missing cairo_restore() call
+
 3.0.1
 =====
 Reduce vertical padding for most of the common widgets, requires GTK+ 3.0.9
