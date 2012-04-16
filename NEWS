@@ -1,3 +1,13 @@
+3.4.1
+=====
+
+Fix text shadow on active GtkLinkButton state and Documents selection toolbar
+Fix opaque background for tooltips children
+Fix text spacing in progress bars
+Fix cell renderer progress bar border rendering
+Fix double background in fallback panel menuitem images
+Fix insensitive state for treeview column header buttons
+
 3.4.0
 =====
 
