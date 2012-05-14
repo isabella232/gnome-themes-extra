@@ -1,3 +1,10 @@
+3.4.2
+=====
+
+Fix gnome-contacts' toolbar separator line
+Fix Nautilus' inactive pane background color
+Don't generate GTK icon cache when DESTDIR is set
+
 3.4.1
 =====
 
