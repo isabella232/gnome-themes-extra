@@ -631,6 +631,66 @@ GtkProgressBar.vertical:backdrop,
     background-color: @unfocused_dark_bg;
 }
 
+/* level bars as used for password quality or remaining power */
+GtkLevelBar {
+    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-height: 3;
+}
+
+GtkLevelBar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+}
+
+.level-bar.trough {
+    background-image: none;
+    background-color: @theme_base_color;
+
+    border-image: none;
+    border-color: darker(@borders);
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+
+    padding: 2px;
+}
+
+.level-bar.fill-block {
+    border-width: 1px;
+    border-style: solid;
+
+    border-color: darker(@theme_selected_bg_color);
+    background-color: @theme_selected_bg_color;
+}
+
+.level-bar.indicator-continuous.fill-block {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.level-bar.indicator-discrete.fill-block.horizontal {
+    margin: 0 1px;
+}
+
+.level-bar.indicator-discrete.fill-block.vertical {
+    margin: 1px 0;
+}
+
+.level-bar.fill-block.level-high {
+    border-color: darker(@success_color);
+    background-color: @success_color;
+}
+
+.level-bar.fill-block.level-low {
+    border-color: darker(@warning_bg_color);
+    background-color: @warning_bg_color;
+}
+
+.level-bar.fill-block.empty-fill-block {
+    background-color: transparent;
+    border-color: @borders;
+}
+
 /************
  * GtkScale *
  ************/
