@@ -46,10 +46,6 @@
 
 GtkWindow {
     color: @theme_fg_color;
-}
-
-/* FIXME: this shouldn't be needed... */
-* {
     background-color: @theme_base_color;
 }
 
