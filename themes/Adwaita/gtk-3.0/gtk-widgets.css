@@ -205,7 +205,7 @@ GtkTreeView.view.separator,
 GtkTreeView.separator,
 .separator,
 .separator:hover {
-    color: shade(@borders, 1.30);
+    color: @view_separators;
 }
 
 GtkTreeView.view.separator:backdrop,

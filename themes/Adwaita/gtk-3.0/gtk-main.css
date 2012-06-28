@@ -109,6 +109,8 @@
 
 @define-color treeview_focus_border #2a79cb;
 
+@define-color view_separators shade(@borders, 1.30);
+
 @define-color expander_row_selected_color #acccee;
 
 @define-color inset_light_color alpha(white, 0.45);
