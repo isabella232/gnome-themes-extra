@@ -57,6 +57,11 @@ GtkWindow:backdrop {
     color: @theme_unfocused_fg_color;
 }
 
+/* FIXME: why do we still need this? */
+GtkClutterOffscreen {
+    background-color: @theme_bg_color;
+}
+
 *:selected,
 *:selected:focus {
     background-color: @theme_selected_bg_color;

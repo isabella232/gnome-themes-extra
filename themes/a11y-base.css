@@ -49,6 +49,11 @@ GtkWindow {
     background-color: @theme_base_color;
 }
 
+/* FIXME: why do we still need this? */
+GtkClutterOffscreen {
+    background-color: @theme_base_color;
+}
+
 *:insensitive {
     background-color: @theme_button_insensitive_bg;
     border-color: @theme_button_insensitive_active_bg;
