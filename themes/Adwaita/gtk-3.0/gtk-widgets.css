@@ -2049,14 +2049,12 @@ GtkCheckButton:selected:focus {
 /*******
  * OSD *
  *******/
-.osd {
+GtkWindow.osd {
     color: @osd_fg;
     background-color: @osd_bg;
-
-    text-shadow: 0 1px @osd_text_shadow;
 }
 
-.osd:backdrop {
+GtkWindow.osd:backdrop {
     background-color: @osd_bg_backdrop;
 }
 
@@ -2167,6 +2165,9 @@ GtkOverlay.osd {
 }
 
 .osd.toolbar {
+    color: @osd_fg;
+    text-shadow: 0 1px @osd_text_shadow;
+
     padding: 10px;
     border-style: none;
     border-radius: 7px;
@@ -2217,7 +2218,7 @@ GtkOverlay.osd {
     box-shadow: none;
 }
 
-.osd .separator {
+.osd.toolbar .separator {
     color: shade(@osd_lowlight, 0.80);
 }
 
