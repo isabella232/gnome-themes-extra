@@ -12,7 +12,6 @@
 
 <constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
-<constant name="C_border_attached_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
 <constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_highlight,gtk:base[NORMAL])" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
 <constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])" />
@@ -173,14 +172,6 @@
 </draw_ops>
 
 
-<draw_ops name="titlebar_fill_attached_focused"> <!-- gradient for attached and modal dialogs titlebar-->
-	<gradient type="vertical" x="0" y="0" width="width" height="title_height">
-		<color value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
-		<color value="gtk:custom(wm_bg_a,blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4)" />
-		<color value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
-	</gradient>
-</draw_ops>
-
 <draw_ops name="titlebar_fill_unfocused">
 	<rectangle color="C_titlebar_unfocused" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
@@ -208,10 +199,6 @@
 	<include name="hilight" />
 </draw_ops>
 
-<draw_ops name="titlebar_attached_focused"> <!-- titlebar for attached and modal dialogs -->
-	<include name="titlebar_fill_attached_focused" />
-</draw_ops>
-
 <draw_ops name="rounded_titlebar_focused">
 	<include name="titlebar_fill_focused" />
 	<include name="rounded_hilight" />
@@ -229,28 +216,6 @@
 <draw_ops name="border_unfocused">
 	<rectangle color="C_border_unfocused" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
-
-<draw_ops name="border_attached_focused">
-	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
-	<line x1="0" y1="0" x2="width" y2="0" color="C_border_attached_focused" />
-	<gradient type="vertical" x="0" y="0" width="1" height="top_height">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />		
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="C_border_focused" />
-	</gradient>
-	<gradient type="vertical" x="width-1" y="0" width="1" height="top_height">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.3" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.2" />
-		<color value="C_border_focused" />
-	</gradient>
-</draw_ops>
-
 
 <draw_ops name="rounded_border_focused">
 	<line color="C_border_focused" x1="4" y1="0" x2="width-5" y2="0" />
@@ -1405,7 +1370,7 @@
 
 <frame_style name="modal_dialog_focused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_attached_focused" />
+	<piece position="titlebar" draw_ops="titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1643,8 +1608,8 @@
 
 <frame_style name="attached_focused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_attached_focused" />
-	<piece position="overlay" draw_ops="border_attached_focused" />
+	<piece position="titlebar" draw_ops="titlebar_focused" />
+	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
 	<button function="close" state="pressed"><draw_ops></draw_ops></button>
 	<button function="maximize" state="normal"><draw_ops></draw_ops></button>
