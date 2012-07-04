@@ -1863,17 +1863,23 @@ GtkTreeMenu .menuitem * {
 /***************
  * Menu Button *
  ***************/
-.button.menuitem.menubar:active,
-.button.menuitem.menubar *:active {
-    color: @theme_text_color;
+.toolbar GtkMenuButton.button:active,
+.toolbar GtkMenuButton.button.raised:active,
+GtkMenuButton.button:active,
+.button.menuitem.menubar:active {
     background-image: none;
     background-color: @menu_bg_color;
 
-    border-radius: 5px 5px 0 0;
+    border-radius: 4px 4px 0 0;
     border-image: none;
     border-width: 1px 1px 0 1px;
-    border-color: shade(@borders, 1.30);
+    border-color: @menu_bg_color;
     border-style: solid;
+}
+
+.button.menuitem.menubar *:active,
+GtkMenuButton.button *:active {
+    color: @theme_text_color;
 }
 
 /****************
