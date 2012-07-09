@@ -1882,6 +1882,10 @@ GtkMenuButton.button *:active {
     color: @theme_text_color;
 }
 
+GtkMenuButton .menu {
+    text-shadow: none;
+}
+
 /****************
  * Radiobuttons *
  ****************/
