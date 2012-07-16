@@ -1,3 +1,14 @@
+3.5.4
+=====
+
+Don't use wildcard selectors for background colors
+Update WM style for attached modal dialogs
+Add support for the .gtkstyle-fallback selectors
+Add support for GtkMenuButton and GtkLevelBar
+Add support for symbolic images inside views
+Fix floating bars in dark variant
+Fix nautilus desktop icon color in dark variant
+
 3.5.3
 =====
 
