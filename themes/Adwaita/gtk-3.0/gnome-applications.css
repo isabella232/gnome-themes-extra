@@ -60,6 +60,10 @@ NautilusWindow .sidebar .frame {
     border-radius: 0;
 }
 
+NautilusWindow .sidebar .frame:backdrop {
+    border-color: @unfocused_borders;
+}
+
 NautilusWindow > GtkGrid > .pane-separator {
     border-width: 1px 1px 0 0;
     border-style: solid;
