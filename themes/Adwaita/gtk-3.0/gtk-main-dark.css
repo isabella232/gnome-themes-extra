@@ -110,6 +110,7 @@
 @define-color treeview_focus_border shade (@theme_selected_bg_color, 1.20);
 
 @define-color view_separators shade (@internal_element_color, 0.90);
+@define-color view_symbolic_color shade(@theme_text_color, 0.70);
 
 @define-color expander_row_selected_color alpha (@theme_base_color, 0.60);
 

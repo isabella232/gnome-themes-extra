@@ -339,9 +339,7 @@ GtkTreeView.separator:backdrop,
 /*******************
  * Symbolic images *
  *******************/
-.image,
-.view.image,
-.view.image:hover {
+.image {
     color: @internal_element_color;
 }
 
@@ -351,6 +349,16 @@ GtkTreeView.separator:backdrop,
 
 .image:selected,
 .image:selected:hover {
+    color: @theme_selected_fg_color;
+}
+
+.view.image,
+.view.image:hover {
+    color: @view_symbolic_color;
+}
+
+.view.image:selected,
+.view.image:selected:hover {
     color: @theme_selected_fg_color;
 }
 
