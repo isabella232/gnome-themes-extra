@@ -163,7 +163,7 @@ GtkLabel:insensitive {
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
-    box-shadow: inset 1px 1px white, -1px -1px white;
+    box-shadow: inset 1px 1px @inset_light_color, -1px -1px @inset_light_color;
 }
 
 .floating-bar.top {
@@ -188,6 +188,14 @@ GtkLabel:insensitive {
     border-left-width: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+.floating-bar.bottom.right {
+    box-shadow: inset 1px 1px @inset_light_color;
+}
+
+.floating-bar.bottom.left {
+    box-shadow: inset -1px 1px @inset_light_color;
 }
 
 .floating-bar:backdrop {
