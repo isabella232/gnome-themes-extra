@@ -336,6 +336,28 @@ GtkIconView.documents-main-view.check:active {
     text-shadow: 0 1px @primary_toolbar_button_text_shadow;
 }
 
+/* baobab */
+
+.baobab-main-view {
+    background-color: #f1f2f1;
+}
+
+.baobab-main-view:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+.cell.baobab-level-cell,
+.cell.baobab-level-cell:hover,
+.cell.baobab-level-cell:selected,
+.cell.baobab-level-cell:selected:hover {
+    border-color: darker(@borders);
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    background-color: white;
+}
+
+
 /* epiphany */
 
 EphyToolbar .entry,
