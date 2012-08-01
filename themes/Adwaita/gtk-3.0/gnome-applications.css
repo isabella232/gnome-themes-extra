@@ -359,7 +359,15 @@ GtkIconView.documents-main-view.check:active {
     background-color: #f1f2f1;
 }
 
+.baobab-main-view:prelight {
+    background-color: @theme_bg_color;
+}
+
 .baobab-main-view:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+.baobab-main-view:active {
     background-color: @theme_selected_bg_color;
 }
 
