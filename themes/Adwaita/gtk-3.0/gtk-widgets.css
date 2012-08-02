@@ -1357,6 +1357,15 @@ GtkLinkButton.button *:active {
     -adwaita-focus-border-radius: 2;
 }
 
+.notebook tab.bottom {
+    /* FIXME: Adwaita engine arrogantly flips my gradients upside down! */
+    background-image: linear-gradient(to top,
+				      @notebook_tab_gradient_b,
+                                      @notebook_tab_gradient_a 3px,
+                                      @notebook_tab_gradient_a 7px,
+                                      @notebook_tab_gradient_b);
+}
+
 .notebook tab:backdrop {
     background-image: none;
     background-color: @theme_unfocused_bg_color;
