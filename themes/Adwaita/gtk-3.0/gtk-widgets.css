@@ -153,7 +153,10 @@ GtkLabel:insensitive {
 }
 
 .floating-bar {
-    background-image: linear-gradient(to bottom, @theme_base_color 20%, shade(@theme_base_color, 0.9));
+    background-image: linear-gradient(to bottom, 
+                                      @theme_base_color 20%, 
+                                      shade(@theme_base_color, 0.9)
+                                      );
     background-color: @theme_base_color;
     border-color: @borders;
 
@@ -451,7 +454,6 @@ GtkColorSwatch.color-dark:hover {
                                       alpha(white, 0) 40%,
                                       alpha(white, 0.3)
                                       );
-
 }
 
 GtkColorSwatch.color-light:hover {
@@ -459,7 +461,6 @@ GtkColorSwatch.color-light:hover {
                                       alpha(black, 0) 40%,
                                       alpha(black, 0.1)
                                       );
-
 }
 
 GtkColorSwatch.color-light:selected:hover,
@@ -580,12 +581,13 @@ GtkProgressBar {
                                       alpha (@progressbar_pattern, 0.25) 50%,
                                       alpha (@progressbar_pattern, 0.25) 75%,
                                       transparent 75%,
-                                      transparent),
-                      -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@progressbar_background_a),
-                                     color-stop (0.75, @progressbar_background_b),
-                                     to (shade(@progressbar_background_a, 0.85)));
+                                      transparent
+                                      ),
+                      linear-gradient(to bottom,
+                                      @progressbar_background_a,
+                                      @progressbar_background_b 75%,
+                                      shade(@progressbar_background_a, 0.85)
+                                      );
     background-size: 40px 40px;
 
     border-radius: 3px;
@@ -610,11 +612,11 @@ GtkProgressBar {
                                       alpha (@progressbar_pattern, 0.25) 75%,
                                       transparent 75%,
                                       transparent),
-                      -gtk-gradient (linear,
-                                     left top, right top,
-                                     from (@progressbar_background_a),
-                                     color-stop (0.75, @progressbar_background_b),
-                                     to (shade(@progressbar_background_a, 0.85)));
+                      linear-gradient(to right,
+                                      @progressbar_background_a,
+                                      @progressbar_background_b 75%,
+                                      shade(@progressbar_background_a, 0.85)
+                                      );
 }
 
 .progressbar:backdrop,
@@ -636,10 +638,10 @@ GtkProgressBar {
 
 .trough row:selected,
 .trough row:selected:focus {
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (mix (@trough_bg_color_a, @theme_selected_bg_color, 0.25)),
-                                     to (mix (@trough_bg_color_b, @theme_selected_bg_color, 0.25)));
+    background-image: linear-gradient(to bottom,
+                                      mix(@trough_bg_color_a, @theme_selected_bg_color, 0.25),
+                                      mix(@trough_bg_color_b, @theme_selected_bg_color, 0.25)
+                                      );
 }
 
 GtkProgressBar:backdrop,
@@ -1365,7 +1367,8 @@ GtkLinkButton.button *:active {
                                       @notebook_selected_tab_color,
                                       @notebook_selected_tab_color 2px,
                                       @button_gradient_color_a 3px, /* FIXME */
-                                      @theme_base_color);
+                                      @theme_base_color
+                                      );
 }
 
 .notebook tab:active:backdrop {
@@ -1374,7 +1377,8 @@ GtkLinkButton.button *:active {
                                       @unfocused_borders,
                                       @unfocused_borders 2px,
                                       @theme_unfocused_base_color 3px,
-                                      @theme_unfocused_base_color);
+                                      @theme_unfocused_base_color
+                                      );
     background-color:  @theme_unfocused_base_color;
     border-color: @unfocused_borders;
     /* FIXME - should be possible to set it to none and use border color */
@@ -2054,11 +2058,10 @@ GtkCheckButton:selected:focus {
 /* progressbars on primary toolbar entries are special */
 .primary-toolbar .toolbar .entry.progressbar,
 .primary-toolbar.toolbar .entry.progressbar {
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@trough_bg_color_a),
-                                     to (@trough_bg_color_b));
-
+    background-image: linear-gradient(to bottom,
+                                      @trough_bg_color_a,
+                                      @trough_bg_color_b
+                                      );
     border-width: 1px;
     border-radius: 2px;
     border-style: solid;
@@ -2166,10 +2169,11 @@ GtkOverlay.osd {
 .osd .button {
     padding: 4px;
 
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_button_bg_a),
-                                    color-stop(0.68, @osd_button_bg_b),
-                                    to(@osd_button_bg_c));
+    background-image: linear-gradient(to bottom,
+                                      @osd_button_bg_a,
+                                      @osd_button_bg_b 68%,
+                                      @osd_button_bg_c
+                                      );
 
     color: @osd_button_fg;
 
@@ -2240,18 +2244,20 @@ GtkOverlay.osd {
 }
 
 .osd .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_button_bg_hover_a),
-                                    color-stop(0.68, @osd_button_bg_hover_b),
-                                    to(@osd_button_bg_hover_c));
+    background-image: linear-gradient(to bottom,
+                                      @osd_button_bg_hover_a,
+                                      @osd_button_bg_hover_b 68%,
+                                      @osd_button_bg_hover_c
+				      );
 }
 
 .osd .button:active,
 .osd .button:active:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_button_bg_active_a),
-                                    color-stop(0.68, @osd_button_bg_active_b),
-                                    to(@osd_button_bg_active_c));
+    background-image: linear-gradient(to bottom,
+                                      @osd_button_bg_active_a,
+                                      @osd_button_bg_active_b 68%,
+                                      @osd_button_bg_active_c
+                                      );
 }
 
 .osd.toolbar {
@@ -2261,11 +2267,11 @@ GtkOverlay.osd {
     padding: 10px;
     border-style: none;
     border-radius: 7px;
-
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@osd_toolbar_bg_a),
-                                    color-stop(0.63, @osd_toolbar_bg_b),
-                                    to(@osd_toolbar_bg_c));
+    background-image: linear-gradient(to bottom,
+                                      @osd_toolbar_bg_a,
+                                      @osd_toolbar_bg_b 63%,
+                                      @osd_toolbar_bg_c
+                                      );
     background-color: transparent;
 
     -GtkToolbar-button-relief: normal;
@@ -2323,9 +2329,10 @@ GtkOverlay.osd {
 
 .osd .scale.trough {
     border-color: @osd_button_border;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(shade(@osd_button_border, 0.70)),
-                                    to(shade(@osd_button_border, 0.90)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@osd_button_border, 0.70),
+                                      shade(@osd_button_border, 0.90)
+                                      );
     background-color: transparent;
 }
 
@@ -2418,11 +2425,10 @@ GtkSwitch.slider {
     padding: 2px 2px 3px 2px;
 
     background-image: url("assets/switch-slider-grip.svg"),
-                      -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (@theme_base_color),
-                                     to (@switch_slider_color));
-
+                      linear-gradient(to bottom,
+                                      @theme_base_color,
+                                      @switch_slider_color
+                                      );
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -2681,11 +2687,10 @@ GtkCalendar.view {
 
 GtkCalendar.header {
     border-radius: 0;
-    background-image: -gtk-gradient (linear,
-                                     left top,
-                                     left bottom,
-                                     from (shade (@theme_bg_color, 1.04)),
-                                     to (shade (@theme_bg_color, 0.89)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.04),
+                                      shade(@theme_bg_color, 0.89)
+                                      );
     border-width: 0;
 }
 

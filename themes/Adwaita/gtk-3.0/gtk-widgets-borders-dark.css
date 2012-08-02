@@ -155,10 +155,10 @@ column-header.button:active:hover,
 column-header .button:active:hover
 column-header.button:active:focus,
 column-header .button:active:focus {
-    border-image: -gtk-gradient (linear,
-                                 left top, left bottom,
-                                 from (@borders),
-                                 to (@theme_base_color)) 0 1 0 0;
+    border-image: linear-gradient(to bottom,
+                                  @borders,
+                                  @theme_base_color
+                                  ) 0 1 0 0;
     border-width: 0 1px 0 0;
     border-radius: 0;
     border-style: solid;
@@ -167,10 +167,10 @@ column-header .button:active:focus {
 
 column-header.button:backdrop,
 column-header .button:backdrop {
-    border-image: -gtk-gradient (linear,
-                                 left top, left bottom,
-                                 from (@unfocused_borders),
-                                 to (@theme_unfocused_base_color)) 0 1 0 0;
+    border-image: linear-gradient(to bottom,
+                                  @unfocused_borders,
+                                  @theme_unfocused_base_color
+                                  ) 0 1 0 0;
     border-width: 0 1px 0 0;
     border-radius: 0;
     border-style: solid;
@@ -179,11 +179,10 @@ column-header .button:backdrop {
 
 column-header.button:insensitive,
 column-header .button:insensitive {
-    border-image: -gtk-gradient (linear,
-                                 left top, left bottom,
-                                 from (@borders),
-                                 to (@insensitive_bg_color)) 0 1 0 0;
-
+    border-image: linear-gradient(to bottom,
+                                  @borders,
+                                  @insensitive_bg_color
+                                  ) 0 1 0 0;
     border-width: 0 1px 0 0;
     border-radius: 0;
     border-style: solid;
