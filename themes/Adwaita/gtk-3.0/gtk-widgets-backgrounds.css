@@ -2,10 +2,7 @@
 .button,
 .toolbar .button.raised,
 .toolbar .raised .button,
-.toolbar .button.raised:focus,
-.toolbar .raised .button:focus,
-.toolbar GtkComboBox .button,
-.toolbar GtkComboBox .button:focus {
+.toolbar GtkComboBox .button {
     background-image: linear-gradient(to bottom, 
                                       @button_gradient_color_a, 
                                       @button_gradient_color_b 40%,

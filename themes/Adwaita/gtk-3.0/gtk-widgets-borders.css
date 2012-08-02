@@ -27,7 +27,6 @@ GtkSwitch.trough {
 /* focused element borders */
 .entry:focus,
 GtkComboBox.combobox-entry .entry:focus,
-.button:focus:active,
 .button.default:active,
 GtkSwitch.trough:active { 
     border-image: url("borders/generic-border-focused.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
@@ -47,7 +46,6 @@ GtkSwitch.trough:active {
 }
 
 /* focused button borders */
-.button:focus,
 .button.default { 
     border-image: url("borders/button-border-focused.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
@@ -66,8 +64,7 @@ GtkSwitch.trough:active {
 }
 
 /* tooltip focused elements borders */
-.tooltip .entry:focus,
-.tooltip .button:focus {
+.tooltip .entry:focus {
     border-image: url("borders/tooltip-generic-border-focused.svg") 3 / 3px stretch;
     border-width: 1px;
     border-style: solid;
@@ -100,16 +97,10 @@ GtkSwitch.trough:active {
 
 /* primary toolbar - focused element borders */
 .primary-toolbar .entry:focus,
-.primary-toolbar .button:active:focus,
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus,
-.primary-toolbar GtkComboBox.combobox-entry .button:focus,
-.primary-toolbar .button.raised:focus:active,
-.primary-toolbar .raised .button:focus:active,
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
-.inline-toolbar.toolbar .button:focus:active,
-.inline-toolbar.toolbar .button.default:active,
-.primary-toolbar GtkComboBox .button:active:focus { 
+.inline-toolbar.toolbar .button.default:active { 
     border-image: url("borders/primary-toolbar-generic-border-focused.svg") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
@@ -130,13 +121,9 @@ GtkSwitch.trough:active {
 }
 
 /* primary toolbar - focused button borders */
-.primary-toolbar .button.raised:focus,
 .primary-toolbar .button.raised.default,
-.primary-toolbar .raised .button:focus,
 .primary-toolbar .raised .button.default,
-.inline-toolbar.toolbar .button:focus,
-.inline-toolbar.toolbar .button.default,
-.primary-toolbar GtkComboBox .button:focus { 
+.inline-toolbar.toolbar .button.default { 
     border-image: url("borders/primary-toolbar-button-border-focused.svg") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
