@@ -134,14 +134,10 @@ GtkSwitch.trough:active {
 /* column-headers borders */
 column-header.button,
 column-header .button,
-column-header.button:focus,
-column-header .button:focus,
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
-column-header .button:active:hover
-column-header.button:active:focus,
-column-header .button:active:focus {
+column-header .button:active:hover {
     border-image: linear-gradient(to bottom,
                                   @borders,
                                   @theme_base_color
@@ -177,15 +173,11 @@ column-header .button:insensitive {
 }
 
 column-header.button:last-child,
-column-header:last-child .button,
-column-header.button:last-child:focus,
-column-header:last-child .button:focus,
+column-header:last-child .button
 column-header.button:last-child:active,
 column-header:last-child .button:active,
 column-header.button:last-child:active:hover,
-column-header:last-child .button:active:hover,
-column-header.button:last-child:active:focus,
-column-header:last-child .button:active:focus {
+column-header:last-child .button:active:hover {
     border-image: none;
     border-width: 0;
     border-radius: 0;
