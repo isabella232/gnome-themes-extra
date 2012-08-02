@@ -112,6 +112,10 @@ NautilusToolbar .button *:active:insensitive {
     text-shadow: none;
 }
 
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-color: @toolbar_gradient_c;
+}
+
 /* gedit */
 
 GeditWindow .pane-separator, 
