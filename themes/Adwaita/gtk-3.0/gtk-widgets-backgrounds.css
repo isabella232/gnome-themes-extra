@@ -127,7 +127,8 @@
 GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover {
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.level-bar.trough {
     background-image: linear-gradient(to bottom,
                                       @entry_background_a,
                                       @entry_background_b
@@ -145,11 +146,7 @@ GtkComboBox.combobox-entry .button:active,
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
-column-header .button:active:hover,
-column-header.button:active:hover:focus,
-column-header .button:active:hover:focus,
-column-header.button:active:focus,
-column-header .button:active:focus {
+column-header .button:active:hover {
     background-image: linear-gradient(to bottom,
                                       shade(@entry_background_a, 0.9),
                                       @entry_background_b
@@ -161,7 +158,8 @@ column-header .button:active:focus {
 
 /* Insensitive entry background */
 .entry:insensitive,
-GtkComboBox.combobox-entry .button:insensitive {
+GtkComboBox.combobox-entry .button:insensitive,
+.level-bar.trough:insensitive {
     background-color: @insensitive_bg_color;
     background-image: none;
     box-shadow: none;
@@ -173,7 +171,8 @@ GtkComboBox.combobox-entry .button:backdrop,
 column-header.button:backdrop,
 column-header .button:backdrop,
 column-header.button:insensitive:backdrop,
-column-header .button:insensitive:backdrop {
+column-header .button:insensitive:backdrop,
+.level-bar.trough:backdrop {
     background-image: none;
     background-color: @theme_unfocused_base_color;
     box-shadow: none;
@@ -181,7 +180,8 @@ column-header .button:insensitive:backdrop {
 
 /* Unfocused windows insensitive entry background */
 .entry:insensitive:backdrop,
-GtkComboBox.combobox-entry .button:insensitive:backdrop {
+GtkComboBox.combobox-entry .button:insensitive:backdrop,
+.level-bar.trough:insensitive:backdrop {
     background-image: none;
     background-color: @unfocused_insensitive_bg_color;
 }
