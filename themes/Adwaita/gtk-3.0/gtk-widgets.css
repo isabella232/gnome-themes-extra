@@ -684,7 +684,6 @@ GtkLevelBar.vertical {
                                       @progressbar_background_b 75%,
                                       shade(@progressbar_background_a, 0.85)
                                       );
-    border-color: shade(@success_color, 0.85);
 }
 
 .level-bar.indicator-continuous.fill-block {
@@ -709,6 +708,7 @@ GtkLevelBar.vertical {
 }
 
 .level-bar.fill-block.level-high {
+    border-color: shade(@success_color, 0.85);
     background-image: linear-gradient(to bottom,
                                       shade(@success_color, 1.2),
                                       @success_color 75%,
