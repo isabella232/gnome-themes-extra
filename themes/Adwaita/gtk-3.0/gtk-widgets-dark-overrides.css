@@ -127,8 +127,7 @@ GtkComboBox.combobox-entry .entry:focus:last-child {
                 inset -1px -1px alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
-.spinbutton .button:active /*,
-.spinbutton .button:active:focus */ {
+.spinbutton .button:active {
     box-shadow: inset 1px 0 @inset_dark_color,
                 inset 0 2px alpha(lighter(@theme_selected_bg_color), 0.2),
                 inset 0 -2px alpha(lighter(@theme_selected_bg_color), 0.2), 
@@ -136,16 +135,14 @@ GtkComboBox.combobox-entry .entry:focus:last-child {
                 inset 0 -1px alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
-.spinbutton .button:first-child:active /*,
-.spinbutton .button:first-child:active:focus*/ {
+.spinbutton .button:first-child:active {
     box-shadow: inset 2px 2px alpha(lighter(@theme_selected_bg_color), 0.2), 
                 inset 0 -2px alpha(lighter(@theme_selected_bg_color), 0.2), 
                 inset 1px 1px alpha(lighter(@theme_selected_bg_color), 0.7), 
                 inset 0 -1px alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
-.spinbutton .button:last-child:active /*,
-.spinbutton .button:last-child:active:focus*/ {
+.spinbutton .button:last-child:active {
     box-shadow: inset 1px 0 @inset_dark_color, 
                 inset 0 2px alpha(lighter(@theme_selected_bg_color), 0.2), 
                 inset -2px -2px alpha(lighter(@theme_selected_bg_color), 0.2), 

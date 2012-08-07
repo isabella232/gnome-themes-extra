@@ -368,8 +368,7 @@ GtkTreeView.separator:backdrop,
 /*****************
  * GtkSpinButton *
  *****************/
-.spinbutton .button /*,
-.spinbutton .button:focus */{
+.spinbutton .button {
     color: @internal_element_color;
     padding: 2px 6px;
     border-width: 0;
@@ -399,7 +398,6 @@ GtkTreeView.separator:backdrop,
 }
 
 .spinbutton .button:active,
-/*.spinbutton .button:active:focus, */
 .spinbutton .button:hover {
     color: @internal_element_prelight;
 }
@@ -414,21 +412,18 @@ GtkTreeView.separator:backdrop,
 }
 
 /* Add back the glowy effect from the entry covered by the pushed button background*/
-.spinbutton .button:active /*,
-.spinbutton .button:active:focus */ {
+.spinbutton .button:active {
     box-shadow: inset 1px 0 @inset_dark_color, 
                 inset 0 1px alpha(@theme_selected_bg_color, 0.2), 
                 inset 0 -1px alpha(@theme_selected_bg_color, 0.2);
 }
 
-.spinbutton .button:first-child:active /*,
-.spinbutton .button:first-child:active:focus */ {
+.spinbutton .button:first-child:active {
     box-shadow: inset 1px 1px alpha(@theme_selected_bg_color, 0.2),
                 inset 0 -1px alpha(@theme_selected_bg_color, 0.2);
 }
 
-.spinbutton .button:last-child:active /*,
-.spinbutton .button:last-child:active:focus */ {
+.spinbutton .button:last-child:active {
     box-shadow: inset 1px 0 @inset_dark_color,
                 inset 0 1px alpha(@theme_selected_bg_color, 0.2),
                 inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
@@ -1076,8 +1071,6 @@ GtkComboBox.combobox-entry .button {
 .linked .button,
 .linked .button:active,
 .linked .button:active:hover,
-/* .linked .button:focus,
-.linked .button:focus:active, */
 .linked .button:insensitive {
     border-right-width: 0;
     border-left-width: 0;
@@ -1090,8 +1083,6 @@ GtkComboBox.combobox-entry .button {
 .linked .button:first-child,
 .linked .button:active:first-child,
 .linked .button:active:hover:first-child,
-/*.linked .button:focus:first-child,
-.linked .button:focus:active:first-child,*/
 .linked .button:insensitive:first-child {
     border-right-width: 0;
     border-image-width: 3px 0 4px 3px;
@@ -1104,8 +1095,6 @@ GtkComboBox.combobox-entry .button {
 .linked .button:last-child,
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
-/*.linked .button:focus:last-child,
-.linked .button:focus:active:last-child,*/
 .linked .button:insensitive:last-child {
     border-left-width: 0;
     border-image-width: 3px 3px 4px 0;
@@ -1118,8 +1107,6 @@ GtkComboBox.combobox-entry .button {
 .linked .button:only-child,
 .linked .button:active:only-child,
 .linked .button:active:hover:only-child,
-/*.linked .button:focus:only-child,
-.linked .button:focus:active:only-child,*/
 .linked .button:insensitive:only-child {
     border-right-width: 1px;
     border-left-width: 1px;
@@ -1132,8 +1119,6 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button,
 .linked.vertical .button:active,
 .linked.vertical .button:active:hover,
-/*.linked.vertical .button:focus,
-.linked.vertical .button:focus:active,*/
 .linked.vertical .button:insensitive {
     border-top-width: 0;
     border-bottom-width: 0;
@@ -1146,8 +1131,6 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:first-child,
 .linked.vertical .button:active:first-child,
 .linked.vertical .button:active:hover:first-child,
-/*.linked.vertical .button:focus:first-child,
-.linked.vertical .button:focus:active:first-child,*/
 .linked.vertical .button:insensitive:first-child {
     border-bottom-width: 0;
     border-image-width: 3px 3px 0 3px;
@@ -1159,8 +1142,6 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:last-child,
 .linked.vertical .button:active:last-child,
 .linked.vertical .button:active:hover:last-child,
-/*.linked.vertical .button:focus:last-child,
-.linked.vertical .button:focus:active:last-child,*/
 .linked.vertical .button:insensitive:last-child {
     border-top-width: 0;
     border-image-width: 0 3px 4px 3px;
@@ -1172,8 +1153,6 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:only-child,
 .linked.vertical .button:active:only-child,
 .linked.vertical .button:active:hover:only-child,
-/*.linked.vertical .button:focus:only-child,
-.linked.vertical .button:focus:active:only-child,*/
 .linked.vertical .button:insensitive:only-child {
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -1224,27 +1203,19 @@ GtkComboBox.combobox-entry .button {
 /* Middle button */
 .primary-toolbar .button.raised.linked,
 .primary-toolbar .button.raised.linked:active,
-/*.primary-toolbar .button.raised.linked:focus,
-.primary-toolbar .button.raised.linked:focus:active,*/
 .primary-toolbar .button.raised.linked:insensitive,
 .primary-toolbar .button.raised.linked:backdrop,
 .primary-toolbar .raised.linked .button,
 .primary-toolbar .raised.linked .button:active,
-/*.primary-toolbar .raised.linked .button:focus,
-.primary-toolbar .raised.linked .button:focus:active,*/
 .primary-toolbar .raised.linked .button:insensitive,
 .primary-toolbar .raised.linked .button:backdrop,
 .inline-toolbar.toolbar .button,
 .inline-toolbar.toolbar .button:active,
-/*.inline-toolbar.toolbar .button:focus,
-.inline-toolbar.toolbar .button:focus:active,*/
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button,
 .inline-toolbar.toolbar GtkToolButton .button:active,
-/*.inline-toolbar.toolbar GtkToolButton .button:focus,
-.inline-toolbar.toolbar GtkToolButton .button:focus:active,*/
 .inline-toolbar.toolbar GtkToolButton .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton .button:backdrop:insensitive {
@@ -1257,27 +1228,19 @@ GtkComboBox.combobox-entry .button {
 /* Leftmost button */
 .primary-toolbar .button.raised.linked:first-child,
 .primary-toolbar .button.raised.linked:active:first-child,
-/*.primary-toolbar .button.raised.linked:focus:first-child,
-.primary-toolbar .button.raised.linked:focus:active:first-child,*/
 .primary-toolbar .button.raised.linked:insensitive:first-child,
 .primary-toolbar .button.raised.linked:backdrop:first-child,
 .primary-toolbar .raised.linked .button:first-child,
 .primary-toolbar .raised.linked .button:active:first-child,
-/*.primary-toolbar .raised.linked .button:focus:first-child,
-.primary-toolbar .raised.linked .button:focus:active:first-child,*/
 .primary-toolbar .raised.linked .button:insensitive:first-child,
 .primary-toolbar .raised.linked .button:backdrop:first-child,
 .inline-toolbar.toolbar .button:first-child,
 .inline-toolbar.toolbar .button:active:first-child,
-/*.inline-toolbar.toolbar .button:focus:first-child,
-.inline-toolbar.toolbar .button:focus:active:first-child,*/
 .inline-toolbar.toolbar .button:insensitive:first-child,
 .inline-toolbar.toolbar .button:backdrop:first-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:first-child,
 .inline-toolbar.toolbar GtkToolButton:first-child .button,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:active,
-/*.inline-toolbar.toolbar GtkToolButton:first-child .button:focus,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:focus:active,*/
 .inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop:insensitive {
@@ -1291,27 +1254,19 @@ GtkComboBox.combobox-entry .button {
 /* Rightmost button */
 .primary-toolbar .button.raised.linked:last-child,
 .primary-toolbar .button.raised.linked:active:last-child,
-/*.primary-toolbar .button.raised.linked:focus:last-child,
-.primary-toolbar .button.raised.linked:focus:active:last-child,*/
 .primary-toolbar .button.raised.linked:insensitive:last-child,
 .primary-toolbar .button.raised.linked:backdrop:last-child,
 .primary-toolbar .raised.linked .button:last-child,
 .primary-toolbar .raised.linked .button:active:last-child,
-/*.primary-toolbar .raised.linked .button:focus:last-child,
-.primary-toolbar .raised.linked .button:focus:active:last-child,*/
 .primary-toolbar .raised.linked .button:insensitive:last-child,
 .primary-toolbar .raised.linked .button:backdrop:last-child,
 .inline-toolbar.toolbar .button:last-child,
 .inline-toolbar.toolbar .button:active:last-child,
-/*.inline-toolbar.toolbar .button:focus:last-child,
-.inline-toolbar.toolbar .button:focus:active:last-child,*/
 .inline-toolbar.toolbar .button:insensitive:last-child,
 .inline-toolbar.toolbar .button:backdrop:last-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:last-child,
 .inline-toolbar.toolbar GtkToolButton:last-child .button,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:active,
-/*.inline-toolbar.toolbar GtkToolButton:last-child .button:focus,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:focus:active,*/
 .inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop:insensitive {
@@ -1325,15 +1280,11 @@ GtkComboBox.combobox-entry .button {
 /* Single button */
 .inline-toolbar.toolbar .button:only-child,
 .inline-toolbar.toolbar .button:active:only-child,
-/*.inline-toolbar.toolbar .button:focus:only-child,
-.inline-toolbar.toolbar .button:focus:active:only-child,*/
 .inline-toolbar.toolbar .button:insensitive:only-child,
 .inline-toolbar.toolbar .button:backdrop:only-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:only-child,
 .inline-toolbar.toolbar GtkToolButton:only-child .button,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:active,
-/*.inline-toolbar.toolbar GtkToolButton:only-child .button:focus,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:focus:active,*/
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop:insensitive {
@@ -2211,9 +2162,7 @@ GtkOverlay.osd {
 }
 
 .osd .button,
-.osd .button:active /*,
-.osd .button:focus,
-.osd .button:focus:active*/ {
+.osd .button:active {
     border-width: 1px;
     border-style: solid;
     border-image: none;
@@ -2337,8 +2286,7 @@ GtkOverlay.osd {
     background-color: @osd_bg_backdrop;
 }
 
-.osd.toolbar .button /*,
-.osd.toolbar .button:focus*/ {
+.osd.toolbar .button {
     padding: 4px;
     border-width: 1px 0;
     border-radius: 0;
@@ -2610,9 +2558,7 @@ column-header .button,
 column-header.button:insensitive,
 column-header .button:insensitive,
 column-header.button:hover,
-column-header .button:hover /*,
-column-header.button:focus:hover,
-column-header .button:focus:hover */ {
+column-header .button:hover {
     background-color: @theme_base_color;
     background-image: none;
     padding: 0 4px;
@@ -2633,12 +2579,6 @@ column-header .button:insensitive {
 
 column-header.button:hover,
 column-header .button:hover,
-/* column-header.button:focus:hover,
-column-header .button:focus:hover,
-column-header.button:active:focus:hover,
-column-header .button:active:focus:hover,
-column-header.button:active:focus,
-column-header .button:active:focus, */
 column-header.button:active:hover,
 column-header .button:active:hover,
 column-header.button *:active,
@@ -2772,29 +2712,21 @@ GtkInfoBar .entry:focus,
 GtkInfoBar .button,
 GtkInfoBar .button:insensitive,
 GtkInfoBar .button:active,
-/*GtkInfoBar .button:focus,
-GtkInfoBar .button:active:focus,*/
 .info .entry,
 .info .entry:focus,
 .info .button,
 .info .button:insensitive,
 .info .button:active,
-/*.info .button:focus,
-.info .button:active:focus,*/
 .warning .entry,
 .warning .entry:focus,
 .warning .button,
 .warning .button:insensitive,
 .warning .button:active,
-/*.warning .button:focus,
-.warning .button:active:focus,*/
 .error .entry,
 .error .entry:focus,
 .error .button,
 .error .button:insensitive,
-.error .button:active /*,
-.error .button:focus,
-.error .button:active:focus*/ {
+.error .button:active {
     border-image: none;
 
     border-color: shade(@borders, 0.9);
@@ -2806,9 +2738,7 @@ GtkInfoBar .button:active:focus,*/
 .question .entry:focus,
 .question .button,
 .question .button:insensitive,
-.question .button:active /*,
-.question .button:focus,
-.question .button:active:focus*/ {
+.question .button:active {
     border-image: none;
 
     border-color: darker(@question_bg_color);
@@ -3020,9 +2950,7 @@ GsmFailWhaleDialog {
 }
 
 GsmFailWhaleDialog .button,
-/*GsmFailWhaleDialog .button:focus,*/
-GsmFailWhaleDialog .button:active /*,
-GsmFailWhaleDialog .button:active:focus*/ {
+GsmFailWhaleDialog .button:active {
     border-image: none;
     border-color: @borders;
     border-width: 1px;
