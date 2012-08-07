@@ -215,6 +215,7 @@ GtkSwitch.trough:backdrop,
 .primary-toolbar GtkComboBox.combobox-entry .button:backdrop,
 .primary-toolbar GtkComboBox .button:backdrop,
 .primary-toolbar .entry:backdrop,
+.primary-toolbar GtkSwitch.trough:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop:insensitive { 
     border-image: url("borders/primary-toolbar-generic-border-unfocused-dark.svg") 4 / 4px stretch;
