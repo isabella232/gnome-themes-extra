@@ -1,3 +1,13 @@
+3.5.5
+=====
+
+Don't use a blue border for focused buttons
+Use CSS gradients instead of GTK gradients
+Improve styling for GtkLevelBar
+Improve bottom tab styling
+Improve theming support for Nautilus
+Add support for new Baobab style
+
 3.5.4
 =====
 
