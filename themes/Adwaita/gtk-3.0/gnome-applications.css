@@ -245,8 +245,7 @@ GtkIconView.documents-main-view.check:active {
     color: alpha(@theme_base_color, 0.50);
 }
 
-.documents-selection-mode.toolbar .button /*,
-.documents-selection-mode.toolbar .button:focus*/ {
+.documents-selection-mode.toolbar .button {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                     from(@documents_selection_button_a),
                                     color-stop(0.83, @documents_selection_button_b),
@@ -427,8 +426,7 @@ EphyToolbar .location-entry .button:last-child {
 }
 
 EphyToolbar .location-entry .button,
-EphyToolbar .location-entry .button:hover /*,
-EphyToolbar .location-entry .button:focus*/ {
+EphyToolbar .location-entry .button:hover {
     icon-shadow: none;
     background-image: -gtk-gradient(linear,
                                     left top, left bottom,
@@ -451,7 +449,6 @@ EphyToolbar .location-entry .button:active:hover {
 }
 
 EphyToolbar .location-entry .button:hover,
-/*EphyToolbar .location-entry .button:focus,*/
 EphyToolbar .location-entry .button:active,
 EphyToolbar .location-entry .button *:active {
     color: @theme_text_color;
