@@ -100,7 +100,7 @@ GtkSwitch.trough:active {
 .primary-toolbar GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
-.inline-toolbar.toolbar .button.default:active { 
+.inline-toolbar.toolbar .button.default:active {
     border-image: url("borders/primary-toolbar-generic-border-focused-dark.svg") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
@@ -123,7 +123,7 @@ GtkSwitch.trough:active {
 /* primary toolbar - focused button borders */
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button.default,
-.inline-toolbar.toolbar .button.default { 
+.inline-toolbar.toolbar .button.default {
     border-image: url("borders/primary-toolbar-button-border-focused-dark.svg") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
