@@ -114,10 +114,11 @@ NautilusToolbar .button *:active:insensitive {
 
 NautilusQueryEditor .primary-toolbar.toolbar {
     border-bottom-width: 0;
+    padding: 3px;
 }
 
 NautilusQueryEditor .toolbar {
-    padding-top: 4px;    
+    padding: 4px 4px 3px 4px;
 
     border-width: 1px 0 0 0;
     border-style: solid;
@@ -126,10 +127,19 @@ NautilusQueryEditor .toolbar {
     background-color: mix(@theme_bg_color, @theme_base_color, 0.5);
 }
 
-
 NautilusQueryEditor .toolbar:nth-child(2) {
     border-color: @borders;
 }
+
+NautilusQueryEditor .toolbar:backdrop {
+    background-color: @theme_unfocused_base_color;
+    border-color: @theme_unfocused_base_color;
+}
+
+NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
+    border-color: @unfocused_borders;
+}
+
 
 /* gedit */
 

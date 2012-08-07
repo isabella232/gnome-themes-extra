@@ -98,6 +98,8 @@
 .toolbar .button.raised:backdrop,
 .toolbar .raised .button:backdrop,
 .toolbar .button:backdrop:hover,
+.toolbar GtkComboBox .button:backdrop,
+.toolbar GtkComboBox .button:backdrop:hover,
 .primary-toolbar .raised .button:backdrop:hover {
     background-image: none;
     background-color: @unfocused_button_background;
