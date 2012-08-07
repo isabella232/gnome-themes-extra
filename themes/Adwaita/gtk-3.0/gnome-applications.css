@@ -112,8 +112,23 @@ NautilusToolbar .button *:active:insensitive {
     text-shadow: none;
 }
 
-NautilusQueryEditor .primary-toolbar.toolbar:only-child {
-    border-bottom-color: @toolbar_gradient_c;
+NautilusQueryEditor .primary-toolbar.toolbar {
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding-top: 4px;    
+
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: @theme_bg_color;
+    
+    background-color: mix(@theme_bg_color, @theme_base_color, 0.5);
+}
+
+
+NautilusQueryEditor .toolbar:nth-child(2) {
+    border-color: @borders;
 }
 
 /* gedit */
