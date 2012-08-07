@@ -236,7 +236,9 @@ GtkIconView.documents-main-view.check:active {
                                     from(@documents_selection_toolbar_a),
                                     to(@documents_selection_toolbar_b));
     color: @theme_base_color;
-    border-width: 1px 0 0 0;
+
+    border-top-width: 1px;
+    padding-top: 2px;
     border-color: @documents_selection_toolbar_border;
     border-style: solid;
 }

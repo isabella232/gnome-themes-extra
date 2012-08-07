@@ -2002,7 +2002,7 @@ GtkCheckButton:selected:focus {
 .toolbar {
     border-style: none;
     border-color: darker (@theme_bg_color);
-    padding: 4px;
+    padding: 3px;
 }
 
 .toolbar .button {
@@ -2017,9 +2017,8 @@ GtkCheckButton:selected:focus {
  * Menubar Toolbars *
  ********************/
 .toolbar.menubar {
-    border-style: none;
-
     -GtkToolbar-button-relief: normal;
+
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -2033,8 +2032,7 @@ GtkCheckButton:selected:focus {
  */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-    border-width: 1px 0 1px 0;
-    border-radius: 0;
+    border-width: 1px 0;
     border-style: solid;
     border-top-color: @toolbar_border_top;
     border-bottom-color: @toolbar_border_bottom;
@@ -2083,16 +2081,15 @@ GtkCheckButton:selected:focus {
 
 .inline-toolbar.toolbar {
     border-width: 1px;
-    border-radius: 0;
     border-style: solid;
 
     -GtkToolbar-button-relief: normal;
-
-    padding: 4px;
 }
 
 .inline-toolbar.toolbar:last-child {
-    border-width: 0 1px 1px 1px;
+    border-top-width: 0;
+    padding-top: 4px;
+
     border-radius: 0 0 3px 3px;
 }
 
