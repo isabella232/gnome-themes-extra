@@ -138,11 +138,11 @@ column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
 column-header .button:active:hover {
-    border-image: linear-gradient(to bottom,
-                                  @borders,
+    border-image: linear-gradient(to top,
+                                  mix(@borders, @theme_base_color, 0.5),
                                   @theme_base_color
-                                  ) 0 1 0 0;
-    border-width: 0 1px 0 0;
+                                  ) 0 1 1 0;
+    border-width: 0 1px 1px 0;
     border-radius: 0;
     border-style: solid;
     border-color: transparent;
@@ -150,11 +150,8 @@ column-header .button:active:hover {
 
 column-header.button:backdrop,
 column-header .button:backdrop {
-    border-image: linear-gradient(to bottom,
-                                  @unfocused_borders,
-                                  @theme_unfocused_base_color
-                                  ) 0 1 0 0;
-    border-width: 0 1px 0 0;
+    border-image: none;
+    border-width: 0 1px 1px 0;
     border-radius: 0;
     border-style: solid;
     border-color: transparent;
@@ -162,27 +159,25 @@ column-header .button:backdrop {
 
 column-header.button:insensitive,
 column-header .button:insensitive {
-    border-image: linear-gradient(to bottom,
-                                  @insensitive_borders,
+    border-image: linear-gradient(to top,
+                                  mix(@insensitive_borders, @insensitive_bg_color, 0.5),
                                   @insensitive_bg_color
-                                  ) 0 1 0 0;
-    border-width: 0 1px 0 0;
+                                  ) 0 1 1 0;
+    border-width: 0 1px 1px 0;
     border-radius: 0;
     border-style: solid;
     border-color: transparent;
 }
 
 column-header.button:last-child,
-column-header:last-child .button
+column-header:last-child .button,
 column-header.button:last-child:active,
 column-header:last-child .button:active,
 column-header.button:last-child:active:hover,
 column-header:last-child .button:active:hover {
     border-image: none;
-    border-width: 0;
-    border-radius: 0;
-    border-style: solid;
-    border-color: transparent;
+    border-color: mix(@borders, @theme_base_color, 0.5);
+    border-right-width: 0;
 }
 
 /* unfocused window: generic element borders */
