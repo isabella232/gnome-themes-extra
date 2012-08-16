@@ -1611,7 +1611,7 @@
 
 <frame_style name="attached_focused" geometry="attached">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_focused" />
+	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_focused" />
 	<button function="close" state="normal"><draw_ops></draw_ops></button>
