@@ -2780,6 +2780,27 @@ row:selected {
     background-color: @content_view_bg;
 }
 
+.content-view.view:prelight {
+    background-color: @theme_bg_color;
+}
+
+.content-view.view:selected,
+.content-view.view:active {
+    background-color: @theme_selected_bg_color;
+}
+
+.content-view.view:insensitive {
+    background-color: @theme_unfocused_base_color;
+}
+
+.content-view.view:backdrop {
+    background-color: @theme_unfocused_base_color;
+}
+
+.content-view.view:selected:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
+}
+
 GdMainIconView.content-view {
     -GdMainIconView-icon-size: 40;
 }
@@ -2791,6 +2812,13 @@ GtkIconView.content-view.check {
 
 GtkIconView.content-view.check:active {
     background-image: url("assets/grid-selection-checked.svg");
+    background-color: transparent;
+}
+
+GtkIconView.content-view.check:prelight,
+GtkIconView.content-view.check:insensitive,
+GtkIconView.content-view.check:backdrop,
+GtkIconView.content-view.check:selected {
     background-color: transparent;
 }
 
