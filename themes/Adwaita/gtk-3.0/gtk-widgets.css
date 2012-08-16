@@ -2556,6 +2556,9 @@ GtkSwitch.slider:insensitive:backdrop {
     border-color: @unfocused_insensitive_borders;
 }
 
+/***********************
+ * Tree and Icon views *
+ ***********************/
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
     -GtkTreeView-expander-size: 17;
@@ -2754,6 +2757,27 @@ row:selected {
     background-color: @theme_unfocused_selected_bg_color;
     color: @internal_element_color;
     border-color: @internal_element_color;
+}
+
+/****************
+ * Content view *
+ ****************/
+.content-view.view {
+    background-color: @content_view_bg;
+}
+
+GdMainIconView.content-view {
+    -GdMainIconView-icon-size: 40;
+}
+
+GtkIconView.content-view.check {
+    background-image: url("assets/grid-selection-unchecked.svg");
+    background-color: transparent;
+}
+
+GtkIconView.content-view.check:active {
+    background-image: url("assets/grid-selection-checked.svg");
+    background-color: transparent;
 }
 
 /* Calendars */

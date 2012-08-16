@@ -111,6 +111,8 @@
 @define-color selection_toolbar_fg @internal_element_color;
 @define-color selection_toolbar_border @borders;
 
+@define-color content_view_bg #f1f2f1;
+
 @define-color treeview_focus_border #2a79cb;
 
 @define-color view_separators shade(@borders, 1.30);

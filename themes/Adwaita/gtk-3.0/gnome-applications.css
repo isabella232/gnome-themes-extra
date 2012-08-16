@@ -240,24 +240,6 @@ GeditFloatingSlider .not-found {
     border-radius: 0;
 }
 
-.documents-main-view.view {
-    background-color: #f1f2f1;
-}
-
-GtkIconView.documents-main-view {
-    -GdMainIconView-icon-size: 40;
-}
-
-GtkIconView.documents-main-view.check {
-    background-image: url("assets/grid-selection-unchecked.svg");
-    background-color: transparent;
-}
-
-GtkIconView.documents-main-view.check:active {
-    background-image: url("assets/grid-selection-checked.svg");
-    background-color: transparent;
-}
-
 .documents-icon-bg {
     background-color: @documents_emblem_bg;
     border-radius: 4px;
