@@ -107,6 +107,10 @@
 
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
+@define-color selection_toolbar_bg @theme_base_color;
+@define-color selection_toolbar_fg @internal_element_color;
+@define-color selection_toolbar_border @borders;
+
 @define-color treeview_focus_border #2a79cb;
 
 @define-color view_separators shade(@borders, 1.30);

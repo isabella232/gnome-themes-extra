@@ -168,6 +168,7 @@
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border.svg</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-unfocused-dark.svg</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-unfocused.svg</file>
+    <file preprocess="to-pixdata">borders/selection-toolbar-suggested-button-border.svg</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border.svg</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border-focused.svg</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border-dark.svg</file>

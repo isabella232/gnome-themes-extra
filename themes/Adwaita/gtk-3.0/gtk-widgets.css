@@ -2394,6 +2394,63 @@ GtkOverlay.osd {
     border-radius: 0;    
 }
 
+/**************************
+ * Selection Mode classes *
+ **************************/
+.selection-mode.toolbar {
+    color: @selection_toolbar_fg;
+    background-color: @selection_toolbar_bg;
+    text-shadow: 1px 1px @primary_toolbar_button_text_shadow;
+
+    border-top-width: 1px;
+    border-color: @selection_toolbar_border;
+    border-style: solid;
+    padding-top: 2px;
+}
+
+.selection-mode.toolbar .suggested-action.button {
+    background-image: linear-gradient(to bottom,
+                                      @selection_toolbar_suggested_button_a,
+                                      @selection_toolbar_suggested_button_b 83%,
+                                      @selection_toolbar_suggested_button_c);
+
+    border-image: url("borders/selection-toolbar-suggested-button-border.svg") 3 / 3px stretch;
+    border-width: 1px;
+
+    color: @selection_toolbar_suggested_button_fg;
+}
+
+.selection-mode.toolbar .suggested-action.button:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@selection_toolbar_suggested_button_a, 1.20),
+                                      shade(@selection_toolbar_suggested_button_b, 1.10) 83%,
+                                      shade(@selection_toolbar_suggested_button_c, 1.10));
+    color: @selection_toolbar_suggested_button_fg;
+}
+
+.selection-mode.toolbar .suggested-action.button:active,
+.selection-mode.toolbar .suggested-action.button:hover:active {
+    background-image: linear-gradient(to bottom,
+                                      @selection_toolbar_suggested_button_b,
+                                      shade(@selection_toolbar_suggested_button_a, 0.90));
+}
+
+.selection-mode.toolbar .suggested-action.button:backdrop {
+    background-image: none;
+    border-image: none;
+    border-color: @unfocused_borders;
+}
+
+.selection-mode.toolbar .suggested-action.button * {
+    text-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
+    icon-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
+}
+
+.selection-mode.toolbar .suggested-action.button *:backdrop {
+    text-shadow: none;
+    icon-shadow: none;
+}
+
 /****************
  * GtkAssistant *
  ****************/
@@ -2875,11 +2932,13 @@ GtkInfoBar:last-child,
 .dim-label:hover,
 .dim-label:focus {
     color: mix (@theme_fg_color, @theme_bg_color, 0.50);
+    text-shadow: none;
 }
 
 .dim-label:selected,
 .dim-label:selected:focus {
     color: mix (@theme_selected_fg_color, @theme_base_color, 0.50);
+    text-shadow: none;
 }
 
 /**********************

@@ -266,64 +266,6 @@ GtkIconView.documents-main-view.check:active {
     background-color: transparent;
 }
 
-.documents-selection-mode.toolbar {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@documents_selection_toolbar_a),
-                                    to(@documents_selection_toolbar_b));
-    color: @theme_base_color;
-
-    border-top-width: 1px;
-    padding-top: 2px;
-    border-color: @documents_selection_toolbar_border;
-    border-style: solid;
-}
-
-.documents-selection-mode.toolbar .dim-label {
-    color: alpha(@theme_base_color, 0.50);
-}
-
-.documents-selection-mode.toolbar .button {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@documents_selection_button_a),
-                                    color-stop(0.83, @documents_selection_button_b),
-                                    to(@documents_selection_button_c));
-
-    border-color: @documents_selection_toolbar_border;
-    border-image: none;
-    border-style: solid;
-    border-width: 1px;
-
-    color: @theme_base_color;
-}
-
-.documents-selection-mode.toolbar .button * {
-    text-shadow: 0 1px shade(@documents_selection_toolbar_border, 0.90);
-    icon-shadow: 0 1px shade(@documents_selection_toolbar_border, 0.90);
-}
-
-.documents-selection-mode.toolbar .button:hover {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(shade(@documents_selection_button_a, 1.20)),
-                                    color-stop(0.83, shade(@documents_selection_button_b, 1.10)),
-                                    to(shade(@documents_selection_button_c, 1.10)));
-}
-
-.documents-selection-mode.toolbar .button:active,
-.documents-selection-mode.toolbar .button:hover:active {
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                    from(@documents_selection_button_b),
-                                    to(shade(@documents_selection_button_a, 0.90)));
-
-    border-color: @documents_selection_toolbar_border;
-    border-image: none;
-    border-style: solid;
-    border-width: 1px;
-}
-
-.documents-selection-mode.toolbar .button *:hover {
-    color: @theme_base_color;
-}
-
 .documents-icon-bg {
     background-color: @documents_emblem_bg;
     border-radius: 4px;
