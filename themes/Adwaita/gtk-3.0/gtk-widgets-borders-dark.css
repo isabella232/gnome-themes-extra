@@ -47,7 +47,7 @@ GtkSwitch.trough:active {
 
 /* focused button borders */
 .button.default { 
-    border-image: url("borders/button-border-focused-dark.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: url("borders/button-border-default-dark.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -124,7 +124,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button.default,
 .inline-toolbar.toolbar .button.default {
-    border-image: url("borders/primary-toolbar-button-border-focused-dark.svg") 4 / 4px stretch;
+    border-image: url("borders/primary-toolbar-button-border-default-dark.svg") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;

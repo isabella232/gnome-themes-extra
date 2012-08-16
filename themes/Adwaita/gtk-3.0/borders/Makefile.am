@@ -1,6 +1,6 @@
 EXTRA_DIST = 		\
-	button-border-focused.svg \
-	button-border-focused-dark.svg \
+	button-border-default.svg \
+	button-border-default-dark.svg \
 	button-border.svg \
 	button-border-dark.svg \
 	generic-border-focused.svg \
@@ -13,8 +13,8 @@ EXTRA_DIST = 		\
 	generic-border-unfocused-alt.svg \
 	generic-border-unfocused-dark.svg \
 	generic-border-unfocused-dark-alt.svg \
-	primary-toolbar-button-border-focused.svg \
-	primary-toolbar-button-border-focused-dark.svg \
+	primary-toolbar-button-border-default.svg \
+	primary-toolbar-button-border-default-dark.svg \
 	primary-toolbar-button-border.svg \
 	primary-toolbar-button-border-dark.svg \
 	primary-toolbar-generic-border-focused.svg \
