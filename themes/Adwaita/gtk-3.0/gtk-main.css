@@ -113,6 +113,12 @@
 
 @define-color content_view_bg #f1f2f1;
 
+@define-color app_notification_a #aeaea4;
+@define-color app_notification_b #d1d1cb;
+@define-color app_notification_c #d8d8d3;
+
+@define-color app_notification_border #949486;
+
 @define-color treeview_focus_border #2a79cb;
 
 @define-color view_separators shade(@borders, 1.30);

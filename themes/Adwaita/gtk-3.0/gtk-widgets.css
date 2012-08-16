@@ -2794,6 +2794,24 @@ GtkIconView.content-view.check:active {
     background-color: transparent;
 }
 
+/*********************
+ * App Notifications *
+ *********************/
+.app-notification {
+    border-style: solid;
+    border-color: @app_notification_border;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 5px 5px;
+    padding: 8px;
+
+    background-image: linear-gradient(to bottom,
+                                      @app_notification_a,
+                                      @app_notification_b 18%,
+                                      @app_notification_c);
+
+    text-shadow: 0 1px @primary_toolbar_button_text_shadow;
+}
+
 /* Calendars */
 GtkCalendar {
     padding: 2px;
