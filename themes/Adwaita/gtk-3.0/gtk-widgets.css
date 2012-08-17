@@ -2425,7 +2425,6 @@ GtkOverlay.osd {
                                       shade(@selection_toolbar_suggested_button_a, 1.20),
                                       shade(@selection_toolbar_suggested_button_b, 1.10) 83%,
                                       shade(@selection_toolbar_suggested_button_c, 1.10));
-    color: @selection_toolbar_suggested_button_fg;
 }
 
 .selection-mode.toolbar .suggested-action.button:active,
@@ -2444,6 +2443,12 @@ GtkOverlay.osd {
 .selection-mode.toolbar .suggested-action.button * {
     text-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
     icon-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
+}
+
+.selection-mode.toolbar .suggested-action.button *:hover,
+.selection-mode.toolbar .suggested-action.button *:active,
+.selection-mode.toolbar .suggested-action.button *:hover:active {
+    color: @selection_toolbar_suggested_button_fg;
 }
 
 .selection-mode.toolbar .suggested-action.button *:backdrop {
