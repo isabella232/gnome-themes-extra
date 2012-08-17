@@ -923,40 +923,26 @@ GtkComboBox.combobox-entry .button {
     text-shadow: 0 1px @primary_toolbar_button_text_shadow;
 }
 
-.button:insensitive {
-    color: @insensitive_fg_color;
-}
-
-.button:insensitive:backdrop {
-    color: @unfocused_insensitive_fg_color;
-}
-
-.button:active {
-    color: @button_active_text;
-}
-
-.button:active:insensitive {
-    color: @insensitive_fg_color;
-}
-
-.button:active:backdrop,
-.button:active:insensitive:backdrop {
-    color: @theme_unfocused_bg_color;
-}
-
 .primary-toolbar .button *:active,
 .inline-toolbar .button *:active,
 .button *:active {
+    color: @button_active_text;
     text-shadow: 0 1px @button_active_text_shadow;
 }
 
 .button *:insensitive,
 .button *:active:insensitive {
+    color: @insensitive_fg_color;
     text-shadow: none;
+}
+
+.button *:insensitive:backdrop {
+    color: @unfocused_insensitive_fg_color;
 }
 
 .button *:active:backdrop,
 .button *:active:insensitive:backdrop {
+    color: @theme_unfocused_bg_color;
     text-shadow: none;
     icon-shadow: none;
 }
