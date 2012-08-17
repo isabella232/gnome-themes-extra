@@ -303,22 +303,6 @@ GeditFloatingSlider .not-found {
     border-radius: 0;
 }
 
-.baobab-main-view {
-    background-color: #f1f2f1;
-}
-
-.baobab-main-view:prelight {
-    background-color: @theme_bg_color;
-}
-
-.baobab-main-view:selected {
-    background-color: @theme_selected_bg_color;
-}
-
-.baobab-main-view:active {
-    background-color: @theme_selected_bg_color;
-}
-
 .cell.baobab-level-cell,
 .cell.baobab-level-cell:hover,
 .cell.baobab-level-cell:selected,
