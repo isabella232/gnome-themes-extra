@@ -6,7 +6,7 @@ theme_DATA = gtkrc
 asset_dirs = "Arrows" "Buttons" "Check-Radio" "Entry" "Expanders" \
 	"Handles" "Lines" "Menu-Menubar" "Others" "ProgressBar" \
 	"Range" "Scrollbars" "Shadows" "Spin" "Tabs" "Toolbar"
-asset_data =
+asset_data = \
 	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down.png \
 	Arrows/arrow-down-prelight.png \
@@ -115,7 +115,7 @@ install-data-local:
 uninstall-local:
 	for dir in $(asset_dirs); do \
 		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
-			rm -f $(DESTDIR)$(datadir)/themes/Adwaita/gtk-2.0/$$dir; \
+			rm -f $(DESTDIR)$(datadir)/themes/Adwaita/gtk-2.0/$$dir/$$file; \
 		done; \
 	done
 
