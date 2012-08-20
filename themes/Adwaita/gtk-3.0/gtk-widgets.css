@@ -2394,6 +2394,55 @@ GtkOverlay.osd {
     border-radius: 0;    
 }
 
+/****************************
+ * Suggested action buttons *
+ ****************************/
+.suggested-action.button {
+    background-image: linear-gradient(to bottom,
+                                      @suggested_action_button_a,
+                                      @suggested_action_button_b);
+    border-image: none;
+    border-color: @suggested_action_button_border;
+    border-width: 1px;
+
+    color: @suggested_action_button_fg;
+    text-shadow: 0 -1px @suggested_action_button_shadow;
+}
+
+.suggested-action.button:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@suggested_action_button_a, 1.10),
+                                      shade(@suggested_action_button_b, 1.05));
+}
+
+.suggested-action.button:active,
+.suggested-action.button:hover:active {
+    background-image: linear-gradient(to bottom,
+                                      @suggested_action_button_b,
+                                      @suggested_action_button_a);
+}
+
+.suggested-action.button:backdrop {
+    background-image: none;
+    border-image: none;
+    border-color: @unfocused_borders;
+}
+
+.suggested-action.button *:hover,
+.suggested-action.button *:active,
+.suggested-action.button *:hover:active {
+    color: @suggested_action_button_fg;
+}
+
+.suggested-action.button *:active,
+.suggested-action.button *:hover:active {
+    text-shadow: 0 -1px shade(@suggested_action_button_shadow, 1.15);
+}
+
+.suggested-action.button *:backdrop {
+    text-shadow: none;
+}
+
 /**************************
  * Selection Mode classes *
  **************************/
@@ -2408,7 +2457,8 @@ GtkOverlay.osd {
     padding-top: 2px;
 }
 
-.selection-mode.toolbar .suggested-action.button {
+.selection-mode.toolbar .suggested-action.button,
+.selection-mode.toolbar GtkToolButton.suggested-action .button {
     background-image: linear-gradient(to bottom,
                                       @selection_toolbar_suggested_button_a,
                                       @selection_toolbar_suggested_button_b 83%,
@@ -2420,7 +2470,8 @@ GtkOverlay.osd {
     color: @selection_toolbar_suggested_button_fg;
 }
 
-.selection-mode.toolbar .suggested-action.button:hover {
+.selection-mode.toolbar .suggested-action.button:hover,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:hover {
     background-image: linear-gradient(to bottom,
                                       shade(@selection_toolbar_suggested_button_a, 1.20),
                                       shade(@selection_toolbar_suggested_button_b, 1.10) 83%,
@@ -2428,30 +2479,38 @@ GtkOverlay.osd {
 }
 
 .selection-mode.toolbar .suggested-action.button:active,
-.selection-mode.toolbar .suggested-action.button:hover:active {
+.selection-mode.toolbar .suggested-action.button:hover:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:hover:active {
     background-image: linear-gradient(to bottom,
                                       @selection_toolbar_suggested_button_b,
                                       shade(@selection_toolbar_suggested_button_a, 0.90));
 }
 
-.selection-mode.toolbar .suggested-action.button:backdrop {
+.selection-mode.toolbar .suggested-action.button:backdrop,
+.selection-mode.toolbar GtkToolButton.suggested-action .button:backdrop {
     background-image: none;
     border-image: none;
     border-color: @unfocused_borders;
 }
 
-.selection-mode.toolbar .suggested-action.button * {
+.selection-mode.toolbar .suggested-action.button *,
+.selection-mode.toolbar GtkToolButton.suggested-action .button * {
     text-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
     icon-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
 }
 
 .selection-mode.toolbar .suggested-action.button *:hover,
 .selection-mode.toolbar .suggested-action.button *:active,
-.selection-mode.toolbar .suggested-action.button *:hover:active {
+.selection-mode.toolbar .suggested-action.button *:hover:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button *:hover,
+.selection-mode.toolbar GtkToolButton.suggested-action .button *:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button *:hover:active {
     color: @selection_toolbar_suggested_button_fg;
 }
 
-.selection-mode.toolbar .suggested-action.button *:backdrop {
+.selection-mode.toolbar .suggested-action.button *:backdrop,
+.selection-mode.toolbar GtkToolButton.suggested-action .button *:backdrop {
     text-shadow: none;
     icon-shadow: none;
 }

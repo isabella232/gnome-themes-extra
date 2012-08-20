@@ -119,6 +119,12 @@
 
 @define-color app_notification_border #949486;
 
+@define-color suggested_action_button_a #74a9e0;
+@define-color suggested_action_button_b #4287cf;
+@define-color suggested_action_button_border #204a87;
+@define-color suggested_action_button_fg #ffffff;
+@define-color suggested_action_button_shadow shade(@suggested_action_button_border, 1.15);
+
 @define-color treeview_focus_border #2a79cb;
 
 @define-color view_separators shade(@borders, 1.30);
