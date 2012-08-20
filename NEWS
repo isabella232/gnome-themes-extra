@@ -1,3 +1,15 @@
+3.5.90
+======
+
+Add a GTK2 version of Adwaita, based on the Bridge theme (Jack Gandy)
+New default wallpapers (Jakub Steiner)
+Improve metacity attached dialog styling (Florian Müllner)
+Improve custom theming for Nautilus (Lapo Calamandrei)
+Add generic theming support for selection-mode toolbar style classes
+Add generic theming support for in-app notifications
+Add generic theming support for suggested-action buttons
+Improve theming for GtkMenuButton
+
 3.5.5
 =====
 
