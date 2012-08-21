@@ -7,13 +7,14 @@ asset_dirs = "Arrows" "Buttons" "Check-Radio" "Entry" "Expanders" \
 	"Handles" "Lines" "Menu-Menubar" "Others" "ProgressBar" \
 	"Range" "Scrollbars" "Shadows" "Spin" "Tabs" "Toolbar"
 asset_data = \
-	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down.png \
+	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down-prelight.png \
 	Arrows/arrow-left.png \
 	Arrows/arrow-right.png \
-	Arrows/arrow-right-prelight.png \
 	Arrows/arrow-up.png \
+	Arrows/arrow-up-insens.png \
+	Arrows/arrow-up-prelight.png \
 	Arrows/menu-arrow.png \
 	Arrows/menu-arrow-prelight.png \
 	Buttons/button-default.png \
