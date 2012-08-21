@@ -2865,6 +2865,11 @@ GtkIconView.content-view.check:active {
     background-color: transparent;
 }
 
+.content-view.view.check,
+.content-view.view.check:active {
+    background-color: transparent;
+}
+
 GtkIconView.content-view.check:prelight,
 GtkIconView.content-view.check:insensitive,
 GtkIconView.content-view.check:backdrop,
