@@ -2642,14 +2642,12 @@ GtkTreeView.dnd {
 }
 
 GtkViewport,
-GtkIconView {
-    border-radius: 3px;
-    padding: 0;
+GtkScrolledWindow {
     background-color: @theme_base_color;
 }
 
 GtkViewport:backdrop,
-GtkIconView:backdrop {
+GtkScrolledWindow:backdrop {
     background-color: @theme_unfocused_base_color;
 }
 
