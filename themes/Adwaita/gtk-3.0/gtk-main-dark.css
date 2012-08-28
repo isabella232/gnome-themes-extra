@@ -111,6 +111,11 @@
 @define-color selection_toolbar_fg shade(@theme_text_color, 0.80);
 @define-color selection_toolbar_border @internal_element_color;
 
+@define-color selection_menu_border @internal_element_color;
+@define-color selection_menu_strong @theme_text_color;
+@define-color selection_menu_fg shade(@theme_text_color, 0.80);
+@define-color selection_menu_dim shade(@theme_text_color, 0.70);
+
 @define-color content_view_bg #242424;
 
 @define-color app_notification_a #343a3b;

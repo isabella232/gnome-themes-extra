@@ -2457,6 +2457,31 @@ GtkOverlay.osd {
     padding-top: 2px;
 }
 
+.selection-mode.toolbar .selection-menu.button {
+    background-image: none;
+    border-image: none;
+    color: @selection_menu_fg;
+}
+
+.selection-mode.toolbar .selection-menu.button:backdrop {
+    background-color: @selection_toolbar_bg;
+}
+
+.selection-mode.toolbar .selection-menu.button .dim-label {
+    color: @selection_menu_dim;
+}
+
+.selection-mode.toolbar .selection-menu.button:hover,
+.selection-mode.toolbar .selection-menu.button:active {
+    color: @selection_menu_strong;
+}
+
+.selection-mode.toolbar .selection-menu.button:active {
+    border-color: @selection_menu_border;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
 .selection-mode.toolbar .suggested-action.button,
 .selection-mode.toolbar GtkToolButton.suggested-action .button {
     background-image: linear-gradient(to bottom,
