@@ -143,6 +143,10 @@ NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-chil
     border-bottom-color: @borders;
 }
 
+.toolbar NautilusPathBar .button {
+    padding: 1px 4px;
+}
+
 /* gedit */
 
 GeditWindow .pane-separator, 
