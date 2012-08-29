@@ -2890,6 +2890,7 @@ GtkIconView.content-view.check:selected {
                                       @app_notification_b 18%,
                                       @app_notification_c);
 
+    color: @theme_text_color;
     text-shadow: 0 1px @primary_toolbar_button_text_shadow;
 }
 
