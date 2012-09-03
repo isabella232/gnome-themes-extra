@@ -11,7 +11,6 @@ style "default"
 
 	# Style Properties
 
-	GtkScrollbar::activate-slider	= 1
 	GtkWidget::focus-line-width	= 1
 	GtkMenuBar::window-dragging	= 1
 	GtkToolbar::window-dragging	= 1
@@ -37,9 +36,11 @@ style "default"
 	GtkRange::slider-width		= 13
 	GtkRange::stepper-size		= 0
 
+	GtkScrollbar::activate-slider	                = 1
 	GtkScrollbar::has-backward-stepper		= 0  
 	GtkScrollbar::has-forward-stepper		= 0
         GtkScrollbar::min-slider-length                 = 42
+        GtkScrollbar::primary-button-warps-slider       = 1
 	GtkScrolledWindow ::scrollbar-spacing		= 0
 	GtkScrolledWindow ::scrollbars-within-bevel	= 1
 
