@@ -1769,6 +1769,11 @@ style "chrome-gtk-frame"
 	ChromeGtkFrame::scrollbar-slider-normal-color = @bg_color
 }
 
+style "chrome_menu_item"
+{
+        bg[SELECTED] = @selected_bg_color
+}
+
 style "null"
 {
 	engine "pixmap"
@@ -1797,8 +1802,6 @@ class "GtkScrolledWindow"		style "scrolled_window"
 class "GtkFrame"	                style "frame"
 class "GtkToolbar"	                style "toolbar"
 
-class "ChromeGtkFrame" 			style "chrome-gtk-frame"
-
 widget_class "*<GtkMenuBar>*"			style "menubar"
 widget_class "*<GtkMenu>*"			style "menu"
 widget_class "*<GtkMenuItem>*"			style "menu_item"
@@ -1815,7 +1818,10 @@ widget_class "*<GtkComboBoxEntry>*<GtkButton>"  style "combobox_entry_button"
 widget_class "*<GtkInfoBar>*<GtkButton>"        style "button_nohilight"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
 
-widget_class "*Chrom*Button*"		style "button"
+# Chrome/Chromium
+class "ChromeGtkFrame" 			             style "chrome-gtk-frame"
+widget_class "*Chrom*Button*"		             style "button"
+widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" style "chrome_menu_item"
 
 widget "gtk-tooltip*"  			style "tooltips"
 widget "*swt*toolbar*"			style "null"
