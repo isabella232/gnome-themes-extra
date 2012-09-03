@@ -429,6 +429,43 @@ GtkTreeView.separator:backdrop,
                 inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
 }
 
+.spinbutton.vertical .button {
+    padding: 4px;
+
+    border-color: @borders;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.spinbutton.vertical .button,
+.spinbutton.vertical .button:active {
+    box-shadow: none;
+}
+
+.spinbutton.vertical .button:first-child {
+    border-radius: 3px 3px 0 0;
+    border-bottom-color: shade(@borders, 1.10);
+}
+
+.spinbutton.vertical .button:last-child {
+    border-top-color: shade(@borders, 1.10);
+    border-radius: 0 0 3px 3px;
+}
+
+.spinbutton.vertical.entry {
+    border-image: none;
+    border-color: @borders;
+    border-width: 0 1px;
+    border-style: solid;
+    border-radius: 0;
+}
+
+.spinbutton.vertical.entry:focus {
+    box-shadow: inset 1px 2px alpha(@theme_selected_bg_color, 0.2),
+                inset 1px 1px alpha(@theme_selected_bg_color, 0.5),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.5);
+}
+
 /*****************
  * Color Chooser *
  *****************/

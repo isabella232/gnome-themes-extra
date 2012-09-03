@@ -2,7 +2,8 @@
 .button,
 .toolbar .button.raised,
 .toolbar .raised .button,
-.toolbar GtkComboBox .button {
+.toolbar GtkComboBox .button,
+.spinbutton.vertical .button {
     background-image: linear-gradient(to bottom, 
                                       @button_gradient_color_a, 
                                       @button_gradient_color_b 40%,
@@ -13,7 +14,9 @@
 
 /* Pushed button background */
 .button:active, 
-.button:active:hover, 
+.button:active:hover,
+.spinbutton.vertical .button:active,
+.spinbutton.vertical .button:active:hover,
 .toolbar .button:active,
 .toolbar .button:active:hover,
 .toolbar .button.raised:active,
