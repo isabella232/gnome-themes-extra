@@ -1,3 +1,17 @@
+3.5.91
+======
+
+Add support for vertically oriented spinbuttons
+Add support for a selection-menu button in selection mode
+Set scrolled windows background for normal and backdrop states
+Use new tooltip radius and alpha style properties for GTK2
+Use new range warp slider style property for GTK2
+Fix Chrome/Chromium custom menu items for GTK2
+Fix wrong text color in app notification widgets
+Fix tiny padding in Nautilus pathbars
+Fix stray background color below checkboxes in content views
+Synchronize HighContrast icons from the symbolic theme
+
 3.5.90.1
 ========
 
