@@ -12,7 +12,7 @@
     background-color: transparent;
 }
 
-/* Pushed button background */
+/* Pushed button and progressbar through background */
 .button:active, 
 .button:active:hover,
 .spinbutton.vertical .button:active,
@@ -238,4 +238,47 @@ GtkSwitch.trough:active:backdrop {
                                       @switch_trough_active_bg_b
                                       );
     background-color: transparent;
+}
+
+/* Progressbar backgrounds */
+
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus {
+    background-image: linear-gradient(to left top,
+                                      alpha (@progressbar_pattern, 0.25),
+                                      alpha (@progressbar_pattern, 0.25) 25%,
+                                      transparent 25%,
+                                      transparent 50%,
+                                      alpha (@progressbar_pattern, 0.25) 50%,
+                                      alpha (@progressbar_pattern, 0.25) 75%,
+                                      transparent 75%,
+                                      transparent
+                                      ),
+                      linear-gradient(to bottom,
+                                      @progressbar_background_a,
+                                      @progressbar_background_b 75%,
+                                      shade(@progressbar_background_a, 0.85)
+                                      );
+    background-size: 40px 40px, auto;
+    box-shadow: inset 1px 1px alpha(white, 0.2), inset -1px -1px alpha(white, 0.1);
+}
+
+.progressbar.vertical {
+    background-image: linear-gradient(to right top,
+                                      alpha (@progressbar_pattern, 0.25),
+                                      alpha (@progressbar_pattern, 0.25) 25%,
+                                      transparent 25%,
+                                      transparent 50%,
+                                      alpha (@progressbar_pattern, 0.25) 50%,
+                                      alpha (@progressbar_pattern, 0.25) 75%,
+                                      transparent 75%,
+                                      transparent),
+                      linear-gradient(to right,
+                                      @progressbar_background_a,
+                                      @progressbar_background_b 75%,
+                                      shade(@progressbar_background_a, 0.85)
+                                      );
 }
