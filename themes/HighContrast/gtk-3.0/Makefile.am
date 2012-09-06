@@ -9,6 +9,7 @@ theme_DATA = \
 
 EXTRA_DIST = \
 	gtk.css \
+	gtk-widgets.css \
 	gtk.gresource.xml \
 	settings.ini
 

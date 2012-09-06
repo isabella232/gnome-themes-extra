@@ -78,4 +78,4 @@
     -GtkWidget-visited-link-color: #ff80ff;
 }
 
-@import url("resource:///org/gnome/HighContrast/a11y.css");
+@import url("resource:///org/gnome/HighContrast/gtk-widgets.css");
