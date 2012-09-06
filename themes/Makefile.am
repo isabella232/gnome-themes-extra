@@ -1,4 +1,4 @@
-SUBDIRS = Adwaita LowContrast HighContrast
+SUBDIRS = Adwaita HighContrast
 
 EXTRA_DIST = \
 	a11y-base.css
