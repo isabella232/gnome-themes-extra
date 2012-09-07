@@ -59,6 +59,36 @@ GtkClutterOffscreen {
     border-color: @theme_button_insensitive_active_bg;
 }
 
+*:selected {
+    background-color: @theme_active_color;
+    color: @theme_base_color;
+}
+
+.gtkstyle-fallback {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+}
+
+.gtkstyle-fallback:prelight {
+    background-color: @theme_fg_color;
+    color: @theme_base_color;
+}
+
+.gtkstyle-fallback:active {
+    background-color: @theme_active_color;
+    color: @theme_base_color;
+}
+
+.gtkstyle-fallback:insensitive {
+    background-color: @theme_insensitive_bg;
+    color: @theme_insensitive_color;
+}
+
+.gtkstyle-fallback:selected {
+    background-color: @theme_active_color;
+    color: @theme_base_color;
+}
+
 /********
  * Misc *
  ********/
