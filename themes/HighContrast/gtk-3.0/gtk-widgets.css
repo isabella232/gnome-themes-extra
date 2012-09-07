@@ -528,8 +528,8 @@ GtkComboBox .button {
 .raised.button:active,
 .primary-toolbar .button:active,
 .toolbar .button:active {
-    background-color: @theme_slider_bg;
-    border-color: @theme_slider_bg;
+    background-color: @theme_button_active_bg;
+    border-color: @theme_button_active_border;
 }
 
 .raised .button:hover,
@@ -646,6 +646,12 @@ GtkComboBox .button {
 .osd .button:last-child,
 .linked .button:last-child {
     border-radius: 0 3px 3px 0;
+}
+
+.osd .button:only-child,
+.linked .button:only-child {
+    border-radius: 3px;
+    border-width: 2px;
 }
 
 /**********
