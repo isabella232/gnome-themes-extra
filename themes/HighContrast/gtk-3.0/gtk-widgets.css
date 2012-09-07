@@ -142,6 +142,55 @@ GtkColorSwatch {
     color: @error_fg_color;
 }
 
+/*************
+ * Level bar *
+ *************/
+GtkLevelBar {
+    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-height: 3;
+}
+
+GtkLevelBar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+}
+
+.level-bar.trough {
+    padding: 2px;
+}
+
+.level-bar.fill-block {
+    padding: 2px;
+
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: @theme_highlight_color;
+}
+
+.level-bar.fill-block.level-high {
+    background-color: @success_color;
+    border-color: darker(@success_color);
+}
+
+.level-bar.fill-block.level-low {
+    background-color: @warning_bg_color;
+    border-color: darker(@warning_bg_color);
+}
+
+.level-bar.fill-block.empty-fill-block {
+    background-color: transparent;
+    border-color: @theme_border_color;
+}
+
+.level-bar.indicator-discrete.fill-block.horizontal {
+    margin: 0 1px;
+}
+
+.level-bar.indicator-discrete.fill-block.vertical {
+    margin: 1px 0;
+}
+
 /***********
  * Buttons *
  ***********/
