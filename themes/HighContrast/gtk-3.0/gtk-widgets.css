@@ -501,6 +501,7 @@ GtkComboBox .button {
 
 .toolbar .button {
     background-color: transparent;
+    padding: 1px;
 }
 
 .toolbar .button:insensitive {
