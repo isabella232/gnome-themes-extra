@@ -288,6 +288,12 @@ GtkComboBox:insensitive {
     color: @theme_base_color;
 }
 
+/* needed for webkit/GtkStyle compatibility */
+.entry:active {
+    background-color: @theme_active_color;
+    color: @theme_base_color;
+}
+
 .entry:focus {
     border-width: 2px;
     border-color: @theme_highlight_color;
