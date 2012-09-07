@@ -517,31 +517,31 @@ GtkComboBox .button {
     background-color: @theme_button_bg;
 }
 
-.primary-toolbar .raised .button:insensitive,
-.primary-toolbar .raised.button:insensitive {
+.raised .button:insensitive,
+.raised.button:insensitive {
     border-color: @theme_button_insensitive_border;
     background-color: @theme_button_insensitive_bg;
     color: @theme_button_insensitive_fg;
 }
 
-.primary-toolbar .raised .button:active,
-.primary-toolbar .raised.button:active,
+.raised .button:active,
+.raised.button:active,
 .primary-toolbar .button:active,
 .toolbar .button:active {
     background-color: @theme_slider_bg;
     border-color: @theme_slider_bg;
 }
 
-.primary-toolbar .raised .button:hover,
-.primary-toolbar .raised.button:hover,
+.raised .button:hover,
+.raised.button:hover,
 .primary-toolbar .button:hover,
 .toolbar .button:hover {
     background-color: @theme_fg_color;
     border-color: @theme_fg_color;
 }
 
-.primary-toolbar .raised .button:active:insensitive,
-.primary-toolbar .raised.button:active:insensitive,
+.raised .button:active:insensitive,
+.raised.button:active:insensitive,
 .primary-toolbar .button:active:insensitive,
 .toolbar .button:active:insensitive {
     border-color: @theme_button_insensitive_active_bg;
