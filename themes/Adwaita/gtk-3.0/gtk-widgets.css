@@ -378,14 +378,10 @@ GtkTreeView.separator:backdrop,
 }
 
 /* needed for webkit/GtkStyle compatibility */
-.entry:active {
-    color: @theme_selected_fg_color;
-    background-color: @theme_selected_bg_color;
-}
-
+.entry:active,
 .entry:active:backdrop {
     color: @theme_unfocused_selected_fg_color;
-    background-color: @theme_unfocused_selected_bg_color
+    background-color: @theme_unfocused_selected_bg_color;
 }
 
 /*******************
