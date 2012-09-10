@@ -964,6 +964,7 @@ GtkViewport {
 
 .view {
     background-color: @theme_view_bg;
+    color: @theme_fg_color;
 }
 
 .view:selected {
