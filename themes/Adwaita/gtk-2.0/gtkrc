@@ -2,7 +2,8 @@
 
 gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#000000\ntooltip_fg_color:#FFFFFF\nselected_bg_color:#4A90D9\nselected_fg_color:#FFFFFF\ntext_color:#313739\nbg_color:#EDEDED\ntooltip_bg_color:#343434"
 
-gtk-auto-mnemonics	= 1
+gtk-auto-mnemonics              = 1
+gtk-primary-button-warps-slider = 1
 
 style "default"
 {
@@ -40,7 +41,6 @@ style "default"
 	GtkScrollbar::has-backward-stepper		= 0  
 	GtkScrollbar::has-forward-stepper		= 0
         GtkScrollbar::min-slider-length                 = 42
-        GtkScrollbar::primary-button-warps-slider       = 1
 	GtkScrolledWindow ::scrollbar-spacing		= 0
 	GtkScrolledWindow ::scrollbars-within-bevel	= 1
 
