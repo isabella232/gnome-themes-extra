@@ -123,7 +123,10 @@ EXTRA_DIST = \
 ./icons/16x16/apps/eog.png  \
 ./icons/16x16/apps/evince.png  \
 ./icons/16x16/apps/evolution.png  \
+./icons/16x16/apps/fedora-release-notes.png  \
 ./icons/16x16/apps/file-roller.png  \
+./icons/16x16/apps/firefox.png  \
+./icons/16x16/apps/gimp.png  \
 ./icons/16x16/apps/glade.png  \
 ./icons/16x16/apps/gnome-boxes.png  \
 ./icons/16x16/apps/gnome-documents.png  \
@@ -166,6 +169,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/seahorse.png  \
 ./icons/16x16/apps/shotwell.png  \
 ./icons/16x16/apps/sound-juicer.png  \
+./icons/16x16/apps/sparkleshare.png  \
 ./icons/16x16/apps/system-config-authentication.png  \
 ./icons/16x16/apps/system-file-manager.png  \
 ./icons/16x16/apps/system-users.png  \
@@ -177,6 +181,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/user-info.png  \
 ./icons/16x16/apps/utilities-system-monitor.png  \
 ./icons/16x16/apps/utilities-terminal.png  \
+./icons/16x16/apps/vim.png  \
 ./icons/16x16/apps/web-browser.png  \
 ./icons/16x16/apps/xchat-gnome.png  \
 ./icons/16x16/apps/xchat.png  \
@@ -513,7 +518,10 @@ EXTRA_DIST = \
 ./icons/22x22/apps/eog.png  \
 ./icons/22x22/apps/evince.png  \
 ./icons/22x22/apps/evolution.png  \
+./icons/22x22/apps/fedora-release-notes.png  \
 ./icons/22x22/apps/file-roller.png  \
+./icons/22x22/apps/firefox.png  \
+./icons/22x22/apps/gimp.png  \
 ./icons/22x22/apps/glade.png  \
 ./icons/22x22/apps/gnome-boxes.png  \
 ./icons/22x22/apps/gnome-documents.png  \
@@ -556,6 +564,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/seahorse.png  \
 ./icons/22x22/apps/shotwell.png  \
 ./icons/22x22/apps/sound-juicer.png  \
+./icons/22x22/apps/sparkleshare.png  \
 ./icons/22x22/apps/system-config-authentication.png  \
 ./icons/22x22/apps/system-file-manager.png  \
 ./icons/22x22/apps/system-users.png  \
@@ -567,6 +576,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/user-info.png  \
 ./icons/22x22/apps/utilities-system-monitor.png  \
 ./icons/22x22/apps/utilities-terminal.png  \
+./icons/22x22/apps/vim.png  \
 ./icons/22x22/apps/web-browser.png  \
 ./icons/22x22/apps/xchat-gnome.png  \
 ./icons/22x22/apps/xchat.png  \
@@ -903,7 +913,10 @@ EXTRA_DIST = \
 ./icons/24x24/apps/eog.png  \
 ./icons/24x24/apps/evince.png  \
 ./icons/24x24/apps/evolution.png  \
+./icons/24x24/apps/fedora-release-notes.png  \
 ./icons/24x24/apps/file-roller.png  \
+./icons/24x24/apps/firefox.png  \
+./icons/24x24/apps/gimp.png  \
 ./icons/24x24/apps/glade.png  \
 ./icons/24x24/apps/gnome-boxes.png  \
 ./icons/24x24/apps/gnome-documents.png  \
@@ -946,6 +959,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/seahorse.png  \
 ./icons/24x24/apps/shotwell.png  \
 ./icons/24x24/apps/sound-juicer.png  \
+./icons/24x24/apps/sparkleshare.png  \
 ./icons/24x24/apps/system-config-authentication.png  \
 ./icons/24x24/apps/system-file-manager.png  \
 ./icons/24x24/apps/system-users.png  \
@@ -957,6 +971,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/user-info.png  \
 ./icons/24x24/apps/utilities-system-monitor.png  \
 ./icons/24x24/apps/utilities-terminal.png  \
+./icons/24x24/apps/vim.png  \
 ./icons/24x24/apps/web-browser.png  \
 ./icons/24x24/apps/xchat-gnome.png  \
 ./icons/24x24/apps/xchat.png  \
@@ -1292,7 +1307,10 @@ EXTRA_DIST = \
 ./icons/256x256/apps/eog.png  \
 ./icons/256x256/apps/evince.png  \
 ./icons/256x256/apps/evolution.png  \
+./icons/256x256/apps/fedora-release-notes.png  \
 ./icons/256x256/apps/file-roller.png  \
+./icons/256x256/apps/firefox.png  \
+./icons/256x256/apps/gimp.png  \
 ./icons/256x256/apps/glade.png  \
 ./icons/256x256/apps/gnome-boxes.png  \
 ./icons/256x256/apps/gnome-documents.png  \
@@ -1335,6 +1353,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/seahorse.png  \
 ./icons/256x256/apps/shotwell.png  \
 ./icons/256x256/apps/sound-juicer.png  \
+./icons/256x256/apps/sparkleshare.png  \
 ./icons/256x256/apps/system-config-authentication.png  \
 ./icons/256x256/apps/system-file-manager.png  \
 ./icons/256x256/apps/system-users.png  \
@@ -1346,6 +1365,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/user-info.png  \
 ./icons/256x256/apps/utilities-system-monitor.png  \
 ./icons/256x256/apps/utilities-terminal.png  \
+./icons/256x256/apps/vim.png  \
 ./icons/256x256/apps/web-browser.png  \
 ./icons/256x256/apps/xchat-gnome.png  \
 ./icons/256x256/apps/xchat.png  \
@@ -1682,7 +1702,10 @@ EXTRA_DIST = \
 ./icons/32x32/apps/eog.png  \
 ./icons/32x32/apps/evince.png  \
 ./icons/32x32/apps/evolution.png  \
+./icons/32x32/apps/fedora-release-notes.png  \
 ./icons/32x32/apps/file-roller.png  \
+./icons/32x32/apps/firefox.png  \
+./icons/32x32/apps/gimp.png  \
 ./icons/32x32/apps/glade.png  \
 ./icons/32x32/apps/gnome-boxes.png  \
 ./icons/32x32/apps/gnome-documents.png  \
@@ -1725,6 +1748,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/seahorse.png  \
 ./icons/32x32/apps/shotwell.png  \
 ./icons/32x32/apps/sound-juicer.png  \
+./icons/32x32/apps/sparkleshare.png  \
 ./icons/32x32/apps/system-config-authentication.png  \
 ./icons/32x32/apps/system-file-manager.png  \
 ./icons/32x32/apps/system-users.png  \
@@ -1736,6 +1760,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/user-info.png  \
 ./icons/32x32/apps/utilities-system-monitor.png  \
 ./icons/32x32/apps/utilities-terminal.png  \
+./icons/32x32/apps/vim.png  \
 ./icons/32x32/apps/web-browser.png  \
 ./icons/32x32/apps/xchat-gnome.png  \
 ./icons/32x32/apps/xchat.png  \
@@ -2075,7 +2100,10 @@ EXTRA_DIST = \
 ./icons/48x48/apps/eog.png  \
 ./icons/48x48/apps/evince.png  \
 ./icons/48x48/apps/evolution.png  \
+./icons/48x48/apps/fedora-release-notes.png  \
 ./icons/48x48/apps/file-roller.png  \
+./icons/48x48/apps/firefox.png  \
+./icons/48x48/apps/gimp.png  \
 ./icons/48x48/apps/glade.png  \
 ./icons/48x48/apps/gnome-boxes.png  \
 ./icons/48x48/apps/gnome-documents.png  \
@@ -2118,6 +2146,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/seahorse.png  \
 ./icons/48x48/apps/shotwell.png  \
 ./icons/48x48/apps/sound-juicer.png  \
+./icons/48x48/apps/sparkleshare.png  \
 ./icons/48x48/apps/system-config-authentication.png  \
 ./icons/48x48/apps/system-file-manager.png  \
 ./icons/48x48/apps/system-users.png  \
@@ -2129,6 +2158,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/user-info.png  \
 ./icons/48x48/apps/utilities-system-monitor.png  \
 ./icons/48x48/apps/utilities-terminal.png  \
+./icons/48x48/apps/vim.png  \
 ./icons/48x48/apps/web-browser.png  \
 ./icons/48x48/apps/xchat-gnome.png  \
 ./icons/48x48/apps/xchat.png  \
