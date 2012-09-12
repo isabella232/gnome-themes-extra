@@ -892,7 +892,7 @@ style "entry"
                 state                   = NORMAL
 		shadow			= IN
 		file			= "Entry/entry-border.png"
-		border			= { 3, 3, 4, 4 }
+		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
 	}
 	image
@@ -902,7 +902,7 @@ style "entry"
                 state                   = INSENSITIVE
 		shadow			= IN
 		file			= "Entry/entry-border-disabled.png"
-		border			= { 3, 3, 4, 4 }
+		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
 	}
         image
@@ -911,7 +911,7 @@ style "entry"
 		detail			= "entry"
                 state                   = ACTIVE
 		file			= "Entry/entry-border-active.png"
-		border			= { 3, 3, 4, 4 }
+		border			= { 4, 4, 4, 4 }
 		stretch			= TRUE
         }
         image
