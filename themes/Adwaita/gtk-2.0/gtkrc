@@ -1828,6 +1828,17 @@ style "frame"
         }
 }
 
+style "gimp_toolbox_frame"
+{
+        engine "pixmap"
+	{
+        image
+        {
+                function		= SHADOW
+        }
+        }
+}
+
 style "toolbar"
 {
         engine "pixmap"
@@ -1953,6 +1964,8 @@ widget_class "*<GtkNotebook>.<GtkLabel>"                style "notebook_tab_labe
 # GIMP
 # Disable gradients completely for GimpSpinScale
 class "GimpSpinScale"                   style "gimp_spin_scale"
+# Remove borders from "Wilbert frame" in Gimp
+widget_class "*<GimpToolbox>*<GtkFrame>" style "gimp_toolbox_frame"
 
 # Chrome/Chromium
 class "ChromeGtkFrame" 			             style "chrome-gtk-frame"
