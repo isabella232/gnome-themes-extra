@@ -10,11 +10,17 @@ asset_data = \
 	Arrows/arrow-down.png \
 	Arrows/arrow-down-insens.png \
 	Arrows/arrow-down-prelight.png \
+	Arrows/arrow-down-small.png \
+	Arrows/arrow-down-small-insens.png \
+	Arrows/arrow-down-small-prelight.png \
 	Arrows/arrow-left.png \
 	Arrows/arrow-right.png \
 	Arrows/arrow-up.png \
 	Arrows/arrow-up-insens.png \
 	Arrows/arrow-up-prelight.png \
+	Arrows/arrow-up-small.png \
+	Arrows/arrow-up-small-insens.png \
+	Arrows/arrow-up-small-prelight.png \
 	Arrows/menu-arrow.png \
 	Arrows/menu-arrow-prelight.png \
 	Buttons/button-default.png \
@@ -67,6 +73,7 @@ asset_data = \
 	ProgressBar/progressbar.png \
 	ProgressBar/progressbar_v.png \
 	ProgressBar/trough-progressbar.png \
+	ProgressBar/trough-progressbar_v.png \
 	Range/slider-horiz.png \
 	Range/slider-horiz-prelight.png \
 	Range/slider-vert.png \
