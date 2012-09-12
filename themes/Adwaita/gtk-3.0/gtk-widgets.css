@@ -386,6 +386,18 @@ GtkTreeView.separator:backdrop,
     background-color: @theme_unfocused_selected_bg_color;
 }
 
+.cursor-handle.top,
+.cursor-handle.bottom {
+    background-color: transparent;
+    box-shadow: none;
+    border-style: none;
+    border-image: none;
+    border-radius: 0px;
+    border-width: 0px;
+
+    /* background-image in assets */
+}
+
 /*******************
  * Symbolic images *
  *******************/
