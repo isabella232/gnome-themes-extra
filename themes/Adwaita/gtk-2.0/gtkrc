@@ -1126,6 +1126,8 @@ style "combobox_entry_button"
 
 style "spinbutton"
 {
+  bg[NORMAL] = @bg_color
+
   xthickness	= 3
   ythickness	= 4
 
@@ -1942,7 +1944,8 @@ widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook
 # something else in the middle that draws gray again
 widget_class "*<GtkNotebook>*<GtkEntry>"                style "notebook_entry"
 widget_class "*<GtkNotebook>*<GtkSpinButton>"           style "notebook_spinbutton"
-widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>"  style "entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>"       style "entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkSpinButton>"  style "spinbutton"
 
 # We also need to avoid changing fg color for the inactive notebook tab labels
 widget_class "*<GtkNotebook>.<GtkLabel>"                style "notebook_tab_label"
