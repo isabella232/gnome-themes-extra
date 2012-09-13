@@ -873,7 +873,8 @@ style "button_nohilight"
 
 style "checkbutton"
 {
-  fg[ACTIVE] = @text_color
+  fg[PRELIGHT] = @text_color
+  fg[ACTIVE]   = @text_color
 }
 
 style "entry"
@@ -1955,6 +1956,8 @@ widget_class "*<GtkNotebook>*<GtkEntry>"                style "notebook_entry"
 widget_class "*<GtkNotebook>*<GtkSpinButton>"           style "notebook_spinbutton"
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>"       style "entry"
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkSpinButton>"  style "spinbutton"
+
+widget "*xchat-inputbox"                                     style "entry"
 
 # We also need to avoid changing fg color for the inactive notebook tab labels
 widget_class "*<GtkNotebook>.<GtkLabel>"                style "notebook_tab_label"
