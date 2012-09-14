@@ -79,6 +79,7 @@
 
 /* Insensitive button background */
 .button:insensitive,
+.spinbutton.vertical .button:insensitive,
 .toolbar GtkComboBox .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
@@ -177,7 +178,8 @@ column-header.button:backdrop,
 column-header .button:backdrop,
 column-header.button:insensitive:backdrop,
 column-header .button:insensitive:backdrop,
-.level-bar.trough:backdrop {
+.level-bar.trough:backdrop,
+.spinbutton.vertical.entry:backdrop {
     background-image: none;
     background-color: @theme_unfocused_base_color;
     box-shadow: none;
@@ -186,7 +188,8 @@ column-header .button:insensitive:backdrop,
 /* Unfocused windows insensitive entry background */
 .entry:insensitive:backdrop,
 GtkComboBox.combobox-entry .button:insensitive:backdrop,
-.level-bar.trough:insensitive:backdrop {
+.level-bar.trough:insensitive:backdrop,
+.spinbutton.vertical.entry:insensitive:backdrop {
     background-image: none;
     background-color: @unfocused_insensitive_bg_color;
 }

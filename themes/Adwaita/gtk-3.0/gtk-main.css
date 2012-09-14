@@ -50,7 +50,8 @@
 
 @define-color insensitive_bg_color #f4f4f2;
 @define-color insensitive_fg_color #a7aba7;
-@define-color insensitive_borders shade (@internal_element_color, 1.37);
+@define-color insensitive_borders shade(@internal_element_color, 1.37);
+@define-color insensitive_scale_borders @insensitive_borders;
 
 @define-color trough_bg_color_a #bcbcb7;
 @define-color trough_bg_color_b #e0e0dd;

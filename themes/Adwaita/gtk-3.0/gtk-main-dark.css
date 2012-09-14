@@ -50,7 +50,8 @@
 
 @define-color insensitive_fg_color #535555;
 @define-color insensitive_bg_color mix(@theme_bg_color, @theme_base_color, 0.6);
-@define-color insensitive_borders #535555;
+@define-color insensitive_borders @borders;
+@define-color insensitive_scale_borders #535555;
 
 @define-color trough_bg_color_a #30312f;
 @define-color trough_bg_color_b #41433f;

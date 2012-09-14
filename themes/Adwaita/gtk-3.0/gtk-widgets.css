@@ -478,25 +478,39 @@ GtkTreeView.separator:backdrop,
 
 .spinbutton.vertical .button {
     padding: 4px;
+    icon-shadow: 0 1px @button_text_shadow;
+}
 
-    border-color: @borders;
-    border-style: solid;
-    border-width: 1px;
+.spinbutton.vertical .button:active {
+    color: @button_active_text;
+    icon-shadow: 0 1px @button_active_text_shadow;
+}
+
+/* :insensitive:insensitive to override the dark overriden style for
+   normal spinbutton buttons, yeah we lack !important */
+.spinbutton.vertical .button:insensitive:insensitive {
+    icon-shadow: none;
 }
 
 .spinbutton.vertical .button,
-.spinbutton.vertical .button:active {
+/* :active:active to override the dark overriden style for
+   normal spinbutton buttons, yeah we lack !important */
+.spinbutton.vertical .button:active:active {
     box-shadow: none;
 }
 
 .spinbutton.vertical .button:first-child {
-    border-radius: 3px 3px 0 0;
-    border-bottom-color: shade(@borders, 1.10);
+    border-image-width: 3px 3px 0 3px;
+    border-width: 1px 1px 0 1px;
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0;
 }
 
 .spinbutton.vertical .button:last-child {
-    border-top-color: shade(@borders, 1.10);
-    border-radius: 0 0 3px 3px;
+    border-image-width: 0 3px 4px 3px;
+    border-width: 0 1px 2px 1px;
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0;
 }
 
 .spinbutton.vertical.entry {
@@ -505,13 +519,45 @@ GtkTreeView.separator:backdrop,
     border-width: 0 1px;
     border-style: solid;
     border-radius: 0;
+    box-shadow: inset 0 2px @entry_inset, 
+                inset 0 3px alpha(@entry_inset, 0.4),
+                inset 0 1px @borders, 
+                inset 0 -1px @borders;
+
+    /* I'm using box-shadow as borders, so I need to compensate
+       with padding. Those two values need to be entry padding +1 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.spinbutton.vertical.entry:insensitive {
+    border-color: @insensitive_borders;
+    box-shadow: inset 0 1px @insensitive_borders, 
+                inset 0 -1px @insensitive_borders;
 }
 
 .spinbutton.vertical.entry:focus {
-    box-shadow: inset 1px 2px alpha(@theme_selected_bg_color, 0.2),
-                inset 1px 1px alpha(@theme_selected_bg_color, 0.5),
-                inset -1px -1px alpha(@theme_selected_bg_color, 0.5);
+    border-color: @theme_selected_bg_color;
+    box-shadow: inset 1px 2px alpha(@theme_selected_bg_color, 0.1), 
+                inset 1px 3px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -2px alpha(@theme_selected_bg_color, 0.2),
+                inset 0 1px @theme_selected_bg_color,
+                inset 0 -1px @theme_selected_bg_color;
 }
+
+.spinbutton.vertical.entry:backdrop {
+    /* Adding back box-shadow for borders */
+    border-color: @unfocused_borders;
+    box-shadow: inset 0 1px @unfocused_borders,
+                inset 0 -1px @unfocused_borders;
+}
+
+.spinbutton.vertical.entry:insensitive:backdrop {
+    /* Adding back box-shadow for borders */
+    box-shadow: inset 0 1px @unfocused_insensitive_borders,
+                inset 0 -1px @unfocused_insensitive_borders;
+}
+
 
 /*****************
  * Color Chooser *
@@ -853,7 +899,7 @@ GtkLevelBar.vertical {
 
 .scale.trough:insensitive {
     background-color: @insensitive_bg_color;
-    border-color: @insensitive_borders;
+    border-color: @insensitive_scale_borders;
     box-shadow: none;
     background-image: none;
 }
@@ -3247,3 +3293,4 @@ GsmFailWhaleDialog .button:active {
     border-color: @borders;
     border-width: 1px;
 }
+

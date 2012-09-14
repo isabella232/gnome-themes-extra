@@ -7,6 +7,8 @@ GtkComboBox.combobox-entry .button,
 .button:active,
 .button:insensitive,
 .button.default:insensitive,
+.spinbutton.vertical .button:active,
+.spinbutton.vertical .button:insensitive,
 .trough,
 .trough.highlight,
 GtkSwitch.trough {
@@ -38,7 +40,8 @@ GtkSwitch.trough:active {
 }
 
 /* generic button borders */
-.button {
+.button,
+.spinbutton.vertical .button {
     border-image: url("borders/button-border.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
@@ -188,6 +191,7 @@ column-header:last-child .button:active:hover {
 
 /* unfocused window: generic element borders */
 .button:backdrop,
+.spinbutton.vertical .button:backdrop,
 GtkComboBox.combobox-entry .entry:backdrop,
 GtkComboBox.combobox-entry .button:backdrop,
 .entry:backdrop,

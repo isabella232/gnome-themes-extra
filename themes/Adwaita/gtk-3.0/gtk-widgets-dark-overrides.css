@@ -150,6 +150,18 @@ GtkComboBox.combobox-entry .entry:focus:last-child {
                 inset -1px -1px alpha(lighter(@theme_selected_bg_color), 0.7);
 }
 
+.spinbutton.vertical .button {
+    icon-shadow: 0 -1px @button_text_shadow;
+}
+
+.spinbutton.vertical .button:active {
+    icon-shadow: 0 1px @button_active_text_shadow;
+}
+
+.spinbutton.vertical .button:backdrop {
+    icon-shadow: none;
+}
+
 GtkColorSwatch,
 GtkColorSwatch:selected,
 GtkColorSwatch:hover,
