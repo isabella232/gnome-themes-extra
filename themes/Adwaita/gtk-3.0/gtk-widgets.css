@@ -2060,6 +2060,7 @@ GtkMenuButton.button:active,
     border-image: none;
     border-color: @menu_bg_color;
     border-radius: 4px 4px 0 0;
+    color: @theme_text_color;
 }
 
 GtkMenuButton.button *:active,
@@ -2094,7 +2095,8 @@ GtkMenuButton.button *:active,
 }
 
 .button.menuitem.menubar *:active,
-GtkMenuButton.button *:active {
+GtkMenuButton.button *:active,
+.toolbar GtkMenuButton.button *:active {
     color: @theme_text_color;
 }
 
