@@ -36,7 +36,7 @@ AC_ARG_ENABLE([gtk3-engines],
 AC_MSG_CHECKING([building gtk3 engines])
 AM_CONDITIONAL(GTK3, test "x$enable_gtk3" = "xyes")
 AC_MSG_RESULT([$enable_gtk3])
-GTK_VERSION_REQUIRED=3.3.14
+GTK_VERSION_REQUIRED=3.5.17
 
 if test "x$enable_gtk3" = "xyes"; then
   PKG_CHECK_MODULES([DEPENDENCIES], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
