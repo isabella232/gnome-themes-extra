@@ -1,3 +1,25 @@
+3.5.92
+======
+
+Adwaita:
+- New improved assets for the GTK2 implementation
+- Improve theming for progressbars in GtkEntry
+- Improve theming for vertical spinbuttons
+- Add transitions to and from GtkEntry's focused state
+- Add support for theming text selection handles
+- Fix GtkSpinner animation
+- Fix blue border for insensitive default buttons
+- Fix wrong highlight color for highlighted headings in GtkAssistant
+- Drop HighContrastInverse/LowContrast GTK themes
+
+HighContrast:
+- Add new application icons
+- Don't show focus ring by default
+- Fix selected text theming under some circumstances
+- Fix theming for the deprecated GtkStyle fallback path
+- Fix GtkLevelBar theming
+- Fix theming for fallback GNOME Panel
+
 3.5.91
 ======
 
