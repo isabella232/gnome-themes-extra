@@ -11,7 +11,8 @@ GtkComboBox.combobox-entry .button,
 .spinbutton.vertical .button:insensitive,
 .trough,
 .trough.highlight,
-GtkSwitch.trough {
+GtkSwitch.trough,
+GtkSwitch.trough:active:insensitive {
     border-image: url("borders/generic-border.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
@@ -93,6 +94,7 @@ GtkSwitch.trough:active {
 .inline-toolbar.toolbar GtkToolButton .button:insensitive,
 .primary-toolbar GtkSwitch.trough,
 .primary-toolbar GtkSwitch.trough:insensitive,
+.primary-toolbar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkComboBox .button:active,
 .primary-toolbar GtkComboBox .button:insensitive {
     border-image: url("borders/primary-toolbar-generic-border.svg") 4 / 4px stretch;
