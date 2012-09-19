@@ -321,13 +321,24 @@ GeditFloatingSlider .not-found {
 
 /* epiphany */
 
-EphyToolbar .entry,
-EphyToolbar .entry:focus,
-EphyToolbar .entry:backdrop {
+EphyToolbar .entry:first-child,
+EphyToolbar .entry:focus:first-child,
+EphyToolbar .entry:backdrop:first-child {
     border-image-width: 3px 0 4px 3px;
-    border-width: 1px 0 2px 1px;
+    border-right-width: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+EphyToolbar .entry:last-child,
+EphyToolbar .entry:focus:last-child,
+EphyToolbar .entry:backdrop:last-child {
+    border-image-width: 3px 3px 4px 0;
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -338,18 +349,53 @@ EphyToolbar .entry:focus {
                 inset 0 -1px alpha(@theme_selected_bg_color, 0.2);
 }
 
+EphyToolbar .entry:focus:last-child {
+    box-shadow: inset 0 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 0 1px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+}
+
 EphyToolbar .location-entry .button {
     color: @internal_element_color;
     -GtkButton-child-displacement-y: 0;
+    border-image-source: url("borders/generic-border.svg");
+    border-image-slice: 3 3 4 3;
+    border-image-repeat: stretch;
+    border-width: 1px 1px 2px 1px;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-shadow: inset 1px 0 @inset_dark_color,
+                inset 0 1px @entry_inset,
+                inset 0 2px alpha(@entry_inset, 0.4);
+}
+
+EphyToolbar .location-entry .button:backdrop,
+EphyToolbar .location-entry .button:backdrop:first-child,
+EphyToolbar .location-entry .button:backdrop:hover,
+EphyToolbar .location-entry .button:backdrop:hover:first-child {
+    border-image-source: url("borders/generic-border-unfocused.svg");
+    box-shadow: none;
+    background-image: none;
+    background-color: @theme_unfocused_base_color;
 }
 
 EphyToolbar .location-entry .button:last-child {
-    border-image: url("borders/generic-border.svg") 3 3 4 3 / 3px 3px 4px 0 stretch;
-    border-width: 1px 1px 2px 0;
+    border-image-width: 3px 3px 4px 0;
+    border-left-width: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    padding-left: 4px;
-    padding-right: 2px;
+}
+
+EphyToolbar .location-entry .button:first-child {
+    border-image-width: 3px 0 4px 3px;
+    border-right-width: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    /* flip the box-shadow division*/
+    box-shadow: inset -1px 0 @inset_dark_color,
+                inset 0 1px @entry_inset,
+                inset 0 2px alpha(@entry_inset, 0.4);
 }
 
 EphyToolbar .location-entry .button,
@@ -359,9 +405,6 @@ EphyToolbar .location-entry .button:hover {
                                     left top, left bottom,
                                     from(@entry_background_a),
                                     to(@entry_background_b));
-    box-shadow: inset 1px 0 @inset_dark_color,
-                inset 0 1px @entry_inset,
-                inset 0 2px alpha(@entry_inset, 0.4);
 }
 
 EphyToolbar .location-entry .button:active,
@@ -370,25 +413,12 @@ EphyToolbar .location-entry .button:active:hover {
                                     left top, left bottom,
                                     from(shade(@entry_background_a, 0.9)),
                                     to(@entry_background_b));
-    box-shadow: inset 1px 0 @inset_dark_color,
-                inset 0 1px @entry_inset, 
-                inset 0 2px alpha(@entry_inset, 0.4);
 }
 
 EphyToolbar .location-entry .button:hover,
 EphyToolbar .location-entry .button:active,
 EphyToolbar .location-entry .button *:active {
     color: @theme_text_color;
-}
-
-EphyToolbar .location-entry .button:backdrop,
-EphyToolbar .location-entry .button:hover:backdrop {
-    background-image: none;
-    background-color: @theme_unfocused_base_color;
-    box-shadow: none;
-    border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3px 3px 4px 0 stretch;
-    border-radius: 3px;
-    border-width: 1px 1px 2px 0;
 }
 
 EphyNotebook.notebook {
