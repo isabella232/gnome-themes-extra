@@ -98,6 +98,7 @@ themes/HighContrast/Makefile
 themes/HighContrast/gtk-2.0/Makefile
 themes/HighContrast/gtk-3.0/Makefile
 themes/HighContrast/icons/Makefile
+themes/HighContrast/metacity-1/Makefile
 src/Makefile
 po/Makefile.in
 ])
