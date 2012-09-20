@@ -2338,12 +2338,14 @@ GtkCheckButton:selected:focus {
  * Sidebar *
  ***********/
 .sidebar,
-.sidebar .view {
+.sidebar .view,
+.sidebar GtkScrolledWindow {
     background-color: @sidebar_bg;
 }
 
 .sidebar:backdrop,
-.sidebar .view:backdrop {
+.sidebar .view:backdrop,
+.sidebar GtkScrolledWindow:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
@@ -2357,11 +2359,11 @@ GtkCheckButton:selected:focus {
 }
 
 .sidebar .scrollbar.trough {
-    background-color: shade(@sidebar_bg, 0.8);
+    background-color: @sidebar_scrollbar_trough;
 }
 
 .sidebar .scrollbar.trough:backdrop {
-    background-color: shade(@sidebar_bg_unfocused, 0.8);
+    background-color: @sidebar_scrollbar_trough_backdrop;
 }
 
 .sidebar .scrollbar.slider {
@@ -2373,6 +2375,10 @@ GtkCheckButton:selected:focus {
 }
 
 .sidebar .scrollbar.slider:hover {
+    background-color: mix (@sidebar_bg, @theme_base_color, 0.35);
+}
+
+.sidebar .scrollbar.slider:hover:active {
     background-color: @theme_base_color;
 }
 

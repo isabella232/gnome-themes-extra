@@ -34,6 +34,9 @@
 @define-color sidebar_bg shade (@theme_bg_color, 1.025);
 @define-color sidebar_bg_unfocused mix(@sidebar_bg, @theme_unfocused_base_color, 0.5);
 
+@define-color sidebar_scrollbar_trough shade(@sidebar_bg, 0.8);
+@define-color sidebar_scrollbar_trough_backdrop shade(@sidebar_bg_unfocused, 0.8);
+
 @define-color button_gradient_color_a shade(@theme_bg_color, 1.05);
 @define-color button_gradient_color_b @theme_bg_color;
 @define-color button_gradient_color_c shade(@theme_bg_color, 0.92);
