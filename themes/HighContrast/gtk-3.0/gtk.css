@@ -63,6 +63,11 @@
 
 @define-color theme_cursor_color @theme_fg_color;
 
+@define-color wm_button_bg @theme_button_bg;
+@define-color wm_button_fg @theme_button_fg;
+@define-color wm_button_prelight_bg @theme_fg_color;
+@define-color wm_button_prelight_fg @theme_base_color;
+
 * {
     /* Pidgin */
     -GtkIMHtml-hyperlink-color: #000060;
