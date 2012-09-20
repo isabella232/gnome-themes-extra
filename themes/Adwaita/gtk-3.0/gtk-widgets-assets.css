@@ -253,14 +253,6 @@
     background-image: url("assets/scale-slider-vert-backdrop-insensitive.png");
 }
 
-.cursor-handle.bottom {
-    background-image: url("assets/scale-slider-up-backdrop.png");
-}
-
-.cursor-handle.top {
-    background-image: url("assets/scale-slider-down-backdrop.png");
-}
-
 .scale.scale-has-marks-above.slider.horizontal {
     background-image: url("assets/scale-slider-up.png");
 }
@@ -325,3 +317,13 @@
     background-image: url("assets/scale-slider-right-backdrop-insensitive.png");
 }
 
+/********************************
+ * Touch text selection handles *
+ ********************************/
+.cursor-handle.bottom {
+    background-image: url("assets/scale-slider-up-backdrop.png");
+}
+
+.cursor-handle.top {
+    background-image: url("assets/scale-slider-down-backdrop.png");
+}

@@ -1,3 +1,12 @@
+/***************
+ * Resize grip *
+ ***************/
+
+.grip {
+    background-color: transparent;
+    background-image: url("assets/resize-grip.svg");
+}
+
 /*************************
  * Check and Radio items *
  *************************/
@@ -16,8 +25,13 @@
     background-image: url("assets/checkbox-unchecked-insensitive-dark.png");
 }
 
+.check row:insensitive {
+    background-color: transparent;
+}
+
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
+    background-color: transparent;
     background-image: url("assets/checkbox-unchecked-insensitive-alt-dark.png");
 }
 
@@ -100,6 +114,10 @@
 
 .radio:insensitive {
     background-image: url("assets/radio-unchecked-insensitive-dark.png");
+}
+
+.radio row:insensitive {
+    background-color: transparent;
 }
 
 .radio row:selected:insensitive,
@@ -195,6 +213,9 @@
     background-image: url("assets/sidebar-radio-selected-prelight.svg");    
 }
 
+/*********************
+ * GtkScale's slider *
+ *********************/
 .scale.slider,
 .scale.slider.horizontal {
     background-image: url("assets/scale-slider-horz-dark.png");
@@ -296,3 +317,13 @@
     background-image: url("assets/scale-slider-right-backdrop-insensitive-dark.png");
 }
 
+/********************************
+ * Touch text selection handles *
+ ********************************/
+.cursor-handle.bottom {
+    background-image: url("assets/scale-slider-up-backdrop-dark.png");
+}
+
+.cursor-handle.top {
+    background-image: url("assets/scale-slider-down-backdrop-dark.png");
+}
