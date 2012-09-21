@@ -13,7 +13,7 @@ GtkComboBox.combobox-entry .button,
 .trough.highlight,
 GtkSwitch.trough,
 GtkSwitch.trough:active:insensitive {
-    border-image: url("borders/generic-border.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: url("borders/generic-border.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -21,7 +21,7 @@ GtkSwitch.trough:active:insensitive {
 }
 
 .trough row {
-    border-image: url("borders/generic-border-alt.svg") 3 / 3px stretch;
+    border-image: url("borders/nohl-generic-border.png") 3 / 3px stretch;
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
@@ -33,7 +33,7 @@ GtkSwitch.trough:active:insensitive {
 GtkComboBox.combobox-entry .entry:focus,
 .button.default:active,
 GtkSwitch.trough:active { 
-    border-image: url("borders/generic-border-focused.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: url("borders/generic-border-focused.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -43,7 +43,7 @@ GtkSwitch.trough:active {
 /* generic button borders */
 .button,
 .spinbutton.vertical .button {
-    border-image: url("borders/button-border.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: url("borders/button-border.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -52,7 +52,7 @@ GtkSwitch.trough:active {
 
 /* focused button borders */
 .button.default { 
-    border-image: url("borders/button-border-default.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: url("borders/button-border-default.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -97,7 +97,7 @@ GtkSwitch.trough:active {
 .primary-toolbar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkComboBox .button:active,
 .primary-toolbar GtkComboBox .button:insensitive {
-    border-image: url("borders/primary-toolbar-generic-border.svg") 4 / 4px stretch;
+    border-image: url("borders/primary-toolbar-generic-border.png") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -110,7 +110,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button.default:active {
-    border-image: url("borders/primary-toolbar-generic-border-focused.svg") 4 / 4px stretch;
+    border-image: url("borders/primary-toolbar-generic-border-focused.png") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -122,7 +122,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .raised .button,
 .inline-toolbar.toolbar .button,
 .primary-toolbar GtkComboBox .button {
-    border-image: url("borders/primary-toolbar-button-border.svg") 4 / 4px stretch;
+    border-image: url("borders/primary-toolbar-button-border.png") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -133,7 +133,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button.default,
 .inline-toolbar.toolbar .button.default {
-    border-image: url("borders/primary-toolbar-button-border-default.svg") 4 / 4px stretch;
+    border-image: url("borders/primary-toolbar-button-border-default.png") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -199,7 +199,7 @@ GtkComboBox.combobox-entry .button:backdrop,
 .entry:backdrop,
 GtkSwitch.trough:backdrop,
 .trough:backdrop {
-    border-image: url("borders/generic-border-unfocused.svg") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: url("borders/generic-border-backdrop.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -207,7 +207,7 @@ GtkSwitch.trough:backdrop,
 }
 
 .trough row:backdrop {
-    border-image: url("borders/generic-border-unfocused-alt.svg") 3 / 3px stretch;
+    border-image: url("borders/nohl-generic-border-backdrop.png") 3 / 3px stretch;
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
@@ -225,7 +225,7 @@ GtkSwitch.trough:backdrop,
 .primary-toolbar GtkSwitch.trough:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop:insensitive { 
-    border-image: url("borders/primary-toolbar-generic-border-unfocused.svg") 4 / 4px stretch;
+    border-image: url("borders/primary-toolbar-generic-border-backdrop.png") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
