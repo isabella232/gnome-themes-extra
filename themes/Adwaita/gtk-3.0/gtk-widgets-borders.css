@@ -90,8 +90,6 @@ GtkSwitch.trough:active {
 .inline-toolbar.toolbar .button.default:insensitive,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:active,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive,
 .primary-toolbar GtkSwitch.trough,
 .primary-toolbar GtkSwitch.trough:insensitive,
 .primary-toolbar GtkSwitch.trough:active:insensitive,
@@ -224,7 +222,8 @@ GtkSwitch.trough:backdrop,
 .primary-toolbar .entry:backdrop,
 .primary-toolbar GtkSwitch.trough:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
-.inline-toolbar.toolbar .button:backdrop:insensitive { 
+.inline-toolbar.toolbar .button:backdrop:insensitive,
+.inline-toolbar.toolbar .button:backdrop:active {
     border-image: url("borders/primary-toolbar-generic-border-backdrop.png") 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
