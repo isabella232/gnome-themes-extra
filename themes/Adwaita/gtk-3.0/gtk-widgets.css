@@ -1499,6 +1499,48 @@ GtkComboBox.combobox-entry .button {
     border-radius: 3px;
 }
 
+/* Special-case GtkMenuToolButton, since it's a GtkToolButton, but it
+ * has a box inside to pack the button and the actual menu */
+.inline-toolbar.toolbar GtkMenuToolButton .button:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:active:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:insensitive:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:backdrop:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:backdrop:insensitive:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:active:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:insensitive:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:backdrop:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton .button:backdrop:insensitive:last-child {
+    border-right-width: 0;
+    border-left-width: 0;
+    border-image-width: 4px 0 4px 0;
+    border-radius: 0;
+}
+
+.inline-toolbar.toolbar GtkMenuToolButton:first-child .button:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton:first-child .button:active:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton:first-child .button:insensitive:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton:first-child .button:backdrop:first-child,
+.inline-toolbar.toolbar GtkMenuToolButton:first-child .button:backdrop:insensitive:first-child {
+    border-left-width: 2px;
+    border-right-width: 0;
+    border-image-width: 4px 0 4px 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.inline-toolbar.toolbar GtkMenuToolButton:last-child .button:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton:last-child .button:active:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton:last-child .button:insensitive:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton:last-child .button:backdrop:last-child,
+.inline-toolbar.toolbar GtkMenuToolButton:last-child .button:backdrop:insensitive:last-child {
+    border-left-width: 0;
+    border-right-width: 2px;
+    border-image-width: 4px 4px 4px 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
 GtkLinkButton.button,
 GtkLinkButton.button *:active {
     text-shadow: none;
