@@ -1187,7 +1187,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked,
 .toolbar .raised.linked .button,
 .inline-toolbar.toolbar .button,
-.inline-toolbar.toolbar GtkToolButton .button {
+.inline-toolbar.toolbar GtkToolButton > .button {
     box-shadow: inset 1px 0 @inset_light_color, inset -1px 0 @inset_dark_color;
 }
 
@@ -1195,7 +1195,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked:first-child,
 .toolbar .raised.linked .button:first-child,
 .inline-toolbar.toolbar .button:first-child,
-.inline-toolbar.toolbar GtkToolButton:first-child .button {
+.inline-toolbar.toolbar GtkToolButton:first-child > .button {
     box-shadow: inset -1px 0 @inset_dark_color;
 }
 
@@ -1203,7 +1203,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked:last-child,
 .toolbar .raised.linked .button:last-child,
 .inline-toolbar.toolbar .button:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button {
+.inline-toolbar.toolbar GtkToolButton:last-child > .button {
     box-shadow: inset 1px 0 @inset_light_color;
 }
 
@@ -1211,7 +1211,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked:active,
 .toolbar .raised.linked .button:active,
 .inline-toolbar.toolbar .button:active,
-.inline-toolbar.toolbar GtkToolButton .button:active {
+.inline-toolbar.toolbar GtkToolButton > .button:active {
     box-shadow: inset 1px 0 @inset_dark_color;
 }
 
@@ -1219,7 +1219,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked:insensitive,
 .toolbar .raised.linked .button:insensitive,
 .inline-toolbar.toolbar .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive {
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive {
     box-shadow: inset -1px 0 @inset_dark_color;
 }
 
@@ -1227,7 +1227,7 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked:backdrop,
 .toolbar .raised.linked .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton .button:backdrop {
+.inline-toolbar.toolbar GtkToolButton > .button:backdrop {
     box-shadow: inset -1px 0 @unfocused_borders;
 }
 
@@ -1235,39 +1235,39 @@ GtkComboBox.combobox-entry .button {
 .toolbar .button.raised.linked:insensitive:backdrop,
 .toolbar .raised.linked .button:insensitive:backdrop,
 .inline-toolbar.toolbar .button:insensitive:backdrop,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive:backdrop {
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive:backdrop {
     box-shadow: inset -1px 0 @unfocused_insensitive_borders;
 }
 
 /* remove box shadow from last-child and only-child */
-.linked .button:only-child,
-.inline-toolbar.toolbar .button:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button,
 .linked .button:backdrop:last-child,
 .linked .button:insensitive:last-child,
-.toolbar .button.raised.linked:insensitive:last-child,
-.toolbar .raised.linked .button:insensitive:last-child,
-.inline-toolbar.toolbar .button:insensitive:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
-.toolbar .button.raised.linked:backdrop:last-child,
-.toolbar .raised.linked .button:backdrop:last-child,
-.inline-toolbar.toolbar .button:backdrop:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop,
-.linked .button:insensitive:backdrop:last-child,
-.toolbar .button.raised.linked:insensitive:backdrop:last-child,
-.toolbar .raised.linked .button:insensitive:backdrop:last-child,
-.inline-toolbar.toolbar .button:insensitive:backdrop:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive:backdrop,
+.linked .button:backdrop:insensitive:last-child,
+.linked .button:only-child,
 .linked .button:backdrop:only-child,
-.toolbar .button.raised.linked:backdrop:only-child,
-.toolbar .raised.linked .button:backdrop:only-child,
-.inline-toolbar.toolbar .button:backdrop:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop,
 .linked .button:backdrop:insensitive:only-child,
+.toolbar .button.raised.linked:backdrop:last-child,
+.toolbar .button.raised.linked:insensitive:last-child,
+.toolbar .button.raised.linked:backdrop:insensitive:last-child,
+.toolbar .button.raised.linked:backdrop:only-child,
 .toolbar .button.raised.linked:backdrop:insensitive:only-child,
+.toolbar .raised.linked .button:insensitive:last-child,
+.toolbar .raised.linked .button:backdrop:last-child,
+.toolbar .raised.linked .button:insensitive:backdrop:last-child,
+.toolbar .raised.linked .button:backdrop:only-child,
 .toolbar .raised.linked .button:backdrop:insensitive:only-child,
+.inline-toolbar.toolbar .button:backdrop:last-child,
+.inline-toolbar.toolbar .button:insensitive:last-child,
+.inline-toolbar.toolbar .button:backdrop:insensitive:last-child,
+.inline-toolbar.toolbar .button:only-child,
+.inline-toolbar.toolbar .button:backdrop:only-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive:backdrop {
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:insensitive,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:backdrop:insensitive,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop:insensitive {
     box-shadow: none; 
 }
 
@@ -1419,11 +1419,11 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar .button:insensitive,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button,
-.inline-toolbar.toolbar GtkToolButton .button:active,
-.inline-toolbar.toolbar GtkToolButton .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton .button:backdrop:insensitive {
+.inline-toolbar.toolbar GtkToolButton > .button,
+.inline-toolbar.toolbar GtkToolButton > .button:active,
+.inline-toolbar.toolbar GtkToolButton > .button:insensitive,
+.inline-toolbar.toolbar GtkToolButton > .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton > .button:backdrop:insensitive {
     border-right-width: 0;
     border-left-width: 0;
     border-image-width: 4px 0 4px 0;
@@ -1444,11 +1444,11 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar .button:insensitive:first-child,
 .inline-toolbar.toolbar .button:backdrop:first-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:first-child,
-.inline-toolbar.toolbar GtkToolButton:first-child .button,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:active,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton:first-child .button:backdrop:insensitive {
+.inline-toolbar.toolbar GtkToolButton:first-child > .button,
+.inline-toolbar.toolbar GtkToolButton:first-child > .button:active,
+.inline-toolbar.toolbar GtkToolButton:first-child > .button:insensitive,
+.inline-toolbar.toolbar GtkToolButton:first-child > .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:first-child > .button:backdrop:insensitive {
     border-left-width: 2px;
     border-right-width: 0;
     border-image-width: 4px 0 4px 4px;
@@ -1470,11 +1470,11 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar .button:insensitive:last-child,
 .inline-toolbar.toolbar .button:backdrop:last-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:last-child,
-.inline-toolbar.toolbar GtkToolButton:last-child .button,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:active,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton:last-child .button:backdrop:insensitive {
+.inline-toolbar.toolbar GtkToolButton:last-child > .button,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:active,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:insensitive,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:last-child > .button:backdrop:insensitive {
     border-left-width: 0;
     border-right-width: 2px;
     border-image-width: 4px 4px 4px 0;
@@ -1488,11 +1488,11 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar .button:insensitive:only-child,
 .inline-toolbar.toolbar .button:backdrop:only-child,
 .inline-toolbar.toolbar .button:backdrop:insensitive:only-child,
-.inline-toolbar.toolbar GtkToolButton:only-child .button,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:active,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop,
-.inline-toolbar.toolbar GtkToolButton:only-child .button:backdrop:insensitive {
+.inline-toolbar.toolbar GtkToolButton:only-child > .button,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:active,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:insensitive,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop,
+.inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop:insensitive {
     border-right-width: 2px;
     border-left-width: 2px;
     border-image-width: 4px;
