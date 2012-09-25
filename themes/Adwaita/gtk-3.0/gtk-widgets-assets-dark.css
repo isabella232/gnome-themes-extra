@@ -234,17 +234,23 @@
 }
 
 .scale.slider:backdrop,
-.scale.slider.horizontal:backdrop {
+.scale.slider:backdrop:hover,
+.scale.slider.horizontal:backdrop,
+.scale.slider.horizontal:backdrop:hover {
     background-image: url("assets/scale-slider-horz-backdrop-dark.png");
 }
 
 .scale.slider:insensitive,
-.scale.slider.horizontal:insensitive {
+.scale.slider:insensitive:hover,
+.scale.slider.horizontal:insensitive,
+.scale.slider.horizontal:insensitive:hover {
     background-image: url("assets/scale-slider-horz-insensitive-dark.png");
 }
 
-.scale.slider:backdrop:insensitive,
-.scale.slider.horizontal:backdrop:insensitive {
+.scale.slider:insensitive:backdrop,
+.scale.slider:insensitive:backdrop:hover,
+.scale.slider.horizontal:insensitive:backdrop,
+.scale.slider.horizontal:insensitive:backdrop:hover {
     background-image: url("assets/scale-slider-horz-backdrop-insensitive-dark.png");
 }
 
@@ -262,82 +268,108 @@
     background-image: url("assets/scale-slider-vert-active-dark.png");
 }
 
-.scale.slider.vertical:backdrop {
+.scale.slider.vertical:backdrop,
+.scale.slider.vertical:backdrop:hover {
     background-image: url("assets/scale-slider-vert-backdrop-dark.png");
 }
 
-.scale.slider.vertical:insensitive {
+.scale.slider.vertical:insensitive,
+.scale.slider.vertical:insensitive:hover {
     background-image: url("assets/scale-slider-vert-insensitive-dark.png");
 }
 
-.scale.slider.vertical:backdrop:insensitive {
+.scale.slider.vertical:insensitive:backdrop,
+.scale.slider.vertical:insensitive:backdrop:hover {
     background-image: url("assets/scale-slider-vert-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal {
+.scale.scale-has-marks-above.slider.horizontal,
+.scale.scale-has-marks-above.slider.horizontal:hover,
+.scale.scale-has-marks-above.slider.horizontal:active,
+.scale.scale-has-marks-above.slider.horizontal:active:hover {
     background-image: url("assets/scale-slider-up-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal:insensitive {
+.scale.scale-has-marks-above.slider.horizontal:insensitive,
+.scale.scale-has-marks-above.slider.horizontal:insensitive:hover {
     background-image: url("assets/scale-slider-up-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal:backdrop {
+.scale.scale-has-marks-above.slider.horizontal:backdrop,
+.scale.scale-has-marks-above.slider.horizontal:backdrop:hover {
     background-image: url("assets/scale-slider-up-backdrop-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal:backdrop:insensitive {
+.scale.scale-has-marks-above.slider.horizontal:backdrop:insensitive,
+.scale.scale-has-marks-above.slider.horizontal:backdrop:insensitive:hover {
     background-image: url("assets/scale-slider-up-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical {
+.scale.scale-has-marks-above.slider.vertical,
+.scale.scale-has-marks-above.slider.vertical:hover,
+.scale.scale-has-marks-above.slider.vertical:active,
+.scale.scale-has-marks-above.slider.vertical:active:hover {
     background-image: url("assets/scale-slider-left-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical:insensitive {
+.scale.scale-has-marks-above.slider.vertical:insensitive,
+.scale.scale-has-marks-above.slider.vertical:insensitive:hover {
     background-image: url("assets/scale-slider-left-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical:backdrop {
+.scale.scale-has-marks-above.slider.vertical:backdrop,
+.scale.scale-has-marks-above.slider.vertical:backdrop:hover {
     background-image: url("assets/scale-slider-left-backdrop-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical:backdrop:insensitive {
+.scale.scale-has-marks-above.slider.vertical:backdrop:insensitive,
+.scale.scale-has-marks-above.slider.vertical:backdrop:insensitive:hover {
     background-image: url("assets/scale-slider-left-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal {
+.scale.scale-has-marks-below.slider.horizontal,
+.scale.scale-has-marks-below.slider.horizontal:hover,
+.scale.scale-has-marks-below.slider.horizontal:active,
+.scale.scale-has-marks-below.slider.horizontal:active:hover {
     background-image: url("assets/scale-slider-down-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal:insensitive {
+.scale.scale-has-marks-below.slider.horizontal:insensitive,
+.scale.scale-has-marks-below.slider.horizontal:insensitive:hover {
     background-image: url("assets/scale-slider-down-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal:backdrop {
+.scale.scale-has-marks-below.slider.horizontal:backdrop,
+.scale.scale-has-marks-below.slider.horizontal:backdrop:hover {
     background-image: url("assets/scale-slider-down-backdrop-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal:backdrop:insensitive {
+.scale.scale-has-marks-below.slider.horizontal:backdrop:insensitive,
+.scale.scale-has-marks-below.slider.horizontal:backdrop:insensitive:hover {
     background-image: url("assets/scale-slider-down-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical {
+.scale.scale-has-marks-below.slider.vertical,
+.scale.scale-has-marks-below.slider.vertical:hover,
+.scale.scale-has-marks-below.slider.vertical:active,
+.scale.scale-has-marks-below.slider.vertical:active:hover {
     background-image: url("assets/scale-slider-right-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical:insensitive {
+.scale.scale-has-marks-below.slider.vertical:insensitive,
+.scale.scale-has-marks-below.slider.vertical:insensitive:hover {
     background-image: url("assets/scale-slider-right-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical:backdrop {
+.scale.scale-has-marks-below.slider.vertical:backdrop,
+.scale.scale-has-marks-below.slider.vertical:backdrop:hover {
     background-image: url("assets/scale-slider-right-backdrop-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical:backdrop:insensitive {
+.scale.scale-has-marks-below.slider.vertical:backdrop:insensitive,
+.scale.scale-has-marks-below.slider.vertical:backdrop:insensitive:hover {
     background-image: url("assets/scale-slider-right-backdrop-insensitive-dark.png");
 }
-
 /********************************
  * Touch text selection handles *
  ********************************/
