@@ -443,6 +443,14 @@ EphyToolbar.toolbar .button {
     border-radius: 4px 4px 0 0;
 }
 
+EphyOverview GtkScrolledWindow {
+    background-color: @theme_base_color;
+}
+
+EphyOverview GtkScrolledWindow:backdrop {
+    background-color: @theme_unfocused_base_color;
+}
+
 /* Gnome Contacts */
 
 /* Line at top in contacts pane, similar to .documents-scrolledwin.frame */

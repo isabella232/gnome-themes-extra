@@ -2930,13 +2930,11 @@ GtkTreeView.dnd {
     border-style: solid;
 }
 
-GtkViewport,
-GtkScrolledWindow {
+GtkViewport {
     background-color: @theme_base_color;
 }
 
-GtkViewport:backdrop,
-GtkScrolledWindow:backdrop {
+GtkViewport:backdrop {
     background-color: @theme_unfocused_base_color;
 }
 
