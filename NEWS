@@ -1,3 +1,13 @@
+3.6.0.2
+=======
+
+Add hover/active states for slider assets
+Fix wrong border color for primary/inline toolbar buttons
+Fix wrong shadow direction in dark variant primary/inline toolbar buttons
+Fix color of icons on vertical spinbuttons
+Fix color of separators on toolbars
+Fix unwanted shadow from menubutton dropdown
+
 3.6.0.1
 =======
 
