@@ -59,7 +59,8 @@
 .toolbar .button:hover,
 .toolbar .button.raised:hover,
 .toolbar .raised .button:hover,
-.toolbar GtkComboBox .button:hover {
+.toolbar GtkComboBox .button:hover,
+.spinbutton.vertical .button:hover {
     background-color: transparent;
     background-image: linear-gradient(to bottom,
 				      @button_hover_gradient_color_a,
