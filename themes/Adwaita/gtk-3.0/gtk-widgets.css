@@ -2059,11 +2059,16 @@ GtkTreeMenu .menuitem {
     padding: 2px;
 
     border-style: none;
-    text-shadow: none;
 }
 
 GtkTreeMenu .menuitem * {
     color: @theme_text_color;
+}
+
+GtkTreeMenu .menuitem,
+.button .menuitem,
+.toolbar .button .menuitem * {
+    text-shadow: none;
 }
 
 .menu {
