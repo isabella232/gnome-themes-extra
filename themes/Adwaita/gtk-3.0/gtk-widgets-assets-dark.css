@@ -283,11 +283,17 @@
     background-image: url("assets/scale-slider-vert-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.horizontal,
-.scale.scale-has-marks-above.slider.horizontal:hover,
+.scale.scale-has-marks-above.slider.horizontal {
+    background-image: url("assets/scale-slider-up-dark.png");
+}
+
+.scale.scale-has-marks-above.slider.horizontal:hover {
+    background-image: url("assets/scale-slider-up-hover-dark.png");
+}
+
 .scale.scale-has-marks-above.slider.horizontal:active,
 .scale.scale-has-marks-above.slider.horizontal:active:hover {
-    background-image: url("assets/scale-slider-up-dark.png");
+    background-image: url("assets/scale-slider-up-active-dark.png");
 }
 
 .scale.scale-has-marks-above.slider.horizontal:insensitive,
@@ -305,11 +311,17 @@
     background-image: url("assets/scale-slider-up-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-above.slider.vertical,
-.scale.scale-has-marks-above.slider.vertical:hover,
+.scale.scale-has-marks-above.slider.vertical {
+    background-image: url("assets/scale-slider-left-dark.png");
+}
+
+.scale.scale-has-marks-above.slider.vertical:hover {
+    background-image: url("assets/scale-slider-left-hover-dark.png");
+}
+
 .scale.scale-has-marks-above.slider.vertical:active,
 .scale.scale-has-marks-above.slider.vertical:active:hover {
-    background-image: url("assets/scale-slider-left-dark.png");
+    background-image: url("assets/scale-slider-left-active-dark.png");
 }
 
 .scale.scale-has-marks-above.slider.vertical:insensitive,
@@ -327,11 +339,17 @@
     background-image: url("assets/scale-slider-left-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.horizontal,
-.scale.scale-has-marks-below.slider.horizontal:hover,
+.scale.scale-has-marks-below.slider.horizontal {
+    background-image: url("assets/scale-slider-down-dark.png");
+}
+
+.scale.scale-has-marks-below.slider.horizontal:hover {
+    background-image: url("assets/scale-slider-down-hover-dark.png");
+}
+
 .scale.scale-has-marks-below.slider.horizontal:active,
 .scale.scale-has-marks-below.slider.horizontal:active:hover {
-    background-image: url("assets/scale-slider-down-dark.png");
+    background-image: url("assets/scale-slider-down-active-dark.png");
 }
 
 .scale.scale-has-marks-below.slider.horizontal:insensitive,
@@ -349,11 +367,17 @@
     background-image: url("assets/scale-slider-down-backdrop-insensitive-dark.png");
 }
 
-.scale.scale-has-marks-below.slider.vertical,
-.scale.scale-has-marks-below.slider.vertical:hover,
+.scale.scale-has-marks-below.slider.vertical {
+    background-image: url("assets/scale-slider-right-dark.png");
+}
+
+.scale.scale-has-marks-below.slider.vertical:hover {
+    background-image: url("assets/scale-slider-right-hover-dark.png");
+}
+
 .scale.scale-has-marks-below.slider.vertical:active,
 .scale.scale-has-marks-below.slider.vertical:active:hover {
-    background-image: url("assets/scale-slider-right-dark.png");
+    background-image: url("assets/scale-slider-right-active-dark.png");
 }
 
 .scale.scale-has-marks-below.slider.vertical:insensitive,
@@ -370,6 +394,7 @@
 .scale.scale-has-marks-below.slider.vertical:backdrop:insensitive:hover {
     background-image: url("assets/scale-slider-right-backdrop-insensitive-dark.png");
 }
+
 /********************************
  * Touch text selection handles *
  ********************************/

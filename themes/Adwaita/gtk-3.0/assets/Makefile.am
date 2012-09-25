@@ -87,13 +87,17 @@ EXTRA_DIST = 		\
 	radio-unchecked-insensitive-dark.png \
 	resize-grip.svg \
 	scale-slider-down.png \
-	scale-slider-down-backdrop.png \
-	scale-slider-down-backdrop-dark.png \
-	scale-slider-down-backdrop-insensitive.png \
-	scale-slider-down-backdrop-insensitive-dark.png \
-	scale-slider-down-dark.png \
+	scale-slider-down-active.png \
+	scale-slider-down-hover.png \
 	scale-slider-down-insensitive.png \
+	scale-slider-down-backdrop.png \
+	scale-slider-down-backdrop-insensitive.png \
+	scale-slider-down-dark.png \
+	scale-slider-down-active-dark.png \
+	scale-slider-down-hover-dark.png \
 	scale-slider-down-insensitive-dark.png \
+	scale-slider-down-backdrop-dark.png \
+	scale-slider-down-backdrop-insensitive-dark.png \
 	scale-slider-horz.png \
 	scale-slider-horz-hover.png \
 	scale-slider-horz-active.png \
@@ -107,29 +111,41 @@ EXTRA_DIST = 		\
 	scale-slider-horz-insensitive.png \
 	scale-slider-horz-insensitive-dark.png \
 	scale-slider-left.png \
-	scale-slider-left-backdrop.png \
-	scale-slider-left-backdrop-dark.png \
-	scale-slider-left-backdrop-insensitive.png \
-	scale-slider-left-backdrop-insensitive-dark.png \
-	scale-slider-left-dark.png \
+	scale-slider-left-active.png \
+	scale-slider-left-hover.png \
 	scale-slider-left-insensitive.png \
+	scale-slider-left-backdrop.png \
+	scale-slider-left-backdrop-insensitive.png \
+	scale-slider-left-dark.png \
+	scale-slider-left-active-dark.png \
+	scale-slider-left-hover-dark.png \
+	scale-slider-left-backdrop-dark.png \
+	scale-slider-left-backdrop-insensitive-dark.png \
 	scale-slider-left-insensitive-dark.png \
 	scale-slider-right.png \
-	scale-slider-right-backdrop.png \
-	scale-slider-right-backdrop-dark.png \
-	scale-slider-right-backdrop-insensitive.png \
-	scale-slider-right-backdrop-insensitive-dark.png \
-	scale-slider-right-dark.png \
+	scale-slider-right-active.png \
+	scale-slider-right-hover.png \
 	scale-slider-right-insensitive.png \
+	scale-slider-right-backdrop.png \
+	scale-slider-right-backdrop-insensitive.png \
+	scale-slider-right-dark.png \
+	scale-slider-right-active-dark.png \
+	scale-slider-right-hover-dark.png \
 	scale-slider-right-insensitive-dark.png \
+	scale-slider-right-backdrop-dark.png \
+	scale-slider-right-backdrop-insensitive-dark.png \
 	scale-slider-up.png \
-	scale-slider-up-backdrop.png \
-	scale-slider-up-backdrop-dark.png \
-	scale-slider-up-backdrop-insensitive.png \
-	scale-slider-up-backdrop-insensitive-dark.png \
-	scale-slider-up-dark.png \
+	scale-slider-up-active.png \
+	scale-slider-up-hover.png \
 	scale-slider-up-insensitive.png \
+	scale-slider-up-backdrop.png \
+	scale-slider-up-backdrop-insensitive.png \
+	scale-slider-up-dark.png \
+	scale-slider-up-active-dark.png \
+	scale-slider-up-hover-dark.png \
 	scale-slider-up-insensitive-dark.png \
+	scale-slider-up-backdrop-dark.png \
+	scale-slider-up-backdrop-insensitive-dark.png \
 	scale-slider-vert.png \
 	scale-slider-vert-hover.png \
 	scale-slider-vert-active.png \
