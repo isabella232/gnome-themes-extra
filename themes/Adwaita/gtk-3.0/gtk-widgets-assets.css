@@ -221,6 +221,18 @@
     background-image: url("assets/scale-slider-horz.png");
 }
 
+.scale.slider:hover,
+.scale.slider.horizontal:hover {
+    background-image: url("assets/scale-slider-horz-hover.png");
+}
+
+.scale.slider:active,
+.scale.slider:active:hover,
+.scale.slider.horizontal:active,
+.scale.slider.horizontal:active:hover {
+    background-image: url("assets/scale-slider-horz-active.png");
+}
+
 .scale.slider:backdrop,
 .scale.slider.horizontal:backdrop {
     background-image: url("assets/scale-slider-horz-backdrop.png");
@@ -240,6 +252,16 @@
 .scale.slider.vertical {
     background-image: url("assets/scale-slider-vert.png");
 }
+
+.scale.slider.vertical:hover {
+    background-image: url("assets/scale-slider-vert-hover.png");
+}
+
+.scale.slider.vertical:active,
+.scale.slider.vertical:active:hover {
+    background-image: url("assets/scale-slider-vert-active.png");
+}
+
 
 .scale.slider.vertical:backdrop {
     background-image: url("assets/scale-slider-vert-backdrop.png");

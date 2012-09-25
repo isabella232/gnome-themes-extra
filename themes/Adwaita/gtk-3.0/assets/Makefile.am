@@ -95,11 +95,15 @@ EXTRA_DIST = 		\
 	scale-slider-down-insensitive.png \
 	scale-slider-down-insensitive-dark.png \
 	scale-slider-horz.png \
+	scale-slider-horz-hover.png \
+	scale-slider-horz-active.png \
 	scale-slider-horz-backdrop.png \
 	scale-slider-horz-backdrop-dark.png \
 	scale-slider-horz-backdrop-insensitive.png \
 	scale-slider-horz-backdrop-insensitive-dark.png \
 	scale-slider-horz-dark.png \
+	scale-slider-horz-hover-dark.png \
+	scale-slider-horz-active-dark.png \
 	scale-slider-horz-insensitive.png \
 	scale-slider-horz-insensitive-dark.png \
 	scale-slider-left.png \
@@ -127,11 +131,15 @@ EXTRA_DIST = 		\
 	scale-slider-up-insensitive.png \
 	scale-slider-up-insensitive-dark.png \
 	scale-slider-vert.png \
+	scale-slider-vert-hover.png \
+	scale-slider-vert-active.png \
 	scale-slider-vert-backdrop.png \
 	scale-slider-vert-backdrop-dark.png \
 	scale-slider-vert-backdrop-insensitive.png \
 	scale-slider-vert-backdrop-insensitive-dark.png \
 	scale-slider-vert-dark.png \
+	scale-slider-vert-hover-dark.png \
+	scale-slider-vert-active-dark.png \
 	scale-slider-vert-insensitive.png \
 	scale-slider-vert-insensitive-dark.png \
 	sidebar-radio-checked.svg \

@@ -89,7 +89,11 @@
     <file preprocess="to-pixdata">assets/radio-unchecked.png</file>
     <file preprocess="to-pixdata">assets/resize-grip.svg</file>
     <file preprocess="to-pixdata">assets/scale-slider-horz.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horz-hover.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horz-active.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-horz-dark.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horz-hover-dark.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-horz-active-dark.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-horz-insensitive.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-horz-insensitive-dark.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-horz-backdrop.png</file>
@@ -129,7 +133,11 @@
     <file preprocess="to-pixdata">assets/scale-slider-left-backdrop-dark.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-left-backdrop-insensitive-dark.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-vert.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vert-hover.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vert-active.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-vert-dark.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vert-hover-dark.png</file>
+    <file preprocess="to-pixdata">assets/scale-slider-vert-active-dark.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-vert-insensitive.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-vert-insensitive-dark.png</file>
     <file preprocess="to-pixdata">assets/scale-slider-vert-backdrop.png</file>
