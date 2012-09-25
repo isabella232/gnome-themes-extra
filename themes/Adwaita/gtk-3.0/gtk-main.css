@@ -108,6 +108,7 @@
 
 @define-color toolbar_active_button_color #909081;
 @define-color toolbar_button_prelight alpha(white, 0.4);
+@define-color toolbar_separator @borders;
 
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 

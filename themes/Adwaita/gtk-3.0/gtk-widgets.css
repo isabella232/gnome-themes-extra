@@ -347,10 +347,15 @@ GtkTreeView.separator,
     color: @view_separators;
 }
 
+.toolbar .separator {
+    color: @toolbar_separator;
+}
+
 GtkTreeView.view.separator:backdrop,
 GtkTreeView.separator:backdrop,
 .separator:backdrop,
-.separator:hover:backdrop {
+.separator:hover:backdrop,
+.toolbar .separator:backdrop {
     color: @unfocused_insensitive_borders;
 }
 

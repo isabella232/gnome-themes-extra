@@ -108,6 +108,7 @@
 
 @define-color toolbar_active_button_color #222222;
 @define-color toolbar_button_prelight alpha(black, 0.3);
+@define-color toolbar_separator shade(@internal_element_color, 0.90);
 
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
@@ -136,7 +137,7 @@
 
 @define-color treeview_focus_border shade (@theme_selected_bg_color, 1.20);
 
-@define-color view_separators shade (@internal_element_color, 0.90);
+@define-color view_separators @toolbar_separator;
 @define-color view_symbolic_color shade(@theme_text_color, 0.70);
 
 @define-color expander_row_selected_color alpha (@theme_base_color, 0.60);
