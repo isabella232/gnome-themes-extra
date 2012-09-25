@@ -1,3 +1,13 @@
+3.6.0
+=====
+
+Improve theming for sidebar scrollbars
+Render PNG images for borders
+Fix regression wrt. GtkScrolledWindow default background
+Fix insensitive active GtkSwitch borders
+Fix theming for GtkMenuToolButtons on inline toolbars
+Fix Epiphany toolbar theming for RTL layouts
+
 3.5.92
 ======
 
