@@ -35,13 +35,15 @@ GtkComboBox *:active:insensitive {
 .toolbar .button.raised *,
 .toolbar .raised .button *,
 .inline-toolbar .button * {
+    text-shadow: 0 -1px @button_text_shadow;
     icon-shadow: 0 -1px @button_text_shadow;
 }
 
 .toolbar .button.raised *:active,
 .toolbar .raised .button *:active,
 .inline-toolbar .button *:active {
-    icon-shadow: 0 -1px @button_active_text_shadow;
+    text-shadow: 0 1px @button_active_text_shadow;
+    icon-shadow: 0 1px @button_active_text_shadow;
 }
 
 .toolbar .button.raised *:insensitive,
