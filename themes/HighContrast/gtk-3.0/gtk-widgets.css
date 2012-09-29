@@ -1161,6 +1161,25 @@ NautilusWindow .sidebar .frame {
     background-color: @theme_insensitive_bg;
 }
 
+.nautilus-desktop.nautilus-canvas-item {
+    color: @theme_base_color;
+    text-shadow: 1px 1px black;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    color: @theme_base_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:backdrop {
+    background-color: @theme_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
 .documents-icon-bg {
     background-color: @theme_internal_bg;
     color: @theme_fg_color;

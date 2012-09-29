@@ -45,6 +45,10 @@ TerminalWindow GtkNotebook.notebook {
     text-shadow: none;
 }
 
+.nautilus-desktop.nautilus-canvas-item:selected:backdrop {
+    color: @theme_unfocused_selected_fg_color;
+}
+
 NautilusWindow .sidebar .frame {
     border-width: 1px 0 0 0;
     border-style: solid;
