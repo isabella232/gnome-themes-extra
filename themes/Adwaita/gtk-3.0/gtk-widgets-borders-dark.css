@@ -190,6 +190,8 @@ column-header:last-child .button:active:hover {
 }
 
 /* unfocused window: generic element borders */
+.selection-mode.toolbar .suggested-action.button:backdrop, 
+.selection-mode.toolbar GtkToolButton.suggested-action .button:backdrop,
 .button:backdrop,
 .spinbutton.vertical .button:backdrop,
 GtkComboBox.combobox-entry .entry:backdrop,
