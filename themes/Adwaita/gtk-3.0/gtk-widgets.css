@@ -2815,6 +2815,12 @@ GtkOverlay.osd {
     icon-shadow: 0 -1px @selection_toolbar_suggested_button_shadow;
 }
 
+.selection-mode.toolbar .suggested-action.button *:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button *:active {
+    text-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
+    icon-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
+}
+
 .selection-mode.toolbar .suggested-action.button *:hover,
 .selection-mode.toolbar .suggested-action.button *:active,
 .selection-mode.toolbar .suggested-action.button *:hover:active,
