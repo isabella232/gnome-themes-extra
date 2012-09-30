@@ -1,6 +1,7 @@
 EXTRA_DIST = 		\
 	button-border.png \
 	generic-border.png \
+	generic-border-transparent.png \
 	button-border-default.png \
 	generic-border-focused.png \
 	generic-border-backdrop.png \
@@ -10,9 +11,11 @@ EXTRA_DIST = 		\
 	primary-toolbar-generic-border-focused.png \
 	primary-toolbar-generic-border-backdrop.png \
 	nohl-generic-border.png \
+	nohl-generic-border-transparent.png \
 	nohl-generic-border-backdrop.png \
 	button-border-dark.png \
 	generic-border-dark.png \
+	generic-border-transparent-dark.png \
 	button-border-default-dark.png \
 	generic-border-focused-dark.png \
 	generic-border-backdrop-dark.png \
@@ -22,6 +25,7 @@ EXTRA_DIST = 		\
 	primary-toolbar-generic-border-focused-dark.png \
 	primary-toolbar-generic-border-backdrop-dark.png \
 	nohl-generic-border-dark.png \
+	nohl-generic-border-transparent-dark.png \
 	nohl-generic-border-backdrop-dark.png \
 	selection-toolbar-suggested-button-border.svg \
 	tooltip-generic-border.svg \

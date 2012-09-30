@@ -1118,7 +1118,7 @@ GtkComboBox.combobox-entry .button {
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
     -GtkButton-default-border: 0;
-    -GtkButton-inner-boder: 3;
+    -GtkButton-inner-border: 3;
 
     color: @theme_text_color;
 
@@ -2320,7 +2320,6 @@ GtkCheckButton:selected:focus {
     border-style: none;
     border-color: darker (@theme_bg_color);
     padding: 3px;
-
     background-color: @theme_bg_color;
 }
 
@@ -2338,9 +2337,11 @@ GtkCheckButton:selected:focus {
  ********************/
 .toolbar.menubar {
     -GtkToolbar-button-relief: normal;
+    
+    padding: 4px 4px 2px 4px; /* weird padding to compensate border-images 
+                                 and eventual top border presence, 
+                                 see selection mode toolbars */
 
-    padding-left: 4px;
-    padding-right: 4px;
 }
 
 /********************
@@ -2744,9 +2745,9 @@ GtkOverlay.osd {
     text-shadow: 1px 1px @primary_toolbar_button_text_shadow;
 
     border-top-width: 1px;
-    border-color: @selection_toolbar_border;
+    border-color: @borders;
     border-style: solid;
-    padding-top: 2px;
+    padding-top: 3px;
 }
 
 .selection-mode.toolbar .selection-menu.button {
@@ -2780,11 +2781,8 @@ GtkOverlay.osd {
                                       @selection_toolbar_suggested_button_a,
                                       @selection_toolbar_suggested_button_b 83%,
                                       @selection_toolbar_suggested_button_c);
-
-    border-image: url("borders/selection-toolbar-suggested-button-border.svg") 3 / 3px stretch;
-    border-width: 1px;
-
-    color: @selection_toolbar_suggested_button_fg;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .selection-mode.toolbar .suggested-action.button:hover,
@@ -2813,8 +2811,8 @@ GtkOverlay.osd {
 
 .selection-mode.toolbar .suggested-action.button *,
 .selection-mode.toolbar GtkToolButton.suggested-action .button * {
-    text-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
-    icon-shadow: 0 1px @selection_toolbar_suggested_button_shadow;
+    text-shadow: 0 -1px @selection_toolbar_suggested_button_shadow;
+    icon-shadow: 0 -1px @selection_toolbar_suggested_button_shadow;
 }
 
 .selection-mode.toolbar .suggested-action.button *:hover,
@@ -2913,7 +2911,7 @@ GtkSwitch.slider {
 GtkSwitch.slider:insensitive {
     background-image: none;
 
-    border-color: @insensitive_boder_color;
+    border-color: @insensitive_border_color;
 
     box-shadow: none;
 }

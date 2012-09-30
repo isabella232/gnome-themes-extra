@@ -28,3 +28,7 @@ nohl-generic-border-dark
 nohl-button-border-default-dark
 nohl-generic-border-focused-dark
 nohl-generic-border-backdrop-dark
+generic-border-transparent
+nohl-generic-border-transparent
+generic-border-transparent-dark
+nohl-generic-border-transparent-dark

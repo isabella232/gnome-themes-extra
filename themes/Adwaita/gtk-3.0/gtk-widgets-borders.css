@@ -190,6 +190,8 @@ column-header:last-child .button:active:hover {
 }
 
 /* unfocused window: generic element borders */
+.selection-mode.toolbar .suggested-action.button:backdrop, 
+.selection-mode.toolbar GtkToolButton.suggested-action .button:backdrop,
 .button:backdrop,
 .spinbutton.vertical .button:backdrop,
 GtkComboBox.combobox-entry .entry:backdrop,
@@ -229,4 +231,15 @@ GtkSwitch.trough:backdrop,
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
+}
+
+/* pushed colored buttons borders */
+.selection-mode.toolbar .suggested-action.button,
+.selection-mode.toolbar GtkToolButton.suggested-action .button {
+    border-image: url("borders/generic-border-transparent.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-radius: 4px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: transparent;
+
 }
