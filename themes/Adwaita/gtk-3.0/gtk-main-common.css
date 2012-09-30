@@ -60,7 +60,7 @@
 @define-color selection_toolbar_suggested_button_c #4e9a06;
 
 @define-color selection_toolbar_suggested_button_fg #ffffff;
-@define-color selection_toolbar_suggested_button_shadow alpha(#000000, 0.20);
+@define-color selection_toolbar_suggested_button_shadow alpha(black, 0.30);
 
 /*********************
  * Error/Warning/... *
