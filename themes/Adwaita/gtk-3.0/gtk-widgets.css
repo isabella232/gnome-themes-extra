@@ -37,11 +37,16 @@
 
     -GtkWidget-focus-padding: 2;
     -GtkWidget-focus-line-width: 1;
-    -adwaita-focus-border-color: alpha(@theme_text_color, 0.3);
-    -adwaita-focus-border-radius: 2;
-    -adwaita-focus-border-dashes: 1;
     -GtkWindow-resize-grip-width: 0;
     -GtkWindow-resize-grip-height: 0;   
+
+    /* We use the outline properties to signal the focus properties
+     * to the adwaita engine: using real CSS properties is faster,
+     * and we don't use any outlines for now.
+     */
+    outline-color: alpha(@theme_text_color, 0.3);
+    outline-style: dashed;
+    outline-offset: 2px;
 }
 
 /***************
@@ -1623,8 +1628,6 @@ GtkLinkButton.button *:active {
                                       @notebook_tab_gradient_a 2px,
                                       @notebook_tab_gradient_a 7px,
                                       @notebook_tab_gradient_b);
-
-    -adwaita-focus-border-radius: 2;
 }
 
 .notebook tab.bottom {
@@ -2951,9 +2954,8 @@ GtkTreeView {
 
     -GtkWidget-focus-line-width: 1;
     -GtkWidget-focus-padding: 1;
-    -adwaita-focus-border-radius: 2;
-    -adwaita-focus-border-dashes: 1;
-    -adwaita-focus-border-color: alpha(@theme_text_color, 0.6);
+
+    outline-color: alpha(@theme_text_color, 0.6);
 }
 
 GtkTreeView.dnd {
@@ -2980,9 +2982,9 @@ GtkIconView.view.cell:selected:focus {
     /* FIXME: this probably needs to be better;
      * see https://bugzilla.gnome.org/show_bug.cgi?id=644157
      */
-    -adwaita-focus-border-color: @treeview_focus_border;
-    -adwaita-focus-border-radius: 3;
-    -adwaita-focus-border-dashes: 0;
+    outline-color: @treeview_focus_border;
+    outline-style: solid;
+    outline-offset: 3px;
 }
 
 .view,
@@ -3018,7 +3020,7 @@ GtkTreeView:backdrop:selected {
 }
 
 GtkTreeView:selected:focus {
-    -adwaita-focus-border-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
+    outline-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
 column-header.button,

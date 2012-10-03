@@ -119,16 +119,16 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
   GtkStateFlags state;
   gint line_width, focus_pad;
   gint border_radius;
-  gboolean use_dashes;
   double dashes[2] = { 2.0, 0.2 };
   const GtkWidgetPath *path;
+  GtkBorderStyle border_style;
 
   path = gtk_theming_engine_get_path (engine);
   state = gtk_theming_engine_get_state (engine);
   gtk_theming_engine_get (engine, state,
-                          "-adwaita-focus-border-color", &border_color,
-                          "-adwaita-focus-border-radius", &border_radius,
-                          "-adwaita-focus-border-dashes", &use_dashes,
+                          "outline-color", &border_color,
+                          "outline-style", &border_style,
+                          "outline-offset", &border_radius,
                           NULL);
 
   gtk_theming_engine_get_style (engine,
@@ -170,7 +170,7 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
                                   width - 1, height - 1,
                                   SIDE_ALL, GTK_JUNCTION_NONE);
 
-  if (use_dashes)
+  if (border_style == GTK_BORDER_STYLE_DASHED)
     cairo_set_dash (cr, dashes, 1, 0.0);
 
   if (border_color != NULL)
@@ -409,28 +409,11 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
   engine_class->render_focus = adwaita_engine_render_focus;
   engine_class->render_extension = adwaita_engine_render_extension;
   engine_class->render_expander = adwaita_engine_render_expander;
-
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("focus-border-color",
-                                                            "Focus border color",
-                                                            "Focus border color",
-                                                            GDK_TYPE_RGBA, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_int ("focus-border-radius",
-                                                          "Focus border radius",
-                                                          "Focus border radius",
-                                                          0, G_MAXINT, 0,
-                                                          0));
   gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
                                         g_param_spec_boxed ("border-gradient",
                                                             "Border gradient",
                                                             "Border gradient",
                                                             CAIRO_GOBJECT_TYPE_PATTERN, 0));
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boolean ("focus-border-dashes",
-                                                              "Focus border uses dashes",
-                                                              "Focus border uses dashes",
-                                                              FALSE, 0));
 }
 
 static void

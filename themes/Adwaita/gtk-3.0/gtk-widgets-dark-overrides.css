@@ -10,9 +10,9 @@ GtkIconView.view.cell:selected:focus {
     /* FIXME: this probably needs to be better;
      * see https://bugzilla.gnome.org/show_bug.cgi?id=644157
      */
-    -adwaita-focus-border-color: alpha(@theme_text_color, 0.4);
-    -adwaita-focus-border-radius: 5;
-    -adwaita-focus-border-dashes: true;
+    outline-color: alpha(@theme_text_color, 0.4);
+    outline-style: dashed;
+    outline-offset: 5px;
 }
 
 .button,
