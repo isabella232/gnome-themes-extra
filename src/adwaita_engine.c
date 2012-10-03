@@ -231,7 +231,7 @@ render_notebook_extension (GtkThemingEngine *engine,
   gtk_theming_engine_get_background_color (engine, state, &background_color);
   gtk_theming_engine_get_border_color (engine, state, &border_color);
   gtk_theming_engine_get (engine, state,
-                          "-adwaita-border-gradient", &pattern,
+                          "border-image-source", &pattern,
                           NULL);
 
   is_active = (state & GTK_STATE_FLAG_ACTIVE);
@@ -409,11 +409,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
   engine_class->render_focus = adwaita_engine_render_focus;
   engine_class->render_extension = adwaita_engine_render_extension;
   engine_class->render_expander = adwaita_engine_render_expander;
-  gtk_theming_engine_register_property (ADWAITA_NAMESPACE, NULL,
-                                        g_param_spec_boxed ("border-gradient",
-                                                            "Border gradient",
-                                                            "Border gradient",
-                                                            CAIRO_GOBJECT_TYPE_PATTERN, 0));
 }
 
 static void

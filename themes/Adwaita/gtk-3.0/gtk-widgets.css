@@ -1646,10 +1646,10 @@ GtkLinkButton.button *:active {
 }
 
 .notebook tab:active {
-    -adwaita-border-gradient: -gtk-gradient (linear,
-                                             left top, left bottom,
-                                             from (@notebook_active_tab_border),
-                                             to (@borders));
+    border-image-source: -gtk-gradient (linear,
+                                        left top, left bottom,
+                                        from (@notebook_active_tab_border),
+                                        to (@borders));
 
     background-image: linear-gradient(to bottom,
                                       @notebook_selected_tab_color,
@@ -1670,11 +1670,10 @@ GtkLinkButton.button *:active {
     background-color:  @theme_unfocused_base_color;
     border-color: @unfocused_borders;
     /* FIXME - should be possible to set it to none and use border color */
-    -adwaita-border-gradient: -gtk-gradient (linear, 
-                                             left top, left bottom,
-                                             from (@unfocused_borders),
-                                             to (@unfocused_borders));
-    -adwaita-selected-tab-color: @unfocused_borders;
+    border-image-source: -gtk-gradient (linear,
+                                        left top, left bottom,
+                                        from (@unfocused_borders),
+                                        to (@unfocused_borders));
 }
 
 .notebook tab.top {
