@@ -571,3 +571,44 @@ GucharmapChartable:selected {
  color: @theme_selected_fg_color;
 }
 
+/* evince */
+EvWindow.background > GtkBox.vertical > GtkPaned.horizontal > GtkBox.vertical > GtkScrolledWindow.frame {
+    border-width: 0;
+    border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .frame {
+    border-width: 1px 0 0;
+    border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .notebook {
+    border-width: 1px 0 0;
+}
+
+EvWindow.background EvSidebarAnnotations.vertical GtkToolPalette > GtkToolItemGroup > .button { 
+    border-image: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: @borders;
+}
+
+EvWindow.background EvSidebar.vertical .notebook .frame {
+    border-width: 0;
+}
+
+EvWindow .pane-separator, 
+EvWindow .pane-separator:hover {
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: @borders;
+    background-color: shade(@theme_bg_color, 0.95);
+    color: @borders;
+}
+
+EvWindow.background EggFindBar.toolbar {
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: @borders;
+}
