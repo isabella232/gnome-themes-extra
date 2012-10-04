@@ -199,6 +199,34 @@ GeditFloatingSlider .not-found {
     background-color: @error_bg_color;
 }
 
+GeditStatusComboBox .button {
+    text-shadow: none;
+}
+
+GeditStatusComboBox .button:backdrop,
+GeditStatusComboBox .button:backdrop:hover,
+GeditStatusComboBox .button,
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px;
+    border-radius: 0;
+    padding: 1px 8px 2px 4px;
+}
+
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    border-color: @borders;
+}
+
+GeditStatusComboBox .button:backdrop,
+GeditStatusComboBox .button:backdrop:hover {
+    border-color: @unfocused_borders;
+}
+
 /* gnome-documents */
 .documents-dropdown,
 .documents-dropdown .view {
@@ -612,3 +640,4 @@ EvWindow.background EggFindBar.toolbar {
     border-style: solid;
     border-color: @borders;
 }
+
