@@ -340,7 +340,8 @@
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-	<include name="close_glyph_focused" y="1" />
+	<include name="close_shadow_focused" />
+	<include name="close_glyph_focused" />
 </draw_ops>
 
 <draw_ops name="close_glyph_unfocused">
@@ -467,7 +468,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-	<include name="maximize_glyph_focused" y="1" />
+	<include name="maximize_glyph_focused" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused">
@@ -535,7 +536,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<include name="minimize_glyph_focused" y="1" />
+	<include name="minimize_glyph_focused" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_unfocused">
@@ -607,7 +608,7 @@
 </draw_ops>
 
 <draw_ops name="menu_focused_pressed">
-	<include name="menu_glyph_focused" y="1" />
+	<include name="menu_glyph_focused" />
 </draw_ops>
 
 <draw_ops name="menu_glyph_unfocused">
@@ -703,7 +704,7 @@
 </draw_ops>
 
 <draw_ops name="shade_focused_pressed">
-	<include name="shade_glyph_focused" y="1" />
+	<include name="shade_glyph_focused" />
 </draw_ops>
 
 <draw_ops name="shade_glyph_unfocused">
