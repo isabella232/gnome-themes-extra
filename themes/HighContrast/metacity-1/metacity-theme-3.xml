@@ -10,9 +10,12 @@
 
 <!-- meaningfull constants -->
 
-<constant name="C_border_focused" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
-<constant name="C_border_prelight" value="#000000" />
-<constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" />
+<constant name="C_border_focused" value="#000000" /> <!-- FIXME -->
+<constant name="C_border_prelight" value="#000000" /> <!-- FIXME -->
+<constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" /> <!-- FIXME -->
+<constant name="C_button_fill" value="red" />
+<constant name="C_button_fill_prelight" value="blue" />
+<constant name="C_button_fill_pressed" value="gree" />
 <constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
 <constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])" />
 <constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.7" />
@@ -22,15 +25,15 @@
 <constant name="C_icons_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.7" />
 <constant name="C_icons_unfocused_prelight" value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.3" />
 <constant name="C_icons_unfocused_pressed" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
-<constant name="D_icons_unfocused_offset" value="2" /> <!-- offset of the unfocused icons -->
-<constant name="D_icons_shrink" value="1" /> <!-- increasing this value makes the icons in buttons smaller -->
+<constant name="D_icons_unfocused_offset" value="1" /> <!-- offset of the unfocused icons -->
+<constant name="D_icons_shrink" value="0" /> <!-- increasing this value makes the icons in buttons smaller -->
 <constant name="D_icons_grow" value="0" /> <!-- increasing this value makes the icons in buttons bigger -->
 <!-- geometries -->
 
 <frame_geometry name="normal" title_scale="medium" rounded_top_left="4" rounded_top_right="4">
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
+	<distance name="left_width" value="2" />
+	<distance name="right_width" value="2" />
+	<distance name="bottom_height" value="2" />
 	<distance name="left_titlebar_edge" value="0"/>
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="9"/>
@@ -81,9 +84,9 @@
 </frame_geometry>
 
 <frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal" >
-	<distance name="left_width" value="1" />
-	<distance name="right_width" value="1" />
-	<distance name="bottom_height" value="1" />
+	<distance name="left_width" value="2" />
+	<distance name="right_width" value="2" />
+	<distance name="bottom_height" value="2" />
 	<border name="title_border" left="10" right="10" top="0" bottom="0" />
 	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
 	<distance name="title_vertical_pad" value="1" />
@@ -140,6 +143,7 @@
 	<!-- window decorations -->
 
 <draw_ops name="entire_background_focused">
+        <!-- FIXME: insert a custom wm color here -->
 	<rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true" />
 </draw_ops>
 
@@ -148,15 +152,12 @@
 </draw_ops>
 
 <draw_ops name="titlebar_fill_focused">
-	<gradient type="vertical" x="0" y="0" width="width" height="height">
-		<color value="gtk:custom(wm_bg_a,blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.4)" />
-		<color value="gtk:custom(wm_bg_b,gtk:bg[NORMAL])" />
-	</gradient>
+	<!--<tint color="gtk:base[NORMAL]" alpha="1" x="0" y="0" width="width" height="height" /> -->
 </draw_ops>
 
 
 <draw_ops name="titlebar_fill_unfocused">
-	<rectangle color="C_titlebar_unfocused" x="0" y="0" width="width" height="height" filled="true" />
+	<!-- <rectangle color="C_titlebar_unfocused" x="0" y="0" width="width" height="height" filled="true" /> -->
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
@@ -172,7 +173,7 @@
 </draw_ops>
 
 <draw_ops name="border_focused">
-	<rectangle color="C_border_focused" x="0" y="0" width="width-1" height="height-1" filled="false" />
+	<rectangle color="#000000" x="0" y="0" width="width-1" height="height-1" filled="false" />
 </draw_ops>
 
 <draw_ops name="border_unfocused">
@@ -181,56 +182,69 @@
 
 <draw_ops name="rounded_border_focused">
 	<line color="C_border_focused" x1="4" y1="0" x2="width-5" y2="0" />
+	<line color="C_border_focused" x1="4" y1="1" x2="width-5" y2="1" />
 	<line color="C_border_focused" x1="0" y1="height-1" x2="width-1" y2="height-1" />
+	<line color="C_border_focused" x1="0" y1="height-2" x2="width-1" y2="height-2" />
 	<line color="C_border_focused" x1="0" y1="4" x2="0" y2="height-2" />
+	<line color="C_border_focused" x1="1" y1="4" x2="1" y2="height-2" />
 	<line color="C_border_focused" x1="width-1" y1="4" x2="width-1" y2="height-2" />
-	<arc color="C_border_focused" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
-	<arc color="C_border_focused" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
-	<!-- double arcs for darker borders -->
-	<arc color="C_border_focused" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
-	<arc color="C_border_focused" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
+	<line color="C_border_focused" x1="width-2" y1="4" x2="width-2" y2="height-2" />
+	<arc color="C_border_focused" x="0" y="0" width="8" height="8"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_focused" x="1" y="1" width="6" height="6"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_focused" x="0" y="0" width="8" height="8"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_focused" x="1" y="1" width="6" height="6"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_focused" x="width-9" y="0" width="8" height="8"  start_angle="0" extent_angle="90" />
+	<arc color="C_border_focused" x="width-8" y="1" width="6" height="6"  start_angle="0" extent_angle="90" />
+	<arc color="C_border_focused" x="width-9" y="0" width="8" height="8"  start_angle="0" extent_angle="90" />
+	<arc color="C_border_focused" x="width-8" y="1" width="6" height="6"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 <draw_ops name="rounded_border_unfocused">
 	<line color="C_border_unfocused" x1="4" y1="0" x2="width-5" y2="0" />
+	<line color="C_border_unfocused" x1="4" y1="1" x2="width-5" y2="1" />
 	<line color="C_border_unfocused" x1="0" y1="height-1" x2="width-1" y2="height-1" />
+	<line color="C_border_unfocused" x1="0" y1="height-2" x2="width-1" y2="height-2" />
 	<line color="C_border_unfocused" x1="0" y1="4" x2="0" y2="height-2" />
+	<line color="C_border_unfocused" x1="1" y1="4" x2="1" y2="height-2" />
 	<line color="C_border_unfocused" x1="width-1" y1="4" x2="width-1" y2="height-2" />
-	<arc color="C_border_unfocused" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
-	<arc color="C_border_unfocused" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
-
-	<!-- double arcs for darker borders -->
-	<arc color="C_border_unfocused" x="0" y="0" width="9" height="9"  start_angle="270" extent_angle="90" />
-	<arc color="C_border_unfocused" x="width-10" y="0" width="9" height="9"  start_angle="0" extent_angle="90" />
+	<line color="C_border_unfocused" x1="width-2" y1="4" x2="width-2" y2="height-2" />
+	<arc color="C_border_unfocused" x="0" y="0" width="8" height="8"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_unfocused" x="1" y="1" width="6" height="6"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_unfocused" x="0" y="0" width="8" height="8"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_unfocused" x="1" y="1" width="6" height="6"  start_angle="270" extent_angle="90" />
+	<arc color="C_border_unfocused" x="width-9" y="0" width="8" height="8"  start_angle="0" extent_angle="90" />
+	<arc color="C_border_unfocused" x="width-8" y="1" width="6" height="6"  start_angle="0" extent_angle="90" />
+	<arc color="C_border_unfocused" x="width-9" y="0" width="8" height="8"  start_angle="0" extent_angle="90" />
+	<arc color="C_border_unfocused" x="width-8" y="1" width="6" height="6"  start_angle="0" extent_angle="90" />
 </draw_ops>
 
 
 <draw_ops name="border_right_focused">
-	<line
+<!--	<line
 		x1="width" y1="0"
 		x2="width" y2="height"
-		color="C_border_focused" />
+		color="C_border_focused" /> -->
 </draw_ops>
 
 <draw_ops name="border_right_unfocused">
-	<line
+<!--	<line
 		x1="width" y1="0" 
 		x2="width" y2="height" 
-		color="C_border_unfocused" />
+		color="C_border_unfocused" /> -->
 </draw_ops>
 
 <draw_ops name="border_left_focused">
-	<line
+<!--	<line
 		x1="0" y1="0" 
 		x2="0" y2="height" 
-		color="C_border_focused" />
+		color="C_border_focused" /> -->
 </draw_ops>
 
 <draw_ops name="border_left_unfocused">
-	<line
+<!--	<line
 		x1="0" y1="0" 
 		x2="0" y2="height" 
-		color="C_border_unfocused" />
+		color="C_border_unfocused" /> -->
 </draw_ops>
 
 	<!-- button icons-->
@@ -298,7 +312,7 @@
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-	<include name="close_glyph_focused_prelight" y="1" />
+	<include name="close_glyph_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="close_glyph_unfocused">
@@ -428,7 +442,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-	<include name="maximize_glyph_focused_prelight" y="1" />
+	<include name="maximize_glyph_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused">
@@ -499,7 +513,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<include name="minimize_glyph_focused_prelight" y="1" />
+	<include name="minimize_glyph_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_unfocused">
@@ -574,7 +588,7 @@
 </draw_ops>
 
 <draw_ops name="menu_focused_pressed">
-	<include name="menu_glyph_focused_prelight" y="1" />
+	<include name="menu_glyph_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="menu_glyph_unfocused">
@@ -681,7 +695,7 @@
 </draw_ops>
 
 <draw_ops name="shade_focused_pressed">
-	<include name="shade_glyph_focused_prelight" y="1" />
+	<include name="shade_glyph_focused_prelight" />
 </draw_ops>
 
 <draw_ops name="shade_glyph_unfocused">
@@ -756,288 +770,123 @@
 
 	<!-- button backgrounds -->
 
-<constant name="C_button_border" value="blend/#000000/gtk:bg[NORMAL]/0.5" />
-<constant name="C_button_border_prelight" value="#000000" />
-
-<draw_ops name="button_fill"> <!-- button background gradient -->
-       <gradient type="vertical" x="0" y="0" width="width" height="height-2">
-               <color value="gtk:custom(wm_button_bg,gtk:bg[NORMAL])" />
-               <color value="gtk:custom(wm_button_bg,gtk:bg[NORMAL])" />
-       </gradient>
+<draw_ops name="button_fill"> <!-- button background -->
+	<tint color="gtk:custom(wm_button_bg,gtk:bg[NORMAL])" alpha="1" x="0" y="0" width="width" height="height-2" />
 </draw_ops>
 
-<draw_ops name="button_fill_prelight"> <!-- button background gradient for prelight status -->
-	<gradient type="vertical" x="0" y="0" width="width" height="height-2">
-               <color value="gtk:custom(wm_button_prelight_bg,#000000)" />
-               <color value="gtk:custom(wm_button_prelight_bg,#000000)" />
-	</gradient>
+<draw_ops name="button_fill_prelight"> <!-- button background for prelight status -->
+	<tint color="gtk:custom(wm_button_prelight_bg,#000000)" alpha="1" x="0" y="0" width="width" height="height-2" />
 </draw_ops>
 
 <draw_ops name="button_bottom">
-	<line x1="0" y1="height-2" x2="width-1" y2="height-2" color="C_button_border" />
+	<line x1="0" y1="height-2" x2="width-1" y2="height-2" color="C_border_focused" />
+	<line x1="0" y1="height-3" x2="width-1" y2="height-3" color="C_border_focused" />
 </draw_ops>
 
-<draw_ops name="button_bottom_prelight">
-	<line x1="0" y1="height-2" x2="width-1" y2="height-2" color="C_button_border_prelight" />
+<draw_ops name="button_separator_left">
+	<line x1="0" y1="0" x2="0" y2="height-3" color="C_border_focused" />
 </draw_ops>
 
-<draw_ops name="button_bevel">
-	<gradient type="vertical" x="0" y="0" width="1" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.1"/>
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
-	</gradient>
-	<gradient type="vertical" x="width-1" y="0" width="1" height="height-2">
-		<color value="C_border_focused"/>
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
-	</gradient>
+<draw_ops name="button_separator_right">
+	<line x1="width-1" y1="0" x2="width-1" y2="height-3" color="C_border_focused" />
 </draw_ops>
 
-<draw_ops name="button_bevel_prelight">
-	<gradient type="vertical" x="0" y="0" width="1" height="height-2">
-		<color value="blend/gtk:bg[NORMAL]/gtk:base[NORMAL]/0.1"/>
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
-	</gradient>
-	<gradient type="vertical" x="width-1" y="0" width="1" height="height-2">
-		<color value="C_border_prelight"/>
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.1"/>
-	</gradient>
-</draw_ops>
 
 <draw_ops name="button">
 	<include name="button_fill" />
-	<include name="button_bevel" />
+	<include name="button_separator_left" />
+	<include name="button_separator_right" />
 	<include name="button_bottom" />
 </draw_ops>
 
 <draw_ops name="button_prelight">
 	<include name="button_fill_prelight" />
-	<include name="button_bevel_prelight" />
-	<include name="button_bottom_prelight" />
+	<include name="button_bottom" />
 </draw_ops>
 
 <draw_ops name="button_pressed">
 	<include name="button_fill_prelight" />
-	<include name="button_bevel_prelight" />
-	<include name="button_bottom_prelight" />
-</draw_ops>
-
-<!-- things get messy here -->
-
-<draw_ops name="button_inner_right_slice1">
-	<clip x="0" y="0" width="width" height="height-5" />
-	<include name="button" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice2">
-	<clip x="1" y="height-5" width="width-1" height="2" />
-	<include name="button" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice3">
-	<clip x="2" y="height-3" width="width-2" height="1" />
-	<include name="button" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice4">
-	<clip x="4" y="height-2" width="width-4" height="2" />
-	<include name="button" />
+	<include name="button_bottom" />
 </draw_ops>
 
 <draw_ops name="button_inner_right_fill">
-	<include name="button_inner_right_slice1" />
-	<include name="button_inner_right_slice2" />
-	<include name="button_inner_right_slice3" />
-	<include name="button_inner_right_slice4" />
-</draw_ops>
-
-<draw_ops name="button_inner_right_slice1_prelight">
-	<clip x="0" y="0" width="width" height="height-5" />
-	<include name="button_prelight" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice2_prelight">
-	<clip x="1" y="height-5" width="width-1" height="2" />
-	<include name="button_prelight" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice3_prelight">
-	<clip x="2" y="height-3" width="width-2" height="1" />
-	<include name="button_prelight" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice4_prelight">
-	<clip x="4" y="height-2" width="width-4" height="2" />
-	<include name="button_prelight" />
+	<tint color="gtk:custom(wm_button_bg,gtk:bg[NORMAL])" alpha="1" x="2" y="0" width="width-2" height="height-3" />
 </draw_ops>
 
 <draw_ops name="button_inner_right_fill_prelight">
-	<include name="button_inner_right_slice1_prelight" />
-	<include name="button_inner_right_slice2_prelight" />
-	<include name="button_inner_right_slice3_prelight" />
-	<include name="button_inner_right_slice4_prelight" />
-</draw_ops>
-
-<draw_ops name="button_inner_right_slice1_pressed">
-	<clip x="0" y="0" width="width" height="height-5" />
-	<include name="button_pressed" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice2_pressed">
-	<clip x="1" y="height-5" width="width-1" height="2" />
-	<include name="button_pressed" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice3_pressed">
-	<clip x="2" y="height-3" width="width-2" height="1" />
-	<include name="button_pressed" />
-</draw_ops>
-<draw_ops name="button_inner_right_slice4_pressed">
-	<clip x="4" y="height-2" width="width-4" height="2" />
-	<include name="button_pressed" />
+	<tint color="gtk:custom(wm_button_prelight_bg,gtk:fg[NORMAL])" alpha="1" x="2" y="0" width="width-2" height="height-3" />
 </draw_ops>
 
 <draw_ops name="button_inner_right_fill_pressed">
-	<include name="button_inner_right_slice1_pressed" />
-	<include name="button_inner_right_slice2_pressed" />
-	<include name="button_inner_right_slice3_pressed" />
-	<include name="button_inner_right_slice4_pressed" />
+	<tint color="gtk:custom(wm_button_pressed_bg,gtk:text[NORMAL])" alpha="1" x="2" y="0" width="width-2" height="height-3" />
 </draw_ops>
 
 <draw_ops name="button_inner_right_border">
-	<gradient type="vertical" x="0" y="0" width="1" height="height-5">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
-	</gradient>
-	<gradient type="vertical" x="1" y="0" width="1" height="height-5">
-		<color value="C_border_focused" />
-		<color value="C_button_border" />
-	</gradient>
-	<arc color="C_button_border" x="1" y="height-11" width="9" height="9"  start_angle="180" extent_angle="90" />
-</draw_ops>
-
-<draw_ops name="button_inner_right_border_prelight">
-	<gradient type="vertical" x="0" y="0" width="1" height="height-5">
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.06" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
-	</gradient>
-	<gradient type="vertical" x="1" y="0" width="1" height="height-5">
-		<color value="C_border_prelight" />
-		<color value="C_button_border_prelight" />
-	</gradient>
-	<arc color="C_button_border_prelight" x="1" y="height-11" width="9" height="9"  start_angle="180" extent_angle="90" />
+	<arc color="C_border_focused" x="0" y="height-10" width="8" height="8" start_angle="180" extent_angle="90" />
+	<arc color="C_border_focused" x="1" y="height-9" width="6" height="6" start_angle="180" extent_angle="90" />
+	<line color="C_border_focused" x1="0" y1="0" x2="0" y2="height-6"/>
+	<line color="C_border_focused" x1="1" y1="0" x2="1" y2="height-6"/>
+	<line x1="4" y1="height-2" x2="width-1" y2="height-2" color="C_border_focused" />
+	<line x1="4" y1="height-3" x2="width-1" y2="height-3" color="C_border_focused" />
 </draw_ops>
 
 <draw_ops name="button_inner_right">
 	<include name="button_inner_right_fill" />
+	<include name="button_separator_right" />
 	<include name="button_inner_right_border" />
 </draw_ops>
 
 <draw_ops name="button_inner_right_prelight">
 	<include name="button_inner_right_fill_prelight" />
-	<include name="button_inner_right_border_prelight" />
+	<include name="button_separator_right" />
+	<include name="button_inner_right_border" />
 </draw_ops>
 
 <draw_ops name="button_inner_right_pressed">
 	<include name="button_inner_right_fill_pressed" />
-	<include name="button_inner_right_border_prelight" />
-</draw_ops>
-
-<draw_ops name="button_inner_left_slice1">
-	<clip x="0" y="0" width="width-1" height="height-5" />
-	<include name="button" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice2">
-	<clip x="0" y="height-5" width="width-2" height="2" />
-	<include name="button" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice3">
-	<clip x="0" y="height-3" width="width-3" height="1" />
-	<include name="button" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice4">
-	<clip x="0" y="height-2" width="width-5" height="2" />
-	<include name="button" />
+	<include name="button_separator_right" />
+	<include name="button_inner_right_border" />
 </draw_ops>
 
 <draw_ops name="button_inner_left_fill">
-	<include name="button_inner_left_slice1" />
-	<include name="button_inner_left_slice2" />
-	<include name="button_inner_left_slice3" />
-	<include name="button_inner_left_slice4" />
-</draw_ops>
-
-<draw_ops name="button_inner_left_slice1_prelight">
-	<clip x="0" y="0" width="width-1" height="height-5" />
-	<include name="button_prelight" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice2_prelight">
-	<clip x="0" y="height-5" width="width-2" height="2" />
-	<include name="button_prelight" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice3_prelight">
-	<clip x="0" y="height-3" width="width-3" height="1" />
-	<include name="button_prelight" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice4_prelight">
-	<clip x="0" y="height-2" width="width-5" height="2" />
-	<include name="button_prelight" />
+	<tint color="gtk:custom(wm_button_bg,gtk:bg[NORMAL])" alpha="1" x="1" y="0" width="width-2" height="height-3" />
 </draw_ops>
 
 <draw_ops name="button_inner_left_fill_prelight">
-	<include name="button_inner_left_slice1_prelight" />
-	<include name="button_inner_left_slice2_prelight" />
-	<include name="button_inner_left_slice3_prelight" />
-	<include name="button_inner_left_slice4_prelight" />
-</draw_ops>
-
-<draw_ops name="button_inner_left_slice1_pressed">
-	<clip x="0" y="0" width="width-1" height="height-5" />
-	<include name="button_pressed" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice2_pressed">
-	<clip x="0" y="height-5" width="width-2" height="2" />
-	<include name="button_pressed" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice3_pressed">
-	<clip x="0" y="height-3" width="width-3" height="1" />
-	<include name="button_pressed" />
-</draw_ops>
-<draw_ops name="button_inner_left_slice4_pressed">
-	<clip x="0" y="height-2" width="width-5" height="2" />
-	<include name="button_pressed" />
+	<tint color="gtk:custom(wm_button_prelight_bg,gtk:fg[NORMAL])" alpha="1" x="1" y="0" width="width-2" height="height-3" />
 </draw_ops>
 
 <draw_ops name="button_inner_left_fill_pressed">
-	<include name="button_inner_left_slice1_pressed" />
-	<include name="button_inner_left_slice2_pressed" />
-	<include name="button_inner_left_slice3_pressed" />
-	<include name="button_inner_left_slice4_pressed" />
-</draw_ops>
-
-<draw_ops name="button_inner_left_border_prelight">
-	<gradient type="vertical" x="width-2" y="0" width="1" height="height-5">
-		<color value="C_border_prelight" />
-		<color value="C_button_border_prelight" />
-	</gradient>
-	<arc color="C_button_border_prelight" x="width-11" y="height-11" width="9" height="9"  start_angle="90" extent_angle="90" />
+	<tint color="gtk:custom(wm_button_pressed_bg,gtk:text[NORMAL])" alpha="1" x="1" y="0" width="width-2" height="height-3" />
 </draw_ops>
 
 <draw_ops name="button_inner_left_border">
-	<gradient type="vertical" x="width-2" y="0" width="1" height="height-5">
-		<color value="C_border_focused" />
-		<color value="C_button_border" />
-	</gradient>
-	<arc color="C_button_border" x="width-11" y="height-11" width="9" height="9"  start_angle="90" extent_angle="90" />
+	<arc color="C_border_focused" x="width-9" y="height-10" width="8" height="8" start_angle="90" extent_angle="90" />
+	<arc color="C_border_focused" x="width-8" y="height-9" width="6" height="6" start_angle="90" extent_angle="90" />
+	<line color="C_border_focused" x1="width-1" y1="0" x2="width-1" y2="height-6"/>
+	<line color="C_border_focused" x1="width-2" y1="0" x2="width-2" y2="height-6"/>
+	<line x1="0" y1="height-2" x2="width-5" y2="height-2" color="C_border_focused" />
+	<line x1="0" y1="height-3" x2="width-5" y2="height-3" color="C_border_focused" />
 </draw_ops>
 
 <draw_ops name="button_inner_left">
 	<include name="button_inner_left_fill" />
+	<include name="button_separator_left" />
 	<include name="button_inner_left_border" />
 </draw_ops>
 
 <draw_ops name="button_inner_left_prelight">
 	<include name="button_inner_left_fill_prelight" />
-	<include name="button_inner_left_border_prelight" />
+	<include name="button_separator_left" />
+	<include name="button_inner_left_border" />
 </draw_ops>
 
 <draw_ops name="button_inner_left_pressed">
 	<include name="button_inner_left_fill_pressed" />
-	<include name="button_inner_left_border_prelight" />
+	<include name="button_separator_left" />
+	<include name="button_inner_left_border" />
 </draw_ops>
+
 
 <!-- frame styles -->
 
@@ -1783,7 +1632,7 @@
 
 <frame_style name="tiled_right_focused" geometry="tiled_right">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
+	<!-- <piece position="titlebar" draw_ops="titlebar_fill_focused" /> -->
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay" draw_ops="border_left_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1838,7 +1687,7 @@
 
 <frame_style name="tiled_right_unfocused" geometry="tiled_right">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" /> 
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="border_left_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
