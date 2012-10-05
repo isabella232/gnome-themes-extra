@@ -10,18 +10,15 @@
 
 <!-- meaningfull constants -->
 
-<constant name="C_border_focused" value="#000000" /> <!-- FIXME -->
-<constant name="C_border_prelight" value="#000000" /> <!-- FIXME -->
-<constant name="C_border_unfocused" value="blend/#000000/gtk:bg[NORMAL]/0.8" /> <!-- FIXME -->
-<constant name="C_button_fill" value="red" />
-<constant name="C_button_fill_prelight" value="blue" />
-<constant name="C_button_fill_pressed" value="gree" />
-<constant name="C_titlebar_unfocused" value="blend/gtk:base[NORMAL]/gtk:bg[NORMAL]/0.4" />
+<constant name="C_border_focused" value="gtk:custom(wm_border_color,#000000)" />
+<constant name="C_border_unfocused" value="gtk:custom(wm_border_backdrop_color,#babdb6)" />
+<constant name="C_titlebar_unfocused" value="gtk:custom(wm_border_backdrop_color,#babdb6)" />
 <constant name="C_title_focused" value="gtk:custom(wm_title,gtk:fg[NORMAL])" />
 <constant name="C_title_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.7" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:custom(wm_button_fg,gtk:text[NORMAL])" />
 <constant name="C_icons_focused_prelight" value="gtk:custom(wm_button_prelight_fg,#ffffff)" />
+<constant name="C_icons_focused_pressed" value="gtk:custom(wm_button_pressed_fg,#d6d6d6)" />
 <constant name="C_icons_unfocused" value="blend/gtk:text[NORMAL]/gtk:bg[NORMAL]/0.7" />
 <constant name="C_icons_unfocused_prelight" value="blend/gtk:bg[NORMAL]/gtk:fg[NORMAL]/0.3" />
 <constant name="C_icons_unfocused_pressed" value="blend/#000000/gtk:bg[NORMAL]/0.7" />
@@ -62,11 +59,11 @@
 </frame_geometry>
 
 <frame_geometry name="tiled_left" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
-	<distance name="right_width" value="1" />
+	<distance name="right_width" value="2" />
 </frame_geometry>
 
 <frame_geometry name="tiled_right" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
-	<distance name="left_width" value="1" />
+	<distance name="left_width" value="2" />
 </frame_geometry>
 
 <frame_geometry name="small" title_scale="small" parent="normal" rounded_top_left="false" rounded_top_right="false">
@@ -220,31 +217,47 @@
 
 
 <draw_ops name="border_right_focused">
-<!--	<line
-		x1="width" y1="0"
-		x2="width" y2="height"
-		color="C_border_focused" /> -->
+	<line
+		x1="width-1" y1="0"
+		x2="width-1" y2="height"
+		color="C_border_focused" />
+	<line
+		x1="width-2" y1="0"
+		x2="width-2" y2="height"
+		color="C_border_focused" />
 </draw_ops>
 
 <draw_ops name="border_right_unfocused">
-<!--	<line
-		x1="width" y1="0" 
-		x2="width" y2="height" 
-		color="C_border_unfocused" /> -->
+	<line
+		x1="width-1" y1="0" 
+		x2="width-1" y2="height" 
+		color="C_border_unfocused" />
+	<line
+		x1="width-2" y1="0" 
+		x2="width-2" y2="height" 
+		color="C_border_unfocused" />
 </draw_ops>
 
 <draw_ops name="border_left_focused">
-<!--	<line
+	<line
 		x1="0" y1="0" 
 		x2="0" y2="height" 
-		color="C_border_focused" /> -->
+		color="C_border_focused" />
+	<line
+		x1="1" y1="0" 
+		x2="1" y2="height" 
+		color="C_border_focused" />
 </draw_ops>
 
 <draw_ops name="border_left_unfocused">
-<!--	<line
+	<line
 		x1="0" y1="0" 
 		x2="0" y2="height" 
-		color="C_border_unfocused" /> -->
+		color="C_border_unfocused" />
+	<line
+		x1="1" y1="0" 
+		x2="1" y2="height" 
+		color="C_border_unfocused" />
 </draw_ops>
 
 	<!-- button icons-->
@@ -303,6 +316,33 @@
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
+<draw_ops name="close_glyph_focused_pressed">
+	<line
+		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
+		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow" 
+		color="C_icons_focused_pressed" />
+	<line
+		x1="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		color="C_icons_focused_pressed" />
+	<line 
+		x1="(width-width%3)/3+D_icons_shrink-D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
+		x2="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		color="C_icons_focused_pressed" />
+	<line 
+		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
+		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		color="C_icons_focused_pressed" />
+	<line 
+		x1="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+D_icons_shrink-D_icons_grow"
+		x2="(width-width%3)/3+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow"
+		color="C_icons_focused_pressed" />
+	<line 
+		x1="width-(width-width%3)/3-1-D_icons_shrink+D_icons_grow" y1="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
+		x2="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y2="height-(height-height%3)/3-1-D_icons_shrink+D_icons_grow"
+		color="C_icons_focused_pressed" />
+</draw_ops>
+
 <draw_ops name="close_focused">
 	<include name="close_glyph_focused" />
 </draw_ops>
@@ -312,7 +352,7 @@
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-	<include name="close_glyph_focused_prelight" />
+	<include name="close_glyph_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="close_glyph_unfocused">
@@ -433,6 +473,18 @@
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
+<draw_ops name="maximize_glyph_focused_pressed">
+	<rectangle 
+		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%3)/3-1-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		color="C_icons_focused_pressed" />
+	<rectangle 
+		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow"
+		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		color="C_icons_focused_pressed" />
+</draw_ops>
+
+
 <draw_ops name="maximize_focused">
 	<include name="maximize_glyph_focused" />
 </draw_ops>
@@ -442,7 +494,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-	<include name="maximize_glyph_focused_prelight" />
+	<include name="maximize_glyph_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused">
@@ -504,6 +556,13 @@
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
+<draw_ops name="minimize_glyph_focused_pressed">
+	<rectangle 
+		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%3)/3-2-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		color="C_icons_focused_pressed" />
+</draw_ops>
+
 <draw_ops name="minimize_focused">
 	<include name="minimize_glyph_focused" />
 </draw_ops>
@@ -513,7 +572,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<include name="minimize_glyph_focused_prelight" />
+	<include name="minimize_glyph_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_unfocused">
@@ -579,6 +638,21 @@
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
+<draw_ops name="menu_glyph_focused_pressed">
+	<rectangle 
+		x="(width-width%3)/3+1+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%3)/3-3-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-1-2*D_icons_shrink+2*D_icons_grow" 
+		color="C_icons_focused_pressed" />
+	<rectangle 
+		x="(width-width%3)/3+2+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+1+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%3)/3-5-2*D_icons_shrink+2*D_icons_grow" height="height-2*(height-height%3)/3-3-2*D_icons_shrink+2*D_icons_grow" 
+		color="C_icons_focused_pressed" />
+	<rectangle 
+		x="(width-width%3)/3+4+D_icons_shrink-D_icons_grow" y="height/2-1-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%3)/3-8-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		color="C_icons_focused_pressed" />
+</draw_ops>
+
 <draw_ops name="menu_focused">
 	<include name="menu_glyph_focused" />
 </draw_ops>
@@ -588,7 +662,7 @@
 </draw_ops>
 
 <draw_ops name="menu_focused_pressed">
-	<include name="menu_glyph_focused_prelight" />
+	<include name="menu_glyph_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="menu_glyph_unfocused">
@@ -686,6 +760,25 @@
 		color="C_icons_focused_prelight" />
 </draw_ops>
 
+<draw_ops name="shade_glyph_focused_pressed">
+	<rectangle 
+		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+D_icons_shrink-D_icons_grow" 
+		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		color="C_icons_focused_pressed" />
+	<rectangle 
+		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="height-(height-height%3)/3-2-D_icons_shrink+D_icons_grow" 
+		width="width-2*(width-width%3)/3-2*D_icons_shrink+2*D_icons_grow" height="2" filled="true"
+		color="C_icons_focused_pressed" />
+	<rectangle 
+		x="(width-width%3)/3+D_icons_shrink-D_icons_grow" y="(height-height%3)/3+3+D_icons_shrink-D_icons_grow" 
+		width="2" height="height-2*(height-height%3)/3-6-D_icons_shrink+D_icons_grow" filled="true"
+		color="C_icons_focused_pressed" />
+	<rectangle 
+		x="width-(width-width%3)/3-2-D_icons_shrink+D_icons_grow" y="(height-height%3)/3+3+D_icons_shrink-D_icons_grow" 
+		width="2" height="height-2*(height-height%3)/3-6-D_icons_shrink+D_icons_grow" filled="true"
+		color="C_icons_focused_pressed" />
+</draw_ops>
+
 <draw_ops name="shade_focused">
 	<include name="shade_glyph_focused" />
 </draw_ops>
@@ -695,7 +788,7 @@
 </draw_ops>
 
 <draw_ops name="shade_focused_pressed">
-	<include name="shade_glyph_focused_prelight" />
+	<include name="shade_glyph_focused_pressed" />
 </draw_ops>
 
 <draw_ops name="shade_glyph_unfocused">
