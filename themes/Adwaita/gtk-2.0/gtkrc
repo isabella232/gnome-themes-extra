@@ -585,6 +585,36 @@ style "menu"
     }
 }
 
+style "menu_framed_box"
+{
+	engine "pixmap"
+	{
+        image
+        {
+	  function                      = BOX
+          detail                        = "menu"
+	  file			        = "Menu-Menubar/frame.png"
+	  border	                = { 1, 1, 1, 1 }
+	  stretch		        = TRUE
+        }
+    }
+}
+
+style "menu_unframed_box"
+{
+	engine "pixmap"
+	{
+        image
+        {
+	  function                      = BOX
+          detail                        = "menu"
+	  file			        = "Others/null.png"
+	  border	                = { 4, 4, 4, 4 }
+	  stretch		        = TRUE
+        }
+    }
+}
+
 style "menu_item"
 {
 	xthickness	= 2

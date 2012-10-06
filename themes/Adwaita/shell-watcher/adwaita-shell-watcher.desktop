@@ -1,0 +1,4 @@
+[GTK Module]
+Name=Adwaita Shell Watcher
+Description=Adwaita Theme Shell Watcher
+X-GTK-Module-Name=shellwatcher

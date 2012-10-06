@@ -212,5 +212,6 @@
     <file>gtk-main.css</file>
     <file>gtk-main-common.css</file>
     <file>gtk-main-dark.css</file>
+    <file>gtk-fallback.css</file>
   </gresource>
 </gresources>

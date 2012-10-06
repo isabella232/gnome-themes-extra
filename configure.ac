@@ -48,6 +48,20 @@ AC_SUBST(DEPENDENCIES_LIBS)
 GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
 AC_SUBST(GTK_VERSION)
 
+AC_ARG_ENABLE([gtk-modules],
+              AC_HELP_STRING([--disable-gtk-modules],
+                             [Disable Gtk+ modules [default=no]]),
+              enable_gtk_modules=$enableval,
+              enable_gtk_modules=yes)
+AC_MSG_CHECKING([building gtk modules])
+AM_CONDITIONAL(GTK_MODULES, test "x$enable_gtk_modules" = "xyes")
+AC_MSG_RESULT([$enable_gtk_modules])
+
+if test "x$enable_gtk_modules" = "xyes"; then
+  PKG_CHECK_MODULES([WATCHER_MODULE_GTK2], [gtk+-2.0 gdk-x11-2.0])
+  PKG_CHECK_MODULES([WATCHER_MODULE_GTK3], [gtk+-3.0 gdk-x11-3.0])
+fi
+
 GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable glib_compile_resources gio-2.0`
 AC_SUBST(GLIB_COMPILE_RESOURCES)
 
@@ -78,6 +92,9 @@ themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/gtk-3.0/assets/Makefile
 themes/Adwaita/gtk-3.0/borders/Makefile
 themes/Adwaita/metacity-1/Makefile
+themes/Adwaita/shell-watcher/Makefile
+themes/Adwaita/shell-watcher/gtk-2.0/Makefile
+themes/Adwaita/shell-watcher/gtk-3.0/Makefile
 themes/HighContrast/Makefile
 themes/HighContrast/gtk-2.0/Makefile
 themes/HighContrast/gtk-3.0/Makefile

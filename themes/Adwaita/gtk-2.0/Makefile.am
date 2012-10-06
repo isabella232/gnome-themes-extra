@@ -63,6 +63,7 @@ asset_data = \
 	Lines/line-h.png \
 	Lines/line-v.png \
 	Lines/menu_line_h.png \
+	Menu-Menubar/frame.png \
 	Menu-Menubar/menubar_button.png \
 	Menu-Menubar/menubar.png \
 	Others/bg.png \

@@ -15,6 +15,7 @@ EXTRA_DIST = \
 	gtk.gresource.xml \
 	gtk.css \
 	gtk-dark.css \
+	gtk-fallback.css \
 	gtk-main.css \
 	gtk-main-common.css \
 	gtk-main-dark.css \
