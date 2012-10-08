@@ -641,3 +641,16 @@ EvWindow.background EggFindBar.toolbar {
     border-color: @borders;
 }
 
+/* gcalctool */
+
+MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow {
+    padding: 4px;    
+    background-color: @theme_base_color;
+    border-radius: 3px;
+}
+
+MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow:backdrop {
+    padding: 4px;    
+    background-color:  @theme_unfocused_base_color;
+    border-radius: 3px;
+}
