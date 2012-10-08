@@ -1,4 +1,4 @@
-SUBDIRS = backgrounds cursors metacity-1 gtk-2.0 shell-watcher
+SUBDIRS = backgrounds cursors metacity-1 gtk-2.0
 
 if GTK3
 SUBDIRS += gtk-3.0

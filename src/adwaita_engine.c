@@ -27,6 +27,7 @@
 #include <gmodule.h>
 #include <math.h>
 #include <cairo-gobject.h>
+#include <gdk/gdkx.h>
 
 #include "adwaita_utils.h"
 
@@ -38,6 +39,9 @@ typedef struct _AdwaitaEngineClass AdwaitaEngineClass;
 struct _AdwaitaEngine
 {
   GtkThemingEngine parent_object;
+
+  guint wm_watch_id;
+  GtkCssProvider *fallback_provider;
 };
 
 struct _AdwaitaEngineClass
@@ -64,8 +68,89 @@ adwaita_engine_register_types (GTypeModule *module)
 }
 
 static void
+fallback_provider_remove (AdwaitaEngine *self)
+{
+  GdkScreen *screen;
+
+  if (self->fallback_provider == NULL)
+    return;
+
+  screen = gdk_screen_get_default ();
+  gtk_style_context_remove_provider_for_screen
+    (screen, GTK_STYLE_PROVIDER (self->fallback_provider));
+  g_clear_object (&self->fallback_provider);
+}
+
+static void
+fallback_provider_add (AdwaitaEngine *self)
+{
+  GFile *resource;
+  GtkCssProvider *provider;
+  GError *error = NULL;
+  GdkScreen *screen;
+
+  if (self->fallback_provider != NULL)
+    return;
+
+  resource = g_file_new_for_uri ("resource:///org/gnome/adwaita/gtk-fallback.css");
+  provider = gtk_css_provider_new ();
+  gtk_css_provider_load_from_file (provider, resource, &error);
+  g_object_unref (resource);
+
+  if (error != NULL)
+    {
+      g_warning ("Can't load fallback CSS resource: %s", error->message);
+      g_error_free (error);
+      g_object_unref (provider);
+      return;
+    }
+
+  screen = gdk_screen_get_default ();
+  gtk_style_context_add_provider_for_screen
+    (screen, GTK_STYLE_PROVIDER (provider), GTK_STYLE_PROVIDER_PRIORITY_THEME);
+  self->fallback_provider = provider;
+}
+
+static void
+adwaita_engine_wm_changed (AdwaitaEngine *self)
+{
+  const gchar *name;
+  name = gdk_x11_screen_get_window_manager_name (gdk_screen_get_default ());
+
+  if (g_strcmp0 (name, "GNOME Shell") != 0)
+    fallback_provider_add (self);
+  else
+    fallback_provider_remove (self);
+}
+
+static void
+adwaita_engine_finalize (GObject *obj)
+{
+  AdwaitaEngine *self = ADWAITA_ENGINE (obj);
+
+  if (self->wm_watch_id != 0)
+    {
+      g_signal_handler_disconnect (gdk_screen_get_default (), self->wm_watch_id);
+      self->wm_watch_id = 0;
+    }
+
+  fallback_provider_remove (self);
+
+  G_OBJECT_CLASS (adwaita_engine_parent_class)->finalize (obj);
+}
+
+static void
 adwaita_engine_init (AdwaitaEngine *self)
 {
+  GdkScreen *screen = gdk_screen_get_default ();
+
+  if (!GDK_IS_X11_SCREEN (screen))
+    return;
+
+  self->wm_watch_id =
+    g_signal_connect_swapped (screen, "window-manager-changed",
+                              G_CALLBACK (adwaita_engine_wm_changed), self);
+  adwaita_engine_wm_changed (self);
 }
 
 static void
@@ -404,6 +489,9 @@ static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
   GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
+  GObjectClass *oclass = G_OBJECT_CLASS (klass);
+
+  oclass->finalize = adwaita_engine_finalize;
 
   engine_class->render_arrow = adwaita_engine_render_arrow;
   engine_class->render_focus = adwaita_engine_render_focus;

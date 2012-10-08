@@ -1,4 +1,12 @@
+if GTK2_ENGINE
+enginedir = $(libdir)/gtk-2.0/$(GTK2_VERSION)/engines
+engine_LTLIBRARIES = libadwaita.la
 
+libadwaita_la_CFLAGS = $(GTK2_ENGINE_CFLAGS)
+libadwaita_la_SOURCES = adwaita_engine.c
+libadwaita_la_LDFLAGS = -module -avoid-version -no-undefined
+libadwaita_la_LIBADD =  $(GTK2_ENGINE_LIBS)
+endif
 
 themedir = $(datadir)/themes/Adwaita/gtk-2.0
 theme_DATA = gtkrc
@@ -63,7 +71,6 @@ asset_data = \
 	Lines/line-h.png \
 	Lines/line-v.png \
 	Lines/menu_line_h.png \
-	Menu-Menubar/frame.png \
 	Menu-Menubar/menubar_button.png \
 	Menu-Menubar/menubar.png \
 	Others/bg.png \
