@@ -95,11 +95,18 @@ adwaita_draw_box (GtkStyle * style,
       wm_is_fallback ())
     {
       cairo_t *cr = drawable_to_cairo (window, area);
-      cairo_pattern_t *pattern = cairo_pattern_create_linear
-        (x, y, x, y + height);
+      cairo_pattern_t *pattern = cairo_pattern_create_linear (x, y, x, y + height);
+      gdouble stop_1, stop_2, stop_3;
 
-      cairo_pattern_add_color_stop_rgba (pattern, 0, 1, 1, 1, 1);
-      cairo_pattern_add_color_stop_rgba (pattern, 1, 0.30, 0.30, 0.30, 1);
+      stop_1 = MIN (1.0, 6.0 / (gdouble) height);
+      stop_2 = MAX (stop_2, 0.33);
+      stop_3 = MAX (stop_3, 0.66);
+
+      cairo_pattern_add_color_stop_rgba (pattern, 0.0, 0.66, 0.66, 0.66, 0.0);
+      cairo_pattern_add_color_stop_rgba (pattern, stop_1, 0.66, 0.66, 0.66, 0.25);
+      cairo_pattern_add_color_stop_rgba (pattern, stop_2, 0.66, 0.66, 0.66, 0.80);
+      cairo_pattern_add_color_stop_rgba (pattern, stop_3, 0.66, 0.66, 0.66, 1.0);
+      cairo_pattern_add_color_stop_rgba (pattern, 1.0, 0.66, 0.66, 0.66, 1.0);
       cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
 
       cairo_set_source (cr, pattern);
