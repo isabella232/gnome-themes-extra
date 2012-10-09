@@ -505,9 +505,14 @@ EphyOverview GtkScrolledWindow:backdrop {
 
 /* Border on the right in the left menu toolbar */
 .contacts-left-toolbar.toolbar.menubar {
- border-image: linear-gradient(to bottom, @theme_bg_color, shade(@borders, 1.2));
- border-image-width: 0 1px 0 0;
- border-image-slice: 1;
+    border-image: linear-gradient(to bottom, @theme_bg_color, shade(@borders, 1.2));
+    border-image-width: 0 1px 0 0;
+    border-image-slice: 1;
+}
+
+.contacts-left-toolbar.toolbar.menubar:backdrop {
+    border-image: none;
+    border-color: transparent;
 }
 
 /* Sidebar with line at top and the left */
@@ -644,7 +649,7 @@ EvWindow.background EggFindBar.toolbar {
 /* gcalctool */
 
 MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow {
-    padding: 4px;    
+    padding: 4px;
     background-color: @theme_base_color;
     border-radius: 3px;
 }
@@ -654,3 +659,4 @@ MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow:ba
     background-color:  @theme_unfocused_base_color;
     border-radius: 3px;
 }
+
