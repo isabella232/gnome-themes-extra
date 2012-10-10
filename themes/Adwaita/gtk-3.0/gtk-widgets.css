@@ -1395,31 +1395,45 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* Linked button shadows (vertical) */
-.linked.vertical .button {
+.linked.vertical .button,
+.inline-toolbar.toolbar.vertical .button,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button {
     box-shadow: inset 0 1px @inset_light_color, inset 0 -1px @inset_dark_color;
 }
 
-.linked.vertical .button:first-child {
+.linked.vertical .button:first-child,
+.inline-toolbar.toolbar.vertical .button:first-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button {
     box-shadow: inset 0 -1px @inset_dark_color;
 }
 
-.linked.vertical .button:last-child {
+.linked.vertical .button:last-child,
+.inline-toolbar.toolbar.vertical .button:last-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button {
     box-shadow: inset 0 -1px @inset_light_color;
 }
 
-.linked.vertical .button:active {
+.linked.vertical .button:active,
+.inline-toolbar.toolbar.vertical .button:active,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:active {
     box-shadow: inset 0 1px @inset_dark_color, inset 0 -1px @inset_dark_color;
 }
 
-.linked.vertical .button:insensitive {
+.linked.vertical .button:insensitive,
+.inline-toolbar.toolbar.vertical .button:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:insensitive {
     box-shadow: inset 0 -1px @inset_dark_color;
 }
 
-.linked.vertical .button:backdrop {
+.linked.vertical .button:backdrop,
+.inline-toolbar.toolbar.vertical .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:backdrop {
     box-shadow: inset 0 -1px @unfocused_borders;
 }
 
-.linked.vertical .button:insensitive:backdrop {
+.linked.vertical .button:insensitive:backdrop,
+.inline-toolbar.toolbar.vertical .button:insensitive:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:insensitive:backdrop {
     box-shadow: inset 0 -1px @unfocused_insensitive_borders;
 }
 
@@ -1428,7 +1442,19 @@ GtkComboBox.combobox-entry .button {
 .linked.vertical .button:insensitive:last-child,
 .linked.vertical .button:insensitive:backdrop:last-child,
 .linked.vertical .button:backdrop:only-child,
-.linked.vertical .button:backdrop:insensitive:only-child {
+.linked.vertical .button:backdrop:insensitive:only-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:last-child,
+.inline-toolbar.toolbar.vertical .button:insensitive:last-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:insensitive:last-child,
+.inline-toolbar.toolbar.vertical .button:only-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:only-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:insensitive:only-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:backdrop:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop:insensitive {
     box-shadow: none;
 }
 
@@ -1576,6 +1602,84 @@ GtkComboBox.combobox-entry .button {
     border-image-width: 4px 4px 4px 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+}
+
+/* Vertical inline toolbars */
+
+/* Middle button */
+.inline-toolbar.toolbar.vertical .button,
+.inline-toolbar.toolbar.vertical .button:active,
+.inline-toolbar.toolbar.vertical .button:insensitive,
+.inline-toolbar.toolbar.vertical .button:backdrop,
+.inline-toolbar.toolbar.vertical .button:backdrop:active,
+.inline-toolbar.toolbar.vertical .button:backdrop:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:active,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:backdrop:active,
+.inline-toolbar.toolbar.vertical GtkToolButton > .button:backdrop:insensitive {
+    border-bottom-width: 0;
+    border-top-width: 0;
+    border-image-width: 0 3px 0 3px;
+    border-radius: 0;
+}
+
+/* Topmost button */
+.inline-toolbar.toolbar.vertical .button:first-child,
+.inline-toolbar.toolbar.vertical .button:active:first-child,
+.inline-toolbar.toolbar.vertical .button:insensitive:first-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:first-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:active:first-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:insensitive:first-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button:active,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button:backdrop:active,
+.inline-toolbar.toolbar.vertical GtkToolButton:first-child > .button:backdrop:insensitive {
+    border-width: 1px 1px 0 1px;
+    border-image-width: 3px 3px 0 3px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Bottommost button */
+.inline-toolbar.toolbar.vertical .button:last-child,
+.inline-toolbar.toolbar.vertical .button:active:last-child,
+.inline-toolbar.toolbar.vertical .button:insensitive:last-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:last-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:active:last-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:insensitive:last-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:active,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:backdrop:active,
+.inline-toolbar.toolbar.vertical GtkToolButton:last-child > .button:backdrop:insensitive {
+    border-width: 0 1px 2px 1px;
+    border-image-width: 0 3px 4px 3px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Single button */
+.inline-toolbar.toolbar.vertical .button:only-child,
+.inline-toolbar.toolbar.vertical .button:active:only-child,
+.inline-toolbar.toolbar.vertical .button:insensitive:only-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:only-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:active:only-child,
+.inline-toolbar.toolbar.vertical .button:backdrop:insensitive:only-child,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:active,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:insensitive,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop:active,
+.inline-toolbar.toolbar.vertical GtkToolButton:only-child > .button:backdrop:insensitive {
+    border-top-width: 1px;
+    border-bottom-width: 2px;
+    border-image-width: 3px 3px 3px 4px;
+    border-radius: 3px;
 }
 
 GtkLinkButton.button,
@@ -2421,6 +2525,13 @@ GtkCheckButton:selected:focus {
     padding-top: 4px;
 
     border-radius: 0 0 3px 3px;
+}
+
+.inline-toolbar.toolbar.vertical:last-child {
+    border-left-width: 0;
+    padding-left: 4px;
+
+    border-radius: 0;
 }
 
 /***********
