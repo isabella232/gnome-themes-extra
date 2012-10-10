@@ -484,6 +484,29 @@ EphyOverview GtkScrolledWindow:backdrop {
     background-color: @theme_unfocused_base_color;
 }
 
+    /* sets top and bottom borders on the overview and the main
+       scrolled windows for toolbar visual division and search/downloadbar */
+EphyWindow.background .documents-scrolledwin,
+EphyWindow.background EphyEmbed.vertical .osd GtkScrolledWindow.frame {
+    border-color: @borders;
+    border-width: 1px 0;
+    border-radius: 0;
+}
+    /* remove top and bottom borders when inside a notebook tab to
+       the overview scrolled window and the main scrolled window */
+EphyWindow.background EphyNotebook.notebook .documents-scrolledwin,
+EphyWindow.background EphyNotebook.notebook EphyEmbed.vertical .osd GtkScrolledWindow {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+    /* remove bottom borders from overview and main scrolled window
+       when no bars at the bottom of the screen are shown */
+EphyWindow.background EphyNotebook:last-child EphyEmbed.vertical .osd GtkScrolledWindow,
+EphyWindow.background EphyNotebook.notebook:last-child {
+    border-bottom-width: 0;
+}
+
 /* Gnome Contacts */
 
 /* Line at top in contacts pane, similar to .documents-scrolledwin.frame */
@@ -659,4 +682,3 @@ MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow:ba
     background-color:  @theme_unfocused_base_color;
     border-radius: 3px;
 }
-
