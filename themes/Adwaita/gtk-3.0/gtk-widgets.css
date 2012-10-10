@@ -2700,12 +2700,23 @@ GtkOverlay.osd {
 }
 
 .osd .button:active,
-.osd .button:active:hover {
+.osd .button:active:hover,
+.osd GtkMenuButton.button:active {
     background-image: linear-gradient(to bottom,
                                       @osd_button_bg_active_a,
                                       @osd_button_bg_active_b 68%,
                                       @osd_button_bg_active_c
                                       );
+}
+
+.osd GtkMenuButton.button:active {
+    background-color: transparent;
+    border-color: @osd_button_border;
+}
+
+.osd GtkMenuButton.button *:active {
+    color: @osd_button_fg_active;
+    text-shadow: 0 -1px @osd_button_shadow;
 }
 
 .osd.toolbar {
