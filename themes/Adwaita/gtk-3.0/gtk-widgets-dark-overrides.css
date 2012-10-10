@@ -49,12 +49,14 @@ GtkComboBox *:active:insensitive {
 .toolbar .button.raised *:insensitive,
 .toolbar .raised .button *:insensitive,
 .inline-toolbar .button *:insensitive {
+    text-shadow: none;
     icon-shadow: none;
 }
 
 .toolbar .button.raised *:backdrop,
 .toolbar .raised .button *:backdrop,
 .inline-toolbar .button *:backdrop {
+    text-shadow: none;
     icon-shadow: none;
 }
 
