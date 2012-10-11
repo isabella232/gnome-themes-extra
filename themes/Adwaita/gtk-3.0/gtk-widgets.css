@@ -1728,7 +1728,7 @@ GtkLinkButton.button *:active {
     border-width: 0;
 
     background-image: linear-gradient(to bottom,
-                                      @notebook_tab_hilight 2px,
+                                      @notebook_tab_hilight 1px,
                                       @notebook_tab_gradient_a 2px,
                                       @notebook_tab_gradient_a 7px,
                                       @notebook_tab_gradient_b);
@@ -1767,7 +1767,6 @@ GtkLinkButton.button *:active {
 }
 
 .notebook tab:active:backdrop {
-    /* FIXME I need to set a background-image here, background-color is ignored */
     background-image: linear-gradient(to bottom,
                                       @unfocused_borders,
                                       @unfocused_borders 2px,
@@ -1822,6 +1821,12 @@ GtkLinkButton.button *:active {
 .notebook tab.right:active {
     background-image: none;
     background-color: @theme_base_color;
+}
+
+.notebook tab.left:active:backdrop,
+.notebook tab.right:active:backdrop {
+    background-image: none;
+    background-color: @theme_unfocused_base_color;
 }
 
 .notebook tab.left:active {
