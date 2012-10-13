@@ -1119,6 +1119,10 @@ GtkComboBox.combobox-entry .button {
     padding: 1px 4px;
 }
 
+GtkColorButton.button {
+    padding: 1px 1px;
+}
+
 .button {
     -GtkButton-image-spacing: 4;
     -GtkButton-interior-focus: true;
