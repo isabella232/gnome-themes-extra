@@ -81,7 +81,9 @@
 /* Insensitive button background */
 .button:insensitive,
 .spinbutton.vertical .button:insensitive,
-.toolbar GtkComboBox .button:insensitive {
+.toolbar GtkComboBox .button:insensitive,
+.toolbar .button.raised:insensitive,
+.toolbar .raised .button:insensitive {
     background-image: none;
     background-color: @insensitive_bg_color;
 }
