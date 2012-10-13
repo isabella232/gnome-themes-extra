@@ -416,7 +416,7 @@ GtkTreeView.separator:backdrop,
 .entry:focus {
     box-shadow: inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
                 inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
-                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2); 
     transition: all 200ms ease-in;
 }
 
@@ -3287,8 +3287,9 @@ row:selected {
     background-color: @content_view_bg;
 }
 
-.content-view.view:prelight {
+.content-view.view:hover {
     background-color: @theme_bg_color;
+    color: @theme_text_color;
 }
 
 .content-view.view:selected,
@@ -3300,13 +3301,19 @@ row:selected {
     background-color: @theme_unfocused_base_color;
 }
 
-.content-view.view:backdrop {
-    background-color: @theme_unfocused_base_color;
+.content-view.view:backdrop,
+.content-view.view:hover:backdrop {
+    /* FIXME: :hover:backdrop doesn't work,
+     * see: https://bugzilla.gnome.org/show_bug.cgi?id=686092
+     */
+    background-color: @sidebar_bg_unfocused;
 }
 
 .content-view.view:selected:backdrop {
     background-color: @theme_unfocused_selected_bg_color;
 }
+
+.content-view.view .separator:backdrop { color: @theme_unfocused_bg_color; }
 
 GdMainIconView.content-view {
     -GdMainIconView-icon-size: 40;
@@ -3327,7 +3334,7 @@ GtkIconView.content-view.check:active {
     background-color: transparent;
 }
 
-GtkIconView.content-view.check:prelight,
+GtkIconView.content-view.check:hover,
 GtkIconView.content-view.check:insensitive,
 GtkIconView.content-view.check:backdrop,
 GtkIconView.content-view.check:selected {
