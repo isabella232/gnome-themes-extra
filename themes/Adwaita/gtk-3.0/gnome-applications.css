@@ -371,6 +371,10 @@ GeditStatusComboBox .button:backdrop:hover {
     color: @theme_unfocused_text_color;
 }
 
+BaobabWindow.background GtkNotebook > GtkGrid > GtkScrolledWindow.frame {
+    border-radius: 0;
+    border-width: 0 1px 0 0;
+
 BaobabWindow GtkInfoBar.warning,
 BaobabWindow GtkInfoBar.error { 
     border-bottom-width: 1px;
