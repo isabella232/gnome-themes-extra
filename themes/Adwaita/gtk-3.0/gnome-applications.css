@@ -359,6 +359,12 @@ GeditStatusComboBox .button:backdrop:hover {
     color: @warning_color;
 }
 
+.cell.baobab-cell-warning:backdrop,
+.cell.baobab-cell-error:backdrop {
+    color: @theme_unfocused_text_color;
+}
+
+
 /* epiphany */
 
 EphyToolbar .entry:first-child,
