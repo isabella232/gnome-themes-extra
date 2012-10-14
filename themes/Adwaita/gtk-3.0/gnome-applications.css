@@ -371,6 +371,13 @@ GeditStatusComboBox .button:backdrop:hover {
     color: @theme_unfocused_text_color;
 }
 
+BaobabWindow GtkInfoBar.warning,
+BaobabWindow GtkInfoBar.error { 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: @borders;
+}
+
 /* epiphany */
 
 EphyToolbar .entry:first-child,
