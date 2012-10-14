@@ -359,11 +359,17 @@ GeditStatusComboBox .button:backdrop:hover {
     color: @warning_color;
 }
 
-.cell.baobab-cell-warning:backdrop,
-.cell.baobab-cell-error:backdrop {
-    color: @theme_unfocused_text_color;
+.cell.baobab-cell-warning:selected,
+.cell.baobab-cell-error:selected {
+    color: @theme_selected_fg_color;
 }
 
+.cell.baobab-cell-warning:backdrop,
+.cell.baobab-cell-error:backdrop,
+.cell.baobab-cell-warning:selected:backdrop,
+.cell.baobab-cell-error:selected:backdrop {
+    color: @theme_unfocused_text_color;
+}
 
 /* epiphany */
 
