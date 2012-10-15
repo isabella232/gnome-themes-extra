@@ -2525,8 +2525,13 @@ GtkCheckButton:selected:focus {
 .inline-toolbar.toolbar {
     border-width: 1px;
     border-style: solid;
+    border-color: @borders;
 
     -GtkToolbar-button-relief: normal;
+}
+
+.inline-toolbar.toolbar:backdrop {
+    border-color: @unfocused_borders;
 }
 
 .inline-toolbar.toolbar:last-child {
