@@ -1,3 +1,17 @@
+3.6.1
+=====
+
+Add a matching HighContrast WM theme
+Add support for vertically oriented inline toolbars
+Fix wrong background for raised and backdrop insensitive toolbar buttons
+Fix glitches in selection-toolbar and suggested-action styling
+Fix menu borders not present when not running under GNOME Shell
+Fix color for selected desktop icons
+Fix stray text shadows in inline toolbar buttons
+Fix wrong background color when using a menu button in an OSD toolbar
+Fix some glitches in notebook's tab rendering
+Improve theming support for Nautilus, Documents, Evince, GEdit, Baobab and more
+
 3.6.0.2
 =======
 
