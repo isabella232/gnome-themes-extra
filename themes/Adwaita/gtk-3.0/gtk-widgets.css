@@ -3308,9 +3308,6 @@ row:selected {
 
 .content-view.view:backdrop,
 .content-view.view:hover:backdrop {
-    /* FIXME: :hover:backdrop doesn't work,
-     * see: https://bugzilla.gnome.org/show_bug.cgi?id=686092
-     */
     background-color: @sidebar_bg_unfocused;
 }
 
