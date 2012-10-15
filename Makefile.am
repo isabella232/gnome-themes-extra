@@ -1,4 +1,4 @@
-SUBDIRS = src themes po
+SUBDIRS = themes po
 
 MAINTAINERCLEANFILES =			\
 	Makefile.in			\

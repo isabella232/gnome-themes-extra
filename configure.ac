@@ -29,25 +29,23 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[Gettext package])
 AM_GLIB_GNU_GETTEXT
 
-AC_ARG_ENABLE([gtk3-engines],
-              AC_HELP_STRING([--disable-gtk3-engines],
-                             [Disable Gtk+ 3.x engines [default=no]]),
-              enable_gtk3=$enableval,
-              enable_gtk3=yes)
-AC_MSG_CHECKING([building gtk3 engines])
-AM_CONDITIONAL(GTK3, test "x$enable_gtk3" = "xyes")
-AC_MSG_RESULT([$enable_gtk3])
-GTK_VERSION_REQUIRED=3.5.17
+AC_ARG_ENABLE([gtk3-engine],
+              AC_HELP_STRING([--disable-gtk3-engine],
+                             [Disable Gtk+ 3.x engine [default=no]]),
+              enable_gtk3_engine=$enableval,
+              enable_gtk3_engine=yes)
+AC_MSG_CHECKING([building gtk3 engine])
+AM_CONDITIONAL(GTK3_ENGINE, test "x$enable_gtk3_engine" = "xyes")
+AC_MSG_RESULT([$enable_gtk3_engine])
 
-if test "x$enable_gtk3" = "xyes"; then
-  PKG_CHECK_MODULES([DEPENDENCIES], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
+GTK_VERSION_REQUIRED=3.5.17
+if test "x$enable_gtk3_engine" = "xyes"; then
+  PKG_CHECK_MODULES([GTK3_ENGINE], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
   PKG_CHECK_MODULES([HIGHCONTRAST], [cairo gio-2.0 gdk-pixbuf-2.0 gdk-3.0])
 fi
-AC_SUBST(DEPENDENCIES_CFLAGS)
-AC_SUBST(DEPENDENCIES_LIBS)
 
-GTK_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
-AC_SUBST(GTK_VERSION)
+GTK3_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
+AC_SUBST(GTK3_VERSION)
 
 GTK2_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
 AC_SUBST(GTK2_VERSION)
@@ -100,7 +98,6 @@ themes/HighContrast/gtk-2.0/Makefile
 themes/HighContrast/gtk-3.0/Makefile
 themes/HighContrast/icons/Makefile
 themes/HighContrast/metacity-1/Makefile
-src/Makefile
 po/Makefile.in
 ])
 

@@ -12,13 +12,14 @@ themedir = $(datadir)/themes/$(THEME_NAME)
 theme_DATA = index.theme
 
 noinst_PROGRAMS =
-if GTK3
+
+if GTK3_ENGINE
 noinst_PROGRAMS += create-highcontrast
-endif
 
 create_highcontrast_SOURCES = create-highcontrast.c
 create_highcontrast_CFLAGS = $(HIGHCONTRAST_CFLAGS)
 create_highcontrast_LDADD = $(HIGHCONTRAST_LIBS) -lm
+endif
 
 DISTCLEANFILES = index.theme
 EXTRA_DIST += index.theme.in index.theme
