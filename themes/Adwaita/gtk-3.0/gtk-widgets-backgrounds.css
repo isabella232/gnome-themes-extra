@@ -121,7 +121,8 @@
 }
 
 /* Unfocused window insensitive button background */
-.button:insensitive:backdrop {
+.button:insensitive:backdrop,
+.toolbar .button:insensitive:backdrop {
     background-image: none;
     background-color: @unfocused_insensitive_bg_color;
 }
