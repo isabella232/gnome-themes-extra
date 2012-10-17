@@ -62,7 +62,7 @@ AM_CONDITIONAL(GTK2_ENGINE, test "x$enable_gtk2_engine" = "xyes")
 AC_MSG_RESULT([$enable_gtk2_engine])
 
 if test "x$enable_gtk2_engine" = "xyes"; then
-  PKG_CHECK_MODULES([GTK2_ENGINE], [gtk+-2.0 gdk-x11-2.0])
+  PKG_CHECK_MODULES([GTK2_ENGINE], [gtk+-2.0 gdk-2.0])
 fi
 
 GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable glib_compile_resources gio-2.0`

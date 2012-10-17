@@ -27,7 +27,10 @@
 #include <gmodule.h>
 #include <math.h>
 #include <cairo-gobject.h>
+
+#ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+#endif
 
 #include "adwaita_utils.h"
 
@@ -114,10 +117,15 @@ fallback_provider_add (AdwaitaEngine *self)
 static void
 adwaita_engine_wm_changed (AdwaitaEngine *self)
 {
+  gboolean is_fallback = TRUE;
+
+#ifdef GDK_WINDOWING_X11
   const gchar *name;
   name = gdk_x11_screen_get_window_manager_name (gdk_screen_get_default ());
+  is_fallback = (g_strcmp0 (name, "GNOME Shell") != 0);
+#endif
 
-  if (g_strcmp0 (name, "GNOME Shell") != 0)
+  if (is_fallback)
     fallback_provider_add (self);
   else
     fallback_provider_remove (self);
@@ -142,14 +150,14 @@ adwaita_engine_finalize (GObject *obj)
 static void
 adwaita_engine_init (AdwaitaEngine *self)
 {
+#ifdef GDK_WINDOWING_X11
   GdkScreen *screen = gdk_screen_get_default ();
-
-  if (!GDK_IS_X11_SCREEN (screen))
-    return;
 
   self->wm_watch_id =
     g_signal_connect_swapped (screen, "window-manager-changed",
                               G_CALLBACK (adwaita_engine_wm_changed), self);
+#endif
+
   adwaita_engine_wm_changed (self);
 }
 

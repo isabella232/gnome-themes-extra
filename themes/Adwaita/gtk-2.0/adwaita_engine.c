@@ -22,7 +22,10 @@
 #include <gmodule.h>
 #include <glib.h>
 #include <gtk/gtk.h>
+
+#ifdef GDK_WINDOWING_X11
 #include <gdk/gdkx.h>
+#endif
 
 /***************************************/
 /* Register & Initialize Drawing Style */
@@ -49,9 +52,13 @@ G_DEFINE_DYNAMIC_TYPE (AdwaitaStyle, adwaita_style, GTK_TYPE_STYLE)
 static gboolean
 wm_is_fallback (void)
 {
+#ifdef GDK_WINDOWING_X11
   const gchar *name;
   name = gdk_x11_screen_get_window_manager_name (gdk_screen_get_default ());
   return g_strcmp0 (name, "GNOME Shell") != 0;
+#else
+  return TRUE;
+#endif
 }
 
 static cairo_t * 
