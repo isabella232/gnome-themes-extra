@@ -37,14 +37,18 @@ asset_data = \
 	Buttons/button-insensitive-nohilight.png \
 	Buttons/button-prelight-nohilight.png \
 	Buttons/button-pressed-nohilight.png \
-	Check-Radio/check1.png \
-	Check-Radio/check2.png \
+	Check-Radio/checkbox-checked.png \
+	Check-Radio/checkbox-unchecked.png \
+	Check-Radio/checkbox-checked-insensitive.png \
+	Check-Radio/checkbox-unchecked-insensitive.png \
 	Check-Radio/menucheck.png \
 	Check-Radio/menucheck_prelight.png \
 	Check-Radio/menuoption.png \
 	Check-Radio/menuoption_prelight.png \
-	Check-Radio/option1.png \
-	Check-Radio/option2.png \
+	Check-Radio/option-checked.png \
+	Check-Radio/option-unchecked.png \
+	Check-Radio/option-checked-insensitive.png \
+	Check-Radio/option-unchecked-insensitive.png \
 	Entry/combo-entry-border.png \
 	Entry/combo-entry-border-rtl.png \
 	Entry/combo-entry-border-active.png \
