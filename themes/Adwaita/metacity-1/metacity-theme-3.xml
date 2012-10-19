@@ -61,7 +61,7 @@
 </frame_geometry>
 
 <frame_geometry name="tiled_left" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
-	<distance name="right_width" value="1" />
+	<distance name="right_width" value="0" />
 </frame_geometry>
 
 <frame_geometry name="tiled_right" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
@@ -246,7 +246,7 @@
 </draw_ops>
 
 
-<draw_ops name="border_right_focused">
+<!-- <draw_ops name="border_right_focused">
 	<line
 		x1="width-1" y1="0"
 		x2="width-1" y2="height"
@@ -258,7 +258,7 @@
 		x1="width-1" y1="0" 
 		x2="width-1" y2="height" 
 		color="C_border_unfocused" />
-</draw_ops>
+</draw_ops> -->
 
 <draw_ops name="border_left_focused">
 	<line
@@ -1668,7 +1668,7 @@
 	<piece position="entire_background" draw_ops="entire_background_focused" />
 	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
 	<piece position="title" draw_ops="title_focused" />
-	<piece position="overlay" draw_ops="border_right_focused" />
+	<!-- <piece position="overlay" draw_ops="border_right_focused" /> -->
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
 	<button function="maximize" state="normal" draw_ops="maximize_focused" />
@@ -1717,7 +1717,7 @@
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
 	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
-	<piece position="overlay" draw_ops="border_right_unfocused" />
+	<!-- <piece position="overlay" draw_ops="border_right_unfocused" /> -->
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
 	<button function="close" state="pressed" draw_ops="close_unfocused_pressed"/>
