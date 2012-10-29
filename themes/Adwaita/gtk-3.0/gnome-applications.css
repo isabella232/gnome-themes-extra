@@ -110,11 +110,11 @@ NautilusToolbar .button *:active:insensitive {
 
 NautilusQueryEditor .primary-toolbar.toolbar {
     border-bottom-width: 0;
-    padding: 3px;
 }
 
 NautilusQueryEditor .toolbar {
-    padding: 4px 4px 3px 4px;
+    padding-top: 3px;
+    padding-bottom: 2px;
 
     border-width: 1px 0 0 0;
     border-style: solid;
