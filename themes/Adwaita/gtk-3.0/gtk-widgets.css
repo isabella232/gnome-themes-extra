@@ -358,6 +358,7 @@ GtkTreeView.separator,
 .separator,
 .separator:hover {
     color: @view_separators;
+    background-color: transparent;
 }
 
 .toolbar .separator {
