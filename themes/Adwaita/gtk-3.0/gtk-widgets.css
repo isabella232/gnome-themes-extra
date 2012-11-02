@@ -2275,6 +2275,10 @@ GtkTreeMenu .menuitem,
     background-color: @theme_selected_bg_color;
 }
 
+.menu .menuitem:insensitive {
+    background-color: @menu_bg_color;
+}
+
 .menu .menuitem:active,
 .menu .menuitem *:active,
 .menu .menuitem:hover,
