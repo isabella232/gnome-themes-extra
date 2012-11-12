@@ -1,3 +1,13 @@
+3.6.2
+=====
+
+Add assets for insensitive radio/check states for the GTK2 theme
+Fix active spinner when no animations are in use
+Fix gray menu separators under some circumstances
+Fix the build on non-X11 environments
+Fix uneven padding on the notebook tab close button
+Fix minor glitch with borders of tiled WM decorations
+
 3.6.1
 =====
 
