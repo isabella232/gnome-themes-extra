@@ -87,7 +87,7 @@ fallback_provider_remove (AdwaitaEngine *self)
 static void
 fallback_provider_add (AdwaitaEngine *self)
 {
-  GFile *resource;
+  GResource *resource;
   GtkCssProvider *provider;
   GError *error = NULL;
   GdkScreen *screen;
@@ -95,9 +95,13 @@ fallback_provider_add (AdwaitaEngine *self)
   if (self->fallback_provider != NULL)
     return;
 
-  resource = g_file_new_for_uri ("resource:///org/gnome/adwaita/gtk-fallback.css");
+  resource = g_resource_load ("/org/gnome/adwaita/gtk-fallback.css", NULL);
+  /* Don't spew errors here, this happens while hacking the theme */
+  if (resource == NULL)
+    return;
+
   provider = gtk_css_provider_new ();
-  gtk_css_provider_load_from_file (provider, resource, &error);
+  gtk_css_provider_load_from_resource (provider, resource, &error);
   g_object_unref (resource);
 
   if (error != NULL)
