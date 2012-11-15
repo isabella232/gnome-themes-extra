@@ -53,12 +53,12 @@
  * Base States *
  ***************/
 
-GtkWindow {
+.background {
     color: @theme_fg_color;
     background-color: @theme_bg_color;
 }
 
-GtkWindow:backdrop {
+.background:backdrop {
     color: @theme_unfocused_fg_color;
 }
 
@@ -2624,12 +2624,12 @@ GtkCheckButton:selected:focus {
 /*******
  * OSD *
  *******/
-GtkWindow.osd {
+.background.osd {
     color: @osd_fg;
     background-color: @osd_bg;
 }
 
-GtkWindow.osd:backdrop {
+.background.osd:backdrop {
     background-color: @osd_bg_backdrop;
 }
 
