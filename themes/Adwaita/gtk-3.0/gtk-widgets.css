@@ -1119,6 +1119,14 @@ GtkScrolledWindow GtkViewport.frame {
     border-style: none;
 }
 
+GtkViewport {
+    background-color: @theme_base_color;
+}
+
+GtkViewport:backdrop {
+    background-color: @theme_unfocused_base_color;
+}
+
 /***********
  * Buttons *
  ***********/
@@ -3125,18 +3133,12 @@ GtkTreeView.dnd {
     border-style: solid;
 }
 
-GtkViewport {
-    background-color: @theme_base_color;
-}
-
-GtkViewport:backdrop {
-    background-color: @theme_unfocused_base_color;
+GtkTreeView:selected:focus {
+    outline-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
     border-radius: 4px;
 
     /* FIXME: this probably needs to be better;
@@ -3147,40 +3149,35 @@ GtkIconView.view.cell:selected:focus {
     outline-offset: 3px;
 }
 
-.view,
-GtkTreeView {
+.view {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
 
-.view:selected,
-GtkTreeView:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-.view:insensitive,
-GtkTreeView:insensitive {
+.view:insensitive {
     background-color: @insensitive_bg_color;
     color: @insensitive_fg_color;
 }
 
-.view:backdrop,
-GtkTreeView:backdrop {
+.view:backdrop {
     background-color: @theme_unfocused_base_color;
     color: @theme_unfocused_text_color;
 }
 
-.cell:backdrop:selected,
-GtkIconView.view.cell:backdrop:selected,
-.view:backdrop:selected,
-GtkTreeView:backdrop:selected {
-    background-color: @theme_unfocused_selected_bg_color;
-    color: @theme_unfocused_selected_fg_color;
+.cell {
+    color: @theme_text_color;
+    padding: 2px;
 }
 
-GtkTreeView:selected:focus {
-    outline-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
+.cell:selected,
+.cell:selected:focus {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.cell:backdrop:selected {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
 }
 
 column-header.button,
@@ -3232,34 +3229,6 @@ column-header .button.dnd {
                                       @theme_base_color);
     border-width: 0 1px;
     border-image-slice: 0 1;
-}
-
-row:hover {
-    border-width: 0;
-}
-
-row:insensitive {
-    border-width: 0;
-}
-
-row:selected:focus {
-    border-width: 0;
-    background-color: @theme_selected_bg_color;
-}
-
-row:selected {
-    border-width: 0;
-}
-
-.cell {
-    color: @theme_text_color;
-    padding: 2px;
-    border-width: 0;
-}
-
-.cell:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
 }
 
 .expander {
