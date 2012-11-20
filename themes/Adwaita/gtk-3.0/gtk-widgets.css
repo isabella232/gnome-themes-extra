@@ -3288,30 +3288,42 @@ column-header .button.dnd {
     background-color: @content_view_bg;
 }
 
-.content-view.view:hover {
-    background-color: @theme_bg_color;
-    color: @theme_text_color;
-}
-
-.content-view.view:selected,
-.content-view.view:active {
-    background-color: @theme_selected_bg_color;
-}
-
 .content-view.view:insensitive {
     background-color: @theme_unfocused_base_color;
+    background-image: none;
 }
 
-.content-view.view:backdrop,
-.content-view.view:hover:backdrop {
+.content-view.view:backdrop {
     background-color: @sidebar_bg_unfocused;
+    background-image: none;
 }
 
-.content-view.view:selected:backdrop {
+/* FIXME: EggListBox should set the .cell style class on
+ * the background it renders for the children, like
+ * GtkIconView and GtkTreeView do */
+.content-view.cell {
+    background-color: transparent;
+    background-image: none;
+}
+
+EggListBox.content-view:hover,
+.content-view.cell:hover {
+    background-color: @theme_bg_color;
+}
+
+EggListBox.content-view:selected,
+EggListBox.content-view:active,
+.content-view.cell:selected,
+.content-view.cell:active {
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+EggListBox.content-view:selected:backdrop,
+.content-view.cell:selected:backdrop {
     background-color: @theme_unfocused_selected_bg_color;
+    background-image: none;
 }
-
-.content-view.view .separator:backdrop { color: @theme_unfocused_bg_color; }
 
 GdMainIconView.content-view {
     -GdMainIconView-icon-size: 40;
@@ -3330,6 +3342,10 @@ GtkIconView.content-view.check:active {
 .content-view.view.check,
 .content-view.view.check:active {
     background-color: transparent;
+}
+
+.content-view.view .separator:backdrop {
+    color: @theme_unfocused_bg_color;
 }
 
 GtkIconView.content-view.check:hover,

@@ -409,3 +409,10 @@
 .cursor-handle.top {
     background-image: url("assets/scale-slider-down-backdrop.png");
 }
+
+/****************
+ * Content view *
+ ****************/
+.content-view.view {
+    background-image: url("assets/noise-texture-light.png");
+}
