@@ -1,3 +1,22 @@
+3.7.2
+=====
+
+Use .background instead of GtkWindow to style the window background
+Fix insensitive menu items background
+Add a box-shadow in inline toolbars
+Tweak paddings in toolbars
+Improve theming support for Baobab
+
+3.6.2
+=====
+
+Add assets for insensitive radio/check states for the GTK2 theme
+Fix active spinner when no animations are in use
+Fix gray menu separators under some circumstances
+Fix the build on non-X11 environments
+Fix uneven padding on the notebook tab close button
+Fix minor glitch with borders of tiled WM decorations
+
 3.6.1
 =====
 
