@@ -105,7 +105,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/accessories-calculator.png  \
 ./icons/16x16/apps/accessories-character-map.png  \
 ./icons/16x16/apps/accessories-text-editor.png  \
-./icons/16x16/apps/aisleriot.png  \
+./icons/16x16/apps/gnome-aisleriot.png  \
 ./icons/16x16/apps/anaconda.png  \
 ./icons/16x16/apps/applets-screenshooter.png  \
 ./icons/16x16/apps/applications-blender.png  \
@@ -505,7 +505,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/accessories-calculator.png  \
 ./icons/22x22/apps/accessories-character-map.png  \
 ./icons/22x22/apps/accessories-text-editor.png  \
-./icons/22x22/apps/aisleriot.png  \
+./icons/22x22/apps/gnome-aisleriot.png  \
 ./icons/22x22/apps/anaconda.png  \
 ./icons/22x22/apps/applets-screenshooter.png  \
 ./icons/22x22/apps/applications-blender.png  \
@@ -905,7 +905,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/accessories-calculator.png  \
 ./icons/24x24/apps/accessories-character-map.png  \
 ./icons/24x24/apps/accessories-text-editor.png  \
-./icons/24x24/apps/aisleriot.png  \
+./icons/24x24/apps/gnome-aisleriot.png  \
 ./icons/24x24/apps/anaconda.png  \
 ./icons/24x24/apps/applets-screenshooter.png  \
 ./icons/24x24/apps/applications-blender.png  \
@@ -1305,7 +1305,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/accessories-calculator.png  \
 ./icons/256x256/apps/accessories-character-map.png  \
 ./icons/256x256/apps/accessories-text-editor.png  \
-./icons/256x256/apps/aisleriot.png  \
+./icons/256x256/apps/gnome-aisleriot.png  \
 ./icons/256x256/apps/anaconda.png  \
 ./icons/256x256/apps/applets-screenshooter.png  \
 ./icons/256x256/apps/audiobook.png  \
@@ -1704,7 +1704,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/accessories-calculator.png  \
 ./icons/32x32/apps/accessories-character-map.png  \
 ./icons/32x32/apps/accessories-text-editor.png  \
-./icons/32x32/apps/aisleriot.png  \
+./icons/32x32/apps/gnome-aisleriot.png  \
 ./icons/32x32/apps/anaconda.png  \
 ./icons/32x32/apps/applets-screenshooter.png  \
 ./icons/32x32/apps/applications-blender.png  \
@@ -2107,7 +2107,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/accessories-calculator.png  \
 ./icons/48x48/apps/accessories-character-map.png  \
 ./icons/48x48/apps/accessories-text-editor.png  \
-./icons/48x48/apps/aisleriot.png  \
+./icons/48x48/apps/gnome-aisleriot.png  \
 ./icons/48x48/apps/anaconda.png  \
 ./icons/48x48/apps/applets-screenshooter.png  \
 ./icons/48x48/apps/applications-blender.png  \
