@@ -1982,4 +1982,4 @@ widget_class "*Chrom*Button*"		             style "button"
 widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" style "chrome_menu_item"
 
 widget "gtk-tooltip*"  			style "tooltips"
-widget "*swt*toolbar*"			style "null"
+widget "*swt-toolbar-flat"		style "null"
