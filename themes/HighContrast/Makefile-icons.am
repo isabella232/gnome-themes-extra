@@ -133,7 +133,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/gnome-documents.png  \
 ./icons/16x16/apps/gnome-freecell.png  \
 ./icons/16x16/apps/gnome-power-manager.png  \
-./icons/16x16/apps/gnomine.png  \
+./icons/16x16/apps/gnome-mines.png  \
 ./icons/16x16/apps/goa-panel.png  \
 ./icons/16x16/apps/haguichi.png  \
 ./icons/16x16/apps/headpin.png  \
@@ -533,7 +533,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/gnome-documents.png  \
 ./icons/22x22/apps/gnome-freecell.png  \
 ./icons/22x22/apps/gnome-power-manager.png  \
-./icons/22x22/apps/gnomine.png  \
+./icons/22x22/apps/gnome-mines.png  \
 ./icons/22x22/apps/goa-panel.png  \
 ./icons/22x22/apps/haguichi.png  \
 ./icons/22x22/apps/headpin.png  \
@@ -933,7 +933,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/gnome-documents.png  \
 ./icons/24x24/apps/gnome-freecell.png  \
 ./icons/24x24/apps/gnome-power-manager.png  \
-./icons/24x24/apps/gnomine.png  \
+./icons/24x24/apps/gnome-mines.png  \
 ./icons/24x24/apps/goa-panel.png  \
 ./icons/24x24/apps/haguichi.png  \
 ./icons/24x24/apps/headpin.png  \
@@ -1332,7 +1332,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/gnome-documents.png  \
 ./icons/256x256/apps/gnome-freecell.png  \
 ./icons/256x256/apps/gnome-power-manager.png  \
-./icons/256x256/apps/gnomine.png  \
+./icons/256x256/apps/gnome-mines.png  \
 ./icons/256x256/apps/goa-panel.png  \
 ./icons/256x256/apps/haguichi.png  \
 ./icons/256x256/apps/headpin.png  \
@@ -1732,7 +1732,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/gnome-documents.png  \
 ./icons/32x32/apps/gnome-freecell.png  \
 ./icons/32x32/apps/gnome-power-manager.png  \
-./icons/32x32/apps/gnomine.png  \
+./icons/32x32/apps/gnome-mines.png  \
 ./icons/32x32/apps/goa-panel.png  \
 ./icons/32x32/apps/haguichi.png  \
 ./icons/32x32/apps/headpin.png  \
@@ -2135,7 +2135,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/gnome-documents.png  \
 ./icons/48x48/apps/gnome-freecell.png  \
 ./icons/48x48/apps/gnome-power-manager.png  \
-./icons/48x48/apps/gnomine.png  \
+./icons/48x48/apps/gnome-mines.png  \
 ./icons/48x48/apps/goa-panel.png  \
 ./icons/48x48/apps/haguichi.png  \
 ./icons/48x48/apps/headpin.png  \
