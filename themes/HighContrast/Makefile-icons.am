@@ -2534,7 +2534,7 @@ EXTRA_DIST = \
 ./icons/scalable/apps-extra/brasero.svg  \
 ./icons/scalable/apps-extra/bug-buddy.svg  \
 ./icons/scalable/apps-extra/firefox-icon.svg  \
-./icons/scalable/apps-extra/glchess.svg  \
+./icons/scalable/apps-extra/gnome-chess.svg  \
 ./icons/scalable/apps-extra/internet-group-chat.svg  \
 ./icons/scalable/apps-extra/internet-mail.svg  \
 ./icons/scalable/apps-extra/internet-news-reader.svg  \
