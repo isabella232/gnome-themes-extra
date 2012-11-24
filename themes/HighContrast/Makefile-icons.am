@@ -146,7 +146,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/libreoffice-calc.png  \
 ./icons/16x16/apps/libreoffice-draw.png  \
 ./icons/16x16/apps/libreoffice-impress.png  \
-./icons/16x16/apps/libreoffice-main.png  \
+./icons/16x16/apps/libreoffice-startcenter.png  \
 ./icons/16x16/apps/libreoffice-math.png  \
 ./icons/16x16/apps/libreoffice-writer.png  \
 ./icons/16x16/apps/logviewer.png  \
@@ -546,7 +546,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/libreoffice-calc.png  \
 ./icons/22x22/apps/libreoffice-draw.png  \
 ./icons/22x22/apps/libreoffice-impress.png  \
-./icons/22x22/apps/libreoffice-main.png  \
+./icons/22x22/apps/libreoffice-startcenter.png  \
 ./icons/22x22/apps/libreoffice-math.png  \
 ./icons/22x22/apps/libreoffice-writer.png  \
 ./icons/22x22/apps/logviewer.png  \
@@ -946,7 +946,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/libreoffice-calc.png  \
 ./icons/24x24/apps/libreoffice-draw.png  \
 ./icons/24x24/apps/libreoffice-impress.png  \
-./icons/24x24/apps/libreoffice-main.png  \
+./icons/24x24/apps/libreoffice-startcenter.png  \
 ./icons/24x24/apps/libreoffice-math.png  \
 ./icons/24x24/apps/libreoffice-writer.png  \
 ./icons/24x24/apps/logviewer.png  \
@@ -1345,7 +1345,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/libreoffice-calc.png  \
 ./icons/256x256/apps/libreoffice-draw.png  \
 ./icons/256x256/apps/libreoffice-impress.png  \
-./icons/256x256/apps/libreoffice-main.png  \
+./icons/256x256/apps/libreoffice-startcenter.png  \
 ./icons/256x256/apps/libreoffice-math.png  \
 ./icons/256x256/apps/libreoffice-writer.png  \
 ./icons/256x256/apps/logviewer.png  \
@@ -1745,7 +1745,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/libreoffice-calc.png  \
 ./icons/32x32/apps/libreoffice-draw.png  \
 ./icons/32x32/apps/libreoffice-impress.png  \
-./icons/32x32/apps/libreoffice-main.png  \
+./icons/32x32/apps/libreoffice-startcenter.png  \
 ./icons/32x32/apps/libreoffice-math.png  \
 ./icons/32x32/apps/libreoffice-writer.png  \
 ./icons/32x32/apps/logviewer.png  \
@@ -2148,7 +2148,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/libreoffice-calc.png  \
 ./icons/48x48/apps/libreoffice-draw.png  \
 ./icons/48x48/apps/libreoffice-impress.png  \
-./icons/48x48/apps/libreoffice-main.png  \
+./icons/48x48/apps/libreoffice-startcenter.png  \
 ./icons/48x48/apps/libreoffice-math.png  \
 ./icons/48x48/apps/libreoffice-writer.png  \
 ./icons/48x48/apps/logviewer.png  \
