@@ -123,6 +123,12 @@ adwaita_draw_box (GtkStyle * style,
       cairo_destroy (cr);
       cairo_pattern_destroy (pattern);
     }
+  else
+    {
+      GTK_STYLE_CLASS (adwaita_style_parent_class)->draw_box (style, window, state_type, shadow_type,
+                                                              area, widget, detail,
+                                                              x, y, width, height);
+    }
 }
 
 static void
