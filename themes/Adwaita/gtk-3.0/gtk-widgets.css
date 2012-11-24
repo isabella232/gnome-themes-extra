@@ -3225,6 +3225,15 @@ column-header .button *:active:hover {
     icon-shadow: none;
 }
 
+column-header .button.dnd {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_base_color, 0.97),
+                                      @theme_base_color);
+    border-width: 0 1px;
+    border-image-slice: 0 1;
+}
+
 row:hover {
     border-width: 0;
 }

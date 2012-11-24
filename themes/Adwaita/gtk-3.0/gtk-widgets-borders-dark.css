@@ -149,7 +149,8 @@ column-header .button,
 column-header.button:active,
 column-header .button:active,
 column-header.button:active:hover,
-column-header .button:active:hover {
+column-header .button:active:hover,
+column-header .button.dnd {
     border-image: linear-gradient(to top,
                                   @borders,
                                   @theme_base_color
