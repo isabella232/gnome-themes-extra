@@ -93,6 +93,7 @@ EXTRA_DIST = \
 ./icons/16x16/actions/view-fullscreen.png  \
 ./icons/16x16/actions/view-grid.png  \
 ./icons/16x16/actions/view-list.png  \
+./icons/16x16/actions/view-more.png  \
 ./icons/16x16/actions/view-refresh.png  \
 ./icons/16x16/actions/view-restore.png  \
 ./icons/16x16/actions/window-close.png  \
@@ -215,6 +216,8 @@ EXTRA_DIST = \
 ./icons/16x16/devices/input-mouse.png  \
 ./icons/16x16/devices/input-tablet.png  \
 ./icons/16x16/devices/input-touchpad.png  \
+./icons/16x16/devices/media-flash.png  \
+./icons/16x16/devices/media-floppy.png  \
 ./icons/16x16/devices/media-optical-bd.png  \
 ./icons/16x16/devices/media-optical-cd-audio.png  \
 ./icons/16x16/devices/media-optical-dvd.png  \
@@ -265,6 +268,7 @@ EXTRA_DIST = \
 ./icons/16x16/emotes/face-worried.png  \
 ./icons/16x16/emotes/face-yawn.png  \
 ./icons/16x16/mimetypes/application-certificate.png  \
+./icons/16x16/mimetypes/application-rss+xml.png  \
 ./icons/16x16/mimetypes/audio-x-generic.png  \
 ./icons/16x16/mimetypes/folder-publicshare.png  \
 ./icons/16x16/mimetypes/package-x-generic.png  \
@@ -358,6 +362,7 @@ EXTRA_DIST = \
 ./icons/16x16/status/network-wireless-acquiring.png  \
 ./icons/16x16/status/network-wireless-connected.png  \
 ./icons/16x16/status/network-wireless-encrypted.png  \
+./icons/16x16/status/network-wireless-hotspot.png  \
 ./icons/16x16/status/network-wireless-signal-excellent.png  \
 ./icons/16x16/status/network-wireless-signal-good.png  \
 ./icons/16x16/status/network-wireless-signal-none.png  \
@@ -488,6 +493,7 @@ EXTRA_DIST = \
 ./icons/22x22/actions/view-fullscreen.png  \
 ./icons/22x22/actions/view-grid.png  \
 ./icons/22x22/actions/view-list.png  \
+./icons/22x22/actions/view-more.png  \
 ./icons/22x22/actions/view-refresh.png  \
 ./icons/22x22/actions/view-restore.png  \
 ./icons/22x22/actions/window-close.png  \
@@ -610,6 +616,8 @@ EXTRA_DIST = \
 ./icons/22x22/devices/input-mouse.png  \
 ./icons/22x22/devices/input-tablet.png  \
 ./icons/22x22/devices/input-touchpad.png  \
+./icons/22x22/devices/media-flash.png  \
+./icons/22x22/devices/media-floppy.png  \
 ./icons/22x22/devices/media-optical-bd.png  \
 ./icons/22x22/devices/media-optical-cd-audio.png  \
 ./icons/22x22/devices/media-optical-dvd.png  \
@@ -660,6 +668,7 @@ EXTRA_DIST = \
 ./icons/22x22/emotes/face-worried.png  \
 ./icons/22x22/emotes/face-yawn.png  \
 ./icons/22x22/mimetypes/application-certificate.png  \
+./icons/22x22/mimetypes/application-rss+xml.png  \
 ./icons/22x22/mimetypes/audio-x-generic.png  \
 ./icons/22x22/mimetypes/folder-publicshare.png  \
 ./icons/22x22/mimetypes/package-x-generic.png  \
@@ -753,6 +762,7 @@ EXTRA_DIST = \
 ./icons/22x22/status/network-wireless-acquiring.png  \
 ./icons/22x22/status/network-wireless-connected.png  \
 ./icons/22x22/status/network-wireless-encrypted.png  \
+./icons/22x22/status/network-wireless-hotspot.png  \
 ./icons/22x22/status/network-wireless-signal-excellent.png  \
 ./icons/22x22/status/network-wireless-signal-good.png  \
 ./icons/22x22/status/network-wireless-signal-none.png  \
@@ -883,6 +893,7 @@ EXTRA_DIST = \
 ./icons/24x24/actions/view-fullscreen.png  \
 ./icons/24x24/actions/view-grid.png  \
 ./icons/24x24/actions/view-list.png  \
+./icons/24x24/actions/view-more.png  \
 ./icons/24x24/actions/view-refresh.png  \
 ./icons/24x24/actions/view-restore.png  \
 ./icons/24x24/actions/window-close.png  \
@@ -1005,6 +1016,8 @@ EXTRA_DIST = \
 ./icons/24x24/devices/input-mouse.png  \
 ./icons/24x24/devices/input-tablet.png  \
 ./icons/24x24/devices/input-touchpad.png  \
+./icons/24x24/devices/media-flash.png  \
+./icons/24x24/devices/media-floppy.png  \
 ./icons/24x24/devices/media-optical-bd.png  \
 ./icons/24x24/devices/media-optical-cd-audio.png  \
 ./icons/24x24/devices/media-optical-dvd.png  \
@@ -1055,6 +1068,7 @@ EXTRA_DIST = \
 ./icons/24x24/emotes/face-worried.png  \
 ./icons/24x24/emotes/face-yawn.png  \
 ./icons/24x24/mimetypes/application-certificate.png  \
+./icons/24x24/mimetypes/application-rss+xml.png  \
 ./icons/24x24/mimetypes/audio-x-generic.png  \
 ./icons/24x24/mimetypes/folder-publicshare.png  \
 ./icons/24x24/mimetypes/package-x-generic.png  \
@@ -1148,6 +1162,7 @@ EXTRA_DIST = \
 ./icons/24x24/status/network-wireless-acquiring.png  \
 ./icons/24x24/status/network-wireless-connected.png  \
 ./icons/24x24/status/network-wireless-encrypted.png  \
+./icons/24x24/status/network-wireless-hotspot.png  \
 ./icons/24x24/status/network-wireless-signal-excellent.png  \
 ./icons/24x24/status/network-wireless-signal-good.png  \
 ./icons/24x24/status/network-wireless-signal-none.png  \
@@ -1278,6 +1293,7 @@ EXTRA_DIST = \
 ./icons/256x256/actions/view-fullscreen.png  \
 ./icons/256x256/actions/view-grid.png  \
 ./icons/256x256/actions/view-list.png  \
+./icons/256x256/actions/view-more.png  \
 ./icons/256x256/actions/view-refresh.png  \
 ./icons/256x256/actions/view-restore.png  \
 ./icons/256x256/actions/window-close.png  \
@@ -1399,6 +1415,8 @@ EXTRA_DIST = \
 ./icons/256x256/devices/input-mouse.png  \
 ./icons/256x256/devices/input-tablet.png  \
 ./icons/256x256/devices/input-touchpad.png  \
+./icons/256x256/devices/media-flash.png  \
+./icons/256x256/devices/media-floppy.png  \
 ./icons/256x256/devices/media-optical-bd.png  \
 ./icons/256x256/devices/media-optical-cd-audio.png  \
 ./icons/256x256/devices/media-optical-dvd.png  \
@@ -1449,6 +1467,7 @@ EXTRA_DIST = \
 ./icons/256x256/emotes/face-worried.png  \
 ./icons/256x256/emotes/face-yawn.png  \
 ./icons/256x256/mimetypes/application-certificate.png  \
+./icons/256x256/mimetypes/application-rss+xml.png  \
 ./icons/256x256/mimetypes/audio-x-generic.png  \
 ./icons/256x256/mimetypes/folder-publicshare.png  \
 ./icons/256x256/mimetypes/package-x-generic.png  \
@@ -1542,6 +1561,7 @@ EXTRA_DIST = \
 ./icons/256x256/status/network-wireless-acquiring.png  \
 ./icons/256x256/status/network-wireless-connected.png  \
 ./icons/256x256/status/network-wireless-encrypted.png  \
+./icons/256x256/status/network-wireless-hotspot.png  \
 ./icons/256x256/status/network-wireless-signal-excellent.png  \
 ./icons/256x256/status/network-wireless-signal-good.png  \
 ./icons/256x256/status/network-wireless-signal-none.png  \
@@ -1672,6 +1692,7 @@ EXTRA_DIST = \
 ./icons/32x32/actions/view-fullscreen.png  \
 ./icons/32x32/actions/view-grid.png  \
 ./icons/32x32/actions/view-list.png  \
+./icons/32x32/actions/view-more.png  \
 ./icons/32x32/actions/view-refresh.png  \
 ./icons/32x32/actions/view-restore.png  \
 ./icons/32x32/actions/window-close.png  \
@@ -1794,6 +1815,8 @@ EXTRA_DIST = \
 ./icons/32x32/devices/input-mouse.png  \
 ./icons/32x32/devices/input-tablet.png  \
 ./icons/32x32/devices/input-touchpad.png  \
+./icons/32x32/devices/media-flash.png  \
+./icons/32x32/devices/media-floppy.png  \
 ./icons/32x32/devices/media-optical-bd.png  \
 ./icons/32x32/devices/media-optical-cd-audio.png  \
 ./icons/32x32/devices/media-optical-dvd.png  \
@@ -1844,6 +1867,7 @@ EXTRA_DIST = \
 ./icons/32x32/emotes/face-worried.png  \
 ./icons/32x32/emotes/face-yawn.png  \
 ./icons/32x32/mimetypes/application-certificate.png  \
+./icons/32x32/mimetypes/application-rss+xml.png  \
 ./icons/32x32/mimetypes/audio-x-generic.png  \
 ./icons/32x32/mimetypes/folder-publicshare.png  \
 ./icons/32x32/mimetypes/package-x-generic.png  \
@@ -1937,6 +1961,7 @@ EXTRA_DIST = \
 ./icons/32x32/status/network-wireless-acquiring.png  \
 ./icons/32x32/status/network-wireless-connected.png  \
 ./icons/32x32/status/network-wireless-encrypted.png  \
+./icons/32x32/status/network-wireless-hotspot.png  \
 ./icons/32x32/status/network-wireless-signal-excellent.png  \
 ./icons/32x32/status/network-wireless-signal-good.png  \
 ./icons/32x32/status/network-wireless-signal-none.png  \
@@ -2067,6 +2092,7 @@ EXTRA_DIST = \
 ./icons/48x48/actions/view-fullscreen.png  \
 ./icons/48x48/actions/view-grid.png  \
 ./icons/48x48/actions/view-list.png  \
+./icons/48x48/actions/view-more.png  \
 ./icons/48x48/actions/view-refresh.png  \
 ./icons/48x48/actions/view-restore.png  \
 ./icons/48x48/actions/window-close.png  \
@@ -2192,6 +2218,8 @@ EXTRA_DIST = \
 ./icons/48x48/devices/input-mouse.png  \
 ./icons/48x48/devices/input-tablet.png  \
 ./icons/48x48/devices/input-touchpad.png  \
+./icons/48x48/devices/media-flash.png  \
+./icons/48x48/devices/media-floppy.png  \
 ./icons/48x48/devices/media-optical-bd.png  \
 ./icons/48x48/devices/media-optical-cd-audio.png  \
 ./icons/48x48/devices/media-optical-dvd.png  \
@@ -2242,6 +2270,7 @@ EXTRA_DIST = \
 ./icons/48x48/emotes/face-worried.png  \
 ./icons/48x48/emotes/face-yawn.png  \
 ./icons/48x48/mimetypes/application-certificate.png  \
+./icons/48x48/mimetypes/application-rss+xml.png  \
 ./icons/48x48/mimetypes/audio-x-generic.png  \
 ./icons/48x48/mimetypes/folder-publicshare.png  \
 ./icons/48x48/mimetypes/package-x-generic.png  \
@@ -2335,6 +2364,7 @@ EXTRA_DIST = \
 ./icons/48x48/status/network-wireless-acquiring.png  \
 ./icons/48x48/status/network-wireless-connected.png  \
 ./icons/48x48/status/network-wireless-encrypted.png  \
+./icons/48x48/status/network-wireless-hotspot.png  \
 ./icons/48x48/status/network-wireless-signal-excellent.png  \
 ./icons/48x48/status/network-wireless-signal-good.png  \
 ./icons/48x48/status/network-wireless-signal-none.png  \
