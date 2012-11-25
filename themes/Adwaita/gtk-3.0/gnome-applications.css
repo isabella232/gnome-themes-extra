@@ -273,7 +273,7 @@ GeditStatusComboBox .button:backdrop:hover {
 }
 
 .documents-scrolledwin.frame {
-    border-width: 1px 0;
+    border-width: 0;
     border-radius: 0;
 }
 

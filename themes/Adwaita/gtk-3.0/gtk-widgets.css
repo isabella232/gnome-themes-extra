@@ -2454,7 +2454,7 @@ GtkCheckButton:selected:focus {
 .toolbar {
     border-style: none;
     border-color: darker (@theme_bg_color);
-    padding: 6px;
+    padding: 6px 6px 5px 6px;
     background-color: @theme_bg_color;
 }
 
@@ -2473,9 +2473,10 @@ GtkCheckButton:selected:focus {
 .toolbar.menubar {
     -GtkToolbar-button-relief: normal;
     
-    padding: 6px 6px 4px 6px; /* weird padding to compensate border-images 
-                                 and eventual top border presence, 
-                                 see selection mode toolbars */
+    padding-bottom: 4px; /* weird padding to compensate border-images 
+                            and eventual top border presence, 
+                            see selection mode toolbars */
+    border-bottom: 1px solid @borders;
 
 }
 
