@@ -149,7 +149,6 @@ EXTRA_DIST = \
 ./icons/16x16/apps/libreoffice-startcenter.png  \
 ./icons/16x16/apps/libreoffice-math.png  \
 ./icons/16x16/apps/libreoffice-writer.png  \
-./icons/16x16/apps/logviewer.png  \
 ./icons/16x16/apps/miro.png  \
 ./icons/16x16/apps/palimpsest.png  \
 ./icons/16x16/apps/pidgin.png  \
@@ -549,7 +548,6 @@ EXTRA_DIST = \
 ./icons/22x22/apps/libreoffice-startcenter.png  \
 ./icons/22x22/apps/libreoffice-math.png  \
 ./icons/22x22/apps/libreoffice-writer.png  \
-./icons/22x22/apps/logviewer.png  \
 ./icons/22x22/apps/miro.png  \
 ./icons/22x22/apps/palimpsest.png  \
 ./icons/22x22/apps/pidgin.png  \
@@ -949,7 +947,6 @@ EXTRA_DIST = \
 ./icons/24x24/apps/libreoffice-startcenter.png  \
 ./icons/24x24/apps/libreoffice-math.png  \
 ./icons/24x24/apps/libreoffice-writer.png  \
-./icons/24x24/apps/logviewer.png  \
 ./icons/24x24/apps/miro.png  \
 ./icons/24x24/apps/palimpsest.png  \
 ./icons/24x24/apps/pidgin.png  \
@@ -1348,7 +1345,6 @@ EXTRA_DIST = \
 ./icons/256x256/apps/libreoffice-startcenter.png  \
 ./icons/256x256/apps/libreoffice-math.png  \
 ./icons/256x256/apps/libreoffice-writer.png  \
-./icons/256x256/apps/logviewer.png  \
 ./icons/256x256/apps/miro.png  \
 ./icons/256x256/apps/palimpsest.png  \
 ./icons/256x256/apps/pidgin.png  \
@@ -1748,7 +1744,6 @@ EXTRA_DIST = \
 ./icons/32x32/apps/libreoffice-startcenter.png  \
 ./icons/32x32/apps/libreoffice-math.png  \
 ./icons/32x32/apps/libreoffice-writer.png  \
-./icons/32x32/apps/logviewer.png  \
 ./icons/32x32/apps/miro.png  \
 ./icons/32x32/apps/palimpsest.png  \
 ./icons/32x32/apps/pidgin.png  \
@@ -2151,7 +2146,6 @@ EXTRA_DIST = \
 ./icons/48x48/apps/libreoffice-startcenter.png  \
 ./icons/48x48/apps/libreoffice-math.png  \
 ./icons/48x48/apps/libreoffice-writer.png  \
-./icons/48x48/apps/logviewer.png  \
 ./icons/48x48/apps/miro.png  \
 ./icons/48x48/apps/palimpsest.png  \
 ./icons/48x48/apps/pidgin.png  \
