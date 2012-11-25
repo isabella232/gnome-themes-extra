@@ -206,8 +206,7 @@ column-header.button:last-child:active,
 column-header:last-child .button:active,
 column-header.button:last-child:active:hover,
 column-header:last-child .button:active:hover {
-    border-image: none;
-    border-color: mix(@borders, @theme_base_color, 0.5);
+    border-image-slice: 0 0 1 0;
 }
 
 
