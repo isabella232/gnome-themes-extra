@@ -14,6 +14,8 @@
 /* draw regular check and radio items using our SVG assets */
 .check {
     background-image: url("assets/checkbox-unchecked-dark.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .check row:selected,
@@ -105,6 +107,8 @@
 
 .radio {
     background-image: url("assets/radio-unchecked-dark.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .radio row:selected,
@@ -404,4 +408,11 @@
 
 .cursor-handle.top {
     background-image: url("assets/scale-slider-down-backdrop-dark.png");
+}
+
+/****************
+ * Content view *
+ ****************/
+.content-view.view {
+    background-image: url("assets/noise-texture-dark.png");
 }

@@ -1119,6 +1119,14 @@ GtkScrolledWindow GtkViewport.frame {
     border-style: none;
 }
 
+GtkViewport {
+    background-color: @theme_base_color;
+}
+
+GtkViewport:backdrop {
+    background-color: @theme_unfocused_base_color;
+}
+
 /***********
  * Buttons *
  ***********/
@@ -3126,18 +3134,12 @@ GtkTreeView.dnd {
     border-style: solid;
 }
 
-GtkViewport {
-    background-color: @theme_base_color;
-}
-
-GtkViewport:backdrop {
-    background-color: @theme_unfocused_base_color;
+GtkTreeView:selected:focus {
+    outline-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focus {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
     border-radius: 4px;
 
     /* FIXME: this probably needs to be better;
@@ -3148,40 +3150,35 @@ GtkIconView.view.cell:selected:focus {
     outline-offset: 3px;
 }
 
-.view,
-GtkTreeView {
+.view {
     background-color: @theme_base_color;
     color: @theme_text_color;
 }
 
-.view:selected,
-GtkTreeView:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-.view:insensitive,
-GtkTreeView:insensitive {
+.view:insensitive {
     background-color: @insensitive_bg_color;
     color: @insensitive_fg_color;
 }
 
-.view:backdrop,
-GtkTreeView:backdrop {
+.view:backdrop {
     background-color: @theme_unfocused_base_color;
     color: @theme_unfocused_text_color;
 }
 
-.cell:backdrop:selected,
-GtkIconView.view.cell:backdrop:selected,
-.view:backdrop:selected,
-GtkTreeView:backdrop:selected {
-    background-color: @theme_unfocused_selected_bg_color;
-    color: @theme_unfocused_selected_fg_color;
+.cell {
+    color: @theme_text_color;
+    padding: 2px;
 }
 
-GtkTreeView:selected:focus {
-    outline-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
+.cell:selected,
+.cell:selected:focus {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.cell:backdrop:selected {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
 }
 
 column-header.button,
@@ -3233,34 +3230,6 @@ column-header .button.dnd {
                                       @theme_base_color);
     border-width: 0 1px;
     border-image-slice: 0 1;
-}
-
-row:hover {
-    border-width: 0;
-}
-
-row:insensitive {
-    border-width: 0;
-}
-
-row:selected:focus {
-    border-width: 0;
-    background-color: @theme_selected_bg_color;
-}
-
-row:selected {
-    border-width: 0;
-}
-
-.cell {
-    color: @theme_text_color;
-    padding: 2px;
-    border-width: 0;
-}
-
-.cell:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
 }
 
 .expander {
@@ -3320,30 +3289,42 @@ row:selected {
     background-color: @content_view_bg;
 }
 
-.content-view.view:hover {
-    background-color: @theme_bg_color;
-    color: @theme_text_color;
-}
-
-.content-view.view:selected,
-.content-view.view:active {
-    background-color: @theme_selected_bg_color;
-}
-
 .content-view.view:insensitive {
     background-color: @theme_unfocused_base_color;
+    background-image: none;
 }
 
-.content-view.view:backdrop,
-.content-view.view:hover:backdrop {
+.content-view.view:backdrop {
     background-color: @sidebar_bg_unfocused;
+    background-image: none;
 }
 
-.content-view.view:selected:backdrop {
+/* FIXME: EggListBox should set the .cell style class on
+ * the background it renders for the children, like
+ * GtkIconView and GtkTreeView do */
+.content-view.cell {
+    background-color: transparent;
+    background-image: none;
+}
+
+EggListBox.content-view:hover,
+.content-view.cell:hover {
+    background-color: @theme_bg_color;
+}
+
+EggListBox.content-view:selected,
+EggListBox.content-view:active,
+.content-view.cell:selected,
+.content-view.cell:active {
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+EggListBox.content-view:selected:backdrop,
+.content-view.cell:selected:backdrop {
     background-color: @theme_unfocused_selected_bg_color;
+    background-image: none;
 }
-
-.content-view.view .separator:backdrop { color: @theme_unfocused_bg_color; }
 
 GdMainIconView.content-view {
     -GdMainIconView-icon-size: 40;
@@ -3362,6 +3343,10 @@ GtkIconView.content-view.check:active {
 .content-view.view.check,
 .content-view.view.check:active {
     background-color: transparent;
+}
+
+.content-view.view .separator:backdrop {
+    color: @theme_unfocused_bg_color;
 }
 
 GtkIconView.content-view.check:hover,
