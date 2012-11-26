@@ -200,15 +200,6 @@ column-header:last-child .button:backdrop {
     border-right-width: 0;
 }
 
-column-header.button:last-child,
-column-header:last-child .button,
-column-header.button:last-child:active,
-column-header:last-child .button:active,
-column-header.button:last-child:active:hover,
-column-header:last-child .button:active:hover {
-    border-image-slice: 0 0 1 0;
-}
-
 
 /* unfocused window: generic element borders */
 .selection-mode.toolbar .suggested-action.button:backdrop, 
