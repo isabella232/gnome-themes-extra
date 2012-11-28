@@ -2858,6 +2858,11 @@ GtkOverlay.osd {
     border-radius: 0;    
 }
 
+.osd .view,
+.osd.view {
+    background-color: alpha(@osd_bg, 0.60);
+}
+
 /****************************
  * Suggested action buttons *
  ****************************/
