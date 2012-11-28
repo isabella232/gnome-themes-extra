@@ -2860,7 +2860,32 @@ GtkOverlay.osd {
 
 .osd .view,
 .osd.view {
-    background-color: alpha(@osd_bg, 0.60);
+    background-color: @osd_view_bg;
+}
+
+.osd .view:backdrop,
+.osd.view:backdrop {
+    background-color: @osd_view_bg_backdrop;
+}
+
+.osd .scrollbar.trough {
+    background-color: @osd_scrollbar_trough;
+}
+
+.osd .scrollbar.trough:backdrop {
+    background-color: @osd_scrollbar_trough_backdrop;
+}
+
+.osd .scrollbar.slider {
+    background-color: @osd_scrollbar_slider;
+}
+
+.osd .scrollbar.slider:hover {
+    background-color: @osd_scrollbar_slider_prelight;
+}
+
+.osd .scrollbar.slider:active {
+    background-color: @osd_scrollbar_slider_active;
 }
 
 /****************************

@@ -6,11 +6,11 @@
 @define-color osd_highlight #ffffff;
 @define-color osd_lowlight #525252;
 @define-color osd_base #212526;
+@define-color osd_base_backdrop shade(@osd_base, 1.40);
 
 @define-color osd_fg #ededed;
 @define-color osd_bg alpha(@osd_base, 0.80);
-
-@define-color osd_bg_backdrop alpha(shade(@osd_base, 1.40), 0.90);
+@define-color osd_bg_backdrop alpha(@osd_base_backdrop, 0.90);
 
 @define-color osd_text_shadow alpha(black, 0.75);
 
@@ -51,6 +51,17 @@
 @define-color osd_button_shadow alpha(black, 0.35);
 
 @define-color osd_trough_bg alpha(@osd_button_fg, 0.10);
+
+@define-color osd_view_bg alpha(@osd_bg, 0.60);
+@define-color osd_view_bg_backdrop alpha(@osd_bg_backdrop, 0.60);
+
+@define-color osd_scrollbar_trough shade(@osd_base, 1.70);
+@define-color osd_scrollbar_trough_backdrop shade(@osd_base_backdrop, 1.40);
+
+@define-color osd_scrollbar_slider shade(@osd_scrollbar_trough, 1.50);
+@define-color osd_scrollbar_slider_prelight shade(@osd_scrollbar_trough, 1.80);
+@define-color osd_scrollbar_slider_active shade(@osd_scrollbar_trough, 2.10);
+@define-color osd_scrollbar_slider_backdrop shade(@osd_scrollbar_trough_backdrop, 1.50);
 
 /**************************
  * Selection Mode classes *
