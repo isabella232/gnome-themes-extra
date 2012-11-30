@@ -2895,6 +2895,16 @@ GtkProgressBar.osd.progressbar {
     outline-color: transparent;
 }
 
+/* used by Documents */
+.osd .page-thumbnail {
+    border-style: solid;
+    border-width: 1px;
+    border-color: @osd_lowlight;
+
+    /* when there's no pixbuf yet */
+    background-color: @osd_bg;
+}
+
 /****************************
  * Suggested action buttons *
  ****************************/
@@ -3416,6 +3426,13 @@ GtkIconView.content-view.check:insensitive,
 GtkIconView.content-view.check:backdrop,
 GtkIconView.content-view.check:selected {
     background-color: transparent;
+}
+
+/* used by Documents and Evince */
+.content-view.document-page {
+    border-style: solid;
+    border-width: 3px 3px 6px 4px;
+    border-image: url("assets/thumbnail-frame.png") 3 3 6 4;
 }
 
 /*********************

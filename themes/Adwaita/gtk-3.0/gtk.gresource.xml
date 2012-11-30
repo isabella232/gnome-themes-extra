@@ -170,6 +170,7 @@
     <file preprocess="to-pixdata">assets/sidebar-radio-selected.svg</file>
     <file preprocess="to-pixdata">assets/switch-slider-grip.svg</file>
     <file preprocess="to-pixdata">assets/switch-slider-grip-dark.svg</file>
+    <file preprocess="to-pixdata">assets/thumbnail-frame.png</file>
     <file preprocess="to-pixdata">borders/button-border.png</file>
     <file preprocess="to-pixdata">borders/generic-border.png</file>
     <file preprocess="to-pixdata">borders/generic-border-transparent.png</file>

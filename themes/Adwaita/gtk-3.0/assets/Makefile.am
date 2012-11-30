@@ -167,4 +167,5 @@ EXTRA_DIST = 		\
 	sidebar-radio-selected-dark.svg \
 	sidebar-radio-selected-prelight.svg \
 	switch-slider-grip.svg \
-	switch-slider-grip-dark.svg
+	switch-slider-grip-dark.svg \
+	thumbnail-frame.png
