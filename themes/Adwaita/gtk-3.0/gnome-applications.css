@@ -575,8 +575,7 @@ EphyWindow.background EphyNotebook.notebook:last-child {
 }
 
 .contacts-suggestion {
- background-color: #434343;
- color: #ffffff;
+ background-color: #D3D7CF;
  border-radius: 4px;
 }
 
