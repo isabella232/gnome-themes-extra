@@ -3311,6 +3311,17 @@ column-header .button.dnd {
     border-color: @internal_element_color;
 }
 
+/**************
+ * List boxes *
+ **************/
+EggListBox {
+    background-color: @list_box_bg;
+}
+
+EggListBox:hover {
+    background-color: @content_view_bg;
+}
+
 /****************
  * Content view *
  ****************/

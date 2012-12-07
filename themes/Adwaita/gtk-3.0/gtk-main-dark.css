@@ -122,6 +122,7 @@
 @define-color selection_menu_dim shade(@theme_text_color, 0.70);
 
 @define-color content_view_bg #242424;
+@define-color list_box_bg @theme_base_color;
 
 @define-color app_notification_a #343a3b;
 @define-color app_notification_b #3b3e3f;
