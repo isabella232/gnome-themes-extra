@@ -2828,14 +2828,16 @@ GtkOverlay.osd {
     background-color: transparent;
 }
 
-.osd GtkProgressBar {
+.osd GtkProgressBar,
+GtkProgressBar.osd {
     padding: 0;
     -GtkProgressBar-xspacing: 0;
     -GtkProgressBar-yspacing: 3px;
     -GtkProgressBar-min-horizontal-bar-height: 3px;
 }
 
-.osd GtkProgressBar.trough {
+.osd GtkProgressBar.trough,
+GtkProgressBar.osd.trough {
     padding: 0;
     border-image: none;
     border-style: none;
@@ -2845,7 +2847,8 @@ GtkOverlay.osd {
     border-radius: 0;
 }
 
-.osd GtkProgressBar.progressbar {
+.osd GtkProgressBar.progressbar,
+GtkProgressBar.osd.progressbar {
     border-style: none;
     background-color: @theme_selected_bg_color;
     background-image: none;
