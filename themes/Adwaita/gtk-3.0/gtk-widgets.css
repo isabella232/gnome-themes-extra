@@ -2888,6 +2888,7 @@ GtkProgressBar.osd.progressbar {
 /****************************
  * Suggested action buttons *
  ****************************/
+.toolbar .suggested-action.button,
 .suggested-action.button {
     background-image: linear-gradient(to bottom,
                                       @suggested_action_button_a,
@@ -2900,12 +2901,15 @@ GtkProgressBar.osd.progressbar {
     text-shadow: 0 -1px @suggested_action_button_shadow;
 }
 
+.toolbar .suggested-action.button:hover,
 .suggested-action.button:hover {
     background-image: linear-gradient(to bottom,
                                       shade(@suggested_action_button_a, 1.10),
                                       shade(@suggested_action_button_b, 1.05));
 }
 
+.toolbar .suggested-action.button:active,
+.toolbar .suggested-action.button:hover:active,
 .suggested-action.button:active,
 .suggested-action.button:hover:active {
     background-image: linear-gradient(to bottom,
@@ -2913,23 +2917,30 @@ GtkProgressBar.osd.progressbar {
                                       @suggested_action_button_a);
 }
 
+.toolbar .suggested-action.button:backdrop,
 .suggested-action.button:backdrop {
     background-image: none;
     border-image: none;
     border-color: @unfocused_borders;
 }
 
+.toolbar .suggested-action.button *:hover,
+.toolbar .suggested-action.button *:active,
+.toolbar .suggested-action.button *:hover:active,
 .suggested-action.button *:hover,
 .suggested-action.button *:active,
 .suggested-action.button *:hover:active {
     color: @suggested_action_button_fg;
 }
 
+.toolbar .suggested-action.button *:active,
+.toolbar .suggested-action.button *:hover:active,
 .suggested-action.button *:active,
 .suggested-action.button *:hover:active {
     text-shadow: 0 -1px shade(@suggested_action_button_shadow, 1.15);
 }
 
+.toolbar .suggested-action.button *:backdrop,
 .suggested-action.button *:backdrop {
     text-shadow: none;
 }
