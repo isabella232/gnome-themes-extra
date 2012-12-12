@@ -106,8 +106,8 @@ adwaita_draw_box (GtkStyle * style,
       gdouble stop_1, stop_2, stop_3;
 
       stop_1 = MIN (1.0, 6.0 / (gdouble) height);
-      stop_2 = MAX (stop_2, 0.33);
-      stop_3 = MAX (stop_3, 0.66);
+      stop_2 = MAX (stop_1, 0.33);
+      stop_3 = MAX (stop_2, 0.66);
 
       cairo_pattern_add_color_stop_rgba (pattern, 0.0, 0.66, 0.66, 0.66, 0.0);
       cairo_pattern_add_color_stop_rgba (pattern, stop_1, 0.66, 0.66, 0.66, 0.25);
