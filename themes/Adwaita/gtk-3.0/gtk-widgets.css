@@ -2240,15 +2240,13 @@ GtkTreeMenu .menuitem,
 /* this controls the general appearance of the menubar */
 .menubar {
     border-style: none;
-    padding: 4px;
 
     -GtkWidget-window-dragging: true;
-    -GtkMenuBar-internal-padding: 0;
 }
 
 .menubar .menuitem {
     border-style: none;
-    padding: 3px 5px;
+    padding: 3px 8px;
 }
 
 /* remove the image from the prelight areas */
