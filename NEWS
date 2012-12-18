@@ -1,3 +1,19 @@
+3.7.3
+=====
+
+Don't repeat background image assets for radio/checks
+Use a light noise texture for content-view backgrounds
+Add a style for OSD views and scrollbars
+Improve style for listbox views
+Remove GtkViewport background color by default
+Improve style for dragged column-header buttons
+Update HighContrast icons
+Fix asymmetric borders in column-header buttons
+Fix coloring of GtkScale mark labels
+Fix GTK2 toolbar style for SWT applications
+Fix coloring of Eclipse tooltips
+Fix buggy rendering of menus in Opera
+
 3.7.2
 =====
 
