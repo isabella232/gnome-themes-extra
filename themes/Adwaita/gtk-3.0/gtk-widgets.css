@@ -3328,6 +3328,10 @@ EggListBox:hover {
     background-color: @content_view_bg;
 }
 
+EggListBox:selected {
+    background-color: @theme_selected_bg_color;
+}
+
 /****************
  * Content view *
  ****************/
