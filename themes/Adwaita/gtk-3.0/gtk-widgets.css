@@ -3173,8 +3173,8 @@ GtkTreeView:selected:focus {
     outline-color: mix(@theme_selected_fg_color, @theme_selected_bg_color, 0.30);
 }
 
-GtkIconView.view.cell:selected,
-GtkIconView.view.cell:selected:focus {
+GtkIconView.cell:selected,
+GtkIconView.cell:selected:focus {
     border-radius: 4px;
 
     /* FIXME: this probably needs to be better;
