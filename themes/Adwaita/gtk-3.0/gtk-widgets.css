@@ -2883,6 +2883,18 @@ GtkProgressBar.osd.progressbar {
     background-color: @osd_scrollbar_slider_active;
 }
 
+.osd GtkIconView.cell:selected,
+.osd GtkIconView.cell:selected:focus {
+    background-color: transparent;
+
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 3px;
+    border-color: @osd_button_fg;
+
+    outline-color: transparent;
+}
+
 /****************************
  * Suggested action buttons *
  ****************************/
