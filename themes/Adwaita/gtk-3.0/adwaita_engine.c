@@ -121,8 +121,12 @@ adwaita_engine_wm_changed (AdwaitaEngine *self)
 
 #ifdef GDK_WINDOWING_X11
   const gchar *name;
-  name = gdk_x11_screen_get_window_manager_name (gdk_screen_get_default ());
-  is_fallback = (g_strcmp0 (name, "GNOME Shell") != 0);
+  GdkScreen *screen = gdk_screen_get_default ();
+  if (GDK_IS_X11_SCREEN (screen))
+    {
+      name = gdk_x11_screen_get_window_manager_name (screen);
+      is_fallback = (g_strcmp0 (name, "GNOME Shell") != 0);
+    }
 #endif
 
   if (is_fallback)
@@ -153,9 +157,12 @@ adwaita_engine_init (AdwaitaEngine *self)
 #ifdef GDK_WINDOWING_X11
   GdkScreen *screen = gdk_screen_get_default ();
 
-  self->wm_watch_id =
-    g_signal_connect_swapped (screen, "window-manager-changed",
-                              G_CALLBACK (adwaita_engine_wm_changed), self);
+  if (GDK_IS_X11_SCREEN (screen))
+    {
+      self->wm_watch_id =
+	g_signal_connect_swapped (screen, "window-manager-changed",
+				  G_CALLBACK (adwaita_engine_wm_changed), self);
+    }
 #endif
 
   adwaita_engine_wm_changed (self);
