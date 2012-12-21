@@ -112,15 +112,6 @@
 
 @define-color primary_toolbar_button_text_shadow alpha(black, 0.1);
 
-@define-color selection_toolbar_bg #191c1d;
-@define-color selection_toolbar_fg shade(@theme_text_color, 0.80);
-@define-color selection_toolbar_border @internal_element_color;
-
-@define-color selection_menu_border @internal_element_color;
-@define-color selection_menu_strong @theme_text_color;
-@define-color selection_menu_fg shade(@theme_text_color, 0.80);
-@define-color selection_menu_dim shade(@theme_text_color, 0.70);
-
 @define-color content_view_bg #242424;
 @define-color list_box_bg @theme_base_color;
 
@@ -145,6 +136,31 @@
 
 @define-color inset_light_color alpha(white, 0.05);
 @define-color inset_dark_color alpha(black, 0.25);
+
+/**************************
+ * Selection Mode classes *
+ **************************/
+@define-color selection_toolbar_button_a #729fcf;
+@define-color selection_toolbar_button_b #3465a4;
+@define-color selection_toolbar_button_fg #bfbfbf;
+@define-color selection_toolbar_button_border #23446f;
+@define-color selection_toolbar_shadow alpha(black, 0.30);
+
+@define-color selection_toolbar_suggested_button_a #3e4545;
+@define-color selection_toolbar_suggested_button_b #2e3232;
+@define-color selection_toolbar_suggested_button_c #2a2828;
+@define-color selection_toolbar_suggested_button_fg #ffffff;
+@define-color selection_toolbar_suggested_button_border #1f2020;
+
+@define-color selection_toolbar_bg_a #3465a4;
+@define-color selection_toolbar_bg_b #1d437b;
+@define-color selection_toolbar_fg #729fcf;
+@define-color selection_toolbar_shadow #204a87;
+@define-color selection_toolbar_border #183967;
+
+@define-color selection_menu_fg #729fcf;
+@define-color selection_menu_hover shade(@selection_menu_fg, 1.15);
+@define-color selection_menu_active shade(@selection_menu_fg, 1.30);
 
 /**************
  * GNOME Apps *

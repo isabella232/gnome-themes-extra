@@ -63,16 +63,6 @@
 @define-color osd_scrollbar_slider_active shade(@osd_scrollbar_trough, 2.10);
 @define-color osd_scrollbar_slider_backdrop shade(@osd_scrollbar_trough_backdrop, 1.50);
 
-/**************************
- * Selection Mode classes *
- **************************/
-@define-color selection_toolbar_suggested_button_a #7fc141;
-@define-color selection_toolbar_suggested_button_b #47850d;
-@define-color selection_toolbar_suggested_button_c #4e9a06;
-
-@define-color selection_toolbar_suggested_button_fg #ffffff;
-@define-color selection_toolbar_suggested_button_shadow alpha(black, 0.30);
-
 /*********************
  * Error/Warning/... *
  *********************/
