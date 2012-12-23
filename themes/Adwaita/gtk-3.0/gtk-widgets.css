@@ -3221,6 +3221,16 @@ GtkIconView.cell:selected:focus {
     color: @theme_unfocused_text_color;
 }
 
+.view:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.view:backdrop:selected {
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
+}
+
 .cell {
     color: @theme_text_color;
     padding: 2px;
@@ -3367,6 +3377,16 @@ EggListBox:selected {
 
 .content-view.view:backdrop {
     background-color: @sidebar_bg_unfocused;
+    background-image: none;
+}
+
+.content-view.view:selected {
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+.content-view.view:selected:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
     background-image: none;
 }
 
