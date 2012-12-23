@@ -1095,7 +1095,6 @@ GtkLevelBar.vertical {
     border-width: 1px;
     border-color: @borders;
     border-style: solid;
-    background-color: @theme_base_color;
     padding: 0;
 }
 
