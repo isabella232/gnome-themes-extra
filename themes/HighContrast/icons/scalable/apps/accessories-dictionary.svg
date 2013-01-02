@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="48px"
-   height="48px"
-   id="svg3304"
-   sodipodi:version="0.32"
-   inkscape:version="0.42"
-   sodipodi:docbase="/home/luca/Desktop/black-and-white/scalable/actions"
-   sodipodi:docname="address-book-new.svg">
+   width="16px"
+   height="16px"
+   id="svg6949"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="dictionary_icon_3.svg">
   <defs
-     id="defs3306" />
+     id="defs6951" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,25 +24,37 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.0000000"
-     inkscape:cx="24.000000"
-     inkscape:cy="24.000000"
+     inkscape:zoom="22.197802"
+     inkscape:cx="0.78752943"
+     inkscape:cy="7.9463915"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
-     inkscape:window-width="922"
-     inkscape:window-height="561"
-     inkscape:window-x="5"
-     inkscape:window-y="50" />
+     inkscape:window-width="1280"
+     inkscape:window-height="738"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid8125" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="3,20"
+       id="guide3775" />
+  </sodipodi:namedview>
   <metadata
-     id="metadata3309">
+     id="metadata6954">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -50,14 +62,39 @@
      id="layer1"
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
+    <rect
+       style="fill:#c3c3c3;fill-opacity:1;stroke:none"
+       id="rect9265"
+       width="15.004"
+       height="1"
+       x="-0.0040000002"
+       y="14.999997" />
     <path
-       sodipodi:type="arc"
-       style="fill:#f50000;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
-       id="path3312"
-       sodipodi:cx="24.000000"
-       sodipodi:cy="24.071428"
-       sodipodi:rx="24.142857"
-       sodipodi:ry="23.928572"
-       d="M 48.142857 24.071428 A 24.142857 23.928572 0 1 1  -0.14285660,24.071428 A 24.142857 23.928572 0 1 1  48.142857 24.071428 z" />
+       style="fill:none;stroke:#c3c3c3;stroke-width:0.99999988;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 0.55899993,2.417345 C 2.8099198,2.0891158 5.3852261,-0.91039466 7.5295003,2.4000028 c 2.4056994,-3.36022516 4.5648007,0.017342 6.9704987,0.017342 l 0,9.9826552 c -2.32924,-0.01561 -4.437464,-2.328037 -6.9922181,0 -2.573692,-2.27404 -4.6325195,0 -6.94878097,0 z"
+       id="rect2996"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
+    <rect
+       style="fill:#c3c3c3;fill-opacity:1;stroke:none"
+       id="rect3002"
+       width="1"
+       height="9.603281"
+       x="7"
+       y="2.4997189" />
+    <rect
+       style="fill:#c3c3c3;fill-opacity:1;stroke:none"
+       id="rect3002-1"
+       width="1"
+       height="9.603281"
+       x="0"
+       y="6.396719" />
+    <rect
+       style="fill:#c3c3c3;fill-opacity:1;stroke:none"
+       id="rect3002-7"
+       width="1"
+       height="9.603281"
+       x="14"
+       y="6" />
   </g>
 </svg>
