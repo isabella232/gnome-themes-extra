@@ -3108,12 +3108,17 @@ GtkProgressBar.osd.progressbar {
     color: @selection_menu_fg;
 }
 
+.selection-mode.toolbar .selection-menu.button .dim-label {
+    color: @selection_menu_fg;
+}
+
 .selection-mode.toolbar .selection-menu.button:backdrop {
     background-color: transparent;
     color: @selection_menu_fg;
 }
 
-.selection-mode.toolbar .selection-menu.button:hover {
+.selection-mode.toolbar .selection-menu.button:hover,
+.selection-mode.toolbar .selection-menu.button .dim-label:hover {
     background-color: transparent;
     color: @selection_menu_hover;
 }
