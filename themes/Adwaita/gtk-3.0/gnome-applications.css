@@ -674,6 +674,20 @@ ContactsWindow .sidebar .view:selected:focus {
  background-color: #ffffff;
 }
 
+.toolbar.contacts-edit-toolbar {
+  padding: 6px;
+  background-color: #E2E4E2;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: @borders;
+  border-image: none;
+}
+
+.toolbar.contacts-edit-toolbar .button {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
 /* Gucharmap */
 GucharmapChartable:active,
 GucharmapChartable:focus,
