@@ -108,6 +108,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/abrt-gui.png  \
 ./icons/16x16/apps/accessories-calculator.png  \
 ./icons/16x16/apps/accessories-character-map.png  \
+./icons/16x16/apps/accessories-dictionary.png  \
 ./icons/16x16/apps/accessories-text-editor.png  \
 ./icons/16x16/apps/anaconda.png  \
 ./icons/16x16/apps/applets-screenshooter.png  \
@@ -514,6 +515,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/abrt-gui.png  \
 ./icons/22x22/apps/accessories-calculator.png  \
 ./icons/22x22/apps/accessories-character-map.png  \
+./icons/22x22/apps/accessories-dictionary.png  \
 ./icons/22x22/apps/accessories-text-editor.png  \
 ./icons/22x22/apps/anaconda.png  \
 ./icons/22x22/apps/applets-screenshooter.png  \
@@ -920,6 +922,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/abrt-gui.png  \
 ./icons/24x24/apps/accessories-calculator.png  \
 ./icons/24x24/apps/accessories-character-map.png  \
+./icons/24x24/apps/accessories-dictionary.png  \
 ./icons/24x24/apps/accessories-text-editor.png  \
 ./icons/24x24/apps/anaconda.png  \
 ./icons/24x24/apps/applets-screenshooter.png  \
@@ -1326,6 +1329,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/abrt-gui.png  \
 ./icons/256x256/apps/accessories-calculator.png  \
 ./icons/256x256/apps/accessories-character-map.png  \
+./icons/256x256/apps/accessories-dictionary.png  \
 ./icons/256x256/apps/accessories-text-editor.png  \
 ./icons/256x256/apps/anaconda.png  \
 ./icons/256x256/apps/applets-screenshooter.png  \
@@ -1731,6 +1735,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/abrt-gui.png  \
 ./icons/32x32/apps/accessories-calculator.png  \
 ./icons/32x32/apps/accessories-character-map.png  \
+./icons/32x32/apps/accessories-dictionary.png  \
 ./icons/32x32/apps/accessories-text-editor.png  \
 ./icons/32x32/apps/anaconda.png  \
 ./icons/32x32/apps/applets-screenshooter.png  \
@@ -2140,6 +2145,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/abrt-gui.png  \
 ./icons/48x48/apps/accessories-calculator.png  \
 ./icons/48x48/apps/accessories-character-map.png  \
+./icons/48x48/apps/accessories-dictionary.png  \
 ./icons/48x48/apps/accessories-text-editor.png  \
 ./icons/48x48/apps/anaconda.png  \
 ./icons/48x48/apps/applets-screenshooter.png  \
