@@ -1,5 +1,3 @@
-SUBDIRS = assets borders
-
 enginedir = $(libdir)/gtk-3.0/$(GTK3_VERSION)/theming-engines
 engine_LTLIBRARIES =
 engine_LTLIBRARIES += libadwaita.la
@@ -19,25 +17,15 @@ theme_DATA = 		\
 	gtk-dark.css	\
 	settings.ini
 
-gtk.gresource: gtk.gresource.xml  $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies $(srcdir)/gtk.gresource.xml)
+resource_files = $(shell $(GLIB_COMPILE_RESOURCES) --sourcedir=$(srcdir) --generate-dependencies $(srcdir)/gtk.gresource.xml)
+gtk.gresource: gtk.gresource.xml $(resource_files)
 	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=$(srcdir)  $<
 
 EXTRA_DIST = \
-	gnome-applications.css \
-	gtk.gresource.xml \
+	$(resource_files) \
 	gtk.css \
 	gtk-dark.css \
-	gtk-fallback.css \
-	gtk-main.css \
-	gtk-main-common.css \
-	gtk-main-dark.css \
-	gtk-widgets.css \
-	gtk-widgets-backgrounds.css \
-	gtk-widgets-borders.css \
-	gtk-widgets-borders-dark.css \
-	gtk-widgets-dark-overrides.css \
-	gtk-widgets-assets.css \
-	gtk-widgets-assets-dark.css \
+	gtk.gresource.xml \
 	settings.ini
 
 CLEANFILES = \
