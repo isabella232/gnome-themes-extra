@@ -1,3 +1,14 @@
+3.7.4
+=====
+
+Use a blue shade for the selection toolbar pattern
+Add a style for EvinceView document frames
+Improve linked buttons, insensitive state, OSD and floating bar styles in HC
+Improve selections in listbox widgets
+Add HC icon for gnome-dictionary
+Add runtime checks for X11-specific code
+Fix spurious border with Epiphany 3.7
+
 3.7.3
 =====
 
