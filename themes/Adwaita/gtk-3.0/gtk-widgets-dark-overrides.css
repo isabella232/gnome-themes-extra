@@ -65,6 +65,11 @@ column-header .button {
     text-shadow: none;
 }
 
+GtkTreeMenu .menuitem,
+.button .menuitem,
+.toolbar .button .menuitem * {
+    text-shadow: none;
+}
 
 .spinbutton .button {
     icon-shadow: none;
