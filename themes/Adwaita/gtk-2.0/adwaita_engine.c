@@ -131,6 +131,43 @@ adwaita_draw_box (GtkStyle * style,
     }
 }
 
+void
+adwaita_draw_flat_box (GtkStyle      *style,
+                       GdkWindow     *window,
+                       GtkStateType   state_type,
+                       GtkShadowType  shadow_type,
+                       GdkRectangle  *area,
+                       GtkWidget     *widget,
+                       const gchar   *detail,
+                       gint           x,
+                       gint	      y,
+                       gint	      width,
+                       gint	      height)
+{
+  gboolean tried_ooo_hack;
+
+  GTK_STYLE_CLASS (adwaita_style_parent_class)->draw_flat_box (style, window, state_type, shadow_type,
+                                                               area, widget, detail,
+                                                               x, y, width, height);
+
+  /* HACK: this is totally awful, but I don't see a better way to "tag" the OO.o hierarchy */
+  if (!GTK_IS_WINDOW (widget) ||
+      (gtk_window_get_window_type (GTK_WINDOW (widget)) != GTK_WINDOW_TOPLEVEL))
+    return;
+
+  if (!g_str_has_prefix (g_get_application_name (), "OpenOffice.org"))
+    return;
+
+  tried_ooo_hack = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "adwaita-ooo-hack"));
+
+  if (!tried_ooo_hack)
+    {
+      g_object_set_data (G_OBJECT (widget),
+                         "adwaita-ooo-hack", GINT_TO_POINTER (1));
+      gtk_widget_set_name (widget, "openoffice-toplevel");
+    }
+}
+
 static void
 adwaita_style_init (AdwaitaStyle *style)
 {
@@ -142,6 +179,7 @@ adwaita_style_class_init (AdwaitaStyleClass * klass)
   GtkStyleClass *style_class = GTK_STYLE_CLASS (klass);
  
   style_class->draw_box = adwaita_draw_box;
+  style_class->draw_flat_box = adwaita_draw_flat_box;
 }
 
 static void
