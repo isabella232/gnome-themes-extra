@@ -22,7 +22,11 @@ asset_data = \
 	Arrows/arrow-down-small-insens.png \
 	Arrows/arrow-down-small-prelight.png \
 	Arrows/arrow-left.png \
+	Arrows/arrow-left-insens.png \
+	Arrows/arrow-left-prelight.png \
 	Arrows/arrow-right.png \
+	Arrows/arrow-right-insens.png \
+	Arrows/arrow-right-prelight.png \
 	Arrows/arrow-up.png \
 	Arrows/arrow-up-insens.png \
 	Arrows/arrow-up-prelight.png \
