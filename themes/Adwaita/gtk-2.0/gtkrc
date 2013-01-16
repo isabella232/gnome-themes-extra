@@ -513,6 +513,20 @@ style "default"
         }
 }
 
+style "ooo_toplevel_hack"
+{
+        engine "adwaita"
+        {
+        }
+}
+
+style "ooo_stepper_hack"
+{
+	GtkScrollbar::stepper-size	        = 13
+	GtkScrollbar::has-backward-stepper	= 1
+	GtkScrollbar::has-forward-stepper	= 1
+}
+
 style "scrollbar"
 {
   engine "pixmap" 
@@ -2082,3 +2096,7 @@ widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" style "chrome_menu_item"
 # Eclipse/SWT
 widget "gtk-tooltips*" 			style "eclipse-tooltips"
 widget "*swt-toolbar-flat"		style "null"
+
+# Openoffice
+class "GtkWindow"                  style "ooo_toplevel_hack"
+widget "*openoffice-toplevel*"     style "ooo_stepper_hack"
