@@ -1037,20 +1037,34 @@ GtkLevelBar.vertical {
 }
 
 .scale.trough,
-.scale.trough.highlight,
 .scale.trough.vertical {
     border-color: @borders;
 }
 
-.scale.trough:backdrop {
+.scale.trough.highlight,
+.scale.trough.highlight.vertical {
+    border-color: @scale_highlight_border;
+}
+
+.scale.trough:backdrop,
+.scale.trough.vertical:backdrop {
     border-color: @unfocused_borders;
 }
 
-.scale.trough:insensitive {
+.scale.trough:insensitive,
+.scale.trough.highlight:insensitive,
+.scale.trough.vertical:insensitive,
+.scale.trough.highlight.vertical:insensitive {
     background-color: @insensitive_bg_color;
     border-color: @insensitive_scale_borders;
     box-shadow: none;
     background-image: none;
+}
+
+.scale.trough.highlight,
+.scale.trough.vertical.highlight {
+    background-image: none;
+    background-color: @scale_highlight_bg;
 }
 
 .scale.progressbar {
@@ -1066,15 +1080,24 @@ GtkLevelBar.vertical {
     color: alpha(@theme_fg_color, 0.3);
 }
 
-.scale.trough.vertical {
-    box-shadow: inset -1px 0 @theme_bg_color;
-}
-
 .scale.trough {
     box-shadow: inset 0 -1px @theme_bg_color;
 }
 
-.scale.trough:backdrop {
+.scale.trough.vertical {
+    box-shadow: inset -1px 0 @theme_bg_color;
+}
+
+.scale.trough.highlight {
+    box-shadow: inset 0 -1px @scale_highlight_shadow;
+}
+
+.scale.trough.vertical.highlight {
+    box-shadow: inset -1px 0 @scale_highlight_shadow;
+}
+
+.scale.trough:backdrop,
+.scale.trough.highlight:backdrop {
     box-shadow: none;
     border-color: @unfocused_borders;
     background-color: @unfocused_dark_bg;
@@ -2823,6 +2846,14 @@ GtkOverlay.osd {
                                       shade(@osd_button_border, 0.90)
                                       );
     background-color: transparent;
+}
+
+.osd .scale.trough.highlight {
+    border-color: mix(@osd_button_border, @theme_selected_bg_color, 0.70);
+    background-image: linear-gradient(to bottom,
+                                      mix(shade(@osd_button_border, 0.55), @theme_selected_bg_color, 0.70),
+                                      mix(shade(@osd_button_border, 0.90), @theme_selected_bg_color, 0.70)
+                                      );
 }
 
 .osd GtkProgressBar,

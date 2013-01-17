@@ -91,6 +91,9 @@
 @define-color internal_element_insensitive mix(@internal_element_color, @theme_base_color, 0.65);
 
 @define-color scale_progress_fill #2c85e2;
+@define-color scale_highlight_border #182f4c;
+@define-color scale_highlight_bg #356599;
+@define-color scale_highlight_shadow alpha(white, 0.20);
 
 @define-color notebook_active_tab_border shade(@theme_selected_bg_color, 0.5);
 @define-color notebook_selected_tab_color alpha(@theme_selected_bg_color, 0.75);
