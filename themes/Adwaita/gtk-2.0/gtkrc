@@ -128,6 +128,15 @@ style "default"
             overlay_file    		= "Check-Radio/checkbox-unchecked.png"
             overlay_stretch 		= FALSE
         }
+	image
+	{
+            function        		= CHECK
+            recolorable     		= TRUE
+            state 			= SELECTED
+            shadow          		= OUT
+            overlay_file    		= "Check-Radio/checkbox-unchecked.png"
+            overlay_stretch 		= FALSE
+        }
 	image 
 	{
             function        		= CHECK
@@ -160,6 +169,15 @@ style "default"
             function        		= CHECK
             recolorable     		= TRUE
 	    state 		        = ACTIVE
+            shadow          		= IN
+            overlay_file    		= "Check-Radio/checkbox-checked.png"
+            overlay_stretch 		= FALSE
+        }
+	image
+	{
+            function        		= CHECK
+            recolorable     		= TRUE
+	    state 		        = SELECTED
             shadow          		= IN
             overlay_file    		= "Check-Radio/checkbox-checked.png"
             overlay_stretch 		= FALSE
@@ -200,6 +218,14 @@ style "default"
             overlay_file    		= "Check-Radio/option-unchecked.png"
             overlay_stretch 		= FALSE
         }
+	image
+	{
+            function        		= OPTION
+            state 			= SELECTED
+            shadow          		= OUT
+            overlay_file    		= "Check-Radio/option-unchecked.png"
+            overlay_stretch 		= FALSE
+        }
 	image 
 	{
             function        		= OPTION
@@ -228,6 +254,14 @@ style "default"
 	{
             function        		= OPTION
 	    state			= ACTIVE
+            shadow          		= IN
+            overlay_file    		= "Check-Radio/option-checked.png"
+            overlay_stretch	 	= FALSE
+        }
+	image
+	{
+            function        		= OPTION
+	    state			= SELECTED
             shadow          		= IN
             overlay_file    		= "Check-Radio/option-checked.png"
             overlay_stretch	 	= FALSE
