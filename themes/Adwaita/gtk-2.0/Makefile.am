@@ -79,10 +79,8 @@ asset_data = \
 	Lines/menu_line_h.png \
 	Menu-Menubar/menubar_button.png \
 	Menu-Menubar/menubar.png \
-	Others/bg.png \
 	Others/focus.png \
 	Others/null.png \
-	Others/ruler.png \
 	Others/tree_header.png \
 	ProgressBar/progressbar.png \
 	ProgressBar/progressbar_v.png \
