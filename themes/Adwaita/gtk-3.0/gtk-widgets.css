@@ -2484,6 +2484,14 @@ GtkCheckButton:selected:focus {
     padding: 1px;
 }
 
+.toolbar .button.text-button {
+    padding: 2px 16px;
+}
+
+.toolbar .button.image-button {
+    padding: 5px 4px 4px 5px;
+}
+
 .toolbar:insensitive {
     color: alpha (@theme_fg_color, 0.6);
     background-color: @insensitive_bg_color;
@@ -2495,7 +2503,7 @@ GtkCheckButton:selected:focus {
 .toolbar.menubar {
     -GtkToolbar-button-relief: normal;
     
-    padding: 6px 6px 4px 6px; /* weird padding to compensate border-images 
+    padding: 6px 6px 5px 6px; /* weird padding to compensate border-images
                                  and eventual top border presence, 
                                  see selection mode toolbars */
 
@@ -3003,6 +3011,7 @@ GtkProgressBar.osd.progressbar {
     border-style: solid;
 
     text-shadow: 0 1px @selection_toolbar_shadow;
+    padding: 6px;
 }
 
 /* regular button */
@@ -3071,8 +3080,6 @@ GtkProgressBar.osd.progressbar {
                                       @selection_toolbar_suggested_button_a,
                                       @selection_toolbar_suggested_button_b 40%,
                                       @selection_toolbar_suggested_button_c);
-    padding-left: 6px;
-    padding-right: 6px;
 
     border-image: none;
     border-color: @selection_toolbar_suggested_button_border;
