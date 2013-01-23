@@ -4,6 +4,11 @@
 /****************
  * Applications *
  ****************/
+/* used by gnome-font-viewer and sushi */
+SushiFontWidget {
+    padding: 6px 12px;
+}
+
 /* gnome-terminal */
 TerminalScreen {
     background-color: @theme_base_color;
