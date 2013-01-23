@@ -2956,8 +2956,6 @@ GtkProgressBar.osd.progressbar {
     border-width: 1px;
 
     color: @suggested_action_button_fg;
-
-    text-shadow: 0 -1px @suggested_action_button_shadow;
 }
 
 .toolbar .suggested-action.button:hover,
@@ -2985,16 +2983,24 @@ GtkProgressBar.osd.progressbar {
     border-color: @unfocused_borders;
 }
 
+.toolbar .suggested-action.button *,
+.suggested-action.button * {
+    text-shadow: 0 1px @suggested_action_button_shadow;
+    icon-shadow: 0 1px @suggested_action_button_shadow;
+}
+
 .toolbar .suggested-action.button *:active,
 .toolbar .suggested-action.button *:hover:active,
 .suggested-action.button *:active,
 .suggested-action.button *:hover:active {
-    text-shadow: 0 -1px shade(@suggested_action_button_shadow, 1.15);
+    text-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);
+    icon-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);
 }
 
 .toolbar .suggested-action.button *:backdrop,
 .suggested-action.button *:backdrop {
     text-shadow: none;
+    icon-shadow: none;
 }
 
 /**************************
