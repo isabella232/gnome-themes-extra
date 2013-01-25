@@ -53,23 +53,31 @@ asset_data = \
 	Check-Radio/option-unchecked.png \
 	Check-Radio/option-checked-insensitive.png \
 	Check-Radio/option-unchecked-insensitive.png \
-	Entry/combo-entry-border.png \
-	Entry/combo-entry-border-rtl.png \
-	Entry/combo-entry-border-active.png \
-	Entry/combo-entry-border-active-rtl.png \
-	Entry/combo-entry-border-disabled.png \
-	Entry/combo-entry-border-disabled-rtl.png \
+	Entry/combo-entry-border-bg.png \
+	Entry/combo-entry-border-rtl-bg.png \
+	Entry/combo-entry-border-active-bg.png \
+	Entry/combo-entry-border-active-rtl-bg.png \
+	Entry/combo-entry-border-disabled-bg.png \
+	Entry/combo-entry-border-disabled-rtl-bg.png \
+	Entry/combo-entry-border-notebook.png \
+	Entry/combo-entry-border-rtl-notebook.png \
+	Entry/combo-entry-border-active-notebook.png \
+	Entry/combo-entry-border-active-rtl-notebook.png \
+	Entry/combo-entry-border-disabled-notebook.png \
+	Entry/combo-entry-border-disabled-rtl-notebook.png \
 	Entry/combo-entry-button.png \
 	Entry/combo-entry-button-rtl.png \
 	Entry/combo-entry-button-active.png \
 	Entry/combo-entry-button-active-rtl.png \
 	Entry/combo-entry-button-disabled.png \
 	Entry/combo-entry-button-disabled-rtl.png \
-	Entry/entry-border.png \
-	Entry/entry-border-active.png \
-	Entry/entry-border-disabled.png \
-	Entry/entry-bg.png \
-	Entry/entry-bg-disabled.png \
+	Entry/entry-border-fill.png \
+	Entry/entry-border-bg.png \
+	Entry/entry-border-active-bg.png \
+	Entry/entry-border-disabled-bg.png \
+	Entry/entry-border-notebook.png \
+	Entry/entry-border-active-notebook.png \
+	Entry/entry-border-disabled-notebook.png \
 	Expanders/minus.png \
 	Expanders/plus.png \
 	Handles/handle-h.png \
