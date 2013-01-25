@@ -61,8 +61,9 @@ AC_MSG_CHECKING([building gtk2 engine])
 AM_CONDITIONAL(GTK2_ENGINE, test "x$enable_gtk2_engine" = "xyes")
 AC_MSG_RESULT([$enable_gtk2_engine])
 
+GTK2_VERSION_REQUIRED=2.24.15
 if test "x$enable_gtk2_engine" = "xyes"; then
-  PKG_CHECK_MODULES([GTK2_ENGINE], [gtk+-2.0 gdk-2.0])
+  PKG_CHECK_MODULES([GTK2_ENGINE], [gtk+-2.0 >= $GTK2_VERSION_REQUIRED gdk-2.0 >= $GTK2_VERSION_REQUIRED])
 fi
 
 GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable glib_compile_resources gio-2.0`
