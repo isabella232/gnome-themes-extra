@@ -42,9 +42,6 @@ fi
 GTK3_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-3.0`
 AC_SUBST(GTK3_VERSION)
 
-GTK2_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
-AC_SUBST(GTK2_VERSION)
-
 AC_ARG_ENABLE([gtk2-engine],
               AC_HELP_STRING([--disable-gtk2-engine],
                              [Disable Gtk+-2 engine [default=no]]),
@@ -59,16 +56,11 @@ if test "x$enable_gtk2_engine" = "xyes"; then
   PKG_CHECK_MODULES([GTK2_ENGINE], [gtk+-2.0 >= $GTK2_VERSION_REQUIRED gdk-2.0 >= $GTK2_VERSION_REQUIRED])
 fi
 
+GTK2_VERSION=`$PKG_CONFIG --variable=gtk_binary_version gtk+-2.0`
+AC_SUBST(GTK2_VERSION)
+
 GLIB_COMPILE_RESOURCES=`$PKG_CONFIG --variable glib_compile_resources gio-2.0`
 AC_SUBST(GLIB_COMPILE_RESOURCES)
-
-# Configure option to force placeholders
-AC_ARG_ENABLE([placeholders],
-              AC_HELP_STRING([--enable-placeholders],
-                             [Enable placeholder icons [default=no]]),
-              enable_placeholders=$enableval,
-              enable_placeholders=no)
-AM_CONDITIONAL(PLACEHOLDERS, test "x$enable_placeholders" != "xno")
 
 AC_PATH_PROG(GTK_UPDATE_ICON_CACHE, gtk-update-icon-cache)
 if test -z "$GTK_UPDATE_ICON_CACHE"; then
