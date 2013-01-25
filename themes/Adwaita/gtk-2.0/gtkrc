@@ -2202,7 +2202,7 @@ widget_class "*<GtkNotebook>*<GtkEntry>"                style "notebook_entry"
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>"       style "entry"
 
 widget_class "*<GtkNotebook>*<GtkComboBoxEntry>*<GtkEntry>" style "notebook_combobox_entry"
-widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComoBoxEntry>*<GtkEntry>" style "combobox_entry"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>" style "combobox_entry"
 
 # We also need to avoid changing fg color for the inactive notebook tab labels
 widget_class "*<GtkNotebook>.<GtkLabel>"                style "notebook_tab_label"
