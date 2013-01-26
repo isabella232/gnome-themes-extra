@@ -204,23 +204,23 @@
     background-image: url("assets/radio-mixed-backdrop-insensitive.png");
 }
 
-.sidebar .radio:active,
-.sidebar .radio:active:focus,
-.sidebar .radio:active:hover {
+.sidebar .view.radio:active,
+.sidebar .view.radio:active:focus,
+.sidebar .view.radio:active:hover {
     background-image: url("assets/sidebar-radio-checked.svg");
 }
 
-.sidebar .radio:hover {
+.sidebar .view.radio:hover {
     background-image: url("assets/sidebar-radio-prelight.svg");
 }
 
-.sidebar .radio:active:selected,
-.sidebar .radio:active:selected:focus {
+.sidebar .view.radio:active:selected,
+.sidebar .view.radio:active:selected:focus {
     background-image: url("assets/sidebar-radio-selected.svg");
 }
 
-.sidebar .radio:selected:hover,
-.sidebar .radio:selected:focus {
+.sidebar .view.radio:selected:hover,
+.sidebar .view.radio:selected:focus {
     background-image: url("assets/sidebar-radio-selected-prelight.svg");    
 }
 

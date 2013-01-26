@@ -240,30 +240,30 @@ GeditStatusComboBox .button:backdrop:hover {
     border-radius: 0 0 5px 5px;
 }
 
-.documents-dropdown .radio,
-.documents-dropdown .radio:focused,
-.documents-dropdown .radio:selected {
+.documents-dropdown .view.radio,
+.documents-dropdown .view.radio:focused,
+.documents-dropdown .view.radio:selected {
     background-image: none;
     background-color: alpha(@theme_base_color, 0.0);
 }
 
-.documents-dropdown .radio:active,
-.documents-dropdown .radio:active:focused,
-.documents-dropdown .radio:active:prelight {
+.documents-dropdown .view.radio:active,
+.documents-dropdown .view.radio:active:focused,
+.documents-dropdown .view.radio:active:prelight {
     background-image: url("assets/sidebar-radio-checked.svg");
 }
 
-.documents-dropdown .radio:prelight {
+.documents-dropdown .view.radio:prelight {
     background-image: url("assets/sidebar-radio-prelight.svg");
 }
 
-.documents-dropdown .radio:active:selected,
-.documents-dropdown .radio:active:selected:focused {
+.documents-dropdown .view.radio:active:selected,
+.documents-dropdown .view.radio:active:selected:focused {
     background-image: url("assets/sidebar-radio-selected.svg");
 }
 
-.documents-dropdown .radio:selected:prelight,
-.documents-dropdown .radio:selected:focused {
+.documents-dropdown .view.radio:selected:prelight,
+.documents-dropdown .view.radio:selected:focused {
     background-image: url("assets/sidebar-radio-selected-prelight.svg");
 }
 
