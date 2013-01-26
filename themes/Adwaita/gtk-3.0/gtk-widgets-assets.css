@@ -12,7 +12,8 @@
  *************************/
 
 /* draw regular check and radio items using our SVG assets */
-.check {
+.check,
+.view.cell.check {
     background-image: url("assets/checkbox-unchecked.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -38,6 +39,7 @@
 }
 
 .check:backdrop,
+.view.cell.check:backdrop,
 .check row:selected:backdrop {
     background-image: url("assets/checkbox-unchecked-backdrop.png");
 }
@@ -47,8 +49,8 @@
     background-image: url("assets/checkbox-unchecked-backdrop-insensitive.png");
 }
 
-
-.check:active {
+.check:active,
+.view.cell.check:active {
     background-image: url("assets/checkbox-checked.png");
 }
 
@@ -67,6 +69,7 @@
 }
 
 .check:active:backdrop,
+.view.cell:active:backdrop,
 .check row:selected:active:backdrop {
     background-image: url("assets/checkbox-checked-backdrop.png");
 }
@@ -105,7 +108,8 @@
     background-image: url("assets/checkbox-mixed-backdrop-insensitive.png");
 }
 
-.radio {
+.radio,
+.view.cell.radio {
     background-image: url("assets/radio-unchecked.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -130,6 +134,7 @@
 }
 
 .radio:backdrop,
+.view.cell.radio:backdrop,
 .radio row:selected:backdrop {
     background-image: url("assets/radio-unchecked-backdrop.png");
 }
@@ -140,7 +145,8 @@
 }
 
 
-.radio:active {
+.radio:active,
+.view.cell.radio:active {
     background-image: url("assets/radio-checked.png");
 }
 
@@ -159,6 +165,7 @@
 }
 
 .radio:active:backdrop,
+.view.cell.radio:active:backdrop,
 .radio row:selected:active:backdrop {
     background-image: url("assets/radio-checked-backdrop.png");
 }
