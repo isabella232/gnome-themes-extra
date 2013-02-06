@@ -1,3 +1,17 @@
+3.7.5
+=====
+
+Improve paddings for buttons on main toolbars
+Make it possible to override GtkEntry's background color in GTK2
+Add a workaround to render correctly OpenOffice.org scrollbars in GTK2
+Fix GtkFrame with labels not showing a stroke in GTK2
+Add some missing selectors for the SELECTED check/radio states in GTK2
+Use arrows of the same shape for all four directions in GTK2
+Add HC icons for new Settings panels
+Don't insall translations
+Fix missing check/radio buttons for content-view widgets
+Set padding for the SushiFontWidget preview widget
+
 3.7.4
 =====
 
