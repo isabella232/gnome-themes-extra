@@ -690,6 +690,13 @@ ContactsWindow .sidebar .view:selected:focus {
   padding-right: 6px;
 }
 
+.toolbar.contacts-selection-toolbar {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: @borders;
+  border-image: none;
+}
+
 /* Gucharmap */
 GucharmapChartable:active,
 GucharmapChartable:focus,
