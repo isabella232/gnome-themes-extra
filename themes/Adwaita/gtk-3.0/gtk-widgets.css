@@ -3545,12 +3545,12 @@ GdMainIconView.content-view {
     -GdMainIconView-icon-size: 40;
 }
 
-GtkIconView.content-view.check {
+GtkIconView.content-view.cell.check {
     background-image: url("assets/grid-selection-unchecked.svg");
     background-color: transparent;
 }
 
-GtkIconView.content-view.check:active {
+GtkIconView.content-view.cell.check:active {
     background-image: url("assets/grid-selection-checked.svg");
     background-color: transparent;
 }
