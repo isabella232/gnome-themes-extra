@@ -205,6 +205,7 @@
     <file preprocess="to-pixdata">borders/tooltip-generic-border-dark.svg</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border-focused-dark.svg</file>
     <file>gnome-applications.css</file>
+    <file>gnome-applications-dark-overrides.css</file>
     <file>gtk-widgets.css</file>
     <file>gtk-widgets-backgrounds.css</file>
     <file>gtk-widgets-borders.css</file>
