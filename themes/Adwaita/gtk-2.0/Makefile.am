@@ -111,6 +111,8 @@ asset_data = \
         Scrollbars/trough-scrollbar-horiz.png \
 	Scrollbars/trough-scrollbar-vert.png \
 	Shadows/frame.png \
+	Shadows/frame-gap-start.png \
+	Shadows/frame-gap-end.png \
 	Spin/down-background.png \
 	Spin/up-background.png \
 	Spin/down-background-disable.png \
