@@ -109,3 +109,5 @@ EXTRA_DIST = \
 	index.theme
 
 DISTCLEANFILES = index.theme
+
+-include $(top_srcdir)/git.mk
