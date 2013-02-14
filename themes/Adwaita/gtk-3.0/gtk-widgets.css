@@ -2673,9 +2673,11 @@ GtkOverlay.osd {
     border-width: 1px;
     border-style: solid;
     border-image: none;
-    border-color: @osd_button_border;
     border-radius: 5px;
 }
+
+.osd .button { border-color: @osd_button_border; }
+.osd .button:active { border-color: @osd_button_border_active; }
 
 .osd .button {
     padding: 4px;
@@ -2767,7 +2769,7 @@ GtkOverlay.osd {
 .osd GtkMenuButton.button:active {
     background-image: linear-gradient(to bottom,
                                       @osd_button_bg_active_a,
-                                      @osd_button_bg_active_b 68%,
+                                      @osd_button_bg_active_b 20%,
                                       @osd_button_bg_active_c
                                       );
 }

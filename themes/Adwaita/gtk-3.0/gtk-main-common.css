@@ -29,9 +29,9 @@
 @define-color osd_button_bg_hover_b alpha(@osd_lowlight, 0.14);
 @define-color osd_button_bg_hover_c alpha(@osd_highlight, 0.14);
 
-@define-color osd_button_bg_active_a alpha(@osd_lowlight, 0.18);
-@define-color osd_button_bg_active_b alpha(@osd_highlight, 0.23);
-@define-color osd_button_bg_active_c alpha(@osd_lowlight, 0.17);
+@define-color osd_button_bg_active_a alpha(black, .9);
+@define-color osd_button_bg_active_b alpha(black, 0.4);
+@define-color osd_button_bg_active_c alpha(black, 0);
 
 @define-color osd_button_bg_backdrop alpha(@osd_highlight, 0.18);
 @define-color osd_button_bg_backdrop_hover alpha(@osd_highlight, 0.25);
@@ -47,6 +47,7 @@
 @define-color osd_button_fg_insensitive shade(@osd_fg, 0.70);
 
 @define-color osd_button_border alpha(@osd_highlight, 0.40);
+@define-color osd_button_border_active alpha(@osd_highlight, 0.8);
 @define-color osd_button_inset shade(@osd_fg, 0.67);
 @define-color osd_button_shadow alpha(black, 0.35);
 
