@@ -2510,6 +2510,25 @@ GtkCheckButton:selected:focus {
 
 }
 
+/***************
+ * Header bars *
+ ***************/
+.header-bar {
+    border-width: 0 0 2px;
+    border-style: solid;
+    border-image: linear-gradient(to top,
+                                  shade(@borders, 0.90),
+                                  shade(@borders, 0.90) 1px,
+                                  alpha(black, 0.07) 1px) 0 0 2;
+}
+
+.header-bar:backdrop {
+    border-image: linear-gradient(to top,
+                                  @unfocused_borders,
+                                  @unfocused_borders 1px,
+                                  transparent 1px) 0 0 2;
+}
+
 /********************
  * Primary Toolbars *
  ********************/
