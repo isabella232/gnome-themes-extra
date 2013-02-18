@@ -2045,10 +2045,11 @@ style "frame"
 	{
         image
         {
-                function		= SHADOW
-                file			= "Shadows/frame.png"				
-                border			= { 1, 1, 1, 1 }
-                stretch			= TRUE
+                function                = SHADOW
+                file                    = "Shadows/frame.png"
+                border                  = { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                shadow                  = IN
         }
         image
         {
@@ -2060,6 +2061,67 @@ style "frame"
                 gap_start_border        = { 1, 0, 0, 0 }
                 gap_end_file            = "Shadows/frame-gap-end.png"
                 gap_end_border          = { 0, 1, 0, 0 }
+                shadow                  = IN
+        }
+        image
+        {
+                function                = SHADOW
+                file                    = "Shadows/frame.png"
+                border                  = { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                shadow                  = OUT
+        }
+        image
+        {
+                function                = SHADOW_GAP
+                file                    = "Shadows/frame.png"
+                border                  = { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                gap_start_file          = "Shadows/frame-gap-start.png"
+                gap_start_border        = { 1, 0, 0, 0 }
+                gap_end_file            = "Shadows/frame-gap-end.png"
+                gap_end_border          = { 0, 1, 0, 0 }
+                shadow                  = OUT
+        }
+        image
+        {
+                function                = SHADOW
+                file                    = "Shadows/frame.png"
+                border			= { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                shadow                  = ETCHED_IN
+        }
+        image
+        {
+                function                = SHADOW_GAP
+                file                    = "Shadows/frame.png"
+                border                  = { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                gap_start_file          = "Shadows/frame-gap-start.png"
+                gap_start_border        = { 1, 0, 0, 0 }
+                gap_end_file            = "Shadows/frame-gap-end.png"
+                gap_end_border          = { 0, 1, 0, 0 }
+                shadow                  = ETCHED_IN
+        }
+        image
+        {
+                function                = SHADOW
+                file                    = "Shadows/frame.png"
+                border                  = { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                shadow                  = ETCHED_OUT
+        }
+        image
+        {
+                function                = SHADOW_GAP
+                file                    = "Shadows/frame.png"
+                border                  = { 1, 1, 1, 1 }
+                stretch                 = TRUE
+                gap_start_file          = "Shadows/frame-gap-start.png"
+                gap_start_border        = { 1, 0, 0, 0 }
+                gap_end_file            = "Shadows/frame-gap-end.png"
+                gap_end_border          = { 0, 1, 0, 0 }
+                shadow                  = ETCHED_OUT
         }
         }
 }
