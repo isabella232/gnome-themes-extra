@@ -1,3 +1,17 @@
+3.6.3
+=====
+
+GTK2 fixes:
+- Fix toolbar styling in Eclipse/SWT
+- Fix completion tooltips styling in Eclipse/SWT
+- Fix a bug rendering menus in Opera
+- Fix missing shadow for frames with embedded labels
+- Fix missing SELECTED states for check/radio assets
+- Make it possible to override GtkEntry's background color
+- Fix stray shadow for frames with GTK_SHADOW_NONE
+- Workaround an OpenOffice.org scrollbar rendering bug
+- Require GTK+ 2.24.15 and 3.6.2
+
 3.6.2
 =====
 
