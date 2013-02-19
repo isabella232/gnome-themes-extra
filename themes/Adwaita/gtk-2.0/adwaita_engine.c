@@ -49,6 +49,22 @@ typedef struct
 
 G_DEFINE_DYNAMIC_TYPE (AdwaitaStyle, adwaita_style, GTK_TYPE_STYLE)
 
+static void
+do_toplevel_hack (GtkWidget   *widget,
+                  const gchar *widget_name)
+{
+  gboolean tried_hack;
+
+  tried_hack = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "adwaita-toplevel-hack"));
+
+  if (!tried_hack)
+    {
+      g_object_set_data (G_OBJECT (widget),
+                         "adwaita-toplevel-hack", GINT_TO_POINTER (1));
+      gtk_widget_set_name (widget, widget_name);
+    }
+}
+
 static gboolean
 wm_is_fallback (void)
 {
@@ -145,6 +161,7 @@ adwaita_draw_flat_box (GtkStyle      *style,
                        gint	      height)
 {
   gboolean tried_ooo_hack;
+  const gchar *app_name;
 
   GTK_STYLE_CLASS (adwaita_style_parent_class)->draw_flat_box (style, window, state_type, shadow_type,
                                                                area, widget, detail,
@@ -155,17 +172,11 @@ adwaita_draw_flat_box (GtkStyle      *style,
       (gtk_window_get_window_type (GTK_WINDOW (widget)) != GTK_WINDOW_TOPLEVEL))
     return;
 
-  if (!g_str_has_prefix (g_get_application_name (), "OpenOffice.org"))
-    return;
-
-  tried_ooo_hack = GPOINTER_TO_INT (g_object_get_data (G_OBJECT (widget), "adwaita-ooo-hack"));
-
-  if (!tried_ooo_hack)
-    {
-      g_object_set_data (G_OBJECT (widget),
-                         "adwaita-ooo-hack", GINT_TO_POINTER (1));
-      gtk_widget_set_name (widget, "openoffice-toplevel");
-    }
+  app_name = g_get_application_name ();
+  if (g_str_has_prefix (app_name, "OpenOffice.org"))
+    do_toplevel_hack (widget, "openoffice-toplevel");
+  else if (g_str_has_prefix (app_name, "LibreOffice"))
+    do_toplevel_hack (widget, "libreoffice-toplevel");
 }
 
 static void

@@ -72,6 +72,7 @@ asset_data = \
 	Entry/combo-entry-button-disabled.png \
 	Entry/combo-entry-button-disabled-rtl.png \
 	Entry/entry-border-fill.png \
+	Entry/entry-border-fill-solid.png \
 	Entry/entry-border-bg.png \
 	Entry/entry-border-active-bg.png \
 	Entry/entry-border-disabled-bg.png \
