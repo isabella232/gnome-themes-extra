@@ -1,3 +1,9 @@
+3.6.5
+=====
+
+Distributors: use 3.6.5 instead of 3.6.4
+Fix regression rendering LibreOffice/OpenOffice.org entry backgrounds
+
 3.6.4
 =====
 
