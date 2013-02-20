@@ -2527,6 +2527,7 @@ GtkCheckButton:selected:focus {
                                   @unfocused_borders,
                                   @unfocused_borders 1px,
                                   @theme_unfocused_bg_color 1px) 0 0 2;
+    box-shadow: none;
 
     background-color: @theme_unfocused_bg_color;
 }
@@ -3091,19 +3092,28 @@ GtkProgressBar.osd.progressbar {
 
     border-color: @borders;
     border-style: solid;
+    border-image: none;
 
     text-shadow: 0 1px @selection_toolbar_shadow;
 }
 
 .selection-mode.header-bar {
     border-top-color: @selection_toolbar_bg_a;
-    border-bottom-color: shade(@selection_toolbar_bg_b, 0.75);
+    border-bottom-color: @selection_toolbar_border;
     border-width: 1px 0;
-    box-shadow: inset 0 -1px shade(@selection_toolbar_bg_b, 0.90);
+    box-shadow: inset 0 -1px shade(@selection_toolbar_border, 1.20);
 }
 
 .selection-mode.toolbar {
     padding: 6px;
+}
+
+.selection-mode.header-bar:backdrop,
+.selection-mode.toolbar:backdrop {
+    background-image: none;
+    background-color: @selection_toolbar_bg_backdrop;
+    border-color: @selection_toolbar_bg_backdrop;
+    box-shadow: none;
 }
 
 /* regular button */
@@ -3151,7 +3161,7 @@ GtkProgressBar.osd.progressbar {
 
     background-image: none;
     background-color: transparent;
-    border-color: alpha(@selection_toolbar_button_border, 0.3);
+    border-color: @selection_toolbar_button_border_backdrop;
 
     box-shadow: none;
     color: @selection_toolbar_button_fg;
@@ -3227,7 +3237,7 @@ GtkProgressBar.osd.progressbar {
 
     background-image: none; /* remove custom bg, we want colored buttons to look like normal buttons in backdrop*/
     background-color: @selection_toolbar_suggested_button_b;
-    border-color: alpha(@selection_toolbar_suggested_button_border, 0.3);
+    border-color: @selection_toolbar_suggested_button_border_backdrop;
 
     box-shadow: none;
     color: @theme_unfocused_fg_color;
@@ -3249,8 +3259,8 @@ GtkProgressBar.osd.progressbar {
     icon-shadow: 0 1px @button_text_shadow;
 }
 
-.selection-mode.toolbar .suggested-action.button *:backdrop,
-.selection-mode.header-bar .suggested-action.button *:backdrop {
+.selection-mode.header-bar .suggested-action.button *:backdrop,
+.selection-mode.toolbar .suggested-action.button *:backdrop {
     text-shadow: none;
     icon-shadow: none;
 }
