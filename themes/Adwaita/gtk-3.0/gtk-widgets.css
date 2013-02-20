@@ -3173,6 +3173,12 @@ GtkProgressBar.osd.progressbar {
     icon-shadow: 0 1px @selection_toolbar_button_shadow;
 }
 
+.selection-mode.header-bar .button *:backdrop,
+.selection-mode.toolbar .button *:backdrop {
+    text-shadow: none;
+    icon-shadow: none;
+}
+
 /* suggested button */
 .selection-mode.header-bar .suggested-action.button,
 .selection-mode.toolbar .suggested-action.button,
@@ -3221,7 +3227,7 @@ GtkProgressBar.osd.progressbar {
 
     background-image: none; /* remove custom bg, we want colored buttons to look like normal buttons in backdrop*/
     background-color: @selection_toolbar_suggested_button_b;
-    border-color: alpha(@selection_toolbar_button_border, 0.3);
+    border-color: alpha(@selection_toolbar_suggested_button_border, 0.3);
 
     box-shadow: none;
     color: @theme_unfocused_fg_color;
@@ -3241,6 +3247,12 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton.suggested-action *:active {
     text-shadow: 0 1px @button_text_shadow;
     icon-shadow: 0 1px @button_text_shadow;
+}
+
+.selection-mode.toolbar .suggested-action.button *:backdrop,
+.selection-mode.header-bar .suggested-action.button *:backdrop {
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 /* menu button */
@@ -3289,6 +3301,11 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.header-bar .selection-menu.button *,
 .selection-mode.toolbar .selection-menu.button * {
     text-shadow: 0 1px @selection_toolbar_shadow;
+}
+
+.selection-mode.header-bar .selection-menu.button *:backdrop,
+.selection-mode.toolbar .selection-menu.button *:backdrop {
+    text-shadow: none;
 }
 
 .selection-mode.header-bar .selection-menu.button .menuitem *,

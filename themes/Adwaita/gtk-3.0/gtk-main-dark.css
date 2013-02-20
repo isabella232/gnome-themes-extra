@@ -147,7 +147,7 @@
 @define-color selection_toolbar_button_b #3465a4;
 @define-color selection_toolbar_button_fg #bfbfbf;
 @define-color selection_toolbar_button_border #23446f;
-@define-color selection_toolbar_shadow alpha(black, 0.30);
+@define-color selection_toolbar_button_shadow alpha(black, 0.30);
 
 @define-color selection_toolbar_suggested_button_a #3e4545;
 @define-color selection_toolbar_suggested_button_b #2e3232;

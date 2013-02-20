@@ -229,17 +229,21 @@ GtkColorEditor GtkColorSwatch.color-light:hover {
     border-color: @unfocused_borders;
 }
 
+.selection-mode.header-bar .button *,
+.selection-mode.header-bar .button *:active,
 .selection-mode.toolbar .button *,
-.selection-mode.toolbar GtkToolButton .button *,
 .selection-mode.toolbar .button *:active,
+.selection-mode.toolbar GtkToolButton .button *,
 .selection-mode.toolbar GtkToolButton .button *:active {
     text-shadow: 0 -1px @selection_toolbar_button_shadow;
     icon-shadow: 0 -1px @selection_toolbar_button_shadow;
 }
 
+.selection-mode.header-bar .suggested-action.button *,
+.selection-mode.header-bar .suggested-action.button *:active,
 .selection-mode.toolbar .suggested-action.button *,
-.selection-mode.toolbar GtkToolButton.suggested-action .button *,
 .selection-mode.toolbar .suggested-action.button *:active,
+.selection-mode.toolbar GtkToolButton.suggested-action .button *,
 .selection-mode.toolbar GtkToolButton.suggested-action *:active {
     text-shadow: 0 -1px @button_text_shadow;
     icon-shadow: 0 -1px @button_text_shadow;
