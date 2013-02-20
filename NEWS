@@ -1,3 +1,17 @@
+3.7.90
+======
+
+GTK3:
+  Add support for styling of header bar widgets
+  Add support fof OSD buttons in a GtkOverlay
+  Improve style for pressed OSD buttons
+  Update gedit search slider CSS
+  Added a style for Contacts' selection toolbar
+  Fix Epiphany's toolbar buttons in dark theme
+GTK2:
+  Fix a regression in drawing Libreoffice/OO.o GtkEntry backgrounds
+  Don't render a stroke for GTK_SHADOW_NONE frames
+
 3.7.6
 =====
 
