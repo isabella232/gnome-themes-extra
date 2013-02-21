@@ -182,6 +182,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/sparkleshare.png  \
 ./icons/16x16/apps/system-config-authentication.png  \
 ./icons/16x16/apps/system-file-manager.png  \
+./icons/16x16/apps/system-software-install.png  \
 ./icons/16x16/apps/system-users.png  \
 ./icons/16x16/apps/tasque.png  \
 ./icons/16x16/apps/text-editor.png  \
@@ -329,6 +330,7 @@ EXTRA_DIST = \
 ./icons/16x16/status/changes-prevent.png  \
 ./icons/16x16/status/channel-insecure.png  \
 ./icons/16x16/status/channel-secure.png  \
+./icons/16x16/status/computer-fail.png  \
 ./icons/16x16/status/dialog-error.png  \
 ./icons/16x16/status/dialog-information.png  \
 ./icons/16x16/status/dialog-password.png  \
@@ -594,6 +596,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/sparkleshare.png  \
 ./icons/22x22/apps/system-config-authentication.png  \
 ./icons/22x22/apps/system-file-manager.png  \
+./icons/22x22/apps/system-software-install.png  \
 ./icons/22x22/apps/system-users.png  \
 ./icons/22x22/apps/tasque.png  \
 ./icons/22x22/apps/text-editor.png  \
@@ -741,6 +744,7 @@ EXTRA_DIST = \
 ./icons/22x22/status/changes-prevent.png  \
 ./icons/22x22/status/channel-insecure.png  \
 ./icons/22x22/status/channel-secure.png  \
+./icons/22x22/status/computer-fail.png  \
 ./icons/22x22/status/dialog-error.png  \
 ./icons/22x22/status/dialog-information.png  \
 ./icons/22x22/status/dialog-password.png  \
@@ -1006,6 +1010,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/sparkleshare.png  \
 ./icons/24x24/apps/system-config-authentication.png  \
 ./icons/24x24/apps/system-file-manager.png  \
+./icons/24x24/apps/system-software-install.png  \
 ./icons/24x24/apps/system-users.png  \
 ./icons/24x24/apps/tasque.png  \
 ./icons/24x24/apps/text-editor.png  \
@@ -1153,6 +1158,7 @@ EXTRA_DIST = \
 ./icons/24x24/status/changes-prevent.png  \
 ./icons/24x24/status/channel-insecure.png  \
 ./icons/24x24/status/channel-secure.png  \
+./icons/24x24/status/computer-fail.png  \
 ./icons/24x24/status/dialog-error.png  \
 ./icons/24x24/status/dialog-information.png  \
 ./icons/24x24/status/dialog-password.png  \
@@ -1417,6 +1423,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/sparkleshare.png  \
 ./icons/256x256/apps/system-config-authentication.png  \
 ./icons/256x256/apps/system-file-manager.png  \
+./icons/256x256/apps/system-software-install.png  \
 ./icons/256x256/apps/system-users.png  \
 ./icons/256x256/apps/tasque.png  \
 ./icons/256x256/apps/text-editor.png  \
@@ -1564,6 +1571,7 @@ EXTRA_DIST = \
 ./icons/256x256/status/changes-prevent.png  \
 ./icons/256x256/status/channel-insecure.png  \
 ./icons/256x256/status/channel-secure.png  \
+./icons/256x256/status/computer-fail.png  \
 ./icons/256x256/status/dialog-error.png  \
 ./icons/256x256/status/dialog-information.png  \
 ./icons/256x256/status/dialog-password.png  \
@@ -1829,6 +1837,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/sparkleshare.png  \
 ./icons/32x32/apps/system-config-authentication.png  \
 ./icons/32x32/apps/system-file-manager.png  \
+./icons/32x32/apps/system-software-install.png  \
 ./icons/32x32/apps/system-users.png  \
 ./icons/32x32/apps/tasque.png  \
 ./icons/32x32/apps/text-editor.png  \
@@ -1976,6 +1985,7 @@ EXTRA_DIST = \
 ./icons/32x32/status/changes-prevent.png  \
 ./icons/32x32/status/channel-insecure.png  \
 ./icons/32x32/status/channel-secure.png  \
+./icons/32x32/status/computer-fail.png  \
 ./icons/32x32/status/dialog-error.png  \
 ./icons/32x32/status/dialog-information.png  \
 ./icons/32x32/status/dialog-password.png  \
@@ -2244,6 +2254,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/sparkleshare.png  \
 ./icons/48x48/apps/system-config-authentication.png  \
 ./icons/48x48/apps/system-file-manager.png  \
+./icons/48x48/apps/system-software-install.png  \
 ./icons/48x48/apps/system-users.png  \
 ./icons/48x48/apps/tasque.png  \
 ./icons/48x48/apps/text-editor.png  \
@@ -2391,6 +2402,7 @@ EXTRA_DIST = \
 ./icons/48x48/status/changes-prevent.png  \
 ./icons/48x48/status/channel-insecure.png  \
 ./icons/48x48/status/channel-secure.png  \
+./icons/48x48/status/computer-fail.png  \
 ./icons/48x48/status/dialog-error.png  \
 ./icons/48x48/status/dialog-information.png  \
 ./icons/48x48/status/dialog-password.png  \
