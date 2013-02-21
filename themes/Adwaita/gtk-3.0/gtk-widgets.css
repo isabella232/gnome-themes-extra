@@ -263,6 +263,10 @@ GtkLabel:insensitive {
     animation: spinner 1s infinite linear;
 }
 
+.button .spinner:active {
+    color: @theme_fg_color;
+}
+
 .floating-bar {
     background-image: linear-gradient(to bottom, 
                                       @theme_base_color 20%, 
