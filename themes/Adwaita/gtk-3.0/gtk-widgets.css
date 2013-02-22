@@ -1202,6 +1202,10 @@ GtkComboBox.combobox-entry .button {
     text-shadow: 0 1px @primary_toolbar_button_text_shadow;
 }
 
+.primary-toolbar.toolbar .button.image-button {
+    padding: 3px 4px 4px;
+}
+
 .primary-toolbar .button *:active,
 .inline-toolbar .button *:active,
 .button *:active {
@@ -1254,7 +1258,37 @@ GtkComboBox.combobox-entry .button {
     icon-shadow: none;
 }
 
-/* linked buttons */
+/* linked entries/buttons */
+
+/* Set up shadows and hilights for button visual separation */
+.linked .entry {
+    box-shadow: inset -1px 0 @inset_dark_color;
+}
+
+.linked .entry:focus {
+    box-shadow: inset 1px 0 @inset_dark_color,
+                inset -1px 0 @inset_dark_color,
+                inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+
+}
+
+.linked .entry:focus:first-child {
+    box-shadow: inset -1px 0 @inset_dark_color,
+                inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+
+}
+
+.linked .entry:focus:last-child {
+    box-shadow: inset 1px 0 @inset_dark_color,
+                inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+
+}
 
 /* Set up shadows and hilights for button visual separation */
 .linked .button,
@@ -1510,6 +1544,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button.raised.linked:active,
 .primary-toolbar .button.raised.linked:insensitive,
 .primary-toolbar .button.raised.linked:backdrop,
+.primary-toolbar .linked .entry,
 .primary-toolbar .linked .button,
 .primary-toolbar .linked .button:active,
 .primary-toolbar .linked .button:insensitive,
@@ -1537,6 +1572,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button.raised.linked:active:first-child,
 .primary-toolbar .button.raised.linked:insensitive:first-child,
 .primary-toolbar .button.raised.linked:backdrop:first-child,
+.primary-toolbar .linked .entry:first-child,
 .primary-toolbar .linked .button:first-child,
 .primary-toolbar .linked .button:active:first-child,
 .primary-toolbar .linked .button:insensitive:first-child,
@@ -1565,6 +1601,7 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button.raised.linked:active:last-child,
 .primary-toolbar .button.raised.linked:insensitive:last-child,
 .primary-toolbar .button.raised.linked:backdrop:last-child,
+.primary-toolbar .linked .entry:last-child,
 .primary-toolbar .linked .button:last-child,
 .primary-toolbar .linked .button:active:last-child,
 .primary-toolbar .linked .button:insensitive:last-child,
