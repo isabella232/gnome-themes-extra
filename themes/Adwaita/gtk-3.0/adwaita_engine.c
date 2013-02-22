@@ -420,87 +420,6 @@ adwaita_engine_render_extension (GtkThemingEngine *engine,
 }
 
 static void
-adwaita_engine_render_expander (GtkThemingEngine *engine,
-                                cairo_t          *cr,
-                                gdouble           x,
-                                gdouble           y,
-                                gdouble           width,
-                                gdouble           height)
-{
-  GdkRGBA fg;
-  GtkStateFlags state;
-  gdouble side, offset;
-  gint line_width;
-  GtkBorder border;
-  const GtkWidgetPath *path = gtk_theming_engine_get_path (engine);
-
-  side = floor (MIN (width, height));
-
-  if (gtk_widget_path_is_type (path, GTK_TYPE_TREE_VIEW) &&
-      (side == 17))
-    {
-      /* HACK: draw the expander as if it was 11px instead of the allocated 17px,
-       * so that we can have a bit of padding between the view edge and the
-       * expander itself.
-       */
-      x += 3;
-      y += 3;
-      width -= 6;
-      height -= 6;
-      side -= 6;
-    }
-
-  x += width / 2 - side / 2;
-  y += height / 2 - side / 2;
-
-  x = floor (x);
-  y = floor (y);
-
-  /* make sure the rendered side length is always odd */
-  if (((gint) side % 2) == 0)
-    side -= 1.0;
-
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-    (engine, cr, x, y, side, side);
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_frame
-    (engine, cr, x, y, side, side);
-
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_color (engine, state, &fg);
-  gtk_theming_engine_get_border (engine, state, &border);
-
-  line_width = 1;
-  offset = (1 + line_width / 2.0);
-
-  cairo_save (cr);
-
-  cairo_set_line_width (cr, line_width);
-  cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
-  gdk_cairo_set_source_rgba (cr, &fg);
-
-  cairo_move_to (cr,
-                 x + border.left + offset,
-                 y + side / 2);
-  cairo_line_to (cr,
-                 x + side - (border.right + offset),
-                 y + side / 2);
-
-  if ((state & GTK_STATE_FLAG_ACTIVE) == 0)
-    {
-      cairo_move_to (cr,
-                     x + side / 2,
-                     y + border.top + offset);
-      cairo_line_to (cr,
-                     x + side / 2,
-                     y + side - (border.bottom + offset));
-    }
-
-  cairo_stroke (cr);
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
   GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
@@ -511,7 +430,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
   engine_class->render_arrow = adwaita_engine_render_arrow;
   engine_class->render_focus = adwaita_engine_render_focus;
   engine_class->render_extension = adwaita_engine_render_extension;
-  engine_class->render_expander = adwaita_engine_render_expander;
 }
 
 static void

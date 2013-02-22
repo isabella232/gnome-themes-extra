@@ -24,6 +24,7 @@
 
     -GtkToolItemGroup-expander-size: 11;
     -GtkExpander-expander-size: 11;
+    -GtkTreeView-expander-size: 11;
 
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
@@ -3480,7 +3481,6 @@ GtkSwitch.slider:insensitive:backdrop {
  ***********************/
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
-    -GtkTreeView-expander-size: 17;
 
     -GtkWidget-focus-line-width: 1;
     -GtkWidget-focus-padding: 1;
@@ -3604,51 +3604,38 @@ column-header .button.dnd {
 }
 
 .expander {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 2px;
-    border-color: shade (@internal_element_color, 1.40);
-
     color: @internal_element_color;
-    background-color: @theme_base_color;
+    border-color: @internal_element_color;
 }
 
 .expander:active {
-    border-style: solid;
-    border-width: 1px;
-
     color: @internal_element_color;
-    border-color: shade (@internal_element_color, 1.40);
-
-    background-color: @theme_base_color;
+    border-color: @internal_element_color;
 }
 
 .expander:hover {
-    border-style: solid;
-    border-width: 1px;
-
-    color: @internal_element_color;
-    border-color: shade (@internal_element_color, 1.40);
-
-    background-color: shade (@theme_bg_color, 1.02);
+    color: @theme_fg_color;
+    border-color: @theme_fg_color;
 }
 
-.expander row {
-    border-radius: 2px;
+.expander:backdrop {
+    color: @theme_unfocused_fg_color;
+    border-color: @theme_unfocused_fg_color;
 }
 
 .expander row:selected,
 .expander row:selected:focus {
-    border-style: solid;
-    border-width: 1px;
-
-    border-color: @expander_row_selected_color;
     color: @expander_row_selected_color;
-    background-color: @theme_selected_bg_color;
+    border-color: @expander_row_selected_color;
+}
+
+.expander row:selected:hover,
+.expander row:selected:focus:hover {
+    color: @theme_selected_fg_color;
+    border-color: @theme_selected_fg_color;
 }
 
 .expander row:selected:backdrop {
-    background-color: @theme_unfocused_selected_bg_color;
     color: @internal_element_color;
     border-color: @internal_element_color;
 }
