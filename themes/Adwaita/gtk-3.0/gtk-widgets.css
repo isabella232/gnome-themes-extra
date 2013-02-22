@@ -559,7 +559,6 @@ GtkTreeView.separator:backdrop,
 }
 
 .spinbutton .button:backdrop {
-    box-shadow: inset 1px 0 @unfocused_entry_separators;
     box-shadow: none;
 }
 
@@ -589,6 +588,10 @@ GtkTreeView.separator:backdrop,
 
 .spinbutton .button:last-child {
     border-radius: 0 2px 2px 0;
+}
+
+.spinbutton .button:dir(rtl) {
+    box-shadow: inset -1px 0 @inset_dark_color;
 }
 
 /* Add back the glowy effect from the entry covered by the pushed button background*/
