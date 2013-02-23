@@ -77,8 +77,9 @@
 @define-color progressbar_background_b #1f72c6;
 @define-color progressbar_pattern #2a79cb;
 @define-color progressbar_border @progressbar_pattern;
-@define-color progressbar_unfocused_background @theme_base_color;
+@define-color progressbar_unfocused_background @unfocused_dark_bg;
 @define-color progressbar_unfocused_border @unfocused_borders;
+@define-color progressbar_unfocused_trough @theme_unfocused_bg_color;
 
 @define-color entry_text_color @theme_text_color;
 @define-color entry_background_a shade(@theme_base_color, 0.94);

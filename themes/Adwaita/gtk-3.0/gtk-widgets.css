@@ -901,7 +901,7 @@ GtkProgressBar.vertical:backdrop,
 .trough row:backdrop,
 .trough.vertical row:backdrop {
     background-image: none;
-    background-color: @unfocused_dark_bg;
+    background-color: @progressbar_unfocused_trough;
 }
 
 /* level bars as used for password quality or remaining power */
