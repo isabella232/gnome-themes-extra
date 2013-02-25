@@ -75,6 +75,8 @@ asset_data = \
 	Entry/entry-border-fill-solid.png \
 	Entry/entry-border-bg.png \
 	Entry/entry-border-active-bg.png \
+	Entry/entry-border-bg-solid.png \
+	Entry/entry-border-active-bg-solid.png \
 	Entry/entry-border-disabled-bg.png \
 	Entry/entry-border-notebook.png \
 	Entry/entry-border-active-notebook.png \

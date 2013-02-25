@@ -1678,6 +1678,25 @@ style "libreoffice_entry"
 	        overlay_border		= { 0, 0, 0, 0 }
                 overlay_stretch         = TRUE
         }
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = NORMAL
+		shadow			= IN
+		file			= "Entry/entry-border-bg-solid.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/entry-border-active-bg-solid.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+        }
         }
 }
 
