@@ -1700,6 +1700,50 @@ style "libreoffice_entry"
         }
 }
 
+style "standalone_entry"
+{
+        engine "pixmap"
+        {
+        image
+        {
+                function                = FLAT_BOX
+                detail                  = "entry_bg"
+                state                   = NORMAL
+                file                    = "Entry/entry-border-fill-plain.png"
+                stretch                 = TRUE
+                border                  = { 0, 0, 0, 0 }
+        }
+        image
+        {
+                function                = FLAT_BOX
+                detail                  = "entry_bg"
+                state                   = ACTIVE
+                file                    = "Entry/entry-border-fill-plain.png"
+                stretch                 = TRUE
+                border                  = { 0, 0, 0, 0 }
+        }
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = NORMAL
+		shadow			= IN
+		file			= "Entry/entry-border-bg-solid.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/entry-border-active-bg-solid.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+        }
+        }
+}
+
 style "notebook"
 {
 
@@ -2329,6 +2373,10 @@ widget_class "*<GimpToolbox>*<GtkFrame>" style "gimp_toolbox_frame"
 class "ChromeGtkFrame" 			             style "chrome-gtk-frame"
 widget_class "*Chrom*Button*"		             style "button"
 widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" style "chrome_menu_item"
+
+# We use this weird selector to target an offscreen entry as created
+# by Chrome/Chromium to derive the style for its toolbar
+widget_class "<GtkEntry>"                            style "standalone_entry"
 
 # Eclipse/SWT
 widget "gtk-tooltips*" 			style "eclipse-tooltips"
