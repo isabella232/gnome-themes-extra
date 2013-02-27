@@ -2855,6 +2855,8 @@ GtkOverlay.osd {
 .osd .button *:insensitive,
 .osd .button *:insensitive:active {
     color: @osd_button_fg_insensitive;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 .osd.button *:backdrop,
@@ -2864,6 +2866,8 @@ GtkOverlay.osd {
 .osd .button *:backdrop:insensitive,
 .osd .button *:backdrop:insensitive:active {
     color: @osd_button_fg_backdrop;
+    text-shadow: none;
+    icon-shadow: none;
 }
 
 .osd.button *:backdrop:active,
@@ -2983,6 +2987,13 @@ GtkOverlay.osd {
                                       mix(shade(@osd_button_border, 0.55), @theme_selected_bg_color, 0.70),
                                       mix(shade(@osd_button_border, 0.90), @theme_selected_bg_color, 0.70)
                                       );
+}
+
+.osd .scale.trough:insensitive,
+.osd .scale.trough.highlight:insensitive {
+    border-color: shade(@osd_button_border, 0.60);
+    background-image: none;
+    background-color: transparent;
 }
 
 .osd GtkProgressBar,
