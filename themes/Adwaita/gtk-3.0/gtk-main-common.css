@@ -64,6 +64,11 @@
 @define-color osd_scrollbar_slider_active shade(@osd_scrollbar_trough, 2.10);
 @define-color osd_scrollbar_slider_backdrop shade(@osd_scrollbar_trough_backdrop, 1.50);
 
+/***********
+ * Popover *
+ ***********/
+@define-color osd_popover_bg alpha(@osd_base, 0.90);
+
 /*********************
  * Error/Warning/... *
  *********************/

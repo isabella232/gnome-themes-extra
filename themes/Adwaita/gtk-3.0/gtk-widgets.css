@@ -3954,6 +3954,22 @@ GtkInfoBar {
     text-shadow: none;
 }
 
+/*************************
+ * Touch text selections *
+ *************************/
+GtkBubbleWindow {
+    border-radius: 5px;
+    background-clip: border-box;
+}
+
+GtkBubbleWindow.osd.background {
+    background-color: @osd_popover_bg;
+}
+
+GtkBubbleWindow .toolbar {
+    background-color: transparent;
+}
+
 /**********************
  * Fallback Mode Panel
  **********************/
