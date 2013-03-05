@@ -1,3 +1,21 @@
+3.7.91
+======
+
+GTK3:
+  Support linked entries on primary toolbars
+  Use stock GTK style for expanders
+  Make progressbar colors darker in backdrop
+  Fix insensitive state of OSD scales and buttons
+  Fix a minor glitch in spinbuttons in RTL mode
+  Fix some glitches in header bar style
+  Fix content view checkboxes in backdrop
+  Remove special case of Nautilus pathbar buttons
+GTK2:
+  Fix white border around background when overridden
+  Fix a regression in Chrome/Chromium toolbar drawing
+WM:
+  Fix centering of the window title
+
 3.7.90
 ======
 
