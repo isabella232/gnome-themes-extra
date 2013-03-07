@@ -2746,6 +2746,11 @@ GtkOverlay.osd {
     background-color: transparent;
 }
 
+.osd.frame {
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
 .osd.button,
 .osd.button:active,
 .osd .button,
