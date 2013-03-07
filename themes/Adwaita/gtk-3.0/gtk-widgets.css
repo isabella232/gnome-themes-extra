@@ -3164,7 +3164,7 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.header-bar {
     border-top-color: @selection_toolbar_bg_a;
     border-bottom-color: @selection_toolbar_border;
-    border-width: 1px 0;
+
     box-shadow: inset 0 -1px shade(@selection_toolbar_border, 1.20);
 }
 
