@@ -61,12 +61,6 @@ NautilusWindow .sidebar .frame:backdrop {
     border-color: @unfocused_borders;
 }
 
-NautilusWindow > GtkGrid > .pane-separator {
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    border-color: @borders;
-}
-
 NautilusWindow > GtkGrid > .pane-separator,
 NautilusWindow > GtkGrid > .pane-separator:hover {
     border-width: 1px 1px 0 0;
@@ -78,11 +72,8 @@ NautilusWindow > GtkGrid > .pane-separator:hover {
 
 NautilusWindow > GtkGrid > .pane-separator:backdrop,
 NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
-    border-width: 1px 1px 0 0;
-    border-style: solid;
     border-color: @unfocused_borders;
     background-color: @sidebar_bg_unfocused;
-    color: shade (@theme_bg_color, 0.9);
 }
 
 NautilusView.frame,
