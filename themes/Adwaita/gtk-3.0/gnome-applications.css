@@ -393,7 +393,7 @@ GeditViewFrame .gedit-search-slider .not-found {
     color: @theme_unfocused_text_color;
 }
 
-BaobabWindow.background GtkNotebook > GtkGrid > GtkScrolledWindow.frame {
+BaobabWindow.background GdStack > GtkGrid > GtkScrolledWindow.frame {
     border-radius: 0;
     border-width: 0 1px 0 0;
 }
