@@ -65,6 +65,14 @@
     color: @theme_unfocused_fg_color;
 }
 
+.background.client-decorated {
+    background-color: transparent;
+}
+
+.background.window-content {
+    background-color: @theme_bg_color;
+}
+
 /* FIXME: why do we still need this? */
 GtkClutterOffscreen {
     background-color: @theme_bg_color;
@@ -3963,6 +3971,87 @@ GtkBubbleWindow.osd.background {
 
 GtkBubbleWindow .toolbar {
     background-color: transparent;
+}
+
+/*******
+ * CSD *
+ *******/
+.titlebar {
+    font: Bold 11;
+    text-shadow: 1px 1px lighter (@theme_bg_color);
+    padding: 0;
+}
+
+.titlebar:backdrop {
+    color: darker (@theme_bg_color);
+    text-shadow: none;
+}
+
+.titlebar GtkButton:backdrop {
+    border-image: none;
+    background-image: none;
+}
+
+.titlebar .button {
+    icon-shadow: 0px 1px darker (darker (@theme_bg_color));
+}
+
+.titlebar .button:backdrop {
+    color: darker (@theme_bg_color);
+    icon-shadow: none;
+}
+
+.titlebar .button {
+    border-style: solid;
+    border-color: darker(@theme_bg_color);
+    border-image: none;
+
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.20),
+                                      shade(@theme_bg_color, 0.80) 55%,
+                                      shade(@theme_bg_color, 0.90));
+}
+
+.titlebar .button:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.35),
+                                      shade(@theme_bg_color, 0.88) 55%,
+                                      shade(@theme_bg_color, 0.94));
+}
+
+.titlebar .button:first-child {
+    border-radius: 10px 0px 0px 0px;
+    border-width: 0px 1px 0px 0px;
+}
+
+.titlebar .button:last-child {
+    border-radius: 0px 10px 0px 0px;
+    border-width: 0px 0px 0px 1px;
+}
+
+.titlebar {
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.20),
+                                      @theme_bg_color);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.titlebar:backdrop {
+    background-image: none;
+}
+
+.window-border {
+    border-color: darker(@theme_bg_color);
+    border-radius: 10px 10px 0 0;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.window-outer-border {
+    border-color: transparent;
+    border-radius: 10px;
+    border-width: 10px;
+    border-style: solid;
 }
 
 /**********************
