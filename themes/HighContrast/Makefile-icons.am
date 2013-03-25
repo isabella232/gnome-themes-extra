@@ -388,6 +388,8 @@ EXTRA_DIST = \
 ./icons/16x16/status/security-high.png  \
 ./icons/16x16/status/security-low.png  \
 ./icons/16x16/status/security-medium.png  \
+./icons/16x16/status/semi-starred.png  \
+./icons/16x16/status/semi-starred-rtl.png  \
 ./icons/16x16/status/software-update-available.png  \
 ./icons/16x16/status/software-update-urgent.png  \
 ./icons/16x16/status/starred.png  \
@@ -802,6 +804,8 @@ EXTRA_DIST = \
 ./icons/22x22/status/security-high.png  \
 ./icons/22x22/status/security-low.png  \
 ./icons/22x22/status/security-medium.png  \
+./icons/22x22/status/semi-starred.png  \
+./icons/22x22/status/semi-starred-rtl.png  \
 ./icons/22x22/status/software-update-available.png  \
 ./icons/22x22/status/software-update-urgent.png  \
 ./icons/22x22/status/starred.png  \
@@ -1216,6 +1220,8 @@ EXTRA_DIST = \
 ./icons/24x24/status/security-high.png  \
 ./icons/24x24/status/security-low.png  \
 ./icons/24x24/status/security-medium.png  \
+./icons/24x24/status/semi-starred.png  \
+./icons/24x24/status/semi-starred-rtl.png  \
 ./icons/24x24/status/software-update-available.png  \
 ./icons/24x24/status/software-update-urgent.png  \
 ./icons/24x24/status/starred.png  \
@@ -1629,6 +1635,8 @@ EXTRA_DIST = \
 ./icons/256x256/status/security-high.png  \
 ./icons/256x256/status/security-low.png  \
 ./icons/256x256/status/security-medium.png  \
+./icons/256x256/status/semi-starred.png  \
+./icons/256x256/status/semi-starred-rtl.png  \
 ./icons/256x256/status/software-update-available.png  \
 ./icons/256x256/status/software-update-urgent.png  \
 ./icons/256x256/status/starred.png  \
@@ -2043,6 +2051,8 @@ EXTRA_DIST = \
 ./icons/32x32/status/security-high.png  \
 ./icons/32x32/status/security-low.png  \
 ./icons/32x32/status/security-medium.png  \
+./icons/32x32/status/semi-starred.png  \
+./icons/32x32/status/semi-starred-rtl.png  \
 ./icons/32x32/status/software-update-available.png  \
 ./icons/32x32/status/software-update-urgent.png  \
 ./icons/32x32/status/starred.png  \
@@ -2460,6 +2470,8 @@ EXTRA_DIST = \
 ./icons/48x48/status/security-high.png  \
 ./icons/48x48/status/security-low.png  \
 ./icons/48x48/status/security-medium.png  \
+./icons/48x48/status/semi-starred.png  \
+./icons/48x48/status/semi-starred-rtl.png  \
 ./icons/48x48/status/software-update-available.png  \
 ./icons/48x48/status/software-update-urgent.png  \
 ./icons/48x48/status/starred.png  \
