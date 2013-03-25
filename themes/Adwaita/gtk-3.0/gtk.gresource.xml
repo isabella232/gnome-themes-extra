@@ -52,7 +52,13 @@
     <file preprocess="to-pixdata">assets/noise-texture-dark.png</file>
     <file preprocess="to-pixdata">assets/noise-texture-light.png</file>
     <file preprocess="to-pixdata">assets/pane-separator-grip.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-prelight.svg</file>
     <file preprocess="to-pixdata">assets/pane-separator-grip-vertical.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical-prelight.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-dark.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-prelight-dark.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical-dark.svg</file>
+    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical-prelight-dark.svg</file>
     <file preprocess="to-pixdata">assets/radio-checked-alt-dark.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-alt.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-backdrop-dark.png</file>
