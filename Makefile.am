@@ -33,5 +33,3 @@ dist-hook:
 # in theme files
 install-data-local:
 	$(MAKE) -C po uninstall
-
--include $(top_srcdir)/git.mk

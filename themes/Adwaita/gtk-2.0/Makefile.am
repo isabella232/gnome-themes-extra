@@ -154,5 +154,3 @@ uninstall-local:
 	done
 
 EXTRA_DIST = $(theme_DATA) $(asset_data)
-
--include $(top_srcdir)/git.mk

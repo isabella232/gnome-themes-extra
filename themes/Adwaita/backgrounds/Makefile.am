@@ -25,5 +25,3 @@ noinst_DATA = adwaita.xml.in
 CLEANFILES = adwaita.xml adwaita.xml.in adwaita-timed.xml
 
 EXTRA_DIST = $(background_DATA) adwaita.xml.in.in adwaita-timed.xml.in
-
--include $(top_srcdir)/git.mk

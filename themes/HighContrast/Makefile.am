@@ -23,5 +23,3 @@ endif
 
 DISTCLEANFILES = index.theme
 EXTRA_DIST += index.theme.in index.theme
-
--include $(top_srcdir)/git.mk

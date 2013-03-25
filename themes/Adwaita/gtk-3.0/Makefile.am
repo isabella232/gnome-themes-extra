@@ -30,5 +30,3 @@ EXTRA_DIST = \
 
 CLEANFILES = \
 	gtk.gresource
-
--include $(top_srcdir)/git.mk
