@@ -3992,19 +3992,6 @@ GtkBubbleWindow .toolbar {
     icon-shadow: 0px 1px darker (darker (@theme_bg_color));
 }
 
-.titlebar .button:hover {
-    background-image: linear-gradient(to bottom,
-                                      shade(@theme_bg_color, 1.35),
-                                      shade(@theme_bg_color, 0.88) 55%,
-                                      shade(@theme_bg_color, 0.94));
-}
-
-.titlebar .button:backdrop {
-    background-image: none;
-    color: darker (@theme_bg_color);
-    icon-shadow: none;
-}
-
 .titlebar .button {
     border-style: none none solid;
     border-color: darker(@theme_bg_color);
@@ -4018,6 +4005,13 @@ GtkBubbleWindow .toolbar {
                                       shade(@theme_bg_color, 0.90));
 }
 
+.titlebar .button:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 1.35),
+                                      shade(@theme_bg_color, 0.88) 55%,
+                                      shade(@theme_bg_color, 0.94));
+}
+
 .titlebar .button:first-child {
     border-style: none none solid solid;
     border-bottom-left-radius: 10px;
@@ -4025,6 +4019,13 @@ GtkBubbleWindow .toolbar {
 
 .titlebar .button:last-child {
     border-top-right-radius: 10px;
+}
+
+.titlebar .button:backdrop {
+    background-image: none;
+    color: darker (@theme_bg_color);
+    icon-shadow: none;
+    border-style: none;
 }
 
 .titlebar {
