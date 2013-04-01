@@ -4010,6 +4010,7 @@ GtkBubbleWindow .toolbar {
     border-color: darker(@theme_bg_color);
     border-image: none;
     border-width: 1px;
+    border-radius: 0px;
 
     background-image: linear-gradient(to bottom,
                                       shade(@theme_bg_color, 1.20),
@@ -4018,12 +4019,12 @@ GtkBubbleWindow .toolbar {
 }
 
 .titlebar .button:first-child {
-    border-radius: 10px 0px 0px 0px;
     border-style: none none solid solid;
+    border-bottom-left-radius: 10px;
 }
 
 .titlebar .button:last-child {
-    border-radius: 0px 10px 0px 0px;
+    border-top-right-radius: 10px;
 }
 
 .titlebar {
