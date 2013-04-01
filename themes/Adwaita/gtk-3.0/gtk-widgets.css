@@ -3980,6 +3980,7 @@ GtkBubbleWindow .toolbar {
     font: Bold 11;
     text-shadow: 1px 1px lighter (@theme_bg_color);
     padding: 0;
+    border-style: none;
 }
 
 .titlebar:backdrop {
