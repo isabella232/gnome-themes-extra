@@ -230,6 +230,20 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop,
     background-color: @unfocused_dark_bg;
 }
 
+.scale.trough {
+    background-image: linear-gradient(to bottom,
+                                      @scale_trough_bg_a,
+                                      @scale_trough_bg_b
+                                      );
+}
+
+.scale.trough.vertical {
+    background-image: linear-gradient(to right,
+                                      @scale_trough_bg_a,
+                                      @scale_trough_bg_b
+                                      );
+}
+
 /* Active switch background*/
 GtkSwitch.trough:active,
 .scale.progressbar {
