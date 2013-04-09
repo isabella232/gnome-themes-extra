@@ -4045,13 +4045,21 @@ GtkBubbleWindow .toolbar {
     border-radius: 10px 10px 0 0;
     border-width: 1px;
     border-style: solid;
+
+    box-shadow: 0 2px 8px 3px @wm_shadow;
+}
+
+.window-border:backdrop {
+    box-shadow: 0 2px 5px 1px @wm_shadow;
 }
 
 .window-outer-border {
     border-color: transparent;
-    border-radius: 10px;
-    border-width: 10px;
     border-style: solid;
+
+    /* FIXME: we need an additional style property for the size
+     * of the invisible drag border */
+    border-width: 13px;
 }
 
 /**********************
