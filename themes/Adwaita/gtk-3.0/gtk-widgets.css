@@ -3468,13 +3468,9 @@ GtkSwitch.slider {
 GtkSwitch.slider:insensitive {
     background-image: none;
 
-    border-color: @insensitive_border_color;
+    border-color: mix(@insensitive_bg_color, @insensitive_fg_color, 0.5);
 
     box-shadow: none;
-}
-
-GtkSwitch.slider:insensitive {
-    border-color: mix(@insensitive_bg_color, @insensitive_fg_color, 0.5);
 }
 
 GtkSwitch.slider:backdrop {
