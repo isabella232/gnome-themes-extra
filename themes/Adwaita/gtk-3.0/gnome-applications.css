@@ -699,6 +699,12 @@ ContactsWindow .sidebar .view:selected:focus {
   border-image: none;
 }
 
+/* gnome-photos */
+
+.photos-icon-bg {
+  icon-shadow: 0 1px #000000;
+}
+
 /* Gucharmap */
 GucharmapChartable:active,
 GucharmapChartable:focus,
