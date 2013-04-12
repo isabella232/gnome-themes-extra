@@ -337,6 +337,7 @@ GtkLabel:insensitive {
     -GtkButton-inner-border: 0;
 }
 
+.content-view.view.rubberband,
 .view.rubberband,
 .rubberband {
     background-color: alpha (@theme_selected_bg_color, 0.35);
