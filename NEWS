@@ -1,3 +1,17 @@
+3.8.1
+=====
+
+GTK3:
+  Improve style of GtkScale's trough
+  Add prelight and dark variants of pane separator grip assets
+  Add a style class for Photos emblems
+  Add support for dark theme to Documents-style collection icons
+  Add support for selection rubberbands in content-view
+  Add a workaround for backdrop selected text in Evolution
+  Fix text selection in GEdit's search entry
+GTK2:
+  Improve style of GtkScale's trough
+
 3.8.0
 =====
 
