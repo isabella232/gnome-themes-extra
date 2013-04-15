@@ -502,7 +502,9 @@ GtkTreeView.separator:backdrop,
     background-color: @theme_unfocused_selected_bg_color
 }
 
-/* needed for webkit/GtkStyle compatibility */
+/* needed for webkit/GtkStyle/Evolution compatibility */
+GtkHTML:active,
+GtkHTML:active:backdrop,
 .entry:active,
 .entry:active:backdrop {
     color: @theme_unfocused_selected_fg_color;
