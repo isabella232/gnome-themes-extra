@@ -65,14 +65,6 @@
     color: @theme_unfocused_fg_color;
 }
 
-.background.client-decorated {
-    background-color: transparent;
-}
-
-.background.window-content {
-    background-color: @theme_bg_color;
-}
-
 /* FIXME: why do we still need this? */
 GtkClutterOffscreen {
     background-color: @theme_bg_color;
@@ -4043,26 +4035,20 @@ GtkBubbleWindow .toolbar {
     border-style: none;
 }
 
-.window-border {
+.window-frame {
     border-color: darker(@theme_bg_color);
     border-radius: 10px 10px 0 0;
     border-width: 1px;
     border-style: solid;
 
     box-shadow: 0 2px 8px 3px @wm_shadow;
+
+    /* this is used for the resize cursor area */
+    margin: 10px;
 }
 
-.window-border:backdrop {
+.window-frame:backdrop {
     box-shadow: 0 2px 5px 1px @wm_shadow;
-}
-
-.window-outer-border {
-    border-color: transparent;
-    border-style: solid;
-
-    /* FIXME: we need an additional style property for the size
-     * of the invisible drag border */
-    border-width: 13px;
 }
 
 /**********************
