@@ -229,6 +229,13 @@ GeditViewFrame .gedit-search-slider .not-found:selected {
     color: @theme_selected_fg_color;
 }
 
+GeditFileBrowserWidget .primary-toolbar.toolbar  {
+    background-image: none;
+    background-color: @theme_bg_color;
+    border-top: none;
+    padding: 2px;
+}
+
 /* gnome-documents */
 .documents-dropdown,
 .documents-dropdown .view {
