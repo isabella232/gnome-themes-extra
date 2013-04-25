@@ -150,13 +150,9 @@ GeditWindow .pane-separator:hover {
     color: @borders;
 }
 
-GeditPanel.title GtkLabel {
-    padding: 7px 0 6px 0;
-}
-
-GeditPanel .toolbar {
+GeditPanel.vertical .title {
     border-style: none;
-    background-color: transparent;
+    padding: 7px 0 6px 3px;
 }
 
 GeditDocumentsPanel .view {
