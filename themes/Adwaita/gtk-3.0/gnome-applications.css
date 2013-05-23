@@ -10,10 +10,9 @@ SushiFontWidget {
 }
 
 /* gnome-terminal */
-TerminalScreen {
+VteTerminal {
     background-color: @theme_base_color;
     color: @theme_fg_color;
-    -TerminalScreen-background-darkness: 0.95;
 }
 
 TerminalWindow GtkNotebook.notebook {
