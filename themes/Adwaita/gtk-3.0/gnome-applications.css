@@ -422,12 +422,14 @@ BaobabRingschart {
 }
 
 BaobabRingschart.subfolder-tip {
-    background-color: #d3d7cf;
-    border-color: #888a85;
-    border-width: 1px;
     border-radius: 3px;
-    border-style: solid;
+    border-style: none;
     padding: 3px 3px 3px 3px;
+
+    background-color: alpha(@theme_tooltip_bg_color, 0.90);
+    color: @theme_tooltip_fg_color;
+
+    text-shadow: 1px 1px black;
 }
 
 /* epiphany */
