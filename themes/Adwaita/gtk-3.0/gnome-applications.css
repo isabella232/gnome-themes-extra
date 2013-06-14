@@ -417,6 +417,19 @@ BaobabWindow GtkInfoBar.error {
     border-bottom-color: @borders;
 }
 
+BaobabRingschart {
+    padding: 13px 13px 13px 13px;
+}
+
+BaobabRingschart.subfolder-tip {
+    background-color: #d3d7cf;
+    border-color: #888a85;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 3px 3px 3px 3px;
+}
+
 /* epiphany */
 
 EphyToolbar .entry:first-child,
