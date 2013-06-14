@@ -418,6 +418,7 @@ BaobabWindow GtkInfoBar.error {
 }
 
 BaobabRingschart {
+    background-color: @theme_bg_color;
     padding: 13px 13px 13px 13px;
 }
 
