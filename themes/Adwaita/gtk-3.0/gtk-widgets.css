@@ -3743,6 +3743,22 @@ GdMainIconView.content-view.cell:active {
     color: gray;
 }
 
+GdMainIconView.content-view.cell.trough {
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: inset;
+    border-color: shade(@borders, 0.9);
+    box-shadow: inset 1px 2px alpha(@theme_selected_bg_color, 0.1),
+                inset 1px 1px alpha(@theme_selected_bg_color, 0.1),
+                inset -1px -1px alpha(@theme_selected_bg_color, 0.2);
+}
+
+GdMainIconView.content-view.cell.progressbar {
+    color: #4d7db6;
+    background-color: #4d7db6;
+}
+
 .content-view.view.check,
 .content-view.view.check:active {
     background-color: transparent;
