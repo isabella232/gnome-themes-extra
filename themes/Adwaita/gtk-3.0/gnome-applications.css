@@ -90,12 +90,12 @@ NautilusToolbar .button {
     icon-shadow: 0 1px @button_text_shadow;
 }
 
-NautilusToolbar .button *:active {
+NautilusToolbar .button:active {
     icon-shadow: 0 1px @button_active_text_shadow;
 }
 
-NautilusToolbar .button *:insensitive,
-NautilusToolbar .button *:active:insensitive {
+NautilusToolbar .button:insensitive,
+NautilusToolbar .button:active:insensitive {
     text-shadow: none;
 }
 
@@ -308,8 +308,8 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
     font: bold;
 }
 
-.documents-favorite.button *:active,
-.documents-favorite.button *:active:hover {
+.documents-favorite.button:active,
+.documents-favorite.button:active:hover {
     color: shade(@theme_selected_bg_color, 1.20);
 }
 
@@ -530,8 +530,7 @@ EphyToolbar .location-entry .button:active:hover {
 }
 
 EphyToolbar .location-entry .button:hover,
-EphyToolbar .location-entry .button:active,
-EphyToolbar .location-entry .button *:active {
+EphyToolbar .location-entry .button:active {
     color: @theme_text_color;
 }
 
