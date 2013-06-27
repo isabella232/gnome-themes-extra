@@ -472,7 +472,7 @@ EphyToolbar .entry:focus:last-child {
 EphyToolbar .location-entry .button {
     color: @internal_element_color;
     -GtkButton-child-displacement-y: 0;
-    border-image-source: url("borders/generic-border.png");
+    border-image-source: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png"));
     border-image-slice: 3 3 4 3;
     border-image-repeat: stretch;
     border-width: 1px 1px 2px 1px;

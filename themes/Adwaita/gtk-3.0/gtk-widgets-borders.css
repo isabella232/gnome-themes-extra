@@ -16,7 +16,7 @@ GtkComboBox.combobox-entry .button,
 .trough.highlight,
 GtkSwitch.trough,
 GtkSwitch.trough:active:insensitive {
-    border-image: url("borders/generic-border.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -37,7 +37,7 @@ GtkComboBox.combobox-entry .entry:focus,
 .button.default:active,
 .inline-toolbar.toolbar.vertical .button.default:active,
 GtkSwitch.trough:active { 
-    border-image: url("borders/generic-border-focused.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/generic-border-focused.png"),url("borders/generic-border-focused@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -48,7 +48,7 @@ GtkSwitch.trough:active {
 .button,
 .spinbutton.vertical .button,
 .inline-toolbar.toolbar.vertical .button {
-    border-image: url("borders/button-border.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/button-border.png"),url("borders/button-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -57,7 +57,7 @@ GtkSwitch.trough:active {
 
 /* focused button borders */
 .button.default { 
-    border-image: url("borders/button-border-default.png") 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/button-border-default.png"),url("borders/button-border-default@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -100,7 +100,7 @@ GtkSwitch.trough:active {
 .primary-toolbar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkComboBox .button:active,
 .primary-toolbar GtkComboBox .button:insensitive {
-    border-image: url("borders/primary-toolbar-generic-border.png") 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border.png"),url("borders/primary-toolbar-generic-border@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -113,7 +113,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button.default:active {
-    border-image: url("borders/primary-toolbar-generic-border-focused.png") 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border-focused.png"),url("borders/primary-toolbar-generic-border-focused@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -125,7 +125,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .raised .button,
 .inline-toolbar.toolbar .button,
 .primary-toolbar GtkComboBox .button {
-    border-image: url("borders/primary-toolbar-button-border.png") 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-button-border.png"),url("borders/primary-toolbar-button-border@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -136,7 +136,7 @@ GtkSwitch.trough:active {
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button.default,
 .inline-toolbar.toolbar .button.default {
-    border-image: url("borders/primary-toolbar-button-border-default.png") 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-button-border-default.png"),url("borders/primary-toolbar-button-border-default@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;

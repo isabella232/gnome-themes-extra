@@ -10,7 +10,7 @@
 /* Epiphany */
 
 EphyToolbar .location-entry .button {
-    border-image-source: url("borders/generic-border-dark.png");
+    border-image-source: -gtk-scaled(url("borders/generic-border-dark.png"),url("borders/generic-border-dark@2.png"));
 }
 
 EphyToolbar .location-entry .button:backdrop,
