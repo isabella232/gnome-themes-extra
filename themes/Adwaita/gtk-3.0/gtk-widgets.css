@@ -4001,11 +4001,12 @@ GtkBubbleWindow .toolbar {
     background-image: none;
 }
 
-.titlebar .button {
+.titlebar .titlebutton {
     icon-shadow: 0px 1px darker (darker (@theme_bg_color));
+    color: white;
 }
 
-.titlebar .button {
+.titlebar .titlebutton {
     border-style: none none solid solid;
     border-color: darker(@theme_bg_color);
     border-image: none;
@@ -4019,7 +4020,7 @@ GtkBubbleWindow .toolbar {
                                       @wm_button_bg_d);
 }
 
-.titlebar .button:hover {
+.titlebar .titlebutton:hover {
     background-image: linear-gradient(to bottom,
                                       @wm_button_bg_hover_a,
                                       @wm_button_bg_hover_b,
@@ -4027,23 +4028,30 @@ GtkBubbleWindow .toolbar {
                                       @wm_button_bg_hover_d);
 }
 
-.titlebar .button:active {
+.titlebar .titlebutton:active {
     background-image: linear-gradient(to bottom,
                                       @wm_button_bg_active_a,
                                       @wm_button_bg_active_b,
                                       @wm_button_bg_active_c);
 }
 
-.titlebar .button:first-child {
-    border-style: none none solid none;
-    border-top-left-radius: 10px;
+.titlebar .right .titlebutton:first-child {
+    border-bottom-left-radius: 5px;
 }
 
-.titlebar .button:last-child {
+.titlebar .right .titlebutton:last-child {
     border-top-right-radius: 10px;
 }
 
-.titlebar .button:backdrop {
+.titlebar .left .titlebutton:last-child {
+    border-bottom-right-radius: 5px;
+}
+
+.titlebar .left .titlebutton:first-child {
+    border-top-left-radius: 10px;
+}
+
+.titlebar .titlebutton:backdrop {
     background-image: none;
     color: darker (@theme_bg_color);
     icon-shadow: none;
