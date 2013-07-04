@@ -3,7 +3,7 @@
 INKSCAPE="/usr/bin/inkscape"
 OPTIPNG="/usr/bin/optipng"
 
-SRC_FILE="assets.svg"
+SRC_FILE="assets-new.svg"
 ASSETS_DIR="borders"
 INDEX="borders.txt"
 
