@@ -264,7 +264,9 @@
     <file preprocess="to-pixdata">borders/button-border.png</file>
     <file preprocess="to-pixdata">borders/button-border@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">borders/generic-border-backdrop-dark@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border-backdrop.png</file>
+    <file preprocess="to-pixdata">borders/generic-border-backdrop@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border-dark.png</file>
     <file preprocess="to-pixdata">borders/generic-border-dark@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border-focused-dark.png</file>
@@ -272,15 +274,21 @@
     <file preprocess="to-pixdata">borders/generic-border-focused.png</file>
     <file preprocess="to-pixdata">borders/generic-border-focused@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border-transparent-dark.png</file>
+    <file preprocess="to-pixdata">borders/generic-border-transparent-dark@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border-transparent.png</file>
+    <file preprocess="to-pixdata">borders/generic-border-transparent@2.png</file>
     <file preprocess="to-pixdata">borders/generic-border.png</file>
     <file preprocess="to-pixdata">borders/generic-border@2.png</file>
     <file preprocess="to-pixdata">borders/nohl-generic-border-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">borders/nohl-generic-border-backdrop-dark@2.png</file>
     <file preprocess="to-pixdata">borders/nohl-generic-border-backdrop.png</file>
+    <file preprocess="to-pixdata">borders/nohl-generic-border-backdrop@2.png</file>
     <file preprocess="to-pixdata">borders/nohl-generic-border-dark.png</file>
+    <file preprocess="to-pixdata">borders/nohl-generic-border-dark@2.png</file>
     <file preprocess="to-pixdata">borders/nohl-generic-border-transparent-dark.png</file>
     <file preprocess="to-pixdata">borders/nohl-generic-border-transparent.png</file>
     <file preprocess="to-pixdata">borders/nohl-generic-border.png</file>
+    <file preprocess="to-pixdata">borders/nohl-generic-border@2.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-button-border-dark.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-button-border-dark@2.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-button-border-default-dark.png</file>
@@ -290,7 +298,9 @@
     <file preprocess="to-pixdata">borders/primary-toolbar-button-border.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-button-border@2.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-backdrop-dark.png</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-backdrop-dark@2.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-backdrop.png</file>
+    <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-backdrop@2.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-dark.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-dark@2.png</file>
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border-focused-dark.png</file>
@@ -301,9 +311,13 @@
     <file preprocess="to-pixdata">borders/primary-toolbar-generic-border@2.png</file>
     <file preprocess="to-pixdata">borders/selection-toolbar-suggested-button-border.svg</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border-dark.svg</file>
+    <file preprocess="to-pixdata">borders/tooltip-generic-border-dark@2.png</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border-focused-dark.svg</file>
+    <file preprocess="to-pixdata">borders/tooltip-generic-border-focused-dark@2.png</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border-focused.svg</file>
+    <file preprocess="to-pixdata">borders/tooltip-generic-border-focused@2.png</file>
     <file preprocess="to-pixdata">borders/tooltip-generic-border.svg</file>
+    <file preprocess="to-pixdata">borders/tooltip-generic-border@2.png</file>
     <file>gnome-applications.css</file>
     <file>gnome-applications-dark-overrides.css</file>
     <file>gtk-widgets.css</file>

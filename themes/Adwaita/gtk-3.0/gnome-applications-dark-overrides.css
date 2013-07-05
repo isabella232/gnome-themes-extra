@@ -17,5 +17,5 @@ EphyToolbar .location-entry .button:backdrop,
 EphyToolbar .location-entry .button:backdrop:first-child,
 EphyToolbar .location-entry .button:backdrop:hover,
 EphyToolbar .location-entry .button:backdrop:hover:first-child {
-    border-image-source: url("borders/generic-border-backdrop-dark.png");
+    border-image-source: -gtk-scaled (url("borders/generic-border-backdrop-dark.png"),url("borders/generic-border-backdrop-dark@2.png"));
 }
