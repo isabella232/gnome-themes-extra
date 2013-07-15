@@ -3875,14 +3875,7 @@ GtkInfoBar {
 .error .entry:focus,
 .error .button,
 .error .button:insensitive,
-.error .button:active {
-    border-image: none;
-
-    border-color: shade(@borders, 0.9);
-    border-style: solid;
-    border-width: 1px;
-}
-
+.error .button:active,
 .question .entry,
 .question .entry:focus,
 .question .button,
@@ -3890,7 +3883,7 @@ GtkInfoBar {
 .question .button:active {
     border-image: none;
 
-    border-color: darker(@question_bg_color);
+    border-color: darker(@infobar_bg_color);
     border-style: solid;
     border-width: 1px;
 }
@@ -3918,32 +3911,21 @@ GtkInfoBar {
     border-width: 1px;
 }
 
-.info {
-    background-color: @info_bg_color;
-    color: @info_fg_color;
-
-    border-color: darker(@info_bg_color);
-}
-
-.warning {
-    background-color: @warning_bg_color;
-    color: @warning_fg_color;
-
-    border-color: darker(@warning_bg_color);
-}
-
-.question {
-    background-color: @question_bg_color;
-    color: @question_fg_color;
-
-    border-color: darker(@question_bg_color);
-}
-
+.info,
+.question,
+.warning,
 .error {
-    background-color: @error_bg_color;
-    color: @error_fg_color;
+    background-color: @infobar_bg_color;
+    color: @infobar_fg_color;
 
-    border-color: darker(@error_bg_color);
+    border-color: darker(@infobar_bg_color);
+}
+
+.info .button,
+.question .button,
+.warning .button,
+.error .button {
+    color: @theme_fg_color;
 }
 
 /**************
