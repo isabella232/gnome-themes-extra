@@ -131,6 +131,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/fedora-release-notes.png  \
 ./icons/16x16/apps/file-roller.png  \
 ./icons/16x16/apps/firefox.png  \
+./icons/16x16/apps/five-or-more.png  \
 ./icons/16x16/apps/gimp.png  \
 ./icons/16x16/apps/glade.png  \
 ./icons/16x16/apps/gnome-aisleriot.png  \
@@ -138,8 +139,12 @@ EXTRA_DIST = \
 ./icons/16x16/apps/gnome-documents.png  \
 ./icons/16x16/apps/gnome-freecell.png  \
 ./icons/16x16/apps/gnome-mines.png  \
+./icons/16x16/apps/gnome-nettool.png  \
 ./icons/16x16/apps/gnome-power-manager.png  \
+./icons/16x16/apps/gnome-session-properties.png  \
+./icons/16x16/apps/gnome-tweak-tool.png  \
 ./icons/16x16/apps/goa-panel.png  \
+./icons/16x16/apps/gtranslator.png  \
 ./icons/16x16/apps/haguichi.png  \
 ./icons/16x16/apps/headpin.png  \
 ./icons/16x16/apps/help-browser.png  \
@@ -183,6 +188,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/system-config-authentication.png  \
 ./icons/16x16/apps/system-file-manager.png  \
 ./icons/16x16/apps/system-software-install.png  \
+./icons/16x16/apps/system-software-update.png  \
 ./icons/16x16/apps/system-users.png  \
 ./icons/16x16/apps/tasque.png  \
 ./icons/16x16/apps/text-editor.png  \
@@ -547,6 +553,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/fedora-release-notes.png  \
 ./icons/22x22/apps/file-roller.png  \
 ./icons/22x22/apps/firefox.png  \
+./icons/22x22/apps/five-or-more.png  \
 ./icons/22x22/apps/gimp.png  \
 ./icons/22x22/apps/glade.png  \
 ./icons/22x22/apps/gnome-aisleriot.png  \
@@ -554,8 +561,12 @@ EXTRA_DIST = \
 ./icons/22x22/apps/gnome-documents.png  \
 ./icons/22x22/apps/gnome-freecell.png  \
 ./icons/22x22/apps/gnome-mines.png  \
+./icons/22x22/apps/gnome-nettool.png  \
 ./icons/22x22/apps/gnome-power-manager.png  \
+./icons/22x22/apps/gnome-session-properties.png  \
+./icons/22x22/apps/gnome-tweak-tool.png  \
 ./icons/22x22/apps/goa-panel.png  \
+./icons/22x22/apps/gtranslator.png  \
 ./icons/22x22/apps/haguichi.png  \
 ./icons/22x22/apps/headpin.png  \
 ./icons/22x22/apps/help-browser.png  \
@@ -599,6 +610,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/system-config-authentication.png  \
 ./icons/22x22/apps/system-file-manager.png  \
 ./icons/22x22/apps/system-software-install.png  \
+./icons/22x22/apps/system-software-update.png  \
 ./icons/22x22/apps/system-users.png  \
 ./icons/22x22/apps/tasque.png  \
 ./icons/22x22/apps/text-editor.png  \
@@ -963,6 +975,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/fedora-release-notes.png  \
 ./icons/24x24/apps/file-roller.png  \
 ./icons/24x24/apps/firefox.png  \
+./icons/24x24/apps/five-or-more.png  \
 ./icons/24x24/apps/gimp.png  \
 ./icons/24x24/apps/glade.png  \
 ./icons/24x24/apps/gnome-aisleriot.png  \
@@ -970,8 +983,12 @@ EXTRA_DIST = \
 ./icons/24x24/apps/gnome-documents.png  \
 ./icons/24x24/apps/gnome-freecell.png  \
 ./icons/24x24/apps/gnome-mines.png  \
+./icons/24x24/apps/gnome-nettool.png  \
 ./icons/24x24/apps/gnome-power-manager.png  \
+./icons/24x24/apps/gnome-session-properties.png  \
+./icons/24x24/apps/gnome-tweak-tool.png  \
 ./icons/24x24/apps/goa-panel.png  \
+./icons/24x24/apps/gtranslator.png  \
 ./icons/24x24/apps/haguichi.png  \
 ./icons/24x24/apps/headpin.png  \
 ./icons/24x24/apps/help-browser.png  \
@@ -1015,6 +1032,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/system-config-authentication.png  \
 ./icons/24x24/apps/system-file-manager.png  \
 ./icons/24x24/apps/system-software-install.png  \
+./icons/24x24/apps/system-software-update.png  \
 ./icons/24x24/apps/system-users.png  \
 ./icons/24x24/apps/tasque.png  \
 ./icons/24x24/apps/text-editor.png  \
@@ -1378,6 +1396,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/fedora-release-notes.png  \
 ./icons/256x256/apps/file-roller.png  \
 ./icons/256x256/apps/firefox.png  \
+./icons/256x256/apps/five-or-more.png  \
 ./icons/256x256/apps/gimp.png  \
 ./icons/256x256/apps/glade.png  \
 ./icons/256x256/apps/gnome-aisleriot.png  \
@@ -1385,8 +1404,12 @@ EXTRA_DIST = \
 ./icons/256x256/apps/gnome-documents.png  \
 ./icons/256x256/apps/gnome-freecell.png  \
 ./icons/256x256/apps/gnome-mines.png  \
+./icons/256x256/apps/gnome-nettool.png  \
 ./icons/256x256/apps/gnome-power-manager.png  \
+./icons/256x256/apps/gnome-session-properties.png  \
+./icons/256x256/apps/gnome-tweak-tool.png  \
 ./icons/256x256/apps/goa-panel.png  \
+./icons/256x256/apps/gtranslator.png  \
 ./icons/256x256/apps/haguichi.png  \
 ./icons/256x256/apps/headpin.png  \
 ./icons/256x256/apps/help-browser.png  \
@@ -1430,6 +1453,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/system-config-authentication.png  \
 ./icons/256x256/apps/system-file-manager.png  \
 ./icons/256x256/apps/system-software-install.png  \
+./icons/256x256/apps/system-software-update.png  \
 ./icons/256x256/apps/system-users.png  \
 ./icons/256x256/apps/tasque.png  \
 ./icons/256x256/apps/text-editor.png  \
@@ -1794,6 +1818,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/fedora-release-notes.png  \
 ./icons/32x32/apps/file-roller.png  \
 ./icons/32x32/apps/firefox.png  \
+./icons/32x32/apps/five-or-more.png  \
 ./icons/32x32/apps/gimp.png  \
 ./icons/32x32/apps/glade.png  \
 ./icons/32x32/apps/gnome-aisleriot.png  \
@@ -1801,8 +1826,12 @@ EXTRA_DIST = \
 ./icons/32x32/apps/gnome-documents.png  \
 ./icons/32x32/apps/gnome-freecell.png  \
 ./icons/32x32/apps/gnome-mines.png  \
+./icons/32x32/apps/gnome-nettool.png  \
 ./icons/32x32/apps/gnome-power-manager.png  \
+./icons/32x32/apps/gnome-session-properties.png  \
+./icons/32x32/apps/gnome-tweak-tool.png  \
 ./icons/32x32/apps/goa-panel.png  \
+./icons/32x32/apps/gtranslator.png  \
 ./icons/32x32/apps/haguichi.png  \
 ./icons/32x32/apps/headpin.png  \
 ./icons/32x32/apps/help-browser.png  \
@@ -1846,6 +1875,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/system-config-authentication.png  \
 ./icons/32x32/apps/system-file-manager.png  \
 ./icons/32x32/apps/system-software-install.png  \
+./icons/32x32/apps/system-software-update.png  \
 ./icons/32x32/apps/system-users.png  \
 ./icons/32x32/apps/tasque.png  \
 ./icons/32x32/apps/text-editor.png  \
@@ -2213,6 +2243,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/fedora-release-notes.png  \
 ./icons/48x48/apps/file-roller.png  \
 ./icons/48x48/apps/firefox.png  \
+./icons/48x48/apps/five-or-more.png  \
 ./icons/48x48/apps/gimp.png  \
 ./icons/48x48/apps/glade.png  \
 ./icons/48x48/apps/gnome-aisleriot.png  \
@@ -2220,8 +2251,12 @@ EXTRA_DIST = \
 ./icons/48x48/apps/gnome-documents.png  \
 ./icons/48x48/apps/gnome-freecell.png  \
 ./icons/48x48/apps/gnome-mines.png  \
+./icons/48x48/apps/gnome-nettool.png  \
 ./icons/48x48/apps/gnome-power-manager.png  \
+./icons/48x48/apps/gnome-session-properties.png  \
+./icons/48x48/apps/gnome-tweak-tool.png  \
 ./icons/48x48/apps/goa-panel.png  \
+./icons/48x48/apps/gtranslator.png  \
 ./icons/48x48/apps/haguichi.png  \
 ./icons/48x48/apps/headpin.png  \
 ./icons/48x48/apps/help-browser.png  \
@@ -2265,6 +2300,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/system-config-authentication.png  \
 ./icons/48x48/apps/system-file-manager.png  \
 ./icons/48x48/apps/system-software-install.png  \
+./icons/48x48/apps/system-software-update.png  \
 ./icons/48x48/apps/system-users.png  \
 ./icons/48x48/apps/tasque.png  \
 ./icons/48x48/apps/text-editor.png  \
