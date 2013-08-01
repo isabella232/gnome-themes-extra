@@ -141,7 +141,6 @@ EXTRA_DIST = \
 ./icons/16x16/apps/gnome-mines.png  \
 ./icons/16x16/apps/gnome-nettool.png  \
 ./icons/16x16/apps/gnome-power-manager.png  \
-./icons/16x16/apps/gnome-session-properties.png  \
 ./icons/16x16/apps/gnome-tweak-tool.png  \
 ./icons/16x16/apps/goa-panel.png  \
 ./icons/16x16/apps/gtranslator.png  \
@@ -182,6 +181,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/rhythmbox.png  \
 ./icons/16x16/apps/scribus.png  \
 ./icons/16x16/apps/seahorse.png  \
+./icons/16x16/apps/session-properties.png  \
 ./icons/16x16/apps/shotwell.png  \
 ./icons/16x16/apps/sound-juicer.png  \
 ./icons/16x16/apps/sparkleshare.png  \
@@ -563,7 +563,6 @@ EXTRA_DIST = \
 ./icons/22x22/apps/gnome-mines.png  \
 ./icons/22x22/apps/gnome-nettool.png  \
 ./icons/22x22/apps/gnome-power-manager.png  \
-./icons/22x22/apps/gnome-session-properties.png  \
 ./icons/22x22/apps/gnome-tweak-tool.png  \
 ./icons/22x22/apps/goa-panel.png  \
 ./icons/22x22/apps/gtranslator.png  \
@@ -604,6 +603,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/rhythmbox.png  \
 ./icons/22x22/apps/scribus.png  \
 ./icons/22x22/apps/seahorse.png  \
+./icons/22x22/apps/session-properties.png  \
 ./icons/22x22/apps/shotwell.png  \
 ./icons/22x22/apps/sound-juicer.png  \
 ./icons/22x22/apps/sparkleshare.png  \
@@ -985,7 +985,6 @@ EXTRA_DIST = \
 ./icons/24x24/apps/gnome-mines.png  \
 ./icons/24x24/apps/gnome-nettool.png  \
 ./icons/24x24/apps/gnome-power-manager.png  \
-./icons/24x24/apps/gnome-session-properties.png  \
 ./icons/24x24/apps/gnome-tweak-tool.png  \
 ./icons/24x24/apps/goa-panel.png  \
 ./icons/24x24/apps/gtranslator.png  \
@@ -1026,6 +1025,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/rhythmbox.png  \
 ./icons/24x24/apps/scribus.png  \
 ./icons/24x24/apps/seahorse.png  \
+./icons/24x24/apps/session-properties.png  \
 ./icons/24x24/apps/shotwell.png  \
 ./icons/24x24/apps/sound-juicer.png  \
 ./icons/24x24/apps/sparkleshare.png  \
@@ -1406,7 +1406,6 @@ EXTRA_DIST = \
 ./icons/256x256/apps/gnome-mines.png  \
 ./icons/256x256/apps/gnome-nettool.png  \
 ./icons/256x256/apps/gnome-power-manager.png  \
-./icons/256x256/apps/gnome-session-properties.png  \
 ./icons/256x256/apps/gnome-tweak-tool.png  \
 ./icons/256x256/apps/goa-panel.png  \
 ./icons/256x256/apps/gtranslator.png  \
@@ -1447,6 +1446,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/rhythmbox.png  \
 ./icons/256x256/apps/scribus.png  \
 ./icons/256x256/apps/seahorse.png  \
+./icons/256x256/apps/session-properties.png  \
 ./icons/256x256/apps/shotwell.png  \
 ./icons/256x256/apps/sound-juicer.png  \
 ./icons/256x256/apps/sparkleshare.png  \
@@ -1828,7 +1828,6 @@ EXTRA_DIST = \
 ./icons/32x32/apps/gnome-mines.png  \
 ./icons/32x32/apps/gnome-nettool.png  \
 ./icons/32x32/apps/gnome-power-manager.png  \
-./icons/32x32/apps/gnome-session-properties.png  \
 ./icons/32x32/apps/gnome-tweak-tool.png  \
 ./icons/32x32/apps/goa-panel.png  \
 ./icons/32x32/apps/gtranslator.png  \
@@ -1869,6 +1868,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/rhythmbox.png  \
 ./icons/32x32/apps/scribus.png  \
 ./icons/32x32/apps/seahorse.png  \
+./icons/32x32/apps/session-properties.png  \
 ./icons/32x32/apps/shotwell.png  \
 ./icons/32x32/apps/sound-juicer.png  \
 ./icons/32x32/apps/sparkleshare.png  \
@@ -2253,7 +2253,6 @@ EXTRA_DIST = \
 ./icons/48x48/apps/gnome-mines.png  \
 ./icons/48x48/apps/gnome-nettool.png  \
 ./icons/48x48/apps/gnome-power-manager.png  \
-./icons/48x48/apps/gnome-session-properties.png  \
 ./icons/48x48/apps/gnome-tweak-tool.png  \
 ./icons/48x48/apps/goa-panel.png  \
 ./icons/48x48/apps/gtranslator.png  \
@@ -2294,6 +2293,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/rhythmbox.png  \
 ./icons/48x48/apps/scribus.png  \
 ./icons/48x48/apps/seahorse.png  \
+./icons/48x48/apps/session-properties.png  \
 ./icons/48x48/apps/shotwell.png  \
 ./icons/48x48/apps/sound-juicer.png  \
 ./icons/48x48/apps/sparkleshare.png  \
