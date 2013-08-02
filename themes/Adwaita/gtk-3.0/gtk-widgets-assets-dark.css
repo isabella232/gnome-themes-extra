@@ -200,69 +200,69 @@
  *********************/
 .scale.slider,
 .scale.slider.horizontal {
-    background-image: url("assets/scale-slider-horz-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-horz-dark.png"), url("assets/scale-slider-horz-dark@2.png"));
 }
 
 .scale.slider:hover,
 .scale.slider.horizontal:hover {
-    background-image: url("assets/scale-slider-horz-hover-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-horz-hover-dark.png"), url("assets/scale-slider-horz-hover-dark@2.png"));
 }
 
 .scale.slider:active,
 .scale.slider:active:hover,
 .scale.slider.horizontal:active,
 .scale.slider.horizontal:active:hover {
-    background-image: url("assets/scale-slider-horz-active-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-horz-active-dark.png"), url("assets/scale-slider-horz-active-dark@2.png"));
 }
 
 .scale.slider:backdrop,
 .scale.slider:backdrop:hover,
 .scale.slider.horizontal:backdrop,
 .scale.slider.horizontal:backdrop:hover {
-    background-image: url("assets/scale-slider-horz-backdrop-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-horz-backdrop-dark.png"), url("assets/scale-slider-horz-backdrop-dark@2.png"));
 }
 
 .scale.slider:insensitive,
 .scale.slider:insensitive:hover,
 .scale.slider.horizontal:insensitive,
 .scale.slider.horizontal:insensitive:hover {
-    background-image: url("assets/scale-slider-horz-insensitive-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-horz-insensitive-dark.png"), url("assets/scale-slider-horz-insensitive-dark@2.png"));
 }
 
 .scale.slider:insensitive:backdrop,
 .scale.slider:insensitive:backdrop:hover,
 .scale.slider.horizontal:insensitive:backdrop,
 .scale.slider.horizontal:insensitive:backdrop:hover {
-    background-image: url("assets/scale-slider-horz-backdrop-insensitive-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-horz-backdrop-insensitive-dark.png"), url("assets/scale-slider-horz-backdrop-insensitive-dark@2.png"));
 }
 
 
 .scale.slider.vertical {
-    background-image: url("assets/scale-slider-vert-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-dark.png"), url("assets/scale-slider-vert-dark@2.png"));
 }
 
 .scale.slider.vertical:hover {
-    background-image: url("assets/scale-slider-vert-hover-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-hover-dark.png"), url("assets/scale-slider-vert-hover-dark@2.png"));
 }
 
 .scale.slider.vertical:active,
 .scale.slider.vertical:active:hover {
-    background-image: url("assets/scale-slider-vert-active-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-active-dark.png"), url("assets/scale-slider-vert-active-dark@2.png"));
 }
 
 .scale.slider.vertical:backdrop,
 .scale.slider.vertical:backdrop:hover {
-    background-image: url("assets/scale-slider-vert-backdrop-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-backdrop-dark.png"), url("assets/scale-slider-vert-backdrop-dark@2.png"));
 }
 
 .scale.slider.vertical:insensitive,
 .scale.slider.vertical:insensitive:hover {
-    background-image: url("assets/scale-slider-vert-insensitive-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-insensitive-dark.png"), url("assets/scale-slider-vert-insensitive-dark@2.png"));
 }
 
 .scale.slider.vertical:insensitive:backdrop,
 .scale.slider.vertical:insensitive:backdrop:hover {
-    background-image: url("assets/scale-slider-vert-backdrop-insensitive-dark.png");
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-backdrop-insensitive-dark.png"), url("assets/scale-slider-vert-backdrop-insensitive-dark@2.png"));
 }
 
 .scale.scale-has-marks-above.slider.horizontal {

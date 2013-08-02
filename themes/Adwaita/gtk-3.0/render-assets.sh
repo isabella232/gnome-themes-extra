@@ -3,7 +3,7 @@
 INKSCAPE="/usr/bin/inkscape"
 OPTIPNG="/usr/bin/optipng"
 
-SRC_FILE="assets-new.svg"
+SRC_FILE="assets.svg"
 ASSETS_DIR="assets"
 INDEX="assets.txt"
 
