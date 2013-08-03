@@ -59,6 +59,8 @@
 @define-color trough_bg_color_a #30312f;
 @define-color trough_bg_color_b #41433f;
 
+@define-color infobar_bg_color shade(rgb (138, 173, 212), 0.8);
+
 @define-color scrollbar_trough shade(@theme_bg_color, 1.2);
 @define-color scrollbar_trough_insensitive shade(@theme_bg_color, 1.05); /* FIXME */
 @define-color scrollbar_trough_unfocused shade(@theme_unfocused_bg_color, 1.2);

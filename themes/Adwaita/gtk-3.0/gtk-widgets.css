@@ -3855,6 +3855,52 @@ GtkInfoBar {
     border-color: @theme_unfocused_fg_color;
 }
 
+.info .button.close,
+.warning .button.close,
+.question .button.close,
+.error .button.close {
+    color: @infobar_fg_color;
+    icon-shadow: 0 1px @infobar_text_shadow;
+}
+
+.info .button.close:hover,
+.warning .button.close:hover,
+.question .button.close:hover,
+.error .button.close:hover {
+    background-image: linear-gradient(to bottom,
+				      alpha(white, 0.3),
+				      alpha(white, 0.2) 30%,
+				      alpha(black, 0.02));
+}
+
+.info .button.close:active,
+.warning .button.close:active,
+.question .button.close:active,
+.error .button.close:active {
+    color: @infobar_fg_color;
+    background-image: linear-gradient(to bottom,
+				      alpha(black, 0.1),
+				      transparent);
+}
+
+.info .button.close:backdrop,
+.warning .button.close:backdrop,
+.question .button.close:backdrop,
+.error .button.close:backdrop {
+    color: @theme_unfocused_fg_color;
+
+    icon-shadow: none;
+}
+
+.info .button.close:backdrop:hover,
+.warning .button.close:backdrop:hover,
+.question .button.close:backdrop:hover,
+.error .button.close:backdrop:hover {
+    background-image: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+
 .info .entry,
 .info .entry:focus,
 .info .button,
