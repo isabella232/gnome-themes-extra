@@ -100,6 +100,15 @@ GtkClutterOffscreen {
     color: @unfocused_insensitive_fg_color;
 }
 
+/* Apply effects to insensitive and prelit images */
+*:insensitive {
+    -gtk-image-effect: dim;
+}
+
+*:hover {
+    -gtk-image-effect: highlight;
+}
+
 .gtkstyle-fallback {
     background-color: @theme_bg_color;
     color: @theme_fg_color;
