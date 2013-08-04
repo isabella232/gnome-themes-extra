@@ -2241,6 +2241,14 @@ GtkComboBox .button:hover {
     border-width: 3px;
 }
 
+.scrollbar.slider.fine-tune:prelight:active {
+      background-image: none;
+      border-style: solid;
+      border-image: none;
+      border-color: transparent;
+      border-width: 5px;
+  }
+
 /*********
  * Menus *
  *********/

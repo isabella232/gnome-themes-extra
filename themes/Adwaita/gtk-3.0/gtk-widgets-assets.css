@@ -227,6 +227,17 @@
     background-image: -gtk-scaled(url("assets/scale-slider-horz-backdrop-insensitive.png"),url("assets/scale-slider-horz-backdrop-insensitive@2.png"));
 }
 
+ 
+.scale.slider.fine-tune:active,
+.scale.slider.fine-tune:active:hover,
+.scale.slider.fine-tune.horizontal:active,
+.scale.slider.fine-tune.horizontal:active:hover {
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+  }
+
+
 
 .scale.slider.vertical {
     background-image: -gtk-scaled(url("assets/scale-slider-vert.png"),url("assets/scale-slider-vert@2.png"));
