@@ -236,16 +236,6 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
                                 "focus-padding", &focus_pad,
                                 NULL);
 
-  /* as we render the tab smaller than the whole allocation, we need
-   * to recenter and resize the focus on the tab.
-   */
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_NOTEBOOK) &&
-      gtk_theming_engine_has_region (engine, GTK_STYLE_REGION_TAB, NULL))
-    {
-      y += 3.0;
-      height -= 3.0;
-    }
-
   /* the treeview rows don't change allocation when modifying focus-padding,
    * so we have to move the focus ring inside the allocated area manually.
    */
@@ -283,142 +273,6 @@ adwaita_engine_render_focus (GtkThemingEngine *engine,
     gdk_rgba_free (border_color);
 }
 
-#define NOTEBOOK_TAB_TOP_MARGIN 3.0
-
-static void
-draw_tab_shape (cairo_t *cr,
-                gdouble curve_width,
-                gdouble x,
-                gdouble y,
-                gdouble width,
-                gdouble height)
-{
-  cairo_move_to (cr, x, height);
-
-  cairo_arc (cr, 
-             x + curve_width, y + 3.0,
-             2.5,
-             G_PI, G_PI + G_PI_2);
-
-  cairo_arc (cr,
-             x + width - curve_width, y + 3.0,
-             2.5,
-             G_PI + G_PI_2, 2 * G_PI);
-
-  cairo_line_to (cr, x + width, height);
-}
-
-static void
-render_notebook_extension (GtkThemingEngine *engine,
-                           cairo_t          *cr,
-                           gdouble           x,
-                           gdouble           y,
-                           gdouble           width,
-                           gdouble           height,
-                           GtkPositionType   gap_side)
-{
-  gint tab_curvature, border_width;
-  GdkRGBA border_color, background_color;
-  GtkStateFlags state;
-  gdouble angle = 0;
-  cairo_pattern_t *pattern = NULL;
-  gboolean is_active;
-
-  gtk_theming_engine_get_style (engine,
-                                "tab-curvature", &tab_curvature,
-                                NULL);
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_background_color (engine, state, &background_color);
-  gtk_theming_engine_get_border_color (engine, state, &border_color);
-  gtk_theming_engine_get (engine, state,
-                          "border-image-source", &pattern,
-                          NULL);
-
-  is_active = (state & GTK_STATE_FLAG_ACTIVE);
-  border_width = 1.0;
-
-  cairo_save (cr);
-  cairo_set_line_width (cr, border_width);
-
-  if (gap_side == GTK_POS_BOTTOM)
-    x += border_width / 2;
-  else if (gap_side == GTK_POS_TOP)
-    x -= border_width / 2;
-
-  if (gap_side == GTK_POS_TOP)
-    {
-      angle = G_PI;
-      cairo_translate (cr, x + width, y + height - NOTEBOOK_TAB_TOP_MARGIN - border_width);
-    }
-  else
-    {
-      cairo_translate (cr, x, y + NOTEBOOK_TAB_TOP_MARGIN + border_width);
-    }
-
-  cairo_rotate (cr, angle);
-
-  width -= border_width;
-  height -= NOTEBOOK_TAB_TOP_MARGIN + border_width;
-
-  /* draw the tab shape and clip the background inside it */
-  cairo_save (cr);
-  draw_tab_shape (cr, tab_curvature, 
-                  0, 0.5,
-                  width, is_active ? (height + 1.0) : (height));
-  cairo_clip (cr);
-
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_background
-    (engine, cr, 0, 0.5,
-     width, is_active ? (height + 1.0) : (height));
-
-  cairo_restore (cr);
-
-  /* now draw the border */
-  draw_tab_shape (cr, tab_curvature,
-                  0, 0,
-                  width, height);
-
-  if (pattern && (state & GTK_STATE_FLAG_ACTIVE))
-    {
-      cairo_scale (cr, width, height);
-      cairo_set_source (cr, pattern);
-      cairo_scale (cr, 1.0 / width, 1.0 / height);
-    }
-  else
-    {
-      gdk_cairo_set_source_rgba (cr, &border_color);
-    }
-
-  cairo_stroke (cr);
-
-  if (pattern != NULL)
-    cairo_pattern_destroy (pattern);
-
-  cairo_restore (cr);
-}
-
-static void
-adwaita_engine_render_extension (GtkThemingEngine *engine,
-                                 cairo_t          *cr,
-                                 gdouble           x,
-                                 gdouble           y,
-                                 gdouble           width,
-                                 gdouble           height,
-                                 GtkPositionType   gap_side)
-{
-  if (gtk_theming_engine_has_class (engine, GTK_STYLE_CLASS_NOTEBOOK) &&
-      ((gap_side == GTK_POS_TOP) || (gap_side == GTK_POS_BOTTOM)))
-    {
-      render_notebook_extension (engine, cr, x, y, width, height, gap_side);
-      return;
-    }
-
-  GTK_THEMING_ENGINE_CLASS (adwaita_engine_parent_class)->render_extension
-    (engine, cr,
-     x, y, width, height,
-     gap_side);
-}
-
 static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
@@ -429,7 +283,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 
   engine_class->render_arrow = adwaita_engine_render_arrow;
   engine_class->render_focus = adwaita_engine_render_focus;
-  engine_class->render_extension = adwaita_engine_render_extension;
 }
 
 static void
