@@ -1,5 +1,7 @@
 @define-color documents_emblem_bg #3465a4;
 @define-color documents_collection_bg #d3d7cf;
+@define-color gedit_not_found_bg rgb (237, 54, 54);
+@define-color gedit_not_found_fg white;
 
 /****************
  * Applications *
@@ -219,9 +221,9 @@ GeditViewFrame .gedit-search-slider {
 }
 
 GeditViewFrame .gedit-search-slider .not-found {
-    color: @error_fg_color;
+    color: @gedit_not_found_fg;
     background-image: none;
-    background-color: @error_bg_color;
+    background-color: @gedit_not_found_bg;
 }
 
 GeditViewFrame .gedit-search-slider .not-found:selected {
