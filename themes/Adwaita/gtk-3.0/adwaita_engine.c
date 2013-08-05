@@ -169,45 +169,6 @@ adwaita_engine_init (AdwaitaEngine *self)
 }
 
 static void
-adwaita_engine_render_arrow (GtkThemingEngine *engine,
-                             cairo_t          *cr,
-                             gdouble           angle,
-                             gdouble           x,
-                             gdouble           y,
-                             gdouble           size)
-{
-  double line_width;
-  GtkStateFlags state;
-  GdkRGBA color;
-
-  cairo_save (cr);
-
-  line_width = size / 3.0 / sqrt (2);
-  cairo_set_line_width (cr, line_width);
-  cairo_set_line_join (cr, CAIRO_LINE_JOIN_ROUND);
-  cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
-
-  cairo_translate (cr, x + size / 2.0, y + size / 2.0);
-  cairo_rotate (cr, angle - G_PI_2);
-  cairo_translate (cr, size / 4.0, 0);
- 
-  cairo_scale (cr,
-               (size / (size + line_width)),
-               (size / (size + line_width)));
-
-  cairo_move_to (cr, -size / 2.0, -size / 2.0);
-  cairo_rel_line_to (cr, size / 2.0, size / 2.0);
-  cairo_rel_line_to (cr, - size / 2.0, size / 2.0);
-
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get_color (engine, state, &color);
-  gdk_cairo_set_source_rgba (cr, &color);
-  cairo_stroke (cr);
-
-  cairo_restore (cr);
-}
-
-static void
 adwaita_engine_render_focus (GtkThemingEngine *engine,
                              cairo_t          *cr,
                              gdouble           x,
@@ -281,7 +242,6 @@ adwaita_engine_class_init (AdwaitaEngineClass *klass)
 
   oclass->finalize = adwaita_engine_finalize;
 
-  engine_class->render_arrow = adwaita_engine_render_arrow;
   engine_class->render_focus = adwaita_engine_render_focus;
 }
 
