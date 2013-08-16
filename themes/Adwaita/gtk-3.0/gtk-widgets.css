@@ -3996,7 +3996,6 @@ GtkBubbleWindow .toolbar {
  * CSD *
  *******/
 .titlebar {
-    font: Bold 11;
     text-shadow: 0 1px @wm_title_shadow;
 
     padding: 0;
@@ -4007,6 +4006,10 @@ GtkBubbleWindow .toolbar {
                                       @wm_bg_a,
                                       @wm_bg_b);
     border-radius: 10px 10px 0px 0px;
+}
+
+.titlebar .title {
+    font: Bold 11;
 }
 
 .titlebar:backdrop {
