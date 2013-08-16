@@ -4015,6 +4015,7 @@ GtkBubbleWindow .toolbar {
 .titlebar:backdrop {
     text-shadow: none;
     background-image: none;
+    background-color: @wm_bg_b;
 }
 
 .titlebar .titlebutton {
