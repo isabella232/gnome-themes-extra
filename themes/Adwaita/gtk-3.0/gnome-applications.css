@@ -710,6 +710,11 @@ ContactsWindow .primary-toolbar.toolbar {
   border-image: none;
 }
 
+.contacts-watermark {
+  color: #bebebe;
+  text-shadow: 1px 1px alpha(white, 0.6);
+}
+
 /* gnome-photos */
 
 .photos-icon-bg {
