@@ -599,9 +599,13 @@ EphyWindow.background EphyNotebook.notebook:last-child {
 /* Gnome Contacts */
 
 /* Line at top in contacts pane, similar to .documents-scrolledwin.frame */
-.contacts-content.frame {
- border-width: 1px 0 0 0;
+.contacts-spinner.frame {
+ border-width: 0 1px 0 0;
+ border-style: solid;
+ border-color: @borders;
+ border-image: none;
  border-radius: 0;
+ padding: 0;
 }
 
 /* Background color in contacts pane, similar to .documents-main-view.view */
