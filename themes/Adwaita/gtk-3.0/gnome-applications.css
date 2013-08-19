@@ -619,8 +619,12 @@ EphyWindow.background EphyNotebook.notebook:last-child {
 }
 
 /* Border on the right in the left menu toolbar */
-.contacts-left-header-bar {
+.contacts-left-header-bar:dir(ltr) {
  border-right-width: 1px;
+}
+
+.contacts-left-header-bar:dir(rtl) {
+ border-left-width: 1px;
 }
 
 .contacts-avatar-frame.frame {
