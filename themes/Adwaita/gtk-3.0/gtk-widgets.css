@@ -61,23 +61,12 @@
     background-color: @theme_bg_color;
 }
 
-.background:insensitive {
-    color: @insensitive_fg_color;
-}
-
 .background:backdrop {
     /* I want everything nice and flat in the unfocused window */
     text-shadow: none;
     icon-shadow: none;
 
     color: @theme_unfocused_fg_color;
-}
-
-.background:insensitive:backdrop {
-    /* I want everything nice and flat in the unfocused window */
-    text-shadow: none;
-    icon-shadow: none;
-    color: @unfocused_insensitive_fg_color;
 }
 
 /* FIXME: why do we still need this? */
@@ -100,7 +89,15 @@ GtkClutterOffscreen {
 
 *:insensitive {
     background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
     border-color: @insensitive_borders;
+}
+
+*:insensitive:backdrop {
+    /* I want everything nice and flat in the unfocused window */
+    text-shadow: none;
+    icon-shadow: none;
+    color: @unfocused_insensitive_fg_color;
 }
 
 .gtkstyle-fallback {
@@ -1208,7 +1205,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button:insensitive,
-.button:active:insensitive {
+.button:active *:insensitive {
     color: @insensitive_fg_color;
     text-shadow: none;
 }
@@ -1218,7 +1215,7 @@ GtkComboBox.combobox-entry .button {
 }
 
 .button:active:backdrop,
-.button:active:insensitive:backdrop {
+.button:active:backdrop *:insensitive {
     color: @theme_unfocused_bg_color;
     text-shadow: none;
     icon-shadow: none;
@@ -2863,9 +2860,9 @@ GtkOverlay.osd {
 }
 
 .osd.button:insensitive,
-.osd.button:insensitive:active,
+.osd.button:active *:insensitive,
 .osd .button:insensitive,
-.osd .button:insensitive:active {
+.osd .button:active *:insensitive {
     color: @osd_button_fg_insensitive;
     text-shadow: none;
     icon-shadow: none;
@@ -2873,10 +2870,10 @@ GtkOverlay.osd {
 
 .osd.button:backdrop,
 .osd.button:backdrop:insensitive,
-.osd.button:backdrop:insensitive:active,
+.osd.button:backdrop:active *:insensitive,
 .osd .button:backdrop,
 .osd .button:backdrop:insensitive,
-.osd .button:backdrop:insensitive:active {
+.osd .button:backdrop:active *:insensitive {
     color: @osd_button_fg_backdrop;
     text-shadow: none;
     icon-shadow: none;

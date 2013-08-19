@@ -97,8 +97,8 @@ NautilusToolbar .button:active {
 }
 
 NautilusToolbar .button:insensitive,
-NautilusToolbar .button:active:insensitive {
-    text-shadow: none;
+NautilusToolbar .button:active *:insensitive {
+    icon-shadow: none;
 }
 
 NautilusQueryEditor .primary-toolbar.toolbar {
