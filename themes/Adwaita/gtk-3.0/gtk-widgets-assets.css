@@ -244,7 +244,7 @@
 }
 
 .scale.slider.vertical:hover {
-    background-image: -gtk-scaled(url("assets/scale-slider-vert-hover.png"),url("assets/scale-slider-vert-hover.png"));
+    background-image: -gtk-scaled(url("assets/scale-slider-vert-hover.png"),url("assets/scale-slider-vert-hover@2.png"));
 }
 
 .scale.slider.vertical:active,
