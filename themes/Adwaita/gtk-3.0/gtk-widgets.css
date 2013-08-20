@@ -1028,6 +1028,15 @@ GtkLevelBar.vertical {
     /* background-image in -assets variant */
 }
 
+.scale.slider.fine-tune:active,
+.scale.slider.fine-tune:active:hover,
+.scale.slider.fine-tune.horizontal:active,
+.scale.slider.fine-tune.horizontal:active:hover {
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+}
+
 .scale.trough {
     margin: 8px 0;
 }
