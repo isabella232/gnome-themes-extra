@@ -1,5 +1,14 @@
 /* common color definitions to the light and dark variations */
 
+/******************************
+ * Destructive action buttons *
+ ******************************/
+@define-color destructive_action_button_a #e03d3d;
+@define-color destructive_action_button_b #ef2929;
+@define-color destructive_action_button_border #9d4242;
+@define-color destructive_action_button_fg @theme_base_color;
+@define-color destructive_action_button_shadow shade(@destructive_action_button_border, 1.15);
+
 /*******
  * OSD *
  *******/
