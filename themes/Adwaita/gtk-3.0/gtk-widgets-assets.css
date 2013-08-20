@@ -68,7 +68,6 @@
     background-image: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"),url("assets/checkbox-checked-insensitive@2.png"));
 }
 
-
 .check:active:backdrop,
 .view.cell:active:backdrop,
 .check row:selected:active:backdrop {
@@ -80,7 +79,6 @@
     background-image: -gtk-scaled(url("assets/checkbox-checked-backdrop-insensitive.png"),url("assets/checkbox-checked-backdrop-insensitive@2.png"));
 }
 
-
 .check:inconsistent {
     background-image: -gtk-scaled(url("assets/checkbox-mixed.png"),url("assets/checkbox-mixed@2.png"));
 }
@@ -88,7 +86,6 @@
 .check:inconsistent:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"),url("assets/checkbox-mixed-insensitive@2.png"));
 }
-
 
 .check:inconsistent:backdrop,
 .check row:selected:inconsistent:backdrop {
@@ -126,7 +123,6 @@
     background-image: -gtk-scaled(url("assets/radio-unchecked-backdrop-insensitive.png"),url("assets/radio-unchecked-backdrop-insensitive@2.png"));
 }
 
-
 .radio:active,
 .view.cell.radio:active {
     background-image: -gtk-scaled(url("assets/radio-checked.png"),url("assets/radio-checked@2.png"));
@@ -146,7 +142,6 @@
 .radio row:selected:active:insensitive:backdrop {
     background-image: -gtk-scaled(url("assets/radio-checked-backdrop-insensitive.png"),url("assets/radio-checked-backdrop-insensitive@2.png"));
 }
-
 
 .radio:inconsistent {
     background-image: -gtk-scaled(url("assets/radio-mixed.png"),url("assets/radio-mixed@2.png"));
