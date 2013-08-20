@@ -4,7 +4,7 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">GNOME Standard Themes</name>
+  <name xml:lang="en">gnome-themes-standard</name>
   <shortdesc xml:lang="en">Standard Themes for GNOME Applications</shortdesc>
   <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-themes-list" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-themes-standard/" />
