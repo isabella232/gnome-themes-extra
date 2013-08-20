@@ -1,3 +1,17 @@
+3.9.90
+======
+
+New style for WM buttons to go together with the new headerbar
+controls. 
+
+GTK3:
+ Improved client side decorations.
+ New radiobuttons and checkboxes.
+ HIDPI support.
+ Unified infobar styling.
+ App specific fixes for Contacts, Baobab. (Erick Pérez Castellanos, 
+ Stefano Facchini)
+
 3.9.3
 =====
 
