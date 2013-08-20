@@ -3110,9 +3110,6 @@ GtkProgressBar.osd.progressbar {
     background-image: linear-gradient(to bottom,
                                       @suggested_action_button_a,
                                       @suggested_action_button_b);
-    border-image: none;
-    border-color: @suggested_action_button_border;
-    border-width: 1px;
 
     color: @suggested_action_button_fg;
 }
@@ -3169,9 +3166,6 @@ GtkProgressBar.osd.progressbar {
     background-image: linear-gradient(to bottom,
                                       @destructive_action_button_a,
                                       @destructive_action_button_b);
-    border-image: none;
-    border-color: @destructive_action_button_border;
-    border-width: 1px;
 
     color: @destructive_action_button_fg;
 }
