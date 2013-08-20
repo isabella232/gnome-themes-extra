@@ -4068,14 +4068,14 @@ GtkBubbleWindow .toolbar {
 .titlebar {
     text-shadow: 0 1px @wm_title_shadow;
 
-    padding: 0;
+    padding: 3px;
     border-style: none;
 
     box-shadow: none;
     background-image: linear-gradient(to bottom,
                                       @wm_bg_a,
                                       @wm_bg_b);
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
 }
 
 .titlebar .title {
@@ -4089,65 +4089,70 @@ GtkBubbleWindow .toolbar {
 }
 
 .titlebar .titlebutton {
-    icon-shadow: 0px 1px darker (darker (@theme_bg_color));
-    color: white;
+    icon-shadow: 0px 1px @wm_title_shadow;
+    color: @wm_title;
+    background: transparent;
+    border-radius: 0;
+    border-width: 0;
+    border: none;
+    padding: 5px 5px 6px 5px;
 }
 
-.titlebar .titlebutton {
-    border-style: none none solid solid;
-    border-color: darker(@theme_bg_color);
-    border-image: none;
-    border-width: 1px;
-    border-radius: 0px;
-
-    background-image: linear-gradient(to bottom,
-                                      @wm_button_bg_a,
-                                      @wm_button_bg_b,
-                                      @wm_button_bg_c,
-                                      @wm_button_bg_d);
-}
 
 .titlebar .titlebutton:hover {
+    border-radius: 3px;
     background-image: linear-gradient(to bottom,
-                                      @wm_button_bg_hover_a,
-                                      @wm_button_bg_hover_b,
-                                      @wm_button_bg_hover_c,
-                                      @wm_button_bg_hover_d);
+                                      @button_hover_gradient_color_a,
+                                      @button_hover_gradient_color_b);
+    border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-radius: 3px;
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 4px;
 }
 
 .titlebar .titlebutton:active {
+    padding: 5px 4px 3px 4px;
     background-image: linear-gradient(to bottom,
-                                      @wm_button_bg_active_a,
-                                      @wm_button_bg_active_b,
-                                      @wm_button_bg_active_c);
+                                      @borders,
+                                      shade(@theme_bg_color, 0.95)
+                                      );
+    color: @theme_selected_fg_color;
+    icon-shadow: none;
 }
 
 .titlebar .right .titlebutton:first-child {
-    border-bottom-left-radius: 5px;
+/*    border-left: 1px solid @menu_separator; */
 }
 
 .titlebar .right .titlebutton:last-child {
-    border-top-right-radius: 10px;
+
 }
 
 .titlebar .left .titlebutton:last-child {
-    border-bottom-right-radius: 5px;
+/*    border-right: 1px solid @menu_separator; */
 }
 
 .titlebar .left .titlebutton:first-child {
-    border-top-left-radius: 10px;
+
+}
+
+.titlebar .titlebutton:backdrop,
+.titlebar .titlebutton:backdrop:hover {
+    padding: 5px 5px 6px 5px; /* no matter what I try here, it jumps around */
 }
 
 .titlebar .titlebutton:backdrop {
     background-image: none;
-    color: darker (@theme_bg_color);
+    color: @wm_unfocused_title;
     icon-shadow: none;
-    border-style: none;
+    border: none;
 }
 
 .window-frame {
     border-color: darker(@theme_bg_color);
-    border-radius: 10px 10px 0 0;
+    border-radius: 7px 7px 0 0;
     border-width: 1px;
     border-style: solid;
 
