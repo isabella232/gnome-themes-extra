@@ -877,7 +877,7 @@
   <line x1="7" y1="4" x2="width-8" y2="4" color="C_button_border" />
   <arc color="C_button_border" x="width-9" y="4" width="4" height="4" start_angle="0" extent_angle="90"/>  
   <line x1="width-5" y1="7" x2="width-5" y2="height-8" color="C_button_border" />
-  <arc color="C_button_border" x="width-9" y="height-10" width="4" height="4" start_angle="90" extent_angle="90"/>
+  <arc color="C_button_border" x="width-9" y="height-9" width="4" height="4" start_angle="90" extent_angle="90"/>
   <line x1="width-7" y1="height-5" x2="7" y2="height-5" color="C_button_border" />
   <arc color="C_button_border" x="4" y="height-9" width="4" height="4" start_angle="180" extent_angle="90"/>
   <line x1="4" y1="7" x2="4" y2="height-8" color="C_button_border" />
