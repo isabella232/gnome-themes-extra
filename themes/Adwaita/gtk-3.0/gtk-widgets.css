@@ -2372,7 +2372,7 @@ GtkTreeMenu .menuitem,
     color: @theme_selected_fg_color;
 }
 
-.menu .menuitem:insensitive {
+.menu .menuitem *:insensitive {
     color: mix (@menu_fg_color, @menu_bg_color, 0.6);
 }
 
