@@ -3154,6 +3154,7 @@ GtkProgressBar.osd.progressbar {
 .suggested-action.button:backdrop {
     text-shadow: none;
     icon-shadow: none;
+    color: @theme_unfocused_text_color;
 }
 
 /******************************
@@ -3182,11 +3183,6 @@ GtkProgressBar.osd.progressbar {
     color: @destructive_action_button_fg;
 }
 
-.destructive-action.button:backdrop {
-    background-image: none;
-    color: @suggested_action_button_fg;
-}
-
 .destructive-action.button {
     text-shadow: 0 1px @destructive_action_button_shadow;
     icon-shadow: 0 1px @destructive_action_button_shadow;
@@ -3199,8 +3195,10 @@ GtkProgressBar.osd.progressbar {
 }
 
 .destructive-action.button:backdrop {
+    background-image: none;
     text-shadow: none;
     icon-shadow: none;
+    color: @theme_unfocused_text_color;
 }
 
 /**************************
