@@ -4085,29 +4085,24 @@ GtkBubbleWindow .toolbar {
 .titlebar .titlebutton {
     icon-shadow: 0px 1px @wm_title_shadow;
     color: @wm_title;
-    background: transparent;
-    border-radius: 0;
-    border-width: 0;
-    border: none;
+    background: none;
     padding: 5px 5px 6px 5px;
+
+    border-radius: 3px;
+    border-width: 1px 1px 2px 1px;
+    border-color: transparent;
+    border-style: solid;
+    border-image: none;
 }
 
-
 .titlebar .titlebutton:hover {
-    border-radius: 3px;
     background-image: linear-gradient(to bottom,
                                       @button_hover_gradient_color_a,
                                       @button_hover_gradient_color_b);
     border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
-    border-radius: 3px;
-    border-width: 1px 1px 2px 1px;
-    border-style: solid;
-    border-color: transparent;
-    padding: 4px;
 }
 
 .titlebar .titlebutton:active {
-    padding: 5px 4px 3px 4px;
     background-image: linear-gradient(to bottom,
                                       @borders,
                                       shade(@theme_bg_color, 0.95)
@@ -4132,16 +4127,11 @@ GtkBubbleWindow .toolbar {
 
 }
 
-.titlebar .titlebutton:backdrop,
-.titlebar .titlebutton:backdrop:hover {
-    padding: 5px 5px 6px 5px; /* no matter what I try here, it jumps around */
-}
-
 .titlebar .titlebutton:backdrop {
     background-image: none;
     color: @wm_unfocused_title;
+    border-image: none;
     icon-shadow: none;
-    border: none;
 }
 
 .window-frame {
