@@ -4056,9 +4056,6 @@ GtkBubbleWindow .toolbar {
 .titlebar {
     text-shadow: 0 1px @wm_title_shadow;
 
-    border-style: none;
-
-    box-shadow: none;
     background-image: linear-gradient(to bottom,
                                       @wm_bg_a,
                                       @wm_bg_b);
