@@ -215,7 +215,10 @@ GtkSwitch.trough:backdrop,
 .trough:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop:insensitive,
-.inline-toolbar.toolbar.vertical .button:backdrop:active {
+.inline-toolbar.toolbar.vertical .button:backdrop:active,
+.suggested-action.button:backdrop, 
+.toolbar .suggested-action.button:backdrop,
+.destructive-action.button:backdrop {
     border-image: -gtk-scaled (url("borders/generic-border-backdrop-dark.png"),url("borders/generic-border-backdrop-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;

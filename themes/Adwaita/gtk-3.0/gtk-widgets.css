@@ -3134,8 +3134,6 @@ GtkProgressBar.osd.progressbar {
 .toolbar .suggested-action.button:backdrop,
 .suggested-action.button:backdrop {
     background-image: none;
-    border-image: none;
-    border-color: @unfocused_borders;
 }
 
 .toolbar .suggested-action.button,
@@ -3186,8 +3184,7 @@ GtkProgressBar.osd.progressbar {
 
 .destructive-action.button:backdrop {
     background-image: none;
-    border-image: none;
-    border-color: @unfocused_borders;
+    color: @suggested_action_button_fg;
 }
 
 .destructive-action.button {
