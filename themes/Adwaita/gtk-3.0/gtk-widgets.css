@@ -2289,7 +2289,7 @@ GtkTreeMenu .menuitem,
 }
 
 .context-menu {
-    font: regular 10;
+    font: initial;
 }
 
 .menu {
