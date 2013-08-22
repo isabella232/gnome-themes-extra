@@ -4097,7 +4097,6 @@ GtkBubbleWindow .toolbar {
     background-image: linear-gradient(to bottom,
                                       @button_hover_gradient_color_a,
                                       @button_hover_gradient_color_b);
-    border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
 }
 
 .titlebar .titlebutton:active {
