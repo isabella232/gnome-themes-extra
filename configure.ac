@@ -35,7 +35,7 @@ AC_MSG_CHECKING([building gtk3 engine])
 AM_CONDITIONAL(GTK3_ENGINE, test "x$enable_gtk3_engine" = "xyes")
 AC_MSG_RESULT([$enable_gtk3_engine])
 
-GTK_VERSION_REQUIRED=3.9.3
+GTK_VERSION_REQUIRED=3.9.12
 if test "x$enable_gtk3_engine" = "xyes"; then
   PKG_CHECK_MODULES([GTK3_ENGINE], [gtk+-3.0 >= $GTK_VERSION_REQUIRED librsvg-2.0])
   PKG_CHECK_MODULES([HIGHCONTRAST], [cairo gio-2.0 gdk-pixbuf-2.0 gdk-3.0])
