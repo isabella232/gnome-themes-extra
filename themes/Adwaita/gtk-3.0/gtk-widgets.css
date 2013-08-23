@@ -2603,7 +2603,7 @@ GtkCheckButton:selected:focus {
 }
 
 .header-bar .button.image-button {
-    padding: 5px 4px 4px 5px;
+    padding: 5px 4px 5px 5px;
 }
 
 /********************
