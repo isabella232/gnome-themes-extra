@@ -102,6 +102,7 @@ NautilusToolbar .button:active *:insensitive {
 }
 
 NautilusQueryEditor .primary-toolbar.toolbar {
+    border-top-width: 0;
     border-bottom-width: 0;
 }
 
@@ -118,6 +119,12 @@ NautilusQueryEditor .toolbar {
 
 NautilusQueryEditor .toolbar:nth-child(2) {
     border-color: @borders;
+}
+
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    border-bottom-width: 1px;
+    border-bottom-color: @borders;
 }
 
 NautilusQueryEditor .toolbar:backdrop {
