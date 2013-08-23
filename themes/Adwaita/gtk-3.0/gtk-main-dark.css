@@ -108,12 +108,12 @@
 @define-color notebook_tab_gradient_b shade(@theme_bg_color, 0.75);
 @define-color notebook_tab_hilight shade(@theme_bg_color, 0.9);
 
-@define-color toolbar_gradient_a shade(@theme_bg_color, 0.75);
+@define-color toolbar_gradient_a shade(@theme_bg_color, 0.77);
 @define-color toolbar_gradient_b shade(@theme_bg_color, 0.8);
-@define-color toolbar_gradient_c shade(@theme_bg_color, 0.9);
+@define-color toolbar_gradient_c shade(@theme_bg_color, 0.86);
 
-@define-color toolbar_border_top shade(@borders, 0.7);
-@define-color toolbar_border_bottom shade(@borders, 1.05);
+@define-color toolbar_border_top shade(@borders, 0.95);
+@define-color toolbar_border_bottom shade(@borders, 1.2);
 
 @define-color toolbar_active_button_color #222222;
 @define-color toolbar_button_prelight alpha(black, 0.3);
