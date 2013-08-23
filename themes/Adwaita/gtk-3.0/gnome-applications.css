@@ -136,17 +136,6 @@ NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
     border-color: @unfocused_borders;
 }
 
-
-NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar {
-    border-top-width: 0;
-}
-
-NautilusNotebook.notebook NautilusQueryEditor .toolbar:last-child,
-NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-child {
-    border-bottom-width: 1px;
-    border-bottom-color: @borders;
-}
-
 /* gedit */
 
 GeditWindow .pane-separator, 
