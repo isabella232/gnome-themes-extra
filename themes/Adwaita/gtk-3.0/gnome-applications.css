@@ -52,14 +52,7 @@ TerminalWindow GtkNotebook.notebook {
 }
 
 NautilusWindow .sidebar .frame {
-    border-width: 0 0 0 0;
-    border-style: solid;
-    border-color: @borders;
-    border-radius: 0;
-}
-
-NautilusWindow .sidebar .frame:backdrop {
-    border-color: @unfocused_borders;
+    border-style: none;
 }
 
 NautilusWindow > GtkGrid > .pane-separator,
@@ -77,7 +70,6 @@ NautilusWindow > GtkGrid > .pane-separator:hover:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
-NautilusView.frame,
 NautilusNotebook.notebook {
     border-right-width: 0;
     border-left-width: 0;
@@ -85,7 +77,7 @@ NautilusNotebook.notebook {
 }
 
 NautilusNotebook .frame {
-    border-width: 0 0 0 0;
+    border-width: 0;
 }
 
 NautilusToolbar .button {
