@@ -4,6 +4,8 @@ AC_PREREQ(2.53)
 AC_INIT([gnome-themes-standard], [3.9.90],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-themes-standard])
 
+AC_CONFIG_MACRO_DIR([m4])
+
 AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-xz no-dist-gzip])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 

@@ -1,5 +1,7 @@
 SUBDIRS = themes po
 
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+
 MAINTAINERCLEANFILES =			\
 	Makefile.in			\
 	aclocal.m4			\
