@@ -2586,6 +2586,8 @@ GtkCheckButton:selected:focus {
 
     box-shadow: inset 0 -1px shade(@borders, 1.30);
     background-color: @theme_bg_color;
+
+    padding: 6px 6px 5px 6px;
 }
 
 .header-bar:backdrop {
