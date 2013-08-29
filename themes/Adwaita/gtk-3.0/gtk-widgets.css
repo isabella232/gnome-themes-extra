@@ -2608,6 +2608,14 @@ GtkCheckButton:selected:focus {
     padding: 5px 4px 5px 5px;
 }
 
+.header-bar .title {
+    font: Bold 11;
+}
+
+.header-bar .subtitle {
+    font: 9;
+}
+
 /********************
  * Primary Toolbars *
  ********************/
