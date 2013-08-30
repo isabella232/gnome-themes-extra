@@ -4031,16 +4031,8 @@ GtkInfoBar {
  * Dim labels *
  **************/
 .view.dim-label,
-.dim-label,
-.dim-label:hover,
-.dim-label:focus {
-    color: mix (@theme_fg_color, @theme_bg_color, 0.50);
-    text-shadow: none;
-}
-
-.dim-label:selected,
-.dim-label:selected:focus {
-    color: mix (@theme_selected_fg_color, @theme_base_color, 0.50);
+.dim-label {
+    color: alpha(currentColor, 0.55);
     text-shadow: none;
 }
 
