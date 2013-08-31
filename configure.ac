@@ -9,6 +9,11 @@ AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE([1.9 tar-ustar foreign dist-xz no-dist-gzip])
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
+dnl http://people.gnome.org/~walters/docs/build-api.txt
+dnl We don't support separate builddir because of the
+dnl HighContrast theme generation code
+echo \#buildapi-variable-no-builddir >/dev/null
+
 PKG_PROG_PKG_CONFIG([0.19])
 
 AC_PROG_SED
