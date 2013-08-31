@@ -295,7 +295,7 @@ GtkLevelBar.vertical {
     color: @theme_button_insensitive_fg;
 }
 
-.button *:insensitive:active {
+.button:active *:insensitive {
     color: @theme_button_insensitive_active_fg;
 }
 
@@ -1049,6 +1049,13 @@ GtkViewport {
 
 GtkIconView.view.cell {
     border-radius: 4px;
+}
+
+/**************
+ * List boxes *
+ **************/
+.list-row:hover {
+    background-color: @theme_button_bg;
 }
 
 /*******
