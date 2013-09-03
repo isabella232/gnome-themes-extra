@@ -1,3 +1,22 @@
+3.9.91
+======
+
+GTK3:
+  Improve support for headerbars styling (Allan Day, Paolo Borelli,
+  Jakub Steiner)
+  Increase legibility of pushed button style (Allan Day)
+  Fix CSD shadows for dark themed windows (Matthias Clasen)
+  Fix dim-label color on selected rows (Thomas Wood)
+  Fix font style for context menus (Matthias Clasen)
+  Fixes for destructive/suggested-action buttons (Andreas Nilsson)
+  App specific fixes for Baobab, Nautilus (Stefano Facchini, António Fernandes)
+
+HighContrast:
+  Add support for CSD and headerbars
+  Fix insensitive menu items styling
+  Fix extra frame for GtkStatusbar
+  App specific fixes for Nautilus
+
 3.9.90
 ======
 
