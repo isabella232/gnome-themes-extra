@@ -2364,7 +2364,7 @@ GtkTreeMenu .menuitem,
 }
 
 .menu .menuitem:insensitive {
-    background-color: @menu_bg_color;
+    background-color: transparent;
 }
 
 .menu .menuitem:active,
