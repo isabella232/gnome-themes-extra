@@ -610,6 +610,16 @@ EphyWindow.background EphyNotebook.notebook:last-child {
  border-left-width: 1px;
 }
 
+.contacts-left-header-bar:dir(ltr),
+.contacts-right-header-bar:dir(rtl) {
+  border-top-right-radius: 0;
+}
+
+.contacts-right-header-bar:dir(ltr),
+.contacts-left-header-bar:dir(rtl) {
+  border-top-left-radius: 0;
+}
+
 .contacts-avatar-frame.frame {
  border-width: 1px 1px 0 1px;
  border-style: solid;
