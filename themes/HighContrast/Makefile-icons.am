@@ -105,7 +105,6 @@ EXTRA_DIST = \
 ./icons/16x16/actions/zoom-in.png  \
 ./icons/16x16/actions/zoom-original.png  \
 ./icons/16x16/actions/zoom-out.png  \
-./icons/16x16/apps/abrt-gui.png  \
 ./icons/16x16/apps/accessories-calculator.png  \
 ./icons/16x16/apps/accessories-character-map.png  \
 ./icons/16x16/apps/accessories-dictionary.png  \
@@ -134,6 +133,7 @@ EXTRA_DIST = \
 ./icons/16x16/apps/five-or-more.png  \
 ./icons/16x16/apps/gimp.png  \
 ./icons/16x16/apps/glade.png  \
+./icons/16x16/apps/gnome-abrt.png  \
 ./icons/16x16/apps/gnome-aisleriot.png  \
 ./icons/16x16/apps/gnome-boxes.png  \
 ./icons/16x16/apps/gnome-documents.png  \
@@ -527,7 +527,6 @@ EXTRA_DIST = \
 ./icons/22x22/actions/zoom-in.png  \
 ./icons/22x22/actions/zoom-original.png  \
 ./icons/22x22/actions/zoom-out.png  \
-./icons/22x22/apps/abrt-gui.png  \
 ./icons/22x22/apps/accessories-calculator.png  \
 ./icons/22x22/apps/accessories-character-map.png  \
 ./icons/22x22/apps/accessories-dictionary.png  \
@@ -556,6 +555,7 @@ EXTRA_DIST = \
 ./icons/22x22/apps/five-or-more.png  \
 ./icons/22x22/apps/gimp.png  \
 ./icons/22x22/apps/glade.png  \
+./icons/22x22/apps/gnome-abrt.png  \
 ./icons/22x22/apps/gnome-aisleriot.png  \
 ./icons/22x22/apps/gnome-boxes.png  \
 ./icons/22x22/apps/gnome-documents.png  \
@@ -949,7 +949,6 @@ EXTRA_DIST = \
 ./icons/24x24/actions/zoom-in.png  \
 ./icons/24x24/actions/zoom-original.png  \
 ./icons/24x24/actions/zoom-out.png  \
-./icons/24x24/apps/abrt-gui.png  \
 ./icons/24x24/apps/accessories-calculator.png  \
 ./icons/24x24/apps/accessories-character-map.png  \
 ./icons/24x24/apps/accessories-dictionary.png  \
@@ -978,6 +977,7 @@ EXTRA_DIST = \
 ./icons/24x24/apps/five-or-more.png  \
 ./icons/24x24/apps/gimp.png  \
 ./icons/24x24/apps/glade.png  \
+./icons/24x24/apps/gnome-abrt.png  \
 ./icons/24x24/apps/gnome-aisleriot.png  \
 ./icons/24x24/apps/gnome-boxes.png  \
 ./icons/24x24/apps/gnome-documents.png  \
@@ -1371,7 +1371,6 @@ EXTRA_DIST = \
 ./icons/256x256/actions/zoom-in.png  \
 ./icons/256x256/actions/zoom-original.png  \
 ./icons/256x256/actions/zoom-out.png  \
-./icons/256x256/apps/abrt-gui.png  \
 ./icons/256x256/apps/accessories-calculator.png  \
 ./icons/256x256/apps/accessories-character-map.png  \
 ./icons/256x256/apps/accessories-dictionary.png  \
@@ -1399,6 +1398,7 @@ EXTRA_DIST = \
 ./icons/256x256/apps/five-or-more.png  \
 ./icons/256x256/apps/gimp.png  \
 ./icons/256x256/apps/glade.png  \
+./icons/256x256/apps/gnome-abrt.png  \
 ./icons/256x256/apps/gnome-aisleriot.png  \
 ./icons/256x256/apps/gnome-boxes.png  \
 ./icons/256x256/apps/gnome-documents.png  \
@@ -1792,7 +1792,6 @@ EXTRA_DIST = \
 ./icons/32x32/actions/zoom-in.png  \
 ./icons/32x32/actions/zoom-original.png  \
 ./icons/32x32/actions/zoom-out.png  \
-./icons/32x32/apps/abrt-gui.png  \
 ./icons/32x32/apps/accessories-calculator.png  \
 ./icons/32x32/apps/accessories-character-map.png  \
 ./icons/32x32/apps/accessories-dictionary.png  \
@@ -1821,6 +1820,7 @@ EXTRA_DIST = \
 ./icons/32x32/apps/five-or-more.png  \
 ./icons/32x32/apps/gimp.png  \
 ./icons/32x32/apps/glade.png  \
+./icons/32x32/apps/gnome-abrt.png  \
 ./icons/32x32/apps/gnome-aisleriot.png  \
 ./icons/32x32/apps/gnome-boxes.png  \
 ./icons/32x32/apps/gnome-documents.png  \
@@ -2217,7 +2217,6 @@ EXTRA_DIST = \
 ./icons/48x48/animations/process-idle.png  \
 ./icons/48x48/animations/process-idle.svg  \
 ./icons/48x48/animations/process-working.png  \
-./icons/48x48/apps/abrt-gui.png  \
 ./icons/48x48/apps/accessories-calculator.png  \
 ./icons/48x48/apps/accessories-character-map.png  \
 ./icons/48x48/apps/accessories-dictionary.png  \
@@ -2246,6 +2245,7 @@ EXTRA_DIST = \
 ./icons/48x48/apps/five-or-more.png  \
 ./icons/48x48/apps/gimp.png  \
 ./icons/48x48/apps/glade.png  \
+./icons/48x48/apps/gnome-abrt.png  \
 ./icons/48x48/apps/gnome-aisleriot.png  \
 ./icons/48x48/apps/gnome-boxes.png  \
 ./icons/48x48/apps/gnome-documents.png  \
