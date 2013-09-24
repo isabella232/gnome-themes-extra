@@ -1,3 +1,12 @@
+3.10.0
+======
+  gedit specific tweaks
+  expose close button in tabs better
+  abrt high contrast icon fix
+  CSD decoration fixes
+  color definition cleanup
+  gtk menu border fix when running outside of gnome-shell (#707358)
+
 3.9.91
 ======
 
