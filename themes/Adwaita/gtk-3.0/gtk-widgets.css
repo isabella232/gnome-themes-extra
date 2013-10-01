@@ -2536,15 +2536,10 @@ GtkCheckButton:selected:focus {
  */
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-    border-width: 1px 0;
+    border-width: 0;
     border-style: solid;
-    border-top-color: @toolbar_border_top;
-    border-bottom-color: @toolbar_border_bottom;
-
     -GtkWidget-window-dragging: true;
     -GtkToolbar-button-relief: normal;
-    box-shadow: inset 0 3px alpha(black, 0.03), inset 0 2px alpha(black, 0.03), inset 0 1px alpha(black, 0.03);
-    text-shadow: 0 1px @primary_toolbar_button_text_shadow;
     padding-top: 3px;
     padding-bottom: 3px;
 }
@@ -2560,7 +2555,7 @@ GtkCheckButton:selected:focus {
 
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
-    border-color: @unfocused_borders;
+    border-color: shade(@unfocused_borders, 1.3);
     box-shadow: none;
     text-shadow: none;
 }

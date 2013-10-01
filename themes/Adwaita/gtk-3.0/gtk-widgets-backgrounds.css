@@ -203,22 +203,12 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop,
 .primary-toolbar .toolbar,
 .primary-toolbar.toolbar,
 .inline-toolbar.toolbar  {
-    background-image: linear-gradient(to bottom,
-                                      @toolbar_gradient_a,
-                                      @toolbar_gradient_b 20%,
-                                      @toolbar_gradient_c
-                                      );
     background-color: transparent;
 }
 
 .primary-toolbar .toolbar.vertical,
 .primary-toolbar.toolbar.vertical,
 .inline-toolbar.toolbar.vertical {
-    background-image: linear-gradient(to right,
-                                      @toolbar_gradient_a,
-                                      @toolbar_gradient_b 20%,
-                                      @toolbar_gradient_c
-                                      );
     background-color: transparent;
 }
 
@@ -227,7 +217,6 @@ GtkComboBox.combobox-entry .button:insensitive:backdrop,
 .primary-toolbar.toolbar:backdrop,
 .inline-toolbar.toolbar:backdrop  {
     background-image: none;
-    background-color: @unfocused_dark_bg;
 }
 
 .scale.trough {

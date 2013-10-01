@@ -112,9 +112,6 @@
 @define-color toolbar_gradient_b shade(@borders, 1.28);
 @define-color toolbar_gradient_c shade(@borders, 1.34);
 
-@define-color toolbar_border_top shade(@borders, 0.9);
-@define-color toolbar_border_bottom shade(@borders, 1.2);
-
 @define-color toolbar_active_button_color #909081;
 @define-color toolbar_button_prelight alpha(white, 0.4);
 @define-color toolbar_separator @borders;
