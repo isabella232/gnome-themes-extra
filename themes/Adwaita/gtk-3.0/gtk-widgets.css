@@ -1858,7 +1858,7 @@ GtkLinkButton.button:active {
     border-style: solid;
     border-color: transparent;
     border-width: 1px;
-    padding: 1px 0px 1px 10px;
+    padding: 1px;
     icon-shadow: 0 1px @button_text_shadow;
 }
 
