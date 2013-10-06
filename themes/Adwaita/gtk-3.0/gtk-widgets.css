@@ -3997,6 +3997,14 @@ GtkBubbleWindow .toolbar {
     border-radius: 7px 7px 0px 0px;
 }
 
+.tiled .titlebar {
+    border-radius: 0;
+}
+
+.maximized .titlebar {
+    border-radius: 0;
+}
+
 /* this is the default titlebar that is added by GTK
  * when client-side decorations are in use and the application
  * did not set a custom titlebar.
@@ -4079,9 +4087,15 @@ GtkBubbleWindow .toolbar {
     margin: 10px;
 }
 
+.window-frame.tiled {
+    border-radius: 0;
+    background-color: @theme_bg_color;
+}
+
 .window-frame:backdrop {
     box-shadow: 0 2px 5px 1px @wm_shadow;
 }
+
 
 /**********************
  * Fallback Mode Panel
