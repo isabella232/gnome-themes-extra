@@ -579,8 +579,8 @@ EphyWindow.background EphyNotebook.notebook EphyEmbed.vertical GtkScrolledWindow
 }
 
 /* remove bottom borders from the  main scrolled window when no bars at the bottom of the screen are shown */
-EphyWindow.background EphyNotebook:last-child EphyEmbed.vertical GtkScrolledWindow,
-EphyWindow.background EphyNotebook.notebook:last-child {
+EphyWindow.background EphyEmbed.vertical GtkScrolledWindow,
+EphyWindow.background  {
     border-bottom-width: 0;
 }
 
