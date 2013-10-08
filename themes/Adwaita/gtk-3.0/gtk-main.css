@@ -193,7 +193,7 @@
 @define-color wm_bg_a shade (@theme_bg_color, 1.1);
 @define-color wm_bg_b @theme_bg_color;
 
-@define-color wm_shadow alpha(black, 0.7);
+@define-color wm_shadow alpha(black, 0.5);
 
 @define-color wm_button_bg_a shade (@theme_bg_color, 1.0);
 @define-color wm_button_bg_b shade (@theme_bg_color, 0.85);
