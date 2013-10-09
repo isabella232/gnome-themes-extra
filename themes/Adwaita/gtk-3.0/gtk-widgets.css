@@ -2554,6 +2554,32 @@ GtkCheckButton:selected:focus {
     font: 9;
 }
 
+/***************
+ * Search bars *
+ ***************/
+
+.search-bar {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: shade(@borders, 0.90);
+
+    background-color: shade(@theme_bg_color, 0.98);
+}
+
+.search-bar:backdrop {
+    border-image: linear-gradient(to top,
+                                  @unfocused_borders,
+                                  @unfocused_borders 1px,
+                                  @theme_unfocused_bg_color 1px) 0 0 2;
+    box-shadow: none;
+
+    background-color: @theme_unfocused_bg_color;
+}
+
+.search-bar .button.close-button {
+    padding: 5px 4px 5px 5px;
+}
+
 /********************
  * Primary Toolbars *
  ********************/
