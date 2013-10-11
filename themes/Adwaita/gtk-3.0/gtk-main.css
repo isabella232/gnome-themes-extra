@@ -101,7 +101,7 @@
 @define-color scale_highlight_bg #729fce;
 @define-color scale_highlight_shadow alpha(white, 0.50);
 
-@define-color notebook_active_tab_border #1372d3;
+@define-color notebook_active_tab_border @theme_selected_bg_color;
 @define-color notebook_selected_tab_color #8dc0f3;
 
 @define-color notebook_tab_gradient_a shade(@theme_bg_color, 0.97);
