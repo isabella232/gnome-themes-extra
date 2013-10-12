@@ -2228,6 +2228,7 @@ GtkTreeMenu .menuitem,
 
 .context-menu {
     font: initial;
+    text-shadow: none;
 }
 
 .menu {
@@ -3580,6 +3581,7 @@ GtkIconView.cell:selected:focus {
 
 .cell {
     padding: 2px;
+    text-shadow: none;
 }
 
 .cell:selected,
