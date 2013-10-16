@@ -1788,16 +1788,20 @@ GtkLinkButton.button:active {
  *****************/
 .notebook {
     padding: 0;
-
-    border-color: @borders;
     border-style: solid;
-    border-width: 1px;
+    border-color: @borders;
+    border-top: 1px solid @borders;
+    border-bottom: 1px solid @borders;
 
     background-color: @theme_base_color;
     -GtkNotebook-initial-gap: 10;
     -GtkNotebook-arrow-spacing: 5;
     -GtkNotebook-tab-curvature: 0;
     -GtkNotebook-has-tab-gap: false;
+}
+
+.notebook.frame {
+    border-width: 1px;
 }
 
 .notebook.header,
