@@ -156,8 +156,7 @@ GeditPanel.vertical .notebook {
     border-width: 0 0 1px 0;
 }
 
-GeditPanel.vertical .notebook tab,
-GeditPanel.vertical .notebook tab:active {
+GeditPanel.vertical .notebook tab {
     padding: 3px;
 }
 
@@ -166,11 +165,16 @@ GeditPanel.vertical .notebook tab:active {
 }
 
 GeditPanel.horizontal .notebook {
-    border-top: 0px;
+    border-width: 0 1px 1px 0px;
 }
 
 GeditPanel.horizontal .notebook tab {
-    padding: 0;
+    padding: 1;
+    border-width: 0;
+}
+
+GeditPanel.horizontal .notebook tab:active {
+    border-width: 0 0 2px 0;
 }
 
 GeditStatusMenuButton {
