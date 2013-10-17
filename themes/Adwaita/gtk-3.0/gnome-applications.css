@@ -152,19 +152,12 @@ GeditDocumentsPanel .view:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
-GeditPanel.vertical .notebook {
+GeditPanel.vertical .notebook tab {
     padding: 3px;
-    border-width: 1px 0;
 }
 
-GeditPanel.horizontal .notebook {
-    padding: 0px;
-    border-width: 0 1px 1px 0;
-}
-
-GeditPanel .notebook tab
-{
-    border-width: 0;
+GeditPanel.horizontal .notebook tab {
+    padding: 0;
 }
 
 GeditStatusMenuButton {
