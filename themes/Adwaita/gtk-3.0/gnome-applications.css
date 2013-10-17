@@ -172,7 +172,7 @@ GeditPanel.horizontal .notebook:backdrop {
 }
 
 GeditPanel.horizontal .notebook tab {
-    padding: 1;
+    padding: 1px;
     border-width: 0;
 }
 
