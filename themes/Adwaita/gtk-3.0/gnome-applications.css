@@ -152,8 +152,17 @@ GeditDocumentsPanel .view:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
-GeditPanel.vertical .notebook tab {
+GeditPanel.vertical .notebook {
+    border-width: 0 0 1px 0;
+}
+
+GeditPanel.vertical .notebook tab,
+GeditPanel.vertical .notebook tab:active {
     padding: 3px;
+}
+
+GeditPanel.vertical .notebook tab:active {
+    border-width: 0 0 2px 0;
 }
 
 GeditPanel.horizontal .notebook {
