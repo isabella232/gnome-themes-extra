@@ -141,7 +141,7 @@ GeditWindow .pane-separator:hover {
 
 GeditPanel.vertical .title {
     border-style: solid;
-    padding: 14px 0 7px 3px;
+    padding: 14px 3px 7px 3px;
     border-width: 0 0 1px 0;
 }
 
