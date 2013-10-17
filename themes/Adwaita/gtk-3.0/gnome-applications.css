@@ -130,7 +130,7 @@ NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
 
 /* gedit */
 
-GeditWindow .pane-separator, 
+GeditWindow .pane-separator,
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;
     border-style: solid;
@@ -154,6 +154,10 @@ GeditDocumentsPanel .view:backdrop {
 
 GeditPanel.vertical .notebook tab {
     padding: 3px;
+}
+
+GeditPanel.horizontal .notebook {
+    border-top: 0px;
 }
 
 GeditPanel.horizontal .notebook tab {
