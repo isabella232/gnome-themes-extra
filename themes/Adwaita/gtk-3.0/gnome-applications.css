@@ -180,10 +180,17 @@ GeditPanel.horizontal .notebook tab:active {
     border-width: 0 0 2px 0;
 }
 
+GeditStatusbar GeditSmallButton,
 GeditStatusMenuButton {
     text-shadow: none;
 }
 
+GeditStatusbar GeditSmallButton.button:backdrop,
+GeditStatusbar GeditSmallButton.button:backdrop:hover,
+GeditStatusbar GeditSmallButton.button,
+GeditStatusbar GeditSmallButton.button:hover,
+GeditStatusbar GeditSmallButton.button:active,
+GeditStatusbar GeditSmallButton.button:active:hover,
 GeditStatusMenuButton.button:backdrop,
 GeditStatusMenuButton.button:backdrop:hover,
 GeditStatusMenuButton.button,
@@ -197,12 +204,16 @@ GeditStatusMenuButton.button:active:hover {
     padding: 1px 8px 2px 4px;
 }
 
+GeditStatusbar GeditSmallButton.button:hover,
+GeditStatusbar GeditSmallButton.button:active,
+GeditStatusbar GeditSmallButton.button:active:hover,
 GeditStatusMenuButton.button:hover,
 GeditStatusMenuButton.button:active,
 GeditStatusMenuButton.button:active:hover {
     border-color: @borders;
 }
 
+GeditStatusbar GeditSmallButton.button:active,
 GeditStatusMenuButton.button:active {
     background-image: linear-gradient(to bottom,
                                       @borders,
@@ -212,6 +223,8 @@ GeditStatusMenuButton.button:active {
     text-shadow: 0 1px @button_text_shadow;
 }
 
+GeditStatusbar GeditSmallButton.button:backdrop,
+GeditStatusbar GeditSmallButton.button:backdrop:hover,
 GeditStatusMenuButton.button:backdrop,
 GeditStatusMenuButton.button:backdrop:hover {
     border-color: @unfocused_borders;
