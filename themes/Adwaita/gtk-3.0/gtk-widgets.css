@@ -1192,7 +1192,9 @@ GtkComboBox.combobox-entry .button {
 .primary-toolbar .button:insensitive,
 .primary-toolbar .button:backdrop,
 .primary-toolbar .button:hover:backdrop,
-.primary-toolbar .button:insensitive:backdrop {
+.primary-toolbar .button:insensitive:backdrop,
+.primary-toolbar .button *:insensitive,
+.primary-toolbar .button *:insensitive:backdrop {
     background-image: none;
     background-color: transparent;
 }
