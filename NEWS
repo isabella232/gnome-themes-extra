@@ -1,3 +1,10 @@
+3.11.2
+======
+  new tabs (plain gtk, no more engines)
+  headerbar/CSD fixes
+  gedit improvements
+  less contrasty/3D look for troughs (and pushed buttons) 
+
 3.10.0
 ======
   gedit specific tweaks
