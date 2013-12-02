@@ -373,7 +373,6 @@ main (int argc,
       return 0;
     }
 
-  g_type_init ();
   process (argc, argv);
   g_spawn_command_line_async ("./create-makefiles.sh", NULL);
 
