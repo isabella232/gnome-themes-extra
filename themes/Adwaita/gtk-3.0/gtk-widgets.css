@@ -1859,7 +1859,7 @@ GtkLinkButton.button:active {
 
 .notebook tab,
 .notebook tab:backdrop {
-    padding: 10px 20px 5px;
+    padding: 6px 20px 4px;
     border-width: 0px;
     background-image: none;
     background-color: transparent;
