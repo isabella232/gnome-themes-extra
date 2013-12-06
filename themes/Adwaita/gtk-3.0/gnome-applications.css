@@ -808,3 +808,12 @@ MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow:ba
     background-color:  @theme_unfocused_base_color;
     border-radius: 3px;
 }
+
+/* gnome-bluetooth */
+GtkEntry.entry.pin-entry {
+	font: regular 50;
+}
+
+GtkLabel.pin-label {
+	font: regular 50;
+}
