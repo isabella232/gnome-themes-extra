@@ -812,6 +812,8 @@ MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow:ba
 /* gnome-bluetooth */
 GtkEntry.entry.pin-entry {
 	font: regular 50;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 GtkLabel.pin-label {
