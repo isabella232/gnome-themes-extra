@@ -2560,10 +2560,12 @@ GtkCheckButton:selected:focus {
 
 .header-bar .title {
     font: Bold 11;
+    padding: 0px 12px 0px 12px;
 }
 
 .header-bar .subtitle {
     font: 9;
+    padding: 0px 12px 0px 12px;
 }
 
 /***************
