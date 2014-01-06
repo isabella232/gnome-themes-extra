@@ -2541,13 +2541,7 @@ GtkCheckButton:selected:focus {
     box-shadow: inset 0 -1px shade(@borders, 1.30);
     background-color: @theme_bg_color;
 
-    /* Header bar buttons have an extra 1px height which appears as
-    a bottom bezel, and the bottom edge of the header bar has an 
-    extra 1px which looks like it is part of the padding. The uneven 
-    bottom padding removes this 2px so it looks like the padding is 
-    even. */
-
-    padding: 6px 6px 4px 6px;
+    padding: 6px 6px 5px 6px;
 }
 
 .header-bar:backdrop {
@@ -2565,7 +2559,7 @@ GtkCheckButton:selected:focus {
 }
 
 .header-bar .button.image-button {
-    padding: 5px;
+    padding: 5px 5px 4px 5px;
 }
 
 .header-bar .title {
