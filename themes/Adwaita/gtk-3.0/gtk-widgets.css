@@ -2573,6 +2573,48 @@ GtkCheckButton:selected:focus {
 }
 
 /***************
+ * Action bars *
+ ***************/
+.action-bar {
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: shade(@borders, 0.90);
+
+    box-shadow: inset 0 -1px shade(@borders, 1.30);
+    background-color: @theme_bg_color;
+
+    padding: 6px 6px 5px 6px;
+}
+
+.action-bar:backdrop {
+    border-image: linear-gradient(to top,
+                                  @unfocused_borders,
+                                  @unfocused_borders 1px,
+                                  @theme_unfocused_bg_color 1px) 0 0 2;
+    box-shadow: none;
+
+    background-color: @theme_unfocused_bg_color;
+}
+
+.action-bar .button.text-button {
+    padding: 2px 16px;
+}
+
+.action-bar .button.image-button {
+    padding: 5px 5px 4px 5px;
+}
+
+.action-bar .title {
+    font: Bold 11;
+    padding: 0px 12px 0px 12px;
+}
+
+.action-bar .subtitle {
+    font: 9;
+    padding: 0px 12px 0px 12px;
+}
+
+/***************
  * Search bars *
  ***************/
 
