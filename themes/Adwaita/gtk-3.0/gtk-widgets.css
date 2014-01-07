@@ -2595,7 +2595,7 @@ GtkCheckButton:selected:focus {
                                   @unfocused_borders 1px,
                                   @theme_unfocused_bg_color 1px) 0 0 2;
     box-shadow: none;
-
+    background-image: none;
     background-color: @theme_unfocused_bg_color;
 }
 
