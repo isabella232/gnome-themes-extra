@@ -131,12 +131,6 @@ GeditWindow .pane-separator:hover {
     color: @borders;
 }
 
-GeditPanel.vertical .title {
-    border-style: solid;
-    padding: 11px 10px;
-    border-width: 0 0 1px 0;
-}
-
 GeditDocumentsPanel .view {
     background-color: @sidebar_bg;
 }
