@@ -107,10 +107,10 @@
 </frame_geometry>
 
 <frame_geometry name="attached" title_scale="medium" hide_buttons="true" rounded_top_left="4" rounded_top_right="4" rounded_bottom_left="4" rounded_bottom_right="4" parent="normal">
-	<distance name="title_vertical_pad" value="9"/>
-	<distance name="bottom_height" value="4"/>
-	<distance name="left_width" value="4"/>
-	<distance name="right_width" value="4"/>
+	<distance name="title_vertical_pad" value="1"/>
+	<distance name="bottom_height" value="1"/>
+	<distance name="left_width" value="1"/>
+	<distance name="right_width" value="1"/>
 </frame_geometry>
 
 <!-- drawing operations -->
