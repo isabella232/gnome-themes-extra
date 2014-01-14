@@ -4246,16 +4246,37 @@ GtkInfoBar {
 /*************************
  * Touch text selections *
  *************************/
-GtkBubbleWindow {
-    border-radius: 5px;
+GtkPopover {
+    border-radius: 7px;
     background-clip: border-box;
-}
-
-GtkBubbleWindow.osd.background {
+    /*
     background-color: @osd_popover_bg;
+    */
+    background-color: @theme_bg_color;
+
+    border-color: darker(@theme_bg_color);
+    border-width: 1px;
+    border-style: solid;
+
+    box-shadow: 0 2px 8px 3px @wm_shadow;
+    margin: 10px;
 }
 
-GtkBubbleWindow .toolbar {
+GtkPopover.osd {
+    background-color: @osd_popover_bg;
+    border-color: @theme_bg_color;
+    box-shadow: 0 2px 8px 3px alpha(@wm_shadow, 0.4);
+    color: darker(white);
+}
+
+GtkPopover > .toolbar {
+    background-color: transparent;
+}
+
+GtkPopover.osd > .toolbar .button {
+    border-radius: 0px;
+    border-width: 0px;
+    background-image: none;
     background-color: transparent;
 }
 
