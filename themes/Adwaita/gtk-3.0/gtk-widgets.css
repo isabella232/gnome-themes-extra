@@ -4171,12 +4171,10 @@ GtkBubbleWindow .toolbar {
 }
 
 .window-frame {
-    border-color: darker(@theme_bg_color);
     border-radius: 7px 7px 0 0;
-    border-width: 1px;
-    border-style: solid;
-
-    box-shadow: 0 2px 8px 3px @wm_shadow;
+    /* lamefun trick to get rounded borders regardless of CSD use */
+    border-width: 0px;    
+    box-shadow: 0 0 0 1px @wm_border, 0 2px 8px 3px @wm_shadow;
 
     /* this is used for the resize cursor area */
     margin: 10px;
@@ -4188,7 +4186,7 @@ GtkBubbleWindow .toolbar {
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 2px 5px 1px @wm_shadow;
+    box-shadow: 0 0 0 1px shade(@wm_border,1.1), 0 2px 5px 1px @wm_shadow;
 }
 
 
