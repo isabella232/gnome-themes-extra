@@ -2151,6 +2151,10 @@ GtkFontButton GtkLabel:last-child {
     color: mix(@theme_fg_color, @theme_bg_color, 0.35);
 }
 
+GtkFileChooserButton GtkImage:last-child {
+    color: @internal_element_color;
+}
+
 /**************
  * Scrollbars *
  **************/
