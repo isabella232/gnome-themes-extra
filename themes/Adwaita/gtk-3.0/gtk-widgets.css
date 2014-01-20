@@ -1339,7 +1339,8 @@ GtkComboBox.combobox-entry .button {
 .toolbar .raised.linked .button:active,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar GtkToolButton > .button:active {
-    box-shadow: inset 1px 0 @inset_dark_color;
+    box-shadow: inset 0 1px 1px alpha(black, 0.1),
+                inset 1px 0 @inset_dark_color;
 }
 
 .linked .button:insensitive,
@@ -1396,6 +1397,20 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop,
 .inline-toolbar.toolbar GtkToolButton:only-child > .button:backdrop:insensitive {
     box-shadow: none; 
+}
+
+/* remove inset from first-child and only-child active buttons */
+.linked .button:only-child:active,
+.toolbar .button.raised.linked:only-child:active,
+.toolbar .raised.linked .button:only-child:active,
+.inline-toolbar.toolbar .button:only-child:active,
+.inline-toolbar.toolbar GtkToolButton > .button:only-child:active,
+.linked .button:first-child:active,
+.toolbar .button.raised.linked:first-child:active,
+.toolbar .raised.linked .button:first-child:active,
+.inline-toolbar.toolbar .button:first-child:active,
+.inline-toolbar.toolbar GtkToolButton > .button:first-child:active  {
+    box-shadow: inset 0 1px 1px alpha(black, 0.1);
 }
 
 /* Middle button */
