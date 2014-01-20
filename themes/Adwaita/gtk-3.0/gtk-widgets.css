@@ -1827,6 +1827,7 @@ GtkLinkButton.button:active {
     -GtkNotebook-initial-gap: 10;
     -GtkNotebook-arrow-spacing: 5;
     -GtkNotebook-tab-curvature: 0;
+    -GtkNotebook-tab-overlap: 0;
     -GtkNotebook-has-tab-gap: false;
 }
 
