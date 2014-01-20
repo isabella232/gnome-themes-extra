@@ -2135,6 +2135,22 @@ GtkComboBox .button:hover {
     color: @theme_text_color;
 }
 
+/********************
+ * Various choosers *
+ ********************/
+
+GtkFontButton .separator,
+GtkFileChooserButton .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+}
+
+GtkFontButton GtkLabel:last-child {
+    color: mix(@theme_fg_color, @theme_bg_color, 0.35);
+}
+
 /**************
  * Scrollbars *
  **************/
