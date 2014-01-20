@@ -1892,7 +1892,6 @@ GtkLinkButton.button:active {
 
 .notebook tab,
 .notebook tab:backdrop {
-    padding: 6px 20px 4px;
     border-width: 0px;
     background-image: none;
     background-color: transparent;
@@ -1921,13 +1920,57 @@ GtkLinkButton.button:active {
     color: @theme_fg_color;
 }
 
-.notebook tab:active {
+/* horizontal tabs */
+
+.notebook tab.top,
+.notebook tab.bottom {
+    padding: 6px 20px 4px;
+}
+
+.notebook tab.top:active {
     border-bottom-width: 2px;
     border-bottom-color: @notebook_active_tab_border;
 }
 
-.notebook tab:active:backdrop {
+.notebook tab.top:active:backdrop {
     border-bottom-color: @unfocused_insensitive_borders;
+}
+
+.notebook tab.bottom:active {
+    border-top-width: 2px;
+    border-top-color: @notebook_active_tab_border;
+}
+
+.notebook tab.bottom:active:backdrop {
+    border-top-color: @unfocused_insensitive_borders;
+}
+
+/* vertical tabs */
+
+.notebook tab.left {
+    padding: 5px 20px;
+}
+
+.notebook tab.right {
+    padding: 5px 20px;
+}
+
+.notebook tab.left:active {
+    border-right-width: 2px;
+    border-right-color: @notebook_active_tab_border;
+}
+
+.notebook tab.left:active:backdrop {
+    border-right-color: @unfocused_insensitive_borders;
+}
+
+.notebook tab.right:active {
+    border-left-width: 2px;
+    border-left-color: @notebook_active_tab_border;
+}
+
+.notebook tab.right:active:backdrop {
+    border-left-color: @unfocused_insensitive_borders;
 }
 
 /* close button styling */
