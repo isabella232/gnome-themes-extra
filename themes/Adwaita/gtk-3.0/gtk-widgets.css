@@ -1571,6 +1571,15 @@ GtkComboBox.combobox-entry .button {
     box-shadow: none;
 }
 
+/* remove shadows from linked menu buttons */
+.linked GtkMenuButton.button:active,
+.toolbar GtkMenuButton.button.raised.linked:active,
+.toolbar .raised.linked GtkMenuButton.button:active,
+.inline-toolbar.toolbar GtkMenuButton.button:active,
+.inline-toolbar.toolbar GtkToolButton > GtkMenuButton.button:active {
+    box-shadow: none;
+}
+
 /* Linked buttons on primary toolbars */
 
 /* Middle button */
@@ -2469,6 +2478,7 @@ GtkMenuButton.button:active,
 .toolbar GtkMenuButton.button.linked.raised:active {
     text-shadow: none;
     icon-shadow: none;
+    box-shadow: none;
 }
 
 .linked GtkMenuButton.button:active:last-child,
