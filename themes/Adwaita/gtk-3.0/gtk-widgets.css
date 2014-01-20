@@ -2175,6 +2175,7 @@ GtkFontButton GtkLabel:last-child {
     border-width: 0;
     border-radius: 0;
     border-image: none;
+    box-shadow: none;
 }
 
 .scrollbar.button,
