@@ -1978,6 +1978,13 @@ GtkLinkButton.button:active {
     border-left-color: @unfocused_insensitive_borders;
 }
 
+/* don't prelight active tabs */
+
+.notebook tab:hover:active {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 /* close button styling */
 .notebook tab .button,
 .notebook tab .button:active,
