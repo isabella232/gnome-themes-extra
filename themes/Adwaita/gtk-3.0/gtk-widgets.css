@@ -1830,7 +1830,6 @@ GtkLinkButton.button:active {
     border-style: solid;
     border-color: @borders;
     border-top: 1px solid @borders;
-    border-bottom: 1px solid @borders;
 
     background-color: @theme_base_color;
     -GtkNotebook-initial-gap: 10;
