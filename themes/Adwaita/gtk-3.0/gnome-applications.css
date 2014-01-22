@@ -139,33 +139,6 @@ GeditDocumentsPanel .view:backdrop {
     background-color: @sidebar_bg_unfocused;
 }
 
-GeditPanel.vertical .notebook,
-GeditPanel.vertical .notebook:backdrop {
-    border-width: 0 0 1px 0;
-}
-
-GeditPanel.vertical .notebook tab {
-    padding: 3px;
-}
-
-GeditPanel.vertical .notebook tab:active {
-    border-width: 0 0 2px 0;
-}
-
-GeditPanel.horizontal .notebook,
-GeditPanel.horizontal .notebook:backdrop {
-    border-width: 0 1px 1px 0px;
-}
-
-GeditPanel.horizontal .notebook tab {
-    padding: 1px;
-    border-width: 0;
-}
-
-GeditPanel.horizontal .notebook tab:active {
-    border-width: 0 0 2px 0;
-}
-
 GeditStatusbar GeditSmallButton,
 GeditStatusMenuButton {
     text-shadow: none;
