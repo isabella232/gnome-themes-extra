@@ -1050,6 +1050,11 @@ EggListBox:selected {
  * Content view
  */
 
+.content-view.subtitle {
+    font: 9;
+    padding: 0px 12px 0px 12px;
+}
+
 .content-view.view.rubberband {
     background-color: alpha (@theme_selected_bg_color, 0.35);
 

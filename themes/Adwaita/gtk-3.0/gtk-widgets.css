@@ -2608,8 +2608,7 @@ GtkCheckButton:selected:focus {
     padding: 0px 12px 0px 12px;
 }
 
-.header-bar .subtitle,
-.content-view.subtitle {
+.header-bar .subtitle {
     font: 9;
     padding: 0px 12px 0px 12px;
 }
