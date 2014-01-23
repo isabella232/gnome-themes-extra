@@ -6,12 +6,20 @@
 /****************
  * Applications *
  ****************/
+
+/*
+ * Sushi
+ */
+
 /* used by gnome-font-viewer and sushi */
 SushiFontWidget {
     padding: 6px 12px;
 }
 
-/* gnome-terminal */
+/*
+ * GNOME Terminal
+ */
+
 VteTerminal {
     background-color: @theme_base_color;
     color: @theme_fg_color;
@@ -23,7 +31,10 @@ TerminalWindow GtkNotebook.notebook {
     border-left-width: 0;
 }
 
-/* nautilus */
+/*
+ * Nautilus
+ */
+
 .nautilus-canvas-item {
     border-radius: 5px;
 }
@@ -120,7 +131,9 @@ NautilusQueryEditor .toolbar:backdrop:nth-child(2) {
     border-color: @unfocused_borders;
 }
 
-/* gedit */
+/*
+ * Gedit
+ */
 
 GeditWindow .pane-separator,
 GeditWindow .pane-separator:hover {
@@ -222,7 +235,10 @@ GeditFileBrowserWidget .toolbar {
     padding: 2px;
 }
 
-/* gnome-documents */
+/*
+ * GNOME Documents
+ */
+
 .documents-dropdown,
 .documents-dropdown .view {
     background-color: shade (@theme_bg_color, 1.02);
@@ -329,7 +345,9 @@ GeditFileBrowserWidget .toolbar {
     color: shade(@entry_tag_bg, 2.10);
 }
 
-/* baobab */
+/*
+ * Baobab
+ */
 
 .cell.baobab-level-cell,
 .cell.baobab-level-cell:hover,
@@ -413,7 +431,9 @@ BaobabRingschart.subfolder-tip {
     text-shadow: 1px 1px black;
 }
 
-/* epiphany */
+/*
+ * Epiphany
+ */
 
 EphyToolbar .entry:first-child,
 EphyToolbar .entry:focus:first-child,
@@ -569,7 +589,9 @@ EphyWindow.background  {
     border-bottom-width: 0;
 }
 
-/* Gnome Contacts */
+/*
+ * GNOME Contacts
+ */
 
 /* Line at top in contacts pane, similar to .documents-scrolledwin.frame */
 .contacts-spinner.frame {
@@ -706,13 +728,18 @@ ContactsWindow .primary-toolbar.toolbar {
   text-shadow: 1px 1px alpha(white, 0.6);
 }
 
-/* gnome-photos */
+/*
+ * GNOME Photos
+ */
 
 .photos-icon-bg {
   icon-shadow: 0 1px #000000;
 }
 
-/* Gucharmap */
+/*
+ * Gucharmap
+ */
+
 GucharmapChartable:active,
 GucharmapChartable:focus,
 GucharmapChartable:selected {
@@ -720,7 +747,10 @@ GucharmapChartable:selected {
  color: @theme_selected_fg_color;
 }
 
-/* evince */
+/*
+ * Evince
+ */
+
 EvWindow.background > GtkBox.vertical > GtkPaned.horizontal > GtkBox.vertical > GtkScrolledWindow.frame {
     border-width: 0;
     border-radius: 0;
@@ -776,7 +806,10 @@ MathWindow.background > GtkBox.vertical > GtkBox.vertical > GtkScrolledWindow:ba
     border-radius: 3px;
 }
 
-/* gnome-bluetooth */
+/*
+ * GNOME Bluetooth
+ */
+
 GtkEntry.entry.pin-entry {
 	font: regular 50;
 	padding-left: 25px;
