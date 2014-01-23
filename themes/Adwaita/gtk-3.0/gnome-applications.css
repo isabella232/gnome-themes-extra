@@ -3,9 +3,27 @@
 @define-color gedit_not_found_bg rgb (237, 54, 54);
 @define-color gedit_not_found_fg white;
 
+* {
+    -GtkIMHtml-hyperlink-color: @link_color;
+    -GtkHTML-link-color: @link_color;
+
+    -WnckTasklist-fade-overlay-rect: 0;
+}
+
 /****************
  * Applications *
  ****************/
+
+/*
+ * Evolution
+ */
+
+/* needed for webkit/GtkStyle/Evolution compatibility */
+GtkHTML:active,
+GtkHTML:active:backdrop {
+    color: @theme_unfocused_selected_fg_color;
+    background-color: @theme_unfocused_selected_bg_color;
+}
 
 /*
  * Sushi
@@ -818,4 +836,341 @@ GtkEntry.entry.pin-entry {
 
 GtkLabel.pin-label {
 	font: regular 50;
+}
+
+/*
+ * Fallback Mode Panel
+ */
+
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelToplevel,
+PanelWidget,
+PanelAppletFrame,
+PanelApplet {
+    background-color: @os_chrome_bg_color;
+    background-image: none;
+    color: @os_chrome_fg_color;
+}
+
+ClockBox,
+.gnome-panel-menu-bar.menubar,
+PanelApplet > GtkMenuBar.menubar {
+    font: bold;
+}
+
+.gnome-panel-menu-bar.menubar .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:hover {
+    text-shadow: 0 1px @os_chrome_bg_color;
+}
+
+.gnome-panel-menu-bar.menubar .menu,
+PanelApplet > GtkMenuBar.menubar .menu {
+    font: regular;
+}
+
+.gnome-panel-menu-bar.menubar .menu:hover,
+PanelApplet > GtkMenuBar.menubar .menu:hover {
+    text-shadow: none;
+}
+
+.gnome-panel-menu-bar .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:hover,
+.gnome-panel-menu-bar .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:hover {
+    background-color: @os_chrome_selected_bg_color;
+    color: @os_chrome_selected_fg_color;
+}
+
+.gnome-panel-menu-bar .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:hover {
+    color: @os_chrome_selected_fg_color;
+}
+
+PanelApplet .button,
+PanelApplet .button:hover {
+    padding: 4px;
+
+    border-image: none;
+    border-width: 0;
+    border-radius: 0;
+
+    background-image: none;
+    background-color: @os_chrome_bg_color;
+
+    color: @os_chrome_fg_color;
+    text-shadow: none;
+}
+
+PanelApplet .button:active:hover,
+PanelApplet .button:active {
+    border-image: none;
+    background-image: none;
+    background-color: @os_chrome_selected_bg_color;
+    border-width: 0;
+    border-radius: 0;
+}
+
+PanelApplet:hover {
+    color: @os_chrome_selected_fg_color;
+}
+
+PanelApplet:active,
+PanelApplet:hover:active {
+    color: @os_chrome_selected_fg_color;
+    text-shadow: 0 1px @os_chrome_bg_color;
+}
+
+WnckPager {
+    background-color: lighter(@os_chrome_selected_bg_color);
+}
+
+NaTrayApplet {
+    -NaTrayApplet-icon-padding: 12;
+    -NaTrayApplet-icon-size: 16;
+}
+
+/*
+ * Fail Whale
+ */
+
+GsmFailWhaleDialog {
+    background-color: @os_chrome_bg_color;
+    background-image: none;
+    color: @os_chrome_fg_color;
+}
+
+GsmFailWhaleDialog .button,
+GsmFailWhaleDialog .button:active {
+    border-image: none;
+    border-color: @borders;
+    border-width: 1px;
+}
+
+
+/****************
+ * Widgets      *
+ ****************/
+
+/*
+ * Floating Bar
+ */
+
+.floating-bar {
+    background-image: linear-gradient(to bottom, 
+                                      @theme_base_color 20%, 
+                                      shade(@theme_base_color, 0.9)
+                                      );
+    background-color: @theme_base_color;
+    border-color: @borders;
+
+    color: @theme_text_color;
+    text-shadow: 0 1px @button_text_shadow;
+
+    border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: inset 1px 1px @inset_light_color, -1px -1px @inset_light_color;
+}
+
+.floating-bar.top {
+    border-top-width: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.floating-bar.right {
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.floating-bar.bottom {
+    border-bottom-width: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.floating-bar.left {
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.floating-bar.bottom.right {
+    box-shadow: inset 1px 1px @inset_light_color;
+}
+
+.floating-bar.bottom.left {
+    box-shadow: inset -1px 1px @inset_light_color;
+}
+
+.floating-bar:backdrop {
+    background-color: @theme_unfocused_base_color;
+    border-color: shade(@theme_unfocused_base_color, 0.9);
+    background-image: none;
+    box-shadow: none;
+}
+
+.floating-bar .button {
+    background-color: alpha (@theme_base_color, 0.0);
+    background-image: none;
+
+    border-style: none;
+    border-image: none;
+
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 0;
+}
+
+/* FIXME: why do we still need this? */
+GtkClutterOffscreen {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+/*
+ * Egg
+ */
+
+EggListBox {
+    background-color: @list_box_bg;
+}
+
+EggListBox:hover {
+    background-color: @content_view_bg;
+}
+
+EggListBox:selected {
+    background-color: @theme_selected_bg_color;
+}
+
+
+/*
+ * Content view
+ */
+
+.content-view.view.rubberband {
+    background-color: alpha (@theme_selected_bg_color, 0.35);
+
+    border-color: @theme_selected_bg_color;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.content-view.view {
+    background-color: @content_view_bg;
+}
+
+.content-view.view:insensitive {
+    background-color: @theme_unfocused_base_color;
+    background-image: none;
+}
+
+.content-view.view:backdrop {
+    background-color: @sidebar_bg_unfocused;
+    background-image: none;
+}
+
+.content-view.view:selected {
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+.content-view.view:selected:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
+    background-image: none;
+}
+
+/* FIXME: EggListBox should set the .cell style class on
+ * the background it renders for the children, like
+ * GtkIconView and GtkTreeView do */
+.content-view.cell {
+    background-color: transparent;
+    background-image: none;
+}
+
+EggListBox.content-view:hover,
+.content-view.cell:hover {
+    background-color: @theme_bg_color;
+}
+
+EggListBox.content-view:selected,
+EggListBox.content-view:active,
+.content-view.cell:selected,
+.content-view.cell:active {
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+EggListBox.content-view:selected:backdrop,
+.content-view.cell:selected:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
+    background-image: none;
+}
+
+GdMainIconView.content-view {
+    -GdMainIconView-icon-size: 40;
+}
+
+GtkIconView.content-view.cell.check,
+GtkIconView.content-view.cell.check:backdrop {
+    background-image: url("assets/grid-selection-unchecked.svg");
+    background-color: transparent;
+}
+
+GtkIconView.content-view.cell.check:active {
+    background-image: url("assets/grid-selection-checked.svg");
+    background-color: transparent;
+}
+
+/* Make spinner visible on both dark and bright backgrounds w/o making
+ * it look ugly/weird.
+ */
+GdMainIconView.content-view.cell:active {
+    color: gray;
+}
+
+.content-view.view.check,
+.content-view.view.check:active {
+    background-color: transparent;
+}
+
+.content-view.view .separator:backdrop {
+    color: @theme_unfocused_bg_color;
+}
+
+GtkIconView.content-view.check:hover,
+GtkIconView.content-view.check:insensitive,
+GtkIconView.content-view.check:backdrop,
+GtkIconView.content-view.check:selected {
+    background-color: transparent;
+}
+
+/* used by Documents and Evince */
+.content-view.document-page {
+    border-style: solid;
+    border-width: 3px 3px 6px 4px;
+    border-image: url("assets/thumbnail-frame.png") 3 3 6 4;
+}
+
+/*
+ * App Notifications
+ */
+
+.app-notification {
+    border-style: solid;
+    border-color: @app_notification_border;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 5px 5px;
+    padding: 8px;
+
+    background-image: linear-gradient(to bottom,
+                                      @app_notification_a,
+                                      @app_notification_b 18%,
+                                      @app_notification_c);
+
+    color: @theme_text_color;
+    text-shadow: 0 1px @primary_toolbar_button_text_shadow;
 }
