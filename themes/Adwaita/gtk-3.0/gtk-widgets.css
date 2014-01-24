@@ -1921,7 +1921,7 @@ GtkLinkButton.button:active {
 
 /* close button styling */
 .notebook tab .button {
-    color: mix(@theme_unfocused_fg_color, @theme_unfocused_base_color, 0.7);
+    color: mix (@theme_fg_color, @theme_bg_color, 0.85);
     border-image: none;
     background-image: none;
     background-color: transparent;
