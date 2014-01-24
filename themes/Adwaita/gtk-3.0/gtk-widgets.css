@@ -1920,46 +1920,57 @@ GtkLinkButton.button:active {
 }
 
 /* close button styling */
-.notebook tab .button,
-.notebook tab .button:active,
-.notebook tab .button:hover {
+.notebook tab .button {
+    color: mix(@theme_unfocused_fg_color, @theme_unfocused_base_color, 0.7);
     border-image: none;
     background-image: none;
     background-color: transparent;
     border-radius: 3px;
-    color: mix(@theme_fg_color, @theme_base_color, 0.6);
     border-style: solid;
     border-color: transparent;
     border-width: 1px;
     padding: 1px;
+    icon-shadow: none;
+    transition: all 200ms ease-out;
+}
+
+.notebook .prelight-page .button,
+.notebook tab.prelight-page .button,
+.notebook .active-page .button,
+.notebook tab.active-page .button {
+    color: mix(@theme_fg_color, @theme_base_color, 0.6);
     icon-shadow: 0 1px @button_text_shadow;
+    transition: all 200ms ease-in;
 }
 
 .notebook tab .button:hover {
     color: @theme_fg_color;
     border-color: alpha(black, 0.1);
+    transition: all 200ms ease-in;
 }
 
 .notebook tab .button:active,
 .notebook tab .button:active:hover {
+    color:  @button_active_text;
     background-color: alpha(black, 0.08);
     box-shadow: inset 0 1px alpha(black, 0.05);
-    color:  @button_active_text;
     icon-shadow: 0 1px @button_active_text_shadow;
 
-    border-color: alpha(black, 0.27) 
-                  alpha(black, 0.13) 
-                  alpha(black, 0.13) 
+    border-color: alpha(black, 0.27)
+                  alpha(black, 0.13)
+                  alpha(black, 0.13)
                   alpha(black, 0.13);
 }
 
 .notebook tab .button:backdrop {
     color: mix(@theme_unfocused_fg_color, @theme_unfocused_base_color, 0.7);
     icon-shadow: none;
+    transition: all 200ms ease-out;
 }
 
 .notebook tab .button:backdrop:hover {
     color: @theme_unfocused_fg_color;
+    transition: all 200ms ease-out;
 }
 
 /**************
