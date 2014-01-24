@@ -1816,19 +1816,20 @@ GtkLinkButton.button:active {
 
 .notebook tab,
 .notebook tab:backdrop {
+    border-color: shade (@borders, 1.15);
     border-width: 0px;
     background-image: none;
     background-color: transparent;
 }
 
 .notebook tab GtkLabel {
-    color: mix (@theme_fg_color, @theme_bg_color, 0.50);
+    color: mix (@theme_fg_color, @theme_bg_color, 0.40);
     font-weight: bold;
 }
 
 .notebook .prelight-page,
 .notebook .prelight-page GtkLabel {
-    color: mix (@theme_fg_color, @theme_bg_color, 0.33);
+    color: mix (@theme_fg_color, @theme_bg_color, 0.15);
 }
 
 .notebook .active-page,
