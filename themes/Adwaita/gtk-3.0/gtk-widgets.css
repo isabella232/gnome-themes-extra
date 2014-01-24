@@ -1825,16 +1825,19 @@ GtkLinkButton.button:active {
 .notebook tab GtkLabel {
     color: mix (@theme_fg_color, @theme_bg_color, 0.40);
     font-weight: bold;
+    transition: all 200ms ease-out;
 }
 
 .notebook .prelight-page,
 .notebook .prelight-page GtkLabel {
     color: mix (@theme_fg_color, @theme_bg_color, 0.15);
+    transition: all 200ms ease-in;
 }
 
 .notebook .active-page,
 .notebook tab .active-page GtkLabel {
     color: @theme_fg_color;
+    transition: all 200ms ease-in;
 }
 
 /* horizontal tabs */
