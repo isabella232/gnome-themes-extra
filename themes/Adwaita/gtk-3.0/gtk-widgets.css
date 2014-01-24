@@ -1760,6 +1760,8 @@ GtkLinkButton.button:active {
     -GtkNotebook-tab-curvature: 0;
     -GtkNotebook-tab-overlap: 0;
     -GtkNotebook-has-tab-gap: false;
+    -GtkWidget-focus-padding: 0;
+    -GtkWidget-focus-line-width: 0;
 }
 
 .notebook.frame {
