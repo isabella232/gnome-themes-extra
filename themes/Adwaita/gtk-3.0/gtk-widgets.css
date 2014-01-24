@@ -1835,6 +1835,10 @@ GtkLinkButton.button:active {
     background-color: shade(@theme_bg_color, 0.97);
 }
 
+.notebook .prelight-page {
+    color: mix (@theme_fg_color, @theme_bg_color, 0.33);
+}
+
 /* don't prelight active tabs */
 .notebook tab:hover:active {
   background-color: transparent;
