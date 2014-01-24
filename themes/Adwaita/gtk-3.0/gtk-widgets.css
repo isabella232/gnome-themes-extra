@@ -1821,14 +1821,6 @@ GtkLinkButton.button:active {
     background-color: transparent;
 }
 
-.notebook tab.reorderable {
-  border-right: 1px dotted shade(@focused_borders, 1.2);
-}
-
-.notebook tab.reorderable:last-child {
-  border-right: none;
-}
-
 .notebook tab GtkLabel {
     color: mix (@theme_fg_color, @theme_bg_color, 0.50);
     font-weight: bold;
