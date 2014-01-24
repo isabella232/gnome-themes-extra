@@ -1906,6 +1906,19 @@ GtkLinkButton.button:active {
     border-left-color: @unfocused_insensitive_borders;
 }
 
+.notebook tab.reorderable-page:hover {
+    background-color: shade(@theme_bg_color, 0.97);
+    box-shadow: inset 0 3px alpha(black, 0.03), inset 0 2px alpha(black, 0.03), inset 0 1px alpha(black, 0.03);
+    border-left: 1px solid shade (@borders, 1.25);
+    border-right: 1px solid shade (@borders, 1.25);
+}
+.notebook tab.reorderable-page:active {
+    background-color: @theme_bg_color;
+    box-shadow: inset 0 3px alpha(black, 0.03), inset 0 2px alpha(black, 0.03), inset 0 1px alpha(black, 0.03);
+    border-left: 1px solid shade (@borders, 1.2);
+    border-right: 1px solid shade (@borders, 1.2);
+}
+
 /* close button styling */
 .notebook tab .button,
 .notebook tab .button:active,
