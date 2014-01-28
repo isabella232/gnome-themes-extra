@@ -247,3 +247,7 @@ GtkColorEditor GtkColorSwatch.color-light:hover {
     text-shadow: 0 -1px @button_text_shadow;
     icon-shadow: 0 -1px @button_text_shadow;
 }
+
+GtkPopover {
+    box-shadow: 0 2px 8px 3px alpha(@wm_shadow, 0.4);
+}

@@ -4067,7 +4067,7 @@ GtkInfoBar {
  * Touch text selections *
  *************************/
 GtkPopover {
-    border-radius: 7px;
+    border-radius: 5px;
     background-clip: border-box;
     /*
     background-color: @osd_popover_bg;
@@ -4080,6 +4080,7 @@ GtkPopover {
 
     box-shadow: 0 2px 8px 3px @wm_shadow;
     margin: 10px;
+    padding: 2px;
 }
 
 GtkPopover.osd {
@@ -4089,6 +4090,8 @@ GtkPopover.osd {
     color: darker(white);
 }
 
+GtkPopover > .list,
+GtkPopover > .view,
 GtkPopover > .toolbar {
     background-color: transparent;
 }
