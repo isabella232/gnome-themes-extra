@@ -284,6 +284,8 @@
     <file preprocess="to-pixdata">assets/thumbnail-frame.png</file>
     <file preprocess="to-pixdata">assets/header-separator.png</file>
     <file preprocess="to-pixdata">assets/header-separator@2.png</file>
+    <file preprocess="to-pixdata">assets/header-separator-dark.png</file>
+    <file preprocess="to-pixdata">assets/header-separator-dark@2.png</file>
     <file preprocess="to-pixdata">borders/button-border.png</file>
     <file preprocess="to-pixdata">borders/button-border@2.png</file>
     <file preprocess="to-pixdata">borders/button-border-dark.png</file>

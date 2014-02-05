@@ -152,4 +152,5 @@ scale-slider-left-insensitive-dark
 scale-slider-left-backdrop-dark
 scale-slider-left-backdrop-insensitive-dark
 header-separator
+header-separator-dark
 

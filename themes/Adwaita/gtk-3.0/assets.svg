@@ -5379,6 +5379,28 @@
        id="linearGradient9026"
        xlink:href="#linearGradient8995-1"
        inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8983-8"
+       id="linearGradient9182"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.25,0,-10.590546)"
+       spreadMethod="reflect"
+       x1="15"
+       y1="12.362183"
+       x2="15"
+       y2="2.3621826" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8995-1"
+       id="linearGradient9184"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.25,1,-10.590546)"
+       spreadMethod="reflect"
+       x1="15"
+       y1="12.362183"
+       x2="15"
+       y2="2.3621826" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -5388,10 +5410,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="21.139092"
-     inkscape:cy="1037.8293"
+     inkscape:cx="-9.7756922"
+     inkscape:cy="857.76442"
      inkscape:document-units="px"
-     inkscape:current-layer="header-separator"
+     inkscape:current-layer="header-separator-dark"
      showgrid="false"
      showborder="false"
      inkscape:window-width="1920"
@@ -10985,7 +11007,7 @@
     <g
        style="display:inline"
        id="header-separator"
-       transform="translate(2,10)"
+       transform="translate(-7,40)"
        inkscape:label="#g9001">
       <rect
          y="-7.6378174"
@@ -11001,6 +11023,26 @@
          height="25"
          x="16"
          y="-7.6378174" />
+    </g>
+    <g
+       inkscape:label="#g9001"
+       transform="translate(-7,180)"
+       id="header-separator-dark"
+       style="display:inline">
+      <rect
+         style="opacity:0.3;fill:url(#linearGradient9182);fill-opacity:1;stroke:none"
+         id="rect9178"
+         width="1"
+         height="25"
+         x="15"
+         y="-7.6378174" />
+      <rect
+         y="-7.6378174"
+         x="16"
+         height="25"
+         width="1"
+         id="rect9180"
+         style="fill:url(#linearGradient9184);fill-opacity:1;stroke:none;opacity:0.1" />
     </g>
   </g>
   <g
