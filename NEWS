@@ -1,3 +1,23 @@
+3.11.5
+======
+  New style for GtkDialog and GtkAssistant
+  New backgrounds for 3.12
+  Improvements to the new notebook tabs style
+  Style for GtkActionBar
+  Style for GtkPopover
+  Fix GtkHeaderBar vertical padding
+  Misc improvements for chooser buttons
+  Separate GTK and GNOME styles better
+  gnome-bluetooth specific fixes
+  gedit specific fixes
+
+3.11.2
+======
+  new tabs (plain gtk, no more engines)
+  headerbar/CSD fixes
+  gedit improvements
+  less contrasty/3D look for troughs (and pushed buttons)
+
 3.10.0
 ======
   gedit specific tweaks
