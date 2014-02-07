@@ -2944,6 +2944,9 @@ GtkOverlay.osd {
 .osd .button {
     border-color: @osd_button_border;
 }
+.osd .button:insensitive {
+    border-color: alpha(@osd_button_border,0.5);
+}
 
 .osd .button:active {
     border-color: @osd_button_border_active;
