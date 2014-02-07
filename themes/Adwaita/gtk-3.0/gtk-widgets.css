@@ -3154,6 +3154,7 @@ GtkOverlay.osd {
 /* used by gnome-settings-daemon's media-keys OSD */
 .osd.trough {
     background-color: @osd_trough_bg;
+    border-width: 0;
 }
 
 .osd.progressbar {
@@ -3161,25 +3162,23 @@ GtkOverlay.osd {
 }
 
 .osd .scale.trough {
-    border-color: @osd_button_border;
-    background-image: linear-gradient(to bottom,
-                                      shade(@osd_button_border, 0.70),
-                                      shade(@osd_button_border, 0.90)
-                                      );
+    border: 1px solid rgba(0,0,0,0.1);
+    border-image: none;
+    /* this defines the bg color of the played segment */
     background-color: transparent;
 }
 
+.osd .scale.trough:backdrop {
+    background-color: @osd_scrollbar_trough_backdrop;
+}
+
 .osd .scale.trough.highlight {
-    border-color: mix(@osd_button_border, @theme_selected_bg_color, 0.70);
-    background-image: linear-gradient(to bottom,
-                                      mix(shade(@osd_button_border, 0.55), @theme_selected_bg_color, 0.70),
-                                      mix(shade(@osd_button_border, 0.90), @theme_selected_bg_color, 0.70)
-                                      );
+    background-image: none;
+    background-color: @theme_selected_bg_color;
 }
 
 .osd .scale.trough:insensitive,
 .osd .scale.trough.highlight:insensitive {
-    border-color: shade(@osd_button_border, 0.60);
     background-image: none;
     background-color: transparent;
 }
