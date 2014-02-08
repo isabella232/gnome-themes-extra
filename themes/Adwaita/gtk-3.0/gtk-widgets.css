@@ -1495,11 +1495,11 @@ GtkComboBox.combobox-entry .button {
 }
 
 /* remove shadows from linked menu buttons */
-.linked GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button.raised.linked:active,
-.toolbar .raised.linked GtkMenuButton.button:active,
-.inline-toolbar.toolbar GtkMenuButton.button:active,
-.inline-toolbar.toolbar GtkToolButton > GtkMenuButton.button:active {
+.linked GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.raised.linked:active,
+.toolbar .raised.linked GtkMenuButton.menu-button:active,
+.inline-toolbar.toolbar GtkMenuButton.menu-button:active,
+.inline-toolbar.toolbar GtkToolButton > GtkMenuButton.menu-button:active {
     box-shadow: none;
 }
 
@@ -2478,12 +2478,12 @@ GtkModelMenuItem GtkBox GtkImage {
 /***************
  * Menu Button *
  ***************/
-.toolbar GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button.raised:active,
-GtkMenuButton.button:active,
-.linked GtkMenuButton.button:active,
-.toolbar .linked.raised GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button.linked.raised:active {
+.toolbar GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.raised:active,
+GtkMenuButton.menu-button:active,
+.linked GtkMenuButton.menu-button:active,
+.toolbar .linked.raised GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.linked.raised:active {
     background-image: none;
     background-color: @menu_bg_color;
 
@@ -2493,24 +2493,24 @@ GtkMenuButton.button:active,
     color: @theme_text_color;
 }
 
-GtkMenuButton.button:active,
-.linked GtkMenuButton.button:active,
-.toolbar .linked.raised GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button.linked.raised:active {
+GtkMenuButton.menu-button:active,
+.linked GtkMenuButton.menu-button:active,
+.toolbar .linked.raised GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button.linked.raised:active {
     text-shadow: none;
     icon-shadow: none;
     box-shadow: none;
 }
 
-.linked GtkMenuButton.button:active:last-child,
-.toolbar .linked.raised GtkMenuButton.button:active:last-child,
-.toolbar GtkMenuButton.button.linked.raised:active:last-child {
+.linked GtkMenuButton.menu-button:active:last-child,
+.toolbar .linked.raised GtkMenuButton.menu-button:active:last-child,
+.toolbar GtkMenuButton.menu-button.linked.raised:active:last-child {
     border-top-left-radius: 0;
 }
 
-.linked GtkMenuButton.button:active:first-child,
-.toolbar .linked.raised GtkMenuButton.button:active:first-child,
-.toolbar GtkMenuButton.button.linked.raised:active:first-child {
+.linked GtkMenuButton.menu-button:active:first-child,
+.toolbar .linked.raised GtkMenuButton.menu-button:active:first-child,
+.toolbar GtkMenuButton.menu-button.linked.raised:active:first-child {
     border-top-right-radius: 0;
 }
 
@@ -2526,8 +2526,8 @@ GtkMenuButton.button:active,
 }
 
 .button.menuitem.menubar:active,
-GtkMenuButton.button:active,
-.toolbar GtkMenuButton.button:active {
+GtkMenuButton.menu-button:active,
+.toolbar GtkMenuButton.menu-button:active {
     color: @theme_text_color;
 }
 
@@ -3076,7 +3076,7 @@ GtkOverlay.osd {
 .osd.button:active:hover,
 .osd .button:active,
 .osd .button:active:hover,
-.osd GtkMenuButton.button:active {
+.osd GtkMenuButton.menu-button:active {
     background-image: linear-gradient(to bottom,
                                       @osd_button_bg_active_a,
                                       @osd_button_bg_active_b 20%,
@@ -3084,12 +3084,12 @@ GtkOverlay.osd {
                                       );
 }
 
-.osd GtkMenuButton.button:active {
+.osd GtkMenuButton.menu-button:active {
     background-color: transparent;
     border-color: @osd_button_border;
 }
 
-.osd GtkMenuButton.button:active {
+.osd GtkMenuButton.menu-button:active {
     color: @osd_button_fg_active;
     text-shadow: 0 -1px @osd_button_shadow;
 }
