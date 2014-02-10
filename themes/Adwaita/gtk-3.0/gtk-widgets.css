@@ -4105,6 +4105,11 @@ GtkPopover.osd > .toolbar .button {
     background-color: transparent;
 }
 
+GtkModelButton.button
+{
+    color: @theme_fg_color;
+}
+
 GtkModelButton.button:active,
 GtkModelButton.button:insensitive,
 GtkModelButton.button:active:insensitive,
