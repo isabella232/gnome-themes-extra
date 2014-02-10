@@ -4080,7 +4080,7 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
 
-    box-shadow: 0 2px 8px 3px @wm_shadow;
+    box-shadow: 0 2px 3px @wm_shadow;
     margin: 10px;
     padding: 2px;
 }
@@ -4090,6 +4090,10 @@ GtkPopover.osd {
     border-color: @theme_bg_color;
     box-shadow: 0 2px 8px 3px alpha(@wm_shadow, 0.4);
     color: darker(white);
+}
+
+GtkPopover:backdrop {
+  box-shadow: none;
 }
 
 GtkPopover > .list,
@@ -4141,18 +4145,24 @@ GtkModelButton.button:active:selected:backdrop {
 }
 
 GtkPopover .separator {
-    font-size: 90%;
+    font-size: 80%;
     font-weight: bold;
-    color: @borders;
+    color: alpha(@theme_text_color,0.4);
+    text-shadow: none;
     background-color: transparent;
+    icon-shadow: none;
+    border: 0;
 }
 
 GtkModelButton.button:active:hover,
 GtkModelButton.button:hover,
 GtkModelButton.button:selected {
     background-image: none;
-    background-color: @unfocused_borders;
-    text-shadow: 0 1px @button_text_shadow;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    text-shadow: none;
+    border-width: 0;
+    border-color: transparent;
 }
 
 /*******
