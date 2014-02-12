@@ -3314,12 +3314,25 @@ GtkProgressBar.osd.progressbar {
     icon-shadow: 0 1px shade(@suggested_action_button_shadow, 1.15);
 }
 
-.toolbar .suggested-action.button:backdrop,
-.suggested-action.button:backdrop {
-    text-shadow: none;
+
+.suggested-action.button:insensitive,
+.suggested-action.button:active *:insensitive {
     icon-shadow: none;
-    color: @theme_unfocused_text_color;
+    background-image: none;
+    background-color: @insentitive_bg_color;
+    border: 1px solid @insensitive_borders;
 }
+
+.suggested-action.button GtkLabel:insensitive {
+    color: @insensitive_fg_color;
+    text-shadow: none;
+}
+
+.suggested-action.button:insensitive:backdrop {
+    background-color: alpha(@insentitive_bg_color,0.7);
+    border: 1px solid alpha(@insensitive_border_color,0.7);
+}
+
 
 /******************************
  * Destructive action buttons *
