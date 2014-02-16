@@ -230,6 +230,10 @@ GeditWindow .pane-separator:hover {
     transition: all 200ms ease-out;
 }
 
+GeditStatusbar {
+    border-top: 1px solid @borders;
+}
+
 GeditStatusbar GeditSmallButton,
 GeditStatusMenuButton {
     text-shadow: none;
