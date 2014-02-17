@@ -1102,7 +1102,8 @@ GtkComboBox.combobox-entry .button {
     padding: 1px 4px;
 }
 
-.button.image-button {
+.button.image-button,
+.primary-toolbar.toolbar .button.image-button {
     padding: 3px 4px 4px;
 }
 
@@ -1142,10 +1143,6 @@ GtkComboBox.combobox-entry .button {
     border-color: transparent;
 
     text-shadow: 0 1px @primary_toolbar_button_text_shadow;
-}
-
-.primary-toolbar.toolbar .button.image-button {
-    padding: 3px 4px 4px;
 }
 
 .primary-toolbar .button:active,
@@ -2620,7 +2617,7 @@ GtkCheckButton:selected:focus {
 }
 
 .header-bar .button.text-button {
-    padding: 2px 16px 3px 16px;
+    padding: 2px 16px;
 }
 
 .header-bar .button.image-button {
