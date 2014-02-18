@@ -2790,6 +2790,11 @@ GtkMessageDialog {
     padding-bottom: 3px;
 }
 
+.primary-toolbar .toolbar .separator,
+.primary-toolbar.toolbar .separator {
+    -GtkWidget-window-dragging: true;
+}
+
 .primary-toolbar .toolbar:insensitive,
 .primary-toolbar.toolbar:insensitive {
     background-image: none;
