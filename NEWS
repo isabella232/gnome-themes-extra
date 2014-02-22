@@ -1,3 +1,11 @@
+3.11.90
+=======
+  Style for popover menus
+  Improve OSD style
+  Improve insensitive suggested-action buttons
+  gedit specific fixes
+  Enable window dragging on toolbar separators
+
 3.11.5
 ======
   New style for GtkDialog and GtkAssistant
