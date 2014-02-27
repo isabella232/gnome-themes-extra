@@ -2745,6 +2745,7 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:focus {
     border-color: @theme_selected_bg_color;
     border-width: 1px;
+    -GtkWidget-focus-line-width: 0;
 }
 
 /***************
