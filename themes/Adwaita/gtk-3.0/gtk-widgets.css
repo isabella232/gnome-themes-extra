@@ -3341,11 +3341,6 @@ GtkProgressBar.osd.progressbar {
     border: 1px solid alpha(@insensitive_border_color,0.7);
 }
 
-.dialog-action-area.linked .button.suggested-action,
-.dialog-action-area.linked .button.suggested-action:active,
-.dialog-action-area.linked .button.suggested-action:insensitive {
-    color: @theme_selected_bg_color;
-}
 
 /******************************
  * Destructive action buttons *
