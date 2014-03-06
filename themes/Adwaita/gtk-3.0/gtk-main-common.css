@@ -19,7 +19,7 @@
 
 @define-color osd_fg #ededed;
 @define-color osd_bg alpha(@osd_base, 0.80);
-@define-color osd_bg_backdrop alpha(@osd_base_backdrop, 0.90);
+@define-color osd_bg_backdrop alpha(@osd_base_backdrop, 0.18);
 
 @define-color osd_text_shadow alpha(black, 0.75);
 

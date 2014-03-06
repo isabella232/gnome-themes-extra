@@ -3127,6 +3127,7 @@ GtkOverlay.osd {
 .osd.toolbar:backdrop {
     background-image: none;
     background-color: @osd_bg_backdrop;
+    text-shadow: none;
 }
 
 .osd.toolbar .button {
@@ -3182,7 +3183,7 @@ GtkOverlay.osd {
 }
 
 .osd .scale.trough:backdrop {
-    background-color: @osd_scrollbar_trough_backdrop;
+    background-color: alpha(@osd_scrollbar_trough_backdrop, .1);
 }
 
 .osd .scale.trough.highlight {
