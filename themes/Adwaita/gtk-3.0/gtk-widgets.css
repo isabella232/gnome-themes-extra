@@ -2314,6 +2314,7 @@ GtkTreeMenu .menuitem,
     color: @menu_fg_color;
     padding: 0;
     border-style: none;
+    margin: 4px;
 }
 
 .menu.button {
