@@ -230,6 +230,18 @@ GeditWindow .pane-separator:hover {
     transition: all 200ms ease-out;
 }
 
+.gedit-document-panel-dragged-row {
+    border: 1px solid @borders;
+    background-color: shade(@sidebar_bg, 0.90);
+    color: @theme_fg_color;
+}
+
+.gedit-document-panel-placeholder-row {
+    border: none;
+    background-color: mix(@sidebar_bg, @theme_selected_bg_color, 0.20);
+    transition: all 200ms ease-in;
+}
+
 GeditStatusbar {
     border-top: 1px solid @borders;
 }
