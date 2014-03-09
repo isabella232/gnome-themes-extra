@@ -1352,6 +1352,7 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:hover:first-child,
 .linked .button:insensitive:first-child {
     border-right-width: 0;
+    border-left-width: 1px;
     border-image-width: 3px 0 4px 3px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -1363,6 +1364,7 @@ GtkComboBox.combobox-entry .button {
 .linked .button:active:last-child,
 .linked .button:active:hover:last-child,
 .linked .button:insensitive:last-child {
+    border-right-width: 1px;
     border-left-width: 0;
     border-image-width: 3px 3px 4px 0;
     border-bottom-left-radius: 0;
