@@ -4287,7 +4287,7 @@ GtkModelButton.button:selected {
     border-radius: 7px 7px 0 0;
     /* lamefun trick to get rounded borders regardless of CSD use */
     border-width: 0px;    
-    box-shadow: 0 0 0 1px @wm_border, 0 2px 8px 3px @wm_shadow;
+    box-shadow: 0 2px 8px 3px @wm_shadow, 0 0 0 1px @wm_border;
 
     /* this is used for the resize cursor area */
     margin: 10px;
@@ -4299,6 +4299,5 @@ GtkModelButton.button:selected {
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 0 0 1px shade(@wm_border,1.1), 0 2px 5px 1px @wm_shadow;
+    box-shadow: 0 2px 5px 1px @wm_shadow, 0 0 0 1px shade(@wm_border, 1.1);
 }
-
