@@ -1,3 +1,12 @@
+3.11.92
+=======
+  Message dialog buttons have no border
+  Default buttons in message dialogs use the suggested button style
+  Context menu fixes
+  Gedit specific style tweaks
+  Match pixel size of regular and image buttons in headerbars
+  linked button radius tweaks
+
 3.11.90
 =======
   Style for popover menus
