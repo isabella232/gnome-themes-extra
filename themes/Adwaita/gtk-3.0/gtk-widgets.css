@@ -338,6 +338,21 @@ GtkTreeView.separator:backdrop,
     background-color: @theme_unfocused_base_color;
 }
 
+GtkFileChooser .pane-separator,
+GtkFileChooser .pane-separator:hover {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: @borders;
+    background-color: @sidebar_bg;
+    color: shade (@theme_bg_color, 0.9);
+}
+
+GtkFileChooser .pane-separator:backdrop,
+GtkFileChooser .pane-separator:hover:backdrop {
+    border-color: @unfocused_borders;
+    background-color: @sidebar_bg_unfocused;
+}
+
 /****************
  * Text Entries *
  ****************/
