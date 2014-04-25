@@ -8,7 +8,6 @@ src/: the Adwaita GTK+ 3 theming engine
 
 themes/Adwaita/
   backgrounds/: the default GNOME 3 wallpaper
-  cursors/: the default GNOME 3 cursor theme
   gtk-2.0/: the default GNOME 3 theme for GTK+ 2 applications
   gtk-3.0/: the default GNOME 3 theme for GTK+ 3 applications
   metacity-1/: the default GNOME 3 window manager theme
