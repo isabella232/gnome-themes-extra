@@ -3691,6 +3691,7 @@ GtkAssistant .sidebar {
 
 GtkSwitch {
     font: bold condensed 10;
+    text-shadow: none;
 }
 
 .scale.progressbar,
