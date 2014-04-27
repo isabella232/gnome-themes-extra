@@ -4160,15 +4160,15 @@ GtkPopover.osd > .toolbar .button {
     background-color: transparent;
 }
 
-.modelbutton.button
+.menuitem.button
 {
     color: @theme_fg_color;
 }
 
-.modelbutton.button:active,
-.modelbutton.button:insensitive,
-.modelbutton.button:active:insensitive,
-.modelbutton.button {
+.menuitem.button:active,
+.menuitem.button:insensitive,
+.menuitem.button:active:insensitive,
+.menuitem.button {
     background-color: transparent;
     background-image: none;
     border-color: transparent;
@@ -4177,13 +4177,13 @@ GtkPopover.osd > .toolbar .button {
     box-shadow: none;
 }
 
-.modelbutton.button:backdrop,
-.modelbutton.button:hover:backdrop,
-.modelbutton.button:insensitive:backdrop,
-.modelbutton.button:active:insensitive:backdrop,
-.modelbutton.button:active:backdrop,
-.modelbutton.button:active:hover:backdrop,
-.modelbutton.button:active:selected:backdrop {
+.menuitem.button:backdrop,
+.menuitem.button:hover:backdrop,
+.menuitem.button:insensitive:backdrop,
+.menuitem.button:active:insensitive:backdrop,
+.menuitem.button:active:backdrop,
+.menuitem.button:active:hover:backdrop,
+.menuitem.button:active:selected:backdrop {
     text-shadow: none;
     icon-shadow: none;
     color: @theme_unfocused_fg_color;
@@ -4205,9 +4205,9 @@ GtkPopover .separator {
     border: 0;
 }
 
-.modelbutton.button:active:hover,
-.modelbutton.button:hover,
-.modelbutton.button:selected {
+.menuitem.button:active:hover,
+.menuitem.button:hover,
+.menuitem.button:selected {
     background-image: none;
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
