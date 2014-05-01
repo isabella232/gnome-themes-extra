@@ -45,7 +45,7 @@
      */
     outline-color: alpha(@theme_text_color, 0.3);
     outline-style: dashed;
-    outline-offset: -1px;
+    outline-offset: -3px;
     outline-width: 1px;
     outline-radius: 2px;
 }
@@ -869,7 +869,7 @@ GtkColorEditor GtkColorSwatch.color-light:hover {
 }
 
 GtkColorButton.button {
-    padding: 1px 20px;
+    padding: 3px 22px;
 }
 
 /***********
@@ -1425,19 +1425,17 @@ GtkScrolledWindow GtkViewport.frame {
 .button.menuitem.menubar,
 GtkColorButton.button,
 GtkComboBox.combobox-entry .button {
-    padding: 1px 4px;
+    padding: 3px 6px;
 }
 
 .button.image-button,
 .primary-toolbar.toolbar .button.image-button {
-    padding: 3px 4px 4px;
+    padding: 5px 6px 6px;
 }
 
 .button {
     -GtkButton-image-spacing: 4;
-    -GtkButton-interior-focus: true;
     -GtkButton-default-border: 0;
-    -GtkButton-inner-border: 3;
 
     border-style: solid;
     border-color: transparent;
@@ -2315,7 +2313,7 @@ GtkLinkButton.button:active {
     border-style: solid;
     border-color: transparent;
     border-width: 1px;
-    padding: 1px;
+    padding: 3px;
     icon-shadow: none;
     transition: all 200ms ease-out;
 }
@@ -2450,6 +2448,7 @@ GtkComboBox.combobox-entry .button:active:hover {
 
 GtkComboBox .button {
     color: @internal_element_color;
+    padding: 2px 7px;
 }
 
 GtkComboBox .button:hover {
@@ -2977,15 +2976,15 @@ GtkCheckButton:selected:focus {
 }
 
 .toolbar .button {
-    padding: 1px;
+    padding: 3px;
 }
 
 .toolbar .button.text-button {
-    padding: 2px 16px;
+    padding: 4px 18px;
 }
 
 .toolbar .button.image-button {
-    padding: 5px 4px 4px 5px;
+    padding: 7px 6px 6px 7px;
 }
 
 .toolbar:insensitive {
@@ -3030,11 +3029,11 @@ GtkCheckButton:selected:focus {
 }
 
 .header-bar .button.text-button {
-    padding: 2px 16px;
+    padding: 4px 18px;
 }
 
 .header-bar .button.image-button {
-    padding: 5px 5px 4px 5px;
+    padding: 7px 7px 6px 7px;
 }
 
 .header-bar .title {
@@ -3075,11 +3074,11 @@ GtkCheckButton:selected:focus {
 }
 
 .action-bar .button.text-button {
-    padding: 2px 16px;
+    padding: 4px 18px;
 }
 
 .action-bar .button.image-button {
-    padding: 5px 5px 4px 5px;
+    padding: 7px 7px 6px 7px;
 }
 
 .action-bar .title {
@@ -3188,7 +3187,7 @@ GtkMessageDialog {
 }
 
 .search-bar .button.close-button {
-    padding: 5px 4px 5px 5px;
+    padding: 7px 6px 7px 7px;
 }
 
 /********************
@@ -3402,7 +3401,7 @@ GtkOverlay.osd {
 
 .osd.button,
 .osd .button {
-    padding: 4px;
+    padding: 6px;
 
     background-image: linear-gradient(to bottom,
                                       @osd_button_bg_a,
@@ -3417,7 +3416,7 @@ GtkOverlay.osd {
 }
 
 .osd.button {
-    padding: 8px;
+    padding: 10px;
 }
 
 .osd.button,
@@ -3569,7 +3568,7 @@ GtkOverlay.osd {
 }
 
 .osd.toolbar .button {
-    padding: 4px;
+    padding: 6px;
     border-width: 1px 0;
     border-radius: 0;
     box-shadow: inset -1px 0 @osd_button_inset;
@@ -4359,7 +4358,7 @@ column-header.button:hover,
 column-header .button:hover {
     background-color: @theme_base_color;
     background-image: none;
-    padding: 0 4px;
+    padding: 2px 6px;
     text-shadow: none;
     icon-shadow: none;
     font-weight: bold; /* Not sure about this one */
@@ -4787,7 +4786,7 @@ GtkPopover .separator {
     icon-shadow: 0px 1px @wm_title_shadow;
     color: @wm_title;
     background: none;
-    padding: 5px 5px 6px 5px;
+    padding: 7px 7px 8px 7px;
 
     border-radius: 3px;
     border-width: 0 0 1px;
