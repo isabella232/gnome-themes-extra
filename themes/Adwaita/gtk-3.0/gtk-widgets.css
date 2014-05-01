@@ -2964,6 +2964,9 @@ GtkCheckButton:selected:focus {
     background-color: transparent;
 }
 
+GtkCheckButton {
+    padding: 2px;
+}
 
 /************
  * Toolbars *
