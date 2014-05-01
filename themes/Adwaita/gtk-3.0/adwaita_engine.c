@@ -32,8 +32,6 @@
 #include <gdk/gdkx.h>
 #endif
 
-#include "adwaita_utils.h"
-
 #define ADWAITA_NAMESPACE "adwaita"
 
 typedef struct _AdwaitaEngine AdwaitaEngine;
@@ -169,80 +167,11 @@ adwaita_engine_init (AdwaitaEngine *self)
 }
 
 static void
-adwaita_engine_render_focus (GtkThemingEngine *engine,
-                             cairo_t          *cr,
-                             gdouble           x,
-                             gdouble           y,
-                             gdouble           width,
-                             gdouble           height)
-{
-  GdkRGBA *border_color = NULL;
-  GtkStateFlags state;
-  gint line_width, focus_pad;
-  gint border_radius;
-  double dashes[2] = { 2.0, 0.2 };
-  const GtkWidgetPath *path;
-  GtkBorderStyle border_style;
-
-  path = gtk_theming_engine_get_path (engine);
-  state = gtk_theming_engine_get_state (engine);
-  gtk_theming_engine_get (engine, state,
-                          "outline-color", &border_color,
-                          "outline-style", &border_style,
-                          "outline-offset", &border_radius,
-                          NULL);
-
-  gtk_theming_engine_get_style (engine,
-                                "focus-line-width", &line_width,
-                                "focus-padding", &focus_pad,
-                                NULL);
-
-  /* the treeview rows don't change allocation when modifying focus-padding,
-   * so we have to move the focus ring inside the allocated area manually.
-   */
-  if (gtk_widget_path_is_type (path, GTK_TYPE_TREE_VIEW))
-    {
-      x += focus_pad;
-      y += focus_pad;
-      width -= 2 * focus_pad;
-      height -= 2 * focus_pad;
-    }
-
-  cairo_save (cr);
-  cairo_set_line_width (cr, line_width);
-
-  if (line_width > 1)
-    _cairo_round_rectangle_sides (cr, border_radius,
-                                  x, y, width, height,
-                                  SIDE_ALL, GTK_JUNCTION_NONE);
-  else
-    _cairo_round_rectangle_sides (cr, border_radius,
-                                  x + 0.5, y + 0.5,
-                                  width - 1, height - 1,
-                                  SIDE_ALL, GTK_JUNCTION_NONE);
-
-  if (border_style == GTK_BORDER_STYLE_DASHED)
-    cairo_set_dash (cr, dashes, 1, 0.0);
-
-  if (border_color != NULL)
-    gdk_cairo_set_source_rgba (cr, border_color);
-
-  cairo_stroke (cr);
-  cairo_restore (cr);
-
-  if (border_color != NULL)
-    gdk_rgba_free (border_color);
-}
-
-static void
 adwaita_engine_class_init (AdwaitaEngineClass *klass)
 {
-  GtkThemingEngineClass *engine_class = GTK_THEMING_ENGINE_CLASS (klass);
   GObjectClass *oclass = G_OBJECT_CLASS (klass);
 
   oclass->finalize = adwaita_engine_finalize;
-
-  engine_class->render_focus = adwaita_engine_render_focus;
 }
 
 static void

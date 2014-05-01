@@ -45,7 +45,9 @@
      */
     outline-color: alpha(@theme_text_color, 0.3);
     outline-style: dashed;
-    outline-offset: 2px;
+    outline-offset: -1px;
+    outline-width: 1px;
+    outline-radius: 2px;
 }
 
 /***************
@@ -3796,7 +3798,7 @@ GtkIconView.cell:selected:focus {
      */
     outline-color: @treeview_focus_border;
     outline-style: solid;
-    outline-offset: 3px;
+    outline-radius: 3px;
 }
 
 .view {
