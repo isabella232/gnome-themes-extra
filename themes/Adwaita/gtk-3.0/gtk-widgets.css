@@ -4219,9 +4219,7 @@ GtkSwitch.slider:insensitive:backdrop {
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
 
-    -GtkWidget-focus-line-width: 1;
-    -GtkWidget-focus-padding: 1;
-
+    outline-offset: -2px;
     outline-color: alpha(@theme_text_color, 0.6);
 }
 
