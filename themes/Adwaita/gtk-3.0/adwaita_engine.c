@@ -32,8 +32,6 @@
 #include <gdk/gdkx.h>
 #endif
 
-#define ADWAITA_NAMESPACE "adwaita"
-
 typedef struct _AdwaitaEngine AdwaitaEngine;
 typedef struct _AdwaitaEngineClass AdwaitaEngineClass;
 
