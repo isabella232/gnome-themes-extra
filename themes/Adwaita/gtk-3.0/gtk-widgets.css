@@ -4462,6 +4462,10 @@ column-header .button:insensitive:backdrop {
     background-color: @list_box_bg;
 }
 
+.list-row {
+    padding: 2px;
+}
+
 .list-row:hover {
     background-color: @content_view_bg;
 }
