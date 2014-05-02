@@ -4475,6 +4475,14 @@ column-header .button:insensitive:backdrop {
 }
 
 /**************
+ * Flow boxes *
+ **************/
+
+.grid-child {
+    padding: 2px;
+}
+
+/**************
  * Calendar   *
  **************/
 
