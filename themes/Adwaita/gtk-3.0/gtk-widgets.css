@@ -4133,6 +4133,7 @@ GtkAssistant .sidebar {
 
 GtkSwitch {
     font: bold condensed 10;
+    outline-offset: -4px;
     text-shadow: none;
 }
 
