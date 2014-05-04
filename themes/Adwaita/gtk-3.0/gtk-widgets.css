@@ -2957,7 +2957,8 @@ GtkCheckButton:selected:focus {
 }
 
 GtkCheckButton {
-    padding: 2px;
+    outline-offset: 0;
+    padding: 3px;
 }
 
 /*************
