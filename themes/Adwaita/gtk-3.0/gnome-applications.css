@@ -194,7 +194,7 @@ GeditWindow .pane-separator:hover {
     border-style: solid;
     border-color: transparent;
     border-width: 1px;
-    padding: 3px;
+    padding: 4px;
     icon-shadow: none;
 }
 
@@ -270,7 +270,7 @@ GeditStatusMenuButton.button:active:hover {
     border-style: solid;
     border-width: 0 1px;
     border-radius: 0;
-    padding: 3px 10px 4px 6px;
+    padding: 4px 11px 5px 7px;
 }
 
 GeditStatusbar GeditSmallButton.button:hover,
@@ -890,7 +890,7 @@ PanelApplet > GtkMenuBar.menubar .menuitem:hover {
 
 PanelApplet .button,
 PanelApplet .button:hover {
-    padding: 6px;
+    padding: 7px;
 
     border-image: none;
     border-width: 0;
