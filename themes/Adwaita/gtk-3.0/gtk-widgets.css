@@ -1143,7 +1143,7 @@ GtkLevelBar.vertical {
 
 .scale {
     -GtkScale-slider-length: 16;
-    -GtkRange-slider-width: 24;
+    -GtkRange-slider-width: 26;
     -GtkRange-trough-border: 0;
     outline-offset: -1px;
 }
@@ -1171,11 +1171,11 @@ GtkLevelBar.vertical {
  }
 
 .scale.trough {
-    margin: 10px 2px;
+    margin: 11px 3px;
 }
 
 .scale.trough.vertical {
-    margin: 2px 10px;
+    margin: 3px 11px;
 }
 
 .scale.trough,
