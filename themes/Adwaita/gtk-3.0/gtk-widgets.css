@@ -2965,8 +2965,8 @@ GtkCheckButton {
  *************/
 
 GtkExpander {
-    padding: 2px;
-    outline-offset: 0;
+    padding: 3px;
+    outline-offset: 1px;
 }
 
 /************
