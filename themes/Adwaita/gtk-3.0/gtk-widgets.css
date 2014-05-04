@@ -4501,7 +4501,7 @@ GtkCalendar.view {
 GtkCalendar.day-number,
 GtkCalendar.day-name,
 GtkCalendar.week-number {
-    padding: 2px;
+    padding: 3px;
 }
 
 GtkCalendar.header {
