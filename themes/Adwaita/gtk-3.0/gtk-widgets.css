@@ -4219,7 +4219,7 @@ GtkSwitch.slider:insensitive:backdrop {
 GtkTreeView {
     -GtkTreeView-vertical-separator: 0;
 
-    outline-offset: -2px;
+    outline-offset: -1px;
     outline-color: alpha(@theme_text_color, 0.6);
 }
 
@@ -4228,6 +4228,10 @@ GtkTreeView.dnd {
     border-radius: 2px;
     border-width: 1px;
     border-style: solid;
+}
+
+GtkTreeView.cell {
+    padding: 1px;
 }
 
 GtkTreeView:selected:focus {
