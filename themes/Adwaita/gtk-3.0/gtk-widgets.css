@@ -1143,8 +1143,9 @@ GtkLevelBar.vertical {
 
 .scale {
     -GtkScale-slider-length: 16;
-    -GtkRange-slider-width: 20;
+    -GtkRange-slider-width: 24;
     -GtkRange-trough-border: 0;
+    outline-offset: -1px;
 }
 
 .scale.slider,
@@ -1156,6 +1157,8 @@ GtkLevelBar.vertical {
     border-style: none;
 
     background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
 
     /* background-image in -assets variant */
 }
@@ -1164,25 +1167,15 @@ GtkLevelBar.vertical {
 .scale.slider.fine-tune:active:hover,
 .scale.slider.fine-tune.horizontal:active,
 .scale.slider.fine-tune.horizontal:active:hover {
-      background-size: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
-}
+    background-size: 50%;
+ }
 
 .scale.trough {
-    margin: 8px 0;
-    background-image: linear-gradient(to bottom,
-                                      @scale_trough_bg_a,
-                                      @scale_trough_bg_b
-                                      );
+    margin: 10px 2px;
 }
 
 .scale.trough.vertical {
-    margin: 0 8px;
-    background-image: linear-gradient(to right,
-                                      @scale_trough_bg_a,
-                                      @scale_trough_bg_b
-                                      );
+    margin: 2px 10px;
 }
 
 .scale.trough,
