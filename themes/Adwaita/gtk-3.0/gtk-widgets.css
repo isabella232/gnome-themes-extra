@@ -4489,12 +4489,19 @@ column-header .button:insensitive:backdrop {
 
 GtkCalendar {
     padding: 2px;
+    outline-offset: -1px;
 }
 
 GtkCalendar.view {
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
+    padding: 2px;
+}
+
+GtkCalendar.day-number,
+GtkCalendar.day-name,
+GtkCalendar.week-number {
     padding: 2px;
 }
 
