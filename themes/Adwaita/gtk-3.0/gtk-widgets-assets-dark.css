@@ -54,6 +54,13 @@
     background-position: center;
 }
 
+.check:hover,
+.view.cell.check:hover {
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark.png"),url("assets/checkbox-unchecked-hover-dark@2.png"));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .check:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"),url("assets/checkbox-unchecked-insensitive-dark@2.png"));
 }
@@ -78,6 +85,11 @@
     background-image: -gtk-scaled(url("assets/checkbox-checked-dark.png"),url("assets/checkbox-checked-dark@2.png"));
 }
 
+.check:active:hover,
+.view.cell.check:active:hover {
+    background-image: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"),url("assets/checkbox-checked-hover-dark@2.png"));
+}
+
 .check:active:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"),url("assets/checkbox-checked-insensitive-dark@2.png"));
 }
@@ -97,6 +109,10 @@
     background-image: -gtk-scaled(url("assets/checkbox-mixed-dark.png"),url("assets/checkbox-mixed-dark@2.png"));
 }
 
+.check:inconsistent:hover {
+    background-image: -gtk-scaled(url("assets/checkbox-mixed-hover-dark.png"),url("assets/checkbox-mixed-hover-dark@2.png"));
+}
+
 .check:inconsistent:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"),url("assets/checkbox-mixed-insensitive-dark@2.png"));
 }
@@ -114,6 +130,13 @@
 .radio,
 .view.cell.radio {
     background-image: -gtk-scaled(url("assets/radio-unchecked-dark.png"),url("assets/radio-unchecked-dark@2.png"));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.radio:hover,
+.view.cell.radio:hover {
+    background-image: -gtk-scaled(url("assets/radio-unchecked-hover-dark.png"),url("assets/radio-unchecked-hover-dark@2.png"));
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -142,6 +165,11 @@
     background-image: -gtk-scaled(url("assets/radio-checked-dark.png"),url("assets/radio-checked-dark@2.png"));
 }
 
+.radio:active:hover,
+.view.cell.radio:active:hover {
+    background-image: -gtk-scaled(url("assets/radio-checked-hover-dark.png"),url("assets/radio-checked-hover-dark@2.png"));
+}
+
 .radio:active:insensitive {
     background-image: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"),url("assets/radio-checked-insensitive-dark@2.png"));
 }
@@ -159,6 +187,10 @@
 
 .radio:inconsistent {
     background-image: -gtk-scaled(url("assets/radio-mixed-dark.png"),url("assets/radio-mixed-dark@2.png"));
+}
+
+.radio:inconsistent:hover {
+    background-image: -gtk-scaled(url("assets/radio-mixed-hover-dark.png"),url("assets/radio-mixed-hover-dark@2.png"));
 }
 
 .radio:inconsistent:insensitive {

@@ -56,6 +56,14 @@ GtkModelButton.button.check:hover,
     background-position: center;
 }
 
+GtkModelButton.button.check:hover,
+.check:hover,
+.view.cell.check:hover {
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-hover.png"),url("assets/checkbox-unchecked-hover@2.png"));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 GtkModelButton.button.check:insensitive,
 .check:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-unchecked-insensitive.png"),url("assets/checkbox-unchecked-insensitive@2.png"));
@@ -86,6 +94,12 @@ GtkModelButton.button.check:active:hover,
     background-image: -gtk-scaled(url("assets/checkbox-checked.png"),url("assets/checkbox-checked@2.png"));
 }
 
+GtkModelButton.button.check:active:hover,
+.check:active:hover,
+.view.cell.check:active:hover {
+    background-image: -gtk-scaled(url("assets/checkbox-checked-hover.png"),url("assets/checkbox-checked-hover@2.png"));
+}
+
 GtkModelButton.button.check:active:insensitive,
 .check:active:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-checked-insensitive.png"),url("assets/checkbox-checked-insensitive@2.png"));
@@ -109,6 +123,10 @@ GtkModelButton.button.check:active:insensitive:backdrop,
     background-image: -gtk-scaled(url("assets/checkbox-mixed.png"),url("assets/checkbox-mixed@2.png"));
 }
 
+.check:inconsistent:hover {
+    background-image: -gtk-scaled(url("assets/checkbox-mixed-hover.png"),url("assets/checkbox-mixed-hover@2.png"));
+}
+
 .check:inconsistent:insensitive {
     background-image: -gtk-scaled(url("assets/checkbox-mixed-insensitive.png"),url("assets/checkbox-mixed-insensitive@2.png"));
 }
@@ -124,10 +142,17 @@ GtkModelButton.button.check:active:insensitive:backdrop,
 }
 
 GtkModelButton.button.radio,
-GtkModelButton.button.radio:hover,
 .radio,
 .view.cell.radio {
     background-image: -gtk-scaled(url("assets/radio-unchecked.png"),url("assets/radio-unchecked@2.png"));
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+GtkModelButton.button.radio:hover,
+.radio:hover,
+.view.cell.radio:hover {
+    background-image: -gtk-scaled(url("assets/radio-unchecked-hover.png"),url("assets/radio-unchecked-hover@2.png"));
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -162,6 +187,13 @@ GtkModelButton.button.radio:active:hover,
     background-image: -gtk-scaled(url("assets/radio-checked.png"),url("assets/radio-checked@2.png"));
 }
 
+GtkModelButton.button.radio:active:hover,
+.radio:active:hover,
+.view.cell.radio:active:hover {
+    background-image: -gtk-scaled(url("assets/radio-checked-hover.png"),url("assets/radio-checked-hover@2.png"));
+}
+
+
 GtkModelButton.button.radio:active:insensitive,
 .radio:active:insensitive {
     background-image: -gtk-scaled(url("assets/radio-checked-insensitive.png"),url("assets/radio-checked-insensitive@2.png"));
@@ -183,6 +215,10 @@ GtkModelButton.button.radio:active:insensitive:backdrop,
 
 .radio:inconsistent {
     background-image: -gtk-scaled(url("assets/radio-mixed.png"),url("assets/radio-mixed@2.png"));
+}
+
+.radio:inconsistent:hover {
+    background-image: -gtk-scaled(url("assets/radio-mixed-hover.png"),url("assets/radio-mixed-hover@2.png"));
 }
 
 .radio:inconsistent:insensitive {
