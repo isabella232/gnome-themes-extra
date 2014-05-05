@@ -333,7 +333,7 @@ process (int argc,
   g_free (str);
 
   symbolic_theme = g_file_new_for_commandline_arg (argv[1]);
-  gnome_dir = g_file_resolve_relative_path (symbolic_theme, "gnome");
+  gnome_dir = g_file_resolve_relative_path (symbolic_theme, "Adwaita");
   hc_dir = g_file_resolve_relative_path (current_dir, "icons");
   g_object_unref (symbolic_theme);
 
