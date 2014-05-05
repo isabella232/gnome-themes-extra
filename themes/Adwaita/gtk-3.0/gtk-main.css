@@ -137,11 +137,10 @@
 @define-color inset_light_color alpha(white, 0.45);
 @define-color inset_dark_color alpha(black, 0.07);
 
-@define-color suggested_action_button_a #74a9e0;
-@define-color suggested_action_button_b #4287cf;
-@define-color suggested_action_button_border #204a87;
-@define-color suggested_action_button_fg @theme_base_color;
-@define-color suggested_action_button_shadow shade(@suggested_action_button_border, 1.15);
+@define-color suggested_action_button_a shade(@theme_selected_bg_color,1.2);
+@define-color suggested_action_button_b shade(@theme_selected_bg_color,0.8);
+@define-color suggested_action_button_fg @theme_selected_fg_color;
+@define-color suggested_action_button_shadow alpha(black, 0.2);
 
 /**************************
  * Selection Mode classes *
