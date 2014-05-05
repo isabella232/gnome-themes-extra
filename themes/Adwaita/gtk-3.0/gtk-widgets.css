@@ -3490,8 +3490,8 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton .button:active,
 .selection-mode.toolbar GtkToolButton .button:hover:active {
     background-image: linear-gradient(to bottom,
-                                      shade(@selection_toolbar_button_b, 0.95),
-                                      shade(@selection_toolbar_button_a, 0.88));
+                                      shade(@selection_toolbar_button_b, 0.9),
+                                      shade(@selection_toolbar_button_b, 0.95));
     box-shadow: none;
 }
 

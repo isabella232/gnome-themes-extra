@@ -146,17 +146,18 @@
 /**************************
  * Selection Mode classes *
  **************************/
-@define-color selection_toolbar_bg_a #3465a4;
-@define-color selection_toolbar_bg_b #1d437b;
-@define-color selection_toolbar_bg_backdrop @selection_toolbar_bg_b;
-@define-color selection_toolbar_fg #729fcf;
-@define-color selection_toolbar_shadow #204a87;
-@define-color selection_toolbar_border #183967;
 
-@define-color selection_toolbar_button_a @selection_toolbar_fg;
-@define-color selection_toolbar_button_b @selection_toolbar_bg_a;
-@define-color selection_toolbar_button_fg #bfbfbf;
-@define-color selection_toolbar_button_border #23446f;
+@define-color selection_toolbar_bg_a shade(@theme_selected_bg_color,1.2);
+@define-color selection_toolbar_bg_b shade(@theme_selected_bg_color,0.8);
+@define-color selection_toolbar_bg_backdrop @selection_toolbar_bg_b;
+@define-color selection_toolbar_fg shade(@theme_selected_fg_color,0.9);
+@define-color selection_toolbar_shadow shade(@theme_selected_bg_color,0.3);
+@define-color selection_toolbar_border shade(@theme_selected_bg_color,0.3);
+
+@define-color selection_toolbar_button_a shade(@theme_selected_bg_color,1.2);
+@define-color selection_toolbar_button_b shade(@theme_selected_bg_color,0.8);
+@define-color selection_toolbar_button_fg @selection_toolbar_fg;
+@define-color selection_toolbar_button_border @selection_toolbar_border;
 @define-color selection_toolbar_button_border_backdrop shade(@selection_toolbar_button_border, 0.80);
 @define-color selection_toolbar_button_shadow alpha(black, 0.30);
 
