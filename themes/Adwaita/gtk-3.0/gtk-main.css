@@ -1,7 +1,7 @@
 /* Default color scheme */
 @define-color theme_base_color #ffffff;
 @define-color theme_bg_color #ededed;
-@define-color theme_selected_bg_color #4a90d9;
+@define-color theme_selected_bg_color #729fcf;
 @define-color theme_text_color #2e3436;
 @define-color theme_fg_color @theme_text_color;
 @define-color theme_selected_fg_color #ffffff;
@@ -59,8 +59,6 @@
 
 @define-color trough_bg_color_a #bcbcb7;
 @define-color trough_bg_color_b #e0e0dd;
-
-@define-color infobar_bg_color rgb (138, 173, 212);
 
 @define-color scrollbar_trough shade(@theme_bg_color, 0.9);
 @define-color scrollbar_trough_insensitive shade(@theme_bg_color, 0.9);

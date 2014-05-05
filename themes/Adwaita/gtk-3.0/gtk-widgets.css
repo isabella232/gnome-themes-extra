@@ -4001,10 +4001,10 @@ GtkInfoBar {
 .question,
 .warning,
 .error {
-    background-color: @infobar_bg_color;
+    background-color: @theme_selected_bg_color;
     color: @infobar_fg_color;
     text-shadow: 0 1px @infobar_text_shadow;
-    border-color: darker(@infobar_bg_color);
+    border-color: darker(@theme_selected_bg_color);
 }
 
 .info:backdrop,
@@ -4012,9 +4012,9 @@ GtkInfoBar {
 .question:backdrop,
 .error:backdrop {
     text-shadow: none;
-    background-color: shade(@infobar_bg_color,1.1);
+    background-color: @theme_unselected_bg_color;
     color: @infobar_fg_color;
-    border-color: darker(@infobar_bg_color);
+    border-color: darker(@theme_selected_bg_color);
 }
 
 .info .button.close,
@@ -4085,7 +4085,7 @@ GtkInfoBar {
 .question .button:active {
     border-image: none;
     color: @theme_fg_color;
-    border-color: darker(@infobar_bg_color);
+    border-color: darker(@theme_selected_bg_color);
     border-style: solid;
     border-width: 1px;
 }
