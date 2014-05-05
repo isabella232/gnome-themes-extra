@@ -4012,9 +4012,9 @@ GtkInfoBar {
 .question:backdrop,
 .error:backdrop {
     text-shadow: none;
-    background-color: @theme_base_color;
-    color: @theme_unfocused_fg_color;
-    border-color: @theme_unfocused_fg_color;
+    background-color: shade(@infobar_bg_color,1.1);
+    color: @infobar_fg_color;
+    border-color: darker(@infobar_bg_color);
 }
 
 .info .button.close,
@@ -4049,7 +4049,7 @@ GtkInfoBar {
 .warning .button.close:backdrop,
 .question .button.close:backdrop,
 .error .button.close:backdrop {
-    color: @theme_unfocused_fg_color;
+    color: @infobar_fg_color;
 
     icon-shadow: none;
 }
