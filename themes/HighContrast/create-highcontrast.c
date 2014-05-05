@@ -89,11 +89,18 @@ static GdkPixbuf *
 get_recolored_svg (GFile *file,
                    gint icon_size)
 {
-  gchar *data, *str;
+  gchar *data;
   GdkPixbuf *pixbuf;
   GInputStream *stream;
+  gchar *file_data, *escaped_file_data;
+  gsize file_len;
 
-  str = g_file_get_path (file);
+  if (!g_file_load_contents (file, NULL, &file_data, &file_len, NULL, NULL))
+    return NULL;
+
+  escaped_file_data = g_markup_escape_text (file_data, file_len);
+  g_free (file_data);
+
   data = g_strconcat ("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n"
                       "<svg version=\"1.1\"\n"
                       "     xmlns=\"http://www.w3.org/2000/svg\"\n"
@@ -114,16 +121,15 @@ get_recolored_svg (GFile *file,
                       "      fill: #4e9a06 !important;\n"
                       "    }\n"
                       "  </style>\n"
-                      "  <xi:include href=\"", str, "\"/>\n"
+                      "  <xi:include href=\"data:text/xml,", escaped_file_data, "\"/>\n"
                       "</svg>",
                       NULL);
-
+  g_free (escaped_file_data);
   stream = g_memory_input_stream_new_from_data (data, -1, g_free);
   pixbuf = gdk_pixbuf_new_from_stream_at_scale (stream,
                                                 icon_size, icon_size,
                                                 TRUE, NULL, NULL);
   g_object_unref (stream);
-  g_free (str);
 
   return pixbuf;
 }
