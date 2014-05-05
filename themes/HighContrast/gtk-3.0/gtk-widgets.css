@@ -31,10 +31,6 @@
     -GtkWidget-cursor-color: @theme_cursor_color;
     -GtkWidget-cursor-aspect-ratio: 0.08;
 
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 2;
-    -GtkWidget-focus-line-pattern: "\002\002";
-
     -GtkMenu-horizontal-padding: 0;
     -GtkMenu-vertical-padding: 0;
 
@@ -49,7 +45,16 @@
 
     -GtkStatusbar-shadow-type: none;
 
+    /* Legacy only */
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 2;
+
     background-clip: padding-box;
+
+    outline-width: 1px;
+    outline-style: dashed;
+    outline-color: black;
+    outline-offset: -1px;
 }
 
 .background {
@@ -181,7 +186,7 @@ GtkImage:insensitive {
 }
 
 GtkColorButton.button {
-    padding: 1px 16px;
+    padding: 4px 20px;
 }
 
 GtkColorSwatch {
@@ -273,12 +278,14 @@ GtkLevelBar.vertical {
     border-radius: 3px;
 
     background-color: @theme_button_bg;
-    padding: 1px 4px;
+    padding: 4px 7px;
     color: @theme_button_fg;
+
+    outline-offset: -2px;
 }
 
 .button.image-button {
-    padding: 5px;
+    padding: 8px;
 }
 
 .button:active {
@@ -375,7 +382,7 @@ GtkComboBox .separator {
 }
 
 GtkComboBox .button {
-    padding: 0 4px;
+    padding: 3px 7px;
 }
 
 .combobox-entry .button,
@@ -555,15 +562,15 @@ GtkComboBox .button {
 
 .toolbar .button {
     background-color: transparent;
-    padding: 1px;
+    padding: 4px;
 }
 
 .toolbar .button.text-button {
-    padding: 2px 16px;
+    padding: 6px 20px;
 }
 
 .toolbar .button.image-button {
-    padding: 5px;
+    padding: 9px;
 }
 
 .toolbar .button:insensitive {
@@ -821,6 +828,8 @@ GtkScale.slider.fine-tune.horizontal:active:hover {
  **********/
 GtkSwitch {
     font: bold;
+    outline-offset: -2px;
+    outline-color: white;
 }
 
 GtkSwitch.slider {
@@ -879,7 +888,7 @@ GtkSwitch.trough:active:insensitive {
 }
 
 .notebook tab {
-    padding: 3px;
+    padding: 6px;
     background-color: @theme_base_color;
 }
 
@@ -1081,9 +1090,17 @@ GtkIconView.view.cell {
     border-radius: 4px;
 }
 
+.cell {
+    padding: 2px;
+}
+
 /**************
  * List boxes *
  **************/
+.list-row {
+    outline-offset: -2px;
+}
+
 .list-row:hover {
     background-color: @theme_button_bg;
 }
@@ -1107,7 +1124,7 @@ GtkIconView.view.cell {
 }
 
 .osd .button {
-    padding: 4px;
+    padding: 7px;
     color: @theme_fg_color;
     background-color: @theme_internal_bg;
 }
@@ -1159,11 +1176,11 @@ GtkProgressBar.osd.progressbar {
 }
 
 .header-bar .button.text-button {
-    padding: 2px 16px;
+    padding: 5px 19px;
 }
 
 .header-bar .button.image-button {
-    padding: 5px;
+    padding: 8px;
 }
 
 .header-bar .title {
@@ -1197,7 +1214,7 @@ GtkProgressBar.osd.progressbar {
 .titlebar .titlebutton {
     color: @theme_button_fg;
     background-color: transparent;
-    padding: 5px;
+    padding: 8px;
 
     border-color: transparent;
 }
@@ -1294,7 +1311,7 @@ PanelApplet > GtkMenuBar.menubar .menu .menuitem:hover {
 /* application buttons */
 PanelApplet .button,
 PanelApplet .button:hover {
-    padding: 4px;
+    padding: 7px;
 
     border-image: none;
     border-width: 0;
