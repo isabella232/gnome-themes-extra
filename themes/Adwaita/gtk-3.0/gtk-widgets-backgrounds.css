@@ -30,9 +30,9 @@
     box-shadow: inset 0 1px 1px alpha(black, 0.1);
     /*  background-color: mix(@borders, @theme_bg_color, 0.5); */
     background-image: linear-gradient(to bottom,
-                                  shade(@toolbar_gradient_a, 0.95),
-                                  shade(@toolbar_gradient_b, 0.95) 20%,
-                                  shade(@toolbar_gradient_c, 0.95)
+                                  @button_active_gradient_color_a,
+                                  @button_active_gradient_color_b 20%,
+                                  @button_active_gradient_color_c
                                   );
 }
 

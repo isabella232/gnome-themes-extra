@@ -42,8 +42,9 @@
 @define-color button_gradient_color_c shade(@theme_bg_color, 0.92);
 @define-color borders #a7aba7;
 
-@define-color button_active_gradient_color_a #a2a9a2;
-@define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
+@define-color button_active_gradient_color_a shade(shade(@borders, 1.25), 0.95);
+@define-color button_active_gradient_color_b shade(shade(@borders, 1.28), 0.95);
+@define-color button_active_gradient_color_c shade(shade(@borders, 1.34), 0.95);
 @define-color button_active_text @theme_text_color;
 @define-color button_active_text_shadow alpha(white, 0.4);
 @define-color button_text_shadow alpha(white, 0.4);

@@ -4274,37 +4274,6 @@ GtkPopover .separator {
     border-image: none;
 }
 
-.titlebar .titlebutton:hover {
-    background-image: linear-gradient(to bottom,
-                                      @button_hover_gradient_color_a,
-                                      @button_hover_gradient_color_b);
-}
-
-.titlebar .titlebutton:active {
-    background-image: linear-gradient(to bottom,
-                                      @borders,
-                                      shade(@theme_bg_color, 0.95)
-                                      );
-    color: @theme_selected_fg_color;
-    icon-shadow: none;
-}
-
-.titlebar .right .titlebutton:first-child {
-/*    border-left: 1px solid @menu_separator; */
-}
-
-.titlebar .right .titlebutton:last-child {
-
-}
-
-.titlebar .left .titlebutton:last-child {
-/*    border-right: 1px solid @menu_separator; */
-}
-
-.titlebar .left .titlebutton:first-child {
-
-}
-
 .titlebar .titlebutton:backdrop {
     background-image: none;
     color: @wm_unfocused_title;
