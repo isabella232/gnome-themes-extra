@@ -72,8 +72,9 @@
 
 @define-color switch_slider_color #eeeeec;
 @define-color switch_trough_active_color @theme_base_color;
-@define-color switch_trough_active_bg_a shade(@theme_selected_bg_color, 1.2);
-@define-color switch_trough_active_bg_b shade(@theme_selected_bg_color, 1.35);
+@define-color switch_trough_active_bg_a shade(@theme_selected_bg_color, 1.17);
+@define-color switch_trough_active_bg_b shade(@theme_selected_bg_color, 1.22);
+@define-color switch_trough_active_bg_c shade(@theme_selected_bg_color, 1.34);
 
 @define-color progressbar_background_a #76b0ec;
 @define-color progressbar_background_b #1f72c6;
