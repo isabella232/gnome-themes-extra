@@ -31,5 +31,4 @@ else
     # && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png 
 fi
 done
-done
 exit 0
