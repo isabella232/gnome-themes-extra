@@ -4041,6 +4041,7 @@ column-header:last-child .button:backdrop {
     border-radius: 0;
     border-style: solid;
     border-color: transparent;
+    box-shadow: none;
 }
 
 column-header.button,
