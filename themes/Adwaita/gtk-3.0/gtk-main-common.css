@@ -86,9 +86,6 @@
 @define-color error_color #cc0000;
 @define-color success_color #4e9a06;
 
-@define-color infobar_fg_color white;
-@define-color infobar_text_shadow alpha(black, 0.3);
-
 /*****************
  * Fallback Mode *
  *****************/

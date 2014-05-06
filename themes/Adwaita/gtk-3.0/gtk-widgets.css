@@ -4493,8 +4493,8 @@ GtkInfoBar {
 .warning,
 .error {
     background-color: @theme_selected_bg_color;
-    color: @infobar_fg_color;
-    text-shadow: 0 1px @infobar_text_shadow;
+    color: @theme_selected_fg_color;
+    text-shadow: 0 1px shade(@theme_selected_bg_color, 0.8);
     border-color: darker(@theme_selected_bg_color);
 }
 
@@ -4503,17 +4503,17 @@ GtkInfoBar {
 .question:backdrop,
 .error:backdrop {
     text-shadow: none;
-    background-color: @theme_unselected_bg_color;
-    color: @infobar_fg_color;
-    border-color: darker(@theme_selected_bg_color);
+    background-color: @theme_unfocused_selected_bg_color;
+    color: @theme_unfocused_selected_fg_color;
+    border-color: darker(@theme_unfocused_selected_bg_color);
 }
 
 .info .button.close,
 .warning .button.close,
 .question .button.close,
 .error .button.close {
-    color: @infobar_fg_color;
-    icon-shadow: 0 1px @infobar_text_shadow;
+    color: @theme_selected_fg_color;
+    icon-shadow: 0 1px shade(@theme_selected_bg_color, 0.8);
 }
 
 .info .button.close:hover,
@@ -4530,7 +4530,7 @@ GtkInfoBar {
 .warning .button.close:active,
 .question .button.close:active,
 .error .button.close:active {
-    color: @infobar_fg_color;
+    color: @theme_selected_fg_color;
     background-image: linear-gradient(to bottom,
 				      alpha(black, 0.1),
 				      transparent);
@@ -4540,7 +4540,7 @@ GtkInfoBar {
 .warning .button.close:backdrop,
 .question .button.close:backdrop,
 .error .button.close:backdrop {
-    color: @infobar_fg_color;
+    color: @theme_selected_fg_color;
 
     icon-shadow: none;
 }
