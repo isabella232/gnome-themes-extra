@@ -343,11 +343,28 @@ GtkTreeView.separator:backdrop,
 /****************
  * Text Entries *
  ****************/
-.entry {
-    border-style: solid;
+
+.entry,
+.entry:insensitive,
+GtkComboBox.combobox-entry .entry,
+GtkComboBox.combobox-entry .button {
     padding: 6px 4px;
 
-    /* border-image defined in the -assets variants */
+    box-shadow: inset 0 2px 2px alpha(@borders, 0.3),
+                inset .5px .5px alpha(@borders, 0.9),
+                inset -.5px .5px alpha(@borders, 0.9),
+                inset .5px -.5px alpha(@borders, 0.9),
+                inset -.5px -.5px alpha(@borders, 0.9);
+    border-image: none;
+    border-width: 0px 0px 1px;
+    border-radius: 3.5px;
+    border-style: solid;
+    border-color: alpha(white, 0.5);
+
+    background-image: linear-gradient(to bottom,
+                                      @entry_background_a,
+                                      @entry_background_b
+                                      );
 
     color: @entry_text_color;
     background-color: @theme_base_color;
@@ -358,7 +375,8 @@ GtkTreeView.separator:backdrop,
     padding-right: 6px;
 }
 
-.entry:focus {
+.entry:focus,
+GtkComboBox.combobox-entry .entry:focus {
     box-shadow: inset .5px .5px 2px alpha(@theme_selected_bg_color, 0.3),
                 inset -.5px .5px 2px alpha(@theme_selected_bg_color, 0.3),
                 inset .5px -.5px 2px alpha(@theme_selected_bg_color, 0.3),
@@ -420,16 +438,39 @@ GtkTreeView.separator:backdrop,
     background-color: @theme_selected_bg_color;
 }
 
-.entry:insensitive {
+.entry:insensitive,
+GtkComboBox.combobox-entry .entry:insensitive,
+GtkComboBox.combobox-entry .button:insensitive {
     color: @insensitive_fg_color;
+    background-color: @insensitive_bg_color;
+    background-image: none;
+
+    box-shadow: inset .5px .5px alpha(@borders, 0.9),
+                inset -.5px .5px alpha(@borders, 0.9),
+                inset .5px -.5px alpha(@borders, 0.9),
+                inset -.5px -.5px alpha(@borders, 0.9);
 }
 
-.entry:backdrop {
+.entry:backdrop,
+GtkComboBox.combobox-entry .entry:backdrop,
+GtkComboBox.combobox-entry .button:backdrop {
     color: @theme_unfocused_text_color;
+    background-image: none;
+    background-color: @theme_unfocused_base_color;
+
+    box-shadow: inset .5px .5px @borders,
+                inset -.5px .5px @borders,
+                inset .5px -.5px @borders,
+                inset -.5px -.5px @borders;
+    border-color: transparent;
 }
 
-.entry:insensitive:backdrop {
+.entry:insensitive:backdrop,
+GtkComboBox.combobox-entry .entry:insensitive:backdrop,
+GtkComboBox.combobox-entry .button:insensitive:backdrop {
     color: @unfocused_insensitive_fg_color;
+    background-color: @unfocused_insensitive_bg_color;
+    background-image: none;
 }
 
 .entry:selected:backdrop {
@@ -2019,6 +2060,13 @@ GtkComboBox.combobox-entry .entry:first-child,
 GtkComboBox.combobox-entry .button:first-child {
     border-radius: 3.5px 0 0 3.5px;
     border-image: none;
+    box-shadow: inset 0 2px 2px alpha(@borders, 0.3),
+                inset .5px .5px shade(@borders, 0.8),
+                inset .5px -.5px shade(@borders, 0.8),
+                inset -1px 0 @inset_dark_color;
+}
+
+GtkComboBox.combobox-entry .entry:first-child:insensitive {
     box-shadow: inset .5px .5px shade(@borders, 0.8),
                 inset .5px -.5px shade(@borders, 0.8),
                 inset -1px 0 @inset_dark_color;
@@ -2058,11 +2106,6 @@ GtkComboBox.combobox-entry .entry:focus:last-child {
     box-shadow: inset -1px 2px alpha(@theme_selected_bg_color, 0.1),
                 inset -1px 1px alpha(@theme_selected_bg_color, 0.1),
                 inset 0 -1px alpha(@theme_selected_bg_color, 0.2);
-}
-
-GtkComboBox.combobox-entry .button:backdrop:first-child,
-GtkComboBox.combobox-entry .button:backdrop:last-child {
-    box-shadow: none;
 }
 
 GtkComboBox.combobox-entry .button:active,

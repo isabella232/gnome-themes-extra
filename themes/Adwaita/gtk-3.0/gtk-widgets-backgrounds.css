@@ -127,7 +127,6 @@
 }
 
 /* Entry background */
-.entry,
 GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button,
@@ -161,8 +160,6 @@ column-header .button:active:hover {
 }
 
 /* Insensitive entry background */
-.entry:insensitive,
-GtkComboBox.combobox-entry .button:insensitive,
 .level-bar.trough:insensitive {
     background-color: @insensitive_bg_color;
     background-image: none;
@@ -170,8 +167,6 @@ GtkComboBox.combobox-entry .button:insensitive,
 }
 
 /* Unfocused windows entry background */
-.entry:backdrop,
-GtkComboBox.combobox-entry .button:backdrop,
 column-header.button:backdrop,
 column-header .button:backdrop,
 column-header.button:insensitive:backdrop,
@@ -184,8 +179,6 @@ column-header .button:insensitive:backdrop,
 }
 
 /* Unfocused windows insensitive entry background */
-.entry:insensitive:backdrop,
-GtkComboBox.combobox-entry .button:insensitive:backdrop,
 .level-bar.trough:insensitive:backdrop,
 .spinbutton.vertical.entry:insensitive:backdrop {
     background-image: none;
