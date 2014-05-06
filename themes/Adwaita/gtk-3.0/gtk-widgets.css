@@ -433,7 +433,9 @@ GtkComboBox.combobox-entry .entry:focus {
     box-shadow: none;
 }
 
-.entry:selected {
+.entry:selected,
+.entry:selected:insensitive,
+GtkComboBox.combobox-entry .entry:selected {
     color: @theme_selected_fg_color;
     background-color: @theme_selected_bg_color;
 }
