@@ -385,8 +385,6 @@
     <file>gnome-applications-dark-overrides.css</file>
     <file>gtk-widgets.css</file>
     <file>gtk-widgets-backgrounds.css</file>
-    <file>gtk-widgets-borders.css</file>
-    <file>gtk-widgets-borders-dark.css</file>
     <file>gtk-widgets-dark-overrides.css</file>
     <file>gtk-widgets-assets.css</file>
     <file>gtk-widgets-assets-dark.css</file>
