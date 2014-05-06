@@ -59,6 +59,10 @@
 
 @define-color trough_bg_color_a #30312f;
 @define-color trough_bg_color_b #41433f;
+@define-color trough_active_color @theme_text_color;
+@define-color trough_active_bg_a shade(@theme_selected_bg_color, 0.86);
+@define-color trough_active_bg_b shade(@theme_selected_bg_color, 1.04);
+@define-color trough_active_bg_c shade(@theme_selected_bg_color, 1.12);
 
 @define-color scrollbar_trough shade(@theme_bg_color, 1.2);
 @define-color scrollbar_trough_insensitive shade(@theme_bg_color, 1.05); /* FIXME */
@@ -70,15 +74,11 @@
 @define-color scrollbar_slider_unfocused shade(@theme_unfocused_base_color, 0.8);
 
 @define-color switch_slider_color shade(@theme_bg_color, 0.9);
-@define-color switch_trough_active_color @theme_text_color;
-@define-color switch_trough_active_bg_a shade(@theme_selected_bg_color, 0.86);
-@define-color switch_trough_active_bg_b shade(@theme_selected_bg_color, 1.04);
-@define-color switch_trough_active_bg_c shade(@theme_selected_bg_color, 1.12);
 
 @define-color progressbar_background_a shade(@theme_selected_bg_color, 1.15);
 @define-color progressbar_background_b shade(@theme_selected_bg_color, 0.8);
 @define-color progressbar_pattern @progressbar_background_b;
-@define-color progressbar_border shade(@switch_trough_active_bg_a, 0.60);
+@define-color progressbar_border shade(@trough_active_bg_a, 0.60);
 @define-color progressbar_unfocused_background @unfocused_borders;
 @define-color progressbar_unfocused_border @theme_unfocused_fg_color;
 @define-color progressbar_unfocused_trough @unfocused_dark_bg;
