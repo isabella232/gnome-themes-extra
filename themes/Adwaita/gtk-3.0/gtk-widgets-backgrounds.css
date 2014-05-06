@@ -130,8 +130,7 @@
 GtkComboBox.combobox-entry .button,
 GtkComboBox.combobox-entry .button:hover,
 .primary-toolbar GtkComboBox.combobox-entry .button,
-.primary-toolbar GtkComboBox.combobox-entry .button:hover,
-.level-bar.trough {
+.primary-toolbar GtkComboBox.combobox-entry .button:hover {
     background-image: linear-gradient(to bottom,
                                       @entry_background_a,
                                       @entry_background_b
@@ -159,19 +158,11 @@ column-header .button:active:hover {
                 inset 0 2px alpha(@entry_inset, 0.4);
 }
 
-/* Insensitive entry background */
-.level-bar.trough:insensitive {
-    background-color: @insensitive_bg_color;
-    background-image: none;
-    box-shadow: none;
-}
-
 /* Unfocused windows entry background */
 column-header.button:backdrop,
 column-header .button:backdrop,
 column-header.button:insensitive:backdrop,
 column-header .button:insensitive:backdrop,
-.level-bar.trough:backdrop,
 .spinbutton.vertical.entry:backdrop {
     background-image: none;
     background-color: @theme_unfocused_base_color;
@@ -179,7 +170,6 @@ column-header .button:insensitive:backdrop,
 }
 
 /* Unfocused windows insensitive entry background */
-.level-bar.trough:insensitive:backdrop,
 .spinbutton.vertical.entry:insensitive:backdrop {
     background-image: none;
     background-color: @unfocused_insensitive_bg_color;
