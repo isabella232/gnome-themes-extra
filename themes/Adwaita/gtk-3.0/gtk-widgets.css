@@ -4759,10 +4759,11 @@ GtkPopover .separator {
     padding: 5px 5px 6px 5px;
 
     border-radius: 3px;
-    border-width: 1px 1px 2px 1px;
+    border-width: 0 0 1px;
     border-color: transparent;
     border-style: solid;
     border-image: none;
+    box-shadow: none;
 }
 
 .titlebar .titlebutton:backdrop {
