@@ -255,6 +255,38 @@ GtkModelButton.button.radio:active:insensitive:backdrop,
     background-image: url("assets/sidebar-radio-selected-prelight.svg");    
 }
 
+GtkPopover GtkModelButton.button.radio,
+GtkPopover GtkModelButton.button.radio:hover,
+GtkPopover GtkModelButton.button.check,
+GtkPopover GtkModelButton.button.check:hover {
+	background-image: none;
+}
+
+GtkPopover GtkModelButton.button.radio:active {
+	background-image: -gtk-scaled(url("assets/radio-checked-popover.png"),url("assets/radio-checked-popover@2.png"));
+}
+
+GtkPopover GtkModelButton.button.radio:active:hover {
+	background-image: -gtk-scaled(url("assets/radio-checked-popover-dark.png"),url("assets/radio-checked-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.radio:inconsistent {
+	background-image: -gtk-scaled(url("assets/radio-mixed-popover.png"),url("assets/radio-mixed-popover@2.png"));
+}
+
+GtkPopover GtkModelButton.button.check:active {
+	background-image: -gtk-scaled(url("assets/checkbox-checked-popover.png"),url("assets/checkbox-checked-popover@2.png"));
+}
+
+GtkPopover GtkModelButton.button.check:active:hover {
+	background-image: -gtk-scaled(url("assets/checkbox-checked-popover-dark.png"),url("assets/checkbox-checked-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.check:inconsistent {
+	background-image: -gtk-scaled(url("assets/checkbox-mixed-popover.png"),url("assets/checkbox-mixed-popover@2.png"));
+}
+
+
 /*********************
  * GtkScale's slider *
  *********************/

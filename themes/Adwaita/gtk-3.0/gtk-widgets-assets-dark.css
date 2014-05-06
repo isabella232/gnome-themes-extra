@@ -207,6 +207,37 @@
     background-image: -gtk-scaled(url("assets/radio-mixed-backdrop-insensitive-dark.png"),url("assets/radio-mixed-backdrop-insensitive-dark@2.png"));
 }
 
+GtkPopover GtkModelButton.button.radio,
+GtkPopover GtkModelButton.button.radio:hover,
+GtkPopover GtkModelButton.button.check,
+GtkPopover GtkModelButton.button.check:hover {
+	background-image: none;
+}
+
+GtkPopover GtkModelButton.button.radio:active {
+	background-image: -gtk-scaled(url("assets/radio-checked-popover-dark.png"),url("assets/radio-checked-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.radio:active:hover {
+	background-image: -gtk-scaled(url("assets/radio-checked-popover-dark.png"),url("assets/radio-checked-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.radio:inconsistent {
+	background-image: -gtk-scaled(url("assets/radio-mixed-popover-dark.png"),url("assets/radio-mixed-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.check:active {
+	background-image: -gtk-scaled(url("assets/checkbox-checked-popover-dark.png"),url("assets/checkbox-checked-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.check:active:hover {
+	background-image: -gtk-scaled(url("assets/checkbox-checked-popover-dark.png"),url("assets/checkbox-checked-popover-dark@2.png"));
+}
+
+GtkPopover GtkModelButton.button.check:inconsistent {
+	background-image: -gtk-scaled(url("assets/checkbox-mixed-popover-dark.png"),url("assets/checkbox-mixed-popover-dark@2.png"));
+}
+
 .sidebar .radio:active,
 .sidebar .radio:active:focused,
 .sidebar .radio:active:prelight {

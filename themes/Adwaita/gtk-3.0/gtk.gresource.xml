@@ -19,6 +19,10 @@
     <file preprocess="to-pixdata">assets/checkbox-checked-insensitive@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-checked-hover.png</file>
     <file preprocess="to-pixdata">assets/checkbox-checked-hover@2.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-popover.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-popover@2.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-popover-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-checked-popover-dark@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-checked.png</file>
     <file preprocess="to-pixdata">assets/checkbox-checked@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-mixed-backdrop-dark.png</file>
@@ -39,6 +43,10 @@
     <file preprocess="to-pixdata">assets/checkbox-mixed-insensitive@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-mixed-hover.png</file>
     <file preprocess="to-pixdata">assets/checkbox-mixed-hover@2.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-popover.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-popover@2.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-popover-dark.png</file>
+    <file preprocess="to-pixdata">assets/checkbox-mixed-popover-dark@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-mixed.png</file>
     <file preprocess="to-pixdata">assets/checkbox-mixed@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-unchecked-backdrop-dark.png</file>
@@ -110,6 +118,10 @@
     <file preprocess="to-pixdata">assets/radio-checked-insensitive@2.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-hover.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-hover@2.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-popover.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-popover@2.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-popover-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-checked-popover-dark@2.png</file>
     <file preprocess="to-pixdata">assets/radio-checked.png</file>
     <file preprocess="to-pixdata">assets/radio-checked@2.png</file>
     <file preprocess="to-pixdata">assets/radio-mixed-backdrop-dark.png</file>
@@ -130,6 +142,10 @@
     <file preprocess="to-pixdata">assets/radio-mixed-insensitive@2.png</file>
     <file preprocess="to-pixdata">assets/radio-mixed-hover.png</file>
     <file preprocess="to-pixdata">assets/radio-mixed-hover@2.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-popover.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-popover@2.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-popover-dark.png</file>
+    <file preprocess="to-pixdata">assets/radio-mixed-popover-dark@2.png</file>
     <file preprocess="to-pixdata">assets/radio-mixed.png</file>
     <file preprocess="to-pixdata">assets/radio-mixed@2.png</file>
     <file preprocess="to-pixdata">assets/radio-unchecked-backdrop-dark.png</file>
