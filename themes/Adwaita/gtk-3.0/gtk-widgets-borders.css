@@ -41,14 +41,6 @@ GtkSwitch.trough:active {
     border-color: alpha(white, 0.5);
 }
 
-.trough row {
-    border-image: -gtk-scaled (url("borders/nohl-generic-border.png"),url("borders/nohl-generic-border@2.png")) 3 / 3px stretch;
-    border-radius: 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: transparent;
-}
-
 /* generic button borders */
 .button,
 .spinbutton.vertical .button,
@@ -225,14 +217,6 @@ GtkSwitch.trough:backdrop,
     border-image: none;
     border-radius: 3.5px;
     border-width: 0 0 1px;
-    border-style: solid;
-    border-color: transparent;
-}
-
-.trough row:backdrop {
-    border-image: -gtk-scaled (url("borders/nohl-generic-border-backdrop.png"),url("borders/nohl-generic-border-backdrop@2.png")) 3 / 3px stretch;
-    border-radius: 3px;
-    border-width: 1px;
     border-style: solid;
     border-color: transparent;
 }
