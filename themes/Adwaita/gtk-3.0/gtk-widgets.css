@@ -887,6 +887,11 @@ GtkProgressBar {
     box-shadow: none;
 }
 
+.trough,
+.trough.highlight {
+    border-radius: 3.5px;
+}
+
 /* for progressbars in cell renderers */
 .trough row {
     padding: 0;
@@ -1230,8 +1235,8 @@ GtkComboBox.combobox-entry .button {
 .inline-toolbar.toolbar.vertical .button:active,
 .inline-toolbar.toolbar.vertical .button:insensitive,
 .inline-toolbar.toolbar.vertical .button.default:insensitive,
-GtkSwitch.trough,
-GtkSwitch.trough:active:insensitive,
+.trough,
+.trough:active:insensitive,
 .titlebar .titlebutton:hover,
 .titlebar .titlebutton:active {
     box-shadow: inset .5px .5px @borders,
@@ -1248,7 +1253,7 @@ GtkSwitch.trough:active:insensitive,
 /* focused button borders */
 .button.default:active,
 .inline-toolbar.toolbar.vertical .button.default:active,
-GtkSwitch.trough:active {
+.trough:active {
     box-shadow: inset .5px .5px @theme_selected_bg_color,
                 inset -.5px .5px @theme_selected_bg_color,
                 inset .5px -.5px @theme_selected_bg_color,
@@ -1263,7 +1268,7 @@ GtkSwitch.trough:active {
 /* unfocused window: generic button borders */
 .button:backdrop,
 .spinbutton.vertical .button:backdrop,
-GtkSwitch.trough:backdrop,
+.trough:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop:insensitive,
 .inline-toolbar.toolbar.vertical .button:backdrop:active,
