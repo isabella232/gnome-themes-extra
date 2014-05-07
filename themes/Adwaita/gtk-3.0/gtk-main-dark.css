@@ -132,7 +132,7 @@
 @define-color view_separators @toolbar_separator;
 @define-color view_symbolic_color shade(@theme_text_color, 0.70);
 
-@define-color expander_row_selected_color alpha (@theme_base_color, 0.60);
+@define-color expander_row_selected_color alpha (@theme_selected_fg_color, 0.50);
 
 @define-color inset_light_color alpha(white, 0.05);
 @define-color inset_dark_color alpha(black, 0.25);
@@ -160,22 +160,9 @@
 @define-color selection_toolbar_button_border_backdrop shade(@selection_toolbar_button_border, 0.80);
 @define-color selection_toolbar_button_shadow alpha(black, 0.30);
 
-@define-color selection_toolbar_suggested_button_a #3e4545;
-@define-color selection_toolbar_suggested_button_b #2e3232;
-@define-color selection_toolbar_suggested_button_c #2a2828;
-@define-color selection_toolbar_suggested_button_fg #ffffff;
-@define-color selection_toolbar_suggested_button_border #1f2020;
-@define-color selection_toolbar_suggested_button_border_backdrop shade(@selection_toolbar_suggested_button_border, 1.30);
-
 @define-color selection_menu_fg @selection_toolbar_fg;
 @define-color selection_menu_hover shade(@selection_menu_fg, 1.15);
 @define-color selection_menu_active shade(@selection_menu_fg, 1.30);
-
-/**************
- * GNOME Apps *
- **************/
-@define-color entry_tag_bg #888a85;
-@define-color entry_tag_fg black;
 
 /******
  * WM *

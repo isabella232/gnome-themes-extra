@@ -3971,9 +3971,9 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar .suggested-action.button,
 .selection-mode.toolbar GtkToolButton.suggested-action .button {
     background-image: linear-gradient(to bottom,
-                                      @selection_toolbar_suggested_button_a,
-                                      @selection_toolbar_suggested_button_b 40%,
-                                      @selection_toolbar_suggested_button_c);
+                                      @button_gradient_color_a,
+                                      @button_gradient_color_b 40%,
+                                      @button_gradient_color_c);
 
     color: @theme_text_color;
 }
@@ -3982,9 +3982,9 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar .suggested-action.button:hover,
 .selection-mode.toolbar GtkToolButton.suggested-action .button:hover {
     background-image: linear-gradient(to bottom,
-                                      shade(@selection_toolbar_suggested_button_a, 1.15),
-                                      shade(@selection_toolbar_suggested_button_b, 1.15) 40%,
-                                      @selection_toolbar_suggested_button_c);
+                                      shade(@button_gradient_color_a, 1.15),
+                                      shade(@button_gradient_color_b, 1.15) 40%,
+                                      @button_gradient_color_c);
 }
 
 .selection-mode.header-bar .suggested-action.button:active,
@@ -3994,9 +3994,10 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton.suggested-action .button:active,
 .selection-mode.toolbar GtkToolButton.suggested-action .button:hover:active {
     background-image: linear-gradient(to bottom,
-                                      shade(@selection_toolbar_suggested_button_c, 0.92),
-                                      @selection_toolbar_suggested_button_b 40%,
-                                      shade(@selection_toolbar_suggested_button_a, 0.92));
+                                  @button_active_gradient_color_a,
+                                  @button_active_gradient_color_b 20%,
+                                  @button_active_gradient_color_c
+                                  );
 }
 
 .selection-mode.header-bar .suggested-action.button:backdrop,
@@ -4006,8 +4007,8 @@ GtkProgressBar.osd.progressbar {
     icon-shadow: none;
 
     background-image: none; /* remove custom bg, we want colored buttons to look like normal buttons in backdrop*/
-    background-color: @selection_toolbar_suggested_button_b;
-    border-color: @selection_toolbar_suggested_button_border_backdrop;
+    background-color: @button_gradient_color_b;
+    border-color: @borders;
 
     color: @theme_unfocused_fg_color;
 }
