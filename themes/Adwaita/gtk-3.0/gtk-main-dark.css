@@ -95,10 +95,9 @@
 @define-color scale_trough_bg_a shade(@borders, 1.15);
 @define-color scale_trough_bg_b shade(@theme_bg_color, 0.95);
 @define-color scale_shadow shade(@theme_bg_color, 1.08);
-@define-color scale_progress_fill #2c85e2;
-@define-color scale_highlight_border #182f4c;
-@define-color scale_highlight_bg #356599;
-@define-color scale_highlight_shadow alpha(white, 0.20);
+@define-color scale_highlight_border shade(@theme_selected_bg_color, 0.5);
+@define-color scale_highlight_bg shade(@theme_selected_bg_color, 0.9);
+@define-color scale_highlight_shadow alpha(white, 0.15);
 
 @define-color notebook_active_tab_border shade(@theme_selected_bg_color, 0.95);
 @define-color notebook_selected_tab_color alpha(@theme_selected_bg_color, 0.75);

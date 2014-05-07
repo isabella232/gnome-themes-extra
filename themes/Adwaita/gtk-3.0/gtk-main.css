@@ -92,13 +92,12 @@
 @define-color internal_element_prelight @theme_text_color;
 @define-color internal_element_insensitive mix(@internal_element_color, @theme_base_color, 0.7);
 
-@define-color scale_trough_bg_a #c0c0bd;
-@define-color scale_trough_bg_b #f2f2f0;
+@define-color scale_trough_bg_a shade(@borders, 1.15);
+@define-color scale_trough_bg_b shade(@theme_bg_color, 0.95);
 @define-color scale_shadow alpha(white, 0.50);
-@define-color scale_progress_fill #2c85e2;
-@define-color scale_highlight_border #426ea8;
-@define-color scale_highlight_bg #729fce;
-@define-color scale_highlight_shadow alpha(white, 0.50);
+@define-color scale_highlight_border shade(@theme_selected_bg_color, 0.8);
+@define-color scale_highlight_bg @theme_selected_bg_color;
+@define-color scale_highlight_shadow alpha(white, 0.20);
 
 @define-color notebook_active_tab_border @theme_selected_bg_color;
 @define-color notebook_selected_tab_color #8dc0f3;
