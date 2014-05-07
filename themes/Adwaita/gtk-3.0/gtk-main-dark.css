@@ -77,7 +77,6 @@
 
 @define-color progressbar_background_a shade(@theme_selected_bg_color, 1.15);
 @define-color progressbar_background_b shade(@theme_selected_bg_color, 0.8);
-@define-color progressbar_pattern @progressbar_background_b;
 @define-color progressbar_border shade(@trough_active_bg_a, 0.60);
 @define-color progressbar_unfocused_background @unfocused_borders;
 @define-color progressbar_unfocused_border @theme_unfocused_fg_color;

@@ -75,10 +75,9 @@
 
 @define-color switch_slider_color #eeeeec;
 
-@define-color progressbar_background_a #76b0ec;
-@define-color progressbar_background_b #1f72c6;
-@define-color progressbar_pattern #2a79cb;
-@define-color progressbar_border @progressbar_pattern;
+@define-color progressbar_background_a shade(@theme_selected_bg_color, 1.15);
+@define-color progressbar_background_b shade(@theme_selected_bg_color, 0.8);
+@define-color progressbar_border shade(@trough_active_bg_a, 0.60);
 @define-color progressbar_unfocused_background @unfocused_dark_bg;
 @define-color progressbar_unfocused_border @unfocused_borders;
 @define-color progressbar_unfocused_trough @theme_unfocused_bg_color;
