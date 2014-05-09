@@ -2125,11 +2125,15 @@ GtkLinkButton.button:active {
     border-width: 1px;
 }
 
-.notebook.header,
-.notebook.header:backdrop {
+.notebook.header {
     background-color: shade(@theme_bg_color, 0.95);
     box-shadow: inset 0 3px alpha(black, 0.03), inset 0 2px alpha(black, 0.03), inset 0 1px alpha(black, 0.03);
     border-width: 0px;
+}
+
+.notebook.header:backdrop {
+    background-color: @theme_unfocused_selected_bg_color;
+    box-shadow: none;
 }
 
 .notebook.header.frame.top,
