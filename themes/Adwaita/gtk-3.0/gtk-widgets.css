@@ -1448,6 +1448,7 @@ GtkComboBox.combobox-entry .button {
 /* generic button borders */
 .button,
 .button:active,
+.button:active:hover,
 .button:insensitive,
 .button.default:insensitive,
 .inline-toolbar.toolbar.vertical .button:active,
@@ -1468,6 +1469,7 @@ GtkComboBox.combobox-entry .button {
 
 /* focused button borders */
 .button.default:active,
+.button.default:active:hover,
 .inline-toolbar.toolbar.vertical .button.default:active {
     box-shadow: inset .5px .5px @theme_selected_bg_color,
                 inset -.5px .5px @theme_selected_bg_color,
