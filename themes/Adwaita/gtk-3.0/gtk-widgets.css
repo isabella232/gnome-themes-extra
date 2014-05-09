@@ -2189,6 +2189,10 @@ GtkLinkButton.button:active {
     transition: all 200ms ease-out;
 }
 
+.notebook tab GtkLabel:backdrop {
+	color: @theme_unfocused_fg_color;
+}
+
 .notebook .prelight-page,
 .notebook .prelight-page GtkLabel {
     color: mix (@theme_fg_color, @theme_bg_color, 0.15);
@@ -2199,6 +2203,11 @@ GtkLinkButton.button:active {
 .notebook tab .active-page GtkLabel {
     color: @theme_fg_color;
     transition: all 200ms ease-in;
+}
+
+.notebook .active-page:backdrop,
+.notebook tab .active-page GtkLabel:backdrop {
+    color: @theme_unfocused_text_color;
 }
 
 /* horizontal tabs */
@@ -2276,12 +2285,22 @@ GtkLinkButton.button:active {
     border-right: 0;
 }
 
+.notebook tab.reorderable-page:backdrop {
+    background-color: transparent;
+    box-shadow: inset 1px 0 shade (@borders, 1.25), inset -1px 0 shade (@borders, 1.25);
+}
+
 .notebook tab.reorderable-page:active {
     background-color: @theme_bg_color;
     box-shadow: inset 0 3px alpha(black, 0.03), inset 0 2px alpha(black, 0.03), inset 0 1px alpha(black, 0.03),
                 inset 1px 0 shade (@borders, 1.2), inset -1px 0 shade (@borders, 1.2);
     border-left: 0;
     border-right: 0;
+}
+
+.notebook tab.reorderable-page:active:backdrop {
+    background-color: @theme_unfocused_bg_color;
+    box-shadow: inset 1px 0 shade (@borders, 1.2), inset -1px 0 shade (@borders, 1.2);
 }
 
 /* close button styling */
