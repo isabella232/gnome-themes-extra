@@ -1,1 +1,9 @@
 // Drawing mixins
+
+@mixin draw_border($c) {
+  border: 1px solid $c;
+}
+
+@mixin draw_solid_bg($c) {
+  border: 1px solid $c;
+}
