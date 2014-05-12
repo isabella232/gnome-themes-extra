@@ -140,3 +140,16 @@ GtkGrid:insensitive {
 
 // spinner animation
 @import 'spinner';
+
+/****************
+ * Text Entries *
+ ****************/
+ 
+ .entry {
+  padding: 4px;
+  color: $theme_fg_color;
+  @include draw_border($borders);
+  @include draw_solid_bg($theme_base_color);
+  transition: all 200ms ease-out;
+}
+

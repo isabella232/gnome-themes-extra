@@ -58,7 +58,7 @@ debug {
 *:insensitive {
   background-color: white;
   color: #17191a;
-  border-color: #a1a1a1; }
+  border-color: #171b1c; }
 
 *:insensitive:backdrop {
   /* I want everything nice and flat in the unfocused window */
@@ -150,3 +150,13 @@ GtkGrid:insensitive {
 
 .button .spinner:active {
   color: #2e3436; }
+
+/****************
+ * Text Entries *
+ ****************/
+.entry {
+  padding: 4px;
+  color: #2e3436;
+  border: 1px solid black;
+  border: 1px solid white;
+  transition: all 200ms ease-out; }
