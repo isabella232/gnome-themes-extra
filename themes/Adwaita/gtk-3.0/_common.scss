@@ -1,0 +1,68 @@
+debug {
+  @if $variant == 'dark' { background-color: red; }
+  @else { background-color: blue; }
+}
+
+* {
+    engine: adwaita;
+    padding: 0;
+    background-clip: padding-box;
+    -GtkToolButton-icon-spacing: 4;
+    -GtkTextView-error-underline-color: $error_color;
+    -GtkPaned-handle-size: 5;
+
+    -GtkCheckButton-indicator-size: 16;
+    -GtkCheckMenuItem-indicator-size: 12;
+
+    /* The size for scrollbars. The slider is 2px smaller, but we keep it
+     * up so that the whole area is sensitive to button presses for the
+     * slider. The stepper button is larger in both directions, the slider
+     * only in the width
+     */
+
+    -GtkScrolledWindow-scrollbar-spacing: 0;
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
+
+    -GtkToolItemGroup-expander-size: 11;
+    -GtkExpander-expander-size: 11;
+    -GtkTreeView-expander-size: 11;
+
+    -GtkTreeView-horizontal-separator: 4;
+
+    -GtkMenu-horizontal-padding: 0;
+    -GtkMenu-vertical-padding: 0;
+
+    -GtkWidget-link-color: $link_color;
+    -GtkWidget-visited-link-color: $link_color;
+
+    -GtkWidget-focus-padding: 2;
+    -GtkWidget-focus-line-width: 1;
+    -GtkWindow-resize-grip-width: 0;
+    -GtkWindow-resize-grip-height: 0;   
+
+    // We use the outline properties to signal the focus properties
+    // to the adwaita engine: using real CSS properties is faster,
+    // and we don't use any outlines for now.
+
+    outline-color: transparentize($theme_fg_color, 0.3);
+    outline-style: dashed;
+    outline-offset: 2px;
+}
+
+/***************
+ * Base States *
+ ***************/
+
+.background {
+    color: $theme_fg_color;
+    background-color: $theme_bg_color;
+}
+
+.background:backdrop {
+    /* I want everything nice and flat in the unfocused window */
+    text-shadow: none;
+    icon-shadow: none;
+
+    color: lighten($theme_fg_color,10%);
+}
+

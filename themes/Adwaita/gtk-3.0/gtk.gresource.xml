@@ -326,15 +326,7 @@
     <file preprocess="to-pixdata">assets/header-separator@2.png</file>
     <file preprocess="to-pixdata">assets/header-separator-dark.png</file>
     <file preprocess="to-pixdata">assets/header-separator-dark@2.png</file>
-    <file>gnome-applications.css</file>
-    <file>gnome-applications-dark-overrides.css</file>
-    <file>gtk-widgets.css</file>
-    <file>gtk-widgets-dark-overrides.css</file>
-    <file>gtk-widgets-assets.css</file>
-    <file>gtk-widgets-assets-dark.css</file>
-    <file>gtk-main.css</file>
-    <file>gtk-main-common.css</file>
-    <file>gtk-main-dark.css</file>
-    <file>gtk-fallback.css</file>
+    <file>gtk.css</file>
+    <file>gtk-dark.css</file>
   </gresource>
 </gresources>

@@ -1,1 +1,47 @@
-@import url("resource:///org/gnome/adwaita/gtk-main.css");
+debug {
+  background-color: blue; }
+
+* {
+  engine: adwaita;
+  padding: 0;
+  background-clip: padding-box;
+  -GtkToolButton-icon-spacing: 4;
+  -GtkTextView-error-underline-color: #cc0000;
+  -GtkPaned-handle-size: 5;
+  -GtkCheckButton-indicator-size: 16;
+  -GtkCheckMenuItem-indicator-size: 12;
+  /* The size for scrollbars. The slider is 2px smaller, but we keep it
+   * up so that the whole area is sensitive to button presses for the
+   * slider. The stepper button is larger in both directions, the slider
+   * only in the width
+   */
+  -GtkScrolledWindow-scrollbar-spacing: 0;
+  -GtkScrolledWindow-scrollbars-within-bevel: 1;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkExpander-expander-size: 11;
+  -GtkTreeView-expander-size: 11;
+  -GtkTreeView-horizontal-separator: 4;
+  -GtkMenu-horizontal-padding: 0;
+  -GtkMenu-vertical-padding: 0;
+  -GtkWidget-link-color: #74aae2;
+  -GtkWidget-visited-link-color: #74aae2;
+  -GtkWidget-focus-padding: 2;
+  -GtkWidget-focus-line-width: 1;
+  -GtkWindow-resize-grip-width: 0;
+  -GtkWindow-resize-grip-height: 0;
+  outline-color: rgba(46, 52, 54, 0.7);
+  outline-style: dashed;
+  outline-offset: 2px; }
+
+/***************
+ * Base States *
+ ***************/
+.background {
+  color: #2e3436;
+  background-color: #ededed; }
+
+.background:backdrop {
+  /* I want everything nice and flat in the unfocused window */
+  text-shadow: none;
+  icon-shadow: none;
+  color: #454f52; }
