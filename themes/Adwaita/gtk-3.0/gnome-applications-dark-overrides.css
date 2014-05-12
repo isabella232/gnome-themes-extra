@@ -1,8 +1,0 @@
-@define-color documents_collection_bg #000000;
-
-/* gnome-documents */
-
-.documents-collection-icon {
-    background-color: @documents_collection_bg;
-    border-radius: 8px;
-}
