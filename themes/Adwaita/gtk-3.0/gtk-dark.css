@@ -158,5 +158,49 @@ GtkGrid:insensitive {
   padding: 4px;
   color: #eeeeec;
   border: 1px solid black;
-  border: 1px solid #333333;
+  background-image: none;
+  background-color: #333333;
   transition: all 200ms ease-out; }
+
+/***********
+ * Buttons *
+ ***********/
+.button,
+.toolbar .button.raised,
+.toolbar .raised .button,
+.toolbar GtkComboBox .button,
+.spinbutton.vertical .button {
+  border-radius: 3px;
+  transition: all 200ms ease-out;
+  border: 1px solid black;
+  background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
+  background-color: transparent; }
+  .button:hover,
+  .toolbar .button.raised:hover,
+  .toolbar .raised .button:hover,
+  .toolbar GtkComboBox .button:hover,
+  .spinbutton.vertical .button:hover {
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, #5d6767, #515a5a, #393f3f);
+    background-color: transparent; }
+  .button:active,
+  .toolbar .button.raised:active,
+  .toolbar .raised .button:active,
+  .toolbar GtkComboBox .button:active,
+  .spinbutton.vertical .button:active {
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, #090909, #212424, #2d3232);
+    background-color: transparent; }
+  .button:insensitive, .button:backdrop:insensitive,
+  .toolbar .button.raised:insensitive,
+  .toolbar .button.raised:backdrop:insensitive,
+  .toolbar .raised .button:insensitive,
+  .toolbar .raised .button:backdrop:insensitive,
+  .toolbar GtkComboBox .button:insensitive,
+  .toolbar GtkComboBox .button:backdrop:insensitive,
+  .spinbutton.vertical .button:insensitive,
+  .spinbutton.vertical .button:backdrop:insensitive {
+    color: white;
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, transparent);
+    background-color: transparent; }

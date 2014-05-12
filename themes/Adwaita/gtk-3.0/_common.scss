@@ -145,11 +145,42 @@ GtkGrid:insensitive {
  * Text Entries *
  ****************/
  
- .entry {
+.entry {
   padding: 4px;
   color: $theme_fg_color;
-  @include draw_border($borders);
-  @include draw_solid_bg($theme_base_color);
+  @include draw_entry($borders, $theme_base_color);
   transition: all 200ms ease-out;
 }
 
+/***********
+ * Buttons *
+ ***********/
+
+.button,
+.toolbar .button.raised,
+.toolbar .raised .button,
+.toolbar GtkComboBox .button,
+.spinbutton.vertical .button {
+  border-radius: 3px;
+  transition: all 200ms ease-out;
+  @include draw_button(null,null);
+  &:hover {
+    $fill: linear-gradient(to bottom,
+                                      lighten($theme_bg_color,15%),
+                                      lighten($theme_bg_color,10%),
+                                      $theme_bg_color);
+    @include draw_button(null,$fill);
+  }
+  &:active {
+    $fill: linear-gradient(to bottom,
+                                      darken($theme_bg_color,20%),
+                                      darken($theme_bg_color,10%),
+                                      darken($theme_bg_color,5%));
+    @include draw_button(null,$fill);
+  }
+  &:insensitive, &:backdrop:insensitive {
+    $fill: linear-gradient(to bottom, transparent);
+    color: $insensitive_fg_color;
+    @include draw_button(null,$fill);
+  }
+}
