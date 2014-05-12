@@ -1,61 +1,152 @@
-/*
-Syntax error: Undefined variable: "$error_color".
-        on line 11 of _common.scss
-        from line 6 of ./gtk-dark.scss
+debug {
+  background-color: red; }
 
-6: @import 'common';
+* {
+  engine: adwaita;
+  padding: 0;
+  background-clip: padding-box;
+  -GtkToolButton-icon-spacing: 4;
+  -GtkTextView-error-underline-color: #cc0000;
+  -GtkPaned-handle-size: 5;
+  -GtkCheckButton-indicator-size: 16;
+  -GtkCheckMenuItem-indicator-size: 12;
+  /* The size for scrollbars. The slider is 2px smaller, but we keep it
+   * up so that the whole area is sensitive to button presses for the
+   * slider. The stepper button is larger in both directions, the slider
+   * only in the width
+   */
+  -GtkScrolledWindow-scrollbar-spacing: 0;
+  -GtkScrolledWindow-scrollbars-within-bevel: 1;
+  -GtkToolItemGroup-expander-size: 11;
+  -GtkExpander-expander-size: 11;
+  -GtkTreeView-expander-size: 11;
+  -GtkTreeView-horizontal-separator: 4;
+  -GtkMenu-horizontal-padding: 0;
+  -GtkMenu-vertical-padding: 0;
+  -GtkWidget-link-color: #4a90d9;
+  -GtkWidget-visited-link-color: #4a90d9;
+  -GtkWidget-focus-padding: 2;
+  -GtkWidget-focus-line-width: 1;
+  -GtkWindow-resize-grip-width: 0;
+  -GtkWindow-resize-grip-height: 0;
+  outline-color: rgba(238, 238, 236, 0.7);
+  outline-style: dashed;
+  outline-offset: 2px; }
 
-Backtrace:
-_common.scss:11
-./gtk-dark.scss:6
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/script/variable.rb:49:in `_perform'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/script/node.rb:40:in `perform'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:227:in `map'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `map'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/base.rb:37:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/tree/root_node.rb:20:in `render'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/engine.rb:315:in `_render'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/engine.rb:262:in `render'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:201:in `each'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/home/jimmac/.gem/ruby/gems/sass-3.2.13/lib/sass/plugin/compiler.rb:283:in `block in watch'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `call'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `on_change'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/home/jimmac/.gem/ruby/gems/listen-0.7.3/lib/listen/adapters/linux.rb:48:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$error_color\".\A         on line 11 of _common.scss\A         from line 6 of ./gtk-dark.scss\A \A 6: @import 'common';"; }
+/***************
+ * Base States *
+ ***************/
+.background {
+  color: #eeeeec;
+  background-color: #393f3f; }
+
+.background:backdrop {
+  /* I want everything nice and flat in the unfocused window */
+  text-shadow: none;
+  icon-shadow: none;
+  color: white; }
+
+*:selected,
+*:selected:focus {
+  background-color: #2a76c6;
+  color: white; }
+
+*:selected:backdrop {
+  background-color: #2a76c6;
+  color: white; }
+
+*:insensitive {
+  background-color: #212424;
+  color: white;
+  border-color: #181b1b; }
+
+*:insensitive:backdrop {
+  /* I want everything nice and flat in the unfocused window */
+  text-shadow: none;
+  icon-shadow: none;
+  color: white; }
+
+/* Apply effects to insensitive and prelit images */
+*:insensitive {
+  -gtk-image-effect: dim; }
+
+*:hover {
+  -gtk-image-effect: highlight; }
+
+*:hover {
+  -gtk-image-effect: highlight; }
+
+.gtkstyle-fallback {
+  background-color: #393f3f;
+  color: #eeeeec; }
+
+.gtkstyle-fallback:prelight {
+  background-color: #515a5a;
+  color: #eeeeec; }
+
+.gtkstyle-fallback:active {
+  background-color: #212424;
+  color: #eeeeec; }
+
+.gtkstyle-fallback:insensitive {
+  background-color: #212424;
+  color: white; }
+
+.gtkstyle-fallback:selected {
+  background-color: #2a76c6;
+  color: white; }
+
+GtkImage,
+GtkImage:insensitive,
+GtkLabel,
+GtkLabel:insensitive,
+GtkBox,
+GtkBox:insensitive,
+GtkGrid,
+GtkGrid:insensitive {
+  background-color: transparent; }
+
+/*****************
+ * Miscellaneous *
+ *****************/
+@keyframes spinner {
+  0.00% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)); }
+
+  12.5% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)); }
+
+  25.0% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)); }
+
+  37.5% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)); }
+
+  50.0% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)); }
+
+  62.5% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)); }
+
+  75.0% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)); }
+
+  87.5% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)); }
+
+  100% {
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)); } }
+
+.spinner {
+  background-color: transparent;
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent));
+  background-position: 14% 14%, 0% 50%, 14% 86%, 50% 100%, 86% 86%, 100% 50%, 86% 14%, 50% 0%;
+  background-size: 20% 20%;
+  background-repeat: no-repeat; }
+
+.spinner:active {
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.875)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.75)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.625)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.5)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.375)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.25)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(parsedalpha(currentColor,0.125)), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(currentColor), to(transparent));
+  animation: spinner 1s infinite linear; }
+
+.button .spinner:active {
+  color: #eeeeec; }
