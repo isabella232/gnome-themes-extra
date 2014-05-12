@@ -58,7 +58,7 @@ debug {
 *:insensitive {
   background-color: white;
   color: #17191a;
-  border-color: #171b1c; }
+  border-color: #bababa; }
 
 *:insensitive:backdrop {
   /* I want everything nice and flat in the unfocused window */
@@ -157,6 +157,50 @@ GtkGrid:insensitive {
 .entry {
   padding: 4px;
   color: #2e3436;
-  border: 1px solid black;
-  border: 1px solid white;
+  border: 1px solid #a1a1a1;
+  background-image: none;
+  background-color: white;
   transition: all 200ms ease-out; }
+
+/***********
+ * Buttons *
+ ***********/
+.button,
+.toolbar .button.raised,
+.toolbar .raised .button,
+.toolbar GtkComboBox .button,
+.spinbutton.vertical .button {
+  border-radius: 3px;
+  transition: all 200ms ease-out;
+  border: 1px solid #a1a1a1;
+  background-image: linear-gradient(to bottom, white, #ededed 40%, lightgrey);
+  background-color: transparent; }
+  .button:hover,
+  .toolbar .button.raised:hover,
+  .toolbar .raised .button:hover,
+  .toolbar GtkComboBox .button:hover,
+  .spinbutton.vertical .button:hover {
+    border: 1px solid #a1a1a1;
+    background-image: linear-gradient(to bottom, white, white, #ededed);
+    background-color: transparent; }
+  .button:active,
+  .toolbar .button.raised:active,
+  .toolbar .raised .button:active,
+  .toolbar GtkComboBox .button:active,
+  .spinbutton.vertical .button:active {
+    border: 1px solid #a1a1a1;
+    background-image: linear-gradient(to bottom, #bababa, lightgrey, #e0e0e0);
+    background-color: transparent; }
+  .button:insensitive, .button:backdrop:insensitive,
+  .toolbar .button.raised:insensitive,
+  .toolbar .button.raised:backdrop:insensitive,
+  .toolbar .raised .button:insensitive,
+  .toolbar .raised .button:backdrop:insensitive,
+  .toolbar GtkComboBox .button:insensitive,
+  .toolbar GtkComboBox .button:backdrop:insensitive,
+  .spinbutton.vertical .button:insensitive,
+  .spinbutton.vertical .button:backdrop:insensitive {
+    color: #17191a;
+    border: 1px solid #a1a1a1;
+    background-image: linear-gradient(to bottom, transparent);
+    background-color: transparent; }

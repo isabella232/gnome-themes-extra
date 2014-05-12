@@ -1,9 +1,25 @@
 // Drawing mixins
 
-@mixin draw_border($c) {
-  border: 1px solid $c;
+@mixin draw_entry($border,$fill) {
+  @if length($border) == 0 {
+    $border: $borders;
+  }
+  @if length($fill) == 0 {
+    $border: $theme_base_color;
+  }  
+  border: 1px solid $border;
+  background-image: none;
+  background-color: $fill;
 }
 
-@mixin draw_solid_bg($c) {
-  border: 1px solid $c;
+@mixin draw_button($border,$fill) {
+    $border: $borders !default;
+    $fill: linear-gradient(to bottom,
+                                      lighten($theme_bg_color,10%),
+                                      $theme_bg_color 40%,
+                                      darken($theme_bg_color,10%)
+                                      ) !default;
+  border: 1px solid $border;
+  background-image: $fill;
+  background-color: transparent;
 }
