@@ -1,26 +1,3 @@
 // Drawing mixins
 
-@mixin draw_entry($border,$fill) {
-  $border: $borders !default;
-  $fill: linear-gradient(to bottom,
-                                      darken($theme_base_color,20%) 1%,
-                                      darken($theme_base_color,10%) 10%,
-                                      $theme_base_color
-                                      ) !default;
-
-  border: 1px solid $border;
-  background-image: $fill;
-  background-color: transparent;
-}
-
-@mixin draw_button($border,$fill) {
-    $border: $borders !default;
-    $fill: linear-gradient(to bottom,
-                                      lighten($theme_bg_color,10%),
-                                      $theme_bg_color 40%,
-                                      darken($theme_bg_color,10%)
-                                      ) !default;
-  border: 1px solid $border;
-  background-image: $fill;
-  background-color: transparent;
-}
+// generic drawing of more complex things
