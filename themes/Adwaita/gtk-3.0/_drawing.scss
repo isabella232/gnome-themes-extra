@@ -4,7 +4,7 @@
   $border: $borders !default;
   $fill: linear-gradient(to bottom,
                                       darken($theme_base_color,20%) 1%,
-                                      darken($theme_base_color,2%) 40%,
+                                      darken($theme_base_color,10%) 10%,
                                       $theme_base_color
                                       ) !default;
 
