@@ -191,6 +191,7 @@ GtkGrid:insensitive {
 .spinbutton.vertical .button {
   border-radius: 3px;
   transition: all 200ms ease-out;
+  padding: 2px 4px;
   @include draw_button(null,null);
   &:hover {
     $fill: linear-gradient(to bottom,
@@ -227,6 +228,15 @@ GtkGrid:insensitive {
   }
 }
 
+.header-bar .button {
+  &.text-button {
+    padding: 2px 8px;
+  }
+  &.image-button {
+    padding: 4px;
+  }
+}
+
 /**************
  * ComboBoxes *
  **************/
@@ -260,4 +270,23 @@ GtkComboBox {
     padding: 2px 4px;
   }
   
+}
+
+/***************
+ * Header bars *
+ ***************/
+ 
+ .header-bar {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: shade($borders, 0.90);
+    border-radius: 5px 5px 0 0;
+    
+    background-color: none;
+    background-image: linear-gradient(to bottom,
+                                      lighten($theme_bg_color,2%),
+                                      darken($theme_bg_color,5%));
+    box-shadow: inset 0 -1px $shadow,
+                inset 0 1px $borders_edge;
+    padding: 6px;
 }
