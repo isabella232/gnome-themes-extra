@@ -153,11 +153,18 @@ GtkGrid:insensitive {
   @include draw_entry(null,null);
   &:insensitive, &:backdrop:insensitive {
     color: $insensitive_fg_color;
+    background-image: none;
+    background-color: $insensitive_bg_color;
+    box-shadow: inset 0 1px $borders_edge,
+                0 1px $borders_edge; /* doesn't have margin to paint on :( */
   }
   &:focus {
     border-color: $theme_selected_bg_color;
     box-shadow: inset 0 0 2px 1px transparentize($theme_selected_bg_color,.5);
   }
+  GtkLabel {
+    text-shadow: 0 1px red;
+  }  
 }
 
 .linked .entry {
@@ -195,9 +202,10 @@ GtkGrid:insensitive {
   &:active {
     $fill: linear-gradient(to bottom,
                                       darken($theme_bg_color,20%),
-                                      darken($theme_bg_color,10%),
-                                      darken($theme_bg_color,5%));
+                                      darken($theme_bg_color,15%) 5%,
+                                      darken($theme_bg_color,10%));
     @include draw_button(null,$fill);
+    box-shadow: inset 0 1px 2px $borders;
   }
   &:insensitive, &:backdrop:insensitive {
     $fill: linear-gradient(to bottom, transparent);
@@ -217,4 +225,39 @@ GtkGrid:insensitive {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+}
+
+/**************
+ * ComboBoxes *
+ **************/
+GtkComboBox {
+  padding: 0;
+
+  -GtkComboBox-arrow-scaling: 0.5;
+  -GtkComboBox-shadow-type: none;
+  .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+  }
+  &.combobox-entry .entry:first-child {
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+  }
+  &.combobox-entry .button:first-child {
+    border-radius: 3px 0 0 3px;
+  }
+  &.combobox-entry .entry:last-child {
+    border-radius: 0 3px 3px 0;
+    border-left: 0;
+  }
+  &.combobox-entry .button:last-child {
+    border-radius: 0 3px 3px 0;
+  }
+  .button {
+    @extend .button;
+    padding: 2px 4px;
+  }
+  
 }
