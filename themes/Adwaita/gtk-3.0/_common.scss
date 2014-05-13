@@ -80,7 +80,7 @@ debug {
 *:insensitive {
     background-color: $insensitive_bg_color;
     color: $insensitive_fg_color;
-    border-color: lighten($borders,10%);
+    border-color: darken($theme_bg_color,20%);
 }
 
 *:insensitive:backdrop {
@@ -150,7 +150,7 @@ GtkGrid:insensitive {
   color: $theme_fg_color;
   border-radius: 3px;
   transition: all 200ms ease-out;
-  border: 1px solid $borders;
+  border: 1px solid darken($theme_bg_color,30%);
   background-image: linear-gradient(to bottom,
                                       darken($theme_base_color,20%) 1%,
                                       darken($theme_base_color,10%) 10%,
@@ -199,28 +199,23 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   padding: 2px 4px;
   background-color: transparent;
-  background-image: linear-gradient(to bottom,
-                                      lighten($theme_bg_color,10%),
-                                      $theme_bg_color 40%,
-                                      darken($theme_bg_color,10%)
-                                      );
-  border: 1px solid $borders;
+  @include button_normal($theme_bg_color);
   &:hover {
-    background-image: linear-gradient(to bottom,
-                                      lighten($theme_bg_color,15%),
-                                      lighten($theme_bg_color,10%),
-                                      $theme_bg_color);
+    @include button_hover($theme_bg_color);
   }
   &:active {
-    background-image: linear-gradient(to bottom,
-                                      darken($theme_bg_color,20%),
-                                      darken($theme_bg_color,15%) 5%,
-                                      darken($theme_bg_color,10%));
-    box-shadow: inset 0 1px 2px $borders;
+    @include button_active($theme_bg_color);
   }
   &:insensitive, &:backdrop:insensitive {
     background-image: linear-gradient(to bottom, transparent);
     color: $insensitive_fg_color;
+  }
+  &.suggested-action {
+    @include button_normal($theme_selected_bg_color);
+    color: $theme_base_color; /* FIXME */
+    &:active {
+      @include button_active($theme_selected_bg_color);
+    }
   }
 }
 
@@ -288,7 +283,7 @@ GtkComboBox {
  .header-bar {
     border-width: 0 0 1px;
     border-style: solid;
-    border-color: shade($borders, 0.90);
+    border-color: darken($theme_bg_color, 30%);
     border-radius: 5px 5px 0 0;
     
     background-color: none;
@@ -298,4 +293,13 @@ GtkComboBox {
     box-shadow: inset 0 -1px $theme_shade,
                 inset 0 1px $borders_edge;
     padding: 6px;
+
+    .title {
+      font: Bold;
+      padding: 0px 12px;
+    }
+    .subtitle {
+      font-size: 80%;
+      padding: 0 12px;
+    }
 }

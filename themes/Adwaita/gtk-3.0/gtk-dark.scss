@@ -6,7 +6,6 @@ $theme_bg_color: #393f3f;
 $theme_fg_color: #eeeeec;
 $theme_selected_fg_color: lighten($theme_fg_color,10%);
 $theme_selected_bg_color: darken(#4a90d9,10%);
-$borders: darken($theme_bg_color,30%);
 $borders_edge: transparentize($theme_base_color,.4);
 $theme_shade: rgba(0,0,0,.2); //shadow seems to be a reserved word
 $wm_shade: 0 2px 4px rgba(0,0,0,.6);

@@ -1,3 +1,47 @@
 // Drawing mixins
 
 // generic drawing of more complex things
+
+// buttons
+
+@mixin button_normal ($c) {
+  border: 1px solid darken($c,30%);
+  background-image: linear-gradient(to bottom,
+                                      lighten($c,10%),
+                                      $c 40%,
+                                      darken($c,10%)
+                                      );
+}
+
+@mixin button_hover ($c) {
+  border: 1px solid darken($c,30%);
+  background-image: linear-gradient(to bottom,
+                                      lighten($c,14%),
+                                      lighten($c,4%) 40%,
+                                      $c);
+}
+
+@mixin button_active ($c) {
+  border: 1px solid darken($c,30%);
+  background-image: linear-gradient(to bottom,
+                                      darken($c,20%),
+                                      darken($c,15%) 5%,
+                                      darken($c,10%));
+    
+  box-shadow: inset 0 1px 2px darken($c,30%);
+}
+
+@mixin border-rounded() {
+}
+
+@mixin border-rounded-left() {
+}
+
+@mixin border-rounded-right() {
+}
+
+@mixin border-rounded-top() {
+}
+
+@mixin border-rounded-bottom() {
+}
