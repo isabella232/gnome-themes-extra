@@ -160,7 +160,7 @@ GtkGrid:insensitive {
   border-radius: 3px;
   transition: all 200ms ease-out;
   border: 1px solid black;
-  background-image: linear-gradient(to bottom, black 1%, #2e2e2e 40%, #333333);
+  background-image: linear-gradient(to bottom, black 1%, #1a1a1a 10%, #333333);
   background-color: transparent; }
   .entry:insensitive, .entry:backdrop:insensitive {
     color: white; }
