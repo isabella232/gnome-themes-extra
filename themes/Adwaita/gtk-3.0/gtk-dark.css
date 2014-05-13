@@ -154,18 +154,29 @@ GtkGrid:insensitive {
 /****************
  * Text Entries *
  ****************/
-.entry {
+.entry, .linked .entry {
   padding: 4px;
   color: #eeeeec;
+  border-radius: 3px;
+  transition: all 200ms ease-out;
   border: 1px solid black;
-  background-image: none;
-  background-color: #333333;
-  transition: all 200ms ease-out; }
+  background-image: linear-gradient(to bottom, black 1%, #2e2e2e 40%, #333333);
+  background-color: transparent; }
+  .entry:insensitive, .entry:backdrop:insensitive {
+    color: white; }
+
+.linked .entry:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0; }
+.linked .entry:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
 
 /***********
  * Buttons *
  ***********/
-.button,
+.button, .linked .button,
 .toolbar .button.raised,
 .toolbar .raised .button,
 .toolbar GtkComboBox .button,
@@ -204,3 +215,11 @@ GtkGrid:insensitive {
     border: 1px solid black;
     background-image: linear-gradient(to bottom, transparent);
     background-color: transparent; }
+
+.linked .button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right-width: 0; }
+.linked .button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }

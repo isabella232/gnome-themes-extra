@@ -1,15 +1,16 @@
 // Drawing mixins
 
 @mixin draw_entry($border,$fill) {
-  @if length($border) == 0 {
-    $border: $borders;
-  }
-  @if length($fill) == 0 {
-    $border: $theme_base_color;
-  }  
+  $border: $borders !default;
+  $fill: linear-gradient(to bottom,
+                                      darken($theme_base_color,20%) 1%,
+                                      darken($theme_base_color,2%) 40%,
+                                      $theme_base_color
+                                      ) !default;
+
   border: 1px solid $border;
-  background-image: none;
-  background-color: $fill;
+  background-image: $fill;
+  background-color: transparent;
 }
 
 @mixin draw_button($border,$fill) {

@@ -148,8 +148,25 @@ GtkGrid:insensitive {
 .entry {
   padding: 4px;
   color: $theme_fg_color;
-  @include draw_entry($borders, $theme_base_color);
+  border-radius: 3px;
   transition: all 200ms ease-out;
+  @include draw_entry(null,null);
+  &:insensitive, &:backdrop:insensitive {
+    color: $insensitive_fg_color;
+  }
+}
+
+.linked .entry {
+  @extend .entry;
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+  }
+  &:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 /***********
@@ -182,5 +199,18 @@ GtkGrid:insensitive {
     $fill: linear-gradient(to bottom, transparent);
     color: $insensitive_fg_color;
     @include draw_button(null,$fill);
+  }
+}
+
+.linked .button {
+  @extend .button;
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+  }
+  &:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
