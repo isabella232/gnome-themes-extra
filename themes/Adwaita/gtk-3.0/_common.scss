@@ -150,7 +150,13 @@ GtkGrid:insensitive {
   color: $theme_fg_color;
   border-radius: 3px;
   transition: all 200ms ease-out;
-  @include draw_entry(null,null);
+  border: 1px solid $borders;
+  background-image: linear-gradient(to bottom,
+                                      darken($theme_base_color,20%) 1%,
+                                      darken($theme_base_color,10%) 10%,
+                                      $theme_base_color
+                                      );
+  background-color: transparent;
   &:insensitive, &:backdrop:insensitive {
     color: $insensitive_fg_color;
     background-image: none;
@@ -192,26 +198,29 @@ GtkGrid:insensitive {
   border-radius: 3px;
   transition: all 200ms ease-out;
   padding: 2px 4px;
-  @include draw_button(null,null);
+  background-color: transparent;
+  background-image: linear-gradient(to bottom,
+                                      lighten($theme_bg_color,10%),
+                                      $theme_bg_color 40%,
+                                      darken($theme_bg_color,10%)
+                                      );
+  border: 1px solid $borders;
   &:hover {
-    $fill: linear-gradient(to bottom,
+    background-image: linear-gradient(to bottom,
                                       lighten($theme_bg_color,15%),
                                       lighten($theme_bg_color,10%),
                                       $theme_bg_color);
-    @include draw_button(null,$fill);
   }
   &:active {
-    $fill: linear-gradient(to bottom,
+    background-image: linear-gradient(to bottom,
                                       darken($theme_bg_color,20%),
                                       darken($theme_bg_color,15%) 5%,
                                       darken($theme_bg_color,10%));
-    @include draw_button(null,$fill);
     box-shadow: inset 0 1px 2px $borders;
   }
   &:insensitive, &:backdrop:insensitive {
-    $fill: linear-gradient(to bottom, transparent);
+    background-image: linear-gradient(to bottom, transparent);
     color: $insensitive_fg_color;
-    @include draw_button(null,$fill);
   }
 }
 
@@ -286,7 +295,7 @@ GtkComboBox {
     background-image: linear-gradient(to bottom,
                                       lighten($theme_bg_color,2%),
                                       darken($theme_bg_color,5%));
-    box-shadow: inset 0 -1px $shadow,
+    box-shadow: inset 0 -1px $theme_shade,
                 inset 0 1px $borders_edge;
     padding: 6px;
 }
