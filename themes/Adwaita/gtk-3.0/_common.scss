@@ -209,7 +209,7 @@ GtkGrid:insensitive {
     @include button_backdrop($theme_bg_color);
     color: $insensitive_fg_color;
     &:active {
-      @include button_backdrop(darken($theme_bg_color, 20%));
+      @include button_backdrop(darken($theme_bg_color, 10%));
       box-shadow: none;
       border: 1px solid darken($theme_bg_color,30%);
       color: $theme_fg_color;
@@ -223,7 +223,8 @@ GtkGrid:insensitive {
   }
   
   /* Suggested and Destructive Action buttons */
-  @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), (destructive-action, $destructive_color) {
+  @each $b_type, $b_color in  (suggested-action, $theme_selected_bg_color), 
+                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button_normal($b_color);
       color: $theme_base_color; 
@@ -316,7 +317,7 @@ GtkComboBox {
     border-width: 0 0 1px;
     border-style: solid;
     border-color: darken($theme_bg_color, 30%);
-    border-radius: 5px 5px 0 0;
+    border-radius: 7px 7px 0 0;
     
     background-color: transparent;
     background-image: linear-gradient(to bottom,
@@ -350,4 +351,26 @@ GtkComboBox {
   }
 }
 
+/***************
+ * WM Stuff    *
+ ***************/
+
+.window-frame {
+    border-radius: 7px 7px 0 0;
+    /* lamefun trick to get rounded borders regardless of CSD use */
+    border-width: 0px;    
+    box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+
+    /* this is used for the resize cursor area */
+    margin: 10px;
+}
+
+.window-frame.tiled {
+    border-radius: 0;
+    background-color: $theme_bg_color;
+}
+
+.window-frame:backdrop {
+    box-shadow: 0 3px 6px 2px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+}
 
