@@ -326,6 +326,10 @@ GtkComboBox {
                 inset 0 1px $borders_edge;
     padding: 6px;
 
+    &:backdrop {
+      background-image: none;
+      background-color: $theme_bg_color;
+    }
     .title {
       font: Bold;
       padding: 0px 12px;
