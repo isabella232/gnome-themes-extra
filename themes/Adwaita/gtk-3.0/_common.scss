@@ -208,6 +208,12 @@ GtkGrid:insensitive {
   &:backdrop {
     @include button_backdrop($theme_bg_color);
     color: $insensitive_fg_color;
+    &:active {
+      @include button_backdrop(darken($theme_bg_color, 20%));
+      box-shadow: none;
+      border: 1px solid darken($theme_bg_color,30%);
+      color: $theme_fg_color;
+    }
   }
   &:insensitive {
     @include button_insensitive($theme_bg_color);
@@ -215,7 +221,8 @@ GtkGrid:insensitive {
   &:backdrop:insensitive {
     @include button_insensitive(transparentize($theme_bg_color,0.5));
   }
-  // Suggested and Destructive Action buttons
+  
+  /* Suggested and Destructive Action buttons */
   @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button_normal($b_color);
