@@ -215,7 +215,8 @@ GtkGrid:insensitive {
   &:backdrop:insensitive {
     @include button_insensitive(transparentize($theme_bg_color,0.5));
   }
-  @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), (destructive-action, red) {
+  // Suggested and Destructive Action buttons
+  @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button_normal($b_color);
       color: $theme_base_color; 
@@ -229,8 +230,15 @@ GtkGrid:insensitive {
         @include button_backdrop($b_color);
       }
       &:insensitive {
-        color: $theme_base_color; 
-        @include button_insensitive($b_color);
+        color: $insensitive_fg_color;
+        @include button_insensitive($theme_bg_color);
+        &:backdrop {
+          @include button_insensitive(transparentize($theme_bg_color,0.5));
+        }
+      }
+      // button label can't be colored easily, need to match for the GtkLabel
+      GtkLabel:backdrop:insensitive {
+        color: transparentize($insensitive_fg_color, 0.5);
       }
     }
   }
