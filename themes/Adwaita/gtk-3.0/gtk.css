@@ -240,18 +240,21 @@ GtkGrid:insensitive {
       background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
       box-shadow: inset 0 1px 2px #2b537d; }
 
-.linked .button:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right-width: 0; }
-.linked .button:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
+.linked .button {
+  padding: 6px; }
+  .linked .button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0; }
+  .linked .button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
 
 .header-bar .button.text-button {
-  padding: 2px 8px; }
+  padding: 6px 8px 5px;
+  /* due to font metrics the image buttons are 1px shorter */ }
 .header-bar .button.image-button {
-  padding: 4px; }
+  padding: 8px; }
 
 /**************
  * ComboBoxes *
@@ -276,7 +279,7 @@ GtkComboBox {
   GtkComboBox.combobox-entry .button:last-child {
     border-radius: 0 3px 3px 0; }
   GtkComboBox .linked .button, .linked GtkComboBox .button, GtkComboBox .button {
-    padding: 2px 4px; }
+    padding: 4px 6px; }
 
 /***************
  * Header bars *
@@ -286,7 +289,7 @@ GtkComboBox {
   border-style: solid;
   border-color: #a1a1a1;
   border-radius: 5px 5px 0 0;
-  background-color: none;
+  background-color: transparent;
   background-image: linear-gradient(to bottom, #f2f2f2, #e0e0e0);
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1), inset 0 1px rgba(255, 255, 255, 0.1);
   padding: 6px; }
@@ -296,3 +299,11 @@ GtkComboBox {
   .header-bar .subtitle {
     font-size: 80%;
     padding: 0 12px; }
+  .header-bar > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 2px;
+    background-color: transparent;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: -gtk-scaled(url("assets/header-separator.png"), url("assets/header-separator@2.png")) 0 1 0 1/0 1px 0 1px stretch; }
