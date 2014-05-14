@@ -313,42 +313,54 @@ GtkComboBox {
  * Header bars *
  ***************/
  
- .header-bar {
-    border-width: 0 0 1px;
-    border-style: solid;
-    border-color: darken($theme_bg_color, 30%);
-    border-radius: 7px 7px 0 0;
-    
-    background-color: transparent;
-    background-image: linear-gradient(to bottom,
-                                      lighten($theme_bg_color,2%),
-                                      darken($theme_bg_color,5%));
-    box-shadow: inset 0 -1px $theme_shade,
-                inset 0 1px $borders_edge;
-    padding: 6px;
+.header-bar {
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: darken($theme_bg_color, 30%);
+  border-radius: 7px 7px 0 0;
+  
+  background-color: transparent;
+  background-image: linear-gradient(to bottom,
+                                    lighten($theme_bg_color,2%),
+                                    darken($theme_bg_color,5%));
+  box-shadow: inset 0 -1px $theme_shade,
+              inset 0 1px $borders_edge;
+  padding: 6px;
 
-    &:backdrop {
-      background-image: none;
-      background-color: $theme_bg_color;
-    }
-    .title {
-      font: Bold;
-      padding: 0px 12px;
-    }
-    .subtitle {
-      font-size: 80%;
-      padding: 0 12px;
-    }
-    & > GtkBox > .separator.vertical {
-      -GtkWidget-wide-separators: 1;
-      -GtkWidget-separator-width: 2px;
-      background-color: transparent;
-      border-width: 0 1px;
-      border-style: solid;
-      border-color: transparent;
-      border-image: -gtk-scaled(url("assets/header-separator.png"),
-                    url("assets/header-separator@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
+  &:backdrop {
+    background-image: none;
+    background-color: $theme_bg_color;
   }
+  
+  .title {
+    font: Bold;
+    padding: 0px 12px;
+  }
+  .subtitle {
+    font-size: 80%;
+    padding: 0 12px;
+  }
+  & > GtkBox > .separator.vertical {
+    -GtkWidget-wide-separators: 1;
+    -GtkWidget-separator-width: 2px;
+    background-color: transparent;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: -gtk-scaled(url("assets/header-separator.png"),
+                  url("assets/header-separator@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
+  }
+  &.selection-mode {
+    color: darken($theme_selected_bg_color, 15%);
+    text-shadow: 0 1px $theme_shade;
+    background-image: linear-gradient(to bottom,
+                                    lighten($theme_selected_bg_color,5%),
+                                    lighten($theme_selected_bg_color,2%));
+  }
+}
+
+.window-frame.tiled .header-bar {
+  border-radius: 0; /* FIXME doesn't work */
 }
 
 /***************
@@ -356,21 +368,19 @@ GtkComboBox {
  ***************/
 
 .window-frame {
-    border-radius: 7px 7px 0 0;
-    /* lamefun trick to get rounded borders regardless of CSD use */
-    border-width: 0px;    
-    box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+  border-radius: 7px 7px 0 0;
+  /* lamefun trick to get rounded borders regardless of CSD use */
+  border-width: 0px;    
+  box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
 
-    /* this is used for the resize cursor area */
-    margin: 10px;
-}
+  /* this is used for the resize cursor area */
+  margin: 10px;
 
-.window-frame.tiled {
+  &:backdrop {
+    box-shadow: 0 3px 6px 2px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+  }
+  &.tiled {
     border-radius: 0;
     background-color: $theme_bg_color;
+  }
 }
-
-.window-frame:backdrop {
-    box-shadow: 0 3px 6px 2px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
-}
-
