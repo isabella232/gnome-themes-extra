@@ -328,5 +328,7 @@
     <file preprocess="to-pixdata">assets/header-separator-dark@2.png</file>
     <file>gtk.css</file>
     <file>gtk-dark.css</file>
+    <file>gtk-contained.css</file>
+    <file>gtk-contained-dark.css</file>
   </gresource>
 </gresources>
