@@ -221,6 +221,7 @@ GtkGrid:insensitive {
 
 .linked .button {
   @extend .button;
+  padding: 6px;
   &:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -234,10 +235,10 @@ GtkGrid:insensitive {
 
 .header-bar .button {
   &.text-button {
-    padding: 2px 8px;
+    padding: 6px 8px 5px; /* due to font metrics the image buttons are 1px shorter */
   }
   &.image-button {
-    padding: 4px;
+    padding: 8px; 
   }
 }
 
@@ -271,9 +272,8 @@ GtkComboBox {
   }
   .button {
     @extend .button;
-    padding: 2px 4px;
+    padding: 4px 6px;
   }
-  
 }
 
 /***************
@@ -286,7 +286,7 @@ GtkComboBox {
     border-color: darken($theme_bg_color, 30%);
     border-radius: 5px 5px 0 0;
     
-    background-color: none;
+    background-color: transparent;
     background-image: linear-gradient(to bottom,
                                       lighten($theme_bg_color,2%),
                                       darken($theme_bg_color,5%));
@@ -302,4 +302,16 @@ GtkComboBox {
       font-size: 80%;
       padding: 0 12px;
     }
+    & > GtkBox > .separator.vertical {
+      -GtkWidget-wide-separators: 1;
+      -GtkWidget-separator-width: 2px;
+      background-color: transparent;
+      border-width: 0 1px;
+      border-style: solid;
+      border-color: transparent;
+      border-image: -gtk-scaled(url("assets/header-separator.png"),
+                    url("assets/header-separator@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
+  }
 }
+
+
