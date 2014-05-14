@@ -189,7 +189,6 @@ GtkGrid:insensitive {
 /***********
  * Buttons *
  ***********/
-
 .button,
 .toolbar .button.raised,
 .toolbar .raised .button,
@@ -206,15 +205,33 @@ GtkGrid:insensitive {
   &:active {
     @include button_active($theme_bg_color);
   }
-  &:insensitive, &:backdrop:insensitive {
-    background-image: linear-gradient(to bottom, transparent);
+  &:backdrop {
+    @include button_backdrop($theme_bg_color);
     color: $insensitive_fg_color;
   }
-  &.suggested-action {
-    @include button_normal($theme_selected_bg_color);
-    color: $theme_base_color; /* FIXME */
-    &:active {
-      @include button_active($theme_selected_bg_color);
+  &:insensitive {
+    @include button_insensitive($theme_bg_color);
+  }
+  &:backdrop:insensitive {
+    @include button_insensitive(transparentize($theme_bg_color,0.5));
+  }
+  @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), (destructive-action, red) {
+    &.#{$b_type} {
+      @include button_normal($b_color);
+      color: $theme_base_color; 
+      &:active {
+        @include button_active($b_color);
+      }
+      &:hover {
+        @include button_hover($b_color);
+      }
+      &:backdrop {
+        @include button_backdrop($b_color);
+      }
+      &:insensitive {
+        color: $theme_base_color; 
+        @include button_insensitive($b_color);
+      }
     }
   }
 }
