@@ -136,7 +136,7 @@ GtkGrid:insensitive {
     color: white;
     background-image: none;
     background-color: transparent;
-    box-shadow: inset 0 1px rgba(51, 51, 51, 0.6), 0 1px rgba(51, 51, 51, 0.6);
+    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
     /* doesn't have margin to paint on :( */ }
   .entry:focus {
     border-color: #2a76c6;
@@ -164,23 +164,23 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   padding: 2px 4px;
   background-color: transparent;
-  border: 1px solid black;
+  border: 1px solid #212424;
   background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-  box-shadow: inset 0 1px rgba(51, 51, 51, 0.6), 0 1px rgba(51, 51, 51, 0.6);
+  box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
   /* Suggested and Destructive Action buttons */ }
   .button:hover,
   .toolbar .button.raised:hover,
   .toolbar .raised .button:hover,
   .toolbar GtkComboBox .button:hover,
   .spinbutton.vertical .button:hover {
-    border: 1px solid black;
+    border: 1px solid #212424;
     background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f); }
   .button:active,
   .toolbar .button.raised:active,
   .toolbar .raised .button:active,
   .toolbar GtkComboBox .button:active,
   .spinbutton.vertical .button:active {
-    border: 1px solid black;
+    border: 1px solid #212424;
     background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424);
     box-shadow: inset 0 1px 2px black; }
   .button:backdrop,
@@ -188,7 +188,7 @@ GtkGrid:insensitive {
   .toolbar .raised .button:backdrop,
   .toolbar GtkComboBox .button:backdrop,
   .spinbutton.vertical .button:backdrop {
-    border: 1px solid black;
+    border: 1px solid #212424;
     background-image: linear-gradient(to bottom, #393f3f);
     color: white; }
     .button:backdrop:active,
@@ -196,7 +196,7 @@ GtkGrid:insensitive {
     .toolbar .raised .button:backdrop:active,
     .toolbar GtkComboBox .button:backdrop:active,
     .spinbutton.vertical .button:backdrop:active {
-      border: 1px solid black;
+      border: 1px solid #090909;
       background-image: linear-gradient(to bottom, #212424);
       box-shadow: none;
       border: 1px solid black;
@@ -206,23 +206,23 @@ GtkGrid:insensitive {
   .toolbar .raised .button:insensitive,
   .toolbar GtkComboBox .button:insensitive,
   .spinbutton.vertical .button:insensitive {
-    border: 1px solid black;
+    border: 1px solid #212424;
     background-image: linear-gradient(to bottom, rgba(57, 63, 63, 0.5)); }
   .button:backdrop:insensitive,
   .toolbar .button.raised:backdrop:insensitive,
   .toolbar .raised .button:backdrop:insensitive,
   .toolbar GtkComboBox .button:backdrop:insensitive,
   .spinbutton.vertical .button:backdrop:insensitive {
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(33, 36, 36, 0.5);
     background-image: linear-gradient(to bottom, rgba(57, 63, 63, 0)); }
   .button.suggested-action,
   .toolbar .button.raised.suggested-action,
   .toolbar .raised .button.suggested-action,
   .toolbar GtkComboBox .suggested-action.button,
   .spinbutton.vertical .button.suggested-action {
-    border: 1px solid #0f2b48;
+    border: 1px solid #215d9c;
     background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
-    box-shadow: inset 0 1px rgba(51, 51, 51, 0.6), 0 1px rgba(51, 51, 51, 0.6);
+    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
     color: #333333; }
     .button.suggested-action:active, .button.suggested-action:hover:active,
     .toolbar .button.raised.suggested-action:active,
@@ -233,7 +233,7 @@ GtkGrid:insensitive {
     .toolbar GtkComboBox .suggested-action.button:hover:active,
     .spinbutton.vertical .button.suggested-action:active,
     .spinbutton.vertical .button.suggested-action:hover:active {
-      border: 1px solid #0f2b48;
+      border: 1px solid #215d9c;
       background-image: linear-gradient(to bottom, #184472, #1c5187 5%, #215d9c);
       box-shadow: inset 0 1px 2px #0f2b48; }
     .button.suggested-action:hover,
@@ -241,14 +241,14 @@ GtkGrid:insensitive {
     .toolbar .raised .button.suggested-action:hover,
     .toolbar GtkComboBox .suggested-action.button:hover,
     .spinbutton.vertical .button.suggested-action:hover {
-      border: 1px solid #0f2b48;
+      border: 1px solid #215d9c;
       background-image: linear-gradient(to bottom, #5b9add, #3180d4 40%, #2a76c6); }
     .button.suggested-action:backdrop,
     .toolbar .button.raised.suggested-action:backdrop,
     .toolbar .raised .button.suggested-action:backdrop,
     .toolbar GtkComboBox .suggested-action.button:backdrop,
     .spinbutton.vertical .button.suggested-action:backdrop {
-      border: 1px solid #0f2b48;
+      border: 1px solid #215d9c;
       background-image: linear-gradient(to bottom, #2a76c6); }
     .button.suggested-action:insensitive,
     .toolbar .button.raised.suggested-action:insensitive,
@@ -256,14 +256,14 @@ GtkGrid:insensitive {
     .toolbar GtkComboBox .suggested-action.button:insensitive,
     .spinbutton.vertical .button.suggested-action:insensitive {
       color: white;
-      border: 1px solid black;
+      border: 1px solid #212424;
       background-image: linear-gradient(to bottom, rgba(57, 63, 63, 0.5)); }
       .button.suggested-action:insensitive:backdrop,
       .toolbar .button.raised.suggested-action:insensitive:backdrop,
       .toolbar .raised .button.suggested-action:insensitive:backdrop,
       .toolbar GtkComboBox .suggested-action.button:insensitive:backdrop,
       .spinbutton.vertical .button.suggested-action:insensitive:backdrop {
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(33, 36, 36, 0.5);
         background-image: linear-gradient(to bottom, rgba(57, 63, 63, 0)); }
     .button.suggested-action GtkLabel:backdrop:insensitive,
     .toolbar .button.raised.suggested-action GtkLabel:backdrop:insensitive,
@@ -276,9 +276,9 @@ GtkGrid:insensitive {
   .toolbar .raised .button.destructive-action,
   .toolbar GtkComboBox .destructive-action.button,
   .spinbutton.vertical .button.destructive-action {
-    border: 1px solid #470505;
+    border: 1px solid #a60c0c;
     background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
-    box-shadow: inset 0 1px rgba(51, 51, 51, 0.6), 0 1px rgba(51, 51, 51, 0.6);
+    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
     color: #333333; }
     .button.destructive-action:active, .button.destructive-action:hover:active,
     .toolbar .button.raised.destructive-action:active,
@@ -289,7 +289,7 @@ GtkGrid:insensitive {
     .toolbar GtkComboBox .destructive-action.button:hover:active,
     .spinbutton.vertical .button.destructive-action:active,
     .spinbutton.vertical .button.destructive-action:hover:active {
-      border: 1px solid #470505;
+      border: 1px solid #a60c0c;
       background-image: linear-gradient(to bottom, #760909, #8e0b0b 5%, #a60c0c);
       box-shadow: inset 0 1px 2px #470505; }
     .button.destructive-action:hover,
@@ -297,14 +297,14 @@ GtkGrid:insensitive {
     .toolbar .raised .button.destructive-action:hover,
     .toolbar GtkComboBox .destructive-action.button:hover,
     .spinbutton.vertical .button.destructive-action:hover {
-      border: 1px solid #470505;
+      border: 1px solid #a60c0c;
       background-image: linear-gradient(to bottom, #f03c3c, #e81111 40%, #d51010); }
     .button.destructive-action:backdrop,
     .toolbar .button.raised.destructive-action:backdrop,
     .toolbar .raised .button.destructive-action:backdrop,
     .toolbar GtkComboBox .destructive-action.button:backdrop,
     .spinbutton.vertical .button.destructive-action:backdrop {
-      border: 1px solid #470505;
+      border: 1px solid #a60c0c;
       background-image: linear-gradient(to bottom, #d51010); }
     .button.destructive-action:insensitive,
     .toolbar .button.raised.destructive-action:insensitive,
@@ -312,14 +312,14 @@ GtkGrid:insensitive {
     .toolbar GtkComboBox .destructive-action.button:insensitive,
     .spinbutton.vertical .button.destructive-action:insensitive {
       color: white;
-      border: 1px solid black;
+      border: 1px solid #212424;
       background-image: linear-gradient(to bottom, rgba(57, 63, 63, 0.5)); }
       .button.destructive-action:insensitive:backdrop,
       .toolbar .button.raised.destructive-action:insensitive:backdrop,
       .toolbar .raised .button.destructive-action:insensitive:backdrop,
       .toolbar GtkComboBox .destructive-action.button:insensitive:backdrop,
       .spinbutton.vertical .button.destructive-action:insensitive:backdrop {
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(33, 36, 36, 0.5);
         background-image: linear-gradient(to bottom, rgba(57, 63, 63, 0)); }
     .button.destructive-action GtkLabel:backdrop:insensitive,
     .toolbar .button.raised.destructive-action GtkLabel:backdrop:insensitive,
@@ -349,15 +349,16 @@ GtkGrid:insensitive {
 .button.titlebutton {
   padding: 9px;
   border-width: 0;
-  background-image: none; }
+  background-image: none;
+  box-shadow: none; }
   .button.titlebutton:hover {
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid #212424;
     background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(51, 51, 51, 0.6), 0 1px rgba(51, 51, 51, 0.6); }
+    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
   .button.titlebutton:active {
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid #212424;
     background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424);
     box-shadow: inset 0 1px 2px black; }
 
@@ -416,7 +417,7 @@ GtkComboBox {
   border-radius: 7px 7px 0 0;
   background-color: transparent;
   background-image: linear-gradient(to bottom, #3e4444, #2d3232);
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(51, 51, 51, 0.6);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.6), inset 0 1px rgba(238, 238, 236, 0.1);
   padding: 6px; }
   .header-bar:backdrop {
     background-image: none;
@@ -434,10 +435,10 @@ GtkComboBox {
     border-width: 0 1px;
     border-style: solid;
     border-color: transparent;
-    border-image: -gtk-scaled(url("assets/header-separator.png"), url("assets/header-separator@2.png")) 0 1 0 1/0 1px 0 1px stretch; }
+    border-image: -gtk-scaled(url("assets/header-separator-dark.png"), url("assets/header-separator-dark@2.png")) 0 1 0 1/0 1px 0 1px stretch; }
   .header-bar.selection-mode {
     color: #1c5187;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px rgba(0, 0, 0, 0.6);
     background-image: linear-gradient(to bottom, #3583d5, #2b7bcf); }
 
 .window-frame.tiled .header-bar {
@@ -457,7 +458,7 @@ GtkPopover {
   border-color: black;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
   margin: 10px;
   padding: 2px; }
   GtkPopover:backdrop {
@@ -480,11 +481,11 @@ GtkPopover {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
   border-width: 0px;
-  box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.05), 0 0 0 1px transparent;
   /* this is used for the resize cursor area */
   margin: 10px; }
   .window-frame:backdrop {
-    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px transparent; }
   .window-frame.tiled {
     border-radius: 0;
     background-color: #393f3f; }

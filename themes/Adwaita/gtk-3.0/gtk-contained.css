@@ -349,7 +349,8 @@ GtkGrid:insensitive {
 .button.titlebutton {
   padding: 9px;
   border-width: 0;
-  background-image: none; }
+  background-image: none;
+  box-shadow: none; }
   .button.titlebutton:hover {
     padding: 8px;
     border: 1px solid #a1a1a1;
