@@ -270,6 +270,20 @@ GtkGrid:insensitive {
   }
 }
 
+.button.titlebutton {
+  padding: 9px;
+  border-width: 0;
+  background-image: none;
+  &:hover {
+    padding: 8px;
+    @include button_normal($theme_bg_color);
+  }
+  &:active {
+    padding: 8px;
+    @include button_active($theme_bg_color);
+  }
+}
+
 .linked .button {
   @extend .button;
   padding: 6px;

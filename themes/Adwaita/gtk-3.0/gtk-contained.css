@@ -328,6 +328,21 @@ GtkGrid:insensitive {
     .spinbutton.vertical .button.destructive-action GtkLabel:backdrop:insensitive {
       color: rgba(116, 132, 137, 0.5); }
 
+.button.titlebutton {
+  padding: 9px;
+  border-width: 0;
+  background-image: none; }
+  .button.titlebutton:hover {
+    padding: 8px;
+    border: 1px solid #a1a1a1;
+    background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
+  .button.titlebutton:active {
+    padding: 8px;
+    border: 1px solid #a1a1a1;
+    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+    box-shadow: inset 0 1px 2px #a1a1a1; }
+
 .linked .button {
   padding: 6px;
   border-radius: 0;
