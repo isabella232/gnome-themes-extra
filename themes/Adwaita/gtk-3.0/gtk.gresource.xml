@@ -326,6 +326,8 @@
     <file preprocess="to-pixdata">assets/header-separator@2.png</file>
     <file preprocess="to-pixdata">assets/header-separator-dark.png</file>
     <file preprocess="to-pixdata">assets/header-separator-dark@2.png</file>
+    <file preprocess="to-pixdata">assets/spinner.svg</file>
+    <file preprocess="to-pixdata">assets/spinner-dark.svg</file>
     <file>gnome-applications.css</file>
     <file>gnome-applications-dark-overrides.css</file>
     <file>gtk-widgets.css</file>

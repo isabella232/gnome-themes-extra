@@ -456,3 +456,10 @@ GtkPopover GtkModelButton.button.check:inconsistent {
 .content-view.view {
     background-image: url("assets/noise-texture-dark.png");
 }
+
+/****************
+ * Spinner      *
+ ****************/
+.spinner {
+    -gtk-icon-source: url("assets/spinner-dark.svg");
+}

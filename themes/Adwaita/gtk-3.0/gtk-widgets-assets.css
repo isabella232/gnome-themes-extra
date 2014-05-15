@@ -485,3 +485,11 @@ GtkPopover GtkModelButton.button.check:inconsistent {
 .content-view.view {
     background-image: url("assets/noise-texture-light.png");
 }
+
+
+/****************
+ * Spinner      *
+ ****************/
+.spinner {
+    -gtk-icon-source: url("assets/spinner.svg");
+}
