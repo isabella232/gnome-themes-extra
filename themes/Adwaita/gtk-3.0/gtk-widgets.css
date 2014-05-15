@@ -2345,6 +2345,7 @@ GtkTreeMenu .menuitem,
 /* this controls the general appearance of the menubar */
 .menubar {
     border-style: none;
+    background-color: @theme_bg_color;
 
     -GtkWidget-window-dragging: true;
 }
