@@ -246,7 +246,7 @@ GtkGrid:insensitive {
     &.#{$b_type} {
       @include button_normal($b_color);
       color: $theme_base_color; 
-      &:active {
+      &:active, &:hover:active {
         @include button_active($b_color);
       }
       &:hover {
