@@ -305,6 +305,7 @@ GtkGrid:insensitive {
   padding: 9px;
   border-width: 0;
   background-image: none;
+  box-shadow: none;
   &:hover {
     padding: 8px;
     @include button_normal($theme_bg_color);
@@ -415,8 +416,14 @@ GtkComboBox {
     border-width: 0 1px;
     border-style: solid;
     border-color: transparent;
-    border-image: -gtk-scaled(url("assets/header-separator.png"),
+    @if $variant == 'light' {
+      border-image: -gtk-scaled(url("assets/header-separator.png"),
                   url("assets/header-separator@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
+    }
+    @else {
+      border-image: -gtk-scaled(url("assets/header-separator-dark.png"),
+                  url("assets/header-separator-dark@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
+    }
   }
   &.selection-mode {
     color: darken($theme_selected_bg_color, 15%);

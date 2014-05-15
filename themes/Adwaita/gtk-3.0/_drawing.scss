@@ -5,7 +5,12 @@
 // buttons
 
 @mixin button_normal ($c) {
-  border: 1px solid darken($c,30%);
+  @if $variant=='light' {
+    border: 1px solid darken($c,30%);
+  }
+  @else {
+    border: 1px solid darken($c,10%);
+  }
   background-image: linear-gradient(to bottom,
                                       lighten($c,10%),
                                       $c 40%,
@@ -18,7 +23,12 @@
 }
 
 @mixin button_hover ($c) {
-  border: 1px solid darken($c,30%);
+  @if $variant=='light' {
+    border: 1px solid darken($c,30%);
+  }
+  @else {
+    border: 1px solid darken($c,10%);
+  }
   background-image: linear-gradient(to bottom,
                                       lighten($c,14%),
                                       lighten($c,4%) 40%,
@@ -26,7 +36,12 @@
 }
 
 @mixin button_active ($c) {
-  border: 1px solid darken($c,30%);
+  @if $variant=='light' {
+    border: 1px solid darken($c,30%);
+  }
+  @else {
+    border: 1px solid darken($c,10%);
+  }
   background-image: linear-gradient(to bottom,
                                       darken($c,20%),
                                       darken($c,15%) 5%,
@@ -36,13 +51,23 @@
 }
 
 @mixin button_backdrop ($c) {
-  border: 1px solid darken($c,30%);
+    @if $variant=='light' {
+    border: 1px solid darken($c,30%);
+  }
+  @else {
+    border: 1px solid darken($c,10%);
+  }
   background-image: linear-gradient(to bottom, //single color gradient for transitions. Lapo hates me for this :)
                                       $c);
 }
 
 @mixin button_insensitive ($c) {
-  border: 1px solid darken($c,30%);
+    @if $variant=='light' {
+    border: 1px solid darken($c,30%);
+  }
+  @else {
+    border: 1px solid darken($c,10%);
+  }
   background-image: linear-gradient(to bottom,transparentize($c,0.5));
 }
 
