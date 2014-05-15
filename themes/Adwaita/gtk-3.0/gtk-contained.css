@@ -224,11 +224,15 @@ GtkGrid:insensitive {
     background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
     color: white; }
-    .button.suggested-action:active,
+    .button.suggested-action:active, .button.suggested-action:hover:active,
     .toolbar .button.raised.suggested-action:active,
+    .toolbar .button.raised.suggested-action:hover:active,
     .toolbar .raised .button.suggested-action:active,
+    .toolbar .raised .button.suggested-action:hover:active,
     .toolbar GtkComboBox .suggested-action.button:active,
-    .spinbutton.vertical .button.suggested-action:active {
+    .toolbar GtkComboBox .suggested-action.button:hover:active,
+    .spinbutton.vertical .button.suggested-action:active,
+    .spinbutton.vertical .button.suggested-action:hover:active {
       border: 1px solid #2b537d;
       background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
       box-shadow: inset 0 1px 2px #2b537d; }
@@ -276,11 +280,15 @@ GtkGrid:insensitive {
     background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
     color: white; }
-    .button.destructive-action:active,
+    .button.destructive-action:active, .button.destructive-action:hover:active,
     .toolbar .button.raised.destructive-action:active,
+    .toolbar .button.raised.destructive-action:hover:active,
     .toolbar .raised .button.destructive-action:active,
+    .toolbar .raised .button.destructive-action:hover:active,
     .toolbar GtkComboBox .destructive-action.button:active,
-    .spinbutton.vertical .button.destructive-action:active {
+    .toolbar GtkComboBox .destructive-action.button:hover:active,
+    .spinbutton.vertical .button.destructive-action:active,
+    .spinbutton.vertical .button.destructive-action:hover:active {
       border: 1px solid #760909;
       background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010);
       box-shadow: inset 0 1px 2px #760909; }
