@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
+   width="16"
+   height="16"
    id="svg27179"
    version="1.1"
-   inkscape:version="0.48+devel r13295"
-   sodipodi:docname="spinner.svg">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 15">
   <defs
      id="defs27181">
     <radialGradient
@@ -147,8 +147,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="4.6163714"
-     inkscape:cy="10.426167"
+     inkscape:cx="5.522675"
+     inkscape:cy="-0.6760138"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -160,8 +160,8 @@
      inkscape:showpageshadow="false"
      inkscape:window-width="1498"
      inkscape:window-height="1267"
-     inkscape:window-x="802"
-     inkscape:window-y="65"
+     inkscape:window-x="2560"
+     inkscape:window-y="39"
      inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
@@ -187,10 +187,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(39.9998,-1120.3622)">
+     transform="translate(39.9998,-1136.3622)">
     <g
        style="display:inline"
-       transform="matrix(2,0,0,2,-79.9998,568.3622)"
+       transform="translate(-59.9998,860.3622)"
        id="spinner"
        inkscape:label="spinner">
       <rect
@@ -207,7 +207,7 @@
          transform="matrix(0.36769992,0,0,0.3599176,203.84779,-218.84768)">
         <path
            transform="matrix(0.16503219,0.63797925,-0.61796348,0.17151495,-362.96381,1382.7636)"
-           d="M -3.4436513,184.72075 A 22.98097,22.98097 0 1 1 -25.809396,156.45789"
+           d="m -3.4436513,184.72075 c -2.9171108,12.35226 -15.2953817,20.00096 -27.6476417,17.08385 -12.35226,-2.91711 -20.00096,-15.29538 -17.083849,-27.64764 2.449452,-10.372 11.708437,-17.69907 22.365746,-17.69907"
            sodipodi:ry="22.98097"
            sodipodi:rx="22.98097"
            sodipodi:cy="179.43886"
@@ -235,7 +235,7 @@
            sodipodi:cy="179.43886"
            sodipodi:rx="22.98097"
            sodipodi:ry="22.98097"
-           d="M -3.4436513,184.72075 A 22.98097,22.98097 0 1 1 -25.809396,156.45789"
+           d="m -3.4436513,184.72075 c -2.9171108,12.35226 -15.2953817,20.00096 -27.6476417,17.08385 -12.35226,-2.91711 -20.00096,-15.29538 -17.083849,-27.64764 2.449452,-10.372 11.708437,-17.69907 22.365746,-17.69907"
            transform="matrix(-0.64028167,0.01508167,-0.01475182,-0.66372654,-491.96704,1516.643)" />
       </g>
     </g>

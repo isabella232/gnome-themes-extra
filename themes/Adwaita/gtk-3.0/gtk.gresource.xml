@@ -326,6 +326,7 @@
     <file preprocess="to-pixdata">assets/header-separator@2.png</file>
     <file preprocess="to-pixdata">assets/header-separator-dark.png</file>
     <file preprocess="to-pixdata">assets/header-separator-dark@2.png</file>
+    <file preprocess="to-pixdata">assets/spinner.svg</file>
     <file>gtk.css</file>
     <file>gtk-dark.css</file>
     <file>gtk-contained.css</file>
