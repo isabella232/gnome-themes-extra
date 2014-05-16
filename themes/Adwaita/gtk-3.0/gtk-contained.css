@@ -168,6 +168,8 @@ GtkGrid:insensitive {
   background-color: #ededed;
   background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+  text-shadow: 0 1px white;
+  icon-shadow: 0 1px white;
   /* Suggested and Destructive Action buttons */ }
   .button:hover,
   .toolbar .button.raised:hover,
@@ -178,6 +180,8 @@ GtkGrid:insensitive {
     background-color: #ededed;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed); }
   .button:active,
   .toolbar .button.raised:active,
@@ -188,8 +192,12 @@ GtkGrid:insensitive {
     background-color: #ededed;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray); }
+    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+    text-shadow: 0 1px #ededed;
+    icon-shadow: 0 1px #ededed; }
   .button:backdrop,
   .toolbar .button.raised:backdrop,
   .toolbar .raised .button:backdrop,
@@ -199,8 +207,12 @@ GtkGrid:insensitive {
     background-color: #ededed;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     background-image: none;
     box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
     color: #748489; }
     .button:backdrop:active,
     .toolbar .button.raised:backdrop:active,
@@ -211,8 +223,12 @@ GtkGrid:insensitive {
       background-color: lightgray;
       background-image: linear-gradient(to bottom, #ededed, lightgray 40%, #bababa);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       background-image: none;
       box-shadow: none;
+      text-shadow: none;
+      icon-shadow: none;
       box-shadow: none;
       border: 1px solid #a1a1a1;
       color: #2e3436; }
@@ -225,9 +241,13 @@ GtkGrid:insensitive {
     background-color: #ededed;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     box-shadow: 0 1px rgba(255, 255, 255, 0.05);
     background-color: rgba(237, 237, 237, 0.5);
-    background-image: none; }
+    background-image: none;
+    text-shadow: none;
+    icon-shadow: none; }
     .button:insensitive:active,
     .toolbar .button.raised:insensitive:active,
     .toolbar .raised .button:insensitive:active,
@@ -237,9 +257,13 @@ GtkGrid:insensitive {
       background-color: #ededed;
       background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       box-shadow: 0 1px rgba(255, 255, 255, 0.05);
       background-color: rgba(237, 237, 237, 0.5);
       background-image: none;
+      text-shadow: none;
+      icon-shadow: none;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05); }
   .button:backdrop:insensitive,
   .toolbar .button.raised:backdrop:insensitive,
@@ -250,9 +274,13 @@ GtkGrid:insensitive {
     background-color: rgba(237, 237, 237, 0.5);
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(237, 237, 237, 0.5) 40%, rgba(211, 211, 211, 0.5));
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px rgba(255, 255, 255, 0.05);
     background-color: rgba(237, 237, 237, 0);
-    background-image: none; }
+    background-image: none;
+    text-shadow: none;
+    icon-shadow: none; }
   .button.suggested-action,
   .toolbar .button.raised.suggested-action,
   .toolbar .raised .button.suggested-action,
@@ -262,6 +290,8 @@ GtkGrid:insensitive {
     background-color: #729fcf;
     background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     color: white; }
     .button.suggested-action:active, .button.suggested-action:hover:active,
     .toolbar .button.raised.suggested-action:active,
@@ -276,8 +306,12 @@ GtkGrid:insensitive {
       background-color: #729fcf;
       background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-      background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2); }
+      background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
+      text-shadow: 0 1px #729fcf;
+      icon-shadow: 0 1px #729fcf; }
     .button.suggested-action:hover,
     .toolbar .button.raised.suggested-action:hover,
     .toolbar .raised .button.suggested-action:hover,
@@ -287,6 +321,8 @@ GtkGrid:insensitive {
       background-color: #729fcf;
       background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       background-image: linear-gradient(to bottom, #a7c3e1, #81a9d4 40%, #729fcf); }
     .button.suggested-action:backdrop,
     .toolbar .button.raised.suggested-action:backdrop,
@@ -297,8 +333,12 @@ GtkGrid:insensitive {
       background-color: #729fcf;
       background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       background-image: none;
-      box-shadow: none; }
+      box-shadow: none;
+      text-shadow: none;
+      icon-shadow: none; }
     .button.suggested-action:insensitive,
     .toolbar .button.raised.suggested-action:insensitive,
     .toolbar .raised .button.suggested-action:insensitive,
@@ -309,9 +349,13 @@ GtkGrid:insensitive {
       background-color: #ededed;
       background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       box-shadow: 0 1px rgba(255, 255, 255, 0.05);
       background-color: rgba(237, 237, 237, 0.5);
-      background-image: none; }
+      background-image: none;
+      text-shadow: none;
+      icon-shadow: none; }
       .button.suggested-action:insensitive:backdrop,
       .toolbar .button.raised.suggested-action:insensitive:backdrop,
       .toolbar .raised .button.suggested-action:insensitive:backdrop,
@@ -321,9 +365,13 @@ GtkGrid:insensitive {
         background-color: rgba(237, 237, 237, 0.5);
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(237, 237, 237, 0.5) 40%, rgba(211, 211, 211, 0.5));
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+        icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
         box-shadow: 0 1px rgba(255, 255, 255, 0.05);
         background-color: rgba(237, 237, 237, 0);
-        background-image: none; }
+        background-image: none;
+        text-shadow: none;
+        icon-shadow: none; }
     .button.suggested-action GtkLabel:backdrop:insensitive,
     .toolbar .button.raised.suggested-action GtkLabel:backdrop:insensitive,
     .toolbar .raised .button.suggested-action GtkLabel:backdrop:insensitive,
@@ -339,6 +387,8 @@ GtkGrid:insensitive {
     background-color: #ef2929;
     background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     color: white; }
     .button.destructive-action:active, .button.destructive-action:hover:active,
     .toolbar .button.raised.destructive-action:active,
@@ -353,8 +403,12 @@ GtkGrid:insensitive {
       background-color: #ef2929;
       background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-      background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010); }
+      background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010);
+      text-shadow: 0 1px #ef2929;
+      icon-shadow: 0 1px #ef2929; }
     .button.destructive-action:hover,
     .toolbar .button.raised.destructive-action:hover,
     .toolbar .raised .button.destructive-action:hover,
@@ -364,6 +418,8 @@ GtkGrid:insensitive {
       background-color: #ef2929;
       background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       background-image: linear-gradient(to bottom, #f46b6b, #f03c3c 40%, #ef2929); }
     .button.destructive-action:backdrop,
     .toolbar .button.raised.destructive-action:backdrop,
@@ -374,8 +430,12 @@ GtkGrid:insensitive {
       background-color: #ef2929;
       background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       background-image: none;
-      box-shadow: none; }
+      box-shadow: none;
+      text-shadow: none;
+      icon-shadow: none; }
     .button.destructive-action:insensitive,
     .toolbar .button.raised.destructive-action:insensitive,
     .toolbar .raised .button.destructive-action:insensitive,
@@ -386,9 +446,13 @@ GtkGrid:insensitive {
       background-color: #ededed;
       background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+      text-shadow: 0 1px white;
+      icon-shadow: 0 1px white;
       box-shadow: 0 1px rgba(255, 255, 255, 0.05);
       background-color: rgba(237, 237, 237, 0.5);
-      background-image: none; }
+      background-image: none;
+      text-shadow: none;
+      icon-shadow: none; }
       .button.destructive-action:insensitive:backdrop,
       .toolbar .button.raised.destructive-action:insensitive:backdrop,
       .toolbar .raised .button.destructive-action:insensitive:backdrop,
@@ -398,9 +462,13 @@ GtkGrid:insensitive {
         background-color: rgba(237, 237, 237, 0.5);
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(237, 237, 237, 0.5) 40%, rgba(211, 211, 211, 0.5));
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+        icon-shadow: 0 1px rgba(255, 255, 255, 0.5);
         box-shadow: 0 1px rgba(255, 255, 255, 0.05);
         background-color: rgba(237, 237, 237, 0);
-        background-image: none; }
+        background-image: none;
+        text-shadow: none;
+        icon-shadow: none; }
     .button.destructive-action GtkLabel:backdrop:insensitive,
     .toolbar .button.raised.destructive-action GtkLabel:backdrop:insensitive,
     .toolbar .raised .button.destructive-action GtkLabel:backdrop:insensitive,
@@ -436,15 +504,21 @@ GtkGrid:insensitive {
     border: 1px solid #a1a1a1;
     background-color: #ededed;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white; }
   .button.titlebutton:active {
     padding: 8px;
     border: 1px solid #a1a1a1;
     background-color: #ededed;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
+    text-shadow: 0 1px white;
+    icon-shadow: 0 1px white;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray); }
+    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+    text-shadow: 0 1px #ededed;
+    icon-shadow: 0 1px #ededed; }
 
 .linked .button {
   padding: 6px;
