@@ -214,7 +214,7 @@ GtkGrid:insensitive {
 .spinbutton.vertical .button {
   border-radius: 3px;
   transition: all 200ms ease-out;
-  padding: 2px 4px;
+  padding: 4px;
   background-color: transparent;
   @include button_normal($theme_bg_color);
   &:hover {

@@ -4,6 +4,8 @@
 
 $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on 
                                              //most widgets, not working
+                                             //since gtk doesn't draw (yet?)
+                                             //outside the widget itself.
 
 // buttons
 
@@ -26,8 +28,6 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       $c 40%,
                                       darken($c,10%)
                                       );
-  // this doesn't work for the edge highlight
-  // right now due to gtk not allocating external space
   @include button-box-shadow(inset 0 1px $borders_edge, 
                              $widget_bottom_hilight);
 }
