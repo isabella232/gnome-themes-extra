@@ -166,7 +166,7 @@ GtkGrid:insensitive {
 
 .spinner {
      background-image: none;
-     brackground-color: transparent;
+     background-color: transparent;
      opacity: 0; /* non spinning spinner makes no sense */
 }
   .spinner:active {
