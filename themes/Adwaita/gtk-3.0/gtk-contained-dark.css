@@ -1,575 +1,82 @@
-debug {
-  background-color: red; }
+/*
+Syntax error: Undefined variable: "$borders_color".
+        on line 493 of _common.scss
+        from line 23 of ./gtk-contained-dark.scss
 
-* {
-  engine: adwaita;
-  padding: 0;
-  background-clip: padding-box;
-  -GtkToolButton-icon-spacing: 4;
-  -GtkTextView-error-underline-color: #cc0000;
-  -GtkPaned-handle-size: 5;
-  -GtkCheckButton-indicator-size: 16;
-  -GtkCheckMenuItem-indicator-size: 12;
-  /* The size for scrollbars. The slider is 2px smaller, but we keep it
-   * up so that the whole area is sensitive to button presses for the
-   * slider. The stepper button is larger in both directions, the slider
-   * only in the width
-   */
-  -GtkScrolledWindow-scrollbar-spacing: 0;
-  -GtkScrolledWindow-scrollbars-within-bevel: 1;
-  -GtkToolItemGroup-expander-size: 11;
-  -GtkExpander-expander-size: 11;
-  -GtkTreeView-expander-size: 11;
-  -GtkTreeView-horizontal-separator: 4;
-  -GtkMenu-horizontal-padding: 0;
-  -GtkMenu-vertical-padding: 0;
-  -GtkWidget-link-color: #4a90d9;
-  -GtkWidget-visited-link-color: #4a90d9;
-  -GtkWidget-focus-padding: 2;
-  -GtkWidget-focus-line-width: 1;
-  -GtkWindow-resize-grip-width: 0;
-  -GtkWindow-resize-grip-height: 0;
-  outline-color: rgba(238, 238, 236, 0.7);
-  outline-style: dashed;
-  outline-offset: 2px; }
-
-/***************
- * Base States *
- ***************/
-.background {
-  color: #eeeeec;
-  background-color: #393f3f; }
-
-.background:backdrop {
-  /* I want everything nice and flat in the unfocused window */
-  text-shadow: none;
-  icon-shadow: none;
-  color: white; }
-
-*:selected,
-*:selected:focus {
-  background-color: #2a76c6;
-  color: white; }
-
-*:selected:backdrop {
-  background-color: #2a76c6;
-  color: white; }
-
-*:insensitive {
-  background-color: transparent;
-  color: white;
-  border-color: #090909; }
-
-*:insensitive:backdrop {
-  /* I want everything nice and flat in the unfocused window */
-  text-shadow: none;
-  icon-shadow: none;
-  color: white; }
-
-/* Apply effects to insensitive and prelit images */
-*:insensitive {
-  -gtk-image-effect: dim; }
-
-*:hover {
-  -gtk-image-effect: highlight; }
-
-*:hover {
-  -gtk-image-effect: highlight; }
-
-.gtkstyle-fallback {
-  background-color: #393f3f;
-  color: #eeeeec; }
-
-.gtkstyle-fallback:prelight {
-  background-color: #515a5a;
-  color: #eeeeec; }
-
-.gtkstyle-fallback:active {
-  background-color: #212424;
-  color: #eeeeec; }
-
-.gtkstyle-fallback:insensitive {
-  background-color: transparent;
-  color: white; }
-
-.gtkstyle-fallback:selected {
-  background-color: #2a76c6;
-  color: white; }
-
-GtkImage,
-GtkImage:insensitive,
-GtkLabel,
-GtkLabel:insensitive,
-GtkBox,
-GtkBox:insensitive,
-GtkGrid,
-GtkGrid:insensitive {
-  background-color: transparent; }
-
-@keyframes spin {
-  to {
-    -gtk-icon-transform: rotate(1turn); } }
-.spinner {
-  background-image: none;
-  background-color: blue;
-  opacity: 0;
-  /* non spinning spinner makes no sense */
-  -gtk-icon-source: url("assets/spinner.svg"); }
-  .spinner:active {
-    opacity: 1;
-    animation: spin 1s linear infinite; }
-    .spinner:active:insensitive {
-      opacity: 0.5; }
-
-/****************
- * Text Entries *
- ****************/
-.entry, .linked .entry {
-  padding: 4px;
-  color: #eeeeec;
-  border-radius: 3px;
-  transition: all 200ms ease-out;
-  border: 1px solid black;
-  background-image: linear-gradient(to bottom, black 1%, #1a1a1a 10%, #333333);
-  background-color: transparent; }
-  .entry:insensitive, .entry:backdrop:insensitive {
-    color: white;
-    background-image: none;
-    background-color: transparent;
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    /* doesn't have margin to paint on :( */ }
-  .entry:focus {
-    border-color: #2a76c6;
-    box-shadow: inset 0 0 2px 1px rgba(42, 118, 198, 0.5); }
-  .entry GtkLabel, .linked .entry GtkLabel {
-    text-shadow: 0 1px red; }
-
-.linked .entry:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right-width: 0; }
-.linked .entry:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
-
-/***********
- * Buttons *
- ***********/
-.button, .linked .button, GtkComboBox .button,
-.toolbar .button.raised,
-.toolbar .raised .button,
-.toolbar GtkComboBox .button,
-.spinbutton.vertical .button {
-  border-radius: 3px;
-  transition: all 200ms ease-out;
-  padding: 2px 4px;
-  background-color: transparent;
-  border: 1px solid #212424;
-  background-color: #393f3f;
-  background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-  box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-  /* Suggested and Destructive Action buttons */ }
-  .button:hover,
-  .toolbar .button.raised:hover,
-  .toolbar .raised .button:hover,
-  .toolbar GtkComboBox .button:hover,
-  .spinbutton.vertical .button:hover {
-    border: 1px solid #212424;
-    background-color: #393f3f;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f); }
-  .button:active,
-  .toolbar .button.raised:active,
-  .toolbar .raised .button:active,
-  .toolbar GtkComboBox .button:active,
-  .spinbutton.vertical .button:active {
-    border: 1px solid #212424;
-    background-color: #393f3f;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(238, 238, 236, 0.1);
-    background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424); }
-  .button:backdrop,
-  .toolbar .button.raised:backdrop,
-  .toolbar .raised .button:backdrop,
-  .toolbar GtkComboBox .button:backdrop,
-  .spinbutton.vertical .button:backdrop {
-    border: 1px solid #212424;
-    background-color: #393f3f;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    background-image: none;
-    box-shadow: none;
-    color: white; }
-    .button:backdrop:active,
-    .toolbar .button.raised:backdrop:active,
-    .toolbar .raised .button:backdrop:active,
-    .toolbar GtkComboBox .button:backdrop:active,
-    .spinbutton.vertical .button:backdrop:active {
-      border: 1px solid #090909;
-      background-color: #212424;
-      background-image: linear-gradient(to bottom, #393f3f, #212424 40%, #090909);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: none;
-      box-shadow: none;
-      box-shadow: none;
-      border: 1px solid black;
-      color: #eeeeec; }
-  .button:insensitive,
-  .toolbar .button.raised:insensitive,
-  .toolbar .raised .button:insensitive,
-  .toolbar GtkComboBox .button:insensitive,
-  .spinbutton.vertical .button:insensitive {
-    border: 1px solid #212424;
-    background-color: #393f3f;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-    background-color: rgba(57, 63, 63, 0.5);
-    background-image: none; }
-    .button:insensitive:active,
-    .toolbar .button.raised:insensitive:active,
-    .toolbar .raised .button:insensitive:active,
-    .toolbar GtkComboBox .button:insensitive:active,
-    .spinbutton.vertical .button:insensitive:active {
-      border: 1px solid #212424;
-      background-color: #393f3f;
-      background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-      background-color: rgba(57, 63, 63, 0.5);
-      background-image: none;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(238, 238, 236, 0.1); }
-  .button:backdrop:insensitive,
-  .toolbar .button.raised:backdrop:insensitive,
-  .toolbar .raised .button:backdrop:insensitive,
-  .toolbar GtkComboBox .button:backdrop:insensitive,
-  .spinbutton.vertical .button:backdrop:insensitive {
-    border: 1px solid rgba(33, 36, 36, 0.5);
-    background-color: rgba(57, 63, 63, 0.5);
-    background-image: linear-gradient(to bottom, rgba(81, 90, 90, 0.5), rgba(57, 63, 63, 0.5) 40%, rgba(33, 36, 36, 0.5));
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-    background-color: rgba(57, 63, 63, 0);
-    background-image: none; }
-  .button.suggested-action,
-  .toolbar .button.raised.suggested-action,
-  .toolbar .raised .button.suggested-action,
-  .toolbar GtkComboBox .suggested-action.button,
-  .spinbutton.vertical .button.suggested-action {
-    border: 1px solid #215d9c;
-    background-color: #2a76c6;
-    background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    color: #333333; }
-    .button.suggested-action:active, .button.suggested-action:hover:active,
-    .toolbar .button.raised.suggested-action:active,
-    .toolbar .button.raised.suggested-action:hover:active,
-    .toolbar .raised .button.suggested-action:active,
-    .toolbar .raised .button.suggested-action:hover:active,
-    .toolbar GtkComboBox .suggested-action.button:active,
-    .toolbar GtkComboBox .suggested-action.button:hover:active,
-    .spinbutton.vertical .button.suggested-action:active,
-    .spinbutton.vertical .button.suggested-action:hover:active {
-      border: 1px solid #215d9c;
-      background-color: #2a76c6;
-      background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: linear-gradient(to bottom, #184472, #1c5187 5%, #215d9c); }
-    .button.suggested-action:hover,
-    .toolbar .button.raised.suggested-action:hover,
-    .toolbar .raised .button.suggested-action:hover,
-    .toolbar GtkComboBox .suggested-action.button:hover,
-    .spinbutton.vertical .button.suggested-action:hover {
-      border: 1px solid #215d9c;
-      background-color: #2a76c6;
-      background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: linear-gradient(to bottom, #5b9add, #3180d4 40%, #2a76c6); }
-    .button.suggested-action:backdrop,
-    .toolbar .button.raised.suggested-action:backdrop,
-    .toolbar .raised .button.suggested-action:backdrop,
-    .toolbar GtkComboBox .suggested-action.button:backdrop,
-    .spinbutton.vertical .button.suggested-action:backdrop {
-      border: 1px solid #215d9c;
-      background-color: #2a76c6;
-      background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: none;
-      box-shadow: none; }
-    .button.suggested-action:insensitive,
-    .toolbar .button.raised.suggested-action:insensitive,
-    .toolbar .raised .button.suggested-action:insensitive,
-    .toolbar GtkComboBox .suggested-action.button:insensitive,
-    .spinbutton.vertical .button.suggested-action:insensitive {
-      color: white;
-      border: 1px solid #212424;
-      background-color: #393f3f;
-      background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-      background-color: rgba(57, 63, 63, 0.5);
-      background-image: none; }
-      .button.suggested-action:insensitive:backdrop,
-      .toolbar .button.raised.suggested-action:insensitive:backdrop,
-      .toolbar .raised .button.suggested-action:insensitive:backdrop,
-      .toolbar GtkComboBox .suggested-action.button:insensitive:backdrop,
-      .spinbutton.vertical .button.suggested-action:insensitive:backdrop {
-        border: 1px solid rgba(33, 36, 36, 0.5);
-        background-color: rgba(57, 63, 63, 0.5);
-        background-image: linear-gradient(to bottom, rgba(81, 90, 90, 0.5), rgba(57, 63, 63, 0.5) 40%, rgba(33, 36, 36, 0.5));
-        box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-        box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-        background-color: rgba(57, 63, 63, 0);
-        background-image: none; }
-    .button.suggested-action GtkLabel:backdrop:insensitive,
-    .toolbar .button.raised.suggested-action GtkLabel:backdrop:insensitive,
-    .toolbar .raised .button.suggested-action GtkLabel:backdrop:insensitive,
-    .toolbar GtkComboBox .suggested-action.button GtkLabel:backdrop:insensitive,
-    .spinbutton.vertical .button.suggested-action GtkLabel:backdrop:insensitive {
-      color: rgba(255, 255, 255, 0.5); }
-  .button.destructive-action,
-  .toolbar .button.raised.destructive-action,
-  .toolbar .raised .button.destructive-action,
-  .toolbar GtkComboBox .destructive-action.button,
-  .spinbutton.vertical .button.destructive-action {
-    border: 1px solid #a60c0c;
-    background-color: #d51010;
-    background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    color: #333333; }
-    .button.destructive-action:active, .button.destructive-action:hover:active,
-    .toolbar .button.raised.destructive-action:active,
-    .toolbar .button.raised.destructive-action:hover:active,
-    .toolbar .raised .button.destructive-action:active,
-    .toolbar .raised .button.destructive-action:hover:active,
-    .toolbar GtkComboBox .destructive-action.button:active,
-    .toolbar GtkComboBox .destructive-action.button:hover:active,
-    .spinbutton.vertical .button.destructive-action:active,
-    .spinbutton.vertical .button.destructive-action:hover:active {
-      border: 1px solid #a60c0c;
-      background-color: #d51010;
-      background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: linear-gradient(to bottom, #760909, #8e0b0b 5%, #a60c0c); }
-    .button.destructive-action:hover,
-    .toolbar .button.raised.destructive-action:hover,
-    .toolbar .raised .button.destructive-action:hover,
-    .toolbar GtkComboBox .destructive-action.button:hover,
-    .spinbutton.vertical .button.destructive-action:hover {
-      border: 1px solid #a60c0c;
-      background-color: #d51010;
-      background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: linear-gradient(to bottom, #f03c3c, #e81111 40%, #d51010); }
-    .button.destructive-action:backdrop,
-    .toolbar .button.raised.destructive-action:backdrop,
-    .toolbar .raised .button.destructive-action:backdrop,
-    .toolbar GtkComboBox .destructive-action.button:backdrop,
-    .spinbutton.vertical .button.destructive-action:backdrop {
-      border: 1px solid #a60c0c;
-      background-color: #d51010;
-      background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      background-image: none;
-      box-shadow: none; }
-    .button.destructive-action:insensitive,
-    .toolbar .button.raised.destructive-action:insensitive,
-    .toolbar .raised .button.destructive-action:insensitive,
-    .toolbar GtkComboBox .destructive-action.button:insensitive,
-    .spinbutton.vertical .button.destructive-action:insensitive {
-      color: white;
-      border: 1px solid #212424;
-      background-color: #393f3f;
-      background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-      box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-      box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-      background-color: rgba(57, 63, 63, 0.5);
-      background-image: none; }
-      .button.destructive-action:insensitive:backdrop,
-      .toolbar .button.raised.destructive-action:insensitive:backdrop,
-      .toolbar .raised .button.destructive-action:insensitive:backdrop,
-      .toolbar GtkComboBox .destructive-action.button:insensitive:backdrop,
-      .spinbutton.vertical .button.destructive-action:insensitive:backdrop {
-        border: 1px solid rgba(33, 36, 36, 0.5);
-        background-color: rgba(57, 63, 63, 0.5);
-        background-image: linear-gradient(to bottom, rgba(81, 90, 90, 0.5), rgba(57, 63, 63, 0.5) 40%, rgba(33, 36, 36, 0.5));
-        box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-        box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-        background-color: rgba(57, 63, 63, 0);
-        background-image: none; }
-    .button.destructive-action GtkLabel:backdrop:insensitive,
-    .toolbar .button.raised.destructive-action GtkLabel:backdrop:insensitive,
-    .toolbar .raised .button.destructive-action GtkLabel:backdrop:insensitive,
-    .toolbar GtkComboBox .destructive-action.button GtkLabel:backdrop:insensitive,
-    .spinbutton.vertical .button.destructive-action GtkLabel:backdrop:insensitive {
-      color: rgba(255, 255, 255, 0.5); }
-
-/* menu/popover buttons */
-.menuitem.button, .menuitem.button:active, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
-  color: #eeeeec;
-  background-color: transparent;
-  background-image: none;
-  border-color: transparent;
-  border-image: none;
-  border-style: none;
-  box-shadow: none; }
-  .menuitem.button:backdrop, .menuitem.button:backdrop:active:insensitive, .menuitem.button:hover:backdrop, .menuitem.button:insensitive:backdrop, .menuitem.button:active:insensitive:backdrop, .menuitem.button:active:backdrop, .menuitem.button:active:hover:backdrop, .menuitem.button:active:selected:backdrop {
-    text-shadow: none;
-    icon-shadow: none;
-    color: white;
-    background-color: transparent;
-    background-image: none;
-    border: none;
-    box-shadow: none; }
-
-.button.titlebutton {
-  padding: 9px;
-  border-width: 0;
-  background-image: none;
-  box-shadow: none; }
-  .button.titlebutton:hover {
-    padding: 8px;
-    border: 1px solid #212424;
-    background-color: #393f3f;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
-  .button.titlebutton:active {
-    padding: 8px;
-    border: 1px solid #212424;
-    background-color: #393f3f;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(238, 238, 236, 0.1);
-    background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424); }
-
-.linked .button {
-  padding: 6px;
-  border-radius: 0;
-  border-right-width: 0; }
-  .linked .button:first-child {
-    border-radius: 3px 0 0 3px;
-    border-width: 1px 0 1px 1px; }
-  .linked .button:last-child {
-    border-radius: 0 3px 3px 0;
-    border-width: 1px; }
-  .linked .button:only-child {
-    border-radius: 3px;
-    border-width: 1px; }
-
-.header-bar .button.text-button {
-  padding: 6px 8px 5px;
-  /* due to font metrics the image buttons are 1px shorter */ }
-.header-bar .button.image-button {
-  padding: 8px; }
-
-/**************
- * ComboBoxes *
- **************/
-GtkComboBox {
-  padding: 0;
-  -GtkComboBox-arrow-scaling: 0.5;
-  -GtkComboBox-shadow-type: none; }
-  GtkComboBox .separator {
-    /* always disable separators */
-    -GtkWidget-wide-separators: true;
-    -GtkWidget-horizontal-separator: 0;
-    -GtkWidget-vertical-separator: 0; }
-  GtkComboBox.combobox-entry .entry:first-child {
-    border-radius: 3px 0 0 3px;
-    border-right: 0; }
-  GtkComboBox.combobox-entry .button:first-child {
-    border-radius: 3px 0 0 3px; }
-  GtkComboBox.combobox-entry .entry:last-child {
-    border-radius: 0 3px 3px 0;
-    border-left: 0; }
-  GtkComboBox.combobox-entry .button:last-child {
-    border-radius: 0 3px 3px 0; }
-  GtkComboBox .linked .button, .linked GtkComboBox .button, GtkComboBox .button {
-    padding: 4px 6px; }
-
-/***************
- * Header bars *
- ***************/
-.header-bar {
-  border-width: 0 0 1px;
-  border-style: solid;
-  border-color: black;
-  border-radius: 7px 7px 0 0;
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #3e4444, #2d3232);
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.6), inset 0 1px rgba(238, 238, 236, 0.1);
-  padding: 6px; }
-  .header-bar:backdrop {
-    background-image: none;
-    background-color: #393f3f; }
-  .header-bar .title {
-    font: Bold;
-    padding: 0px 12px; }
-  .header-bar .subtitle {
-    font-size: 80%;
-    padding: 0 12px; }
-  .header-bar > GtkBox > .separator.vertical {
-    -GtkWidget-wide-separators: 1;
-    -GtkWidget-separator-width: 2px;
-    background-color: transparent;
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: transparent;
-    border-image: -gtk-scaled(url("assets/header-separator-dark.png"), url("assets/header-separator-dark@2.png")) 0 1 0 1/0 1px 0 1px stretch; }
-  .header-bar.selection-mode {
-    color: #1c5187;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.6);
-    background-image: linear-gradient(to bottom, #3583d5, #2b7bcf); }
-
-.window-frame.tiled .header-bar {
-  border-radius: 0;
-  /* FIXME doesn't work */ }
-
-/***************
- * Popovers   *
- ***************/
-GtkPopover {
-  border-radius: 5px;
-  background-clip: border-box;
-  /*
-  background-color: @osd_popover_bg;
-  */
-  background-color: #393f3f;
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
-  margin: 10px;
-  padding: 2px; }
-  GtkPopover:backdrop {
-    box-shadow: none; }
-  GtkPopover > .list, GtkPopover > .view, GtkPopover > .toolbar {
-    background-color: transparent; }
-  GtkPopover .separator {
-    font-size: 80%;
-    font-weight: bold;
-    color: rgba(238, 238, 236, 0.6);
-    text-shadow: none;
-    background-color: transparent;
-    icon-shadow: none;
-    border: 0; }
-
-/***************
- * WM Stuff    *
- ***************/
-.window-frame {
-  border-radius: 7px 7px 0 0;
-  /* lamefun trick to get rounded borders regardless of CSD use */
-  border-width: 0px;
-  box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.05), 0 0 0 1px transparent;
-  /* this is used for the resize cursor area */
-  margin: 10px; }
-  .window-frame:backdrop {
-    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px transparent; }
-  .window-frame.tiled {
-    border-radius: 0;
-    background-color: #393f3f; }
+Backtrace:
+_common.scss:493
+./gtk-contained-dark.scss:23
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:366:in `visit_prop'
+org/jruby/RubyBasicObject.java:1665:in `__send__'
+org/jruby/RubyKernel.java:2090:in `send'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `visit_rule'
+org/jruby/RubyArray.java:2361:in `map'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:389:in `visit_rule'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:387:in `visit_rule'
+org/jruby/RubyBasicObject.java:1665:in `__send__'
+org/jruby/RubyKernel.java:2090:in `send'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `visit_import'
+org/jruby/RubyArray.java:2361:in `map'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:297:in `visit_import'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:88:in `with_import'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:88:in `with_import'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
+org/jruby/RubyBasicObject.java:1665:in `__send__'
+org/jruby/RubyKernel.java:2090:in `send'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+org/jruby/RubyArray.java:2361:in `map'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:161:in `visit_children'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+org/jruby/RubyBasicObject.java:1665:in `__send__'
+org/jruby/RubyKernel.java:2090:in `send'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:151:in `visit'
+org/jruby/RubyBasicObject.java:1665:in `__send__'
+org/jruby/RubyKernel.java:2090:in `send'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:414:in `update_stylesheet'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:189:in `update_stylesheets'
+org/jruby/RubyArray.java:1613:in `each'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:393:in `on_file_changed'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/plugin/compiler.rb:248:in `watch'
+org/jruby/RubyProc.java:249:in `call'
+/usr/local/share/gems/gems/sass-3.3.7/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/usr/local/share/gems/gems/sass-3.3.7/vendor/listen/lib/listen/listener.rb:290:in `initialize_adapter'
+org/jruby/RubyProc.java:249:in `call'
+/usr/local/share/gems/gems/sass-3.3.7/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/usr/local/share/gems/gems/sass-3.3.7/vendor/listen/lib/listen/adapter.rb:299:in `start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$borders_color\".\A         on line 493 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }

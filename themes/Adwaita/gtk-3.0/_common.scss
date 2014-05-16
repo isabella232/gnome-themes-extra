@@ -482,6 +482,82 @@ GtkPopover {
     }
 }
 
+/*****************
+ * Notebooks and *
+ * Tabs          *
+ *****************/
+
+.notebook {
+  padding: 0;
+  border-style: solid;
+  border-color: $borders_color;
+  border-top: 1px solid $borders_color;
+
+  background-color: $theme_base_color;
+  -GtkNotebook-initial-gap: 10;
+  -GtkNotebook-arrow-spacing: 5;
+  -GtkNotebook-tab-curvature: 0;
+  -GtkNotebook-tab-overlap: 1;
+  -GtkNotebook-has-tab-gap: false;
+  -GtkWidget-focus-padding: 0;
+  -GtkWidget-focus-line-width: 0;
+}
+
+.notebook.frame {
+  border-width: 1px;
+}
+
+.notebook.header {
+  background-color: darken($theme_bg_color,5%);
+  box-shadow: inset 0 3px transparentize(black, 0.97), 
+              inset 0 2px transparentize(black, 0.97), 
+              inset 0 1px transparentize(black, 0.97);
+  border-width: 0px;
+}
+
+.notebook.header.frame {
+  border: 1px solid $borders_color;
+  &.top { border-bottom: none; };
+  &.bottom { border-top: none; };
+  &.right { border-left: none; };
+  &.left { border-right: none; }; 
+}
+
+.notebook tab { //tab sizing
+  border-width: 0;
+  background-color: transparent;
+  &.top, &.bottom { padding: 8px 20px; }; //horizontal tab sizing
+  &.left, &.right { padding: 5px 20px; }; //vertical tab sizing
+}
+
+.notebook tab GtkLabel { //tab text
+  font-weight: bold;
+  color: lighten($theme_fg_color,30%); //FIXME
+  &.active-page { color: $theme_fg_color; } //active tab text
+  &.prelight-page { color: lighten($theme_fg_color,15%); } //prelight tab text
+}
+
+.notebook tab GtkLabel.active-page {
+  color: $theme_fg_color;
+}
+
+.notebook tab { //tab indicator
+
+  $tab_indicator_size: 2px;
+  $active_tab_indicator: red; //FIXME
+  $prelight_tab_indicator: $borders_color; //FIXME
+
+  &.top:hover { box-shadow: inset 0 (-$tab_indicator_size) $prelight_tab_indicator; };
+  &.top:active { box-shadow: inset 0 (-$tab_indicator_size) $active_tab_indicator; };
+  &.bottom:hover { box-shadow: inset 0 $tab_indicator_size $prelight_tab_indicator; };
+  &.bottom:active { box-shadow: inset 0 $tab_indicator_size $active_tab_indicator; };
+  &.right:hover { box-shadow: inset $tab_indicator_size 0 $prelight_tab_indicator; };
+  &.right:active { box-shadow: inset $tab_indicator_size 0 $active_tab_indicator; };
+  &.left:hover { box-shadow: inset (-$tab_indicator_size) 0 $prelight_tab_indicator; };
+  &.left:active { box-shadow: inset (-$tab_indicator_size) 0 $active_tab_indicator; };
+  //with backdrop in the mix this will explode we need smarter code
+
+}
 
 /***************
  * WM Stuff    *
