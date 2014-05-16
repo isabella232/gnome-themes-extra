@@ -465,6 +465,8 @@ GtkGrid:insensitive {
   /* due to font metrics the image buttons are 1px shorter */ }
 .header-bar .button.image-button {
   padding: 8px; }
+.header-bar .button.titlebutton {
+  background-color: transparent; }
 
 /**************
  * ComboBoxes *
