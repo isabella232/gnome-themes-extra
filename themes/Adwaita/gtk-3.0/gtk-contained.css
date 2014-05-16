@@ -162,7 +162,7 @@ GtkGrid:insensitive {
 .spinbutton.vertical .button {
   border-radius: 3px;
   transition: all 200ms ease-out;
-  padding: 2px 4px;
+  padding: 4px;
   background-color: transparent;
   border: 1px solid #a1a1a1;
   background-color: #ededed;
