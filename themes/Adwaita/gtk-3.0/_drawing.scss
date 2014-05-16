@@ -2,7 +2,17 @@
 
 // generic drawing of more complex things
 
+$widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on 
+                                             //most widgets, not working
+
 // buttons
+
+@mixin button_box_shadow($shadow1, $shadow2:false) {
+  //needed to stack box shadows
+  $var: $shadow1;
+  @if $shadow2 {$var: $shadow1, $shadow2;}
+  box-shadow: $var;
+}
 
 @mixin button_normal ($c) {
   @if $variant=='light' {
@@ -11,6 +21,7 @@
   @else {
     border: 1px solid darken($c,10%);
   }
+  background-color: $c;
   background-image: linear-gradient(to bottom,
                                       lighten($c,10%),
                                       $c 40%,
@@ -18,17 +29,12 @@
                                       );
   // this doesn't work for the edge highlight
   // right now due to gtk not allocating external space
-  box-shadow: inset 0 1px $borders_edge, //top edge
-              0 1px $borders_edge; //not working
+  @include button-box-shadow(inset 0 1px $borders_edge, 
+                             $widget_bottom_hilight);
 }
 
 @mixin button_hover ($c) {
-  @if $variant=='light' {
-    border: 1px solid darken($c,30%);
-  }
-  @else {
-    border: 1px solid darken($c,10%);
-  }
+  @include button_normal($c);
   background-image: linear-gradient(to bottom,
                                       lighten($c,14%),
                                       lighten($c,4%) 40%,
@@ -36,39 +42,33 @@
 }
 
 @mixin button_active ($c) {
-  @if $variant=='light' {
-    border: 1px solid darken($c,30%);
-  }
-  @else {
-    border: 1px solid darken($c,10%);
-  }
+  @include button_normal($c);
+  @include button_box_shadow (inset 0 1px 2px transparentize(black,0.8),
+                              //box shadow for the pushed effect
+                              $widget_bottom_hilight);
   background-image: linear-gradient(to bottom,
                                       darken($c,20%),
                                       darken($c,15%) 5%,
                                       darken($c,10%));
-    
-  box-shadow: inset 0 1px 2px darken($c,30%);
 }
 
 @mixin button_backdrop ($c) {
-    @if $variant=='light' {
-    border: 1px solid darken($c,30%);
-  }
-  @else {
-    border: 1px solid darken($c,10%);
-  }
-  background-image: linear-gradient(to bottom, //single color gradient for transitions. Lapo hates me for this :)
-                                      $c);
+  @include button_normal($c);
+  background-image: none;
+  box-shadow: none;
 }
 
 @mixin button_insensitive ($c) {
-    @if $variant=='light' {
-    border: 1px solid darken($c,30%);
-  }
-  @else {
-    border: 1px solid darken($c,10%);
-  }
-  background-image: linear-gradient(to bottom,transparentize($c,0.5));
+  @include button_normal ($c);
+  @include button_box_shadow ($widget_bottom_hilight);
+  background-color: transparentize($c,0.5);
+  background-image: none;
+}
+
+@mixin button_insensitive_active ($c) {
+  @include button_insensitive ($c);
+  @include button_box_shadow (inset 0 1px 2px transparentize(black,0.8),
+		              $widget_bottom_hilight);
 }
 
 @mixin border-rounded() {

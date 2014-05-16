@@ -235,6 +235,9 @@ GtkGrid:insensitive {
   }
   &:insensitive {
     @include button_insensitive($theme_bg_color);
+    &:active {
+      @include button_insensitive_active($theme_bg_color);
+    }
   }
   &:backdrop:insensitive {
     @include button_insensitive(transparentize($theme_bg_color,0.5));
