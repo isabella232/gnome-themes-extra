@@ -9,9 +9,8 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
 @mixin button_box_shadow($shadow1, $shadow2:false) {
   //needed to stack box shadows
-  $var: $shadow1;
-  @if $shadow2 {$var: $shadow1, $shadow2;}
-  box-shadow: $var;
+  @if $shadow2 {box-shadow: $shadow1, $shadow2;}
+  @else { box-shadow: $shadow1; }
 }
 
 @mixin button_normal ($c) {
