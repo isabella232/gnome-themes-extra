@@ -345,6 +345,9 @@ GtkGrid:insensitive {
   &.image-button {
     padding: 8px; 
   }
+  &.titlebutton {
+    background-color: transparent; //we want the close button with no bg
+  }
 }
 
 /**************
