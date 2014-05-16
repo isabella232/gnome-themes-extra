@@ -2965,7 +2965,6 @@ EXTRA_DIST = \
 ./icons/scalable/apps-extra/tomboy.svg  \
 ./icons/scalable/apps-extra/totem.svg  \
 ./icons/scalable/apps/help-browser.svg  \
-./icons/scalable/apps/multimedia-volume-control.svg  \
 ./icons/scalable/apps/preferences-desktop-accessibility.svg  \
 ./icons/scalable/apps/preferences-desktop-font.svg  \
 ./icons/scalable/apps/preferences-desktop-keyboard.svg  \
