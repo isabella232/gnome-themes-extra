@@ -1,12 +1,16 @@
 /*
-Syntax error: Undefined variable: "$borders_color".
-        on line 490 of _common.scss
+Syntax error: Undefined variable: "$borders-color".
+        on line 161 of _common.scss
         from line 23 of ./gtk-contained-dark.scss
 
 Backtrace:
-_common.scss:490
+_common.scss:161
 ./gtk-contained-dark.scss:23
 /usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/list_literal.rb:62:in `_perform'
+org/jruby/RubyArray.java:2361:in `map'
+/usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/list_literal.rb:61:in `_perform'
 /usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
 /usr/local/share/gems/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:366:in `visit_prop'
 org/jruby/RubyBasicObject.java:1665:in `__send__'
@@ -79,4 +83,4 @@ org/jruby/RubyProc.java:249:in `call'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$borders_color\".\A         on line 490 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }
+  content: "Syntax error: Undefined variable: \"$borders-color\".\A         on line 161 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }
