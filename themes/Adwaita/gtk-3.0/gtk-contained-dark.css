@@ -1,5 +1,5 @@
 /*
-Syntax error: Undefined variable: "$borders-color".
+Syntax error: Undefined variable: "$borders_color".
         on line 161 of _common.scss
         from line 23 of ./gtk-contained-dark.scss
 
@@ -83,4 +83,4 @@ org/jruby/RubyProc.java:249:in `call'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$borders-color\".\A         on line 161 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }
+  content: "Syntax error: Undefined variable: \"$borders_color\".\A         on line 161 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }
