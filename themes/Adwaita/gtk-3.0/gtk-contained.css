@@ -190,7 +190,7 @@ GtkGrid:insensitive {
   .toolbar GtkComboBox .button:active,
   .spinbutton.vertical .button:active {
     background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
     border-width: 1px;
     border-style: solid;
     border-color: #a1a1a1;
@@ -245,7 +245,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       border-color: #a1a1a1;
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
       text-shadow: none;
       icon-shadow: none; }
   .button:backdrop:insensitive,
@@ -283,7 +283,7 @@ GtkGrid:insensitive {
     .spinbutton.vertical .button.suggested-action:active,
     .spinbutton.vertical .button.suggested-action:hover:active {
       background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
       border-width: 1px;
       border-style: solid;
       border-color: #2b537d;
@@ -367,7 +367,7 @@ GtkGrid:insensitive {
     .spinbutton.vertical .button.destructive-action:active,
     .spinbutton.vertical .button.destructive-action:hover:active {
       background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
       border-width: 1px;
       border-style: solid;
       border-color: #760909;
@@ -581,7 +581,7 @@ GtkPopover {
 
 .notebook.header {
   background-color: #e0e0e0;
-  box-shadow: inset 0 3px rgba(0, 0, 0, 0.1), inset 0 2px rgba(0, 0, 0, 0.1), inset 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 6px 3px -5px rgba(0, 0, 0, 0.2);
   border-width: 0px; }
 
 .notebook.header.frame {
@@ -662,7 +662,7 @@ GtkPopover {
     icon-shadow: 0 1px white; }
   .button.titlebutton:active {
     background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
     border-width: 1px;
     border-style: solid;
     border-color: #a1a1a1;
