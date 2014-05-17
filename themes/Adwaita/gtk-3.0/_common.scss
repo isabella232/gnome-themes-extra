@@ -58,14 +58,19 @@ debug {
     background-color: $theme_bg_color;
 }
 
-/* using these wildcard causes tons of problems, we need to avoid them as much as possible
-   commented for now
 .background:backdrop {
     text-shadow: none;
     icon-shadow: none;
 
     color: lighten($theme_fg_color,10%);
 }
+
+/*
+   These wildcard seems unavoidable, need to investigate.
+   Wildcards are bad and troublesome, use them with care,
+   or better, just don't.
+   Everytime a wildcard is used a kitten dies, painfully.
+*/
 
 *:selected,
 *:selected:focus {
@@ -78,18 +83,6 @@ debug {
     color: $theme_selected_fg_color;
 }
 
-*:insensitive {
-    background-color: $insensitive_bg_color;
-    color: $insensitive_fg_color;
-    border-color: darken($theme_bg_color,20%);
-}
-
-*:insensitive:backdrop {
-    text-shadow: none;
-    icon-shadow: none;
-    color: lighten($theme_fg_color,10%);
-}
-*/
 
 *:insensitive {
     -gtk-image-effect: dim;
@@ -135,10 +128,6 @@ GtkGrid:insensitive {
     background-color: transparent;
 }
 
-GtkLabel {        //this is a test
-  color: inherit;
-}
-
 // spinner animation
 
 @keyframes spin {
@@ -169,25 +158,34 @@ GtkLabel {        //this is a test
   color: $theme_fg_color;
   border-radius: 3px;
   transition: all 200ms ease-out;
-  border: 1px solid darken($theme_bg_color,30%);
+  border: 1px solid $borders-color;
   background-image: linear-gradient(to bottom,
-                                      darken($theme_base_color,20%) 1%,
-                                      darken($theme_base_color,10%) 10%,
-                                      $theme_base_color
+                                      darken($theme_base_color,5%) 0%,
+                                      $theme_base_color 90%
                                       );
-  background-color: transparent;
-  &:insensitive, &:backdrop:insensitive {
+  box-shadow: inset 0 2px 2px -2px transparentize(black,0.6),
+              0 1px $borders_edge; // not working 
+
+  background-color: transparent; // this needs to be 'transparent'
+                                 // if we need a flat bg, let's abuse a gradient
+
+  &:insensitive {
     color: $insensitive_fg_color;
     background-image: none;
     background-color: $insensitive_bg_color;
-    box-shadow: inset 0 1px $borders_edge,
-                0 1px $borders_edge; /* doesn't have margin to paint on :( */
+    box-shadow: 0 1px $borders_edge; // not working
   }
   &:focus {
     border-color: $theme_selected_bg_color;
-    box-shadow: inset 0 0 2px 1px transparentize($theme_selected_bg_color,.5);
+    box-shadow: inset 0 2px 2px -2px transparentize(black,0.6),
+                inset 0 0 0 1px $theme_selected_bg_color, /* focus indicator */
+                0 1px $borders_edge; /* not working */
   }
-  GtkLabel {
+  &:backdrop {
+    background-image: none;
+    box-shadow: none; /* let's make it flat */
+  }
+  GtkLabel { // what's this?
     text-shadow: 0 1px red;
   }  
 }
