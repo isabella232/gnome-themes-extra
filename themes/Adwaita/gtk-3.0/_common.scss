@@ -303,22 +303,6 @@ GtkGrid:insensitive {
   }
 }
 
-// Window Close button
-.button.titlebutton {
-  padding: 9px;
-  border-width: 0;
-  background-image: none;
-  box-shadow: none;
-  &:hover {
-    padding: 8px;
-    @include button_normal($theme_bg_color);
-  }
-  &:active {
-    padding: 8px;
-    @include button_active($theme_bg_color);
-  }
-}
-
 .linked .button {
   @extend .button;
   padding: 6px;
@@ -344,9 +328,6 @@ GtkGrid:insensitive {
   }
   &.image-button {
     padding: 8px; 
-  }
-  &.titlebutton {
-    background-color: transparent; //we want the close button with no bg
   }
 }
 
@@ -491,8 +472,6 @@ GtkPopover {
   padding: 0;
   border-style: solid;
   border-color: $borders_color;
-  border-top: 1px solid $borders_color;
-
   background-color: $theme_base_color;
   -GtkNotebook-initial-gap: 10;
   -GtkNotebook-arrow-spacing: 5;
@@ -509,9 +488,9 @@ GtkPopover {
 
 .notebook.header {
   background-color: darken($theme_bg_color,5%);
-  box-shadow: inset 0 3px transparentize(black, 0.97), 
-              inset 0 2px transparentize(black, 0.97), 
-              inset 0 1px transparentize(black, 0.97);
+  box-shadow: inset 0 3px transparentize(black, 0.9), 
+              inset 0 2px transparentize(black, 0.9), 
+              inset 0 1px transparentize(black, 0.9);
   border-width: 0px;
 }
 
@@ -544,7 +523,7 @@ GtkPopover {
 .notebook tab { //tab indicator
 
   $tab_indicator_size: 2px;
-  $active_tab_indicator: red; //FIXME
+  $active_tab_indicator: $theme_selected_bg_color; //FIXME
   $prelight_tab_indicator: $borders_color; //FIXME
 
   &.top:hover { box-shadow: inset 0 (-$tab_indicator_size) $prelight_tab_indicator; };
@@ -580,3 +559,23 @@ GtkPopover {
     background-color: $theme_bg_color;
   }
 }
+
+// Window Close button
+.button.titlebutton {
+  padding: 8px;
+  border-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  &:hover {
+    @include button_normal($theme_bg_color);
+  }
+  &:active {
+    @include button_active($theme_bg_color);
+  }
+  &:backdrop {
+    @include button_backdrop($theme_bg_color);
+    border-color: transparent;
+  }
+}
+
+
