@@ -40,38 +40,40 @@ debug {
   color: #2e3436;
   background-color: #ededed; }
 
+/* using these wildcard causes tons of problems, we need to avoid them as much as possible
+   commented for now
 .background:backdrop {
-  /* I want everything nice and flat in the unfocused window */
-  text-shadow: none;
-  icon-shadow: none;
-  color: #454f52; }
+    text-shadow: none;
+    icon-shadow: none;
+
+    color: lighten($theme_fg_color,10%);
+}
 
 *:selected,
 *:selected:focus {
-  background-color: #729fcf;
-  color: white; }
+    background-color: $theme_selected_bg_color;
+    color: $theme_selected_fg_color;
+}
 
 *:selected:backdrop {
-  background-color: #729fcf;
-  color: white; }
+    background-color: $theme_selected_bg_color;
+    color: $theme_selected_fg_color;
+}
 
 *:insensitive {
-  background-color: transparent;
-  color: #748489;
-  border-color: #bababa; }
+    background-color: $insensitive_bg_color;
+    color: $insensitive_fg_color;
+    border-color: darken($theme_bg_color,20%);
+}
 
 *:insensitive:backdrop {
-  /* I want everything nice and flat in the unfocused window */
-  text-shadow: none;
-  icon-shadow: none;
-  color: #454f52; }
-
-/* Apply effects to insensitive and prelit images */
+    text-shadow: none;
+    icon-shadow: none;
+    color: lighten($theme_fg_color,10%);
+}
+*/
 *:insensitive {
   -gtk-image-effect: dim; }
-
-*:hover {
-  -gtk-image-effect: highlight; }
 
 *:hover {
   -gtk-image-effect: highlight; }
@@ -105,6 +107,9 @@ GtkBox:insensitive,
 GtkGrid,
 GtkGrid:insensitive {
   background-color: transparent; }
+
+GtkLabel {
+  color: inherit; }
 
 @keyframes spin {
   to {
@@ -214,16 +219,30 @@ GtkGrid:insensitive {
     .toolbar .raised .button:backdrop:active,
     .toolbar GtkComboBox .button:backdrop:active,
     .spinbutton.vertical .button:backdrop:active {
-      background-image: linear-gradient(to bottom, lightgray);
+      background-image: linear-gradient(to bottom, #a1a1a1);
       border-width: 1px;
       border-style: solid;
-      border-color: #878787;
+      border-color: #a1a1a1;
       box-shadow: none;
       text-shadow: none;
       icon-shadow: none;
+      color: #ededed; }
+    .button:backdrop:insensitive,
+    .toolbar .button.raised:backdrop:insensitive,
+    .toolbar .raised .button:backdrop:insensitive,
+    .toolbar GtkComboBox .button:backdrop:insensitive,
+    .spinbutton.vertical .button:backdrop:insensitive {
+      color: rgba(116, 132, 137, 0.5);
+      border-color: #c7c7c7; }
+    .button:backdrop:insensitive:active,
+    .toolbar .button.raised:backdrop:insensitive:active,
+    .toolbar .raised .button:backdrop:insensitive:active,
+    .toolbar GtkComboBox .button:backdrop:insensitive:active,
+    .spinbutton.vertical .button:backdrop:insensitive:active {
+      background-image: linear-gradient(to bottom, #c7c7c7);
+      border-color: #c7c7c7;
       box-shadow: none;
-      border: 1px solid #a1a1a1;
-      color: #2e3436; }
+      color: #ededed; }
   .button:insensitive,
   .toolbar .button.raised:insensitive,
   .toolbar .raised .button:insensitive,
@@ -248,18 +267,6 @@ GtkGrid:insensitive {
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
       text-shadow: none;
       icon-shadow: none; }
-  .button:backdrop:insensitive,
-  .toolbar .button.raised:backdrop:insensitive,
-  .toolbar .raised .button:backdrop:insensitive,
-  .toolbar GtkComboBox .button:backdrop:insensitive,
-  .spinbutton.vertical .button:backdrop:insensitive {
-    background-image: linear-gradient(to bottom, rgba(237, 237, 237, 0));
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(161, 161, 161, 0.5);
-    box-shadow: 0 1px rgba(255, 255, 255, 0.05);
-    text-shadow: none;
-    icon-shadow: none; }
   .button.suggested-action,
   .toolbar .button.raised.suggested-action,
   .toolbar .raised .button.suggested-action,
@@ -428,6 +435,14 @@ GtkGrid:insensitive {
     .toolbar GtkComboBox .destructive-action.button GtkLabel:backdrop:insensitive,
     .spinbutton.vertical .button.destructive-action GtkLabel:backdrop:insensitive {
       color: rgba(116, 132, 137, 0.5); }
+
+/* GtkComboBoxes text color*/
+GtkComboBox:insensitive {
+  color: #748489; }
+GtkComboBox:backdrop {
+  color: #748489; }
+GtkComboBox:backdrop:insensitive {
+  color: rgba(116, 132, 137, 0.5); }
 
 /* menu/popover buttons */
 .menuitem.button, .menuitem.button:active, .menuitem.button:insensitive, .menuitem.button:active:insensitive {

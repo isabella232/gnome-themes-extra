@@ -58,8 +58,9 @@ debug {
     background-color: $theme_bg_color;
 }
 
+/* using these wildcard causes tons of problems, we need to avoid them as much as possible
+   commented for now
 .background:backdrop {
-    /* I want everything nice and flat in the unfocused window */
     text-shadow: none;
     icon-shadow: none;
 
@@ -84,20 +85,16 @@ debug {
 }
 
 *:insensitive:backdrop {
-    /* I want everything nice and flat in the unfocused window */
     text-shadow: none;
     icon-shadow: none;
     color: lighten($theme_fg_color,10%);
 }
+*/
 
-/* Apply effects to insensitive and prelit images */
 *:insensitive {
     -gtk-image-effect: dim;
 }
 
-*:hover {
-    -gtk-image-effect: highlight;
-}
 *:hover {
     -gtk-image-effect: highlight;
 }
@@ -136,6 +133,10 @@ GtkBox:insensitive,
 GtkGrid,
 GtkGrid:insensitive {
     background-color: transparent;
+}
+
+GtkLabel {        //this is a test
+  color: inherit;
 }
 
 // spinner animation
@@ -224,13 +225,22 @@ GtkGrid:insensitive {
     @include button_active($theme_bg_color);
   }
   &:backdrop {
+    // FIXME we need one or two backdrop colors
     @include button_backdrop($theme_bg_color);
     color: $insensitive_fg_color;
     &:active {
-      @include button_backdrop(darken($theme_bg_color, 10%));
+      @include button_backdrop_active($theme_bg_color);
+      color: $theme_bg_color;
+    }
+    &:insensitive {
+      color: transparentize($insensitive_fg_color,0.5);
+      border-color: darken($theme_bg_color,15%);
+    }
+    &:insensitive:active {
+      background-image: linear-gradient(to bottom, darken($theme_bg_color,15%));
+      border-color: darken($theme_bg_color,15%);
       box-shadow: none;
-      border: 1px solid darken($theme_bg_color,30%);
-      color: $theme_fg_color;
+      color: $theme_bg_color;
     }
   }
   &:insensitive {
@@ -239,9 +249,8 @@ GtkGrid:insensitive {
       @include button_insensitive_active($theme_bg_color);
     }
   }
-  &:backdrop:insensitive {
-    @include button_insensitive(transparentize($theme_bg_color,0.5));
-  }
+  // button label can't be colored easily, need to match for the GtkLabel
+  
   /* Suggested and Destructive Action buttons */
   @each $b_type, $b_color in  (suggested-action, $theme_selected_bg_color), 
                               (destructive-action, $destructive_color) {
@@ -270,6 +279,13 @@ GtkGrid:insensitive {
       }
     }
   }
+}
+
+/* GtkComboBoxes text color*/
+GtkComboBox {
+  &:insensitive { color: $insensitive_fg_color; }
+  &:backdrop { color: $insensitive_fg_color; }
+  &:backdrop:insensitive { color: transparentize($insensitive_fg_color,0.5); }
 }
 
 /* menu/popover buttons */
