@@ -76,6 +76,13 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   @include _button_text_shadow(none);
 }
 
+@mixin button_backdrop_active ($c) {
+  background-image: linear-gradient(to bottom, darken($c,30%));
+  @include _button_borders($c);
+  @include _button_box_shadow(none);
+  @include _button_text_shadow(none);
+}
+
 @mixin button_insensitive ($c) {
   background-image: linear-gradient(to bottom, transparentize($c,0.5));
   @include _button_borders($c);

@@ -1,10 +1,10 @@
 /*
 Syntax error: Undefined variable: "$borders_color".
-        on line 474 of _common.scss
+        on line 490 of _common.scss
         from line 23 of ./gtk-contained-dark.scss
 
 Backtrace:
-_common.scss:474
+_common.scss:490
 ./gtk-contained-dark.scss:23
 /usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/share/gems/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
@@ -79,4 +79,4 @@ org/jruby/RubyProc.java:249:in `call'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$borders_color\".\A         on line 474 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }
+  content: "Syntax error: Undefined variable: \"$borders_color\".\A         on line 490 of _common.scss\A         from line 23 of ./gtk-contained-dark.scss"; }
