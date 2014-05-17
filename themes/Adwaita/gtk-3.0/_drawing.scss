@@ -9,73 +9,86 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
 // buttons
 
-@mixin button_box_shadow($shadow1, $shadow2:false) {
+@mixin _button_borders ($c) {
+  border-width: 1px;
+  border-style: solid;
+  @if $variant=='light' {
+    border-color: darken($c,30%);
+  }
+  @else {
+    border-color: darken($c,10%);
+  }
+}
+
+@mixin _button_text_shadow ($c) {
+  @if $c==none { text-shadow: none; icon-shadow: none; }
+  @else {
+    text-shadow: 0 1px $c;
+    icon-shadow: 0 1px $c;
+  }
+}
+
+@mixin _button_box_shadow($shadow1, $shadow2:false) {
   //needed to stack box shadows
   @if $shadow2 {box-shadow: $shadow1, $shadow2;}
   @else { box-shadow: $shadow1; }
 }
 
 @mixin button_normal ($c) {
-  @if $variant=='light' {
-    border: 1px solid darken($c,30%);
-  }
-  @else {
-    border: 1px solid darken($c,10%);
-  }
-  background-color: $c;
   background-image: linear-gradient(to bottom,
                                       lighten($c,10%),
                                       $c 40%,
                                       darken($c,10%)
                                       );
-  @include button-box-shadow(inset 0 1px $borders_edge, 
-                             $widget_bottom_hilight);
-  text-shadow: 0 1px lighten($c,50%); //FIXME?
-  icon-shadow: 0 1px lighten($c,50%); //FIXME?
+  @include _button_borders($c);
+  @include _button-box-shadow(inset 0 1px $borders_edge, 
+                              $widget_bottom_hilight);
+  @include _button_text_shadow(lighten($c,50%));
 }
 
 @mixin button_hover ($c) {
-  @include button_normal($c);
   background-image: linear-gradient(to bottom,
                                       lighten($c,14%),
                                       lighten($c,4%) 40%,
                                       $c);
+  @include _button_borders($c);
+  @include _button-box-shadow(inset 0 1px $borders_edge, 
+                              $widget_bottom_hilight);
+  @include _button_text_shadow(lighten($c,50%));
 }
 
 @mixin button_active ($c) {
-  @include button_normal($c);
-  @include button_box_shadow (inset 0 1px 2px transparentize(black,0.8),
-                              //box shadow for the pushed effect
-                              $widget_bottom_hilight);
   background-image: linear-gradient(to bottom,
-                                      darken($c,20%),
-                                      darken($c,15%) 5%,
-                                      darken($c,10%));
-  text-shadow: 0 1px $c;
-  icon-shadow: 0 1px $c;
+                                    darken($c,20%),
+                                    darken($c,15%) 5%,
+                                    darken($c,10%));
+  @include _button_box_shadow (inset 0 1px 2px transparentize(black,0.8),
+                               //box shadow for the pushed effect
+                               $widget_bottom_hilight);
+  @include _button_borders($c);
+  @include _button_text_shadow($c);
 }
 
 @mixin button_backdrop ($c) {
-  @include button_normal($c);
-  background-image: none;
-  box-shadow: none;
-  text-shadow: none;
-  icon-shadow: none;
+  background-image: linear-gradient(to bottom, $c);
+  @include _button_borders($c);
+  @include _button_box_shadow(none);
+  @include _button_text_shadow(none);
 }
 
 @mixin button_insensitive ($c) {
-  @include button_normal ($c);
-  @include button_box_shadow ($widget_bottom_hilight);
-  background-color: transparentize($c,0.5);
-  background-image: none;
-  text-shadow: none;
-  icon-shadow: none;
+  background-image: linear-gradient(to bottom, transparentize($c,0.5));
+  @include _button_borders($c);
+  @include _button_box_shadow ($widget_bottom_hilight);
+  @include _button_text_shadow(none);
 }
 
 @mixin button_insensitive_active ($c) {
-  @include button_insensitive ($c);
-  @include button_box_shadow (inset 0 1px 2px transparentize(black,0.8),
-		              $widget_bottom_hilight);
+  background-image: linear-gradient(to bottom, transparentize($c,0.5));
+  @include _button_borders($c);
+  @include _button_box_shadow (inset 0 1px 2px transparentize(black,0.8),
+                               $widget_bottom_hilight);
+  @include _button_text_shadow(none);
 }
 
 @mixin border-rounded() {
