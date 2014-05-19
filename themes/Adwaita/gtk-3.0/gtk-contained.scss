@@ -10,21 +10,33 @@ $variant: 'light';
 $theme_base_color: #ffffff;
 $theme_bg_color: #ededed;
 $theme_fg_color: #2e3436;
+
 $theme_selected_fg_color: #ffffff;
 $theme_selected_bg_color: #729fcf;
+
+$insensitive_fg_color: lighten($theme_fg_color, 30%);
+$insensitive_bg_color: transparent;
+
 $borders_color: darken($theme_bg_color,30%);
 $borders_edge: transparentize($theme_base_color,0.95);
+
 $theme_shade: rgba(0,0,0,.5); //shadow seems to be a reserved word
 $wm_shadow: transparentize(black, 0.25);
 
 $link_color: lighten($theme_selected_bg_color,10%);
+
 $warning_color: #f57900;
 $error_color: #cc0000;
 $success_color: $theme_selected_bg_color;
 $destructive_color: #ef2929;
 
-$insensitive_fg_color: lighten($theme_fg_color, 30%);
-$insensitive_bg_color: transparent;
+
+//colors for the backdrop state, derived from the main colors.
+$backdrop_base_color: darken($theme_base_color,5%);
+$backdrop_bg_color: $theme_bg_color;
+$backdrop_fg_color: $theme_fg_color;
+$backdrop_insensitive_color: darken($backdrop_bg_color,15%);
+$backdrop_borders_color: $borders_color;
 
 // common drawing routines
 @import 'drawing';

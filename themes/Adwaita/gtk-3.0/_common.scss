@@ -215,36 +215,38 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   padding: 4px;
   background-color: transparent;
-  @include button_normal($theme_bg_color);
+  @include button_normal;
   &:hover {
-    @include button_hover($theme_bg_color);
+    @include button_hover;
   }
   &:active {
-    @include button_active($theme_bg_color);
+    @include button_active;
   }
   &:backdrop {
     // FIXME we need one or two backdrop colors
-    @include button_backdrop($theme_bg_color);
-    color: $insensitive_fg_color;
+    @include button_backdrop($backdrop_bg_color);
+    color: $backdrop_fg_color;
     &:active {
-      @include button_backdrop_active($theme_bg_color);
+      @include button_backdrop_active($backdrop_bg_color);
       color: $theme_bg_color;
     }
     &:insensitive {
-      color: transparentize($insensitive_fg_color,0.5);
-      border-color: darken($theme_bg_color,15%);
+      color: $backdrop_insensitive_color;
+      border-color: $backdrop_insensitive_color;
     }
     &:insensitive:active {
-      background-image: linear-gradient(to bottom, darken($theme_bg_color,15%));
-      border-color: darken($theme_bg_color,15%);
+      //this ugly flat gradient is unfortunatelly needed...
+      background-image: linear-gradient(to bottom, $backdrop_insensitive_color);
+      border-color: $backdrop_insensitive_color;
       box-shadow: none;
-      color: $theme_bg_color;
+      color: $backdrop_bg_color;
     }
   }
   &:insensitive {
-    @include button_insensitive($theme_bg_color);
+    @include button_insensitive;
+    color: $insensitive_fg_color;
     &:active {
-      @include button_insensitive_active($theme_bg_color);
+      @include button_insensitive_active;
     }
   }
   // button label can't be colored easily, need to match for the GtkLabel
