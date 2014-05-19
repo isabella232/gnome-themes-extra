@@ -20,5 +20,13 @@ $destructive_color: darken(#ef2929,10%);
 $insensitive_fg_color: lighten($theme_fg_color, 10%);
 $insensitive_bg_color: transparent;
 
+//colors for the backdrop state, derived from the main colors.
+$backdrop_base_color: darken($theme_base_color,5%);
+$backdrop_bg_color: $theme_bg_color;
+$backdrop_fg_color: $theme_fg_color;
+$backdrop_insensitive_color: lighten($insensitive_fg_color,5%); //FIXME
+$backdrop_borders_color: $borders_color;
+
+
 @import 'drawing';
 @import 'common';
