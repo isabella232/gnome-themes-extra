@@ -6,6 +6,10 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                              //most widgets, not working
                                              //since gtk doesn't draw (yet?)
                                              //outside the widget itself.
+
+$bright_text_shadow: white; //FIXME
+$dark_text_shadow: black; //FIXME
+
 @mixin _border-rounded() {
 }
 
@@ -24,6 +28,9 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 // buttons
 
 @mixin _button_border_custom_color ($c) {
+//
+// helper function to draw borders for colored buttons
+//
   @if $variant=='light' {
     border-color: darken($c,30%);
   }
@@ -32,16 +39,39 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   }
 }
 
-@mixin _button_text_shadow ($c) {
-  @if $c==none { text-shadow: none; icon-shadow: none; }
+@mixin _button_text_shadow ($tc:$theme_fg_color, $sc:false) { 
+//
+// helper function for the text emboss effect
+//
+// $tc is the optional text color, not the shadow color
+// $sc is the optional shadow color
+//
+  @if lightness($tc) < 50% {
+    @if $sc {
+      text-shadow: 0 1px $sc;
+      icon-shadow: 0 1px $sc;
+    }
+    @else {
+      text-shadow: 0 1px $bright_text_shadow;
+      icon-shadow: 0 1px $bright_text_shadow;
+    }
+  }
   @else {
-    text-shadow: 0 1px $c;
-    icon-shadow: 0 1px $c;
+    @if $sc {
+      text-shadow: 0 -1px $sc;
+      icon-shadow: 0 -1ps $sc;
+    }
+    @else {
+      text-shadow: 0 -1px $dark_text_shadow;
+      icon-shadow: 0 -1px $dark_text_shadow;
+    }
   }
 }
 
 @mixin _button_box_shadow($shadow1, $shadow2:false, $shadow3:false, $shadow4:false) {
-  //needed to stack box shadows
+//
+// Helper function to stack up to 4 box-shadows;
+//
   @if $shadow2 {box-shadow: $shadow1, $shadow2;}
   @else if $shadow3 {box-shadow: $shadow1, $shadow2, $shadow3;}
   @else if $shadow4 {box-shadow: $shadow1, $shadow2, $shadow3, shadow4;}
@@ -49,16 +79,18 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 }
 
 @mixin button($t, $c:false, $tc:false ) {
-// BUTTON DRAWING FUNCTION
+//
+// Button drawing function
+// 
 // $t:  button type,  
 // $c:  base button color for colored* types
-// $tc: optional text-color for colored* types
+// $tc: optional text color for colored* types
 //  
 // possible $t values:
 // normal, hover, active, insensitive, insensitive-active,
 // backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active,
 // colored, colored-hover, colored-active, colored-backdrop
- 
+// 
   border-width: 1px;
   border-style: solid;
 
@@ -71,10 +103,9 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       darken($theme_bg_color,10%)
                                       );
 
-    text-shadow: 0 1px lighten($theme_bg_color,50%); 
-    icon-shadow: 0 1px lighten($theme_bg_color,50%); 
+    @include _button_text_shadow;
 
-    @include _button-box-shadow(inset 0 1px $borders_edge, 
+    @include _button_box_shadow(inset 0 1px $borders_edge, 
                                 $widget_bottom_hilight);
   }
 
@@ -86,10 +117,8 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       lighten($theme_bg_color,4%) 40%,
                                       $theme_bg_color);
 
-    text-shadow: 0 1px lighten($theme_bg_color,50%); 
-    icon-shadow: 0 1px lighten($theme_bg_color,50%); 
-   
-    @include _button-box-shadow(inset 0 1px $borders_edge, 
+    @include _button_text_shadow;
+    @include _button_box_shadow(inset 0 1px $borders_edge, 
                                 $widget_bottom_hilight);
   }
 
@@ -101,9 +130,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       darken($theme_bg_color,15%) 5%,
                                       darken($theme_bg_color,10%));
 
-    text-shadow: 0 1px $theme_bg_color;
-    icon-shadow: 0 1px $theme_bg_color;
-
+    @include _button_text_shadow($theme_fg_color,$theme_bg_color);
     @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.7),
                                 $widget_bottom_hilight);
   }
@@ -158,8 +185,14 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   }
   @else if $t==colored { // custom colored button
     // if the text color is specified use it, otherwise use the default
-    @if $tc { color: $tc; }
-    @else { color: $theme_base_color };
+    @if $tc { 
+      color: $tc;
+      @include _button_text_shadow($tc);
+    }
+    @else { 
+      color: $theme_base_color;
+      @include _button_text_shadow($theme_base_color);
+    }
 
     @include _button_border_custom_color($c);
 
@@ -169,15 +202,18 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       darken($c,10%)
                                       );
 
-    text-shadow: 0 1px lighten($c,50%); 
-    icon-shadow: 0 1px lighten($c,50%); 
-
-    @include _button-box-shadow($widget_bottom_hilight);
+    @include _button_box_shadow($widget_bottom_hilight);
     
   }
   @else if $t==colored-hover { // custom colored hovered button
-    @if $tc { color: $tc; }
-    @else { color: $theme_base_color };
+    @if $tc { 
+      color: $tc;
+      @include _button_text_shadow($tc);
+    }
+    @else { 
+      color: $theme_base_color;
+      @include _button_text_shadow($theme_base_color);
+    }
 
     @include _button_border_custom_color($c);
 
@@ -186,26 +222,26 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       lighten($c,4%) 40%,
                                       $c);
 
-//    text-shadow: 0 1px lighten($c,50%); 
-//    icon-shadow: 0 1px lighten($c,50%);  FIXME
-   
-    @include _button-box-shadow(inset 0 1px $borders_edge,
+    @include _button_box_shadow(inset 0 1px $borders_edge,
 				$widget_bottom_hilight);
 
   }
   @else if $t==colored-active { // custom colored pushed button
-    @if $tc { color: $tc; }
-    @else { color: $theme_base_color };
+    @if $tc { 
+      color: $tc;
+      @include _button_text_shadow($tc);
+    }
+    @else { 
+      color: $theme_base_color;
+      @include _button_text_shadow($theme_base_color);
+    };
 
     @include _button_border_custom_color($c);
 
     background-image: linear-gradient(to bottom,
-                                      darken($theme_bg_color,20%),
-                                      darken($theme_bg_color,15%) 5%,
-                                      darken($theme_bg_color,10%));
-
-//    text-shadow: 0 1px $theme_bg_color; FIXME
-//    icon-shadow: 0 1px $theme_bg_color; 
+                                      darken($c,20%),
+                                      darken($c,15%) 5%,
+                                      darken($c,10%));
 
     @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.7),
                                 $widget_bottom_hilight);
