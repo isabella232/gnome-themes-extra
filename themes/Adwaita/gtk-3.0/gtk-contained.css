@@ -158,73 +158,71 @@ GtkGrid:insensitive {
   border-radius: 3px;
   transition: all 200ms ease-out;
   padding: 4px;
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
-  border-color: #a1a1a1;
   border-width: 1px;
   border-style: solid;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+  color: #2e3436;
+  border-color: #a1a1a1;
+  background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
   text-shadow: 0 1px white;
   icon-shadow: 0 1px white;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
   /* Suggested and Destructive Action buttons */ }
   .button:hover,
   .toolbar .button.raised:hover,
   .toolbar .raised .button:hover,
   .toolbar GtkComboBox .button:hover,
   .spinbutton.vertical .button:hover {
-    background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
-    border-color: #a1a1a1;
     border-width: 1px;
     border-style: solid;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+    color: #2e3436;
+    border-color: #a1a1a1;
+    background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
     text-shadow: 0 1px white;
-    icon-shadow: 0 1px white; }
+    icon-shadow: 0 1px white;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
   .button:active,
   .toolbar .button.raised:active,
   .toolbar .raised .button:active,
   .toolbar GtkComboBox .button:active,
   .spinbutton.vertical .button:active {
-    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
-    border-color: #a1a1a1;
     border-width: 1px;
     border-style: solid;
-    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2);
+    color: #2e3436;
+    border-color: #a1a1a1;
+    background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
     text-shadow: 0 1px #ededed;
-    icon-shadow: 0 1px #ededed; }
+    icon-shadow: 0 1px #ededed;
+    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.05); }
   .button:backdrop,
   .toolbar .button.raised:backdrop,
   .toolbar .raised .button:backdrop,
   .toolbar GtkComboBox .button:backdrop,
   .spinbutton.vertical .button:backdrop {
-    background-image: linear-gradient(to bottom, #ededed);
-    border-color: #a1a1a1;
     border-width: 1px;
     border-style: solid;
-    box-shadow: none;
+    color: #748489;
+    border-color: #748489;
+    background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    color: #2e3436; }
+    box-shadow: none; }
     .button:backdrop:active,
     .toolbar .button.raised:backdrop:active,
     .toolbar .raised .button:backdrop:active,
     .toolbar GtkComboBox .button:backdrop:active,
     .spinbutton.vertical .button:backdrop:active {
-      background-image: linear-gradient(to bottom, #a1a1a1);
-      border-color: #a1a1a1;
       border-width: 1px;
       border-style: solid;
-      box-shadow: none;
-      text-shadow: none;
-      icon-shadow: none;
-      color: #ededed; }
+      color: #ededed;
+      border-color: #748489;
+      background-image: linear-gradient(to bottom, #748489); }
     .button:backdrop:insensitive,
     .toolbar .button.raised:backdrop:insensitive,
     .toolbar .raised .button:backdrop:insensitive,
     .toolbar GtkComboBox .button:backdrop:insensitive,
     .spinbutton.vertical .button:backdrop:insensitive {
+      border-width: 1px;
+      border-style: solid;
       color: #c7c7c7;
       border-color: #c7c7c7; }
     .button:backdrop:insensitive:active,
@@ -232,210 +230,175 @@ GtkGrid:insensitive {
     .toolbar .raised .button:backdrop:insensitive:active,
     .toolbar GtkComboBox .button:backdrop:insensitive:active,
     .spinbutton.vertical .button:backdrop:insensitive:active {
-      background-image: linear-gradient(to bottom, #c7c7c7);
+      border-width: 1px;
+      border-style: solid;
+      color: #ededed;
       border-color: #c7c7c7;
-      box-shadow: none;
-      color: #ededed; }
+      background-image: linear-gradient(to bottom, #c7c7c7);
+      box-shadow: none; }
   .button:insensitive,
   .toolbar .button.raised:insensitive,
   .toolbar .raised .button:insensitive,
   .toolbar GtkComboBox .button:insensitive,
   .spinbutton.vertical .button:insensitive {
-    background-image: linear-gradient(to bottom, transparent);
-    border-color: #a1a1a1;
     border-width: 1px;
     border-style: solid;
-    box-shadow: 0 1px rgba(255, 255, 255, 0.05);
+    color: #748489;
+    border-color: #748489;
+    background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    color: #748489; }
+    box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
     .button:insensitive:active,
     .toolbar .button.raised:insensitive:active,
     .toolbar .raised .button:insensitive:active,
     .toolbar GtkComboBox .button:insensitive:active,
     .spinbutton.vertical .button:insensitive:active {
-      background-image: linear-gradient(to bottom, transparent);
-      border-color: #a1a1a1;
       border-width: 1px;
       border-style: solid;
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2);
-      text-shadow: none;
-      icon-shadow: none; }
+      color: #748489;
+      border-color: #748489;
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05); }
   .button.suggested-action,
   .toolbar .button.raised.suggested-action,
   .toolbar .raised .button.suggested-action,
   .toolbar GtkComboBox .suggested-action.button,
   .spinbutton.vertical .button.suggested-action {
-    background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
-    border-color: #2b537d;
     border-width: 1px;
     border-style: solid;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+    color: white;
+    border-color: #2b537d;
+    background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
     text-shadow: 0 1px white;
     icon-shadow: 0 1px white;
-    color: white; }
-    .button.suggested-action:active, .button.suggested-action:hover:active,
-    .toolbar .button.raised.suggested-action:active,
-    .toolbar .button.raised.suggested-action:hover:active,
-    .toolbar .raised .button.suggested-action:active,
-    .toolbar .raised .button.suggested-action:hover:active,
-    .toolbar GtkComboBox .suggested-action.button:active,
-    .toolbar GtkComboBox .suggested-action.button:hover:active,
-    .spinbutton.vertical .button.suggested-action:active,
-    .spinbutton.vertical .button.suggested-action:hover:active {
-      background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
-      border-color: #2b537d;
-      border-width: 1px;
-      border-style: solid;
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2);
-      text-shadow: 0 1px #729fcf;
-      icon-shadow: 0 1px #729fcf; }
+    box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
     .button.suggested-action:hover,
     .toolbar .button.raised.suggested-action:hover,
     .toolbar .raised .button.suggested-action:hover,
     .toolbar GtkComboBox .suggested-action.button:hover,
     .spinbutton.vertical .button.suggested-action:hover {
-      background-image: linear-gradient(to bottom, #a7c3e1, #81a9d4 40%, #729fcf);
-      border-color: #2b537d;
       border-width: 1px;
       border-style: solid;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-      text-shadow: 0 1px white;
-      icon-shadow: 0 1px white; }
+      color: white;
+      border-color: #2b537d;
+      background-image: linear-gradient(to bottom, #a7c3e1, #81a9d4 40%, #729fcf);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
+    .button.suggested-action:active,
+    .toolbar .button.raised.suggested-action:active,
+    .toolbar .raised .button.suggested-action:active,
+    .toolbar GtkComboBox .suggested-action.button:active,
+    .spinbutton.vertical .button.suggested-action:active {
+      border-width: 1px;
+      border-style: solid;
+      color: white;
+      border-color: #2b537d;
+      background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.05); }
     .button.suggested-action:backdrop,
     .toolbar .button.raised.suggested-action:backdrop,
     .toolbar .raised .button.suggested-action:backdrop,
     .toolbar GtkComboBox .suggested-action.button:backdrop,
     .spinbutton.vertical .button.suggested-action:backdrop {
-      background-image: linear-gradient(to bottom, #729fcf);
-      border-color: #2b537d;
       border-width: 1px;
       border-style: solid;
-      box-shadow: none;
+      color: #729fcf;
+      border-color: #729fcf;
+      background-image: none;
       text-shadow: none;
-      icon-shadow: none; }
+      icon-shadow: none;
+      box-shadow: none; }
+      .button.suggested-action:backdrop:insensitive,
+      .toolbar .button.raised.suggested-action:backdrop:insensitive,
+      .toolbar .raised .button.suggested-action:backdrop:insensitive,
+      .toolbar GtkComboBox .suggested-action.button:backdrop:insensitive,
+      .spinbutton.vertical .button.suggested-action:backdrop:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #c7c7c7;
+        border-color: #c7c7c7; }
     .button.suggested-action:insensitive,
     .toolbar .button.raised.suggested-action:insensitive,
     .toolbar .raised .button.suggested-action:insensitive,
     .toolbar GtkComboBox .suggested-action.button:insensitive,
     .spinbutton.vertical .button.suggested-action:insensitive {
-      color: #748489;
-      background-image: linear-gradient(to bottom, rgba(237, 237, 237, 0.5));
-      border-color: #a1a1a1;
       border-width: 1px;
       border-style: solid;
-      box-shadow: 0 1px rgba(255, 255, 255, 0.05);
+      color: #748489;
+      border-color: #748489;
+      background-image: none;
       text-shadow: none;
-      icon-shadow: none; }
-      .button.suggested-action:insensitive:backdrop,
-      .toolbar .button.raised.suggested-action:insensitive:backdrop,
-      .toolbar .raised .button.suggested-action:insensitive:backdrop,
-      .toolbar GtkComboBox .suggested-action.button:insensitive:backdrop,
-      .spinbutton.vertical .button.suggested-action:insensitive:backdrop {
-        background-image: linear-gradient(to bottom, rgba(237, 237, 237, 0));
-        border-color: rgba(161, 161, 161, 0.5);
-        border-width: 1px;
-        border-style: solid;
-        box-shadow: 0 1px rgba(255, 255, 255, 0.05);
-        text-shadow: none;
-        icon-shadow: none; }
-    .button.suggested-action GtkLabel:backdrop:insensitive,
-    .toolbar .button.raised.suggested-action GtkLabel:backdrop:insensitive,
-    .toolbar .raised .button.suggested-action GtkLabel:backdrop:insensitive,
-    .toolbar GtkComboBox .suggested-action.button GtkLabel:backdrop:insensitive,
-    .spinbutton.vertical .button.suggested-action GtkLabel:backdrop:insensitive {
-      color: rgba(116, 132, 137, 0.5); }
+      icon-shadow: none;
+      box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
   .button.destructive-action,
   .toolbar .button.raised.destructive-action,
   .toolbar .raised .button.destructive-action,
   .toolbar GtkComboBox .destructive-action.button,
   .spinbutton.vertical .button.destructive-action {
-    background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
-    border-color: #760909;
     border-width: 1px;
     border-style: solid;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+    color: white;
+    border-color: #760909;
+    background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
     text-shadow: 0 1px white;
     icon-shadow: 0 1px white;
-    color: white; }
-    .button.destructive-action:active, .button.destructive-action:hover:active,
-    .toolbar .button.raised.destructive-action:active,
-    .toolbar .button.raised.destructive-action:hover:active,
-    .toolbar .raised .button.destructive-action:active,
-    .toolbar .raised .button.destructive-action:hover:active,
-    .toolbar GtkComboBox .destructive-action.button:active,
-    .toolbar GtkComboBox .destructive-action.button:hover:active,
-    .spinbutton.vertical .button.destructive-action:active,
-    .spinbutton.vertical .button.destructive-action:hover:active {
-      background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010);
-      border-color: #760909;
-      border-width: 1px;
-      border-style: solid;
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2);
-      text-shadow: 0 1px #ef2929;
-      icon-shadow: 0 1px #ef2929; }
+    box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
     .button.destructive-action:hover,
     .toolbar .button.raised.destructive-action:hover,
     .toolbar .raised .button.destructive-action:hover,
     .toolbar GtkComboBox .destructive-action.button:hover,
     .spinbutton.vertical .button.destructive-action:hover {
-      background-image: linear-gradient(to bottom, #f46b6b, #f03c3c 40%, #ef2929);
-      border-color: #760909;
       border-width: 1px;
       border-style: solid;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
-      text-shadow: 0 1px white;
-      icon-shadow: 0 1px white; }
+      color: white;
+      border-color: #760909;
+      background-image: linear-gradient(to bottom, #f46b6b, #f03c3c 40%, #ef2929);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
+    .button.destructive-action:active,
+    .toolbar .button.raised.destructive-action:active,
+    .toolbar .raised .button.destructive-action:active,
+    .toolbar GtkComboBox .destructive-action.button:active,
+    .spinbutton.vertical .button.destructive-action:active {
+      border-width: 1px;
+      border-style: solid;
+      color: white;
+      border-color: #760909;
+      background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.05); }
     .button.destructive-action:backdrop,
     .toolbar .button.raised.destructive-action:backdrop,
     .toolbar .raised .button.destructive-action:backdrop,
     .toolbar GtkComboBox .destructive-action.button:backdrop,
     .spinbutton.vertical .button.destructive-action:backdrop {
-      background-image: linear-gradient(to bottom, #ef2929);
-      border-color: #760909;
       border-width: 1px;
       border-style: solid;
-      box-shadow: none;
+      color: #ef2929;
+      border-color: #ef2929;
+      background-image: none;
       text-shadow: none;
-      icon-shadow: none; }
+      icon-shadow: none;
+      box-shadow: none; }
+      .button.destructive-action:backdrop:insensitive,
+      .toolbar .button.raised.destructive-action:backdrop:insensitive,
+      .toolbar .raised .button.destructive-action:backdrop:insensitive,
+      .toolbar GtkComboBox .destructive-action.button:backdrop:insensitive,
+      .spinbutton.vertical .button.destructive-action:backdrop:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #c7c7c7;
+        border-color: #c7c7c7; }
     .button.destructive-action:insensitive,
     .toolbar .button.raised.destructive-action:insensitive,
     .toolbar .raised .button.destructive-action:insensitive,
     .toolbar GtkComboBox .destructive-action.button:insensitive,
     .spinbutton.vertical .button.destructive-action:insensitive {
-      color: #748489;
-      background-image: linear-gradient(to bottom, rgba(237, 237, 237, 0.5));
-      border-color: #a1a1a1;
       border-width: 1px;
       border-style: solid;
-      box-shadow: 0 1px rgba(255, 255, 255, 0.05);
+      color: #748489;
+      border-color: #748489;
+      background-image: none;
       text-shadow: none;
-      icon-shadow: none; }
-      .button.destructive-action:insensitive:backdrop,
-      .toolbar .button.raised.destructive-action:insensitive:backdrop,
-      .toolbar .raised .button.destructive-action:insensitive:backdrop,
-      .toolbar GtkComboBox .destructive-action.button:insensitive:backdrop,
-      .spinbutton.vertical .button.destructive-action:insensitive:backdrop {
-        background-image: linear-gradient(to bottom, rgba(237, 237, 237, 0));
-        border-color: rgba(161, 161, 161, 0.5);
-        border-width: 1px;
-        border-style: solid;
-        box-shadow: 0 1px rgba(255, 255, 255, 0.05);
-        text-shadow: none;
-        icon-shadow: none; }
-    .button.destructive-action GtkLabel:backdrop:insensitive,
-    .toolbar .button.raised.destructive-action GtkLabel:backdrop:insensitive,
-    .toolbar .raised .button.destructive-action GtkLabel:backdrop:insensitive,
-    .toolbar GtkComboBox .destructive-action.button GtkLabel:backdrop:insensitive,
-    .spinbutton.vertical .button.destructive-action GtkLabel:backdrop:insensitive {
-      color: rgba(116, 132, 137, 0.5); }
+      icon-shadow: none;
+      box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
 
 /* GtkComboBoxes text color*/
 GtkComboBox:insensitive {
@@ -672,29 +635,30 @@ GtkPopover {
   background-image: none;
   box-shadow: none; }
   .button.titlebutton:hover {
+    border-width: 1px;
+    border-style: solid;
+    color: #2e3436;
+    border-color: #a1a1a1;
     background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
-    border-color: #a1a1a1;
-    border-width: 1px;
-    border-style: solid;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
     text-shadow: 0 1px white;
-    icon-shadow: 0 1px white; }
+    icon-shadow: 0 1px white;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
   .button.titlebutton:active {
+    border-width: 1px;
+    border-style: solid;
+    color: #2e3436;
+    border-color: #a1a1a1;
     background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
-    border-color: #a1a1a1;
-    border-width: 1px;
-    border-style: solid;
-    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.05);
-    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2);
     text-shadow: 0 1px #ededed;
-    icon-shadow: 0 1px #ededed; }
+    icon-shadow: 0 1px #ededed;
+    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.05); }
   .button.titlebutton:backdrop {
-    background-image: linear-gradient(to bottom, #ededed);
-    border-color: #a1a1a1;
     border-width: 1px;
     border-style: solid;
-    box-shadow: none;
+    color: #748489;
+    border-color: #748489;
+    background-image: none;
     text-shadow: none;
     icon-shadow: none;
+    box-shadow: none;
     border-color: transparent; }
