@@ -214,39 +214,29 @@ GtkGrid:insensitive {
   border-radius: 3px;
   transition: all 200ms ease-out;
   padding: 4px;
-  background-color: transparent;
-  @include button_normal;
+  @include button(normal);
   &:hover {
-    @include button_hover;
+    @include button(hover);
   }
   &:active {
-    @include button_active;
+    @include button(active);
   }
   &:backdrop {
-    // FIXME we need one or two backdrop colors
-    @include button_backdrop($backdrop_bg_color);
-    color: $backdrop_fg_color;
+    @include button(backdrop);
     &:active {
-      @include button_backdrop_active($backdrop_bg_color);
-      color: $theme_bg_color;
+      @include button(backdrop-active);
     }
     &:insensitive {
-      color: $backdrop_insensitive_color;
-      border-color: $backdrop_insensitive_color;
+      @include button(backdrop-insensitive);
     }
     &:insensitive:active {
-      //this ugly flat gradient is unfortunatelly needed...
-      background-image: linear-gradient(to bottom, $backdrop_insensitive_color);
-      border-color: $backdrop_insensitive_color;
-      box-shadow: none;
-      color: $backdrop_bg_color;
+      @include button(backdrop-insensitive-active);
     }
   }
   &:insensitive {
-    @include button_insensitive;
-    color: $insensitive_fg_color;
+    @include button(insensitive);
     &:active {
-      @include button_insensitive_active;
+      @include button(insensitive-active);
     }
   }
   // button label can't be colored easily, need to match for the GtkLabel
@@ -255,27 +245,21 @@ GtkGrid:insensitive {
   @each $b_type, $b_color in  (suggested-action, $theme_selected_bg_color), 
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
-      @include button_normal($b_color);
-      color: $theme_base_color; 
-      &:active, &:hover:active {
-        @include button_active($b_color);
-      }
+      @include button(colored,$b_color); 
       &:hover {
-        @include button_hover($b_color);
+        @include button(colored-hover,$b_color);
+      }
+      &:active {  //", &:hover:active {" this *shouldn't* be needed
+        @include button(colored-active,$b_color);
       }
       &:backdrop {
-        @include button_backdrop($b_color);
-      }
-      &:insensitive {
-        color: $insensitive_fg_color;
-        @include button_insensitive($theme_bg_color);
-        &:backdrop {
-          @include button_insensitive(transparentize($theme_bg_color,0.5));
+        @include button(colored-backdrop,$b_color);
+        &:insensitive { 
+          @include button(backdrop-insensitive);
         }
       }
-      // button label can't be colored easily, need to match for the GtkLabel
-      GtkLabel:backdrop:insensitive {
-        color: transparentize($insensitive_fg_color, 0.5);
+      &:insensitive {
+        @include button(insensitive);
       }
     }
   }
@@ -583,13 +567,13 @@ GtkPopover {
   background-image: none;
   box-shadow: none;
   &:hover {
-    @include button_normal($theme_bg_color);
+    @include button(normal);
   }
   &:active {
-    @include button_active($theme_bg_color);
+    @include button(active);
   }
   &:backdrop {
-    @include button_backdrop($theme_bg_color);
+    @include button(backdrop);
     border-color: transparent;
   }
 }
