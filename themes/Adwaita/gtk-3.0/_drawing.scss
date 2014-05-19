@@ -6,6 +6,20 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                              //most widgets, not working
                                              //since gtk doesn't draw (yet?)
                                              //outside the widget itself.
+@mixin _border-rounded() {
+}
+
+@mixin _border-rounded-left() {
+}
+
+@mixin _border-rounded-right() {
+}
+
+@mixin _border-rounded-top() {
+}
+
+@mixin _border-rounded-bottom() {
+}
 
 // buttons
 
@@ -96,19 +110,4 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   @include _button_box_shadow (inset 0 2px 3px -1px transparentize(black,0.8),
                                $widget_bottom_hilight);
   @include _button_text_shadow(none);
-}
-
-@mixin border-rounded() {
-}
-
-@mixin border-rounded-left() {
-}
-
-@mixin border-rounded-right() {
-}
-
-@mixin border-rounded-top() {
-}
-
-@mixin border-rounded-bottom() {
 }

@@ -298,7 +298,7 @@ GtkComboBox {
   &:active,
   &:insensitive,
   &:active:insensitive {
-    @extend .menuitem.button;
+    @extend .menuitem.button; /* override generic .button:*  */
   }
   &:backdrop,
   &:hover:backdrop,
@@ -393,7 +393,7 @@ GtkComboBox {
   background-image: linear-gradient(to bottom,
                                     lighten($theme_bg_color,2%),
                                     darken($theme_bg_color,5%));
-  box-shadow: inset 0 -1px $theme_shade,
+  box-shadow: inset 0 -1px transparentize($theme_shade,.4),
               inset 0 1px $borders_edge;
   padding: 6px;
 
