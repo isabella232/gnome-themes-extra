@@ -267,10 +267,10 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
+    text-shadow: 0 -1px black;
+    icon-shadow: 0 -1px black;
     border-color: #2b537d;
     background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
-    text-shadow: 0 1px white;
-    icon-shadow: 0 1px white;
     box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
     .button.suggested-action:hover,
     .toolbar .button.raised.suggested-action:hover,
@@ -280,6 +280,8 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
+      text-shadow: 0 -1px black;
+      icon-shadow: 0 -1px black;
       border-color: #2b537d;
       background-image: linear-gradient(to bottom, #a7c3e1, #81a9d4 40%, #729fcf);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
@@ -291,8 +293,10 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
+      text-shadow: 0 -1px black;
+      icon-shadow: 0 -1px black;
       border-color: #2b537d;
-      background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+      background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.05); }
     .button.suggested-action:backdrop,
     .toolbar .button.raised.suggested-action:backdrop,
@@ -337,10 +341,10 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
+    text-shadow: 0 -1px black;
+    icon-shadow: 0 -1px black;
     border-color: #760909;
     background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
-    text-shadow: 0 1px white;
-    icon-shadow: 0 1px white;
     box-shadow: 0 1px rgba(255, 255, 255, 0.05); }
     .button.destructive-action:hover,
     .toolbar .button.raised.destructive-action:hover,
@@ -350,6 +354,8 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
+      text-shadow: 0 -1px black;
+      icon-shadow: 0 -1px black;
       border-color: #760909;
       background-image: linear-gradient(to bottom, #f46b6b, #f03c3c 40%, #ef2929);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
@@ -361,8 +367,10 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
+      text-shadow: 0 -1px black;
+      icon-shadow: 0 -1px black;
       border-color: #760909;
-      background-image: linear-gradient(to bottom, #bababa, #c7c7c7 5%, lightgray);
+      background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.05); }
     .button.destructive-action:backdrop,
     .toolbar .button.raised.destructive-action:backdrop,
