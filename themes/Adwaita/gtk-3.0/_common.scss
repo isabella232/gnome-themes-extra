@@ -245,12 +245,12 @@ GtkGrid:insensitive {
   @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), 
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
-      @include button(normal,$b_color, white); 
+      @include button(normal,$b_color, white, true); 
       &:hover {
-        @include button(hover,$b_color, white);
+        @include button(hover,$b_color, white, true);
       }
       &:active {  //", &:hover:active {" this *shouldn't* be needed
-        @include button(active,$b_color, white);
+        @include button(active,$b_color, white, true);
       }
       &:backdrop {
         @include button(backdrop,$b_color);
