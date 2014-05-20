@@ -32,11 +32,11 @@ $destructive_color: #ef2929;
 
 
 //colors for the backdrop state, derived from the main colors.
-$backdrop_base_color: darken($theme_base_color,5%);
-$backdrop_bg_color: $theme_bg_color;
-$backdrop_fg_color: $insensitive_fg_color;
-$backdrop_insensitive_color: darken($backdrop_bg_color,15%);
-$backdrop_borders_color: $insensitive_fg_color;
+$_backdrop_base_color: darken($theme_base_color,5%);
+$_backdrop_bg_color: $theme_bg_color;
+$_backdrop_fg_color: $insensitive_fg_color;
+$_backdrop_insensitive_color: darken($_backdrop_bg_color,15%);
+$_backdrop_borders_color: $insensitive_fg_color;
 
 // common drawing routines
 @import 'drawing';

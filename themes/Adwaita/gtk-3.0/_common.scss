@@ -242,18 +242,18 @@ GtkGrid:insensitive {
   // button label can't be colored easily, need to match for the GtkLabel
   
   /* Suggested and Destructive Action buttons */
-  @each $b_type, $b_color in  (suggested-action, $theme_selected_bg_color), 
+  @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), 
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
-      @include button(colored,$b_color); 
+      @include button(normal,$b_color, white); 
       &:hover {
-        @include button(colored-hover,$b_color);
+        @include button(hover,$b_color, white);
       }
       &:active {  //", &:hover:active {" this *shouldn't* be needed
-        @include button(colored-active,$b_color);
+        @include button(active,$b_color, white);
       }
       &:backdrop {
-        @include button(colored-backdrop,$b_color);
+        @include button(backdrop,$b_color);
         &:insensitive { 
           @include button(backdrop-insensitive);
         }

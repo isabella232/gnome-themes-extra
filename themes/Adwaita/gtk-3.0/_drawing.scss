@@ -7,27 +7,10 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                              //since gtk doesn't draw (yet?)
                                              //outside the widget itself.
 
-$bright_text_shadow: transparentize(white,0.2);
-$dark_text_shadow: transparentize(black,0.6);
-
-@mixin _border-rounded() {
-}
-
-@mixin _border-rounded-left() {
-}
-
-@mixin _border-rounded-right() {
-}
-
-@mixin _border-rounded-top() {
-}
-
-@mixin _border-rounded-bottom() {
-}
 
 // buttons
 
-@mixin _button_border_custom_color ($c) {
+@mixin _button_border_color ($c) {
 //
 // helper function to draw borders for colored buttons
 //
@@ -52,8 +35,8 @@ $dark_text_shadow: transparentize(black,0.6);
       icon-shadow: 0 1px $sc;
     }
     @else {
-      text-shadow: 0 1px $bright_text_shadow;
-      icon-shadow: 0 1px $bright_text_shadow;
+      text-shadow: 0 1px lighten(invert($tc),20%);
+      icon-shadow: 0 1px lighten(invert($tc),20%);
     }
   }
   @else {
@@ -62,8 +45,8 @@ $dark_text_shadow: transparentize(black,0.6);
       icon-shadow: 0 -1ps $sc;
     }
     @else {
-      text-shadow: 0 -1px $dark_text_shadow;
-      icon-shadow: 0 -1px $dark_text_shadow;
+      text-shadow: 0 -1px transparentize(invert($tc),0.5);
+      icon-shadow: 0 -1px transparentize(invert($tc),0.5);
     }
   }
 }
@@ -78,7 +61,7 @@ $dark_text_shadow: transparentize(black,0.6);
   @else { box-shadow: $shadow1; }
 }
 
-@mixin button($t, $c:false, $tc:false ) {
+@mixin button($t, $c:$theme_bg_color, $tc:$theme_fg_color ) {
 //
 // Button drawing function
 // 
@@ -94,46 +77,43 @@ $dark_text_shadow: transparentize(black,0.6);
   border-width: 1px;
   border-style: solid;
 
-  @if $t==normal { 
-  // 
-  // normal button 
-  //
-    color: $theme_fg_color;
-    border-color: $borders_color;
+  @if $t==normal { // normal button
+    color: $tc;
+    @include _button_border_color($c);
     background-image: linear-gradient(to bottom,
-                                      lighten($theme_bg_color,10%),
-                                      $theme_bg_color 40%,
-                                      darken($theme_bg_color,10%)
+                                      lighten($c,10%),
+                                      $c 40%,
+                                      darken($c,10%)
                                       );
-    @include _button_text_shadow;
+
+    @include _button_text_shadow($tc);
+
     @include _button_box_shadow(inset 0 1px $borders_edge, 
                                 $widget_bottom_hilight);
   }
-  @else if $t==hover { 
-  //
-  // hovered button
-  //
-    color: $theme_fg_color;
-    border-color: $borders_color;
+
+  @else if $t==hover { // hovered button
+    color: $tc;
+    @include _button_border_color($c);
     background-image: linear-gradient(to bottom,
-                                      lighten($theme_bg_color,14%),
-                                      lighten($theme_bg_color,4%) 40%,
-                                      $theme_bg_color);
-    @include _button_text_shadow;
+                                      lighten($c,14%),
+                                      lighten($c,4%) 40%,
+                                      $c);
+
+    @include _button_text_shadow($tc);
     @include _button_box_shadow(inset 0 1px $borders_edge, 
                                 $widget_bottom_hilight);
   }
-  @else if $t==active { 
-  //
-  // pushed button
-  //
-    color: $theme_fg_color;
-    border-color: $borders_color;
+
+  @else if $t==active { // pushed button
+    color: $tc;
+    @include _button_border_color($c);
     background-image: linear-gradient(to bottom,
-                                      darken($theme_bg_color,20%),
-                                      darken($theme_bg_color,15%) 5%,
-                                      darken($theme_bg_color,10%));
-    @include _button_text_shadow($theme_fg_color,$theme_bg_color);
+                                      darken($c,20%),
+                                      darken($c,15%) 5%,
+                                      darken($c,10%));
+
+    @include _button_text_shadow($tc);
     @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.7),
                                 $widget_bottom_hilight);
   }
@@ -157,111 +137,32 @@ $dark_text_shadow: transparentize(black,0.6);
     @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.8),
                                 $widget_bottom_hilight);
   }
-  @else if $t==backdrop { 
-  //
-  // backdrop button
-  //
-    color: $backdrop_fg_color;
-    border-color: $backdrop_borders_color;
+
+  @else if $t==backdrop { // backdrop button
+    color: $_backdrop_fg_color;
+    border-color: $_backdrop_borders_color;
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
     box-shadow: none;
   }
-  @else if $t==backdrop-active {
-  //
-  // backdrop pushed button
-  //
-    color: $backdrop_bg_color;
-    border-color: $backdrop_borders_color;
-    background-image: linear-gradient(to bottom, $backdrop_fg_color);
+
+  @else if $t==backdrop-active { // backdrop pushed button
+    color: $_backdrop_bg_color;
+    border-color: $_backdrop_borders_color;
+    background-image: linear-gradient(to bottom, $_backdrop_fg_color);
   }
-  @else if $t==backdrop-insensitive { 
-  //
-  // backdrop insensitive button
-  //
-    color: $backdrop_insensitive_color;
-    border-color: $backdrop_insensitive_color;
+
+  @else if $t==backdrop-insensitive { // backdrop insensitive button
+    color: $_backdrop_insensitive_color;
+    border-color: $_backdrop_insensitive_color;
   }
-  @else if $t==backdrop-insensitive-active { 
-  //
-  // backdrop insensitive pushed button
-  //
-    color: $backdrop_bg_color;
-    border-color: $backdrop_insensitive_color;
-    background-image: linear-gradient(to bottom, $backdrop_insensitive_color);
-    box-shadow: none;
-  }
-  @else if $t==colored { 
-  //
-  // custom colored button
-  //
-    // if the text color is specified use it, otherwise use the default
-    @if $tc { 
-      color: $tc;
-      @include _button_text_shadow($tc);
-    }
-    @else { 
-      color: $theme_base_color;
-      @include _button_text_shadow($theme_base_color);
-    }
-    @include _button_border_custom_color($c);
-    background-image: linear-gradient(to bottom,
-                                      lighten($c,10%),
-                                      $c 40%,
-                                      darken($c,10%)
-                                      );
-    @include _button_box_shadow($widget_bottom_hilight);
-  }
-  @else if $t==colored-hover { 
-  //
-  // custom colored hovered button
-  //
-    @if $tc { 
-      color: $tc;
-      @include _button_text_shadow($tc);
-    }
-    @else { 
-      color: $theme_base_color;
-      @include _button_text_shadow($theme_base_color);
-    }
-    @include _button_border_custom_color($c);
-    background-image: linear-gradient(to bottom,
-                                      lighten($c,14%),
-                                      lighten($c,4%) 40%,
-                                      $c);
-    @include _button_box_shadow(inset 0 1px $borders_edge,
-				$widget_bottom_hilight);
-  }
-  @else if $t==colored-active { 
-  //
-  // custom colored pushed button
-  //
-    @if $tc { 
-      color: $tc;
-      @include _button_text_shadow($tc);
-    }
-    @else { 
-      color: $theme_base_color;
-      @include _button_text_shadow($theme_base_color);
-    };
-    @include _button_border_custom_color($c);
-    background-image: linear-gradient(to bottom,
-                                      darken($c,20%),
-                                      darken($c,15%) 5%,
-                                      darken($c,10%));
-    @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.7),
-                                $widget_bottom_hilight);
-  }
-  @else if $t==colored-backdrop {
-  //
-  // custom colored backdrop button
-  //
-    color: $c;
-    border-color: $c;
-    background-image: none;
-    text-shadow: none;
-    icon-shadow: none;
+
+  @else if $t==backdrop-insensitive-active { // backdrop insensitive 
+                                             // pushed button
+    color: $_backdrop_bg_color;
+    border-color: $_backdrop_insensitive_color;
+    background-image: linear-gradient(to bottom, $_backdrop_insensitive_color);
     box-shadow: none;
   }
 }
