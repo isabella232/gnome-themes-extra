@@ -12,7 +12,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
 @mixin _button_border_color ($c) {
 //
-// helper function to draw borders for colored buttons
+// helper function to draw borders
 //
   @if $variant=='light' {
     border-color: darken($c,30%);
@@ -61,7 +61,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   @else { box-shadow: $shadow1; }
 }
 
-@mixin button($t, $c:$theme_bg_color, $tc:$theme_fg_color ) {
+@mixin button($t, $c:$theme_bg_color, $tc:$theme_fg_color, $colored_button:false ) {
 //
 // Button drawing function
 // 
@@ -79,15 +79,16 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
   @if $t==normal { // normal button
     color: $tc;
-    @include _button_border_color($c);
     background-image: linear-gradient(to bottom,
                                       lighten($c,10%),
                                       $c 40%,
                                       darken($c,10%)
                                       );
 
-    @include _button_text_shadow($tc);
+    @if $colored_button { @include _button_border_color($c); }
+    @else { border-color: $borders_color; }
 
+    @include _button_text_shadow($tc);
     @include _button_box_shadow(inset 0 1px $borders_edge, 
                                 $widget_bottom_hilight);
   }
@@ -107,7 +108,8 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
   @else if $t==active { // pushed button
     color: $tc;
-    @include _button_border_color($c);
+    @if $colored_button { @include _button_border_color($c); }
+    @else { border-color: $borders_color; }
     background-image: linear-gradient(to bottom,
                                       darken($c,20%),
                                       darken($c,15%) 5%,

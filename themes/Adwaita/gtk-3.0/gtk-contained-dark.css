@@ -161,8 +161,8 @@ GtkGrid:insensitive {
   border-width: 1px;
   border-style: solid;
   color: #eeeeec;
-  border-color: #212424;
   background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
+  border-color: #090909;
   text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
   icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
   box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
@@ -188,7 +188,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #212424;
+    border-color: #090909;
     background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424);
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
@@ -267,8 +267,8 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    border-color: #215d9c;
     background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
+    border-color: #090909;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
@@ -293,7 +293,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #215d9c;
+      border-color: #090909;
       background-image: linear-gradient(to bottom, #184472, #1c5187 5%, #215d9c);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
@@ -341,8 +341,8 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    border-color: #a60c0c;
     background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
+    border-color: #090909;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
@@ -367,7 +367,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #a60c0c;
+      border-color: #090909;
       background-image: linear-gradient(to bottom, #760909, #8e0b0b 5%, #a60c0c);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
@@ -646,8 +646,8 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #212424;
     background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
+    border-color: #090909;
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
@@ -655,7 +655,7 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #212424;
+    border-color: #090909;
     background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424);
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
