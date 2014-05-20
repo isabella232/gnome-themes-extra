@@ -268,7 +268,7 @@ GtkGrid:insensitive {
     border-style: solid;
     color: white;
     background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
-    border-color: #a1a1a1;
+    border-color: #2b537d;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
@@ -293,7 +293,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #a1a1a1;
+      border-color: #2b537d;
       background-image: linear-gradient(to bottom, #386ca3, #3e78b6 5%, #4c85c2);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
@@ -342,7 +342,7 @@ GtkGrid:insensitive {
     border-style: solid;
     color: white;
     background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
-    border-color: #a1a1a1;
+    border-color: #760909;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05), 0 1px rgba(255, 255, 255, 0.05); }
@@ -367,7 +367,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #a1a1a1;
+      border-color: #760909;
       background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 5%, #d51010);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
