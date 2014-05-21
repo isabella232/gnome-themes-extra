@@ -643,9 +643,9 @@ GtkPopover {
 .notebook tab.left:active {
   box-shadow: inset -2px 0 #2a76c6; }
 
-/***************
- * WM Stuff    *
- ***************/
+/**********************
+ * Window Decorations *
+ *********************/
 .window-frame {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
