@@ -265,7 +265,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    background-image: linear-gradient(to bottom, #98b9dc, #729fcf 40%, #4c85c2);
+    background-image: linear-gradient(to bottom, #abc6e2, #729fcf 40%, #4c85c2);
     border-color: #2b537d;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
@@ -339,7 +339,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    background-image: linear-gradient(to bottom, #f35858, #ef2929 40%, #d51010);
+    background-image: linear-gradient(to bottom, #f47070, #ef2929 40%, #d51010);
     border-color: #760909;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
