@@ -35,7 +35,7 @@ $destructive_color: #ef2929;
 //colors for the backdrop state, derived from the main colors.
 $_backdrop_base_color: darken($theme_base_color,5%);
 $_backdrop_bg_color: $theme_bg_color;
-$_backdrop_fg_color: $theme_fg_color;
+$_backdrop_fg_color: lighten($theme_fg_color,10%);
 $_backdrop_insensitive_color: darken($_backdrop_bg_color,15%);
 $_backdrop_borders_color: $borders_color;
 
