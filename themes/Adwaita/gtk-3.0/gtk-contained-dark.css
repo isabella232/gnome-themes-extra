@@ -145,6 +145,15 @@ GtkGrid:insensitive {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
+.entry.progressbar {
+  margin: 1px;
+  border-radius: 0;
+  border-width: 0 0 2px;
+  border-color: #2a76c6;
+  border-style: solid;
+  background-image: none;
+  box-shadow: none; }
+
 /***********
  * Buttons *
  ***********/
