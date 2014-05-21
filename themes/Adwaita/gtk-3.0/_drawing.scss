@@ -22,32 +22,25 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   }
 }
 
-@mixin _button_text_shadow ($tc:$theme_fg_color, $sc:false) { 
+@mixin _button_text_shadow ($tc:$theme_fg_color) { 
 //
 // helper function for the text emboss effect
 //
 // $tc is the optional text color, not the shadow color
-// $sc is the optional shadow color
+// 
+// TODO: this functions needs a way to deal with special cases
 //
+
+  $_dark: transparentize(black,0.8);
+  $_bright: transparentize(white,0.4);
+
   @if lightness($tc) < 50% {
-    @if $sc {
-      text-shadow: 0 1px $sc;
-      icon-shadow: 0 1px $sc;
-    }
-    @else {
-      text-shadow: 0 1px lighten(invert($tc),20%);
-      icon-shadow: 0 1px lighten(invert($tc),20%);
-    }
+    text-shadow: 0 1px $_bright;
+    icon-shadow: 0 1px $_bright;
   }
   @else {
-    @if $sc {
-      text-shadow: 0 -1px $sc;
-      icon-shadow: 0 -1ps $sc;
-    }
-    @else {
-      text-shadow: 0 -1px transparentize(invert($tc),0.5);
-      icon-shadow: 0 -1px transparentize(invert($tc),0.5);
-    }
+    text-shadow: 0 -1px $_dark;
+    icon-shadow: 0 -1px $_dark;
   }
 }
 
@@ -153,7 +146,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
     border-color: $_insensitive_borders_color;
     @include _button_box_shadow(none,
                                 $widget_bottom_hilight);
-    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.8));
+    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.9));
   }
 
   @else if $t==backdrop { // backdrop button
@@ -180,7 +173,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                              // pushed button
     color: $_backdrop_insensitive_color;
     border-color: $_backdrop_borders_color;
-    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.8));
+    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.9));
     box-shadow: none;
   }
 }
