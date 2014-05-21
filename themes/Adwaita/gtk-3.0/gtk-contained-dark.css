@@ -7,11 +7,6 @@
   -GtkPaned-handle-size: 5;
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 12;
-  /* The size for scrollbars. The slider is 2px smaller, but we keep it
-   * up so that the whole area is sensitive to button presses for the
-   * slider. The stepper button is larger in both directions, the slider
-   * only in the width
-   */
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkScrolledWindow-scrollbars-within-bevel: 1;
   -GtkToolItemGroup-expander-size: 11;
@@ -100,7 +95,6 @@ GtkGrid:insensitive {
   background-image: none;
   background-color: blue;
   opacity: 0;
-  /* non spinning spinner makes no sense */
   -gtk-icon-source: url("assets/spinner.svg"); }
   .spinner:active {
     opacity: 1;
@@ -119,20 +113,29 @@ GtkGrid:insensitive {
   border: 1px solid #1c1f1f;
   background-image: linear-gradient(to bottom, #2b2b2b 0%, #333333 90%);
   box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), 0 1px rgba(238, 238, 236, 0.1);
+  /* not working */
   background-color: transparent; }
   .entry:insensitive {
     color: white;
     background-image: none;
     background-color: transparent;
-    box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
+    box-shadow: 0 1px rgba(238, 238, 236, 0.1);
+    /* not working */ }
   .entry:focus {
     border-color: #2a76c6;
     box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.4), inset 0 0 2px 1px rgba(42, 118, 198, 0.5), 0 1px rgba(238, 238, 236, 0.1);
     /* not working */ }
+  .entry:selected, .entry:backdrop:selected {
+    color: white;
+    background-color: #2a76c6; }
   .entry:backdrop {
-    background-image: none;
-    box-shadow: none;
-    /* let's make it flat */ }
+    color: #eeeeec;
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #262626);
+    box-shadow: none; }
+  .entry:backdrop:insensitive {
+    color: white;
+    background-image: linear-gradient(to bottom, #393f3f); }
 
 .linked .entry:first-child {
   border-top-right-radius: 0;
@@ -160,8 +163,7 @@ GtkGrid:insensitive {
   border-color: #1c1f1f;
   text-shadow: 0 -1px rgba(0, 0, 0, 0.2);
   icon-shadow: 0 -1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-  /* Suggested and Destructive Action buttons */ }
+  box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
   .button:hover,
   .toolbar .button.raised:hover,
   .toolbar .raised .button:hover,
@@ -413,8 +415,6 @@ GtkGrid:insensitive {
   border-image: none;
   border-style: none;
   box-shadow: none; }
-  .menuitem.button:active, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
-    /* override generic .button:*  */ }
   .menuitem.button:backdrop, .menuitem.button:backdrop:active:insensitive, .menuitem.button:hover:backdrop, .menuitem.button:insensitive:backdrop, .menuitem.button:active:insensitive:backdrop, .menuitem.button:active:backdrop, .menuitem.button:active:hover:backdrop, .menuitem.button:active:selected:backdrop {
     text-shadow: none;
     icon-shadow: none;
@@ -440,7 +440,8 @@ GtkGrid:insensitive {
 
 .header-bar .button.text-button {
   padding: 6px 8px 5px;
-  /* due to font metrics the image buttons are 1px shorter */ }
+  /* due to font metrics the image buttons 
+     are 1px shorter */ }
 .header-bar .button.image-button {
   padding: 8px; }
 
@@ -491,7 +492,6 @@ GtkComboBox {
   GtkComboBox:backdrop:insensitive {
     color: rgba(255, 255, 255, 0.5); }
   GtkComboBox .separator {
-    /* always disable separators */
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0; }
@@ -543,8 +543,7 @@ GtkComboBox {
     background-image: linear-gradient(to bottom, #3583d5, #2b7bcf); }
 
 .window-frame.tiled .header-bar {
-  border-radius: 0;
-  /* FIXME doesn't work */ }
+  border-radius: 0; }
 
 /***************
  * Popovers   *
