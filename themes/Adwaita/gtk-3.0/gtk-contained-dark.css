@@ -158,7 +158,7 @@ GtkGrid:insensitive {
   border-width: 1px;
   border-style: solid;
   color: #eeeeec;
-  background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
+  background-image: linear-gradient(to bottom, #454c4c, #393f3f 40%, #2d3232);
   border-color: #1c1f1f;
   text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
   icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
@@ -265,7 +265,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    background-image: linear-gradient(to bottom, #4a90d9, #2a76c6 40%, #215d9c);
+    background-image: linear-gradient(to bottom, #3583d5, #2a76c6 40%, #256ab1);
     border-color: #215d9c;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
@@ -339,7 +339,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    background-image: linear-gradient(to bottom, #ef2929, #d51010 40%, #a60c0c);
+    background-image: linear-gradient(to bottom, #ed1212, #d51010 40%, #bd0e0e);
     border-color: #a60c0c;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
@@ -669,7 +669,7 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
+    background-image: linear-gradient(to bottom, #454c4c, #393f3f 40%, #2d3232);
     border-color: #1c1f1f;
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
