@@ -116,9 +116,9 @@ GtkGrid:insensitive {
   color: #eeeeec;
   border-radius: 3px;
   transition: all 200ms ease-out;
-  border: 1px solid #090909;
-  background-image: linear-gradient(to bottom, #262626 0%, #333333 90%);
-  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.4), 0 1px rgba(238, 238, 236, 0.1);
+  border: 1px solid #1c1f1f;
+  background-image: linear-gradient(to bottom, #2b2b2b 0%, #333333 90%);
+  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), 0 1px rgba(238, 238, 236, 0.1);
   background-color: transparent; }
   .entry:insensitive {
     color: white;
@@ -159,7 +159,7 @@ GtkGrid:insensitive {
   border-style: solid;
   color: #eeeeec;
   background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-  border-color: #090909;
+  border-color: #1c1f1f;
   text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
   icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
   box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1);
@@ -185,8 +185,8 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #090909;
-    background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424);
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #212424, #2d3232 3%);
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
@@ -198,7 +198,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #090909;
+    border-color: #1c1f1f;
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
@@ -210,9 +210,9 @@ GtkGrid:insensitive {
     .spinbutton.vertical .button:backdrop:active {
       border-width: 1px;
       border-style: solid;
-      color: #393f3f;
-      border-color: #090909;
-      background-image: linear-gradient(to bottom, #eeeeec); }
+      color: #eeeeec;
+      border-color: #1c1f1f;
+      background-image: linear-gradient(to bottom, rgba(28, 31, 31, 0.3)); }
     .button:backdrop:insensitive,
     .toolbar .button.raised:backdrop:insensitive,
     .toolbar .raised .button:backdrop:insensitive,
@@ -221,7 +221,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: white; }
+      border-color: #1c1f1f; }
     .button:backdrop:insensitive:active,
     .toolbar .button.raised:backdrop:insensitive:active,
     .toolbar .raised .button:backdrop:insensitive:active,
@@ -229,9 +229,9 @@ GtkGrid:insensitive {
     .spinbutton.vertical .button:backdrop:insensitive:active {
       border-width: 1px;
       border-style: solid;
-      color: #393f3f;
-      border-color: white;
-      background-image: linear-gradient(to bottom, white);
+      color: white;
+      border-color: #1c1f1f;
+      background-image: linear-gradient(to bottom, rgba(28, 31, 31, 0.2));
       box-shadow: none; }
   .button:insensitive,
   .toolbar .button.raised:insensitive,
@@ -241,7 +241,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    border-color: white;
+    border-color: #1c1f1f;
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
@@ -254,8 +254,9 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: white;
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2), 0 1px rgba(238, 238, 236, 0.1); }
+      border-color: #1c1f1f;
+      box-shadow: none, 0 1px rgba(238, 238, 236, 0.1);
+      background-image: linear-gradient(to bottom, rgba(28, 31, 31, 0.2)); }
   .button.suggested-action,
   .toolbar .button.raised.suggested-action,
   .toolbar .raised .button.suggested-action,
@@ -291,7 +292,7 @@ GtkGrid:insensitive {
       border-style: solid;
       color: white;
       border-color: #215d9c;
-      background-image: linear-gradient(to bottom, #184472, #1c5187 5%, #215d9c);
+      background-image: linear-gradient(to bottom, #215d9c, #256ab1 3%);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
@@ -303,7 +304,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: #eeeeec;
-      border-color: #090909;
+      border-color: #1c1f1f;
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
@@ -316,7 +317,7 @@ GtkGrid:insensitive {
         border-width: 1px;
         border-style: solid;
         color: white;
-        border-color: white; }
+        border-color: #1c1f1f; }
     .button.suggested-action:insensitive,
     .toolbar .button.raised.suggested-action:insensitive,
     .toolbar .raised .button.suggested-action:insensitive,
@@ -325,7 +326,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: white;
+      border-color: #1c1f1f;
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
@@ -365,7 +366,7 @@ GtkGrid:insensitive {
       border-style: solid;
       color: white;
       border-color: #a60c0c;
-      background-image: linear-gradient(to bottom, #760909, #8e0b0b 5%, #a60c0c);
+      background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 3%);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.5);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
@@ -377,7 +378,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: #eeeeec;
-      border-color: #090909;
+      border-color: #1c1f1f;
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
@@ -390,7 +391,7 @@ GtkGrid:insensitive {
         border-width: 1px;
         border-style: solid;
         color: white;
-        border-color: white; }
+        border-color: #1c1f1f; }
     .button.destructive-action:insensitive,
     .toolbar .button.raised.destructive-action:insensitive,
     .toolbar .raised .button.destructive-action:insensitive,
@@ -399,7 +400,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: white;
+      border-color: #1c1f1f;
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
@@ -453,14 +454,14 @@ GtkGrid:insensitive {
   background-image: none;
   border-radius: 0;
   border-width: 0 0 0 1px;
-  border-color: rgba(9, 9, 9, 0.3);
+  border-color: rgba(28, 31, 31, 0.3);
   padding: 2px 6px; }
   .spinbutton .button:active {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #090909;
-    background-image: linear-gradient(to bottom, #393f3f, #454c4c 5%, #515a5a);
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #515a5a, #5d6767 3%);
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
@@ -577,7 +578,7 @@ GtkPopover {
 .notebook {
   padding: 0;
   border-style: solid;
-  border-color: #090909;
+  border-color: #1c1f1f;
   background-color: #333333;
   -GtkNotebook-initial-gap: 10;
   -GtkNotebook-arrow-spacing: 5;
@@ -597,7 +598,7 @@ GtkPopover {
   border-width: 0px; }
 
 .notebook.header.frame {
-  border: 1px solid #090909; }
+  border: 1px solid #1c1f1f; }
   .notebook.header.frame.top {
     border-bottom: none; }
   .notebook.header.frame.bottom {
@@ -627,19 +628,19 @@ GtkPopover {
   color: #eeeeec; }
 
 .notebook tab.top:hover {
-  box-shadow: inset 0 -2px #090909; }
+  box-shadow: inset 0 -2px #1c1f1f; }
 .notebook tab.top:active {
   box-shadow: inset 0 -2px #2a76c6; }
 .notebook tab.bottom:hover {
-  box-shadow: inset 0 2px #090909; }
+  box-shadow: inset 0 2px #1c1f1f; }
 .notebook tab.bottom:active {
   box-shadow: inset 0 2px #2a76c6; }
 .notebook tab.right:hover {
-  box-shadow: inset 2px 0 #090909; }
+  box-shadow: inset 2px 0 #1c1f1f; }
 .notebook tab.right:active {
   box-shadow: inset 2px 0 #2a76c6; }
 .notebook tab.left:hover {
-  box-shadow: inset -2px 0 #090909; }
+  box-shadow: inset -2px 0 #1c1f1f; }
 .notebook tab.left:active {
   box-shadow: inset -2px 0 #2a76c6; }
 
@@ -650,11 +651,11 @@ GtkPopover {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
   border-width: 0px;
-  box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.05), 0 0 0 1px transparent;
+  box-shadow: 0 2px 10px 4px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.65);
   /* this is used for the resize cursor area */
   margin: 10px; }
   .window-frame:backdrop {
-    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px transparent; }
+    box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.35); }
   .window-frame.tiled {
     border-radius: 0;
     background-color: #393f3f; }
@@ -669,7 +670,7 @@ GtkPopover {
     border-style: solid;
     color: #eeeeec;
     background-image: linear-gradient(to bottom, #515a5a, #393f3f 40%, #212424);
-    border-color: #090909;
+    border-color: #1c1f1f;
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
@@ -677,8 +678,8 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #090909;
-    background-image: linear-gradient(to bottom, #090909, #151717 5%, #212424);
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #212424, #2d3232 3%);
     text-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     icon-shadow: 0 -1px rgba(17, 17, 19, 0.5);
     box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
@@ -686,7 +687,7 @@ GtkPopover {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #090909;
+    border-color: #1c1f1f;
     background-image: none;
     text-shadow: none;
     icon-shadow: none;

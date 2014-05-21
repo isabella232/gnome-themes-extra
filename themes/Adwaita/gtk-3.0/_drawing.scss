@@ -110,11 +110,17 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
     color: $tc;
     @if $colored_button { @include _button_border_color($c); }
     @else { border-color: $borders_color; }
-    background-image: linear-gradient(to bottom,
-                                      darken($c,20%),
-                                      darken($c,15%) 5%,
-                                      darken($c,10%));
-
+    @if $variant == 'light' {
+      background-image: linear-gradient(to bottom,
+                                        darken($c,15%),
+                                        darken($c,11%) 3%,
+                                        darken($c,10%));
+    }
+    @else {
+      background-image: linear-gradient(to bottom,
+                                        darken($c,10%),
+                                        darken($c,5%) 3%);
+    }
     @include _button_text_shadow($tc);
     @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.7),
                                 $widget_bottom_hilight);
@@ -123,8 +129,8 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   //
   // insensitive button
   //
-    color: $insensitive_fg_color;
-    border-color: $insensitive_fg_color;
+    color: $_insensitive_fg_color;
+    border-color: $_insensitive_borders_color;
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
@@ -134,10 +140,11 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   //
   // insensitive pushed button
   //
-    color: $insensitive_fg_color;
-    border-color: $insensitive_fg_color;
-    @include _button_box_shadow(inset 0 2px 3px -1px transparentize(black,0.8),
+    color: $_insensitive_fg_color;
+    border-color: $_insensitive_borders_color;
+    @include _button_box_shadow(none,
                                 $widget_bottom_hilight);
+    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.8));
   }
 
   @else if $t==backdrop { // backdrop button
@@ -150,21 +157,21 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   }
 
   @else if $t==backdrop-active { // backdrop pushed button
-    color: $_backdrop_bg_color;
+    color: $_backdrop_fg_color;
     border-color: $_backdrop_borders_color;
-    background-image: linear-gradient(to bottom, $_backdrop_fg_color);
+    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.7));
   }
 
   @else if $t==backdrop-insensitive { // backdrop insensitive button
     color: $_backdrop_insensitive_color;
-    border-color: $_backdrop_insensitive_color;
+    border-color: $_backdrop_borders_color;
   }
 
   @else if $t==backdrop-insensitive-active { // backdrop insensitive 
                                              // pushed button
-    color: $_backdrop_bg_color;
-    border-color: $_backdrop_insensitive_color;
-    background-image: linear-gradient(to bottom, $_backdrop_insensitive_color);
+    color: $_backdrop_insensitive_color;
+    border-color: $_backdrop_borders_color;
+    background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.8));
     box-shadow: none;
   }
 }

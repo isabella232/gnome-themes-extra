@@ -103,8 +103,8 @@
 }
 
 .gtkstyle-fallback:insensitive {
-    background-color: $insensitive_bg_color;
-    color: $insensitive_fg_color;
+    background-color: $_insensitive_bg_color;
+    color: $_insensitive_fg_color;
 }
 
 .gtkstyle-fallback:selected {
@@ -155,19 +155,19 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   border: 1px solid $borders_color;
   background-image: linear-gradient(to bottom,
-                                      darken($theme_base_color,5%) 0%,
+                                      darken($theme_base_color,3%) 0%,
                                       $theme_base_color 90%
                                       );
-  box-shadow: inset 0 2px 2px -2px transparentize(black,0.6),
+  box-shadow: inset 0 2px 2px -2px $theme_shade,
               0 1px $borders_edge; // not working 
 
   background-color: transparent; // this needs to be 'transparent'
                                  // if we need a flat bg, let's abuse a gradient
 
   &:insensitive {
-    color: $insensitive_fg_color;
+    color: $_insensitive_fg_color;
     background-image: none;
-    background-color: $insensitive_bg_color;
+    background-color: $_insensitive_bg_color;
     box-shadow: 0 1px $borders_edge; // not working
   }
   &:focus {
@@ -241,7 +241,7 @@ GtkGrid:insensitive {
   @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), 
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
-      @include button(normal,$b_color, white, true); 
+      @include button(normal,$b_color, white, true); //FIXME: perhaps we should derive from bg color?
       &:hover {
         @include button(hover,$b_color, white, true);
       }
@@ -284,8 +284,8 @@ GtkGrid:insensitive {
   &:active:selected:backdrop {
       text-shadow: none;
       icon-shadow: none;
-      color: $insensitive_fg_color;
-      background-color: $insensitive_bg_color;
+      color: $_insensitive_fg_color;
+      background-color: $_insensitive_bg_color;
       background-image: none;
       border: none;
       box-shadow: none;
@@ -356,9 +356,9 @@ GtkComboBox {
   -GtkComboBox-arrow-scaling: 0.5;
   -GtkComboBox-shadow-type: none;
   
-  &:insensitive { color: $insensitive_fg_color; }
-  &:backdrop { color: $insensitive_fg_color; }
-  &:backdrop:insensitive { color: transparentize($insensitive_fg_color,0.5); }
+  &:insensitive { color: $_insensitive_fg_color; }
+  &:backdrop { color: $_insensitive_fg_color; }
+  &:backdrop:insensitive { color: transparentize($_insensitive_fg_color,0.5); }
   
   .separator {
     /* always disable separators */
@@ -567,7 +567,12 @@ GtkPopover {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
   border-width: 0px;    
-  box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+  @if $variant == 'dark' { 
+    box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.2);
+  }
+  @else {
+    box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+  }
 
   /* this is used for the resize cursor area */
   margin: 10px;
