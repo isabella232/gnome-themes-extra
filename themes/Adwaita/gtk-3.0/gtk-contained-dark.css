@@ -405,14 +405,6 @@ GtkGrid:insensitive {
       icon-shadow: none;
       box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
 
-/* GtkComboBoxes text color*/
-GtkComboBox:insensitive {
-  color: white; }
-GtkComboBox:backdrop {
-  color: white; }
-GtkComboBox:backdrop:insensitive {
-  color: rgba(255, 255, 255, 0.5); }
-
 /* menu/popover buttons */
 .menuitem.button, .menuitem.button:active, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
   color: #eeeeec;
@@ -460,6 +452,12 @@ GtkComboBox {
   padding: 0;
   -GtkComboBox-arrow-scaling: 0.5;
   -GtkComboBox-shadow-type: none; }
+  GtkComboBox:insensitive {
+    color: white; }
+  GtkComboBox:backdrop {
+    color: white; }
+  GtkComboBox:backdrop:insensitive {
+    color: rgba(255, 255, 255, 0.5); }
   GtkComboBox .separator {
     /* always disable separators */
     -GtkWidget-wide-separators: true;
