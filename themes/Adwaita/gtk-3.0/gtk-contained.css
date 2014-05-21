@@ -136,6 +136,14 @@ GtkGrid:insensitive {
   .entry:backdrop:insensitive {
     color: #c7c7c7;
     background-image: linear-gradient(to bottom, #ededed); }
+  .entry.progressbar {
+    margin: 1px;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    border-color: #729fcf;
+    border-style: solid;
+    background-image: none;
+    box-shadow: none; }
 
 .linked .entry:first-child {
   border-top-right-radius: 0;
@@ -144,15 +152,6 @@ GtkGrid:insensitive {
 .linked .entry:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
-
-.entry.progressbar {
-  margin: 1px;
-  border-radius: 0;
-  border-width: 0 0 2px;
-  border-color: #729fcf;
-  border-style: solid;
-  background-image: none;
-  box-shadow: none; }
 
 /***********
  * Buttons *

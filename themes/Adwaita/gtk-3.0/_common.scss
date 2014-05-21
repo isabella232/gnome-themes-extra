@@ -189,6 +189,16 @@ GtkGrid:insensitive {
     color: $_backdrop_insensitive_color;
     background-image: linear-gradient(to bottom, $_backdrop_bg_color);
   }
+  
+  &.progressbar {
+    margin: 1px;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    border-color: $theme_selected_bg_color;
+    border-style: solid;
+    background-image: none;
+    box-shadow: none;
+  }
 }
 
 .linked .entry {
@@ -204,15 +214,6 @@ GtkGrid:insensitive {
   }
 }
 
-.entry.progressbar {
-  margin: 1px;
-  border-radius: 0;
-  border-width: 0 0 2px;
-  border-color: $theme_selected_bg_color;
-  border-style: solid;
-  background-image: none;
-  box-shadow: none;
-}
 
 /***********
  * Buttons *
