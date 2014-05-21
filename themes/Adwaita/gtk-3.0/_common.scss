@@ -9,11 +9,10 @@
     -GtkCheckButton-indicator-size: 16;
     -GtkCheckMenuItem-indicator-size: 12;
 
-    /* The size for scrollbars. The slider is 2px smaller, but we keep it
-     * up so that the whole area is sensitive to button presses for the
-     * slider. The stepper button is larger in both directions, the slider
-     * only in the width
-     */
+    // The size for scrollbars. The slider is 2px smaller, but we keep it
+    // up so that the whole area is sensitive to button presses for the
+    // slider. The stepper button is larger in both directions, the slider
+    // only in the width
 
     -GtkScrolledWindow-scrollbar-spacing: 0;
     -GtkScrolledWindow-scrollbars-within-bevel: 1;
@@ -132,7 +131,7 @@ GtkGrid:insensitive {
 .spinner {
   background-image: none;
   background-color: blue;
-  opacity: 0; /* non spinning spinner makes no sense */
+  opacity: 0; // non spinning spinner makes no sense
   -gtk-icon-source: url("assets/spinner.svg");
 
   &:active {
@@ -159,7 +158,7 @@ GtkGrid:insensitive {
                                       $theme_base_color 90%
                                       );
   box-shadow: inset 0 2px 2px -2px $theme_shade,
-              0 1px $borders_edge; // not working 
+              0 1px $borders_edge; /* not working */
 
   background-color: transparent; // this needs to be 'transparent'
                                  // if we need a flat bg, let's abuse a gradient
@@ -168,17 +167,27 @@ GtkGrid:insensitive {
     color: $_insensitive_fg_color;
     background-image: none;
     background-color: $_insensitive_bg_color;
-    box-shadow: 0 1px $borders_edge; // not working
+    box-shadow: 0 1px $borders_edge; /* not working */
   }
   &:focus {
     border-color: $theme_selected_bg_color;
     box-shadow: inset 0 2px 2px -2px transparentize(black,0.6),
-                inset 0 0 2px 1px transparentize($theme_selected_bg_color, 0.5), /* focus indicator */
-                0 1px $borders_edge; /* not working */
+                // focus indicator
+                inset 0 0 2px 1px transparentize($theme_selected_bg_color, 0.5),                0 1px $borders_edge; /* not working */
+  }
+  &:selected, &:backdrop:selected { 
+    color: $theme_selected_fg_color;
+    background-color: $theme_selected_bg_color;
   }
   &:backdrop {
-    background-image: none;
-    box-shadow: none; /* let's make it flat */
+    color: $_backdrop_fg_color;
+    border-color: $_backdrop_borders_color;
+    background-image: linear-gradient(to bottom, $_backdrop_base_color);
+    box-shadow: none; // let's make it flat
+  }
+  &:backdrop:insensitive {
+    color: $_backdrop_insensitive_color;
+    background-image: linear-gradient(to bottom, $_backdrop_bg_color);
   }
 }
 
@@ -232,9 +241,8 @@ GtkGrid:insensitive {
       @include button(insensitive-active);
     }
   }
-  // button label can't be colored easily, need to match for the GtkLabel
   
-  /* Suggested and Destructive Action buttons */
+  // Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $theme_selected_bg_color), 
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
@@ -270,7 +278,7 @@ GtkGrid:insensitive {
   &:active,
   &:insensitive,
   &:active:insensitive {
-    @extend .menuitem.button; /* override generic .button:*  */
+    @extend .menuitem.button; // override generic .button:*
   }
   &:backdrop,
   &:hover:backdrop,
@@ -310,7 +318,8 @@ GtkGrid:insensitive {
 
 .header-bar .button {
   &.text-button {
-    padding: 6px 8px 5px; /* due to font metrics the image buttons are 1px shorter */
+    padding: 6px 8px 5px; /* due to font metrics the image buttons 
+                             are 1px shorter */
   }
   &.image-button {
     padding: 8px; 
@@ -370,7 +379,7 @@ GtkComboBox {
   }
   
   .separator {
-    /* always disable separators */
+    // always disable separators
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
@@ -452,7 +461,7 @@ GtkComboBox {
 }
 
 .window-frame.tiled .header-bar {
-  border-radius: 0; /* FIXME doesn't work */
+  border-radius: 0; // FIXME doesn't work
 }
 
 /***************
