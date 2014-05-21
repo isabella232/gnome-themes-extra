@@ -530,7 +530,8 @@ GtkComboBox {
   padding: 6px; }
   .header-bar:backdrop {
     background-image: none;
-    background-color: #ededed; }
+    background-color: #ededed;
+    box-shadow: none; }
   .header-bar .title {
     font: Bold;
     padding: 0px 12px; }
