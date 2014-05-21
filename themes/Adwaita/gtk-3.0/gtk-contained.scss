@@ -17,10 +17,6 @@ $theme_selected_bg_color: #729fcf;
 $borders_color: darken($theme_bg_color,30%);
 $borders_edge: transparentize($theme_base_color,0.95);
 
-$_insensitive_fg_color: lighten($theme_fg_color, 30%);
-$_insensitive_bg_color: transparent;
-$_insensitive_borders_color: $borders_color;
-
 $theme_shade: rgba(0,0,0,.5); //shadow seems to be a reserved word
 $wm_shadow: transparentize(black, 0.25);
 
@@ -31,6 +27,10 @@ $error_color: #cc0000;
 $success_color: $theme_selected_bg_color;
 $destructive_color: #ef2929;
 
+//insensitive state derived colors
+$_insensitive_fg_color: lighten($theme_fg_color, 30%);
+$_insensitive_bg_color: transparent;
+$_insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
 $_backdrop_base_color: darken($theme_base_color,1%);
