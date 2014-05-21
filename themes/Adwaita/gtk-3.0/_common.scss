@@ -435,6 +435,7 @@ GtkComboBox {
   &:backdrop {
     background-image: none;
     background-color: $theme_bg_color;
+    box-shadow: none;
   }
   
   .title {
