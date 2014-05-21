@@ -180,9 +180,6 @@ GtkGrid:insensitive {
     background-image: none;
     box-shadow: none; /* let's make it flat */
   }
-  GtkLabel { // what's this?
-    text-shadow: 0 1px red;
-  }  
 }
 
 .linked .entry {
@@ -356,9 +353,21 @@ GtkComboBox {
   -GtkComboBox-arrow-scaling: 0.5;
   -GtkComboBox-shadow-type: none;
   
-  &:insensitive { color: $_insensitive_fg_color; }
-  &:backdrop { color: $_insensitive_fg_color; }
-  &:backdrop:insensitive { color: transparentize($_insensitive_fg_color,0.5); }
+  @include _button_text_shadow;
+
+  &:insensitive { 
+    color: $_insensitive_fg_color;
+    text-shadow: none;
+    icon-shadow: none;
+  }
+  &:backdrop { 
+    color: $_insensitive_fg_color; 
+    text-shadow: none;
+    icon-shadow: none;
+  }
+  &:backdrop:insensitive { 
+    color: transparentize($_insensitive_fg_color,0.5); 
+  }
   
   .separator {
     /* always disable separators */

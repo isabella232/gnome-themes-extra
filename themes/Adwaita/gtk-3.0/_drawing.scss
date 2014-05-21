@@ -32,7 +32,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 //
 
   $_dark: transparentize(black,0.8);
-  $_bright: transparentize(white,0.4);
+  $_bright: transparentize(white,0.2);
 
   @if lightness($tc) < 50% {
     text-shadow: 0 1px $_bright;
@@ -144,8 +144,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   //
     color: $_insensitive_fg_color;
     border-color: $_insensitive_borders_color;
-    @include _button_box_shadow(none,
-                                $widget_bottom_hilight);
+    @include _button_box_shadow($widget_bottom_hilight);
     background-image: linear-gradient(to bottom, transparentize($_backdrop_borders_color,.9));
   }
 
