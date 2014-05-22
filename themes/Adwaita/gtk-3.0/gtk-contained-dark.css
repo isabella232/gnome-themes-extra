@@ -156,7 +156,7 @@ GtkGrid:insensitive {
 /***********
  * Buttons *
  ***********/
-.button, .linked .button, GtkComboBox .button,
+.button, GtkComboBox .button,
 .toolbar .button.raised,
 .toolbar .raised .button,
 .toolbar GtkComboBox .button,
@@ -432,19 +432,17 @@ GtkGrid:insensitive {
     border: none;
     box-shadow: none; }
 
-.linked .button {
-  padding: 6px;
+.linked .button, .linked .button:backdrop {
   border-radius: 0;
   border-right-width: 0; }
-  .linked .button:first-child {
-    border-radius: 3px 0 0 3px;
-    border-width: 1px 0 1px 1px; }
-  .linked .button:last-child {
+  .linked .button:first-child, .linked .button:backdrop:first-child {
+    border-radius: 3px 0 0 3px; }
+  .linked .button:last-child, .linked .button:backdrop:last-child {
     border-radius: 0 3px 3px 0;
-    border-width: 1px; }
-  .linked .button:only-child {
+    border-right-width: 1px; }
+  .linked .button:only-child, .linked .button:backdrop:only-child {
     border-radius: 3px;
-    border-width: 1px; }
+    border-right-width: 1px; }
 
 .header-bar .button.text-button {
   padding: 6px 8px 5px;
@@ -513,7 +511,7 @@ GtkComboBox {
     border-left: 0; }
   GtkComboBox.combobox-entry .button:last-child {
     border-radius: 0 3px 3px 0; }
-  GtkComboBox .linked .button, .linked GtkComboBox .button, GtkComboBox .button {
+  GtkComboBox .button {
     padding: 4px 6px; }
 
 /***************
