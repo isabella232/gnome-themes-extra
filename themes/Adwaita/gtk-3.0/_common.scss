@@ -307,22 +307,20 @@ GtkGrid:insensitive {
   }
 }
 
-.linked .button {
-  @extend .button;
-  padding: 6px;
+.linked .button, .linked .button:backdrop {
+//  padding: 6px;
   border-radius: 0;
   border-right-width: 0;
   &:first-child {
     border-radius: 3px 0 0 3px;
-    border-width: 1px 0 1px 1px;
   }
   &:last-child {
     border-radius: 0 3px 3px 0;
-    border-width: 1px;
+    border-right-width: 1px;
   }
   &:only-child {
     border-radius: 3px;
-    border-width: 1px;
+    border-right-width: 1px;
   }
 }
 
