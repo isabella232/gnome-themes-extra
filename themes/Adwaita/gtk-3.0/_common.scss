@@ -260,7 +260,7 @@ GtkGrid:insensitive {
       &:hover {
         @include button(hover,$b_color, white, true);
       }
-      &:active {  //", &:hover:active {" this *shouldn't* be needed
+      &:active { 
         @include button(active,$b_color, white, true);
       }
       &:backdrop {
@@ -419,9 +419,9 @@ GtkComboBox {
  ***************/
  
 .header-bar {
-  border-width: 0 0 1px;
+  border-width: 0 0 1px; 
   border-style: solid;
-  border-color: darken($theme_bg_color, 30%);
+  border-color: $borders_color;
   border-radius: 7px 7px 0 0;
   
   background-color: transparent;
@@ -433,8 +433,9 @@ GtkComboBox {
   padding: 6px;
 
   &:backdrop {
-    background-image: none;
+    border-color: $_backdrop_borders_color;
     background-color: $theme_bg_color;
+    background-image: none;
     box-shadow: none;
   }
   
@@ -448,18 +449,19 @@ GtkComboBox {
   }
   & > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: 1;
-    -GtkWidget-separator-width: 2px;
-    background-color: transparent;
+    -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
-    border-style: solid;
-    border-color: transparent;
-    @if $variant == 'light' {
-      border-image: -gtk-scaled(url("assets/header-separator.png"),
-                  url("assets/header-separator@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
-    }
-    @else {
-      border-image: -gtk-scaled(url("assets/header-separator-dark.png"),
-                  url("assets/header-separator-dark@2.png")) 0 1 0 1 / 0 1px 0 1px stretch;
+    border-image: linear-gradient(to bottom, 
+                                  transparentize($borders_color,1),
+                                  $borders_color 30%,
+                                  $borders_color 70%,
+                                  transparentize($borders_color,1) 100%)
+                  0 1 / 0 1px stretch; //FIXME use a proper color
+    &:backdrop {
+      border-image: linear-gradient(to bottom, 
+                                    transparentize($_backdrop_insensitive_color,
+                                                   0.5))
+                    0 1 / 1px 1px;  //FIXME use a proper color
     }
   }
   &.selection-mode {
