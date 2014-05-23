@@ -488,8 +488,8 @@ GtkComboBox {
   }
 }
 
-.window-frame.tiled .header-bar {
-  border-radius: 0; // FIXME doesn't work
+.tiled .header-bar {
+  border-radius: 0;
 }
 
 /***************
@@ -655,23 +655,28 @@ GtkScrolledWindow.frame {
 .window-frame {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
-  border-width: 0px;    
+  border-width: 0px;
+  // the second box shadow is the window border
+  // it needs to be transparent, see bug #722563   
   @if $variant == 'dark' { 
-    box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.2);
+    box-shadow: 0 2px 10px 4px transparentize(black, 0.9),
+                inset 0 0 0 1px transparentize(black, 0.4);
   }
   @else {
-    box-shadow: 0 2px 10px 4px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+    box-shadow: 0 2px 10px 4px transparentize(black, 0.9),
+                0 0 0 1px transparentize(black, 0.8);
   }
 
   /* this is used for the resize cursor area */
   margin: 10px;
 
   &:backdrop {
-    box-shadow: 0 3px 6px 2px transparentize($wm_shadow, 0.4), 0 0 0 1px transparentize($wm_shadow,.5);
+    box-shadow: 0 3px 6px 2px transparentize(black, 0.9),
+                0 0 0 1px transparentize(black,0.7);
   }
   &.tiled {
     border-radius: 0;
-    background-color: $theme_bg_color;
+    background-color: red;;
   }
 }
 
