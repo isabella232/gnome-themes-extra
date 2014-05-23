@@ -486,7 +486,7 @@ GtkComboBox {
   border-radius: 7px 7px 0 0;
   background-color: transparent;
   background-image: linear-gradient(to bottom, #f2f2f2, #e0e0e0);
-  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1), inset 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 -1px rgba(161, 161, 161, 0.4), inset 0 1px rgba(255, 255, 255, 0.05);
   padding: 6px; }
   .header-bar:backdrop {
     border-color: #a1a1a1;
@@ -564,7 +564,7 @@ GtkPopover {
     border-width: 1px; }
   .notebook.header {
     background-color: #e0e0e0;
-    box-shadow: inset 0 6px 3px -5px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 6px 3px -5px rgba(0, 0, 0, 0.6);
     border-width: 0px; }
     .notebook.header.frame {
       border: 1px solid #a1a1a1; }

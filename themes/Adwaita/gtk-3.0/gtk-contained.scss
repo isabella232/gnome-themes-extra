@@ -17,8 +17,6 @@ $selected_bg_color: #729fcf;
 $borders_color: darken($theme_bg_color,30%);
 $borders_edge: transparentize($theme_base_color,0.95);
 
-$theme_shade: rgba(0,0,0,.5); //shadow seems to be a reserved word
-
 $link_color: lighten($selected_bg_color,10%);
 
 $warning_color: #f57900;
