@@ -463,7 +463,7 @@ GtkComboBox {
     padding: 0 12px;
   }
   & > GtkBox > .separator.vertical {
-    -GtkWidget-wide-separators: 1;
+    -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
     border-image: linear-gradient(to bottom, 
@@ -474,7 +474,7 @@ GtkComboBox {
                   0 1 / 0 1px stretch; //FIXME use a proper color
     &:backdrop {
       border-image: linear-gradient(to bottom, 
-                                    transparentize($_backdrop_insensitive_color,
+                                    transparentize($_backdrop_borders_color,
                                                    0.5))
                     0 1 / 1px 1px;  //FIXME use a proper color
     }
