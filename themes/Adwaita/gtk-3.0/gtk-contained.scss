@@ -15,7 +15,8 @@ $selected_fg_color: #ffffff;
 $selected_bg_color: #729fcf;
 
 $borders_color: darken($theme_bg_color,30%);
-$borders_edge: transparentize($theme_base_color,0.95);
+//$borders_edge: transparentize(white,0.5);
+$borders_edge: white; //FIXME
 
 $link_color: lighten($selected_bg_color,10%);
 

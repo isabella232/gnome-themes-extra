@@ -3,11 +3,7 @@
 // generic drawing of more complex things
 
 $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on 
-                                             //most widgets, not working
-                                             //since gtk doesn't draw (yet?)
-                                             //outside the widget itself.
-
-
+                                             //most widgets, FIXME 1px
 // buttons
 
 @mixin _button_border_color ($c) {
@@ -70,6 +66,9 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 // 
   border-width: 1px;
   border-style: solid;
+  
+  $_top_hilight: white;
+  @if $variant == 'dark' { $_top_hilight: transparentize(white,0.9); }
 
   @if $t==normal { // normal button
     color: $tc;
@@ -92,7 +91,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
     @else { border-color: $borders_color; }
 
     @include _button_text_shadow($tc,$c);
-    @include _button_box_shadow(inset 0 1px $borders_edge, 
+    @include _button_box_shadow(inset 0 1px $_top_hilight, 
                                 $widget_bottom_hilight);
   }
 
@@ -105,7 +104,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                       $c);
 
     @include _button_text_shadow($tc,lighten($c,4%));
-    @include _button_box_shadow(inset 0 1px $borders_edge, 
+    @include _button_box_shadow(inset 0 1px $_top_hilight,
                                 $widget_bottom_hilight);
   }
 
@@ -167,6 +166,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   @else if $t==backdrop-insensitive { // backdrop insensitive button
     color: $_backdrop_insensitive_color;
     border-color: $_backdrop_borders_color;
+    box-shadow: none;
   }
 
   @else if $t==backdrop-insensitive-active { // backdrop insensitive 
