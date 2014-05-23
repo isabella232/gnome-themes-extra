@@ -84,6 +84,10 @@ GtkGrid,
 GtkGrid:insensitive {
   background-color: transparent; }
 
+.view {
+  background-color: white;
+  color: #2e3436; }
+
 /*********************
  * Spinner Animation *
  *********************/
