@@ -87,29 +87,26 @@
 }
 
 .gtkstyle-fallback {
-    background-color: $theme_bg_color;
-    color: $theme_fg_color;
-}
-
-.gtkstyle-fallback:prelight {
+  background-color: $theme_bg_color;
+  color: $theme_fg_color;
+  &:prelight {
     background-color: lighten($theme_bg_color, 10%);
     color: $theme_fg_color;
-}
-
-.gtkstyle-fallback:active {
+  }
+  &:active {
     background-color: darken($theme_bg_color, 10%);
     color: $theme_fg_color;
-}
-
-.gtkstyle-fallback:insensitive {
+  }
+  &:insensitive {
     background-color: $_insensitive_bg_color;
     color: $_insensitive_fg_color;
-}
-
-.gtkstyle-fallback:selected {
+  }
+  &:selected {
     background-color: $selected_bg_color;
     color: $selected_fg_color;
+  }
 }
+
 
 GtkImage,
 GtkImage:insensitive,
@@ -122,7 +119,9 @@ GtkGrid:insensitive {
     background-color: transparent;
 }
 
-// spinner animation
+/*********************
+ * Spinner Animation *
+ *********************/
 
 @keyframes spin {
     to { -gtk-icon-transform: rotate(1turn); }
@@ -133,7 +132,6 @@ GtkGrid:insensitive {
   background-color: blue;
   opacity: 0; // non spinning spinner makes no sense
   -gtk-icon-source: url("assets/spinner.svg");
-
   &:active {
     opacity: 1;
     animation: spin 1s linear infinite;
@@ -689,5 +687,3 @@ GtkScrolledWindow.frame {
     border-color: transparent;
   }
 }
-
-
