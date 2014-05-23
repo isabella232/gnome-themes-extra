@@ -327,8 +327,8 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
 
 .header-bar .button {
   &.text-button {
-    padding: 6px 8px 5px; /* due to font metrics the image buttons 
-                             are 1px shorter */
+    padding: 6px 8px 5px; // due to font metrics the image buttons 
+                          // are 1px shorter
   }
   &.image-button {
     padding: 8px; 
@@ -546,8 +546,8 @@ GtkPopover {
   &.frame { border-width: 1px; }
   &.header {
     background-color: darken($theme_bg_color,5%);
-    box-shadow: inset 0 6px 3px -5px transparentize($theme_shade,0.35); //I want just a top shadow 
-                                                                       //so negative spread
+    box-shadow: inset 0 6px 3px -5px transparentize($theme_shade,0.35); // I want just a top shadow 
+                                                                        // so negative spread
     border-width: 0px;
     &.frame {
       border: 1px solid $borders_color;
@@ -573,7 +573,7 @@ GtkPopover {
     &.right:active { box-shadow: inset $tab_indicator_size 0 $active_tab_indicator; };
     &.left:hover { box-shadow: inset (-$tab_indicator_size) 0 $prelight_tab_indicator; };
     &.left:active { box-shadow: inset (-$tab_indicator_size) 0 $active_tab_indicator; };
-    //with backdrop in the mix this will explode we need smarter code
+    //FIXME: with backdrop in the mix this will explode we need smarter code
 
     GtkLabel { //tab text
       font-weight: bold;

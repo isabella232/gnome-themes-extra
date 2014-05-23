@@ -363,9 +363,7 @@ GtkColorButton.button {
     border-right-width: 1px; }
 
 .header-bar .button.text-button {
-  padding: 6px 8px 5px;
-  /* due to font metrics the image buttons 
-     are 1px shorter */ }
+  padding: 6px 8px 5px; }
 .header-bar .button.image-button {
   padding: 8px; }
 
