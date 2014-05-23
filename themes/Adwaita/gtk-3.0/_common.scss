@@ -160,7 +160,11 @@ GtkGrid:insensitive {
                                       darken($theme_base_color,3%) 0%,
                                       $theme_base_color 90%
                                       );
-  box-shadow: inset 0 2px 2px -2px $theme_shade,
+
+  $_entry_shade: transparentize(black, 0.5);
+  @if $variant == 'dark' { $entry_shade: transparentize(black, 0.4); }
+
+  box-shadow: inset 0 2px 2px -2px $_entry_shade,
               0 1px $borders_edge; /* not working */
 
   background-color: transparent; // this needs to be 'transparent'
@@ -443,7 +447,7 @@ GtkComboBox {
   background-image: linear-gradient(to bottom,
                                     lighten($theme_bg_color,2%),
                                     darken($theme_bg_color,5%));
-  box-shadow: inset 0 -1px transparentize($theme_shade,.4),
+  box-shadow: inset 0 -1px transparentize($borders_color,0.6),
               inset 0 1px $borders_edge;
   padding: 6px;
 
@@ -481,7 +485,7 @@ GtkComboBox {
   }
   &.selection-mode {
     color: darken($selected_bg_color, 15%);
-    text-shadow: 0 1px $theme_shade;
+    text-shadow: 0 1px transparentize(black, 0.5);
     background-image: linear-gradient(to bottom,
                                     lighten($selected_bg_color,5%),
                                     lighten($selected_bg_color,2%));
@@ -504,11 +508,11 @@ GtkPopover {
   */
   background-color: $theme_bg_color;
 
-  border-color: darken($theme_bg_color, 30%);
+  border-color: $borders-color;
   border-width: 1px;
   border-style: solid;
 
-  box-shadow: 0 2px 3px $theme_shade;
+  box-shadow: 0 2px 3px transparentize(black, 0.5);
   margin: 10px;
   padding: 2px;
   &:backdrop {
@@ -551,8 +555,9 @@ GtkPopover {
   &.frame { border-width: 1px; }
   &.header {
     background-color: darken($theme_bg_color,5%);
-    box-shadow: inset 0 6px 3px -5px transparentize($theme_shade,0.35); // I want just a top shadow 
-                                                                        // so negative spread
+    box-shadow: inset 0 6px 3px -5px transparentize(black,0.4); 
+// I want just a top shadow 
+// so negative spread
     border-width: 0px;
     &.frame {
       border: 1px solid $borders_color;
