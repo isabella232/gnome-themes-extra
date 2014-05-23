@@ -61,22 +61,18 @@
 .gtkstyle-fallback {
   background-color: #393f3f;
   color: #eeeeec; }
-
-.gtkstyle-fallback:prelight {
-  background-color: #515a5a;
-  color: #eeeeec; }
-
-.gtkstyle-fallback:active {
-  background-color: #212424;
-  color: #eeeeec; }
-
-.gtkstyle-fallback:insensitive {
-  background-color: transparent;
-  color: white; }
-
-.gtkstyle-fallback:selected {
-  background-color: #2a76c6;
-  color: white; }
+  .gtkstyle-fallback:prelight {
+    background-color: #515a5a;
+    color: #eeeeec; }
+  .gtkstyle-fallback:active {
+    background-color: #212424;
+    color: #eeeeec; }
+  .gtkstyle-fallback:insensitive {
+    background-color: transparent;
+    color: white; }
+  .gtkstyle-fallback:selected {
+    background-color: #2a76c6;
+    color: white; }
 
 GtkImage,
 GtkImage:insensitive,
@@ -88,6 +84,9 @@ GtkGrid,
 GtkGrid:insensitive {
   background-color: transparent; }
 
+/*********************
+ * Spinner Animation *
+ *********************/
 @keyframes spin {
   to {
     -gtk-icon-transform: rotate(1turn); } }
