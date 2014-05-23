@@ -388,30 +388,59 @@ GtkColorButton.button {
   .spinbutton .button:backdrop:insensitive {
     border-width: 0 0 0 1px;
     color: rgba(255, 255, 255, 0.3); }
-
-/*
-.spinbutton {
-  .button {
-    background-color: transparent;
+.spinbutton.vertical .button {
+  border-width: 1px;
+  border-style: solid;
+  color: #eeeeec;
+  background-image: linear-gradient(to bottom, #454c4c, #393f3f 40%, #2d3232);
+  border-color: #1c1f1f;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
+  icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
+  box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
+  .spinbutton.vertical .button:first-child {
+    border-radius: 3px 3px 0 0; }
+  .spinbutton.vertical .button:last-child {
+    border-radius: 0 0 3px 3px; }
+  .spinbutton.vertical .button:active {
+    border-width: 1px;
+    border-style: solid;
+    color: #eeeeec;
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #212424, #2d3232 3%);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.89176);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.89176);
+    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
+  .spinbutton.vertical .button:insensitive {
+    border-width: 1px;
+    border-style: solid;
+    color: white;
+    border-color: #1c1f1f;
     background-image: none;
-    border-radius: 0;
-    border-width: 0 0 0 1px;
-    border-color: transparentize($borders_color,0.7);
-    padding: 2px 6px;
-    &:active {
-      @include button(active, lighten($theme_bg_color, 20%));
-    }
-  }
-  &.vertical {
-    .button {
-      // derives from normal button
-      &:first-child { border-radius: 3px 3px 0 0; }
-      &:last-child { border-radius: 0 0 3px 3px; }
-    }
-    &.entry { border-radius: 0; border-width: 0 1px 0 1px;}
-  }
-}
-*/
+    text-shadow: none;
+    icon-shadow: none;
+    box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
+  .spinbutton.vertical .button:backdrop {
+    border-width: 1px;
+    border-style: solid;
+    color: #eeeeec;
+    border-color: #1c1f1f;
+    background-image: none;
+    text-shadow: none;
+    icon-shadow: none;
+    box-shadow: none; }
+  .spinbutton.vertical .button:hover {
+    border-width: 1px;
+    border-style: solid;
+    color: #eeeeec;
+    border-color: #212424;
+    background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
+    box-shadow: inset 0 1px rgba(238, 238, 236, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
+.spinbutton.vertical.entry {
+  border-radius: 0;
+  border-width: 0 1px 0 1px; }
+
 /**************
  * ComboBoxes *
  **************/
@@ -530,61 +559,52 @@ GtkPopover {
   -GtkWidget-focus-padding: 0;
   -GtkWidget-focus-line-width: 0;
   transition: all 200ms ease-out; }
-
-.notebook.frame {
-  border-width: 1px; }
-
-.notebook.header {
-  background-color: #2d3232;
-  box-shadow: inset 0 6px 3px -5px rgba(0, 0, 0, 0.25);
-  border-width: 0px; }
-
-.notebook.header.frame {
-  border: 1px solid #1c1f1f; }
-  .notebook.header.frame.top {
-    border-bottom: none; }
-  .notebook.header.frame.bottom {
-    border-top: none; }
-  .notebook.header.frame.right {
-    border-left: none; }
-  .notebook.header.frame.left {
-    border-right: none; }
-
-.notebook tab {
-  border-width: 0;
-  background-color: transparent; }
-  .notebook tab.top, .notebook tab.bottom {
-    padding: 8px 20px; }
-  .notebook tab.left, .notebook tab.right {
-    padding: 5px 20px; }
-
-.notebook tab GtkLabel {
-  font-weight: bold;
-  color: white; }
-  .notebook tab GtkLabel.active-page {
-    color: #eeeeec; }
-  .notebook tab GtkLabel.prelight-page {
-    color: white; }
-
-.notebook tab GtkLabel.active-page {
-  color: #eeeeec; }
-
-.notebook tab.top:hover {
-  box-shadow: inset 0 -2px #1c1f1f; }
-.notebook tab.top:active {
-  box-shadow: inset 0 -2px #2a76c6; }
-.notebook tab.bottom:hover {
-  box-shadow: inset 0 2px #1c1f1f; }
-.notebook tab.bottom:active {
-  box-shadow: inset 0 2px #2a76c6; }
-.notebook tab.right:hover {
-  box-shadow: inset 2px 0 #1c1f1f; }
-.notebook tab.right:active {
-  box-shadow: inset 2px 0 #2a76c6; }
-.notebook tab.left:hover {
-  box-shadow: inset -2px 0 #1c1f1f; }
-.notebook tab.left:active {
-  box-shadow: inset -2px 0 #2a76c6; }
+  .notebook.frame {
+    border-width: 1px; }
+  .notebook.header {
+    background-color: #2d3232;
+    box-shadow: inset 0 6px 3px -5px rgba(0, 0, 0, 0.25);
+    border-width: 0px; }
+    .notebook.header.frame {
+      border: 1px solid #1c1f1f; }
+      .notebook.header.frame.top {
+        border-bottom: none; }
+      .notebook.header.frame.bottom {
+        border-top: none; }
+      .notebook.header.frame.right {
+        border-left: none; }
+      .notebook.header.frame.left {
+        border-right: none; }
+  .notebook tab {
+    border-width: 0;
+    background-color: transparent; }
+    .notebook tab.top, .notebook tab.bottom {
+      padding: 8px 20px; }
+    .notebook tab.left, .notebook tab.right {
+      padding: 5px 20px; }
+    .notebook tab.top:hover {
+      box-shadow: inset 0 -2px #1c1f1f; }
+    .notebook tab.top:active {
+      box-shadow: inset 0 -2px #2a76c6; }
+    .notebook tab.bottom:hover {
+      box-shadow: inset 0 2px #1c1f1f; }
+    .notebook tab.bottom:active {
+      box-shadow: inset 0 2px #2a76c6; }
+    .notebook tab.right:hover {
+      box-shadow: inset 2px 0 #1c1f1f; }
+    .notebook tab.right:active {
+      box-shadow: inset 2px 0 #2a76c6; }
+    .notebook tab.left:hover {
+      box-shadow: inset -2px 0 #1c1f1f; }
+    .notebook tab.left:active {
+      box-shadow: inset -2px 0 #2a76c6; }
+    .notebook tab GtkLabel {
+      font-weight: bold;
+      color: white; }
+      .notebook tab GtkLabel.active-page {
+        color: #eeeeec; }
+      .notebook tab GtkLabel.prelight-page {
+        color: white; }
 
 /**************
  * Scrollbars *
