@@ -342,54 +342,42 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
  * GtkSpinButton *
  *****************/
 
-.spinbutton .button {
-  background-image: none;
-  border-width: 0 0 0 1px;
-  border-color: transparentize($borders_color,0.7);
-  border-radius: 0;
-  box-shadow: none;
-//  padding-left: 6px;
-//  padding-right: 6px;
-  &:insensitive {
-    color: transparentize($_insensitive_fg_color,0.7);
-  }
-  &:active {
-    box-shadow: inset 0 2px 3px -1px transparentize(black,0.8); 
-  }
-  &:backdrop {
-    border-color: transparentize($_backdrop_borders_color,0.7);
-  }
-  &:backdrop:insensitive {
-    border-width: 0 0 0 1px;
-    color: transparentize($_backdrop_insensitive_color,0.7);
-  }
-}
-
-
-/*
 .spinbutton {
   .button {
-    background-color: transparent;
     background-image: none;
-    border-radius: 0;
     border-width: 0 0 0 1px;
     border-color: transparentize($borders_color,0.7);
-    padding: 2px 6px;
+    border-radius: 0;
+    box-shadow: none;
+  //  padding-left: 6px;
+  //  padding-right: 6px;
+    &:insensitive {
+      color: transparentize($_insensitive_fg_color,0.7);
+    }
     &:active {
-      @include button(active, lighten($theme_bg_color, 20%));
+      box-shadow: inset 0 2px 3px -1px transparentize(black,0.8); 
+    }
+    &:backdrop {
+      border-color: transparentize($_backdrop_borders_color,0.7);
+    }
+    &:backdrop:insensitive {
+      border-width: 0 0 0 1px;
+      color: transparentize($_backdrop_insensitive_color,0.7);
     }
   }
   &.vertical {
     .button {
-      // derives from normal button
+      @include button(normal);
       &:first-child { border-radius: 3px 3px 0 0; }
       &:last-child { border-radius: 0 0 3px 3px; }
+      &:active { @include button(active); }
+      &:insensitive { @include button(insensitive); }
+      &:backdrop { @include button(backdrop); }
+      &:hover { @include button(hover); }
     }
     &.entry { border-radius: 0; border-width: 0 1px 0 1px;}
   }
 }
-*/
-
 
 /**************
  * ComboBoxes *
@@ -557,61 +545,45 @@ GtkPopover {
   -GtkWidget-focus-padding: 0;
   -GtkWidget-focus-line-width: 0;
   transition: all 200ms ease-out;
-}
+  &.frame { border-width: 1px; }
+  &.header {
+    background-color: darken($theme_bg_color,5%);
+    box-shadow: inset 0 6px 3px -5px transparentize($theme_shade,0.35); //I want just a top shadow 
+                                                                       //so negative spread
+    border-width: 0px;
+    &.frame {
+      border: 1px solid $borders_color;
+      &.top { border-bottom: none; };
+      &.bottom { border-top: none; };
+      &.right { border-left: none; };
+      &.left { border-right: none; }; 
+    }
+  }
+  tab {
+    border-width: 0;
+    background-color: transparent;
+    $tab_indicator_size: 2px;
+    $active_tab_indicator: $selected_bg_color;
+    $prelight_tab_indicator: $borders_color;
+    &.top, &.bottom { padding: 8px 20px; }; //horizontal tab sizing
+    &.left, &.right { padding: 5px 20px; }; //vertical tab sizing
+    &.top:hover { box-shadow: inset 0 (-$tab_indicator_size) $prelight_tab_indicator; };
+    &.top:active { box-shadow: inset 0 (-$tab_indicator_size) $active_tab_indicator; };
+    &.bottom:hover { box-shadow: inset 0 $tab_indicator_size $prelight_tab_indicator; };
+    &.bottom:active { box-shadow: inset 0 $tab_indicator_size $active_tab_indicator; };
+    &.right:hover { box-shadow: inset $tab_indicator_size 0 $prelight_tab_indicator; };
+    &.right:active { box-shadow: inset $tab_indicator_size 0 $active_tab_indicator; };
+    &.left:hover { box-shadow: inset (-$tab_indicator_size) 0 $prelight_tab_indicator; };
+    &.left:active { box-shadow: inset (-$tab_indicator_size) 0 $active_tab_indicator; };
+    //with backdrop in the mix this will explode we need smarter code
 
-.notebook.frame {
-  border-width: 1px;
-}
-
-.notebook.header {
-  background-color: darken($theme_bg_color,5%);
-  box-shadow: inset 0 6px 3px -5px transparentize($theme_shade,0.35); //I want just a top shadow 
-                                                                     //so negative spread
-  border-width: 0px;
-}
-
-.notebook.header.frame {
-  border: 1px solid $borders_color;
-  &.top { border-bottom: none; };
-  &.bottom { border-top: none; };
-  &.right { border-left: none; };
-  &.left { border-right: none; }; 
-}
-
-.notebook tab { //tab sizing
-  border-width: 0;
-  background-color: transparent;
-  &.top, &.bottom { padding: 8px 20px; }; //horizontal tab sizing
-  &.left, &.right { padding: 5px 20px; }; //vertical tab sizing
-}
-
-.notebook tab GtkLabel { //tab text
-  font-weight: bold;
-  color: lighten($theme_fg_color,30%); //FIXME
-  &.active-page { color: $theme_fg_color; } //active tab text
-  &.prelight-page { color: lighten($theme_fg_color,15%); } //prelight tab text
-}
-
-.notebook tab GtkLabel.active-page {
-  color: $theme_fg_color;
-}
-
-.notebook tab { //tab indicator
-
-  $tab_indicator_size: 2px;
-  $active_tab_indicator: $selected_bg_color;
-  $prelight_tab_indicator: $borders_color;
-
-  &.top:hover { box-shadow: inset 0 (-$tab_indicator_size) $prelight_tab_indicator; };
-  &.top:active { box-shadow: inset 0 (-$tab_indicator_size) $active_tab_indicator; };
-  &.bottom:hover { box-shadow: inset 0 $tab_indicator_size $prelight_tab_indicator; };
-  &.bottom:active { box-shadow: inset 0 $tab_indicator_size $active_tab_indicator; };
-  &.right:hover { box-shadow: inset $tab_indicator_size 0 $prelight_tab_indicator; };
-  &.right:active { box-shadow: inset $tab_indicator_size 0 $active_tab_indicator; };
-  &.left:hover { box-shadow: inset (-$tab_indicator_size) 0 $prelight_tab_indicator; };
-  &.left:active { box-shadow: inset (-$tab_indicator_size) 0 $active_tab_indicator; };
-  //with backdrop in the mix this will explode we need smarter code
-
+    GtkLabel { //tab text
+      font-weight: bold;
+      color: lighten($theme_fg_color,30%); //FIXME
+      &.active-page { color: $theme_fg_color; } //active tab text
+      &.prelight-page { color: lighten($theme_fg_color,15%); } //prelight tab text
+    }
+  }
 }
 
 /**************
