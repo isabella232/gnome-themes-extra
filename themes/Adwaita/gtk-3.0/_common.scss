@@ -660,6 +660,19 @@ GtkPopover {
   }
 }
 
+/**********
+ * Frames *
+ **********/
+.frame {
+  border: 1px solid $borders_color;
+  padding: 0;
+  &:backdrop { border-color: transparentize($borders_color,0.4); }
+}
+
+GtkScrolledWindow.frame {
+  border-radius: 2px;
+}
+
 /**********************
  * Window Decorations *
  *********************/

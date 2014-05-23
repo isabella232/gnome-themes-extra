@@ -621,6 +621,18 @@ GtkPopover {
       .scrollbar.slider.fine-tune:prelight:active {
         background-color: #2a76c6; }
 
+/**********
+ * Frames *
+ **********/
+.frame {
+  border: 1px solid #1c1f1f;
+  padding: 0; }
+  .frame:backdrop {
+    border-color: rgba(28, 31, 31, 0.6); }
+
+GtkScrolledWindow.frame {
+  border-radius: 2px; }
+
 /**********************
  * Window Decorations *
  *********************/
