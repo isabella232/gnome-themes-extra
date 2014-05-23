@@ -12,7 +12,6 @@ $borders_color: darken($theme_bg_color,12%);
 $borders_edge: transparentize($theme_fg_color,.9);
 
 $theme_shade: rgba(0,0,0,.6); //shadow seems to be a reserved word
-$wm_shadow: transparentize(black, 0.15);
 
 $link_color: lighten($selected_bg_color,10%);
 
