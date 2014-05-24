@@ -690,7 +690,8 @@ GtkScrolledWindow.frame {
   padding: 8px;
   border-color: transparent;
   background-image: none;
-  box-shadow: none;
+  box-shadow: inset 0 1px transparentize(white,1); // this is needed to avoid
+                                                   // the weird transition
   &:hover {
     @include button(normal);
   }
