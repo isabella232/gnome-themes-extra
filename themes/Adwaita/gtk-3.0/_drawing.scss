@@ -18,7 +18,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   }
 }
 
-@mixin _button_text_shadow ($tc:$theme_fg_color, $bg:$theme_bg_color) { 
+@mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) { 
 //
 // helper function for the text emboss effect
 //
@@ -52,7 +52,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   @else { box-shadow: $shadow1; }
 }
 
-@mixin button($t, $c:$theme_bg_color, $tc:$theme_fg_color, $shadow:false ) {
+@mixin button($t, $c:$bg_color, $tc:$fg_color, $colored_button:false ) {
 //
 // Button drawing function
 // 
@@ -87,7 +87,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                   );
     }
 
-    @if $c!=$theme_bg_color { @include _button_border_color($c); }
+    @if $c!=$bg_color { @include _button_border_color($c); }
     @else { border-color: $borders_color; }
 
     @include _button_text_shadow($tc,$c);
@@ -110,7 +110,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
   @else if $t==active { // pushed button
     color: $tc;
-    @if $c!=$theme_bg_color { @include _button_border_color($c); }
+    @if $c!=$bg_color { @include _button_border_color($c); }
     @else { border-color: $borders_color; }
     @if $variant == 'light' {
       background-image: linear-gradient(to bottom,
