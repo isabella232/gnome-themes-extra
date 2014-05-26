@@ -32,7 +32,7 @@
   -GtkWidget-focus-padding: 2;
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
-  -GtkWindow-resize-grip-height: 0;   
+  -GtkWindow-resize-grip-height: 0;
 
   // We use the outline properties to signal the focus properties
   // to the adwaita engine: using real CSS properties is faster,
@@ -149,7 +149,7 @@ GtkGrid:insensitive {
 /****************
  * Text Entries *
  ****************/
- 
+
 .entry {
   padding: 4px;
   color: $fg_color;
@@ -172,7 +172,7 @@ GtkGrid:insensitive {
 
   &:insensitive {
     color: $insensitive_fg_color;
-    background-image: linear-gradient(to bottom, $bg_color); 
+    background-image: linear-gradient(to bottom, $bg_color);
     box-shadow: 0 1px $borders_edge;
   }
   &:focus {
@@ -181,7 +181,7 @@ GtkGrid:insensitive {
                 // focus indicator
                 inset 0 0 2px 1px transparentize($selected_bg_color, 0.5),                      0 1px $borders_edge; /* not working */
   }
-  &:selected, &:backdrop:selected { 
+  &:selected, &:backdrop:selected {
     color: $selected_fg_color;
     background-color: $selected_bg_color;
   }
@@ -195,7 +195,7 @@ GtkGrid:insensitive {
     color: $backdrop_insensitive_color;
     background-image: linear-gradient(to bottom, $backdrop_bg_color);
   }
-  
+
   &.progressbar {
     margin: 1px;
     border-radius: 0;
@@ -257,21 +257,21 @@ GtkGrid:insensitive {
       @include button(insensitive-active);
     }
   }
-  
+
   // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $selected_bg_color), 
+  @each $b_type, $b_color in (suggested-action, $selected_bg_color),
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button(normal,$b_color, white); //FIXME: perhaps we should derive from bg color?
       &:hover {
         @include button(hover,$b_color, white);
       }
-      &:active { 
+      &:active {
         @include button(active,$b_color, white);
       }
       &:backdrop {
         @include button(backdrop,$b_color);
-        &:insensitive { 
+        &:insensitive {
           @include button(backdrop-insensitive);
         }
       }
@@ -335,11 +335,11 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
 
 .header-bar .button {
   &.text-button {
-    padding: 6px 8px 5px; // due to font metrics the image buttons 
+    padding: 6px 8px 5px; // due to font metrics the image buttons
                           // are 1px shorter
   }
   &.image-button {
-    padding: 8px; 
+    padding: 8px;
   }
 }
 
@@ -362,7 +362,7 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
       color: transparentize($insensitive_fg_color,0.7);
     }
     &:active {
-      box-shadow: inset 0 2px 3px -1px transparentize(black,0.8); 
+      box-shadow: inset 0 2px 3px -1px transparentize(black,0.8);
     }
     &:backdrop {
       border-color: transparentize($backdrop_borders_color,0.7);
@@ -375,7 +375,7 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
   &.vertical {
     .button {
       //FIXME box-shadow outset needs to be removed
-      &:first-child { 
+      &:first-child {
         border-radius: 3px 3px 0 0;
         @include button(normal,$bg_color,$fg_color,true);
         &:active { @include button(active,$bg_color,$fg_color,true); }
@@ -384,7 +384,7 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
         &:backdrop { @include button(backdrop); }
         &:backdrop:insensitive { @include button(backdrop-insensitive); }
       }
-      &:last-child { 
+      &:last-child {
         border-radius: 0 0 3px 3px;
         @include button(normal);
         &:active { @include button(active); }
@@ -410,23 +410,23 @@ GtkComboBox {
   -GtkComboBox-shadow-type: none;
 
   box-shadow: 0 1px $borders_edge;
-  
+
   @include _button_text_shadow;
 
-  &:insensitive { 
+  &:insensitive {
     color: $insensitive_fg_color;
     text-shadow: none;
     icon-shadow: none;
   }
-  &:backdrop { 
-    color: $backdrop_fg_color; 
+  &:backdrop {
+    color: $backdrop_fg_color;
     text-shadow: none;
     icon-shadow: none;
   }
-  &:backdrop:insensitive { 
-    color: transparentize($backdrop_insensitive_color,0.5); 
+  &:backdrop:insensitive {
+    color: transparentize($backdrop_insensitive_color,0.5);
   }
-  
+
   .separator {
     // always disable separators
     -GtkWidget-wide-separators: true;
@@ -452,13 +452,13 @@ GtkComboBox {
 /***************
  * Header bars *
  ***************/
- 
+
 .header-bar {
-  border-width: 0 0 1px; 
+  border-width: 0 0 1px;
   border-style: solid;
   border-color: $borders_color;
   border-radius: 7px 7px 0 0;
-  
+
   $_top_hilight: white; //FIXME?
   @if $variant == 'dark' { $_top_hilight: transparentize(white,0.9); }
 
@@ -476,7 +476,7 @@ GtkComboBox {
     background-image: none;
     box-shadow: none;
   }
-  
+
   .title {
     font: Bold;
     padding: 0px 12px;
@@ -489,14 +489,14 @@ GtkComboBox {
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
-    border-image: linear-gradient(to bottom, 
+    border-image: linear-gradient(to bottom,
                                   transparentize($borders_color,1),
                                   $borders_color 30%,
                                   $borders_color 70%,
                                   transparentize($borders_color,1) 100%)
                   0 1 / 0 1px stretch; //FIXME use a proper color
     &:backdrop {
-      border-image: linear-gradient(to bottom, 
+      border-image: linear-gradient(to bottom,
                                     transparentize($backdrop_borders_color,
                                                    0.5))
                     0 1 / 1px 1px;  //FIXME use a proper color
@@ -573,8 +573,8 @@ GtkPopover {
   &.frame { border-width: 1px; }
   &.header {
     background-color: darken($bg_color,5%);
-    box-shadow: inset 0 6px 3px -5px transparentize(black,0.4); 
-// I want just a top shadow 
+    box-shadow: inset 0 6px 3px -5px transparentize(black,0.4);
+// I want just a top shadow
 // so negative spread
     border-width: 0px;
     &.frame {
@@ -582,7 +582,7 @@ GtkPopover {
       &.top { border-bottom: none; };
       &.bottom { border-top: none; };
       &.right { border-left: none; };
-      &.left { border-right: none; }; 
+      &.left { border-right: none; };
     }
   }
   tab {
@@ -679,10 +679,10 @@ GtkScrolledWindow.frame {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
   border-width: 0px;
-  $_wm_border: transparentize(black, 0.8); // this needs to be transparent, 
+  $_wm_border: transparentize(black, 0.8); // this needs to be transparent,
                                            // see bug #722563
-  @if $variant == 'dark' { 
-    $_wm_border: transparentize(black, 0.4); 
+  @if $variant == 'dark' {
+    $_wm_border: transparentize(black, 0.4);
   }
   box-shadow: 0 2px 10px 4px transparentize(black, 0.9),
               0 0 0 1px $_wm_border;
