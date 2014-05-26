@@ -6,37 +6,8 @@
 
 $variant: 'light';
 
-// Color definitions
-$theme_base_color: #ffffff;
-$theme_bg_color: #ededed;
-$theme_fg_color: #2e3436;
-
-$selected_fg_color: #ffffff;
-$selected_bg_color: #729fcf;
-
-$borders_color: darken($theme_bg_color,30%);
-//$borders_edge: transparentize(white,0.5);
-$borders_edge: white; //FIXME
-
-$link_color: lighten($selected_bg_color,10%);
-
-$warning_color: #f57900;
-$error_color: #cc0000;
-$success_color: $selected_bg_color;
-$destructive_color: #ef2929;
-
-//insensitive state derived colors
-$_insensitive_fg_color: lighten($theme_fg_color, 30%);
-$_insensitive_bg_color: transparent;
-$_insensitive_borders_color: $borders_color;
-
-//colors for the backdrop state, derived from the main colors.
-$_backdrop_base_color: darken($theme_base_color,1%);
-$_backdrop_bg_color: $theme_bg_color;
-$_backdrop_fg_color: lighten($theme_fg_color,10%);
-$_backdrop_insensitive_color: darken($_backdrop_bg_color,15%);
-$_backdrop_borders_color: $borders_color;
-
+// color definitions
+@import 'colors';
 // common drawing routines
 @import 'drawing';
 // actual widget styling
