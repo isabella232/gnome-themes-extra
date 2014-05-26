@@ -163,10 +163,11 @@ GtkGrid:insensitive {
                                       $base_color 90%
                                       );
 
-  $_entry_shade: if($variant=='light', transparentize(black, 0.5), transparentize(black, 0.4));
+  $_entry_shade: if($variant=='light', transparentize(black, 0.5),
+                    transparentize(black, 0.4));
 
   box-shadow: inset 0 2px 2px -2px $_entry_shade,
-              0 1px $borders_edge; /* not working */
+              0 1px $borders_edge;
 
   background-color: transparent; // this needs to be 'transparent'
                                  // if we need a flat bg, let's abuse a gradient
@@ -180,7 +181,7 @@ GtkGrid:insensitive {
     border-color: $selected_bg_color;
     box-shadow: inset 0 2px 2px -2px $_entry_shade,
                 inset 0 0 2px 1px transparentize($selected_bg_color, 0.8), // focus indicator
-                0 1px $borders_edge; /* not working */
+                0 1px $borders_edge;
   }
   &:selected, &:backdrop:selected {
     color: $selected_fg_color;
@@ -190,7 +191,7 @@ GtkGrid:insensitive {
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom, $backdrop_base_color);
-    box-shadow: none; // let's make it flat
+    box-shadow: 0 1px transparentize($borders_edge,1);
   }
   &:backdrop:insensitive {
     color: $backdrop_insensitive_color;
@@ -375,7 +376,6 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
   }
   &.vertical {
     .button {
-      //FIXME box-shadow outset needs to be removed
       &:first-child {
         border-radius: 3px 3px 0 0;
         @include button(normal,$bg_color,$fg_color,true);
@@ -404,7 +404,7 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
  **************/
 GtkComboBox {
 
-  //FIXME padding and box-shadow outset issue
+  //FIXME padding issue
   padding: 0;
 
   -GtkComboBox-arrow-scaling: 0.5;
@@ -630,7 +630,7 @@ GtkPopover {
   &.frame { border-width: 1px; }
   &.header {
     background-color: darken($bg_color,5%);
-    box-shadow: inset 0 6px 3px -5px transparentize(black,0.4);
+    box-shadow: inset 0 6px 4px -5px transparentize(black,0.4);
 // I want just a top shadow
 // so negative spread
     border-width: 0px;
