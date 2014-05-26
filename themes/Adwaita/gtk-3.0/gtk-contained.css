@@ -203,20 +203,21 @@ GtkGrid:insensitive {
       border-style: solid;
       color: #454f52;
       border-color: #a1a1a1;
-      background-image: linear-gradient(to bottom, rgba(161, 161, 161, 0.3)); }
+      background-image: linear-gradient(to bottom, rgba(161, 161, 161, 0.3));
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .button:backdrop:insensitive {
       border-width: 1px;
       border-style: solid;
       color: #c7c7c7;
       border-color: #a1a1a1;
-      box-shadow: none; }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .button:backdrop:insensitive:active {
       border-width: 1px;
       border-style: solid;
       color: #c7c7c7;
       border-color: #a1a1a1;
       background-image: linear-gradient(to bottom, rgba(161, 161, 161, 0.1));
-      box-shadow: none; }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
   .button:insensitive {
     border-width: 1px;
     border-style: solid;
@@ -231,8 +232,8 @@ GtkGrid:insensitive {
       border-style: solid;
       color: #748489;
       border-color: #a1a1a1;
-      box-shadow: 0 1px white;
-      background-image: linear-gradient(to bottom, rgba(161, 161, 161, 0.2)); }
+      background-image: linear-gradient(to bottom, rgba(161, 161, 161, 0.2));
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
   .button.suggested-action {
     border-width: 1px;
     border-style: solid;
@@ -274,7 +275,7 @@ GtkGrid:insensitive {
         border-style: solid;
         color: #c7c7c7;
         border-color: #a1a1a1;
-        box-shadow: none; }
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .button.suggested-action:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -325,7 +326,7 @@ GtkGrid:insensitive {
         border-style: solid;
         color: #c7c7c7;
         border-color: #a1a1a1;
-        box-shadow: none; }
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .button.destructive-action:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -402,47 +403,95 @@ GtkColorButton.button {
     border-color: #a1a1a1;
     text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    box-shadow: inset 0 1px white, 0 1px white; }
+    box-shadow: inset 0 1px white; }
     .spinbutton.vertical .button:first-child {
       border-radius: 3px 3px 0 0; }
+      .spinbutton.vertical .button:first-child:active {
+        border-width: 1px;
+        border-style: solid;
+        color: #2e3436;
+        border-color: #a1a1a1;
+        background-image: linear-gradient(to bottom, #c7c7c7, #d1d1d1 3%, lightgray);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3); }
+      .spinbutton.vertical .button:first-child:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #748489;
+        border-color: #a1a1a1;
+        background-image: none;
+        text-shadow: none;
+        icon-shadow: none;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      .spinbutton.vertical .button:first-child:hover {
+        border-width: 1px;
+        border-style: solid;
+        color: #2e3436;
+        border-color: #a1a1a1;
+        background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        box-shadow: inset 0 1px white; }
+      .spinbutton.vertical .button:first-child:backdrop {
+        border-width: 1px;
+        border-style: solid;
+        color: #454f52;
+        border-color: #a1a1a1;
+        background-image: none;
+        text-shadow: none;
+        icon-shadow: none;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      .spinbutton.vertical .button:first-child:backdrop:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #c7c7c7;
+        border-color: #a1a1a1;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .spinbutton.vertical .button:last-child {
       border-radius: 0 0 3px 3px; }
-    .spinbutton.vertical .button:active {
-      border-width: 1px;
-      border-style: solid;
-      color: #2e3436;
-      border-color: #a1a1a1;
-      background-image: linear-gradient(to bottom, #c7c7c7, #d1d1d1 3%, lightgray);
-      text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-      icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px white; }
-    .spinbutton.vertical .button:insensitive {
-      border-width: 1px;
-      border-style: solid;
-      color: #748489;
-      border-color: #a1a1a1;
-      background-image: none;
-      text-shadow: none;
-      icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
-    .spinbutton.vertical .button:backdrop {
-      border-width: 1px;
-      border-style: solid;
-      color: #454f52;
-      border-color: #a1a1a1;
-      background-image: none;
-      text-shadow: none;
-      icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
-    .spinbutton.vertical .button:hover {
-      border-width: 1px;
-      border-style: solid;
-      color: #2e3436;
-      border-color: #a1a1a1;
-      background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
-      text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-      icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-      box-shadow: inset 0 1px white, 0 1px white; }
+      .spinbutton.vertical .button:last-child:active {
+        border-width: 1px;
+        border-style: solid;
+        color: #2e3436;
+        border-color: #a1a1a1;
+        background-image: linear-gradient(to bottom, #c7c7c7, #d1d1d1 3%, lightgray);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px white; }
+      .spinbutton.vertical .button:last-child:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #748489;
+        border-color: #a1a1a1;
+        background-image: none;
+        text-shadow: none;
+        icon-shadow: none;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
+      .spinbutton.vertical .button:last-child:hover {
+        border-width: 1px;
+        border-style: solid;
+        color: #2e3436;
+        border-color: #a1a1a1;
+        background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
+        text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+        box-shadow: inset 0 1px white, 0 1px white; }
+      .spinbutton.vertical .button:last-child:backdrop {
+        border-width: 1px;
+        border-style: solid;
+        color: #454f52;
+        border-color: #a1a1a1;
+        background-image: none;
+        text-shadow: none;
+        icon-shadow: none;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      .spinbutton.vertical .button:last-child:backdrop:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #c7c7c7;
+        border-color: #a1a1a1;
+        box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
   .spinbutton.vertical.entry {
     border-radius: 0;
     border-width: 0 1px 0 1px; }
