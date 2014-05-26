@@ -21,11 +21,9 @@
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
-  outline-color: rgba(238, 238, 236, 0.3);
+  outline-color: rgba(238, 238, 236, 0.7);
   outline-style: dashed;
-  outline-offset: -3px;
-  outline-width: 1px;
-  outline-radius: 2px; }
+  outline-offset: 2px; }
 
 /***************
  * Base States *
@@ -117,7 +115,7 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   border: 1px solid #1c1f1f;
   background-image: linear-gradient(to bottom, #2b2b2b 0%, #333333 90%);
-  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), 0 1px rgba(238, 238, 236, 0.1);
+  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.5), 0 1px rgba(238, 238, 236, 0.1);
   /* not working */
   background-color: transparent; }
   .entry:insensitive {
@@ -126,7 +124,7 @@ GtkGrid:insensitive {
     box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
   .entry:focus {
     border-color: #2a76c6;
-    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), inset 0 0 2px 1px rgba(42, 118, 198, 0.2), 0 1px rgba(238, 238, 236, 0.1);
+    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.4), inset 0 0 2px 1px rgba(42, 118, 198, 0.5), 0 1px rgba(238, 238, 236, 0.1);
     /* not working */ }
   .entry:selected, .entry:backdrop:selected {
     color: white;
@@ -135,7 +133,7 @@ GtkGrid:insensitive {
     color: #eeeeec;
     border-color: #1c1f1f;
     background-image: linear-gradient(to bottom, #262626);
-    box-shadow: none; }
+    box-shadow: 0 1px rgba(238, 238, 236, 0); }
   .entry:backdrop:insensitive {
     color: white;
     background-image: linear-gradient(to bottom, #393f3f); }
@@ -197,14 +195,14 @@ GtkGrid:insensitive {
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
     .button:backdrop:active {
       border-width: 1px;
       border-style: solid;
       color: #eeeeec;
       border-color: #1c1f1f;
       background-image: linear-gradient(to bottom, rgba(28, 31, 31, 0.3));
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
     .button:backdrop:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -217,7 +215,7 @@ GtkGrid:insensitive {
       color: white;
       border-color: #1c1f1f;
       background-image: linear-gradient(to bottom, rgba(28, 31, 31, 0.1));
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
   .button:insensitive {
     border-width: 1px;
     border-style: solid;
@@ -269,7 +267,7 @@ GtkGrid:insensitive {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
       .button.suggested-action:backdrop:insensitive {
         border-width: 1px;
         border-style: solid;
@@ -320,7 +318,7 @@ GtkGrid:insensitive {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
       .button.destructive-action:backdrop:insensitive {
         border-width: 1px;
         border-style: solid;
@@ -440,7 +438,7 @@ GtkColorButton.button {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
     .spinbutton.vertical .button:first-child:backdrop:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -492,7 +490,7 @@ GtkColorButton.button {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
     .spinbutton.vertical .button:last-child:backdrop:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -575,48 +573,6 @@ GtkComboBox {
   .tiled .header-bar, .maximized .header-bar {
     border-radius: 0; }
 
-/**************
- * Tree Views *
- **************/
-column-header .button,
-column-header .button:hover,
-column-header .button:active,
-column-header .button:backdrop {
-  border-width: 0 1px 1px 0;
-  border-color: transparent;
-  box-shadow: none;
-  border-radius: 0;
-  border-image: linear-gradient(to top, #272929, #333333) 0 1 1 0;
-  background-image: none;
-  background-color: #333333;
-  color: rgba(238, 238, 236, 0.5);
-  font-weight: bold; }
-
-/*********
- * Menus *
- *********/
-.menubar {
-  padding: 2px; }
-  .menubar .menuitem {
-    background-color: #393f3f;
-    padding: 4px 8px;
-    border-radius: 3px 3px 0 0; }
-    .menubar .menuitem:hover, .menubar .menuitem:active {
-      background-color: #333333; }
-
-.menu .menuitem {
-  background-color: #333333;
-  padding: 4px;
-  border-radius: 0; }
-  .menu .menuitem:hover {
-    color: white;
-    background-color: #2a76c6; }
-  .menu .menuitem:active {
-    color: white;
-    background-color: #256ab1; }
-.menu .separator {
-  color: transparent; }
-
 /***************
  * Popovers   *
  ***************/
@@ -667,7 +623,7 @@ GtkPopover {
     border-width: 1px; }
   .notebook.header {
     background-color: #2d3232;
-    box-shadow: inset 0 6px 3px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 6px 4px -5px rgba(0, 0, 0, 0.6);
     border-width: 0px; }
     .notebook.header.frame {
       border: 1px solid #1c1f1f; }
@@ -754,10 +710,8 @@ GtkPopover {
   .frame:backdrop {
     border-color: rgba(28, 31, 31, 0.6); }
 
-GtkScrolledWindow .frame {
+GtkScrolledWindow.frame {
   border-radius: 2px; }
-GtkScrolledWindow GtkViewport.frame {
-  border-style: none; }
 
 /**********************
  * Window Decorations *
@@ -805,5 +759,5 @@ GtkScrolledWindow GtkViewport.frame {
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0);
     border-color: transparent; }
