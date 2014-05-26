@@ -2,7 +2,7 @@
 
 // generic drawing of more complex things
 
-$widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on 
+$widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                              //most widgets, FIXME 1px
 // buttons
 
@@ -18,15 +18,15 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   }
 }
 
-@mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) { 
+@mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
 //
 // helper function for the text emboss effect
 //
 // $tc is the optional text color, not the shadow color
-// 
+//
 // TODO: this functions needs a way to deal with special cases
 //
-  
+
   $_lbg: lightness($bg)/100%;
 
   $_dark: transparentize(black,$_lbg*0.8);
@@ -55,19 +55,19 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 @mixin button($t, $c:$bg_color, $tc:$fg_color, $noshadow:false ) {
 //
 // Button drawing function
-// 
-// $t:  button type,  
+//
+// $t:  button type,
 // $c:  base button color for colored* types
 // $tc: optional text color for colored* types
 // $noshadow: set to true not to draw the bottom hilight
-//  
+//
 // possible $t values:
 // normal, hover, active, insensitive, insensitive-active,
 // backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active
-// 
+//
   border-width: 1px;
   border-style: solid;
-  
+
   $_top_hilight: white;
   @if $variant == 'dark' { $_top_hilight: transparentize(white,0.9); }
 
@@ -93,7 +93,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
 
     @include _button_text_shadow($tc,$c);
     @if $noshadow { box-shadow: inset 0 1px $_top_hilight; }
-    @else { 
+    @else {
       @include _shadows(inset 0 1px $_top_hilight, $widget_bottom_hilight);
     }
   }
@@ -129,15 +129,15 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                         darken($c,5%) 3%);
     }
     @include _button_text_shadow($tc,darken($c,10%));
-    @if $noshadow { 
+    @if $noshadow {
       box-shadow: inset 0 2px 3px -1px transparentize(black,0.7);
     }
-    @else { 
+    @else {
       @include _shadows(inset 0 2px 3px -1px transparentize(black,0.7),
                         $widget_bottom_hilight);
     }
   }
-  @else if $t==insensitive { 
+  @else if $t==insensitive {
   //
   // insensitive button
   //
@@ -146,13 +146,13 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    @if $noshadow { 
+    @if $noshadow {
       // white with 0 alpha to avoid an ugly transition, since no color means
       // black with 0 alpha
-      box-shadow: inset 0 1px transparentize(white,1); 
+      box-shadow: inset 0 1px transparentize(white,1);
     }
-    @else { 
-      @include _shadows(inset 0 1px transparentize(white,1), 
+    @else {
+      @include _shadows(inset 0 1px transparentize(white,1),
                         $widget_bottom_hilight);
     }
   }
@@ -162,16 +162,16 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   //
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
-    background-image: linear-gradient(to bottom, 
-                        transparentize($insensitive_borders_color,.8)); 
+    background-image: linear-gradient(to bottom,
+                        transparentize($insensitive_borders_color,.8));
                         //FIXME? better to use mix() probably
-    @if $noshadow { 
+    @if $noshadow {
       // white with 0 alpha to avoid an ugly transition, since no color means
       // black with 0 alpha
-      box-shadow: inset 0 1px transparentize(white,1); 
+      box-shadow: inset 0 1px transparentize(white,1);
     }
-    @else { 
-      @include _shadows(inset 0 1px transparentize(white,1), 
+    @else {
+      @include _shadows(inset 0 1px transparentize(white,1),
                         $widget_bottom_hilight);
     }
   }
@@ -188,7 +188,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   @else if $t==backdrop-active { // backdrop pushed button
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
-    background-image: linear-gradient(to bottom, 
+    background-image: linear-gradient(to bottom,
                         transparentize($backdrop_borders_color,.7));
     box-shadow: inset 0 1px transparentize(white,1);
   }
@@ -199,7 +199,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
     box-shadow: inset 0 1px transparentize(white,1);
   }
 
-  @else if $t==backdrop-insensitive-active { // backdrop insensitive 
+  @else if $t==backdrop-insensitive-active { // backdrop insensitive
                                              // pushed button
     color: $backdrop_insensitive_color;
     border-color: $backdrop_borders_color;
