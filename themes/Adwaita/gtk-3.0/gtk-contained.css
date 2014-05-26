@@ -197,7 +197,7 @@ GtkGrid:insensitive {
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    box-shadow: none; }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .button:backdrop:active {
       border-width: 1px;
       border-style: solid;
@@ -225,7 +225,7 @@ GtkGrid:insensitive {
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    box-shadow: 0 1px white; }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
     .button:insensitive:active {
       border-width: 1px;
       border-style: solid;
@@ -268,7 +268,7 @@ GtkGrid:insensitive {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: none; }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
       .button.suggested-action:backdrop:insensitive {
         border-width: 1px;
         border-style: solid;
@@ -283,7 +283,7 @@ GtkGrid:insensitive {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: 0 1px white; }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
   .button.destructive-action {
     border-width: 1px;
     border-style: solid;
@@ -319,7 +319,7 @@ GtkGrid:insensitive {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: none; }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
       .button.destructive-action:backdrop:insensitive {
         border-width: 1px;
         border-style: solid;
@@ -334,7 +334,7 @@ GtkGrid:insensitive {
       background-image: none;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: 0 1px white; }
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
 
 GtkColorButton.button {
   padding: 4px; }
@@ -377,73 +377,75 @@ GtkColorButton.button {
 /*****************
  * GtkSpinButton *
  *****************/
-.spinbutton .button {
-  background-image: none;
-  border-width: 0 0 0 1px;
-  border-color: rgba(161, 161, 161, 0.3);
-  border-radius: 0;
-  box-shadow: none; }
-  .spinbutton .button:insensitive {
-    color: rgba(116, 132, 137, 0.3); }
-  .spinbutton .button:active {
-    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2); }
-  .spinbutton .button:backdrop {
-    border-color: rgba(161, 161, 161, 0.3); }
-  .spinbutton .button:backdrop:insensitive {
+.spinbutton {
+  box-shadow: 0 1px white; }
+  .spinbutton .button {
+    background-image: none;
     border-width: 0 0 0 1px;
-    color: rgba(199, 199, 199, 0.3); }
-.spinbutton.vertical .button {
-  border-width: 1px;
-  border-style: solid;
-  color: #2e3436;
-  background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
-  border-color: #a1a1a1;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-  icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-  box-shadow: inset 0 1px white, 0 1px white; }
-  .spinbutton.vertical .button:first-child {
-    border-radius: 3px 3px 0 0; }
-  .spinbutton.vertical .button:last-child {
-    border-radius: 0 0 3px 3px; }
-  .spinbutton.vertical .button:active {
-    border-width: 1px;
-    border-style: solid;
-    color: #2e3436;
-    border-color: #a1a1a1;
-    background-image: linear-gradient(to bottom, #c7c7c7, #d1d1d1 3%, lightgray);
-    text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px white; }
-  .spinbutton.vertical .button:insensitive {
-    border-width: 1px;
-    border-style: solid;
-    color: #748489;
-    border-color: #a1a1a1;
-    background-image: none;
-    text-shadow: none;
-    icon-shadow: none;
-    box-shadow: 0 1px white; }
-  .spinbutton.vertical .button:backdrop {
-    border-width: 1px;
-    border-style: solid;
-    color: #454f52;
-    border-color: #a1a1a1;
-    background-image: none;
-    text-shadow: none;
-    icon-shadow: none;
+    border-color: rgba(161, 161, 161, 0.3);
+    border-radius: 0;
     box-shadow: none; }
-  .spinbutton.vertical .button:hover {
+    .spinbutton .button:insensitive {
+      color: rgba(116, 132, 137, 0.3); }
+    .spinbutton .button:active {
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2); }
+    .spinbutton .button:backdrop {
+      border-color: rgba(161, 161, 161, 0.3); }
+    .spinbutton .button:backdrop:insensitive {
+      border-width: 0 0 0 1px;
+      color: rgba(199, 199, 199, 0.3); }
+  .spinbutton.vertical .button {
     border-width: 1px;
     border-style: solid;
     color: #2e3436;
+    background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
     border-color: #a1a1a1;
-    background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
     text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     box-shadow: inset 0 1px white, 0 1px white; }
-.spinbutton.vertical.entry {
-  border-radius: 0;
-  border-width: 0 1px 0 1px; }
+    .spinbutton.vertical .button:first-child {
+      border-radius: 3px 3px 0 0; }
+    .spinbutton.vertical .button:last-child {
+      border-radius: 0 0 3px 3px; }
+    .spinbutton.vertical .button:active {
+      border-width: 1px;
+      border-style: solid;
+      color: #2e3436;
+      border-color: #a1a1a1;
+      background-image: linear-gradient(to bottom, #c7c7c7, #d1d1d1 3%, lightgray);
+      text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+      icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px white; }
+    .spinbutton.vertical .button:insensitive {
+      border-width: 1px;
+      border-style: solid;
+      color: #748489;
+      border-color: #a1a1a1;
+      background-image: none;
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
+    .spinbutton.vertical .button:backdrop {
+      border-width: 1px;
+      border-style: solid;
+      color: #454f52;
+      border-color: #a1a1a1;
+      background-image: none;
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+    .spinbutton.vertical .button:hover {
+      border-width: 1px;
+      border-style: solid;
+      color: #2e3436;
+      border-color: #a1a1a1;
+      background-image: linear-gradient(to bottom, white, #f7f7f7 40%, #ededed);
+      text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+      icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+      box-shadow: inset 0 1px white, 0 1px white; }
+  .spinbutton.vertical.entry {
+    border-radius: 0;
+    border-width: 0 1px 0 1px; }
 
 /**************
  * ComboBoxes *
@@ -452,6 +454,7 @@ GtkComboBox {
   padding: 0;
   -GtkComboBox-arrow-scaling: 0.5;
   -GtkComboBox-shadow-type: none;
+  box-shadow: 0 1px white;
   text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
   icon-shadow: 0 1px rgba(255, 255, 255, 0.76923); }
   GtkComboBox:insensitive {
@@ -702,5 +705,5 @@ GtkScrolledWindow.frame {
     background-image: none;
     text-shadow: none;
     icon-shadow: none;
-    box-shadow: none;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     border-color: transparent; }
