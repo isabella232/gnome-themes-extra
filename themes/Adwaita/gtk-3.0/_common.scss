@@ -376,15 +376,18 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
   &.vertical {
     .button {
       //FIXME box-shadow outset needs to be removed
-      @include button(normal,$bg_color,$fg_color,true);
-      &:first-child { border-radius: 3px 3px 0 0;
+      &:first-child { 
+        border-radius: 3px 3px 0 0;
+        @include button(normal,$bg_color,$fg_color,true);
         &:active { @include button(active,$bg_color,$fg_color,true); }
         &:insensitive { @include button(insensitive,$bg_color,$fg_color,true); }
         &:hover { @include button(hover,$bg_color,$fg_color,true); }
         &:backdrop { @include button(backdrop); }
         &:backdrop:insensitive { @include button(backdrop-insensitive); }
       }
-      &:last-child { border-radius: 0 0 3px 3px;
+      &:last-child { 
+        border-radius: 0 0 3px 3px;
+        @include button(normal);
         &:active { @include button(active); }
         &:insensitive { @include button(insensitive); }
         &:hover { @include button(hover); }
