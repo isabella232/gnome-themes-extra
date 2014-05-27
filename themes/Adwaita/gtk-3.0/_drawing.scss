@@ -9,16 +9,9 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
 //
 // Helper function to stack up to 4 box-shadows;
 //
-
-  @if $shadow2!=none {
-    @if $shadow3!=none {
-      @if $shadow4!=none {
-        box-shadow: $shadow1, $shadow2, $shadow3, $shadow4;
-      }
-      @else { box-shadow: $shadow1, $shadow2, $shadow3;}
-    }
-    @else { box-shadow: $shadow1, $shadow2; }
-  }
+  @if $shadow4!=none { box-shadow: $shadow1, $shadow2, $shadow3, $shadow4; }
+  @else if $shadow3!=none { box-shadow: $shadow1, $shadow2, $shadow3; }
+  @else if $shadow2!=none { box-shadow: $shadow1, $shadow2; }
   @else { box-shadow: $shadow1; }
 }
 
