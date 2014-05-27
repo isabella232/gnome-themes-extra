@@ -392,7 +392,7 @@ GtkComboBox {
     icon-shadow: none;
   }
   &:backdrop:insensitive {
-    color: mix($backdrop_insensitive_color,$base_color, 50%);
+    color: $backdrop_insensitive_color;
   }
 
   .separator {
