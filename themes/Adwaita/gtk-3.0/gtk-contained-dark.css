@@ -598,18 +598,22 @@ column-header .button:backdrop {
   .menubar .menuitem {
     background-color: #393f3f;
     padding: 4px 8px;
-    border-radius: 3px 3px 0 0; }
+    border-radius: 0; }
     .menubar .menuitem:hover, .menubar .menuitem:active {
-      background-color: #333333; }
+      border-width: 0 0 3px;
+      border-style: solid;
+      border-color: #2a76c6; }
 
 .menu .menuitem {
   background-color: #333333;
   padding: 4px;
   border-radius: 0; }
   .menu .menuitem:hover {
+    border: none;
     color: white;
     background-color: #2a76c6; }
   .menu .menuitem:active {
+    border: none;
     color: white;
     background-color: #256ab1; }
 .menu .separator {
