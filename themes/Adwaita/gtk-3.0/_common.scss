@@ -362,7 +362,10 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
       &.button.button.button:first-child { border-bottom-width: 0; }
       &.button.button.button:last-child { border-top-width: 0; }
     }
-    &.entry { border-radius: 0; }
+    &.entry {
+      @include entry(normal);
+      border-radius: 0;
+    }
   }
 }
 

@@ -3,15 +3,22 @@
 // generic drawing of more complex things
 
 $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
-                                             //most widgets, FIXME 1px
+                                   //most widgets
 
 @mixin _shadows($shadow1, $shadow2:none, $shadow3:none, $shadow4:none) {
 //
 // Helper function to stack up to 4 box-shadows;
 //
-  @if $shadow2!=none {box-shadow: $shadow1, $shadow2;}
-  @else if $shadow3!=none {box-shadow: $shadow1, $shadow2, $shadow3;}
-  @else if $shadow4!=none {box-shadow: $shadow1, $shadow2, $shadow3, shadow4;}
+
+  @if $shadow2!=none {
+    @if $shadow3!=none {
+      @if $shadow4!=none {
+        box-shadow: $shadow1, $shadow2, $shadow3, $shadow4;
+      }
+      @else { box-shadow: $shadow1, $shadow2, $shadow3;}
+    }
+    @else { box-shadow: $shadow1, $shadow2; }
+  }
   @else { box-shadow: $shadow1; }
 }
 
@@ -35,7 +42,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
                                     $base_color 90%);
   $_entry_edge: $widget_edge;
   @if $noedge { $_entry_edge: none; }
-
+  
   @if $t==normal {
     border-color: $borders_color;
     @include _shadows(inset 0 2px 2px -2px mix(black, $base_color, 50%),
