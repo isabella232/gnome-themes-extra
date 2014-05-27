@@ -763,7 +763,7 @@ GtkScrolledWindow GtkViewport.frame {
   border-style: none; }
 
 .separator {
-  color: #333838; }
+  color: rgba(0, 0, 0, 0.1); }
 
 /**********************
  * Window Decorations *
