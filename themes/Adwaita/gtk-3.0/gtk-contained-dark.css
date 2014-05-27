@@ -193,6 +193,7 @@ GtkGrid:insensitive {
     color: #eeeeec;
     border-color: #1c1f1f;
     background-image: none;
+    background-color: #393f3f;
     text-shadow: none;
     icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
@@ -222,6 +223,7 @@ GtkGrid:insensitive {
     color: white;
     border-color: #1c1f1f;
     background-image: none;
+    background-color: #393f3f;
     text-shadow: none;
     icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 236, 0.1); }
@@ -265,6 +267,7 @@ GtkGrid:insensitive {
       color: #eeeeec;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #2a76c6;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
@@ -280,6 +283,7 @@ GtkGrid:insensitive {
       color: white;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #393f3f;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 236, 0.1); }
@@ -316,6 +320,7 @@ GtkGrid:insensitive {
       color: #eeeeec;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #d51010;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
@@ -331,6 +336,7 @@ GtkGrid:insensitive {
       color: white;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #393f3f;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 236, 0.1); }
@@ -418,6 +424,7 @@ GtkColorButton.button {
       color: white;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #393f3f;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
@@ -436,6 +443,7 @@ GtkColorButton.button {
       color: #eeeeec;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #393f3f;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
@@ -470,6 +478,7 @@ GtkColorButton.button {
       color: white;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #393f3f;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 236, 0.1); }
@@ -488,6 +497,7 @@ GtkColorButton.button {
       color: #eeeeec;
       border-color: #1c1f1f;
       background-image: none;
+      background-color: #393f3f;
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
@@ -497,9 +507,12 @@ GtkColorButton.button {
       color: white;
       border-color: #1c1f1f;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+  .spinbutton.vertical .button.button.button.button:first-child {
+    border-bottom-width: 0; }
+  .spinbutton.vertical .button.button.button.button:last-child {
+    border-top-width: 0; }
   .spinbutton.vertical.entry {
-    border-radius: 0;
-    border-width: 0 1px 0 1px; }
+    border-radius: 0; }
 
 /**************
  * ComboBoxes *
@@ -749,6 +762,76 @@ GtkPopover {
         background-color: #2a76c6; }
 
 /**********
+ * Switch *
+ **********/
+GtkSwitch {
+  font: bold condensed 9;
+  outline-offset: -4px;
+  padding: 2px; }
+  GtkSwitch.trough {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    padding: 1px;
+    color: #eeeeec;
+    background-image: linear-gradient(to bottom, #2d3232, #303535 40%, #363b3b);
+    border-color: #1c1f1f; }
+    GtkSwitch.trough:active {
+      color: white;
+      background-image: linear-gradient(to bottom, #215e9e, #2364a8 40%, #2770bc);
+      border-color: #215d9c; }
+    GtkSwitch.trough:insensitive {
+      color: #eeeeec;
+      background-image: linear-gradient(to bottom, #393f3f);
+      border-color: #1c1f1f; }
+    GtkSwitch.trough:backdrop {
+      color: #eeeeec;
+      background-image: linear-gradient(to bottom, #212424);
+      border-color: #090909; }
+    GtkSwitch.trough:backdrop:insensitive {
+      color: #eeeeec;
+      background-image: linear-gradient(to bottom, #393f3f);
+      border-color: #1c1f1f; }
+  GtkSwitch.slider {
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid;
+    color: #eeeeec;
+    background-image: linear-gradient(to bottom, #454c4c, #393f3f 40%, #2d3232);
+    border-color: #1c1f1f;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+    GtkSwitch.slider:active {
+      border: 1px solid #184472; }
+    GtkSwitch.slider:insensitive {
+      border-width: 1px;
+      border-style: solid;
+      color: white;
+      border-color: #1c1f1f;
+      background-image: none;
+      background-color: #393f3f;
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 236, 0.1); }
+    GtkSwitch.slider:backdrop {
+      border-width: 1px;
+      border-style: solid;
+      color: #eeeeec;
+      border-color: #1c1f1f;
+      background-image: none;
+      background-color: #393f3f;
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
+    GtkSwitch.slider:backdrop:insensitive {
+      border-width: 1px;
+      border-style: solid;
+      color: white;
+      border-color: #1c1f1f;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+
+/**********
  * Frames *
  **********/
 .frame {
@@ -809,6 +892,7 @@ GtkScrolledWindow GtkViewport.frame {
     color: #eeeeec;
     border-color: #1c1f1f;
     background-image: none;
+    background-color: #393f3f;
     text-shadow: none;
     icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0);
