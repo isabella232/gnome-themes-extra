@@ -136,8 +136,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
-    background-image: none;
-    background-color: $c;
+    background-image: linear-gradient(to bottom, $c);
     text-shadow: none;
     icon-shadow: none;
     @if $noedge {
@@ -173,8 +172,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   @else if $t==backdrop { // backdrop button
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
-    background-image: none;
-    background-color: $c;
+    background-image: linear-gradient(to bottom, $c);
     text-shadow: none;
     icon-shadow: none;
     @include _shadows(inset 0 1px transparentize(white,1),
@@ -212,9 +210,10 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   @if $flat { background-image: linear-gradient(to bottom,$c); }
   @else {
     background-image: linear-gradient(to bottom,
-                                  mix(black,$c,20%),
-                                  mix(black,$c,15%) 40%,
-                                  mix(black,$c,5%)
+                                  mix(black,$c,15%) 5%,
+                                  mix(black,$c,10%) 20%,
+                                  mix(black,$c,10%) 90%,
+                                  $c
                                   );
   }
 
