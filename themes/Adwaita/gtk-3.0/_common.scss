@@ -744,13 +744,12 @@ GtkPopover {
 GtkSwitch {
     font: bold condensed 9;
     outline-offset: -4px;
-    padding: 2px;
+    padding: 0;
     
     &.trough {
       border-width: 1px;
       border-style: solid;
       border-radius: 3px;
-      padding: 1px;
       @include trough();
       &:active { @include trough($c:$selected_bg_color, $tc:$selected_fg_color, $noedge:true); }
       &:insensitive {@include trough($flat:true);}
@@ -758,12 +757,12 @@ GtkSwitch {
       &:backdrop:insensitive {@include trough($flat:true, $c:$bg_color);}
     }
     &.slider { 
-      border-radius: 2px;
-        @include button(normal, $noedge:true);
-        &:active { border: 1px solid darken($selected_bg_color, 20%); }
-        &:insensitive { @include button(insensitive); }
-        &:backdrop { @include button(backdrop); }
-        &:backdrop:insensitive { @include button(backdrop-insensitive); }
+      border-radius: 3px;
+      @include button(normal, $noedge:true);
+      &:active { border: 1px solid darken($selected_bg_color, 20%); }
+      &:insensitive { @include button(insensitive); }
+      &:backdrop { @include button(backdrop); }
+      &:backdrop:insensitive { @include button(backdrop-insensitive); }
     }
 }
 
