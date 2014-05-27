@@ -60,7 +60,7 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
   border-width: 1px;
   border-style: solid;
 
-  $_top_hilight: if(lightness($c)> 70%, white, transparentize(white,0.9));
+  $_top_hilight: if(lightness($c)> 70%, white, transparentize(white,0.9)); //not just dark/light but colored buttons
 
   @if $t==normal { // normal button
     color: $tc;
