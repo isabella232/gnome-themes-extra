@@ -590,6 +590,29 @@ column-header .button:backdrop {
   color: rgba(46, 52, 54, 0.5);
   font-weight: bold; }
 
+/*********
+ * Menus *
+ *********/
+.menubar {
+  padding: 2px; }
+  .menubar .menuitem {
+    background-color: #ededed;
+    padding: 4px 8px;
+    border-radius: 3px 3px 0 0; }
+    .menubar .menuitem:hover, .menubar .menuitem:active {
+      background-color: white; }
+
+.menu .menuitem {
+  background-color: white;
+  padding: 4px;
+  border-radius: 0; }
+  .menu .menuitem:hover {
+    color: white;
+    background-color: #4a90d9; }
+  .menu .menuitem:active {
+    color: white;
+    background-color: #2a76c6; }
+
 /***************
  * Popovers   *
  ***************/
