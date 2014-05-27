@@ -375,10 +375,10 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
     .button {
       &:first-child {
         border-radius: 3px 3px 0 0;
-        @include button(normal,$bg_color,$fg_color,true);
-        &:active { @include button(active,$bg_color,$fg_color,true); }
-        &:insensitive { @include button(insensitive,$bg_color,$fg_color,true); }
-        &:hover { @include button(hover,$bg_color,$fg_color,true); }
+        @include button(normal, $noedge: true);
+        &:active { @include button(active, $noedge: true); }
+        &:insensitive { @include button(insensitive, $noedge: true); }
+        &:hover { @include button(hover, $noedge: true); }
         &:backdrop { @include button(backdrop); }
         &:backdrop:insensitive { @include button(backdrop-insensitive); }
       }
@@ -391,8 +391,11 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
         &:backdrop { @include button(backdrop); }
         &:backdrop:insensitive { @include button(backdrop-insensitive); }
       }
+      // FIXME this is a temporary gross hack
+      &.button.button.button:first-child { border-bottom-width: 0; }
+      &.button.button.button:last-child { border-top-width: 0; }
     }
-    &.entry { border-radius: 0; border-width: 0 1px 0 1px;}
+    &.entry { border-radius: 0; }
   }
 }
 
