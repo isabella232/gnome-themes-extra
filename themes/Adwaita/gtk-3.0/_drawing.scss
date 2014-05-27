@@ -137,6 +137,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
     background-image: none;
+    background-color: $c;
     text-shadow: none;
     icon-shadow: none;
     @if $noedge {
@@ -173,6 +174,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
     background-image: none;
+    background-color: $c;
     text-shadow: none;
     icon-shadow: none;
     @include _shadows(inset 0 1px transparentize(white,1),
@@ -203,4 +205,19 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     @include _shadows(inset 0 1px transparentize(white,1),
                       0 1px transparentize(white,1));
   }
+}
+
+@mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {
+  color: $tc;
+  @if $flat { background-image: linear-gradient(to bottom,$c); }
+  @else {
+    background-image: linear-gradient(to bottom,
+                                  mix(black,$c,20%),
+                                  mix(black,$c,15%) 40%,
+                                  mix(black,$c,5%)
+                                  );
+  }
+
+  @if $c!=$bg_color { @include _button_border_color($c); }
+  @else { border-color: $borders_color; }
 }
