@@ -731,6 +731,13 @@ GtkScrolledWindow {
   }
 }
 
+//vbox and hbox separators
+.separator {
+  // always disable separators
+  // -GtkWidget-wide-separators: true;
+  color: transparentize($borders_color, 0.8);
+}
+
 /**********************
  * Window Decorations *
  *********************/
