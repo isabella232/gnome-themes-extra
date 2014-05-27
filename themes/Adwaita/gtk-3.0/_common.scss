@@ -512,6 +512,28 @@ GtkComboBox {
   }
 }
 
+/**************
+ * Tree Views *
+ **************/
+
+column-header {
+  .button {
+    border-width: 0 1px 1px 0;
+    border-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    border-image: linear-gradient(to top,
+                              mix($borders_color, $base_color, 50%),
+                              $base_color
+                              ) 0 1 1 0;
+    background-image: none;
+    background-color: $base_color;
+    color: transparentize($fg_color,0.5);
+    font-weight: bold;
+  }
+}
+
+
 /***************
  * Popovers   *
  ***************/
