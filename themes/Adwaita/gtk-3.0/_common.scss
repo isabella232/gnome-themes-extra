@@ -536,6 +536,35 @@ column-header {
   }
 }
 
+/*********
+ * Menus *
+ *********/
+.menubar {
+  padding: 2px;
+  .menuitem {  // menubar only
+    background-color: $bg_color;
+    padding: 4px 8px;
+    border-radius: 3px 3px 0 0;
+    &:hover, &:active { background-color: $base_color; }
+  }
+}
+
+.menu {
+  .menuitem {  // menubar only
+    background-color: $base_color;
+    padding: 4px;
+    border-radius: 0;
+    &:hover {
+      color: $selected_fg_color;
+      background-color: $selected_bg_color;
+    }
+    &:active {
+      color: $selected_fg_color;
+      background-color: if($variant=='light', darken($selected_bg_color, 10%), darken($selected_bg_color, 5%));
+    }
+  }
+}
+
 
 /***************
  * Popovers   *
