@@ -517,7 +517,10 @@ GtkComboBox {
  **************/
 
 column-header {
-  .button {
+  .button, 
+  .button:hover,
+  .button:active,
+  .button:backdrop {
     border-width: 0 1px 1px 0;
     border-color: transparent;
     box-shadow: none;
