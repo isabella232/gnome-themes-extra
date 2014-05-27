@@ -334,9 +334,23 @@ GtkGrid:insensitive {
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px white; }
-
-GtkColorButton.button {
-  padding: 4px; }
+  .linked .button, .linked .button:backdrop {
+    border-radius: 0;
+    border-right-width: 0; }
+    .linked .button:first-child, .linked .button:backdrop:first-child {
+      border-radius: 3px 0 0 3px; }
+    .linked .button:last-child, .linked .button:backdrop:last-child {
+      border-radius: 0 3px 3px 0;
+      border-right-width: 1px; }
+    .linked .button:only-child, .linked .button:backdrop:only-child {
+      border-radius: 3px;
+      border-right-width: 1px; }
+  .header-bar .button.text-button {
+    padding: 6px 8px 5px; }
+  .header-bar .button.image-button {
+    padding: 8px; }
+  .primary-toolbar .button {
+    icon-shadow: none; }
 
 /* menu/popover buttons */
 .menuitem.button, .menuitem.button:active, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
@@ -356,22 +370,8 @@ GtkColorButton.button {
     border: none;
     box-shadow: none; }
 
-.linked .button, .linked .button:backdrop {
-  border-radius: 0;
-  border-right-width: 0; }
-  .linked .button:first-child, .linked .button:backdrop:first-child {
-    border-radius: 3px 0 0 3px; }
-  .linked .button:last-child, .linked .button:backdrop:last-child {
-    border-radius: 0 3px 3px 0;
-    border-right-width: 1px; }
-  .linked .button:only-child, .linked .button:backdrop:only-child {
-    border-radius: 3px;
-    border-right-width: 1px; }
-
-.header-bar .button.text-button {
-  padding: 6px 8px 5px; }
-.header-bar .button.image-button {
-  padding: 8px; }
+GtkColorButton.button {
+  padding: 4px; }
 
 /*****************
  * GtkSpinButton *

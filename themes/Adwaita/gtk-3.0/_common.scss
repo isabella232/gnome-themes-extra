@@ -277,10 +277,36 @@ GtkGrid:insensitive {
       }
     }
   }
-}
 
-GtkColorButton.button { // Uniform padding on the GtkColorButton.button
-  padding: 4px;
+  // linked buttons
+  .linked &, .linked &:backdrop {
+    border-radius: 0;
+    border-right-width: 0;
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+      border-right-width: 1px;
+    }
+    &:only-child {
+      border-radius: 3px;
+      border-right-width: 1px;
+    }
+  }
+  
+  // headerbar buttons
+  .header-bar & {
+    &.text-button {
+      padding: 6px 8px 5px; // due to font metrics the image buttons
+                            // are 1px shorter
+    }
+    &.image-button {
+      padding: 8px;
+    }
+  }
+  
+  .primary-toolbar & { icon-shadow: none; } // tango icons don't need added shadows
 }
 
 /* menu/popover buttons */
@@ -314,32 +340,8 @@ GtkColorButton.button { // Uniform padding on the GtkColorButton.button
   }
 }
 
-.linked .button, .linked .button:backdrop {
-  border-radius: 0;
-  border-right-width: 0;
-  &:first-child {
-    border-radius: 3px 0 0 3px;
-  }
-  &:last-child {
-    border-radius: 0 3px 3px 0;
-    border-right-width: 1px;
-  }
-  &:only-child {
-    border-radius: 3px;
-    border-right-width: 1px;
-  }
-}
 
-.header-bar .button {
-  &.text-button {
-    padding: 6px 8px 5px; // due to font metrics the image buttons
-                          // are 1px shorter
-  }
-  &.image-button {
-    padding: 8px;
-  }
-}
-
+GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton.button
 
 /*****************
  * GtkSpinButton *
