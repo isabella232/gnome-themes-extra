@@ -161,8 +161,7 @@ GtkGrid:insensitive {
                                       $base_color 90%
                                       );
 
-  $_entry_shade: transparentize(black, 0.5);
-  @if $variant == 'dark' { $entry_shade: transparentize(black, 0.4); }
+  $_entry_shade: if($variant=='light', transparentize(black, 0.5), transparentize(black, 0.4));
 
   box-shadow: inset 0 2px 2px -2px $_entry_shade,
               0 1px $borders_edge; /* not working */
@@ -458,9 +457,8 @@ GtkComboBox {
   border-style: solid;
   border-color: $borders_color;
   border-radius: 7px 7px 0 0;
-
-  $_top_hilight: white; //FIXME?
-  @if $variant == 'dark' { $_top_hilight: transparentize(white,0.9); }
+  
+  $_top_hilight: if($variant=='light', white, transparentize(white,0.9));
 
   background-color: transparent;
   background-image: linear-gradient(to bottom,
@@ -679,11 +677,10 @@ GtkScrolledWindow.frame {
   border-radius: 7px 7px 0 0;
   /* lamefun trick to get rounded borders regardless of CSD use */
   border-width: 0px;
-  $_wm_border: transparentize(black, 0.8); // this needs to be transparent,
-                                           // see bug #722563
-  @if $variant == 'dark' {
-    $_wm_border: transparentize(black, 0.4);
-  }
+  
+  // this needs to be transparent
+  // see bug #722563
+  $_wm_border: if($variant=='light', transparentize(black, 0.8), transparentize(black, 0.4)); 
   box-shadow: 0 2px 10px 4px transparentize(black, 0.9),
               0 0 0 1px $_wm_border;
 
