@@ -5,16 +5,65 @@
 $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
                                              //most widgets, FIXME 1px
 
-@mixin _shadows($shadow1, $shadow2:false, $shadow3:false, $shadow4:false) {
+@mixin _shadows($shadow1, $shadow2:none, $shadow3:none, $shadow4:none) {
 //
 // Helper function to stack up to 4 box-shadows;
 //
-  @if $shadow2 {box-shadow: $shadow1, $shadow2;}
-  @else if $shadow3 {box-shadow: $shadow1, $shadow2, $shadow3;}
-  @else if $shadow4 {box-shadow: $shadow1, $shadow2, $shadow3, shadow4;}
+  @if $shadow2!=none {box-shadow: $shadow1, $shadow2;}
+  @else if $shadow3!=none {box-shadow: $shadow1, $shadow2, $shadow3;}
+  @else if $shadow4!=none {box-shadow: $shadow1, $shadow2, $shadow3, shadow4;}
   @else { box-shadow: $shadow1; }
 }
 
+// entries
+
+@mixin entry($t, $noedge:false) {
+//
+// Entries drawing function
+//
+// $t: entry type
+// $noedge: set to true not to draw the bottom edge hilight
+//
+// possible $t values:
+// normal, focus, insensitive, backdrop, backdrop-insensitive;
+//
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  background-image: linear-gradient(to bottom,
+                                    darken($base_color,3%),
+                                    $base_color 90%);
+  $_entry_edge: $widget_edge;
+  @if $noedge { $_entry_edge: none; }
+
+  @if $t==normal {
+    border-color: $borders_color;
+    @include _shadows(inset 0 2px 2px -2px mix(black, $base_color, 50%),
+                      $_entry_edge);
+  }
+  @if $t==focus {
+    border-color: $selected_bg_color;
+    @include _shadows(inset 0 2px 2px -2px mix(black, $base_color, 50%),
+                      inset 0 0 2px 1px mix($selected_bg_color,$base_color,20%),
+                      $_entry_edge);
+  }
+  @if $t==insensitive {
+    color: $insensitive_fg_color;
+    border-color: $borders_color;
+    background-image: linear-gradient(to bottom, $insensitive_bg_color);
+    @include _shadows($_entry_edge);
+  }
+  @if $t==backdrop {
+    color: $backdrop_fg_color;
+    background-image: linear-gradient(to bottom, $backdrop_base_color);
+    box-shadow: 0 1px transparentize(white,1);
+  }
+  @if $t==backdrop-insensitive {
+    color: $backdrop_insensitive_color;
+    background-image: linear-gradient(to bottom, $backdrop_bg_color);
+    box-shadow: 0 1px transparentize(white,1);
+  }
+}
 
 // buttons
 
@@ -53,7 +102,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
 // $t:  button type,
 // $c:  base button color for colored* types
 // $tc: optional text color for colored* types
-// $noedge: set to true not to draw the bottom hilight
+// $noedge: set to true not to draw the bottom edge hilight
 //
 // possible $t values:
 // normal, hover, active, insensitive, insensitive-active,
