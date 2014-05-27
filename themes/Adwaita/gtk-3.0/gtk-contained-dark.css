@@ -576,7 +576,10 @@ GtkComboBox {
 /**************
  * Tree Views *
  **************/
-column-header .button {
+column-header .button,
+column-header .button:hover,
+column-header .button:active,
+column-header .button:backdrop {
   border-width: 0 1px 1px 0;
   border-color: transparent;
   box-shadow: none;
