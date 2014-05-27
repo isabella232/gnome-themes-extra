@@ -563,6 +563,9 @@ column-header {
       background-color: if($variant=='light', darken($selected_bg_color, 10%), darken($selected_bg_color, 5%));
     }
   }
+  .separator { //just use whitespace
+    color: transparent;
+  }
 }
 
 

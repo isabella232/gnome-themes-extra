@@ -612,6 +612,8 @@ column-header .button:backdrop {
   .menu .menuitem:active {
     color: white;
     background-color: #256ab1; }
+.menu .separator {
+  color: transparent; }
 
 /***************
  * Popovers   *
