@@ -577,6 +577,17 @@ GtkComboBox {
   .tiled .header-bar, .maximized .header-bar {
     border-radius: 0; }
 
+/************
+ * Searbars *
+ ************/
+.search-bar {
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #1c1f1f;
+  background-color: #363c3c;
+  box-shadow: inset 0 1px 3px #292d2d;
+  padding: 4px; }
+
 /**************
  * Tree Views *
  **************/
