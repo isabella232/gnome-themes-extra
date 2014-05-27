@@ -739,7 +739,7 @@ GtkScrolledWindow {
 .separator {
   // always disable separators
   // -GtkWidget-wide-separators: true;
-  color: mix($borders_color, $bg_color, 20%);
+  color: transparentize(black, 0.9);
 }
 
 /**********************
