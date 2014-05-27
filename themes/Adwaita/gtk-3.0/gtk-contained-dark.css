@@ -21,9 +21,11 @@
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
-  outline-color: rgba(238, 238, 236, 0.7);
+  outline-color: rgba(238, 238, 236, 0.3);
   outline-style: dashed;
-  outline-offset: 2px; }
+  outline-offset: -3px;
+  outline-width: 1px;
+  outline-radius: 2px; }
 
 /***************
  * Base States *
