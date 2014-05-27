@@ -163,8 +163,7 @@ GtkGrid:insensitive {
                                       $base_color 90%
                                       );
 
-  $_entry_shade: if($variant=='light', transparentize(black, 0.5),
-                    transparentize(black, 0.4));
+  $_entry_shade: mix(black, $base_color, 50%);
 
   box-shadow: inset 0 2px 2px -2px $_entry_shade,
               0 1px $borders_edge;
@@ -180,7 +179,7 @@ GtkGrid:insensitive {
   &:focus {
     border-color: $selected_bg_color;
     box-shadow: inset 0 2px 2px -2px $_entry_shade,
-                inset 0 0 2px 1px transparentize($selected_bg_color, 0.8), // focus indicator
+                inset 0 0 2px 1px mix($selected_bg_color, $base_color, 20%), // focus indicator
                 0 1px $borders_edge;
   }
   &:selected, &:backdrop:selected {
@@ -191,7 +190,7 @@ GtkGrid:insensitive {
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom, $backdrop_base_color);
-    box-shadow: 0 1px transparentize($borders_edge,1);
+    box-shadow: 0 1px transparentize($borders_edge,1); // not to flicker on transitions
   }
   &:backdrop:insensitive {
     color: $backdrop_insensitive_color;
@@ -425,7 +424,7 @@ GtkComboBox {
     icon-shadow: none;
   }
   &:backdrop:insensitive {
-    color: transparentize($backdrop_insensitive_color,0.5);
+    color: mix($backdrop_insensitive_color,$base_color, 50%);
   }
 
   .separator {
@@ -459,15 +458,13 @@ GtkComboBox {
   border-style: solid;
   border-color: $borders_color;
   border-radius: 7px 7px 0 0;
-  
-  $_top_hilight: if($variant=='light', white, transparentize(white,0.9));
 
   background-color: transparent;
   background-image: linear-gradient(to bottom,
                                     lighten($bg_color,2%),
                                     darken($bg_color,5%));
-  box-shadow: inset 0 -1px transparentize($borders_color,0.6),
-              inset 0 1px $_top_hilight;
+  box-shadow: inset 0 -1px mix($borders_color, $bg_color, 30%), // bottom shade
+              inset 0 1px $borders_edge; // top highlight
   padding: 6px;
 
   &:backdrop {
@@ -508,6 +505,9 @@ GtkComboBox {
     background-image: linear-gradient(to bottom,
                                     lighten($selected_bg_color,5%),
                                     lighten($selected_bg_color,2%));
+    box-shadow: inset 0 -1px mix($borders_color,$bg_color, 30%), //bottom shade
+                inset 0 1px mix($borders_edge,$selected_bg_color, 50%); //top highlight
+
   }
   .tiled &, .maximized & {
     border-radius: 0; // squared corners when the window is max'd or tiled
@@ -533,7 +533,7 @@ column-header {
                               ) 0 1 1 0;
     background-image: none;
     background-color: $base_color;
-    color: transparentize($fg_color,0.5);
+    color: mix($fg_color,$base_color,50%);
     font-weight: bold;
   }
 }
@@ -607,7 +607,7 @@ GtkPopover {
   .separator {
     font-size: 80%;
     font-weight: bold;
-    color: transparentize($fg_color,0.4);
+    color: mix($fg_color, $bg_color, 20%);
     text-shadow: none;
     background-color: transparent;
     icon-shadow: none;
@@ -636,7 +636,7 @@ GtkPopover {
   &.frame { border-width: 1px; }
   &.header {
     background-color: darken($bg_color,5%);
-    box-shadow: inset 0 6px 4px -5px transparentize(black,0.4);
+    box-shadow: inset 0 6px 4px -5px mix($borders_color, $bg_color, 50%);
 // I want just a top shadow
 // so negative spread
     border-width: 0px;
@@ -727,7 +727,7 @@ GtkPopover {
 .frame {
   border: 1px solid $borders_color;
   padding: 0;
-  &:backdrop { border-color: transparentize($borders_color,0.4); }
+  &:backdrop { border-color: mix($borders_color,$bg_color, 40%); }
 }
 
 GtkScrolledWindow {
@@ -741,7 +741,7 @@ GtkScrolledWindow {
 .separator {
   // always disable separators
   // -GtkWidget-wide-separators: true;
-  color: transparentize($borders_color, 0.8);
+  color: mix($borders_color, $bg_color, 20%);
 }
 
 /**********************

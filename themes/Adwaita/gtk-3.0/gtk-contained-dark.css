@@ -117,7 +117,7 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   border: 1px solid #1c1f1f;
   background-image: linear-gradient(to bottom, #2b2b2b 0%, #333333 90%);
-  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), 0 1px rgba(238, 238, 236, 0.1);
+  box-shadow: inset 0 2px 2px -2px #191919, 0 1px rgba(238, 238, 236, 0.1);
   background-color: transparent; }
   .entry:insensitive {
     color: white;
@@ -125,7 +125,7 @@ GtkGrid:insensitive {
     box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
   .entry:focus {
     border-color: #2a76c6;
-    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), inset 0 0 2px 1px rgba(42, 118, 198, 0.2), 0 1px rgba(238, 238, 236, 0.1); }
+    box-shadow: inset 0 2px 2px -2px #191919, inset 0 0 2px 1px #314050, 0 1px rgba(238, 238, 236, 0.1); }
   .entry:selected, .entry:backdrop:selected {
     color: white;
     background-color: #2a76c6; }
@@ -520,7 +520,7 @@ GtkComboBox {
     text-shadow: none;
     icon-shadow: none; }
   GtkComboBox:backdrop:insensitive {
-    color: rgba(255, 255, 255, 0.5); }
+    color: #999999; }
   GtkComboBox .separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
@@ -546,7 +546,7 @@ GtkComboBox {
   border-radius: 7px 7px 0 0;
   background-color: transparent;
   background-image: linear-gradient(to bottom, #3e4444, #2d3232);
-  box-shadow: inset 0 -1px rgba(28, 31, 31, 0.4), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 -1px #303535, inset 0 1px rgba(238, 238, 236, 0.1);
   padding: 6px; }
   .header-bar:backdrop {
     border-color: #1c1f1f;
@@ -569,7 +569,8 @@ GtkComboBox {
   .header-bar.selection-mode {
     color: #1c5187;
     text-shadow: 0 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to bottom, #3583d5, #2b7bcf); }
+    background-image: linear-gradient(to bottom, #3583d5, #2b7bcf);
+    box-shadow: inset 0 -1px #303535, inset 0 1px rgba(51, 123, 199, 0.55); }
   .tiled .header-bar, .maximized .header-bar {
     border-radius: 0; }
 
@@ -587,7 +588,7 @@ column-header .button:backdrop {
   border-image: linear-gradient(to top, #272929, #333333) 0 1 1 0;
   background-image: none;
   background-color: #333333;
-  color: rgba(238, 238, 236, 0.5);
+  color: #90908f;
   font-weight: bold; }
 
 /*********
@@ -642,7 +643,7 @@ GtkPopover {
   GtkPopover .separator {
     font-size: 80%;
     font-weight: bold;
-    color: rgba(238, 238, 236, 0.6);
+    color: #5d6261;
     text-shadow: none;
     background-color: transparent;
     icon-shadow: none;
@@ -669,7 +670,7 @@ GtkPopover {
     border-width: 1px; }
   .notebook.header {
     background-color: #2d3232;
-    box-shadow: inset 0 6px 4px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 6px 4px -5px #2a2f2f;
     border-width: 0px; }
     .notebook.header.frame {
       border: 1px solid #1c1f1f; }
@@ -754,7 +755,7 @@ GtkPopover {
   border: 1px solid #1c1f1f;
   padding: 0; }
   .frame:backdrop {
-    border-color: rgba(28, 31, 31, 0.6); }
+    border-color: #2d3232; }
 
 GtkScrolledWindow .frame {
   border-radius: 2px; }
@@ -762,7 +763,7 @@ GtkScrolledWindow GtkViewport.frame {
   border-style: none; }
 
 .separator {
-  color: rgba(28, 31, 31, 0.2); }
+  color: #333838; }
 
 /**********************
  * Window Decorations *
