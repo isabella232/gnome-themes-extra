@@ -750,8 +750,10 @@ GtkPopover {
   .frame:backdrop {
     border-color: rgba(161, 161, 161, 0.6); }
 
-GtkScrolledWindow.frame {
+GtkScrolledWindow .frame {
   border-radius: 2px; }
+GtkScrolledWindow GtkViewport.frame {
+  border-style: none; }
 
 /**********************
  * Window Decorations *

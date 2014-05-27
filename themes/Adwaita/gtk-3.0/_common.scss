@@ -719,8 +719,11 @@ GtkPopover {
   &:backdrop { border-color: transparentize($borders_color,0.4); }
 }
 
-GtkScrolledWindow.frame {
-  border-radius: 2px;
+GtkScrolledWindow {
+  .frame { border-radius: 2px; }
+  GtkViewport.frame { // avoid double borders when viewport inside scrolled window
+    border-style: none;
+  }
 }
 
 /**********************
