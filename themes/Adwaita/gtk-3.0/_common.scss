@@ -224,11 +224,7 @@ GtkGrid:insensitive {
 /***********
  * Buttons *
  ***********/
-//.button, let's try to keep stuff as simple as possible for now
-//.toolbar .button.raised,
-//.toolbar .raised .button,
-//.toolbar GtkComboBox .button,
-//.spinbutton.vertical .button {
+
 .button {
   border-radius: 3px;
   transition: all 200ms ease-out;
