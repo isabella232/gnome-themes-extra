@@ -6,16 +6,8 @@ $widget_bottom_hilight: 0 1px $borders_edge; //outer hilight "used" on
                                              //most widgets, FIXME 1px
 // buttons
 
-@mixin _button_border_color ($c) {
-//
-// helper function to draw borders
-//
-  @if $variant=='light' {
-    border-color: darken($c,30%);
-  }
-  @else {
-    border-color: darken($c,10%);
-  }
+@mixin _button_border_color ($c) { // helper function to draw borders
+  border-color: if($variant=='light', darken($c,30%), darken($c,10%));
 }
 
 @mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
