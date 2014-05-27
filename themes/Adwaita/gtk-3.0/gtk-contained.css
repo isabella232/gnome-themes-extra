@@ -279,8 +279,8 @@ GtkGrid:insensitive {
     .button.suggested-action:backdrop {
       border-width: 1px;
       border-style: solid;
-      color: #454f52;
-      border-color: #a1a1a1;
+      color: #ededed;
+      border-color: #4a90d9;
       background-image: linear-gradient(to bottom, #4a90d9);
       text-shadow: none;
       icon-shadow: none;
@@ -330,8 +330,8 @@ GtkGrid:insensitive {
     .button.destructive-action:backdrop {
       border-width: 1px;
       border-style: solid;
-      color: #454f52;
-      border-color: #a1a1a1;
+      color: #ededed;
+      border-color: #ef2929;
       background-image: linear-gradient(to bottom, #ef2929);
       text-shadow: none;
       icon-shadow: none;
