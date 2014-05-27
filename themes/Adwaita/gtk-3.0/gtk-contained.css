@@ -768,33 +768,32 @@ GtkPopover {
 GtkSwitch {
   font: bold condensed 9;
   outline-offset: -4px;
-  padding: 2px; }
+  padding: 0; }
   GtkSwitch.trough {
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
-    padding: 1px;
-    color: #2e3436;
+    color: #54595a;
     background-image: linear-gradient(to bottom, #c9c9c9 5%, #d5d5d5 20%, #d5d5d5 90%, #ededed);
     border-color: #a1a1a1; }
     GtkSwitch.trough:active {
-      color: white;
+      color: #fbfbfb;
       background-image: linear-gradient(to bottom, #3e7ab8 5%, #4281c3 20%, #4281c3 90%, #4a90d9);
       border-color: #184472; }
     GtkSwitch.trough:insensitive {
-      color: #2e3436;
+      color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
       border-color: #a1a1a1; }
     GtkSwitch.trough:backdrop {
-      color: #2e3436;
+      color: #54595a;
       background-image: linear-gradient(to bottom, lightgray);
       border-color: #878787; }
     GtkSwitch.trough:backdrop:insensitive {
-      color: #2e3436;
+      color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
       border-color: #a1a1a1; }
   GtkSwitch.slider {
-    border-radius: 2px;
+    border-radius: 3px;
     border-width: 1px;
     border-style: solid;
     color: #2e3436;

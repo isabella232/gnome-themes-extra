@@ -206,7 +206,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
 }
 
 @mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {
-  color: $tc;
+  color: mix($tc,$bg_color,80%);
   @if $flat { background-image: linear-gradient(to bottom,$c); }
   @else {
     background-image: linear-gradient(to bottom,
