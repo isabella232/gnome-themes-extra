@@ -21,9 +21,11 @@
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
-  outline-color: rgba(238, 238, 236, 0.7);
+  outline-color: rgba(238, 238, 236, 0.3);
   outline-style: dashed;
-  outline-offset: 2px; }
+  outline-offset: -3px;
+  outline-width: 1px;
+  outline-radius: 2px; }
 
 /***************
  * Base States *
@@ -115,8 +117,7 @@ GtkGrid:insensitive {
   transition: all 200ms ease-out;
   border: 1px solid #1c1f1f;
   background-image: linear-gradient(to bottom, #2b2b2b 0%, #333333 90%);
-  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.5), 0 1px rgba(238, 238, 236, 0.1);
-  /* not working */
+  box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), 0 1px rgba(238, 238, 236, 0.1);
   background-color: transparent; }
   .entry:insensitive {
     color: white;
@@ -124,8 +125,7 @@ GtkGrid:insensitive {
     box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
   .entry:focus {
     border-color: #2a76c6;
-    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.4), inset 0 0 2px 1px rgba(42, 118, 198, 0.5), 0 1px rgba(238, 238, 236, 0.1);
-    /* not working */ }
+    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.6), inset 0 0 2px 1px rgba(42, 118, 198, 0.2), 0 1px rgba(238, 238, 236, 0.1); }
   .entry:selected, .entry:backdrop:selected {
     color: white;
     background-color: #2a76c6; }
@@ -573,6 +573,48 @@ GtkComboBox {
   .tiled .header-bar, .maximized .header-bar {
     border-radius: 0; }
 
+/**************
+ * Tree Views *
+ **************/
+column-header .button,
+column-header .button:hover,
+column-header .button:active,
+column-header .button:backdrop {
+  border-width: 0 1px 1px 0;
+  border-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border-image: linear-gradient(to top, #272929, #333333) 0 1 1 0;
+  background-image: none;
+  background-color: #333333;
+  color: rgba(238, 238, 236, 0.5);
+  font-weight: bold; }
+
+/*********
+ * Menus *
+ *********/
+.menubar {
+  padding: 2px; }
+  .menubar .menuitem {
+    background-color: #393f3f;
+    padding: 4px 8px;
+    border-radius: 3px 3px 0 0; }
+    .menubar .menuitem:hover, .menubar .menuitem:active {
+      background-color: #333333; }
+
+.menu .menuitem {
+  background-color: #333333;
+  padding: 4px;
+  border-radius: 0; }
+  .menu .menuitem:hover {
+    color: white;
+    background-color: #2a76c6; }
+  .menu .menuitem:active {
+    color: white;
+    background-color: #256ab1; }
+.menu .separator {
+  color: transparent; }
+
 /***************
  * Popovers   *
  ***************/
@@ -710,8 +752,13 @@ GtkPopover {
   .frame:backdrop {
     border-color: rgba(28, 31, 31, 0.6); }
 
-GtkScrolledWindow.frame {
+GtkScrolledWindow .frame {
   border-radius: 2px; }
+GtkScrolledWindow GtkViewport.frame {
+  border-style: none; }
+
+.separator {
+  color: rgba(28, 31, 31, 0.2); }
 
 /**********************
  * Window Decorations *
