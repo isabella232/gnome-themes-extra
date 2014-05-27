@@ -546,8 +546,12 @@ column-header {
   .menuitem {  // menubar only
     background-color: $bg_color;
     padding: 4px 8px;
-    border-radius: 3px 3px 0 0;
-    &:hover, &:active { background-color: $base_color; }
+    border-radius: 0;
+    &:hover, &:active {
+      border-width: 0 0 3px;
+      border-style: solid;
+      border-color: $selected_bg_color;
+    }
   }
 }
 
@@ -557,10 +561,12 @@ column-header {
     padding: 4px;
     border-radius: 0;
     &:hover {
+      border: none;
       color: $selected_fg_color;
       background-color: $selected_bg_color;
     }
     &:active {
+      border: none;
       color: $selected_fg_color;
       background-color: if($variant=='light', darken($selected_bg_color, 10%), darken($selected_bg_color, 5%));
     }
