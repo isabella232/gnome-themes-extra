@@ -870,6 +870,19 @@ GtkScrolledWindow GtkViewport.frame {
 .separator {
   color: rgba(0, 0, 0, 0.1); }
 
+/*********************
+ * App Notifications *
+ *********************/
+.app-notification {
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #1c1f1f;
+  border-radius: 0 0 6px 6px;
+  background-image: linear-gradient(to bottom, #353b3b 5%, #363c3c);
+  padding: 0 4px; }
+  .app-notification .button {
+    padding: 6px; }
+
 /**********************
  * Window Decorations *
  *********************/
