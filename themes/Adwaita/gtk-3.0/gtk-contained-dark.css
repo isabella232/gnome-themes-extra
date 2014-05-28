@@ -917,6 +917,9 @@ GtkSwitch {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .scale.slider:active {
       border: 1px solid #040a11; }
+    .scale.slider.fine-tune:active {
+      border: 4px solid transparent;
+      box-shadow: inset 0 2px white, inset 0 0 0 1px #040a11; }
   .scale.trough {
     border-width: 1px;
     border-style: solid;
