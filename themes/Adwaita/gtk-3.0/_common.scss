@@ -765,11 +765,11 @@ GtkSwitch {
     &:insensitive { @include button(insensitive); }
     &:backdrop { @include button(backdrop); }
     &:backdrop:insensitive { @include button(backdrop-insensitive); }
-    &:active { }
-    
+    &:active { border: 1px solid $selected_bg_color; }
     &.fine-tune:active {
-      -GtkScale-slider-length: 8;
-      -GtkRange-slider-width: 8;
+      // Lapo, look away, this is nastiness
+      border: 4px solid transparent; //margin
+      box-shadow: inset 0 0 0 1px $selected_bg_color; //border
     }
   }
   &.trough {
