@@ -651,12 +651,26 @@ GtkPopover {
     &.left:hover { box-shadow: inset (-$tab_indicator_size) 0 $prelight_tab_indicator; };
     &.left:active { box-shadow: inset (-$tab_indicator_size) 0 $active_tab_indicator; };
     //FIXME: with backdrop in the mix this will explode we need smarter code
-
+    &.reorderable-page:active {
+      border-width: 0 1px 0 1px;
+      background-color: transparentize($bg_color, .5); ;// darken($bg_color,3%);
+      border-color: mix($borders_color,$bg_color, 50%);
+    }
     GtkLabel { //tab text
       font-weight: bold;
       color: lighten($fg_color,30%); //FIXME
       &.active-page { color: $fg_color; } //active tab text
       &.prelight-page { color: lighten($fg_color,15%); } //prelight tab text
+    }
+    
+    .button {
+      padding: 0 6px; //FIXME not really doing anything
+      border: 1px solid transparent; //avoid jumping around
+      box-shadow: none; //FIXME glitch in the transition
+      background-image: linear-gradient(to bottom, transparent);
+      color: transparentize($fg_color, .5);
+      &:hover { @include button(normal); }
+      &:active { @include button(active); }
     }
   }
 }
