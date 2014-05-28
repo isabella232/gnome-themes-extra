@@ -799,8 +799,7 @@ GtkSwitch {
     border-radius: 3px;
     color: #54595a;
     background-image: linear-gradient(to bottom, #c9c9c9 5%, #d5d5d5 20%, #d5d5d5 90%, #ededed);
-    border-color: #a1a1a1;
-    box-shadow: inset 0 -1px 0 white; }
+    border-color: #a1a1a1; }
     GtkSwitch.trough:active {
       color: #fbfbfb;
       background-image: linear-gradient(to bottom, #3e7ab8 5%, #4281c3 20%, #4281c3 90%, #4a90d9);
@@ -808,18 +807,15 @@ GtkSwitch {
     GtkSwitch.trough:insensitive {
       color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
-      border-color: #a1a1a1;
-      box-shadow: inset 0 -1px 0 white; }
+      border-color: #a1a1a1; }
     GtkSwitch.trough:backdrop {
       color: #54595a;
       background-image: linear-gradient(to bottom, lightgray);
-      border-color: #878787;
-      box-shadow: inset 0 -1px 0 white; }
+      border-color: #878787; }
     GtkSwitch.trough:backdrop:insensitive {
       color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
-      border-color: #a1a1a1;
-      box-shadow: inset 0 -1px 0 white; }
+      border-color: #a1a1a1; }
   GtkSwitch.slider {
     border-radius: 3px;
     border-width: 1px;
@@ -907,7 +903,7 @@ GtkSwitch {
     color: #54595a;
     background-image: linear-gradient(to bottom, #c9c9c9 5%, #d5d5d5 20%, #d5d5d5 90%, #ededed);
     border-color: #a1a1a1;
-    box-shadow: inset 0 -1px 0 white;
+    box-shadow: inset 0 -1px 0 white, 0 1px 0 white;
     border-width: 1px;
     border-style: solid;
     border-radius: 3px; }
@@ -915,7 +911,7 @@ GtkSwitch {
       color: #54595a;
       background-image: linear-gradient(to bottom, #3e7ab8 5%, #4281c3 20%, #4281c3 90%, #4a90d9);
       border-color: #184472;
-      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5); }
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5); }
     .scale.trough:insensitive {
       color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
