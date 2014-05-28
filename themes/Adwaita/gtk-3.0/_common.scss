@@ -753,7 +753,7 @@ GtkSwitch {
 /************
  * GtkScale *
  ************/
-.scale { // FIXME: vertical, bottom edge, fine-mode
+.scale { // FIXME: vertical
   -GtkScale-slider-length: 20;
   -GtkRange-slider-width: 20;
   -GtkRange-trough-border: 2;
