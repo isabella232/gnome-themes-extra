@@ -702,12 +702,12 @@ GtkPopover {
   &.slider {
     border-radius: 20px;
     border: 3px solid transparent; //margin :/
-    background-color: darken($bg_color, 30%);
+    background-color: mix($bg_color, $fg_color, 70%);
     &:backdrop, &:insensitive {
-      background-color: darken($bg_color, 20%);
+      background-color: mix($bg_color, $fg_color, 90%);
     }
     &:hover {
-      background-color: darken($bg_color, 40%);
+      background-color: mix($bg_color, $fg_color, 50%);
     }
     &:prelight:active {
       background-color: $selected_bg_color;
