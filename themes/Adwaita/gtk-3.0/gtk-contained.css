@@ -924,9 +924,11 @@ GtkSwitch {
       color: #c7c7c7;
       border-color: #a1a1a1;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+    .scale.slider:active {
+      border: 1px solid #4a90d9; }
     .scale.slider.fine-tune:active {
-      -GtkScale-slider-length: 8;
-      -GtkRange-slider-width: 8; }
+      border: 4px solid transparent;
+      box-shadow: inset 0 0 0 1px #4a90d9; }
   .scale.trough {
     color: #54595a;
     background-image: linear-gradient(to bottom, #c9c9c9 5%, #d5d5d5 20%, #d5d5d5 90%, #ededed);
