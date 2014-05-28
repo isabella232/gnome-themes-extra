@@ -67,9 +67,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
 
 // buttons
 
-@mixin _button_border_color ($c) { // helper function to draw borders
-  border-color: if($variant=='light', darken($c,30%), darken($c,10%));
-}
+@mixin _button_border_color ($c) { border-color: darken($c,25%); } // colored buttons want the border form the base color
 
 @mixin _button_text_shadow ($tc:$fg_color, $bg:$bg_color) {
 //
@@ -148,7 +146,8 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   // hovered button
   //
     color: $tc;
-    @include _button_border_color($c);
+    @if $c!=$bg_color { @include _button_border_color($c); }
+    @else { border-color: $borders_color; }
     background-image: linear-gradient(to bottom,
                                       lighten($c,14%),
                                       lighten($c,4%) 40%,

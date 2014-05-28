@@ -15,8 +15,8 @@
   -GtkTreeView-horizontal-separator: 4;
   -GtkMenu-horizontal-padding: 0;
   -GtkMenu-vertical-padding: 0;
-  -GtkWidget-link-color: #4a90d9;
-  -GtkWidget-visited-link-color: #4a90d9;
+  -GtkWidget-link-color: #2a76c6;
+  -GtkWidget-visited-link-color: #2a76c6;
   -GtkWidget-focus-padding: 2;
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
@@ -47,11 +47,11 @@
 */
 *:selected,
 *:selected:focus {
-  background-color: #2a76c6;
+  background-color: #215d9c;
   color: white; }
 
 *:selected:backdrop {
-  background-color: #2a76c6;
+  background-color: #215d9c;
   color: white; }
 
 *:insensitive {
@@ -73,7 +73,7 @@
     background-color: #393f3f;
     color: white; }
   .gtkstyle-fallback:selected {
-    background-color: #2a76c6;
+    background-color: #215d9c;
     color: white; }
 
 GtkImage,
@@ -125,8 +125,8 @@ GtkGrid:insensitive {
     border-style: solid;
     border-width: 1px;
     background-image: linear-gradient(to bottom, #2b2b2b, #333333 90%);
-    border-color: #2a76c6;
-    box-shadow: inset 0 2px 2px -2px #191919, inset 0 0 2px 1px #314050, 0 1px rgba(238, 238, 236, 0.1); }
+    border-color: #215d9c;
+    box-shadow: inset 0 2px 2px -2px #191919, inset 0 0 2px 1px #2f3b48, 0 1px rgba(238, 238, 236, 0.1); }
   .entry:insensitive {
     background-color: transparent;
     border-style: solid;
@@ -153,13 +153,13 @@ GtkGrid:insensitive {
     background-image: linear-gradient(to bottom, #393f3f);
     box-shadow: 0 1px rgba(255, 255, 255, 0); }
   .entry:selected, .entrybackdrop:selected {
-    background-color: #2a76c6;
+    background-color: #215d9c;
     color: white; }
   .entry.progressbar {
     margin: 1px;
     border-radius: 0;
     border-width: 0 0 2px;
-    border-color: #2a76c6;
+    border-color: #215d9c;
     border-style: solid;
     background-image: none;
     box-shadow: none; }
@@ -190,7 +190,7 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: #eeeeec;
-    border-color: #212424;
+    border-color: #1c1f1f;
     background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f);
     text-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
@@ -253,35 +253,35 @@ GtkGrid:insensitive {
     border-width: 1px;
     border-style: solid;
     color: white;
-    background-image: linear-gradient(to bottom, #3583d5, #2a76c6 40%, #256ab1);
-    border-color: #215d9c;
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.62353);
-    icon-shadow: 0 -1px rgba(0, 0, 0, 0.62353);
+    background-image: linear-gradient(to bottom, #256ab1, #215d9c 40%, #1c5187);
+    border-color: #0b1e33;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.70353);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.70353);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
     .button.suggested-action:hover {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #215d9c;
-      background-image: linear-gradient(to bottom, #5b9add, #3180d4 40%, #2a76c6);
-      text-shadow: 0 -1px rgba(0, 0, 0, 0.59153);
-      icon-shadow: 0 -1px rgba(0, 0, 0, 0.59153);
+      border-color: #0b1e33;
+      background-image: linear-gradient(to bottom, #3180d4, #2467ad 40%, #215d9c);
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.67153);
+      icon-shadow: 0 -1px rgba(0, 0, 0, 0.67153);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
     .button.suggested-action:active {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #215d9c;
-      background-image: linear-gradient(to bottom, #215d9c, #256ab1 3%);
-      text-shadow: 0 -1px rgba(0, 0, 0, 0.70353);
-      icon-shadow: 0 -1px rgba(0, 0, 0, 0.70353);
+      border-color: #0b1e33;
+      background-image: linear-gradient(to bottom, #184472, #1c5187 3%);
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.78353);
+      icon-shadow: 0 -1px rgba(0, 0, 0, 0.78353);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px rgba(238, 238, 236, 0.1); }
     .button.suggested-action:backdrop {
       border-width: 1px;
       border-style: solid;
       color: #393f3f;
-      border-color: #2a76c6;
-      background-image: linear-gradient(to bottom, #2a76c6);
+      border-color: #215d9c;
+      background-image: linear-gradient(to bottom, #215d9c);
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
@@ -305,7 +305,7 @@ GtkGrid:insensitive {
     border-style: solid;
     color: white;
     background-image: linear-gradient(to bottom, #ed1212, #d51010 40%, #bd0e0e);
-    border-color: #a60c0c;
+    border-color: #5e0707;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.64078);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.64078);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
@@ -313,7 +313,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #a60c0c;
+      border-color: #5e0707;
       background-image: linear-gradient(to bottom, #f03c3c, #e81111 40%, #d51010);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.60878);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.60878);
@@ -322,7 +322,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #a60c0c;
+      border-color: #5e0707;
       background-image: linear-gradient(to bottom, #a60c0c, #bd0e0e 3%);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.72078);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.72078);
@@ -442,7 +442,7 @@ GtkColorButton.button {
       border-width: 1px;
       border-style: solid;
       color: #eeeeec;
-      border-color: #212424;
+      border-color: #1c1f1f;
       background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
@@ -494,7 +494,7 @@ GtkColorButton.button {
       border-width: 1px;
       border-style: solid;
       color: #eeeeec;
-      border-color: #212424;
+      border-color: #1c1f1f;
       background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
@@ -593,10 +593,10 @@ GtkComboBox {
     .header-bar > GtkBox > .separator.vertical:backdrop {
       border-image: linear-gradient(to bottom, rgba(28, 31, 31, 0.5)) 0 1/1px 1px; }
   .header-bar.selection-mode {
-    color: #1c5187;
+    color: #14375d;
     text-shadow: 0 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to bottom, #3583d5, #2b7bcf);
-    box-shadow: inset 0 -1px #303535, inset 0 1px rgba(51, 123, 199, 0.55); }
+    background-image: linear-gradient(to bottom, #256ab1, #2362a5);
+    box-shadow: inset 0 -1px #303535, inset 0 1px rgba(43, 100, 160, 0.55); }
   .tiled .header-bar, .maximized .header-bar {
     border-radius: 0; }
 
@@ -640,7 +640,7 @@ column-header .button:backdrop {
     .menubar .menuitem:hover, .menubar .menuitem:active {
       border-width: 0 0 3px;
       border-style: solid;
-      border-color: #2a76c6; }
+      border-color: #215d9c; }
 
 .menu .menuitem {
   background-color: #333333;
@@ -649,11 +649,11 @@ column-header .button:backdrop {
   .menu .menuitem:hover {
     border: none;
     color: white;
-    background-color: #2a76c6; }
+    background-color: #215d9c; }
   .menu .menuitem:active {
     border: none;
     color: white;
-    background-color: #256ab1; }
+    background-color: #1c5187; }
 .menu .separator {
   color: transparent; }
 
@@ -729,19 +729,19 @@ GtkPopover {
     .notebook tab.top:hover {
       box-shadow: inset 0 -2px #1c1f1f; }
     .notebook tab.top:active {
-      box-shadow: inset 0 -2px #2a76c6; }
+      box-shadow: inset 0 -2px #215d9c; }
     .notebook tab.bottom:hover {
       box-shadow: inset 0 2px #1c1f1f; }
     .notebook tab.bottom:active {
-      box-shadow: inset 0 2px #2a76c6; }
+      box-shadow: inset 0 2px #215d9c; }
     .notebook tab.right:hover {
       box-shadow: inset 2px 0 #1c1f1f; }
     .notebook tab.right:active {
-      box-shadow: inset 2px 0 #2a76c6; }
+      box-shadow: inset 2px 0 #215d9c; }
     .notebook tab.left:hover {
       box-shadow: inset -2px 0 #1c1f1f; }
     .notebook tab.left:active {
-      box-shadow: inset -2px 0 #2a76c6; }
+      box-shadow: inset -2px 0 #215d9c; }
     .notebook tab.reorderable-page:active {
       border-width: 0 1px 0 1px;
       background-color: rgba(57, 63, 63, 0.5);
@@ -807,11 +807,11 @@ GtkPopover {
     .scrollbar.slider:hover {
       background-color: #939695; }
     .scrollbar.slider:prelight:active {
-      background-color: #2a76c6; }
+      background-color: #215d9c; }
     .scrollbar.slider.fine-tune {
       border-width: 5px; }
       .scrollbar.slider.fine-tune:prelight:active {
-        background-color: #2a76c6; }
+        background-color: #215d9c; }
 
 /**********
  * Switch *
@@ -830,8 +830,8 @@ GtkSwitch {
     border-color: #1c1f1f; }
     GtkSwitch.trough:active {
       color: #d7d8d8;
-      background-image: linear-gradient(to bottom, #2364a8 5%, #256ab2 20%, #256ab2 90%, #2a76c6);
-      border-color: #215d9c; }
+      background-image: linear-gradient(to bottom, #1c4f84 5%, #1d538c 20%, #1d538c 90%, #215d9c);
+      border-color: #0b1e33; }
     GtkSwitch.trough:insensitive {
       color: #c9cbc9;
       background-image: linear-gradient(to bottom, #393f3f);
@@ -839,7 +839,7 @@ GtkSwitch {
     GtkSwitch.trough:backdrop {
       color: #c9cbc9;
       background-image: linear-gradient(to bottom, #212424);
-      border-color: #090909; }
+      border-color: black; }
     GtkSwitch.trough:backdrop:insensitive {
       color: #c9cbc9;
       background-image: linear-gradient(to bottom, #393f3f);
@@ -855,7 +855,7 @@ GtkSwitch {
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
     GtkSwitch.slider:active {
-      border: 1px solid #184472; }
+      border: 1px solid #06121e; }
     GtkSwitch.slider:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -925,10 +925,10 @@ GtkSwitch {
       border-color: #1c1f1f;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .scale.slider:active {
-      border: 1px solid #2a76c6; }
+      border: 1px solid #215d9c; }
     .scale.slider.fine-tune:active {
       border: 4px solid transparent;
-      box-shadow: inset 0 0 0 1px #2a76c6; }
+      box-shadow: inset 0 0 0 1px #215d9c; }
   .scale.trough {
     color: #c9cbc9;
     background-image: linear-gradient(to bottom, #303535 5%, #333838 20%, #333838 90%, #393f3f);
@@ -939,8 +939,8 @@ GtkSwitch {
     border-radius: 3px; }
     .scale.trough.highlight {
       color: #c9cbc9;
-      background-image: linear-gradient(to bottom, #2364a8 5%, #256ab2 20%, #256ab2 90%, #2a76c6);
-      border-color: #215d9c;
+      background-image: linear-gradient(to bottom, #1c4f84 5%, #1d538c 20%, #1d538c 90%, #215d9c);
+      border-color: #0b1e33;
       box-shadow: inset 0 -1px 0 rgba(238, 238, 236, 0), 0 1px 0 rgba(238, 238, 236, 0); }
     .scale.trough:insensitive {
       color: #c9cbc9;

@@ -743,13 +743,12 @@ GtkSwitch {
     &.slider {
       border-radius: 3px;
       @include button(normal, $noedge:true);
-      &:active { border: 1px solid darken($selected_bg_color, 20%); }
+      &:active { border: 1px solid darken($selected_bg_color, 30%); }
       &:insensitive { @include button(insensitive); }
       &:backdrop { @include button(backdrop); }
       &:backdrop:insensitive { @include button(backdrop-insensitive); }
     }
 }
-
 
 /************
  * GtkScale *
