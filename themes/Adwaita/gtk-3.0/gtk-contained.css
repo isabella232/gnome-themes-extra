@@ -254,7 +254,7 @@ GtkGrid:insensitive {
     border-style: solid;
     color: white;
     background-image: linear-gradient(to bottom, #89b7e6, #4a90d9 40%, #2a76c6);
-    border-color: #184472;
+    border-color: #1c5187;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.54353);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.54353);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px white; }
@@ -262,7 +262,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #184472;
+      border-color: #1c5187;
       background-image: linear-gradient(to bottom, #85b4e5, #5b9add 40%, #4a90d9);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.51153);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.51153);
@@ -271,7 +271,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #184472;
+      border-color: #1c5187;
       background-image: linear-gradient(to bottom, #256ab1, #2974c2 3%, #2a76c6);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.62353);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.62353);
@@ -305,7 +305,7 @@ GtkGrid:insensitive {
     border-style: solid;
     color: white;
     background-image: linear-gradient(to bottom, #f47070, #ef2929 40%, #d51010);
-    border-color: #760909;
+    border-color: #8e0b0b;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.56078);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.56078);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px white; }
@@ -313,7 +313,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #760909;
+      border-color: #8e0b0b;
       background-image: linear-gradient(to bottom, #f46b6b, #f03c3c 40%, #ef2929);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.52878);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.52878);
@@ -322,7 +322,7 @@ GtkGrid:insensitive {
       border-width: 1px;
       border-style: solid;
       color: white;
-      border-color: #760909;
+      border-color: #8e0b0b;
       background-image: linear-gradient(to bottom, #bd0e0e, #d01010 3%, #d51010);
       text-shadow: 0 -1px rgba(0, 0, 0, 0.64078);
       icon-shadow: 0 -1px rgba(0, 0, 0, 0.64078);
@@ -831,7 +831,7 @@ GtkSwitch {
     GtkSwitch.trough:active {
       color: #fbfbfb;
       background-image: linear-gradient(to bottom, #3e7ab8 5%, #4281c3 20%, #4281c3 90%, #4a90d9);
-      border-color: #184472; }
+      border-color: #1c5187; }
     GtkSwitch.trough:insensitive {
       color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
@@ -839,7 +839,7 @@ GtkSwitch {
     GtkSwitch.trough:backdrop {
       color: #54595a;
       background-image: linear-gradient(to bottom, lightgray);
-      border-color: #878787; }
+      border-color: #949494; }
     GtkSwitch.trough:backdrop:insensitive {
       color: #54595a;
       background-image: linear-gradient(to bottom, #ededed);
@@ -855,7 +855,7 @@ GtkSwitch {
     icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     box-shadow: inset 0 1px white; }
     GtkSwitch.slider:active {
-      border: 1px solid #215d9c; }
+      border: 1px solid #184472; }
     GtkSwitch.slider:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -940,7 +940,7 @@ GtkSwitch {
     .scale.trough.highlight {
       color: #54595a;
       background-image: linear-gradient(to bottom, #3e7ab8 5%, #4281c3 20%, #4281c3 90%, #4a90d9);
-      border-color: #184472;
+      border-color: #1c5187;
       box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5); }
     .scale.trough:insensitive {
       color: #54595a;
