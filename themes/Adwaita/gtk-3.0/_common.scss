@@ -720,11 +720,11 @@ GtkSwitch {
       border-width: 1px;
       border-style: solid;
       border-radius: 3px;
-      @include trough();
+      @include trough($noedge:true);
       &:active { @include trough($c:$selected_bg_color, $tc:$selected_fg_color, $noedge:true); }
-      &:insensitive {@include trough($flat:true);}
-      &:backdrop {@include trough($flat:true, $c:darken($bg_color, 10%));}
-      &:backdrop:insensitive {@include trough($flat:true, $c:$bg_color);}
+      &:insensitive {@include trough($flat:true, $noedge:true);}
+      &:backdrop {@include trough($flat:true, $c:darken($bg_color, 10%), $noedge: true);}
+      &:backdrop:insensitive {@include trough($flat:true, $c:$bg_color, $noedge:true);}
     }
     &.slider {
       border-radius: 3px;
