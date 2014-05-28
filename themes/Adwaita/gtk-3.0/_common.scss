@@ -760,27 +760,62 @@ GtkSwitch {
   outline-offset: -9px;
   margin: 10px;
   &.slider {
-    @include button(normal,$noedge:true);
+    @include button(normal);
     border-radius: 50%;
-    &:insensitive { @include button(insensitive); }
-    &:backdrop { @include button(backdrop); }
-    &:backdrop:insensitive { @include button(backdrop-insensitive); }
-    &:active { border: 1px solid $selected_bg_color; }
-    &.fine-tune:active {
-      border: 4px solid transparent; //margin
-      box-shadow: inset 0 0 0 1px $selected_bg_color; //border
+    border-color: darken($borders_color,3%);
+    box-shadow: inset 0 1px if($variant=='light', white,
+                               transparentize(white,0.85)),
+                inset 0 #{-2px} $bg_color,
+                inset 0 #{-1px} mix($bg_color,$borders_color,50%);
+    &:insensitive { 
+      background-image: linear-gradient(to bottom, $insensitive_bg_color);
+      box-shadow: none;
     }
+    &:backdrop {
+      border-color: darken($backdrop_borders_color,3%);
+      background-image: linear-gradient(to bottom, $backdrop_bg_color);
+      box-shadow: none;
+    }
+    &:backdrop:insensitive { @include button(backdrop-insensitive); }
+    &:active { border: 1px solid darken($selected_bg_color,33%); }
+    //&.fine-tune:active { WHAT SHALL WE DO HERE?
+    //  border: 4px solid transparent; //margin
+    //  box-shadow: inset 0 2px white,
+    //              inset 0 0 0 1px $selected_bg_color; //border
+    //}
   }
   &.trough {
-    @include trough();
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
+    border-color: $borders_color;
+    background-color: mix($bg_color,$borders_color,60%);
+    box-shadow: inset 1px 1px transparentize(black, 0.9),
+                $widget_edge;
     &.highlight {
-      @include trough($c:$selected_bg_color);
+      border-color: darken($selected_bg_color,30%);
+      background-color: $selected_bg_color; 
+      box-shadow: $widget_edge;
+      &:backdrop {
+         border-color: $selected_bg_color;
+         background-color: $selected_bg_color;
+         box-shadow: none;
+      }
     }
-    &:backdrop { }
-    &:insensitive { @include trough($flat:true, $c:$insensitive_bg_color, $noedge:true); }
+    &:insensitive, &.hilight:insensitive { 
+      border-color: $insensitive_borders_color;
+      background-color: $insensitive_bg_color;
+      box-shadow: $widget_edge;
+    }
+    &:backdrop {
+      border-color: $backdrop_borders_color;
+      background-color: mix($backdrop_bg_color,$borders_color); 
+      box-shadow: none;
+    }
+    &:backdrop:insensitive, .hilight:backdrop:insensitive {
+      border-color: $backdrop_insensitive_color;
+      background-color: $backdrop_bg_color;
+    }
   }
 }
 
