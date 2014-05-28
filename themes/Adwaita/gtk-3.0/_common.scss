@@ -750,6 +750,7 @@ GtkSwitch {
     }
 }
 
+
 /************
  * GtkScale *
  ************/
@@ -767,7 +768,6 @@ GtkSwitch {
     &:backdrop:insensitive { @include button(backdrop-insensitive); }
     &:active { border: 1px solid $selected_bg_color; }
     &.fine-tune:active {
-      // Lapo, look away, this is nastiness
       border: 4px solid transparent; //margin
       box-shadow: inset 0 0 0 1px $selected_bg_color; //border
     }
@@ -859,12 +859,8 @@ GtkScrolledWindow {
   background-image: none;
   box-shadow: inset 0 1px transparentize(white,1),
               0 1px transparentize($borders_edge,1);
-  &:hover {
-    @include button(normal);
-  }
-  &:active {
-    @include button(active);
-  }
+  &:hover { @include button(normal); }
+  &:active { @include button(active); }
   &:backdrop {
     @include button(backdrop);
     border-color: transparent;
