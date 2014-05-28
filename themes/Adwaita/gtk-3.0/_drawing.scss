@@ -289,4 +289,14 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
 
   @if $c!=$bg_color { @include _button_border_color($c); }
   @else { border-color: $borders_color; }
+  
+  @if $noedge==false { 
+    @if lightness($c) > 60% {
+      box-shadow: inset 0 -1px 0 $borders_edge;
+    }
+    @else {
+      box-shadow: inset 0 -1px 0 transparentize($borders_edge,0.5);
+    }
+  }
+
 }

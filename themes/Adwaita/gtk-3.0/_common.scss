@@ -736,6 +736,41 @@ GtkSwitch {
     }
 }
 
+/************
+ * GtkScale *
+ ************/
+.scale { // FIXME: vertical, bottom edge, fine-mode
+  -GtkScale-slider-length: 20;
+  -GtkRange-slider-width: 20;
+  -GtkRange-trough-border: 2;
+  outline-offset: -9px;
+  margin: 10px;
+  &.slider {
+    @include button(normal,$noedge:true);
+    border-radius: 50%;
+    &:insensitive { @include button(insensitive); }
+    &:backdrop { @include button(backdrop); }
+    &:backdrop:insensitive { @include button(backdrop-insensitive); }
+    &:active { }
+    
+    &.fine-tune:active {
+      -GtkScale-slider-length: 8;
+      -GtkRange-slider-width: 8;
+    }
+  }
+  &.trough {
+    @include trough();
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    &.highlight {
+      @include trough($c:$selected_bg_color);
+    }
+    &:backdrop { }
+    &:insensitive { @include trough($flat:true, $c:$insensitive_bg_color, $noedge:true); }
+  }
+}
+
 /**********
  * Frames *
  **********/
