@@ -663,7 +663,7 @@ GtkPopover {
       &.prelight-page { color: lighten($fg_color,15%); } //prelight tab text
     }
     
-    .button {
+    .button { //tab close button
       padding: 0 6px; //FIXME not really doing anything
       border: 1px solid transparent; //avoid jumping around
       box-shadow: none; //FIXME glitch in the transition
