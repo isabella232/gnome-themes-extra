@@ -759,6 +759,23 @@ GtkScrolledWindow {
   color: transparentize(black, 0.9);
 }
 
+/*********************
+ * App Notifications *
+ *********************/
+
+.app-notification {
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: $borders_color;
+  border-radius: 0 0 6px 6px;
+  background-image: linear-gradient(to bottom, mix(black, $bg_color, 6%) 5%,
+                              mix(black, $bg_color, 4%));
+  // FIXME no space for outer shadow : box-shadow: 0 1px 1px rgba(0,0,0,.5);
+  padding: 0 4px;
+  .button { padding: 6px; }
+}
+
+ 
 /**********************
  * Window Decorations *
  *********************/
