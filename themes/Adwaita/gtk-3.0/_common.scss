@@ -778,11 +778,11 @@ GtkSwitch {
     }
     &:backdrop:insensitive { @include button(backdrop-insensitive); }
     &:active { border: 1px solid darken($selected_bg_color,33%); }
-    //&.fine-tune:active { WHAT SHALL WE DO HERE?
-    //  border: 4px solid transparent; //margin
-    //  box-shadow: inset 0 2px white,
-    //              inset 0 0 0 1px $selected_bg_color; //border
-    //}
+    &.fine-tune:active { //FIXME: Lapo doesn;t like this
+      border: 4px solid transparent; //margin
+      box-shadow: inset 0 2px white,
+                  inset 0 0 0 1px darken($selected_bg_color,33%); //border
+    }
   }
   &.trough {
     border-width: 1px;
