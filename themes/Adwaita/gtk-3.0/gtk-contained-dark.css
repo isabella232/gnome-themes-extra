@@ -898,26 +898,17 @@ GtkSwitch {
     border-color: #1c1f1f;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
     icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    border-radius: 50%; }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px rgba(238, 238, 236, 0.1);
+    border-radius: 50%;
+    border-color: #151717;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), inset 0 -2px #393f3f, inset 0 -1px #2a2f2f; }
     .scale.slider:insensitive {
-      border-width: 1px;
-      border-style: solid;
-      color: white;
-      border-color: #1c1f1f;
       background-image: linear-gradient(to bottom, #393f3f);
-      text-shadow: none;
-      icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(238, 238, 236, 0.1); }
+      box-shadow: none; }
     .scale.slider:backdrop {
-      border-width: 1px;
-      border-style: solid;
-      color: #eeeeec;
-      border-color: #1c1f1f;
+      border-color: #151717;
       background-image: linear-gradient(to bottom, #393f3f);
-      text-shadow: none;
-      icon-shadow: none;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
+      box-shadow: none; }
     .scale.slider:backdrop:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -925,27 +916,33 @@ GtkSwitch {
       border-color: #1c1f1f;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .scale.slider:active {
-      border: 1px solid #215d9c; }
-    .scale.slider.fine-tune:active {
-      border: 4px solid transparent;
-      box-shadow: inset 0 0 0 1px #215d9c; }
+      border: 1px solid #040a11; }
   .scale.trough {
-    color: #c9cbc9;
-    background-image: linear-gradient(to bottom, #303535 5%, #333838 20%, #333838 90%, #393f3f);
-    border-color: #1c1f1f;
-    box-shadow: inset 0 -1px 0 rgba(238, 238, 236, 0), 0 1px 0 rgba(238, 238, 236, 0);
     border-width: 1px;
     border-style: solid;
-    border-radius: 3px; }
+    border-radius: 3px;
+    border-color: #1c1f1f;
+    background-color: #2d3232;
+    box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
     .scale.trough.highlight {
-      color: #c9cbc9;
-      background-image: linear-gradient(to bottom, #1c4f84 5%, #1d538c 20%, #1d538c 90%, #215d9c);
-      border-color: #0b1e33;
-      box-shadow: inset 0 -1px 0 rgba(238, 238, 236, 0), 0 1px 0 rgba(238, 238, 236, 0); }
-    .scale.trough:insensitive {
-      color: #c9cbc9;
-      background-image: linear-gradient(to bottom, #393f3f);
-      border-color: #1c1f1f; }
+      border-color: #06121e;
+      background-color: #215d9c;
+      box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
+      .scale.trough.highlight:backdrop {
+        border-color: #215d9c;
+        background-color: #215d9c;
+        box-shadow: none; }
+    .scale.trough:insensitive, .scale.trough.hilight:insensitive {
+      border-color: #1c1f1f;
+      background-color: #393f3f;
+      box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
+    .scale.trough:backdrop {
+      border-color: #1c1f1f;
+      background-color: #2a2f2f;
+      box-shadow: none; }
+    .scale.trough:backdrop:insensitive, .scale.trough .hilight:backdrop:insensitive {
+      border-color: white;
+      background-color: #393f3f; }
 
 /**********
  * Frames *
