@@ -76,16 +76,6 @@
     background-color: #4a90d9;
     color: white; }
 
-GtkImage,
-GtkImage:insensitive,
-GtkLabel,
-GtkLabel:insensitive,
-GtkBox,
-GtkBox:insensitive,
-GtkGrid,
-GtkGrid:insensitive {
-  background-color: transparent; }
-
 .view {
   background-color: white;
   color: #2e3436; }
