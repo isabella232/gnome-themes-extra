@@ -565,6 +565,7 @@ GtkComboBox {
 /***************
  * Header bars *
  ***************/
+.titlebar,
 .header-bar {
   border-width: 0 0 1px;
   border-style: solid;
@@ -574,30 +575,38 @@ GtkComboBox {
   background-image: linear-gradient(to bottom, #f2f2f2, #e0e0e0);
   box-shadow: inset 0 -1px #d6d6d6, inset 0 1px white;
   padding: 6px; }
+  .titlebar:backdrop,
   .header-bar:backdrop {
     border-color: #a1a1a1;
     background-color: #ededed;
     background-image: none;
     box-shadow: none; }
+  .titlebar .title,
   .header-bar .title {
     font: Bold;
     padding: 0px 12px; }
+  .titlebar .subtitle,
   .header-bar .subtitle {
     font-size: 80%;
     padding: 0 12px; }
+  .titlebar > GtkBox > .separator.vertical,
   .header-bar > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
     border-image: linear-gradient(to bottom, rgba(161, 161, 161, 0), #a1a1a1 30%, #a1a1a1 70%, rgba(161, 161, 161, 0) 100%) 0 1/0 1px stretch; }
+    .titlebar > GtkBox > .separator.vertical:backdrop,
     .header-bar > GtkBox > .separator.vertical:backdrop {
       border-image: linear-gradient(to bottom, rgba(161, 161, 161, 0.5)) 0 1/1px 1px; }
+  .titlebar.selection-mode,
   .header-bar.selection-mode {
     color: #256ab1;
     text-shadow: 0 1px rgba(0, 0, 0, 0.5);
     background-image: linear-gradient(to bottom, #5f9ddd, #5295db);
     box-shadow: inset 0 -1px #d6d6d6, inset 0 1px #a4c7ec; }
-  .tiled .header-bar, .maximized .header-bar {
+  .tiled .titlebar, .maximized .titlebar, .tiled
+  .header-bar, .maximized
+  .header-bar {
     border-radius: 0; }
 
 /************
