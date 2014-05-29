@@ -303,7 +303,6 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
  *****************/
 
 .spinbutton {
-  box-shadow: 0 1px $borders_edge;
   .button {
     background-image: none;
     border-width: 0 0 0 1px;
@@ -329,30 +328,54 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
   &.vertical {
     .button {
       &:first-child {
-        border-radius: 3px 3px 0 0;
+        @extend %first-child;
         @include button(normal, $noedge: true);
-        &:active { @include button(active, $noedge: true); }
-        &:insensitive { @include button(insensitive, $noedge: true); }
-        &:hover { @include button(hover, $noedge: true); }
-        &:backdrop { @include button(backdrop); }
-        &:backdrop:insensitive { @include button(backdrop-insensitive); }
+        &:active {
+          @extend %first-child;
+          @include button(active, $noedge: true);
+        }
+        &:hover {
+          @extend %first-child;
+          @include button(hover, $noedge: true);
+        }
+        &:insensitive {
+          @extend %first-child;
+          @include button(insensitive, $noedge: true);
+        }
       }
       &:last-child {
-        border-radius: 0 0 3px 3px;
+        @extend %last-child;
         @include button(normal);
-        &:active { @include button(active); }
-        &:insensitive { @include button(insensitive); }
-        &:hover { @include button(hover); }
-        &:backdrop { @include button(backdrop); }
-        &:backdrop:insensitive { @include button(backdrop-insensitive); }
+        &:active {
+          @extend %last-child;
+          @include button(active);
+        }
+        &:hover {
+          @extend %last-child;
+          @include button(hover);
+        }
+        &:insensitive {
+          @extend %last-child;
+          @include button(insensitive);
+        }
       }
-      // FIXME this is a temporary gross hack
-      &.button.button.button:first-child { border-bottom-width: 0; }
-      &.button.button.button:last-child { border-top-width: 0; }
+      &:backdrop {
+        @include button(backdrop);
+      }
+      &:backdrop:insensitive {
+        @include button(backdrop-insensitive);
+      }
     }
     &.entry {
-      @include entry(normal);
       border-radius: 0;
+    }
+    %first-child {
+      border-radius: 3px 3px 0 0;
+      border-bottom-width: 0;
+    }
+    %last-child {
+      border-radius: 0 0 3px 3px;
+      border-top-width: 0;
     }
   }
 }
