@@ -651,9 +651,8 @@ GtkPopover {
       &.left { border-right: none; };
       &:backdrop {
         border-color: $backdrop_borders_color;
-        // same color as backdrop pushed button, we use mix in both cases
-        // hence, FIXME
-        background-color: transparentize($backdrop_borders_color,.7);
+        // same color as backdrop pushed button
+        background-color: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
         box-shadow: none;
       }
     }
@@ -705,6 +704,10 @@ GtkPopover {
       border-width: 0 1px 0 1px;
       background-color: transparentize($bg_color, .5); ;// darken($bg_color,3%);
       border-color: transparentize($borders_color,0.5);
+      &:backdrop {
+        border-color: $backdrop_borders_color;
+        background-color: mix($backdrop_borders_color,$backdrop_bg_color, 8%);
+      }
     }
     GtkLabel { //tab text
       font-weight: bold;
