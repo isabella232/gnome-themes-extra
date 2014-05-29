@@ -213,8 +213,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
     background-image: linear-gradient(to bottom,
-                        transparentize($insensitive_borders_color,.8));
-                        //FIXME? better to use mix() probably
+                        mix($insensitive_borders_color, $bg_color, 10%));
     @if $noedge {
       // white with 0 alpha to avoid an ugly transition, since no color means
       // black with 0 alpha
@@ -247,7 +246,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     color: $backdrop_fg_color;
     border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom,
-                        transparentize($backdrop_borders_color,.7));
+                        mix($backdrop_borders_color,$backdrop_bg_color, 35%));
     @include _shadows(inset 0 1px transparentize(white,1),
                       0 1px transparentize(white,1));
   }
@@ -268,7 +267,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     color: $backdrop_insensitive_color;
     border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom,
-                        transparentize($backdrop_borders_color,.9));
+                        mix($backdrop_borders_color,$backdrop_bg_color, 8%));
     @include _shadows(inset 0 1px transparentize(white,1),
                       0 1px transparentize(white,1));
   }
