@@ -367,6 +367,8 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
       }
     }
     &.entry {
+      // we should remove the bottom edge hilight here, but seems
+      // like buttons are on top of it so it doesn't show up
       border-radius: 0;
     }
     %top-button {
