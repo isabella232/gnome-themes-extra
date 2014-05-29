@@ -760,6 +760,7 @@ GtkSwitch {
   outline-offset: -9px;
   margin: 10px;
   &.slider {
+    //FIXME: better gradient on the slider and hover state
     @include button(normal);
     border-radius: 50%;
     border-color: darken($borders_color,3%);
