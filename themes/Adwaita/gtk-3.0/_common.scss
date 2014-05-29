@@ -109,18 +109,6 @@
   }
 }
 
-
-GtkImage,
-GtkImage:insensitive,
-GtkLabel,
-GtkLabel:insensitive,
-GtkBox,
-GtkBox:insensitive,
-GtkGrid,
-GtkGrid:insensitive {
-    background-color: transparent;
-}
-
 .view {
   background-color: $base_color;
   color: $fg_color;
