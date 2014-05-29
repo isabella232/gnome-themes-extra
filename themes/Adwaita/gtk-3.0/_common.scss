@@ -726,9 +726,9 @@ GtkPopover {
  **********/
 
 GtkSwitch {
+    -GtkSwitch-slider-width: 47px;
     font: bold condensed 9;
     outline-offset: -4px;
-    padding: 0;
     @include _shadows(0 1px 0 $borders_edge); // FIXME doesn't seem to draw the edge highlight outside the box
     &.trough {
       border-width: 1px;
