@@ -857,6 +857,373 @@ GtkSwitch {
       border-color: #1c1f1f;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
 
+/*************************
+ * Check and Radio items *
+ *************************/
+.check {
+  background-image: -gtk-scaled(url("assets/checkbox-unchecked-dark.png"), url("assets/checkbox-unchecked-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-dark-popover.png"),
+                                  url("assets/checkbox-unchecked-dark-popover@2.png"));
+  }
+}
+*/
+.check:hover {
+  background-image: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark.png"), url("assets/checkbox-unchecked-hover-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:hover {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark-popover.png"),
+                                  url("assets/checkbox-unchecked-hover-dark-popover@2.png"));
+  }
+}
+*/
+.check:insensitive {
+  background-image: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark-popover.png"),
+                                  url("assets/checkbox-unchecked-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.check:backdrop {
+  background-image: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-dark.png"), url("assets/checkbox-unchecked-backdrop-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:backdrop {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-dark-popover.png"),
+                                  url("assets/checkbox-unchecked-backdrop-dark-popover@2.png"));
+  }
+}
+*/
+.check:backdrop:insensitive {
+  background-image: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-insensitive-dark.png"), url("assets/checkbox-unchecked-backdrop-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:backdrop:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-unchecked-backdrop-insensitive-dark-popover.png"),
+                                  url("assets/checkbox-unchecked-backdrop-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.check:inconsistent {
+  background-image: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:inconsistent {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-mixed-dark-popover.png"),
+                                  url("assets/checkbox-mixed-dark-popover@2.png"));
+  }
+}
+*/
+.check:inconsistent:backdrop {
+  background-image: -gtk-scaled(url("assets/checkbox-mixed-backdrop-dark.png"), url("assets/checkbox-mixed-backdrop-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:inconsistent:backdrop {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-mixed-backdrop-dark-popover.png"),
+                                  url("assets/checkbox-mixed-backdrop-dark-popover@2.png"));
+  }
+}
+*/
+.check:inconsistent:insensitive {
+  background-image: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark.png"), url("assets/checkbox-mixed-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:inconsistent:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-mixed-insensitive-dark-popover.png"),
+                                  url("assets/checkbox-mixed-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.check:inconsistent:insensitive:backdrop {
+  background-image: -gtk-scaled(url("assets/checkbox-mixed-backdrop-insensitive-dark.png"), url("assets/checkbox-mixed-backdrop-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:inconsistent:insensitive:backdrop {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-mixed-backdrop-insensitive-dark-popover.png"),
+                                  url("assets/checkbox-mixed-backdrop-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.check:active {
+  background-image: -gtk-scaled(url("assets/checkbox-checked-dark.png"), url("assets/checkbox-checked-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:active {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-checked-dark-popover.png"),
+                                  url("assets/checkbox-checked-dark-popover@2.png"));
+  }
+}
+*/
+.check:active:insensitive {
+  background-image: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark.png"), url("assets/checkbox-checked-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:active:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-checked-insensitive-dark-popover.png"),
+                                  url("assets/checkbox-checked-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.check:hover:active {
+  background-image: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"), url("assets/checkbox-checked-hover-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:hover:active {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-checked-hover-dark-popover.png"),
+                                  url("assets/checkbox-checked-hover-dark-popover@2.png"));
+  }
+}
+*/
+.check:backdrop:active {
+  background-image: -gtk-scaled(url("assets/checkbox-checked-backdrop-dark.png"), url("assets/checkbox-checked-backdrop-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:backdrop:active {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-checked-backdrop-dark-popover.png"),
+                                  url("assets/checkbox-checked-backdrop-dark-popover@2.png"));
+  }
+}
+*/
+.check:backdrop:active:insensitive {
+  background-image: -gtk-scaled(url("assets/checkbox-checked-backdrop-insensitive-dark.png"), url("assets/checkbox-checked-backdrop-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.check:backdrop:active:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/checkbox-checked-backdrop-insensitive-dark-popover.png"),
+                                  url("assets/checkbox-checked-backdrop-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.radio {
+  background-image: -gtk-scaled(url("assets/radio-unchecked-dark.png"), url("assets/radio-unchecked-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-unchecked-dark-popover.png"),
+                                  url("assets/radio-unchecked-dark-popover@2.png"));
+  }
+}
+*/
+.radio:hover {
+  background-image: -gtk-scaled(url("assets/radio-unchecked-hover-dark.png"), url("assets/radio-unchecked-hover-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:hover {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-unchecked-hover-dark-popover.png"),
+                                  url("assets/radio-unchecked-hover-dark-popover@2.png"));
+  }
+}
+*/
+.radio:insensitive {
+  background-image: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark-popover.png"),
+                                  url("assets/radio-unchecked-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.radio:backdrop {
+  background-image: -gtk-scaled(url("assets/radio-unchecked-backdrop-dark.png"), url("assets/radio-unchecked-backdrop-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:backdrop {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-unchecked-backdrop-dark-popover.png"),
+                                  url("assets/radio-unchecked-backdrop-dark-popover@2.png"));
+  }
+}
+*/
+.radio:backdrop:insensitive {
+  background-image: -gtk-scaled(url("assets/radio-unchecked-backdrop-insensitive-dark.png"), url("assets/radio-unchecked-backdrop-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:backdrop:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-unchecked-backdrop-insensitive-dark-popover.png"),
+                                  url("assets/radio-unchecked-backdrop-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.radio:inconsistent {
+  background-image: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:inconsistent {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-mixed-dark-popover.png"),
+                                  url("assets/radio-mixed-dark-popover@2.png"));
+  }
+}
+*/
+.radio:inconsistent:backdrop {
+  background-image: -gtk-scaled(url("assets/radio-mixed-backdrop-dark.png"), url("assets/radio-mixed-backdrop-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:inconsistent:backdrop {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-mixed-backdrop-dark-popover.png"),
+                                  url("assets/radio-mixed-backdrop-dark-popover@2.png"));
+  }
+}
+*/
+.radio:inconsistent:insensitive {
+  background-image: -gtk-scaled(url("assets/radio-mixed-insensitive-dark.png"), url("assets/radio-mixed-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:inconsistent:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-mixed-insensitive-dark-popover.png"),
+                                  url("assets/radio-mixed-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.radio:inconsistent:insensitive:backdrop {
+  background-image: -gtk-scaled(url("assets/radio-mixed-backdrop-insensitive-dark.png"), url("assets/radio-mixed-backdrop-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:inconsistent:insensitive:backdrop {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-mixed-backdrop-insensitive-dark-popover.png"),
+                                  url("assets/radio-mixed-backdrop-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.radio:active {
+  background-image: -gtk-scaled(url("assets/radio-checked-dark.png"), url("assets/radio-checked-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:active {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-checked-dark-popover.png"),
+                                  url("assets/radio-checked-dark-popover@2.png"));
+  }
+}
+*/
+.radio:active:insensitive {
+  background-image: -gtk-scaled(url("assets/radio-checked-insensitive-dark.png"), url("assets/radio-checked-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:active:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-checked-insensitive-dark-popover.png"),
+                                  url("assets/radio-checked-insensitive-dark-popover@2.png"));
+  }
+}
+*/
+.radio:hover:active {
+  background-image: -gtk-scaled(url("assets/radio-checked-hover-dark.png"), url("assets/radio-checked-hover-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:hover:active {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-checked-hover-dark-popover.png"),
+                                  url("assets/radio-checked-hover-dark-popover@2.png"));
+  }
+}
+*/
+.radio:backdrop:active {
+  background-image: -gtk-scaled(url("assets/radio-checked-backdrop-dark.png"), url("assets/radio-checked-backdrop-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:backdrop:active {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-checked-backdrop-dark-popover.png"),
+                                  url("assets/radio-checked-backdrop-dark-popover@2.png"));
+  }
+}
+*/
+.radio:backdrop:active:insensitive {
+  background-image: -gtk-scaled(url("assets/radio-checked-backdrop-insensitive-dark.png"), url("assets/radio-checked-backdrop-insensitive-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+/* FIMXE gotta figure this out
+GtkPopover GtkModelButton.button.radio:backdrop:active:insensitive {
+  @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
+    background-image: -gtk-scaled(url("assets/radio-checked-backdrop-insensitive-dark-popover.png"),
+                                  url("assets/radio-checked-backdrop-insensitive-dark-popover@2.png"));
+  }
+}
+*/
 /************
  * GtkScale *
  ************/
