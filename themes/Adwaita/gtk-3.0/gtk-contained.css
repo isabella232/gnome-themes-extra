@@ -37,7 +37,8 @@
 .background:backdrop {
   text-shadow: none;
   icon-shadow: none;
-  color: #454f52; }
+  color: #454f52;
+  background-color: #ededed; }
 
 /*
    These wildcard seems unavoidable, need to investigate.
@@ -680,36 +681,48 @@ GtkPopover {
   .notebook:backdrop {
     background-color: #fcfcfc; }
   .notebook.frame {
-    border-width: 1px;
-    border-color: #a1a1a1;
-    border-width: 0; }
+    border: 1px solid #a1a1a1; }
+    .notebook.frame.top {
+      border-top-width: 0; }
+    .notebook.frame.bottom {
+      border-bottom-width: 0; }
+    .notebook.frame.right {
+      border-right-width: 0; }
+    .notebook.frame.left {
+      border-left-width: 0; }
     .notebook.frame:backdrop {
       border-color: #a1a1a1; }
   .notebook.header {
-    background-color: #cecece;
-    border: 1px solid #a1a1a1; }
+    background-color: #cecece; }
+    .notebook.header.frame {
+      border: 1px solid #a1a1a1; }
+      .notebook.header.frame.top {
+        border-bottom-width: 0; }
+      .notebook.header.frame.bottom {
+        border-top-width: 0; }
+      .notebook.header.frame.right {
+        border-left-width: 0; }
+      .notebook.header.frame.left {
+        border-right-width: 0; }
+      .notebook.header.frame:backdrop {
+        border-color: #a1a1a1; }
     .notebook.header.top {
-      border-bottom: none;
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 0 -1px #a1a1a1; }
       .notebook.header.top:backdrop {
         box-shadow: inset 0 -1px #a1a1a1; }
     .notebook.header.bottom {
-      border-top: none;
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 0 1px #a1a1a1; }
       .notebook.header.bottom:backdrop {
         box-shadow: inset 0 1px #a1a1a1; }
     .notebook.header.right {
-      border-left: none;
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset 1px 0 #a1a1a1; }
       .notebook.header.right:backdrop {
         box-shadow: inset 1px 0 #a1a1a1; }
     .notebook.header.left {
-      border-right: none;
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.15), inset -1px 0 #a1a1a1; }
       .notebook.header.left:backdrop {
         box-shadow: inset -1px 0 #a1a1a1; }
     .notebook.header:backdrop {
-      border-color: #a1a1a1;
       background-color: #d2d2d2;
       box-shadow: none; }
   .notebook tab {
@@ -786,6 +799,10 @@ GtkPopover {
         box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px white; }
       .notebook tab .button > GtkImage {
         padding: 3px; }
+
+.notebook > .frame,
+.notebook > .view {
+  border: none; }
 
 /**************
  * Scrollbars *
