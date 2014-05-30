@@ -1356,6 +1356,38 @@ GtkPopover GtkModelButton.button.radio:backdrop:active:insensitive {
       border-color: #c7c7c7;
       background-color: #ededed; }
 
+/*****************
+ * Progress bars *
+ *****************/
+GtkProgressBar {
+  padding: 0;
+  font-size: 83%;
+  color: rgba(46, 52, 54, 0.4); }
+  GtkProgressBar:backdrop {
+    color: #c7c7c7; }
+
+.progressbar {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #184472;
+  background-color: #4a90d9; }
+  .progressbar:backdrop {
+    border-color: #4a90d9;
+    background-color: #4a90d9; }
+
+GtkProgressBar.trough {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #a1a1a1;
+  background-color: #cecece;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px white; }
+  GtkProgressBar.trough:backdrop {
+    border-color: #a1a1a1;
+    background-color: #d2d2d2;
+    box-shadow: 0 1px rgba(255, 255, 255, 0); }
+
 /**********
  * Frames *
  **********/
