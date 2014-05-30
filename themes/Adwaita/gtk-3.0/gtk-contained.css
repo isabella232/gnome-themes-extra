@@ -767,13 +767,16 @@ GtkPopover {
       font-weight: bold;
       color: #8d9091; }
       .notebook tab GtkLabel.prelight-page {
-        color: #5d6263; }
+        color: #5d6263;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
       .notebook tab GtkLabel.active-page {
-        color: #2e3436; }
+        color: #2e3436;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
         .notebook tab GtkLabel.active-page:backdrop {
           color: #54595a; }
       .notebook tab GtkLabel:backdrop {
-        color: #8d9090; }
+        color: #8d9090;
+        text-shadow: none; }
     .notebook tab .button {
       border: 1px solid transparent;
       box-shadow: none;
@@ -845,31 +848,41 @@ GtkPopover {
 GtkSwitch {
   -GtkSwitch-slider-width: 47px;
   font: bold condensed 9;
-  outline-offset: -4px;
-  box-shadow: 0 1px 0 white; }
+  outline-offset: -4px; }
   GtkSwitch.trough {
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
-    color: #54595a;
-    background-image: linear-gradient(to bottom, #c9c9c9 5%, #d5d5d5 20%, #d5d5d5 90%, #ededed);
-    border-color: #a1a1a1; }
+    border-color: #a1a1a1;
+    background-color: #cecece;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.1), 0 1px white;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
     GtkSwitch.trough:active {
-      color: #fbfbfb;
-      background-image: linear-gradient(to bottom, #3e7ab8 5%, #4281c3 20%, #4281c3 90%, #4a90d9);
-      border-color: #1c5187; }
+      color: white;
+      border-color: #184472;
+      background-color: #4a90d9;
+      box-shadow: 0 1px white;
+      text-shadow: 0 0 2px 1px white; }
     GtkSwitch.trough:insensitive {
-      color: #54595a;
-      background-image: linear-gradient(to bottom, #ededed);
-      border-color: #a1a1a1; }
+      color: #8d9091;
+      border-color: #a1a1a1;
+      background-color: #ededed;
+      box-shadow: 0 1px white;
+      text-shadow: none; }
     GtkSwitch.trough:backdrop {
       color: #54595a;
-      background-image: linear-gradient(to bottom, lightgray);
-      border-color: #949494; }
+      border-color: #a1a1a1;
+      background-color: #ededed;
+      box-shadow: none;
+      text-shadow: none; }
+    GtkSwitch.trough:backdrop:active {
+      color: #ededed;
+      border-color: #4a90d9;
+      background-color: #4a90d9;
+      box-shadow: none; }
     GtkSwitch.trough:backdrop:insensitive {
-      color: #54595a;
-      background-image: linear-gradient(to bottom, #ededed);
-      border-color: #a1a1a1; }
+      color: #c7c7c7;
+      border-color: #c7c7c7; }
   GtkSwitch.slider {
     border-radius: 3px;
     border-width: 1px;
@@ -879,7 +892,8 @@ GtkSwitch {
     border-color: #a1a1a1;
     text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
     icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-    box-shadow: inset 0 1px white; }
+    box-shadow: inset 0 1px white;
+    box-shadow: inset 0 1px white, inset 0 -2px rgba(237, 237, 237, 0.6), inset 0 -1px #c7c7c7; }
     GtkSwitch.slider:active {
       border: 1px solid #184472; }
     GtkSwitch.slider:insensitive {
@@ -900,6 +914,8 @@ GtkSwitch {
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
+    GtkSwitch.slider:backdrop:active {
+      border-color: #4a90d9; }
     GtkSwitch.slider:backdrop:insensitive {
       border-width: 1px;
       border-style: solid;
