@@ -1405,6 +1405,47 @@ GtkProgressBar.trough {
     background-color: #d2d2d2;
     box-shadow: 0 1px rgba(255, 255, 255, 0); }
 
+/****************
+ * Level Bar *
+ ****************/
+GtkLevelBar {
+  -GtkLevelBar-min-block-width: 34;
+  -GtkLevelBar-min-block-height: 3; }
+
+GtkLevelBar.vertical {
+  -GtkLevelBar-min-block-width: 3;
+  -GtkLevelBar-min-block-height: 34; }
+
+.level-bar.trough {
+  padding: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #a1a1a1;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px white;
+  background-color: white; }
+.level-bar.fill-block {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #2a76c6;
+  background-color: #4a90d9; }
+  .level-bar.fill-block.indicator-continuous {
+    padding: 2px;
+    border-radius: 2px; }
+  .level-bar.fill-block.indicator-discrete.horizontal {
+    margin: 0 1px; }
+  .level-bar.fill-block.indicator-discrete.vertical {
+    margin: 1px 0; }
+  .level-bar.fill-block.level-high {
+    border-color: #5aa411;
+    background-color: #73d216; }
+  .level-bar.fill-block.level-low {
+    border-color: #c26000;
+    background-color: #f57900; }
+  .level-bar.fill-block.empty-fill-block {
+    background-color: transparent;
+    border-color: rgba(161, 161, 161, 0.2); }
+
 /**********
  * Frames *
  **********/
