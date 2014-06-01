@@ -580,13 +580,28 @@ GtkComboBox {
 /************
  * Searbars *
  ************/
-.search-bar {
-  border-width: 0 0 1px;
+.search-bar, .action-bar {
   border-style: solid;
   border-color: #1c1f1f;
   background-color: #363c3c;
-  box-shadow: inset 0 1px 3px #292d2d;
+  box-shadow: inset 0 1px 3px -2px #262a2a; }
+
+.search-bar {
+  border-width: 0 0 1px;
   padding: 4px; }
+
+/***************
+ * Action bars *
+ ***************/
+.action-bar {
+  border-width: 1px 0 0 0;
+  padding: 6px; }
+  .action-bar .title {
+    font: Bold 11;
+    padding: 0 12px; }
+  .action-bar .subtitle {
+    font: 9;
+    padding: 0 12px; }
 
 /**************
  * Tree Views *
@@ -1384,7 +1399,6 @@ GtkProgressBar.trough {
   border-style: solid;
   border-radius: 3px;
   border-color: #1c1f1f;
-  background-color: #2d3232;
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
   GtkProgressBar.trough:backdrop {
     border-color: #1c1f1f;
