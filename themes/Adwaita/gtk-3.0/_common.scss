@@ -967,8 +967,10 @@ $asset_suffix: if($variant=='dark', '-dark', '');
   GtkPopover GtkModelButton.button.#{$w} {
     &:hover, &:active:hover { color: $fg_color; }
   }
-
 }
+
+// FIXME mousedown / active state is blue for some reason.
+// I thought we don't have that state as :active is used for checked states
 
 /************
  * GtkScale *
