@@ -951,16 +951,23 @@ $asset_suffix: if($variant=='dark', '-dark', '');
                                     url("assets/#{$a}#{$as}#{$asset_suffix}@2.png"));
       background-repeat: no-repeat;
       background-position: center;
-    }
-    /* FIMXE gotta figure this out
-    GtkPopover GtkModelButton.button.#{$w}#{$s} {
-      @if str-index('-unchecked',$as) gt 0 { //nothing for unchecked
-        background-image: -gtk-scaled(url("assets/#{$a}#{$as}#{$asset_suffix}-popover.png"),
-                                      url("assets/#{$a}#{$as}#{$asset_suffix}-popover@2.png"));
-      }
-    }
-    */
+    }    
   }
+  // menu and popover; FIXME: treeview
+  GtkPopover GtkModelButton.button.#{$w},
+  .menuitem.#{$w} {
+    background-image: none;
+    background-color: transparent;
+    &:active { -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic'); color: $fg_color; }
+    &:inconsistent { -gtk-icon-source: -gtk-icontheme('#{$a}-mixed-symbolic'); }
+  }
+  .menuitem.#{$w} {
+    &:hover, &:active:hover { color: $selected_fg_color; }
+  }
+  GtkPopover GtkModelButton.button.#{$w} {
+    &:hover, &:active:hover { color: $fg_color; }
+  }
+
 }
 
 /************
