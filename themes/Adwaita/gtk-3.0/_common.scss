@@ -411,7 +411,7 @@ GtkComboBox {
   &:backdrop:insensitive {
     color: $backdrop_insensitive_color;
   }
-
+  .menuitem:active { text-shadow: none; }
   .separator {
     // always disable separators
     -GtkWidget-wide-separators: true;
@@ -431,6 +431,44 @@ GtkComboBox {
   }
   &.combobox-entry .button:last-child {
     border-radius: 0 3px 3px 0;
+  }
+}
+
+/************
+ * Toolbars *
+ ************/
+.toolbar { //FIXME: why is all this being ignored?
+    padding: 6px;
+    background-color: $bg_color;
+}
+
+//searchbar & actionbar
+
+%inset-bar {
+  border-style: solid;
+  border-color: $borders_color;
+  $_bg: mix(black, $bg_color, 4%);
+  background-color: $_bg;
+  box-shadow: inset 0 1px 3px -2px mix($borders_color, $_bg, 60%);
+}
+
+.search-bar {
+  @extend %inset-bar;
+  border-width: 0 0 1px;
+  padding: 4px;
+}
+
+.action-bar {
+  @extend %inset-bar;
+  border-width: 1px 0 0 0;
+  padding: 6px;
+  .title {
+    font: Bold 11;
+    padding: 0 12px;
+  }
+  .subtitle {
+    font: 9;
+    padding: 0 12px;
   }
 }
 
@@ -497,41 +535,6 @@ GtkComboBox {
   }
   .tiled &, .maximized & {
     border-radius: 0; // squared corners when the window is max'd or tiled
-  }
-}
-
-/************
- * Searbars *
- ************/
-%inset-bar {
-  border-style: solid;
-  border-color: $borders_color;
-  $_bg: mix(black, $bg_color, 4%);
-  background-color: $_bg;
-  box-shadow: inset 0 1px 3px -2px mix($borders_color, $_bg, 60%);
-}
-
-.search-bar {
-  @extend %inset-bar;
-  border-width: 0 0 1px;
-  padding: 4px;
-}
-
-/***************
- * Action bars *
- ***************/
-
-.action-bar {
-  @extend %inset-bar;
-  border-width: 1px 0 0 0;
-  padding: 6px;
-  .title {
-    font: Bold 11;
-    padding: 0 12px;
-  }
-  .subtitle {
-    font: 9;
-    padding: 0 12px;
   }
 }
 
