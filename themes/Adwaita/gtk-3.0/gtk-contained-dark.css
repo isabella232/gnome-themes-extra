@@ -515,6 +515,8 @@ GtkComboBox {
     icon-shadow: none; }
   GtkComboBox:backdrop:insensitive {
     color: #a0a3a2; }
+  GtkComboBox .menuitem:active {
+    text-shadow: none; }
   GtkComboBox .separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
@@ -529,6 +531,33 @@ GtkComboBox {
     border-left: 0; }
   GtkComboBox.combobox-entry .button:last-child {
     border-radius: 0 3px 3px 0; }
+
+/************
+ * Toolbars *
+ ************/
+.toolbar {
+  padding: 6px;
+  background-color: #393f3f; }
+
+.search-bar, .action-bar {
+  border-style: solid;
+  border-color: #1c1f1f;
+  background-color: #363c3c;
+  box-shadow: inset 0 1px 3px -2px #262a2a; }
+
+.search-bar {
+  border-width: 0 0 1px;
+  padding: 4px; }
+
+.action-bar {
+  border-width: 1px 0 0 0;
+  padding: 6px; }
+  .action-bar .title {
+    font: Bold 11;
+    padding: 0 12px; }
+  .action-bar .subtitle {
+    font: 9;
+    padding: 0 12px; }
 
 /***************
  * Header bars *
@@ -576,32 +605,6 @@ GtkComboBox {
   .header-bar, .maximized
   .header-bar {
     border-radius: 0; }
-
-/************
- * Searbars *
- ************/
-.search-bar, .action-bar {
-  border-style: solid;
-  border-color: #1c1f1f;
-  background-color: #363c3c;
-  box-shadow: inset 0 1px 3px -2px #262a2a; }
-
-.search-bar {
-  border-width: 0 0 1px;
-  padding: 4px; }
-
-/***************
- * Action bars *
- ***************/
-.action-bar {
-  border-width: 1px 0 0 0;
-  padding: 6px; }
-  .action-bar .title {
-    font: Bold 11;
-    padding: 0 12px; }
-  .action-bar .subtitle {
-    font: 9;
-    padding: 0 12px; }
 
 /**************
  * Tree Views *
