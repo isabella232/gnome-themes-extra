@@ -153,7 +153,10 @@
     border-color: #4a90d9;
     border-style: solid;
     background-image: none;
+    background-color: transparent;
     box-shadow: none; }
+    .entry.progressbar:backdrop {
+      background-color: transparent; }
   .linked .entry:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
