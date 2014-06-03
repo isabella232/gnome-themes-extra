@@ -193,7 +193,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
-    background-image: linear-gradient(to bottom, $c);
+    background-image: linear-gradient(to bottom, $insensitive_bg_color);
     text-shadow: none;
     icon-shadow: none;
     @if $noedge {
@@ -213,7 +213,8 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     color: $insensitive_fg_color;
     border-color: $insensitive_borders_color;
     background-image: linear-gradient(to bottom,
-                        mix($insensitive_borders_color, $bg_color, 10%));
+                        mix($insensitive_borders_color,
+                            $insensitive_bg_color, 10%));
     @if $noedge {
       // white with 0 alpha to avoid an ugly transition, since no color means
       // black with 0 alpha
