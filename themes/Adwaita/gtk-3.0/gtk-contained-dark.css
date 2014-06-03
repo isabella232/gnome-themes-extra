@@ -384,6 +384,8 @@ GtkColorButton.button {
   border-color: rgba(28, 31, 31, 0.3);
   border-radius: 0;
   box-shadow: none; }
+  .spinbutton .button:dir(rtl) {
+    border-width: 0 1px 0 0; }
   .spinbutton .button:insensitive {
     color: rgba(147, 150, 149, 0.3); }
   .spinbutton .button:active {
