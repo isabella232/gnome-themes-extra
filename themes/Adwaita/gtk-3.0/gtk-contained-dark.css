@@ -151,10 +151,14 @@
   .linked .entry:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
+    .linked .entry:first-child:dir(rtl) {
+      border-right-style: none; }
   .linked .entry:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left-style: none; }
+    .linked .entry:last-child:dir(rtl) {
+      border-left-style: solid; }
 
 /***********
  * Buttons *
@@ -339,14 +343,19 @@
   .linked .button, .linked .button:backdrop {
     border-radius: 0;
     border-left-style: none; }
+    .linked .button:dir(rtl), .linked .button:backdrop:dir(rtl) {
+      border-right-style: none;
+      border-left-style: solid; }
     .linked .button:first-child, .linked .button:backdrop:first-child {
       border-radius: 3px 0 0 3px;
       border-left-style: solid; }
     .linked .button:last-child, .linked .button:backdrop:last-child {
       border-radius: 0 3px 3px 0; }
+      .linked .button:last-child:dir(rtl), .linked .button:backdrop:last-child:dir(rtl) {
+        border-right-style: solid; }
     .linked .button:only-child, .linked .button:backdrop:only-child {
       border-radius: 3px;
-      border-left-style: solid; }
+      border-style: solid; }
   .header-bar .button.text-button {
     padding: 6px 8px 5px; }
   .header-bar .button.image-button {
@@ -393,8 +402,10 @@ GtkColorButton.button {
   .spinbutton .button:backdrop {
     border-color: rgba(28, 31, 31, 0.3); }
   .spinbutton .button:backdrop:insensitive {
-    border-width: 0 0 0 1px;
-    color: rgba(160, 163, 162, 0.3); }
+    color: rgba(160, 163, 162, 0.3);
+    border-width: 0 0 0 1px; }
+    .spinbutton .button:backdrop:insensitive:dir(rtl) {
+      border-width: 0 1px 0 0; }
 .spinbutton.vertical .button:first-child {
   border-width: 1px;
   border-style: solid;
@@ -517,16 +528,17 @@ GtkComboBox {
     -GtkWidget-wide-separators: true;
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0; }
-  GtkComboBox.combobox-entry .entry:first-child {
+  GtkComboBox.combobox-entry .entry {
     border-radius: 3px 0 0 3px; }
-  GtkComboBox.combobox-entry .button:first-child {
-    border-radius: 3px 0 0 3px; }
-  GtkComboBox.combobox-entry .entry:last-child {
+    GtkComboBox.combobox-entry .entry:dir(rtl) {
+      border-radius: 0 3px 3px 0; }
+  GtkComboBox.combobox-entry .button, GtkComboBox.combobox-entry .button:backdrop {
     border-radius: 0 3px 3px 0;
     border-left-style: none; }
-  GtkComboBox.combobox-entry .button:last-child {
-    border-radius: 0 3px 3px 0;
-    border-left-style: none; }
+    GtkComboBox.combobox-entry .button:dir(rtl), GtkComboBox.combobox-entry .button:backdrop:dir(rtl) {
+      border-radius: 3px 0 0 3px;
+      border-left-style: solid;
+      border-right-style: none; }
 
 /************
  * Toolbars *

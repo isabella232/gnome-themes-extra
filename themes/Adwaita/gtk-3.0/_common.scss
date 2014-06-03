@@ -169,11 +169,13 @@
     &:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+      &:dir(rtl) { border-right-style: none;}
     }
     &:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       border-left-style: none;
+      &:dir(rtl) { border-left-style: solid; }
     }
   }
 }
@@ -244,16 +246,21 @@
   .linked &, .linked &:backdrop {
     border-radius: 0;
     border-left-style: none;
+    &:dir(rtl) {
+      border-right-style: none;
+      border-left-style: solid
+    };
     &:first-child {
       border-radius: 3px 0 0 3px;
       border-left-style: solid;
     }
     &:last-child {
       border-radius: 0 3px 3px 0;
+      &:dir(rtl) { border-right-style: solid; }
     }
     &:only-child {
       border-radius: 3px;
-      border-left-style: solid;
+      border-style: solid;
     }
   }
 
@@ -329,8 +336,9 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
       border-color: transparentize($backdrop_borders_color,0.7);
     }
     &:backdrop:insensitive {
-      border-width: 0 0 0 1px;
       color: transparentize($backdrop_insensitive_color,0.7);
+      border-width: 0 0 0 1px; // It is needed or it gets overridden
+      &:dir(rtl) { border-width: 0 1px 0 0; }
     }
   }
   &.vertical {
@@ -425,19 +433,21 @@ GtkComboBox {
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
   }
-  &.combobox-entry .entry:first-child {
+  &.combobox-entry .entry {
     border-radius: 3px 0 0 3px;
+    &:dir(rtl) {
+      border-radius: 0 3px 3px 0;
+    }
   }
-  &.combobox-entry .button:first-child {
-    border-radius: 3px 0 0 3px;
-  }
-  &.combobox-entry .entry:last-child {
+  &.combobox-entry .button, &.combobox-entry .button:backdrop {
+    // It is needed to specify the backdrop button or it gets overridden
     border-radius: 0 3px 3px 0;
     border-left-style: none;
-  }
-  &.combobox-entry .button:last-child {
-    border-radius: 0 3px 3px 0;
-    border-left-style: none;
+    &:dir(rtl) {
+      border-radius: 3px 0 0 3px;
+      border-left-style: solid;
+      border-right-style: none;
+    }
   }
 }
 
