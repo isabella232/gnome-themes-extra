@@ -69,16 +69,6 @@
    Everytime a wildcard is used a kitten dies, painfully.
 */
 
-*:selected,
-*:selected:focus {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
-}
-
-*:selected:backdrop {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
-}
 
 
 *:insensitive {
@@ -154,6 +144,11 @@
     background-color: $selected_bg_color;
     color: $selected_fg_color;
   }
+  &:selected,
+  &:selected:focus,
+  &:selected:backdrop {
+    @extend %selected_items;
+  }
   &.progressbar {
     margin: 1px;
     border-radius: 0;
@@ -177,7 +172,6 @@
     }
   }
 }
-
 
 /***********
  * Buttons *
@@ -205,6 +199,11 @@
     &:insensitive:active {
       @include button(backdrop-insensitive-active);
     }
+  }
+  &:selected,
+  &:selected:focus,
+  &:selected:backdrop {
+    @extend %selected_items;
   }
   &:insensitive {
     @include button(insensitive);
@@ -939,16 +938,19 @@ $asset_suffix: if($variant=='dark', '-dark', '');
                ('radio','radio') {
   @each $s,$as in ('','-unchecked'),
                   (':hover', '-unchecked-hover'),
+                  (':selected', '-unchecked-active'),
                   (':insensitive','-unchecked-insensitive'),
                   (':backdrop', '-unchecked-backdrop'),
                   (':backdrop:insensitive', '-unchecked-backdrop-insensitive'),
                   (':inconsistent', '-mixed'),
+                  (':inconsistent:selected', '-mixed-active'),
                   (':inconsistent:backdrop', '-mixed-backdrop'),
                   (':inconsistent:insensitive', '-mixed-insensitive'),
                   (':inconsistent:insensitive:backdrop', '-mixed-backdrop-insensitive'),
                   (':active', '-checked'),
                   (':active:insensitive','-checked-insensitive'),
                   (':hover:active', '-checked-hover'),
+                  (':active:selected', '-checked-active'),
                   (':backdrop:active', '-checked-backdrop'),
                   (':backdrop:active:insensitive', '-checked-backdrop-insensitive') {
     .#{$w}#{$s} {
@@ -958,6 +960,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
       background-position: center;
     }    
   }
+  
   // menu and popover; FIXME: treeview
   GtkPopover GtkModelButton.button.#{$w},
   .menuitem.#{$w} {
@@ -974,8 +977,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
   }
 }
 
-// FIXME mousedown / active state is blue for some reason.
-// I thought we don't have that state as :active is used for checked states
+GtkCheckButton.text-button:selected { background-color: transparent; }
 
 /************
  * GtkScale *
@@ -1103,7 +1105,6 @@ GtkProgressBar.trough {
  * Level Bar *
  ****************/
 
-
 GtkLevelBar {
     -GtkLevelBar-min-block-width: 34;
     -GtkLevelBar-min-block-height: 3;
@@ -1153,6 +1154,12 @@ GtkLevelBar.vertical {
   }
 }
 
+// catch all extend :)
+
+%selected_items {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+}
 
 /**********
  * Frames *

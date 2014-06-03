@@ -46,15 +46,6 @@
    or better, just don't.
    Everytime a wildcard is used a kitten dies, painfully.
 */
-*:selected,
-*:selected:focus {
-  background-color: #215d9c;
-  color: white; }
-
-*:selected:backdrop {
-  background-color: #215d9c;
-  color: white; }
-
 *:insensitive {
   -gtk-image-effect: dim; }
 
@@ -957,6 +948,11 @@ GtkSwitch {
   background-repeat: no-repeat;
   background-position: center; }
 
+.check:selected {
+  background-image: -gtk-scaled(url("assets/checkbox-unchecked-active-dark.png"), url("assets/checkbox-unchecked-active-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .check:insensitive {
   background-image: -gtk-scaled(url("assets/checkbox-unchecked-insensitive-dark.png"), url("assets/checkbox-unchecked-insensitive-dark@2.png"));
   background-repeat: no-repeat;
@@ -974,6 +970,11 @@ GtkSwitch {
 
 .check:inconsistent {
   background-image: -gtk-scaled(url("assets/checkbox-mixed-dark.png"), url("assets/checkbox-mixed-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.check:inconsistent:selected {
+  background-image: -gtk-scaled(url("assets/checkbox-mixed-active-dark.png"), url("assets/checkbox-mixed-active-dark@2.png"));
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -1004,6 +1005,11 @@ GtkSwitch {
 
 .check:hover:active {
   background-image: -gtk-scaled(url("assets/checkbox-checked-hover-dark.png"), url("assets/checkbox-checked-hover-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.check:active:selected {
+  background-image: -gtk-scaled(url("assets/checkbox-checked-active-dark.png"), url("assets/checkbox-checked-active-dark@2.png"));
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -1045,6 +1051,11 @@ GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.c
   background-repeat: no-repeat;
   background-position: center; }
 
+.radio:selected {
+  background-image: -gtk-scaled(url("assets/radio-unchecked-active-dark.png"), url("assets/radio-unchecked-active-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .radio:insensitive {
   background-image: -gtk-scaled(url("assets/radio-unchecked-insensitive-dark.png"), url("assets/radio-unchecked-insensitive-dark@2.png"));
   background-repeat: no-repeat;
@@ -1062,6 +1073,11 @@ GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.c
 
 .radio:inconsistent {
   background-image: -gtk-scaled(url("assets/radio-mixed-dark.png"), url("assets/radio-mixed-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.radio:inconsistent:selected {
+  background-image: -gtk-scaled(url("assets/radio-mixed-active-dark.png"), url("assets/radio-mixed-active-dark@2.png"));
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -1095,6 +1111,11 @@ GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.c
   background-repeat: no-repeat;
   background-position: center; }
 
+.radio:active:selected {
+  background-image: -gtk-scaled(url("assets/radio-checked-active-dark.png"), url("assets/radio-checked-active-dark@2.png"));
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .radio:backdrop:active {
   background-image: -gtk-scaled(url("assets/radio-checked-backdrop-dark.png"), url("assets/radio-checked-backdrop-dark@2.png"));
   background-repeat: no-repeat;
@@ -1122,6 +1143,9 @@ GtkPopover GtkModelButton.button.radio,
 
 GtkPopover GtkModelButton.button.radio:hover, GtkPopover GtkModelButton.button.radio:active:hover {
   color: #eeeeec; }
+
+GtkCheckButton.text-button:selected {
+  background-color: transparent; }
 
 /************
  * GtkScale *
@@ -1265,6 +1289,10 @@ GtkLevelBar.vertical {
   .level-bar.fill-block.empty-fill-block {
     background-color: transparent;
     border-color: rgba(28, 31, 31, 0.2); }
+
+.entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
+  background-color: #215d9c;
+  color: white; }
 
 /**********
  * Frames *
