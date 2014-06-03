@@ -103,6 +103,11 @@
 .view {
   background-color: $base_color;
   color: $fg_color;
+  &:selected,
+  &:selected:focus,
+  &:selected:backdrop {
+    @extend %selected_items;
+  }
 }
 
 /*********************

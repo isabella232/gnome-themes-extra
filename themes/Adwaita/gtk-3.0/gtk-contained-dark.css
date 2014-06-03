@@ -1290,7 +1290,7 @@ GtkLevelBar.vertical {
     background-color: transparent;
     border-color: rgba(28, 31, 31, 0.2); }
 
-.entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
+.view:selected, .view:selected:focus, .view:selected:backdrop, .entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
   background-color: #215d9c;
   color: white; }
 
