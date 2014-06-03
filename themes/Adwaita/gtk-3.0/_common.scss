@@ -163,6 +163,7 @@
     background-image: none;
     background-color: transparent;
     box-shadow: none;
+    &:backdrop { background-color: transparent; }
   }
   .linked & {
     &:first-child {
