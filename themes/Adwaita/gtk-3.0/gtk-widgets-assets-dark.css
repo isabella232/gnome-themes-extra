@@ -32,7 +32,8 @@
  * Header bar separator  *
  *************************/
 
-.header-bar > GtkBox > .separator.vertical {
+.header-bar > GtkBox > .separator.vertical,
+.header-bar-separator {
     -GtkWidget-wide-separators: 1;
     -GtkWidget-separator-width: 2px;
     background: transparent;
