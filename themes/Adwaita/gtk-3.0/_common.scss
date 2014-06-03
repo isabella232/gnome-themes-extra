@@ -920,7 +920,7 @@ GtkSwitch {
                   inset 0 -2px transparentize($bg_color,0.4),
                   inset 0 -1px mix($bg_color,$borders_color,50%);
       &:active { border: 1px solid darken($selected_bg_color, 30%); }
-      &:insensitive { @include button(insensitive); }
+      &:insensitive { @include button(insensitive, $noedge: true); }
       &:backdrop { @include button(backdrop); }
       &:backdrop:active{ border-color: $selected_bg_color; }
       &:backdrop:insensitive { @include button(backdrop-insensitive); }
