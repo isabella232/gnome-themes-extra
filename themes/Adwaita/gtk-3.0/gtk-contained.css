@@ -1210,13 +1210,15 @@ GtkProgressBar {
     box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2); }
   .progressbar:backdrop {
     border-color: #4a90d9;
-    background-color: #4a90d9; }
+    background-color: #4a90d9;
+    box-shadow: none; }
 
 GtkProgressBar.trough {
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
   border-color: #a1a1a1;
+  background-color: #d2d2d2;
   box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px white; }
   GtkProgressBar.trough:backdrop {
     border-color: #a1a1a1;
