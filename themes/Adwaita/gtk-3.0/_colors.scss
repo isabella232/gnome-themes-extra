@@ -19,7 +19,7 @@ $destructive_color: if($variant =='light', #ef2929, darken(#ef2929,10%));
 
 //insensitive state derived colors
 $insensitive_fg_color: mix($fg_color, $bg_color, 50%);
-$insensitive_bg_color: $bg_color;
+$insensitive_bg_color: red; // FIXME we need to use the insensitive bg color
 $insensitive_borders_color: $borders_color;
 
 //colors for the backdrop state, derived from the main colors.
