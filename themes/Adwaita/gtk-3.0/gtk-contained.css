@@ -1293,7 +1293,7 @@ GtkLevelBar.vertical {
 .level-bar.fill-block {
   border-width: 1px;
   border-style: solid;
-  border-color: #2a76c6;
+  border-color: #184472;
   background-color: #4a90d9; }
   .level-bar.fill-block.indicator-continuous {
     padding: 2px;
