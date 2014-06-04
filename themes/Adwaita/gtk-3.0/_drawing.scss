@@ -273,6 +273,38 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     @include _shadows(inset 0 1px transparentize(white,1),
                       0 1px transparentize(white,1));
   }
+  
+  @else if $t==osd {
+  //
+  // normal osd button
+  //
+    background-image: linear-gradient(to bottom,
+                                  transparentize(#fff,0.9),
+                                  transparentize(#fff,0.95),
+                                  transparentize(#000,0.99));
+    border-color: $osd_borders_color;
+    box-shadow: none;
+  }
+  
+  @else if $t==osd-insensitive {
+  //
+  // insensitive osd button
+  //
+    background-image: linear-gradient(to bottom,
+                      $osd_bg_color);
+    border-color: $osd_borders_color;
+  }
+  @else if $t==osd-active {
+  //
+  // active osd button
+  //
+    background-image: linear-gradient(to bottom,
+                                  transparentize(#000,0.95),
+                                  transparentize(#fff,0.95),
+                                  transparentize(#fff,0.9));
+    border-color: $osd_borders_color;
+    box-shadow: none;
+  }
 }
 
 @mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {

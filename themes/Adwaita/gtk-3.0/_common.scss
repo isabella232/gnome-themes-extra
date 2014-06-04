@@ -220,8 +220,12 @@
   }
   //overlay / OSD style
   .osd & {
-    background-image: none;
-    background-color: red;
+    padding: 6px;
+    border-width: 1px;
+    @include button(osd);
+    &:insensitive { @include button(osd-insensitive); }
+    &:active { @include button(osd-active); }
+    &:backdrop { @include button(osd-backdrop); }
   }
   // Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $selected_bg_color),
@@ -459,11 +463,25 @@ GtkComboBox {
  * Toolbars *
  ************/
 .toolbar { //FIXME: why is all this being ignored?
+  padding: 6px;
+  background-color: $bg_color;
+  &.osd {
+    background-color: $osd_bg_color;
+    border-radius: 6px;
+    padding: 12px;
+  }
+  //searchbar & inline-toolbar
+  &.inline-toolbar {
+    @extend %inset-bar;
+    border-width: 1px 0 0 0;
     padding: 6px;
-    background-color: $bg_color;
+  }
+  &.search-bar {
+    @extend %inset-bar;
+    border-width: 0 0 1px;
+    padding: 4px;
+  }
 }
-
-//searchbar & actionbar
 
 %inset-bar {
   border-style: solid;
@@ -473,24 +491,8 @@ GtkComboBox {
   box-shadow: inset 0 1px 3px -2px mix($borders_color, $_bg, 60%);
 }
 
-.search-bar {
-  @extend %inset-bar;
-  border-width: 0 0 1px;
-  padding: 4px;
-}
-
 .action-bar {
-  @extend %inset-bar;
-  border-width: 1px 0 0 0;
-  padding: 6px;
-  .title {
-    font: Bold 11;
-    padding: 0 12px;
-  }
-  .subtitle {
-    font: 9;
-    padding: 0 12px;
-  }
+  padding: 4px;
 }
 
 /***************
@@ -629,9 +631,6 @@ column-header { // FIXME: something better
 GtkPopover {
   border-radius: 5px;
   background-clip: border-box;
-  /*
-  background-color: @osd_popover_bg;
-  */
   background-color: $bg_color;
 
   border-color: $borders-color;
@@ -657,6 +656,11 @@ GtkPopover {
     background-color: transparent;
     icon-shadow: none;
     border: 0;
+  }
+  &.osd { //FIXME DOesn't work
+    background-image: none;
+    background-color: $osd_bg_color;
+    color: $osd_fg_color;
   }
 }
 
