@@ -523,8 +523,7 @@ GtkComboBox {
     font-size: 80%;
     padding: 0 12px;
   }
-  & > GtkBox > .separator.vertical, // FIXME? do we need both selectors?
-  & .header-bar-separator {
+  .header-bar-separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
