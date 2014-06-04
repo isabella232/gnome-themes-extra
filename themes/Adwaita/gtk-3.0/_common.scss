@@ -223,7 +223,7 @@
   @each $b_type, $b_color in (suggested-action, $selected_bg_color),
                               (destructive-action, $destructive_color) {
     &.#{$b_type} {
-      @include button(normal,$b_color, white); //FIXME: perhaps we should derive from bg color?
+      @include button(normal,$b_color, white);
       &:hover {
         @include button(hover,$b_color, white);
       }
@@ -523,7 +523,8 @@ GtkComboBox {
     font-size: 80%;
     padding: 0 12px;
   }
-  & > GtkBox > .separator.vertical {
+  & > GtkBox > .separator.vertical, // FIXME? do we need both selectors?
+  & .header-bar-separator {
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
