@@ -218,7 +218,11 @@
       @include button(insensitive-active);
     }
   }
-
+  //overlay / OSD style
+  .osd & {
+    background-image: none;
+    background-color: red;
+  }
   // Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $selected_bg_color),
                               (destructive-action, $destructive_color) {
