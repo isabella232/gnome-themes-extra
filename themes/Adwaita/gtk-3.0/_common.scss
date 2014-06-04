@@ -348,34 +348,34 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
   &.vertical {
     .button {
       &:first-child {
-        @extend %top-button;
+        @extend %top_button;
         @include button(normal, $noedge: true);
         &:active {
-          @extend %top-button;
+          @extend %top_button;
           @include button(active, $noedge: true);
         }
         &:hover {
-          @extend %top-button;
+          @extend %top_button;
           @include button(hover, $noedge: true);
         }
         &:insensitive {
-          @extend %top-button;
+          @extend %top_button;
           @include button(insensitive, $noedge: true);
         }
       }
       &:last-child {
-        @extend %bottom-button;
+        @extend %bottom_button;
         @include button(normal);
         &:active {
-          @extend %bottom-button;
+          @extend %bottom_button;
           @include button(active);
         }
         &:hover {
-          @extend %bottom-button;
+          @extend %bottom_button;
           @include button(hover);
         }
         &:insensitive {
-          @extend %bottom-button;
+          @extend %bottom_button;
           @include button(insensitive);
         }
       }
@@ -391,11 +391,11 @@ GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton
       // like buttons are on top of it so it doesn't show up
       border-radius: 0;
     }
-    %top-button {
+    %top_button {
       border-radius: 3px 3px 0 0;
       border-bottom-width: 0;
     }
-    %bottom-button {
+    %bottom_button {
       border-radius: 0 0 3px 3px;
       border-top-width: 0;
     }
@@ -1221,6 +1221,46 @@ GtkScrolledWindow {
 }
 
 
+/***********
+ * Dialogs *
+ ***********/
+
+GtkMessageDialog {
+  // -GtkDialog-content-area-spacing:
+  // -GtkDialog-action-area-spacing:
+  -GtkDialog-button-spacing: 0;
+  -GtkDialog-action-area-border: 0;
+}
+
+.dialog-action-area.linked {
+  & .button {
+    border-radius: 0;
+    @include button(normal, $noedge: true);
+    @extend %middle_button;
+    &:hover {
+      @include button(hover, $noedge: true);
+      @extend %middle_button;
+    }
+    &:active {
+      @include button(active, $noedge: true);
+      @extend %middle_button;
+    }
+    &:insensitive {
+      @include button(insensitive, $noedge: true);
+      @extend %middle_button;
+    }
+    &:backdrop, &:backdrop:insensitive {
+      @extend %middle_button;
+    }
+    &:last-child{ @extend %last_button; }
+  }
+  %middle_button {
+    border-style: solid none none none;
+  }
+  %last_button { border-style: solid none none solid; }
+}
+
+
 /**********************
  * Window Decorations *
  *********************/
@@ -1264,3 +1304,5 @@ GtkScrolledWindow {
     transition-property: border, box-shadow, color;
   }
 }
+
+

@@ -1347,6 +1347,55 @@ GtkScrolledWindow GtkViewport.frame {
   .app-notification .button {
     padding: 6px; }
 
+/***********
+ * Dialogs *
+ ***********/
+GtkMessageDialog {
+  -GtkDialog-button-spacing: 0;
+  -GtkDialog-action-area-border: 0; }
+
+.dialog-action-area.linked .button {
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  color: #eeeeec;
+  background-image: linear-gradient(to bottom, #454c4c, #393f3f 40%, #2d3232);
+  border-color: #1c1f1f;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
+  icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  .dialog-action-area.linked .button:hover {
+    border-width: 1px;
+    border-style: solid;
+    color: #eeeeec;
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #5b6464, #434a4a 40%, #393f3f);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.77976);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  .dialog-action-area.linked .button:active {
+    border-width: 1px;
+    border-style: solid;
+    color: #eeeeec;
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #212424, #2d3232 3%);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.89176);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.89176);
+    box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3); }
+  .dialog-action-area.linked .button:insensitive {
+    border-width: 1px;
+    border-style: solid;
+    color: #939695;
+    border-color: #1c1f1f;
+    background-image: linear-gradient(to bottom, #363a3a);
+    text-shadow: none;
+    icon-shadow: none;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+.dialog-action-area.linked .button, .dialog-action-area.linked .button:hover, .dialog-action-area.linked .button:active, .dialog-action-area.linked .button:insensitive, .dialog-action-area.linked .button:backdrop, .dialog-action-area.linked .button:backdrop:insensitive {
+  border-style: solid none none none; }
+.dialog-action-area.linked .button:last-child {
+  border-style: solid none none solid; }
+
 /**********************
  * Window Decorations *
  *********************/
