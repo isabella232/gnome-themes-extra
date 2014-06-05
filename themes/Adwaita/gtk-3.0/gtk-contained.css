@@ -1460,6 +1460,92 @@ GtkMessageDialog {
   .sidebar .view:selected {
     background-color: #4a90d9; }
 
+/**************
+ * GtkInfoBar *
+ **************/
+GtkInfoBar {
+  border-width: 0;
+  border-style: none; }
+
+.info,
+.question,
+.warning,
+.error {
+  background-color: #4a90d9;
+  color: white;
+  text-shadow: 0 1px #2a76c6;
+  border-color: #2a76c6; }
+  .info .button,
+  .question .button,
+  .warning .button,
+  .error .button {
+    border-width: 1px;
+    border-style: solid;
+    color: white;
+    background-image: linear-gradient(to bottom, #89b7e6, #4a90d9 40%, #2a76c6);
+    border-color: #1c5187;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.54353);
+    icon-shadow: 0 -1px rgba(0, 0, 0, 0.54353);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+    .info .button:hover,
+    .question .button:hover,
+    .warning .button:hover,
+    .error .button:hover {
+      border-width: 1px;
+      border-style: solid;
+      color: white;
+      border-color: #1c5187;
+      background-image: linear-gradient(to bottom, #85b4e5, #5b9add 40%, #4a90d9);
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.51153);
+      icon-shadow: 0 -1px rgba(0, 0, 0, 0.51153);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+    .info .button:active,
+    .question .button:active,
+    .warning .button:active,
+    .error .button:active {
+      border-width: 1px;
+      border-style: solid;
+      color: white;
+      border-color: #1c5187;
+      background-image: linear-gradient(to bottom, #256ab1, #2974c2 3%, #2a76c6);
+      text-shadow: 0 -1px rgba(0, 0, 0, 0.62353);
+      icon-shadow: 0 -1px rgba(0, 0, 0, 0.62353);
+      box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3); }
+    .info .button:insensitive,
+    .question .button:insensitive,
+    .warning .button:insensitive,
+    .error .button:insensitive {
+      border-width: 1px;
+      border-style: solid;
+      color: #8d9091;
+      border-color: #a1a1a1;
+      background-image: linear-gradient(to bottom, #f4f4f4);
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+    .info .button:backdrop,
+    .question .button:backdrop,
+    .warning .button:backdrop,
+    .error .button:backdrop {
+      border-width: 1px;
+      border-style: solid;
+      color: #ededed;
+      border-color: #4a90d9;
+      background-image: linear-gradient(to bottom, #4a90d9);
+      text-shadow: none;
+      icon-shadow: none;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0), 0 1px rgba(255, 255, 255, 0); }
+    .info .button:backdrop:insensitive,
+    .question .button:backdrop:insensitive,
+    .warning .button:backdrop:insensitive,
+    .error .button:backdrop:insensitive {
+      border-width: 1px;
+      border-style: solid;
+      color: #c7c7c7;
+      border-color: #a1a1a1;
+      background-image: linear-gradient(to bottom, #ededed);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
+
 /**********************
  * Window Decorations *
  *********************/
