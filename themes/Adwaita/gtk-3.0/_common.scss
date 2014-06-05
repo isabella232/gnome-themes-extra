@@ -529,7 +529,8 @@ GtkComboBox {
     font-size: 80%;
     padding: 0 12px;
   }
-  .header-bar-separator {
+  .header-bar-separator,
+  & > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: true;
     -GtkWidget-separator-width: 1px;
     border-width: 0 1px;
