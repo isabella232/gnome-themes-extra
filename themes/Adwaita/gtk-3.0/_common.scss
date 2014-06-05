@@ -1314,6 +1314,32 @@ GtkMessageDialog {
   }
 }
 
+/**************
+ * GtkInfoBar *
+ **************/
+GtkInfoBar {
+  border-width: 0;
+  border-style: none;
+}
+
+.info,
+.question,
+.warning,
+.error {
+  background-color: $selected_bg_color;
+  color: $selected_fg_color;
+  text-shadow: 0 1px darken($selected_bg_color, 10%);
+  border-color: darken($selected_bg_color, 10%);
+  .button {
+    @include button(normal, $selected_bg_color, $selected_fg_color, noedge);
+    &:hover { @include button(hover, $selected_bg_color, $selected_fg_color, noedge); }
+    &:active { @include button(active, $selected_bg_color, $selected_fg_color, noedge); }
+    &:insensitive { @include button(insensitive, $selected_bg_color, $selected_fg_color, noedge); }
+    &:backdrop { @include button(backdrop, $selected_bg_color, $selected_fg_color, noedge); }
+    &:backdrop:insensitive { @include button(backdrop-insensitive, $selected_bg_color, $selected_fg_color, noedge); }
+  }
+}
+
 /**********************
  * Window Decorations *
  *********************/
