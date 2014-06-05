@@ -678,6 +678,8 @@ column-header .button:backdrop {
       border-width: 0 0 3px;
       border-style: solid;
       border-color: #4a90d9; }
+    .menubar .menuitem:insensitive {
+      color: #8d9091; }
 
 .menu .menuitem {
   background-color: white;

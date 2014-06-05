@@ -610,6 +610,9 @@ column-header { // FIXME: something better
       border-style: solid;
       border-color: $selected_bg_color;
     }
+    &:insensitive {
+      color: $insensitive_fg_color;
+    }
   }
 }
 
