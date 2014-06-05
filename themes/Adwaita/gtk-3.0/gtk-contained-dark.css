@@ -694,7 +694,7 @@ column-header .button:backdrop {
     color: white;
     background-color: #1c5187; }
 .menu .separator {
-  color: transparent; }
+  color: rgba(28, 31, 31, 0.2); }
 
 /***************
  * Popovers   *
