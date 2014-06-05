@@ -700,7 +700,7 @@ GtkPopover {
   }
   &.header {
     // FIXME: double borders in some case, can't fix it w/o a class tho
-    background-color: mix($bg_color, $borders_color, 60%);
+    background-color: mix($bg_color, $borders_color, 70%);
 
     // this is the shading of the header behind the tabs
     &.frame {
@@ -713,7 +713,6 @@ GtkPopover {
     }
 
     $_header_shade: inset 0 2px 3px -1px transparentize(black, 0.85);
-
     &.top {
       box-shadow: $_header_shade,
                   inset 0 -1px $borders_color; // border
@@ -754,6 +753,7 @@ GtkPopover {
     $ht_vpadding: 5px;
     $ht_hpadding: 20px;
 
+    //FIXME: we get double border in some cases (.header box-shadow + border below)
     &.top, &.bottom { padding: $vt_vpadding $vt_hpadding; }
     &.left, &.right { padding: $ht_vpadding $ht_hpadding; }
     &.top {
@@ -810,17 +810,14 @@ GtkPopover {
       // prelight tab text
       &.prelight-page {
         color: mix($fg_color, $insensitive_fg_color, 50%);
-        text-shadow: 0 1px transparentize(black,0.9);
       }
       // active tab text
       &.active-page {
         color: $fg_color;
-        text-shadow: 0 1px transparentize(black,0.9);
         &:backdrop { color: $backdrop_fg_color; }
       }
       &:backdrop {
         color: mix($backdrop_fg_color, $backdrop_insensitive_color, 50%);
-        text-shadow: none;
       }
     }
     .button { //tab close button

@@ -747,7 +747,7 @@ GtkPopover {
     .notebook.frame:backdrop {
       border-color: #a1a1a1; }
   .notebook.header {
-    background-color: #cecece; }
+    background-color: #d6d6d6; }
     .notebook.header.frame {
       border: 1px solid #a1a1a1; }
       .notebook.header.frame.top {
@@ -821,16 +821,13 @@ GtkPopover {
       font-weight: bold;
       color: #8d9091; }
       .notebook tab GtkLabel.prelight-page {
-        color: #5d6263;
-        text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
+        color: #5d6263; }
       .notebook tab GtkLabel.active-page {
-        color: #2e3436;
-        text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
+        color: #2e3436; }
         .notebook tab GtkLabel.active-page:backdrop {
           color: #54595a; }
       .notebook tab GtkLabel:backdrop {
-        color: #8d9090;
-        text-shadow: none; }
+        color: #8d9090; }
     .notebook tab .button {
       border: 1px solid transparent;
       box-shadow: none;
