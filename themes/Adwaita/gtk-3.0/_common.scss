@@ -632,8 +632,8 @@ column-header { // FIXME: something better
       background-color: if($variant=='light', darken($selected_bg_color, 10%), darken($selected_bg_color, 5%));
     }
   }
-  .separator { //just use whitespace
-    color: transparent;
+  .separator { 
+    color: transparentize($borders_color,0.8);
   }
 }
 
