@@ -1366,6 +1366,17 @@ GtkScrolledWindow GtkViewport.frame {
   .app-notification .button {
     padding: 6px; }
 
+/************
+ * Calendar *
+ ***********/
+GtkCalendar {
+  border: 1px solid #a1a1a1; }
+  GtkCalendar.button {
+    padding: 0 4px;
+    color: #d0d0d0;
+    background-image: none;
+    background-color: transparent; }
+
 /***********
  * Dialogs *
  ***********/
