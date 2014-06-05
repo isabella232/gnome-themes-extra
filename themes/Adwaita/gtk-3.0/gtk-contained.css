@@ -1436,6 +1436,28 @@ GtkMessageDialog {
 .dialog-action-area.linked .button:last-child {
   border-style: solid none none solid; }
 
+/***********
+ * Sidebar *
+ ***********/
+.sidebar,
+.sidebar .view {
+  background-color: #fafafa; }
+  .sidebar .scrollbar.trough,
+  .sidebar .view .scrollbar.trough {
+    background-color: lightgray;
+    border-radius: 6px;
+    border-width: 2px;
+    border-color: transparent; }
+  .sidebar .scrollbar.slider,
+  .sidebar .view .scrollbar.slider {
+    background-color: #fafafa; }
+    .sidebar .scrollbar.slider:hover,
+    .sidebar .view .scrollbar.slider:hover {
+      background-color: white; }
+  .sidebar:selected,
+  .sidebar .view:selected {
+    background-color: #4a90d9; }
+
 /**********************
  * Window Decorations *
  *********************/
