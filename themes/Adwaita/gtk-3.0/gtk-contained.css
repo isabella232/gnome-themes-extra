@@ -389,7 +389,7 @@
     icon-shadow: none; }
 
 /* menu/popover buttons */
-.menuitem.button, .menuitem.button:active, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
+.menuitem.button, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
   color: #2e3436;
   background-color: transparent;
   background-image: none;
@@ -397,12 +397,15 @@
   border-image: none;
   border-style: none;
   box-shadow: none; }
+  .menuitem.button:active {
+    color: white;
+    text-shadow: none;
+    icon-shadow: none; }
   .menuitem.button:backdrop, .menuitem.button:backdrop:active:insensitive, .menuitem.button:hover:backdrop, .menuitem.button:insensitive:backdrop, .menuitem.button:active:insensitive:backdrop, .menuitem.button:active:backdrop, .menuitem.button:active:hover:backdrop, .menuitem.button:active:selected:backdrop {
     text-shadow: none;
     icon-shadow: none;
     color: #8d9091;
-    background-color: #f4f4f4;
-    background-image: none;
+    background-image: linear-gradient(to bottom, #ededed);
     border: none;
     box-shadow: none; }
 

@@ -295,10 +295,14 @@
   border-image: none;
   border-style: none;
   box-shadow: none;
-  &:active,
   &:insensitive,
   &:active:insensitive {
     @extend .menuitem.button; // override generic .button:*
+  }
+  &:active {
+    color: $selected_fg_color;
+    text-shadow: none;
+    icon-shadow: none;
   }
   &:backdrop,
   &:hover:backdrop,
@@ -310,8 +314,7 @@
       text-shadow: none;
       icon-shadow: none;
       color: $insensitive_fg_color;
-      background-color: $insensitive_bg_color;
-      background-image: none;
+      background-image: linear-gradient(to bottom, $bg_color);
       border: none;
       box-shadow: none;
   }
