@@ -786,14 +786,15 @@ GtkPopover {
     }
     // FIXME? we're considering just top reorderable tabs
     &.reorderable-page {
+      border-width: 0;
+      padding: ($vt_vpadding)-2px ($vt_hpadding)-1px;
       &:active {
-        // not sure this makes any difference, but let's do things
-        // as good as possible
         padding: $vt_vpadding ($vt_hpadding)-1px
-                 ($vt_vpadding)-1px ($vt_hpadding)-1px;
-        border-width: 0 1px 1px 1px;
+                 ($vt_vpadding)-3px ($vt_hpadding)-1px; //FIXME close button still jumps
+        border-width: 0 1px 3px 1px;
         background-color: transparentize($bg_color, .5);
         border-color: transparentize($borders_color,0.5);
+        border-bottom-color: $selected_bg_color;
         &:hover {
           background-color: transparentize($bg_color, 0.3);
         }
