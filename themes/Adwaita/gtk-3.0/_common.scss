@@ -1286,6 +1286,30 @@ GtkMessageDialog {
   %last_button { border-style: solid none none solid; }
 }
 
+/***********
+ * Sidebar *
+ ***********/
+
+.sidebar,
+.sidebar .view {
+  $_sidebar_bg: lighten($bg_color,5%);
+  background-color: $_sidebar_bg;
+  .scrollbar {
+    &.trough {
+      background-color: darken($bg_color,10%); 
+      border-radius: 6px;
+      border-width: 2px;
+      border-color: transparent;
+    }
+    &.slider { 
+      background-color: $_sidebar_bg;
+      &:hover { background-color: lighten($bg_color, 10%); }
+    }
+  }
+  &:selected {
+    background-color: $selected_bg_color;
+  }
+}
 
 /**********************
  * Window Decorations *
