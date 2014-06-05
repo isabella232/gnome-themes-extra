@@ -1224,6 +1224,19 @@ GtkScrolledWindow {
   .button { padding: 6px; }
 }
 
+/************
+ * Calendar *
+ ***********/
+
+GtkCalendar {
+  border: 1px solid $borders_color;
+  &.button {
+    padding: 0 4px;
+    color: mix($borders_color, $base_color, 50%);
+    background-image: none;
+    background-color: transparent;
+  }
+}
 
 /***********
  * Dialogs *
