@@ -807,16 +807,20 @@ GtkPopover {
     .notebook tab:backdrop {
       background-color: transparent;
       border-color: transparent; }
-    .notebook tab.reorderable-page:active {
-      padding: 8px 19px 7px 19px;
-      border-width: 0 1px 1px 1px;
-      background-color: rgba(237, 237, 237, 0.5);
-      border-color: rgba(161, 161, 161, 0.5); }
-      .notebook tab.reorderable-page:active:hover {
-        background-color: rgba(237, 237, 237, 0.7); }
-      .notebook tab.reorderable-page:active:backdrop, .notebook tab.reorderable-page:active:active:backdrop {
-        border-color: #a1a1a1;
-        background-color: #e6e6e6; }
+    .notebook tab.reorderable-page {
+      border-width: 0;
+      padding: 6px 19px; }
+      .notebook tab.reorderable-page:active {
+        padding: 8px 19px 5px 19px;
+        border-width: 0 1px 3px 1px;
+        background-color: rgba(237, 237, 237, 0.5);
+        border-color: rgba(161, 161, 161, 0.5);
+        border-bottom-color: #4a90d9; }
+        .notebook tab.reorderable-page:active:hover {
+          background-color: rgba(237, 237, 237, 0.7); }
+        .notebook tab.reorderable-page:active:backdrop, .notebook tab.reorderable-page:active:active:backdrop {
+          border-color: #a1a1a1;
+          background-color: #e6e6e6; }
     .notebook tab GtkLabel {
       font-weight: bold;
       color: #8d9091; }
