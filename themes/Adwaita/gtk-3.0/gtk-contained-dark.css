@@ -383,20 +383,20 @@
   .primary-toolbar .button {
     icon-shadow: none; }
 
-.inline-toolbar .button, .inline-toolbar .button:backdrop, .linked .button, .linked .button:backdrop {
+.osd .button, .osd .button:hover, .osd .button:active, .osd .button:insensitive, .osd .button:backdrop, .inline-toolbar .button, .inline-toolbar .button:backdrop, .linked .button, .linked .button:backdrop {
   border-radius: 0;
   border-left-style: none; }
-  .inline-toolbar .button:dir(rtl), .linked .button:dir(rtl) {
+  .osd .button:dir(rtl), .inline-toolbar .button:dir(rtl), .linked .button:dir(rtl) {
     border-right-style: none;
     border-left-style: solid; }
-  .inline-toolbar .button:first-child, .linked .button:first-child {
+  .osd .button:first-child, .inline-toolbar .button:first-child, .linked .button:first-child {
     border-radius: 3px 0 0 3px;
     border-left-style: solid; }
-  .inline-toolbar .button:last-child, .linked .button:last-child {
+  .osd .button:last-child, .inline-toolbar .button:last-child, .linked .button:last-child {
     border-radius: 0 3px 3px 0; }
-    .inline-toolbar .button:last-child:dir(rtl), .linked .button:last-child:dir(rtl) {
+    .osd .button:last-child:dir(rtl), .inline-toolbar .button:last-child:dir(rtl), .linked .button:last-child:dir(rtl) {
       border-right-style: solid; }
-  .inline-toolbar .button:only-child, .linked .button:only-child {
+  .osd .button:only-child, .inline-toolbar .button:only-child, .linked .button:only-child {
     border-radius: 3px;
     border-style: solid; }
 
