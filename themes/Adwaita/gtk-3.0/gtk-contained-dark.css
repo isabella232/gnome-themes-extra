@@ -20,6 +20,8 @@
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
+  -GtkDialog-button-spacing: 0;
+  -GtkDialog-action-area-border: 0;
   outline-color: rgba(238, 238, 236, 0.3);
   outline-style: dashed;
   outline-offset: -3px;
@@ -1472,10 +1474,6 @@ GtkCalendar {
 /***********
  * Dialogs *
  ***********/
-GtkMessageDialog {
-  -GtkDialog-button-spacing: 0;
-  -GtkDialog-action-area-border: 0; }
-
 .dialog-action-area.linked .button {
   padding: 6px;
   border-radius: 0;
