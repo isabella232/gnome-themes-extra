@@ -3,7 +3,7 @@
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: $error_color;
-  -GtkPaned-handle-size: 5;
+  -GtkPaned-handle-size: 0;
 
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 12;
@@ -1354,6 +1354,7 @@ GtkCalendar {
 
 .sidebar,
 .sidebar .view {
+  border-style: solid solid solid none;
   $_sidebar_bg: lighten($bg_color,5%);
   background-color: $_sidebar_bg;
   .scrollbar {
@@ -1371,6 +1372,20 @@ GtkCalendar {
   &:selected {
     background-color: $selected_bg_color;
   }
+  &:backdrop {
+    border-color: $backdrop_borders_color;
+  }
+  // FIXME: we need a proper border removal logic...
+  &:dir(rtl) {
+    border-style: solid none solid solid;
+  }
+}
+
+GtkPaned {
+  // This is actually the invisible area of the paned separator, not a margin...
+  // Yeah it's not right... Aaaaaanyway
+  margin: 5px;
+  border: 0;
 }
 
 /**************
