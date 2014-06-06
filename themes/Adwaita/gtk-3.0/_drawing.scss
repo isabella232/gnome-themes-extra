@@ -285,14 +285,16 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     border-color: $osd_borders_color;
     box-shadow: none;
   }
-  
-  @else if $t==osd-insensitive {
+  @else if $t==osd-hover {
   //
-  // insensitive osd button
+  // active osd button
   //
     background-image: linear-gradient(to bottom,
-                      $osd_bg_color);
+                                  transparentize(#fff,0.85),
+                                  transparentize(#fff,0.9),
+                                  transparentize(#000,0.99));
     border-color: $osd_borders_color;
+    box-shadow: none;
   }
   @else if $t==osd-active {
   //
@@ -305,6 +307,16 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     border-color: $osd_borders_color;
     box-shadow: none;
   }
+  @else if $t==osd-insensitive {
+  //
+  // insensitive osd button
+  //
+    background-image: linear-gradient(to bottom,
+                      $osd_bg_color);
+    border-color: $osd_borders_color;
+    color: $insensitive_fg_color;
+  }
+  
 }
 
 @mixin trough($flat:false, $c:$bg_color, $tc:$fg_color, $noedge:false) {
