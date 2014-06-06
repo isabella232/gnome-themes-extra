@@ -3,7 +3,7 @@
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #cc0000;
-  -GtkPaned-handle-size: 5;
+  -GtkPaned-handle-size: 0;
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 12;
   -GtkScrolledWindow-scrollbar-spacing: 0;
@@ -1528,6 +1528,7 @@ GtkCalendar {
  ***********/
 .sidebar,
 .sidebar .view {
+  border-style: solid solid solid none;
   background-color: #fafafa; }
   .sidebar .scrollbar.trough,
   .sidebar .view .scrollbar.trough {
@@ -1544,6 +1545,16 @@ GtkCalendar {
   .sidebar:selected,
   .sidebar .view:selected {
     background-color: #4a90d9; }
+  .sidebar:backdrop,
+  .sidebar .view:backdrop {
+    border-color: #a1a1a1; }
+  .sidebar:dir(rtl),
+  .sidebar .view:dir(rtl) {
+    border-style: solid none solid solid; }
+
+GtkPaned {
+  margin: 5px;
+  border: 0; }
 
 /**************
  * GtkInfoBar *
