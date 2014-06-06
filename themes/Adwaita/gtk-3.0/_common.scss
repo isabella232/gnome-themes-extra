@@ -32,6 +32,9 @@
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
+  
+  -GtkDialog-button-spacing: 0;
+  -GtkDialog-action-area-border: 0;
 
   // We use the outline properties to signal the focus properties
   // to the adwaita engine: using real CSS properties is faster,
@@ -42,7 +45,9 @@
   outline-offset: -3px;
   outline-width: 1px;
   outline-radius: 2px;
+
 }
+
 
 /***************
  * Base States *
@@ -1299,13 +1304,6 @@ GtkCalendar {
 /***********
  * Dialogs *
  ***********/
-
-GtkMessageDialog {
-  // -GtkDialog-content-area-spacing:
-  // -GtkDialog-action-area-spacing:
-  -GtkDialog-button-spacing: 0;
-  -GtkDialog-action-area-border: 0;
-}
 
 .dialog-action-area.linked {
   & .button {
