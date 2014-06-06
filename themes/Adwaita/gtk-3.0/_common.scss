@@ -1326,12 +1326,12 @@ GtkCalendar {
     &:backdrop, &:backdrop:insensitive {
       @extend %middle_button;
     }
-    &:last-child{ @extend %last_button; }
+    &:first-child{ @extend %first_button; }
   }
   %middle_button {
-    border-style: solid none none none;
+    border-style: solid none none solid;
   }
-  %last_button { border-style: solid none none solid; }
+  %first_button { border-style: solid none none none; }
 }
 
 /***********
