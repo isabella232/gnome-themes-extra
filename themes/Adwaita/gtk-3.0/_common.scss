@@ -688,6 +688,14 @@ GtkPopover {
   }
 }
 
+//touch selection handlebars for the Popover.osd above
+.cursor-handle {
+  background-color: transparent;
+  background-image: none;
+  &.top { -gtk-icon-source: -gtk-icontheme('selection-start-symbolic'); }
+  &.bottom { -gtk-icon-source: -gtk-icontheme('selection-end-symbolic'); }
+}
+
 /*****************
  * Notebooks and *
  * Tabs          *
@@ -1351,16 +1359,6 @@ GtkInfoBar {
     &:backdrop:insensitive { @include button(backdrop-insensitive, $selected_bg_color, $selected_fg_color, noedge); }
   }
 }
-
-/********************************
- * Touch text selection handles *
- ********************************/
-
-.cursor-handle {
-  background-color: transparent;
-  &.top { border:6px solid red; background-image: -gtk-icontheme('selection-start'); }
-  &.bottom { background-image: -gtk-icontheme('selection-end'); }
-} 
  
 /**********************
  * Window Decorations *
