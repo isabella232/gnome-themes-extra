@@ -249,28 +249,6 @@
     }
   }
 
-  // linked buttons
-  .linked &, .linked &:backdrop {
-    border-radius: 0;
-    border-left-style: none;
-    &:dir(rtl) {
-      border-right-style: none;
-      border-left-style: solid
-    };
-    &:first-child {
-      border-radius: 3px 0 0 3px;
-      border-left-style: solid;
-    }
-    &:last-child {
-      border-radius: 0 3px 3px 0;
-      &:dir(rtl) { border-right-style: solid; }
-    }
-    &:only-child {
-      border-radius: 3px;
-      border-style: solid;
-    }
-  }
-
   // headerbar buttons
   .header-bar & {
     &.text-button {
@@ -286,10 +264,37 @@
   .inline-toolbar & {
     border-radius: 2px;
     border-width: 1px;
+    @extend %linked_buttons;
   }
   
   .primary-toolbar & { icon-shadow: none; } // tango icons don't need added shadows
+  .linked &, .linked &:backdrop {
+    @extend %linked_buttons;
+  }
 }
+
+%linked_buttons {
+  border-radius: 0;
+  border-left-style: none;
+  &:dir(rtl) {
+    border-right-style: none;
+    border-left-style: solid
+  };
+  &:first-child {
+    border-radius: 3px 0 0 3px;
+    border-left-style: solid;
+  }
+  &:last-child {
+    border-radius: 0 3px 3px 0;
+    &:dir(rtl) { border-right-style: solid; }
+  }
+  &:only-child {
+    border-radius: 3px;
+    border-style: solid;
+  }
+}
+
+
 
 /* menu buttons */
 .menuitem.button {
@@ -1298,6 +1303,7 @@ GtkMessageDialog {
 
 .dialog-action-area.linked {
   & .button {
+    padding: 6px;
     border-radius: 0;
     @include button(normal, $noedge: true);
     @extend %middle_button;
