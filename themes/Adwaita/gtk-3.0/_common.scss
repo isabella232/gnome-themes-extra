@@ -292,8 +292,8 @@
   .primary-toolbar & { icon-shadow: none; } // tango icons don't need added shadows
 }
 
-/* menu/popover buttons */
-.menuitem.button, {
+/* menu buttons */
+.menuitem.button {
   color: $fg_color;
   background-color: transparent;
   background-image: none;
@@ -671,10 +671,20 @@ GtkPopover {
     icon-shadow: none;
     border: 0;
   }
-  &.osd { //FIXME DOesn't work
+  &.osd { // Also used for touch cutnpaste overlays
+          // FIXME Doesn't work
     background-image: none;
     background-color: $osd_bg_color;
+    border: 1px solid $borders_color;
     color: $osd_fg_color;
+    .button {
+      color: white;
+      text-shadow: none;
+      @include button(osd);
+      &:hover { @include button(osd-hover); };
+      &:active { @include button(osd-active); };
+      &:insensitive { @include button(osd-insensitive); };
+    }
   }
 }
 
@@ -1342,6 +1352,16 @@ GtkInfoBar {
   }
 }
 
+/********************************
+ * Touch text selection handles *
+ ********************************/
+
+.cursor-handle {
+  background-color: transparent;
+  &.top { border:6px solid red; background-image: -gtk-icontheme('selection-start'); }
+  &.bottom { background-image: -gtk-icontheme('selection-end'); }
+} 
+ 
 /**********************
  * Window Decorations *
  *********************/
