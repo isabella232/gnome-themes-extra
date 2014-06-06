@@ -369,13 +369,13 @@
     padding: 6px 8px 5px; }
   .header-bar .button.image-button {
     padding: 8px; }
-  .inline-toolbar .button {
+  .inline-toolbar .button, .inline-toolbar .button:backdrop {
     border-radius: 2px;
     border-width: 1px; }
   .primary-toolbar .button {
     icon-shadow: none; }
 
-.inline-toolbar .button, .linked .button, .linked .button:backdrop {
+.inline-toolbar .button, .inline-toolbar .button:backdrop, .linked .button, .linked .button:backdrop {
   border-radius: 0;
   border-left-style: none; }
   .inline-toolbar .button:dir(rtl), .linked .button:dir(rtl) {

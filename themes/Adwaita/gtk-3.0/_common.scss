@@ -261,7 +261,7 @@
   }
   
   //inline-toolbar buttons
-  .inline-toolbar & {
+  .inline-toolbar &, .inline-toolbar &:backdrop {
     border-radius: 2px;
     border-width: 1px;
     @extend %linked_buttons;
