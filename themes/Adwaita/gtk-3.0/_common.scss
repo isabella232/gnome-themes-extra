@@ -227,8 +227,9 @@
     padding: 6px;
     border-width: 1px;
     @include button(osd);
-    &:insensitive { @include button(osd-insensitive); }
+    &:hover { @include button(osd-hover); }
     &:active { @include button(osd-active); }
+    &:insensitive { @include button(osd-insensitive); }
     &:backdrop { @include button(osd-backdrop); }
   }
   // Suggested and Destructive Action buttons
