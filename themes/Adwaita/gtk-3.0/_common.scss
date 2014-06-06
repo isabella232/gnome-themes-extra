@@ -227,10 +227,23 @@
     padding: 6px;
     border-width: 1px;
     @include button(osd);
-    &:hover { @include button(osd-hover); }
-    &:active { @include button(osd-active); }
-    &:insensitive { @include button(osd-insensitive); }
-    &:backdrop { @include button(osd-backdrop); }
+    @extend %linked_buttons;
+    &:hover {
+      @include button(osd-hover);
+      @extend %linked_buttons;
+    }
+    &:active {
+      @include button(osd-active); 
+      @extend %linked_buttons;
+    }
+    &:insensitive {
+      @include button(osd-insensitive);
+      @extend %linked_buttons;
+    }
+    &:backdrop {
+      @include button(osd-backdrop);
+      @extend %linked_buttons;
+    }
   }
   // Suggested and Destructive Action buttons
   @each $b_type, $b_color in (suggested-action, $selected_bg_color),
