@@ -1513,9 +1513,9 @@ GtkCalendar {
     icon-shadow: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
 .dialog-action-area.linked .button, .dialog-action-area.linked .button:hover, .dialog-action-area.linked .button:active, .dialog-action-area.linked .button:insensitive, .dialog-action-area.linked .button:backdrop, .dialog-action-area.linked .button:backdrop:insensitive {
-  border-style: solid none none none; }
-.dialog-action-area.linked .button:last-child {
   border-style: solid none none solid; }
+.dialog-action-area.linked .button:first-child {
+  border-style: solid none none none; }
 
 /***********
  * Sidebar *
