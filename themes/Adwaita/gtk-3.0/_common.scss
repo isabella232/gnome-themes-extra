@@ -1435,14 +1435,14 @@ GtkInfoBar {
 
 .window-frame {
   border-radius: 7px 7px 0 0;
-  /* lamefun trick to get rounded borders regardless of CSD use */
+  // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
   // this needs to be transparent
   // see bug #722563
   $_wm_border: if($variant=='light', transparentize(black, 0.8), transparentize(black, 0.4));
   box-shadow: 0 2px 10px 4px transparentize(black, 0.9),
-              0 0 0 1px $_wm_border;
+              0 0 0 1px $_wm_border; //doing borders with box-shadow
 
   /* this is used for the resize cursor area */
   margin: 10px;
