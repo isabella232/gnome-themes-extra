@@ -106,8 +106,8 @@
     border-style: solid;
     border-width: 1px;
     background-image: linear-gradient(to bottom, #2b2b2b, #333333 90%);
-    border-color: #215d9c;
-    box-shadow: inset 0 2px 2px -2px #191919, inset 0 0 2px 1px #2f3b48, 0 1px rgba(238, 238, 236, 0.1); }
+    border-color: #0f2b48;
+    box-shadow: inset 0 2px 2px -2px #191919, inset 0 0 1px 1px #215d9c, 0 1px rgba(238, 238, 236, 0.1); }
   .entry:insensitive {
     background-color: transparent;
     border-style: solid;
@@ -958,7 +958,7 @@ GtkSwitch {
     text-shadow: 0 1px rgba(0, 0, 0, 0.1); }
     GtkSwitch.trough:active {
       color: white;
-      border-color: #14375d;
+      border-color: #0f2b48;
       background-color: #215d9c;
       box-shadow: 0 1px rgba(238, 238, 236, 0.1);
       text-shadow: 0 0 2px 1px white; }
@@ -994,7 +994,7 @@ GtkSwitch {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), inset 0 -2px rgba(57, 63, 63, 0.6), inset 0 -1px #2a2f2f; }
     GtkSwitch.slider:active {
-      border: 1px solid #14375d; }
+      border: 1px solid #0f2b48; }
     GtkSwitch.slider:insensitive {
       border-width: 1px;
       border-style: solid;
@@ -1293,10 +1293,10 @@ GtkCheckButton.text-button:selected {
       background-image: linear-gradient(to bottom, #393f3f);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
     .scale.slider:active {
-      border: 1px solid #113050; }
+      border: 1px solid #0c233b; }
     .scale.slider.fine-tune:active {
       border: 4px solid transparent;
-      box-shadow: inset 0 2px white, inset 0 0 0 1px #113050; }
+      box-shadow: inset 0 2px white, inset 0 0 0 1px #0c233b; }
   .scale.trough {
     border-width: 1px;
     border-style: solid;
@@ -1305,7 +1305,7 @@ GtkCheckButton.text-button:selected {
     background-color: #2d3232;
     box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
     .scale.trough.highlight {
-      border-color: #14375d;
+      border-color: #0f2b48;
       background-color: #215d9c;
       box-shadow: 0 1px rgba(238, 238, 236, 0.1); }
       .scale.trough.highlight:backdrop {
@@ -1338,7 +1338,7 @@ GtkProgressBar {
   border-width: 1px;
   border-style: solid;
   border-radius: 3px;
-  border-color: #14375d;
+  border-color: #0f2b48;
   background-color: #215d9c;
   box-shadow: inset 0 1px 0 rgba(238, 238, 236, 0); }
   .progressbar.vertical {
