@@ -1,7 +1,6 @@
 * {
   engine: adwaita;
   padding: 0;
-  background-clip: padding-box;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: $error_color;
   -GtkPaned-handle-size: 5;
@@ -1162,34 +1161,39 @@ GtkProgressBar.trough {
  ****************/
 
 GtkLevelBar {
-    -GtkLevelBar-min-block-width: 34;
-    -GtkLevelBar-min-block-height: 3;
+  -GtkLevelBar-min-block-width: 34;
+  -GtkLevelBar-min-block-height: 3;
 }
 
 GtkLevelBar.vertical {
-    -GtkLevelBar-min-block-width: 3;
-    -GtkLevelBar-min-block-height: 34;
+  -GtkLevelBar-min-block-width: 3;
+  -GtkLevelBar-min-block-height: 34;
 }
 
 .level-bar {
   &.trough {
+    // FIXME: outset not working
     padding: 2px;
-    border-width: 1px;
-    border-style: solid;
     border-radius: 3px;
-    border-color: $borders_color;
-    box-shadow: inset 1px 1px transparentize(black, 0.9),
-                $widget_edge;
-    background-color: $base_color;
+    @include entry(normal);
+    &:backdrop {
+      @include entry(backdrop);
+    }
   }
   &.fill-block {
+    // FIXME: it would be nice to set make fill blocks bigger, but we'd need
+    // :nth-child working on discrete indicators
     border-width: 1px;
     border-style: solid;
     border-color: $selected_borders_color;
     background-color: $selected_bg_color;
+    box-shadow: 0 1px transparentize(black, 0.9);
+    &:backdrop {
+      border-color: $selected_bg_color;
+      box-shadow: none;
+    }
     &.indicator-continuous {
-      padding: 2px;
-      border-radius: 2px;
+      border-radius: 1px;
     }
     &.indicator-discrete {
       &.horizontal { margin: 0 1px; }
@@ -1198,17 +1202,21 @@ GtkLevelBar.vertical {
     &.level-high {
       border-color: darken($success_color,10%);
       background-color: $success_color;
+      &:backdrop { border-color: $success_color; }
     }
     &.level-low {
       border-color: darken($warning_color,10%);
       background-color: $warning_color;
+      &:backdrop { border-color: $warning_color; };
     }
     &.empty-fill-block {
       background-color: transparent;
       border-color: transparentize($borders_color, 0.8);
+      box-shadow: none;
+      &:backdrop { border-color: transparentize($backdrop_borders_color,0.8); }
     }
   }
-}
+}  
 
 // catch all extend :)
 

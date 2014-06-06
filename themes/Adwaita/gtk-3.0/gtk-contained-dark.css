@@ -1,7 +1,6 @@
 * {
   engine: adwaita;
   padding: 0;
-  background-clip: padding-box;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #cc0000;
   -GtkPaned-handle-size: 5;
@@ -1374,20 +1373,32 @@ GtkLevelBar.vertical {
 
 .level-bar.trough {
   padding: 2px;
-  border-width: 1px;
-  border-style: solid;
   border-radius: 3px;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  background-image: linear-gradient(to bottom, #2b2b2b, #333333 90%);
   border-color: #1c1f1f;
-  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), 0 1px rgba(238, 238, 236, 0.1);
-  background-color: #333333; }
+  box-shadow: inset 0 2px 2px -2px #191919, 0 1px rgba(238, 238, 236, 0.1); }
+  .level-bar.trough:backdrop {
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    background-image: linear-gradient(to bottom, #2b2b2b, #333333 90%);
+    color: #c9cbc9;
+    background-image: linear-gradient(to bottom, #262626);
+    box-shadow: 0 1px rgba(255, 255, 255, 0); }
 .level-bar.fill-block {
   border-width: 1px;
   border-style: solid;
   border-color: #14375d;
-  background-color: #215d9c; }
+  background-color: #215d9c;
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1); }
+  .level-bar.fill-block:backdrop {
+    border-color: #215d9c;
+    box-shadow: none; }
   .level-bar.fill-block.indicator-continuous {
-    padding: 2px;
-    border-radius: 2px; }
+    border-radius: 1px; }
   .level-bar.fill-block.indicator-discrete.horizontal {
     margin: 0 1px; }
   .level-bar.fill-block.indicator-discrete.vertical {
@@ -1395,12 +1406,19 @@ GtkLevelBar.vertical {
   .level-bar.fill-block.level-high {
     border-color: #40760c;
     background-color: #5aa411; }
+    .level-bar.fill-block.level-high:backdrop {
+      border-color: #5aa411; }
   .level-bar.fill-block.level-low {
     border-color: #c26000;
     background-color: #f57900; }
+    .level-bar.fill-block.level-low:backdrop {
+      border-color: #f57900; }
   .level-bar.fill-block.empty-fill-block {
     background-color: transparent;
-    border-color: rgba(28, 31, 31, 0.2); }
+    border-color: rgba(28, 31, 31, 0.2);
+    box-shadow: none; }
+    .level-bar.fill-block.empty-fill-block:backdrop {
+      border-color: rgba(28, 31, 31, 0.2); }
 
 .view:selected, .view:selected:focus, .view:selected:backdrop, .entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
   background-color: #215d9c;
