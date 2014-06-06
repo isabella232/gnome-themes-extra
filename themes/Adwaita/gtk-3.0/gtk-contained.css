@@ -910,6 +910,7 @@ GtkPopover {
  * Scrollbars *
  **************/
 .scrollbar {
+  background-clip: padding-box;
   background-image: none;
   border-style: solid;
   -GtkRange-trough-border: 0;
@@ -917,7 +918,6 @@ GtkPopover {
   -GtkScrollbar-has-forward-stepper: false;
   -GtkRange-slider-width: 13;
   -GtkScrollbar-min-slider-length: 42;
-  /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
   -GtkRange-stepper-spacing: 0;
   -GtkRange-trough-under-steppers: 1; }
   .scrollbar .button {
@@ -1391,14 +1391,13 @@ GtkLevelBar.vertical {
 .level-bar.fill-block {
   border-width: 1px;
   border-style: solid;
-  border-color: #184472;
+  border-color: #2a76c6;
   background-color: #4a90d9;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  border-radius: 1px; }
   .level-bar.fill-block:backdrop {
     border-color: #4a90d9;
     box-shadow: none; }
-  .level-bar.fill-block.indicator-continuous {
-    border-radius: 1px; }
   .level-bar.fill-block.indicator-discrete.horizontal {
     margin: 0 1px; }
   .level-bar.fill-block.indicator-discrete.vertical {
@@ -1415,10 +1414,10 @@ GtkLevelBar.vertical {
       border-color: #f57900; }
   .level-bar.fill-block.empty-fill-block {
     background-color: transparent;
-    border-color: rgba(161, 161, 161, 0.2);
+    border-color: rgba(46, 52, 54, 0.2);
     box-shadow: none; }
     .level-bar.fill-block.empty-fill-block:backdrop {
-      border-color: rgba(161, 161, 161, 0.2); }
+      border-color: rgba(84, 89, 90, 0.15); }
 
 .view:selected, .view:selected:focus, .view:selected:backdrop, .entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
   background-color: #4a90d9;
