@@ -730,6 +730,7 @@ GtkPopover {
   }
   &.header {
     // FIXME: double borders in some case, can't fix it w/o a class tho
+    // FIXME: doesn't work on dark var
     background-color: mix($bg_color, $borders_color, 70%);
 
     // this is the shading of the header behind the tabs
@@ -783,7 +784,8 @@ GtkPopover {
     $ht_vpadding: 5px;
     $ht_hpadding: 20px;
 
-    //FIXME: we get double border in some cases (.header box-shadow + border below)
+    //FIXME: we get double border in some cases, not considering the broken
+    //notebook content frame... 
     &.top, &.bottom { padding: $vt_vpadding $vt_hpadding; }
     &.left, &.right { padding: $ht_vpadding $ht_hpadding; }
     &.top {
@@ -820,7 +822,8 @@ GtkPopover {
       padding: ($vt_vpadding)-2px ($vt_hpadding)-1px;
       &:active {
         padding: $vt_vpadding ($vt_hpadding)-1px
-                 ($vt_vpadding)-3px ($vt_hpadding)-1px; //FIXME close button still jumps
+                 ($vt_vpadding)-3px ($vt_hpadding)-1px; 
+                 //FIXME close button still jumps
         border-width: 0 1px 3px 1px;
         background-color: transparentize($bg_color, .5);
         border-color: transparentize($borders_color,0.5);
