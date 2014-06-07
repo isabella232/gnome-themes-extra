@@ -1268,7 +1268,7 @@ GtkLevelBar.vertical {
 .frame {
   border: 1px solid $borders_color;
   padding: 0;
-  &:backdrop { border-color: mix($borders_color,$bg_color, 40%); }
+  &:backdrop { border-color: $backdrop_borders_color; }
 }
 
 GtkScrolledWindow {
