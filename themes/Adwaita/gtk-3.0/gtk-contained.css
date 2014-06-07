@@ -1443,7 +1443,7 @@ GtkLevelBar.vertical {
   border: 1px solid #a1a1a1;
   padding: 0; }
   .frame:backdrop {
-    border-color: #cecece; }
+    border-color: #a1a1a1; }
 
 GtkScrolledWindow .frame {
   border-radius: 2px; }
