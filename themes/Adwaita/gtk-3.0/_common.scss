@@ -349,8 +349,9 @@
   }
 }
 
-
 GtkColorButton.button { padding: 4px; } // Uniform padding on the GtkColorButton.button
+
+.inline-toolbar.toolbar GtkToolButton .button { @include button(normal); }
 
 /*****************
  * GtkSpinButton *
@@ -1284,6 +1285,20 @@ GtkScrolledWindow {
   // -GtkWidget-wide-separators: true;
   color: transparentize(black, 0.9);
 }
+
+/*********
+ * Lists *
+ *********/
+
+.list {
+  background-color: $base_color;
+  border-color: $borders_color;
+  &:backdrop {
+    background-color: $backdrop_base_color;
+    border-color: $backdrop_borders_color;
+  }
+}
+
 
 /*********************
  * App Notifications *
