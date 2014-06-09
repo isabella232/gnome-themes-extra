@@ -5588,9 +5588,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="125.12692"
-     inkscape:cy="960.49868"
+     inkscape:zoom="2"
+     inkscape:cx="131.44757"
+     inkscape:cy="959.46612"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -6223,6 +6223,15 @@
          width="16"
          id="rect15025"
          style="color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         style="color:#000000;fill:#a1a1a1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.99491191;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect5203"
+         width="9"
+         height="2.9687538"
+         x="20.004272"
+         y="36.393433"
+         rx="1.4843769"
+         ry="1.4843769" />
     </g>
     <g
        inkscape:label="#g14325"
@@ -6243,7 +6252,7 @@
            rx="2.8382866" />
         <rect
            ry="6"
-           style="color:#000000;fill:#ededed;fill-opacity:1;fill-rule:nonzero;stroke:#a1a1a1;stroke-width:2.09697652;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           style="color:#000000;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:#a1a1a1;stroke-width:2.09697652000000012;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
            id="rect5147-9-1-5-7-6-4-8-3"
            width="29.559635"
            height="29.154205"
@@ -6580,7 +6589,7 @@
              id="g5428-8-1-7-18-8">
             <rect
                ry="15.453857"
-               style="color:#000000;fill:#ededed;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:2.08222342000000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+               style="color:#000000;fill:#f4f4f4;fill-opacity:1;fill-rule:nonzero;stroke:#999999;stroke-width:2.08222342000000005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
                id="rect5147-9-1-7-88-8"
                width="29.385006"
                height="28.919117"
@@ -8081,7 +8090,7 @@
         </g>
       </g>
       <rect
-         style="color:#000000;fill:#54595a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.99491190999999990;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         style="color:#000000;fill:#54595a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.99491191;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          id="rect5203-6"
          width="9"
          height="2.9687538"
@@ -8919,15 +8928,6 @@
          id="rect9180"
          style="fill:url(#linearGradient9184);fill-opacity:1;stroke:none;opacity:0.1" />
     </g>
-    <rect
-       style="color:#000000;fill:#a1a1a1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.99491190999999990;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect5203"
-       width="9"
-       height="2.9687538"
-       x="60"
-       y="56.393429"
-       rx="1.4843769"
-       ry="1.4843769" />
   </g>
   <g
      inkscape:groupmode="layer"
