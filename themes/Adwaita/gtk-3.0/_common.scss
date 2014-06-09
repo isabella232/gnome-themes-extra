@@ -1484,7 +1484,17 @@ GtkInfoBar {
  * Tooltips *
  ************/
 
-//FIXME
+.tooltip {
+  padding: 4px; /* not working */
+  border-radius: 3px;
+  background-color: transparentize($base_color,0.1);  //FIXME proper color
+  text-shadow: 0 1px transparentize(black,0.9);
+}
+
+.tooltip * { //Yeah this is ugly
+  padding: 4px;
+  background-color: transparent;
+}
 
 /**********************
  * Window Decorations *
