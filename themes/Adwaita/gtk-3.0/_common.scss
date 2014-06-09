@@ -1000,7 +1000,7 @@ GtkSwitch {
         border-color: $selected_borders_color;
         background-color: $selected_bg_color;
         box-shadow: $widget_edge;
-        text-shadow: 0 0 2px 1px white;
+        text-shadow: 0 0 2px white;
       }
       &:insensitive {
         color: $insensitive_fg_color;
