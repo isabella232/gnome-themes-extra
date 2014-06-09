@@ -424,6 +424,16 @@
 GtkColorButton.button {
   padding: 4px; }
 
+.inline-toolbar.toolbar GtkToolButton .button {
+  border-width: 1px;
+  border-style: solid;
+  color: #2e3436;
+  background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
+  border-color: #a1a1a1;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+  icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
+  box-shadow: inset 0 1px white, 0 1px white; }
+
 /*****************
  * GtkSpinButton *
  *****************/
@@ -1452,6 +1462,16 @@ GtkScrolledWindow GtkViewport.frame {
 
 .separator {
   color: rgba(0, 0, 0, 0.1); }
+
+/*********
+ * Lists *
+ *********/
+.list {
+  background-color: white;
+  border-color: #a1a1a1; }
+  .list:backdrop {
+    background-color: #fcfcfc;
+    border-color: #a1a1a1; }
 
 /*********************
  * App Notifications *
