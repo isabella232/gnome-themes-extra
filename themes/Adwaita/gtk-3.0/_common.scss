@@ -109,6 +109,7 @@
   color: $fg_color;
   &:selected,
   &:selected:focus,
+  &:selected:hover,
   &:selected:backdrop {
     @extend %selected_items;
   }
@@ -1080,6 +1081,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
     background-color: transparent;
     &:hover, &:selected { background-image: none; }
     &:active, &:active:hover { -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic'); color: $fg_color; }
+    &:selected:hover { color: $selected_fg_color; };
     &:inconsistent { -gtk-icon-source: -gtk-icontheme('#{$a}-mixed-symbolic'); }
     &:backdrop { background-image: none; }
   }

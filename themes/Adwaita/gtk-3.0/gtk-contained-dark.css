@@ -1168,6 +1168,10 @@ GtkTreeView.check {
   GtkTreeView.check:active:hover {
     -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
     color: #eeeeec; }
+  GtkPopover GtkModelButton.button.check:selected:hover,
+  .menuitem.check:selected:hover,
+  GtkTreeView.check:selected:hover {
+    color: white; }
   GtkPopover GtkModelButton.button.check:inconsistent,
   .menuitem.check:inconsistent,
   GtkTreeView.check:inconsistent {
@@ -1286,6 +1290,10 @@ GtkTreeView.radio {
   GtkTreeView.radio:active:hover {
     -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
     color: #eeeeec; }
+  GtkPopover GtkModelButton.button.radio:selected:hover,
+  .menuitem.radio:selected:hover,
+  GtkTreeView.radio:selected:hover {
+    color: white; }
   GtkPopover GtkModelButton.button.radio:inconsistent,
   .menuitem.radio:inconsistent,
   GtkTreeView.radio:inconsistent {
@@ -1466,7 +1474,7 @@ GtkLevelBar.vertical {
     .level-bar.fill-block.empty-fill-block:backdrop {
       border-color: rgba(201, 203, 201, 0.15); }
 
-.view:selected, .view:selected:focus, .view:selected:backdrop, .entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
+.view:selected, .view:selected:focus, .view:selected:hover, .view:selected:backdrop, .entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
   background-color: #215d9c;
   color: white; }
 
