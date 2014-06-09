@@ -400,6 +400,12 @@
     border-radius: 3px;
     border-style: solid; }
 
+GtkLinkButton.button, GtkLinkButton.button:hover, GtkLinkButton.button:active {
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+
 /* menu buttons */
 .menuitem.button, .menuitem.button:insensitive, .menuitem.button:active:insensitive {
   color: #eeeeec;
@@ -433,6 +439,16 @@ GtkColorButton.button {
   text-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
   icon-shadow: 0 -1px rgba(0, 0, 0, 0.81176);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px rgba(238, 238, 236, 0.1); }
+
+/*********
+ * Links *
+ *********/
+GtkLinkButton.button {
+  color: #215d9c;
+  text-shadow: none; }
+  GtkLinkButton.button:hover, GtkLinkButton.button:active {
+    color: #7397bc;
+    text-shadow: none; }
 
 /*****************
  * GtkSpinButton *
