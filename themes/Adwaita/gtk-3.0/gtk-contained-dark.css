@@ -1169,14 +1169,21 @@ GtkSwitch {
 GtkPopover GtkModelButton.button.check,
 .menuitem.check,
 GtkTreeView.check {
+  color: rgba(238, 238, 236, 0.1);
   background-image: none;
-  background-color: transparent; }
-  GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.check:selected,
+  background-color: transparent;
+  -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic"); }
+  GtkPopover GtkModelButton.button.check:hover,
   .menuitem.check:hover,
-  .menuitem.check:selected,
-  GtkTreeView.check:hover,
-  GtkTreeView.check:selected {
+  GtkTreeView.check:hover {
     background-image: none; }
+  GtkPopover GtkModelButton.button.check:selected:selected, GtkPopover GtkModelButton.button.check:selected:hover,
+  .menuitem.check:selected:selected,
+  .menuitem.check:selected:hover,
+  GtkTreeView.check:selected:selected,
+  GtkTreeView.check:selected:hover {
+    background-image: none;
+    color: rgba(51, 51, 51, 0.1); }
   GtkPopover GtkModelButton.button.check:active, GtkPopover GtkModelButton.button.check:active:hover,
   .menuitem.check:active,
   .menuitem.check:active:hover,
@@ -1184,13 +1191,17 @@ GtkTreeView.check {
   GtkTreeView.check:active:hover {
     -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
     color: #eeeeec; }
-  GtkPopover GtkModelButton.button.check:selected:hover,
-  .menuitem.check:selected:hover,
-  GtkTreeView.check:selected:hover {
+  GtkPopover GtkModelButton.button.check:selected:active, GtkPopover GtkModelButton.button.check:selected:active:hover,
+  .menuitem.check:selected:active,
+  .menuitem.check:selected:active:hover,
+  GtkTreeView.check:selected:active,
+  GtkTreeView.check:selected:active:hover {
     color: white; }
-  GtkPopover GtkModelButton.button.check:inconsistent,
+  GtkPopover GtkModelButton.button.check:inconsistent, GtkPopover GtkModelButton.button.check:inconsistent:hover,
   .menuitem.check:inconsistent,
-  GtkTreeView.check:inconsistent {
+  .menuitem.check:inconsistent:hover,
+  GtkTreeView.check:inconsistent,
+  GtkTreeView.check:inconsistent:hover {
     -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic"); }
   GtkPopover GtkModelButton.button.check:backdrop,
   .menuitem.check:backdrop,
@@ -1291,14 +1302,21 @@ GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.c
 GtkPopover GtkModelButton.button.radio,
 .menuitem.radio,
 GtkTreeView.radio {
+  color: rgba(238, 238, 236, 0.1);
   background-image: none;
-  background-color: transparent; }
-  GtkPopover GtkModelButton.button.radio:hover, GtkPopover GtkModelButton.button.radio:selected,
+  background-color: transparent;
+  -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic"); }
+  GtkPopover GtkModelButton.button.radio:hover,
   .menuitem.radio:hover,
-  .menuitem.radio:selected,
-  GtkTreeView.radio:hover,
-  GtkTreeView.radio:selected {
+  GtkTreeView.radio:hover {
     background-image: none; }
+  GtkPopover GtkModelButton.button.radio:selected:selected, GtkPopover GtkModelButton.button.radio:selected:hover,
+  .menuitem.radio:selected:selected,
+  .menuitem.radio:selected:hover,
+  GtkTreeView.radio:selected:selected,
+  GtkTreeView.radio:selected:hover {
+    background-image: none;
+    color: rgba(51, 51, 51, 0.1); }
   GtkPopover GtkModelButton.button.radio:active, GtkPopover GtkModelButton.button.radio:active:hover,
   .menuitem.radio:active,
   .menuitem.radio:active:hover,
@@ -1306,13 +1324,17 @@ GtkTreeView.radio {
   GtkTreeView.radio:active:hover {
     -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
     color: #eeeeec; }
-  GtkPopover GtkModelButton.button.radio:selected:hover,
-  .menuitem.radio:selected:hover,
-  GtkTreeView.radio:selected:hover {
+  GtkPopover GtkModelButton.button.radio:selected:active, GtkPopover GtkModelButton.button.radio:selected:active:hover,
+  .menuitem.radio:selected:active,
+  .menuitem.radio:selected:active:hover,
+  GtkTreeView.radio:selected:active,
+  GtkTreeView.radio:selected:active:hover {
     color: white; }
-  GtkPopover GtkModelButton.button.radio:inconsistent,
+  GtkPopover GtkModelButton.button.radio:inconsistent, GtkPopover GtkModelButton.button.radio:inconsistent:hover,
   .menuitem.radio:inconsistent,
-  GtkTreeView.radio:inconsistent {
+  .menuitem.radio:inconsistent:hover,
+  GtkTreeView.radio:inconsistent,
+  GtkTreeView.radio:inconsistent:hover {
     -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); }
   GtkPopover GtkModelButton.button.radio:backdrop,
   .menuitem.radio:backdrop,
