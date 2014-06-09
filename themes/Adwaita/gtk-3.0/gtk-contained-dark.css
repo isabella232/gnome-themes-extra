@@ -1566,6 +1566,12 @@ GtkCalendar {
     color: #272929;
     background-image: none;
     background-color: transparent; }
+    GtkCalendar.button:hover {
+      background-image: none;
+      color: #eeeeec; }
+    GtkCalendar.button:backdrop, GtkCalendar.button:backdrop:hover {
+      color: #212222;
+      background-image: none; }
 
 /***********
  * Dialogs *
