@@ -34,3 +34,28 @@ $backdrop_bg_color: $bg_color;
 $backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
 $backdrop_insensitive_color: if($variant =='light', darken($backdrop_bg_color,15%), lighten($backdrop_bg_color,5%));
 $backdrop_borders_color: $borders_color;
+
+//apps rely on some named colors to be exported
+/* GTK NAMED COLORS */
+@define-color theme_fg_color $fg_color;
+@define-color theme_bg_color $bg_color;
+@define-color theme_base_color $base_color;
+@define-color theme_selected_bg_color $selected_bg_color;
+@define-color theme_selected_fg_color $selected_fg_color;
+@define-color theme_insensitive_bg_color $insensitive_bg_color;
+@define-color theme_insensitive_fg_color $insensitive_fg_color;
+
+@define-color warning_color $warning_color;
+@define-color error_color $error_color;
+@define-color success_color $success_color;
+//@define-color desctructive_color $destructive_color
+
+//WM
+@define-color wm_title shade($fg_color, 1.8);
+@define-color wm_unfocused_title $backdrop_fg_color;
+@define-color wm_highlight $borders_edge;
+@define-color wm_title_highlight $borders_edge;
+@define-color wm_title_shadow $borders_edge;
+
+//FIXME we probably need many more for mutter
+
