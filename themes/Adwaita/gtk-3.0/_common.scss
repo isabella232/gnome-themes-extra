@@ -1390,7 +1390,12 @@ GtkMessageDialog .titlebar {
       @include button(insensitive, $noedge: true);
       @extend %middle_button;
     }
-    &:backdrop, &:backdrop:insensitive {
+    &:backdrop {
+      @include button(backdrop, $noedge: true);
+      @extend %middle_button;
+    }
+    &:backdrop:insensitive {
+      @include button(backdrop-insensitive, $noedge: true);
       @extend %middle_button;
     }
     &:first-child{ @extend %first_button; }
