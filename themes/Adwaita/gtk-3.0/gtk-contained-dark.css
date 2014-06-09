@@ -1524,6 +1524,10 @@ GtkCalendar {
 /***********
  * Dialogs *
  ***********/
+GtkMessageDialog .titlebar {
+  border-style: none;
+  box-shadow: inset 0 1px rgba(238, 238, 236, 0.1); }
+
 .dialog-action-area.linked .button {
   padding: 6px;
   border-radius: 0;
