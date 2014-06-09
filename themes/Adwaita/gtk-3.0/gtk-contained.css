@@ -1156,6 +1156,10 @@ GtkTreeView.check {
   .menuitem.check:inconsistent,
   GtkTreeView.check:inconsistent {
     -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic"); }
+  GtkPopover GtkModelButton.button.check:backdrop,
+  .menuitem.check:backdrop,
+  GtkTreeView.check:backdrop {
+    background-image: none; }
 
 .menuitem.check:hover, .menuitem.check:active:hover {
   color: white; }
@@ -1270,6 +1274,10 @@ GtkTreeView.radio {
   .menuitem.radio:inconsistent,
   GtkTreeView.radio:inconsistent {
     -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); }
+  GtkPopover GtkModelButton.button.radio:backdrop,
+  .menuitem.radio:backdrop,
+  GtkTreeView.radio:backdrop {
+    background-image: none; }
 
 .menuitem.radio:hover, .menuitem.radio:active:hover {
   color: white; }
@@ -1383,9 +1391,9 @@ GtkProgressBar.trough {
     background-color: #d2d2d2;
     box-shadow: 0 1px rgba(255, 255, 255, 0); }
 
-/****************
+/*************
  * Level Bar *
- ****************/
+ *************/
 GtkLevelBar {
   -GtkLevelBar-min-block-width: 34;
   -GtkLevelBar-min-block-height: 3; }
@@ -1662,6 +1670,9 @@ GtkInfoBar {
       background-image: linear-gradient(to bottom, #ededed);
       box-shadow: inset 0 1px rgba(255, 255, 255, 0); }
 
+/************
+ * Tooltips *
+ ************/
 /**********************
  * Window Decorations *
  *********************/
