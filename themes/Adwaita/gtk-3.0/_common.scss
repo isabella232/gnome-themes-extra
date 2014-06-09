@@ -373,7 +373,7 @@ GtkLinkButton.button {
   text-shadow: none;
   &:hover, &:active {
     color: mix($fg_color, $selected_bg_color, 40%); //FIXME same here
-    @extend %undercorated_button;
+    @extend %undecorated_button;
     text-shadow: none;
   }
 }
