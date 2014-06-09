@@ -465,6 +465,8 @@ GtkLinkButton.button {
   GtkLinkButton.button:hover, GtkLinkButton.button:active {
     color: #7397bc;
     text-shadow: none; }
+  GtkLinkButton.button:backdrop {
+    color: #215d9c; }
 
 /*****************
  * GtkSpinButton *

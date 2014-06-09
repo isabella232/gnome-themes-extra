@@ -376,6 +376,9 @@ GtkLinkButton.button {
     @extend %undecorated_button;
     text-shadow: none;
   }
+  &:backdrop {
+    color: $selected_bg_color;
+  }
 }
 
 /*****************
