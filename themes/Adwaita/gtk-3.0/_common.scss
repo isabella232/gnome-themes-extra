@@ -692,8 +692,8 @@ column-header { // FIXME: something better
       color: $backdrop_fg_color;
       background-color: $backdrop_base_color;
     }
+    //submenu indicators
     &.arrow { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); } 
-      //submenu indicators
   }
 }
 
