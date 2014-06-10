@@ -747,6 +747,10 @@ column-header .button:backdrop {
     .menu .menuitem:hover {
       color: white;
       background-color: #4a90d9; }
+    .menu .menuitem:insensitive {
+      color: #8d9091; }
+      .menu .menuitem:insensitive:backdrop {
+        color: #c7c7c7; }
     .menu .menuitem:backdrop, .menu .menuitem:backdrop:hover {
       color: #54595a;
       background-color: #fcfcfc; }
@@ -1790,7 +1794,7 @@ GtkInfoBar {
     border-radius: 0; }
   .window-frame.csd.popup {
     border-radius: 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.1); }
 
 .button.titlebutton {
   padding: 8px;

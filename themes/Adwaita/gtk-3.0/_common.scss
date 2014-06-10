@@ -684,6 +684,10 @@ column-header { // FIXME: something better
       color: $selected_fg_color;
       background-color: $selected_bg_color;
     }
+    &:insensitive {
+      color: $insensitive_fg_color;
+      &:backdrop { color: $backdrop_insensitive_color; }
+    }
     &:backdrop, &:backdrop:hover {
       color: $backdrop_fg_color;
       background-color: $backdrop_base_color;
@@ -1078,7 +1082,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
       background-position: center;
     }    
   }
-  
+
   // treeview, menu and popover
   GtkPopover GtkModelButton.button.#{$w},
   .menuitem.#{$w},
@@ -1104,6 +1108,8 @@ $asset_suffix: if($variant=='dark', '-dark', '');
     &:hover, &:active:hover { color: $fg_color; }
   }
 }
+
+
 
 GtkCheckButton.text-button:selected { background-color: transparent; }
 
@@ -1527,7 +1533,7 @@ GtkInfoBar {
   &.csd.popup {
     border-radius: 0;
     box-shadow: 0 1px 2px transparentize(black, 0.6),
-                0 0 0 1px $_wm_border;
+                0 0 0 1px transparentize($_wm_border,0.1);
   }
 }
 
