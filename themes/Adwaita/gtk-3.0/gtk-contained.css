@@ -21,7 +21,7 @@
   -GtkTextView-error-underline-color: #cc0000;
   -GtkPaned-handle-size: 0;
   -GtkCheckButton-indicator-size: 16;
-  -GtkCheckMenuItem-indicator-size: 12;
+  -GtkCheckMenuItem-indicator-size: 16;
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkScrolledWindow-scrollbars-within-bevel: 1;
   -GtkToolItemGroup-expander-size: 11;
@@ -750,6 +750,8 @@ column-header .button:backdrop {
     border: none;
     color: white;
     background-color: #2a76c6; }
+  .menu .menuitem.arrow {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 .menu .separator {
   color: rgba(161, 161, 161, 0.2); }
 

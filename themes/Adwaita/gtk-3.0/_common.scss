@@ -10,7 +10,7 @@
   -GtkPaned-handle-size: 0;
 
   -GtkCheckButton-indicator-size: 16;
-  -GtkCheckMenuItem-indicator-size: 12;
+  -GtkCheckMenuItem-indicator-size: 16;
 
   // The size for scrollbars. The slider is 2px smaller, but we keep it
   // up so that the whole area is sensitive to button presses for the
@@ -689,6 +689,7 @@ column-header { // FIXME: something better
       color: $selected_fg_color;
       background-color: if($variant=='light', darken($selected_bg_color, 10%), darken($selected_bg_color, 5%));
     }
+    &.arrow { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); } // submenu indicators
   }
   .separator { 
     color: transparentize($borders_color,0.8);
