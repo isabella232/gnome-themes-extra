@@ -12,7 +12,7 @@ $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 30%)
                          // FIXME dark variant color
 $borders_color: if($variant =='light', darken($bg_color,30%), darken($bg_color,12%));
 $borders_edge: if($variant =='light', white, transparentize($fg_color,.9));
-$link_color: lighten($selected_bg_color,10%);
+$link_color: darken($selected_bg_color,10%);
 
 $warning_color: #f57900;
 $error_color: #cc0000;

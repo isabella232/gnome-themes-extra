@@ -30,8 +30,8 @@
   -GtkTreeView-horizontal-separator: 4;
   -GtkMenu-horizontal-padding: 0;
   -GtkMenu-vertical-padding: 0;
-  -GtkWidget-link-color: #74aae2;
-  -GtkWidget-visited-link-color: #74aae2;
+  -GtkWidget-link-color: #2a76c6;
+  -GtkWidget-visited-link-color: #2a76c6;
   -GtkWidget-focus-padding: 2;
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
@@ -607,7 +607,7 @@ GtkComboBox {
     icon-shadow: none; }
   GtkComboBox:backdrop:insensitive {
     color: #c7c7c7; }
-  GtkComboBox .menuitem:active {
+  GtkComboBox .menuitem {
     text-shadow: none; }
   GtkComboBox .separator {
     -GtkWidget-wide-separators: true;

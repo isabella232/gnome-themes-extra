@@ -495,7 +495,7 @@ GtkComboBox {
   &:backdrop:insensitive {
     color: $backdrop_insensitive_color;
   }
-  .menuitem:active { text-shadow: none; }
+  .menuitem { text-shadow: none; }
   .separator {
     // always disable separators
     -GtkWidget-wide-separators: true;
