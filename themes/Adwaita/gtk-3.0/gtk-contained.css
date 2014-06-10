@@ -86,8 +86,11 @@
     color: white; }
 
 .view {
-  background-color: white;
-  color: #2e3436; }
+  color: #2e3436;
+  background-color: white; }
+  .view:backdrop {
+    color: #54595a;
+    background-color: #fcfcfc; }
 
 /*********************
  * Spinner Animation *
@@ -762,7 +765,6 @@ column-header .button:backdrop {
  ***************/
 GtkPopover {
   border-radius: 5px;
-  background-clip: border-box;
   background-color: #ededed;
   border-color: #a1a1a1;
   border-width: 1px;
@@ -1172,53 +1174,82 @@ GtkSwitch {
   background-repeat: no-repeat;
   background-position: center; }
 
-GtkPopover GtkModelButton.button.check,
-.menuitem.check,
-GtkTreeView.check {
+/*
+  // treeview, menu and popover
+  GtkPopover GtkModelButton.button.check,
+  .menuitem.check,
+  GtkTreeView.check {
+    color: transparentize($fg_color, 0.9);
+    background-image: none;
+    background-color: transparent;
+    -gtk-icon-source: -gtk-icontheme('checkbox-checked-symbolic');
+    &:hover { background-image: none; }
+    &:selected:selected, &:selected:hover { //yeah, it's a gross hack
+      background-image: none;
+      color: transparentize($base_color,0.9);
+    }
+    &:active, &:active:hover { -gtk-icon-source: -gtk-icontheme('checkbox-checked-symbolic'); color: $fg_color; }
+    &:selected:active, &:selected:active:hover { color: $selected_fg_color; };
+    &:inconsistent, &:inconsistent:hover { -gtk-icon-source: -gtk-icontheme('checkbox-mixed-symbolic'); }
+    &:backdrop { background-image: none; }
+  }
+  .menuitem.check {
+    &:hover, &:active:hover { color: $selected_fg_color; }
+  }
+  GtkPopover GtkModelButton.button.check {
+    &:hover, &:active:hover { color: $fg_color; }
+  }
+*/
+.menuitem.check {
   color: rgba(46, 52, 54, 0.1);
   background-image: none;
-  background-color: transparent;
   -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic"); }
-  GtkPopover GtkModelButton.button.check:hover,
-  .menuitem.check:hover,
-  GtkTreeView.check:hover {
-    background-image: none; }
-  GtkPopover GtkModelButton.button.check:selected:selected, GtkPopover GtkModelButton.button.check:selected:hover,
-  .menuitem.check:selected:selected,
-  .menuitem.check:selected:hover,
-  GtkTreeView.check:selected:selected,
-  GtkTreeView.check:selected:hover {
-    background-image: none;
+  .menuitem.check:hover {
     color: rgba(255, 255, 255, 0.1); }
-  GtkPopover GtkModelButton.button.check:active, GtkPopover GtkModelButton.button.check:active:hover,
-  .menuitem.check:active,
-  .menuitem.check:active:hover,
-  GtkTreeView.check:active,
-  GtkTreeView.check:active:hover {
-    -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic");
+  .menuitem.check:active {
     color: #2e3436; }
-  GtkPopover GtkModelButton.button.check:selected:active, GtkPopover GtkModelButton.button.check:selected:active:hover,
-  .menuitem.check:selected:active,
-  .menuitem.check:selected:active:hover,
-  GtkTreeView.check:selected:active,
-  GtkTreeView.check:selected:active:hover {
-    color: white; }
-  GtkPopover GtkModelButton.button.check:inconsistent, GtkPopover GtkModelButton.button.check:inconsistent:hover,
-  .menuitem.check:inconsistent,
-  .menuitem.check:inconsistent:hover,
-  GtkTreeView.check:inconsistent,
-  GtkTreeView.check:inconsistent:hover {
+    .menuitem.check:active:hover {
+      color: white; }
+    .menuitem.check:active:insensitive {
+      color: #8d9091;
+      background-image: none; }
+      .menuitem.check:active:insensitive:backdrop {
+        color: #c7c7c7; }
+    .menuitem.check:active:backdrop {
+      color: #54595a; }
+  .menuitem.check:insensitive {
+    color: rgba(141, 144, 145, 0.1); }
+    .menuitem.check:insensitive:backdrop {
+      color: transparent; }
+  .menuitem.check:inconsistent {
     -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic"); }
-  GtkPopover GtkModelButton.button.check:backdrop,
-  .menuitem.check:backdrop,
-  GtkTreeView.check:backdrop {
-    background-image: none; }
 
-.menuitem.check:hover, .menuitem.check:active:hover {
-  color: white; }
-
-GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.check:active:hover {
-  color: #2e3436; }
+GtkTreeView.view.check {
+  color: rgba(46, 52, 54, 0.1);
+  background-image: none;
+  -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic"); }
+  GtkTreeView.view.check:active {
+    color: #2e3436; }
+    GtkTreeView.view.check:active:insensitive {
+      color: #8d9091; }
+      GtkTreeView.view.check:active:insensitive:backdrop {
+        color: #c7c7c7; }
+    GtkTreeView.view.check:active:backdrop {
+      color: #54595a; }
+  GtkTreeView.view.check:insensitive {
+    color: rgba(141, 144, 145, 0.1); }
+    GtkTreeView.view.check:insensitive:backdrop {
+      color: transparent; }
+  GtkTreeView.view.check:inconsistent {
+    -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic"); }
+  GtkTreeView.view.check:selected {
+    color: rgba(255, 255, 255, 0.1); }
+    GtkTreeView.view.check:selected:active {
+      color: white; }
+      GtkTreeView.view.check:selected:active:backdrop {
+        color: #fcfcfc; }
+    GtkTreeView.view.check:selected:backdrop {
+      color: rgba(84, 89, 90, 0.1); }
 
 .radio {
   background-image: -gtk-scaled(url("assets/radio-unchecked.png"), url("assets/radio-unchecked@2.png"));
@@ -1305,53 +1336,82 @@ GtkPopover GtkModelButton.button.check:hover, GtkPopover GtkModelButton.button.c
   background-repeat: no-repeat;
   background-position: center; }
 
-GtkPopover GtkModelButton.button.radio,
-.menuitem.radio,
-GtkTreeView.radio {
+/*
+  // treeview, menu and popover
+  GtkPopover GtkModelButton.button.radio,
+  .menuitem.radio,
+  GtkTreeView.radio {
+    color: transparentize($fg_color, 0.9);
+    background-image: none;
+    background-color: transparent;
+    -gtk-icon-source: -gtk-icontheme('radio-checked-symbolic');
+    &:hover { background-image: none; }
+    &:selected:selected, &:selected:hover { //yeah, it's a gross hack
+      background-image: none;
+      color: transparentize($base_color,0.9);
+    }
+    &:active, &:active:hover { -gtk-icon-source: -gtk-icontheme('radio-checked-symbolic'); color: $fg_color; }
+    &:selected:active, &:selected:active:hover { color: $selected_fg_color; };
+    &:inconsistent, &:inconsistent:hover { -gtk-icon-source: -gtk-icontheme('radio-mixed-symbolic'); }
+    &:backdrop { background-image: none; }
+  }
+  .menuitem.radio {
+    &:hover, &:active:hover { color: $selected_fg_color; }
+  }
+  GtkPopover GtkModelButton.button.radio {
+    &:hover, &:active:hover { color: $fg_color; }
+  }
+*/
+.menuitem.radio {
   color: rgba(46, 52, 54, 0.1);
   background-image: none;
-  background-color: transparent;
   -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic"); }
-  GtkPopover GtkModelButton.button.radio:hover,
-  .menuitem.radio:hover,
-  GtkTreeView.radio:hover {
-    background-image: none; }
-  GtkPopover GtkModelButton.button.radio:selected:selected, GtkPopover GtkModelButton.button.radio:selected:hover,
-  .menuitem.radio:selected:selected,
-  .menuitem.radio:selected:hover,
-  GtkTreeView.radio:selected:selected,
-  GtkTreeView.radio:selected:hover {
-    background-image: none;
+  .menuitem.radio:hover {
     color: rgba(255, 255, 255, 0.1); }
-  GtkPopover GtkModelButton.button.radio:active, GtkPopover GtkModelButton.button.radio:active:hover,
-  .menuitem.radio:active,
-  .menuitem.radio:active:hover,
-  GtkTreeView.radio:active,
-  GtkTreeView.radio:active:hover {
-    -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
+  .menuitem.radio:active {
     color: #2e3436; }
-  GtkPopover GtkModelButton.button.radio:selected:active, GtkPopover GtkModelButton.button.radio:selected:active:hover,
-  .menuitem.radio:selected:active,
-  .menuitem.radio:selected:active:hover,
-  GtkTreeView.radio:selected:active,
-  GtkTreeView.radio:selected:active:hover {
-    color: white; }
-  GtkPopover GtkModelButton.button.radio:inconsistent, GtkPopover GtkModelButton.button.radio:inconsistent:hover,
-  .menuitem.radio:inconsistent,
-  .menuitem.radio:inconsistent:hover,
-  GtkTreeView.radio:inconsistent,
-  GtkTreeView.radio:inconsistent:hover {
+    .menuitem.radio:active:hover {
+      color: white; }
+    .menuitem.radio:active:insensitive {
+      color: #8d9091;
+      background-image: none; }
+      .menuitem.radio:active:insensitive:backdrop {
+        color: #c7c7c7; }
+    .menuitem.radio:active:backdrop {
+      color: #54595a; }
+  .menuitem.radio:insensitive {
+    color: rgba(141, 144, 145, 0.1); }
+    .menuitem.radio:insensitive:backdrop {
+      color: transparent; }
+  .menuitem.radio:inconsistent {
     -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); }
-  GtkPopover GtkModelButton.button.radio:backdrop,
-  .menuitem.radio:backdrop,
-  GtkTreeView.radio:backdrop {
-    background-image: none; }
 
-.menuitem.radio:hover, .menuitem.radio:active:hover {
-  color: white; }
-
-GtkPopover GtkModelButton.button.radio:hover, GtkPopover GtkModelButton.button.radio:active:hover {
-  color: #2e3436; }
+GtkTreeView.view.radio {
+  color: rgba(46, 52, 54, 0.1);
+  background-image: none;
+  -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic"); }
+  GtkTreeView.view.radio:active {
+    color: #2e3436; }
+    GtkTreeView.view.radio:active:insensitive {
+      color: #8d9091; }
+      GtkTreeView.view.radio:active:insensitive:backdrop {
+        color: #c7c7c7; }
+    GtkTreeView.view.radio:active:backdrop {
+      color: #54595a; }
+  GtkTreeView.view.radio:insensitive {
+    color: rgba(141, 144, 145, 0.1); }
+    GtkTreeView.view.radio:insensitive:backdrop {
+      color: transparent; }
+  GtkTreeView.view.radio:inconsistent {
+    -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); }
+  GtkTreeView.view.radio:selected {
+    color: rgba(255, 255, 255, 0.1); }
+    GtkTreeView.view.radio:selected:active {
+      color: white; }
+      GtkTreeView.view.radio:selected:active:backdrop {
+        color: #fcfcfc; }
+    GtkTreeView.view.radio:selected:backdrop {
+      color: rgba(84, 89, 90, 0.1); }
 
 GtkCheckButton.text-button:selected {
   background-color: transparent; }
@@ -1518,9 +1578,11 @@ GtkLevelBar.vertical {
     .level-bar.fill-block.empty-fill-block:backdrop {
       border-color: rgba(84, 89, 90, 0.15); }
 
-.view:selected, .view:selected:focus, .view:selected:hover, .view:selected:backdrop, .entry:selected, .entry:selected:focus, .entry:selected:backdrop, .button:selected, .button:selected:focus, .button:selected:backdrop {
+.view:selected, .view:selected:focus, .view:selected:hover, .entry:selected, .entry:selected:focus, .button:selected, .button:selected:focus {
   background-color: #4a90d9;
   color: white; }
+  .view:backdrop:selected, .entry:backdrop:selected, .button:backdrop:selected {
+    color: #fcfcfc; }
 
 /**********
  * Frames *
@@ -1772,7 +1834,7 @@ GtkInfoBar {
   padding: 4px;
   /* not working */
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   text-shadow: 0 1px black; }
 
 .tooltip * {
@@ -1795,6 +1857,9 @@ GtkInfoBar {
   .window-frame.csd.popup {
     border-radius: 0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.1); }
+  .window-frame.csd.tooltip {
+    border-radius: 5px;
+    box-shadow: none; }
 
 .button.titlebutton {
   padding: 8px;

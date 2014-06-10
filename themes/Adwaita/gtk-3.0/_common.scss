@@ -109,12 +109,15 @@
 }
 
 .view {
-  background-color: $base_color;
   color: $fg_color;
+  background-color: $base_color;
+  &:backdrop {
+    color: $backdrop_fg_color;
+    background-color: $backdrop_base_color;
+  }
   &:selected,
   &:selected:focus,
-  &:selected:hover,
-  &:selected:backdrop {
+  &:selected:hover {
     @extend %selected_items;
   }
 }
@@ -159,8 +162,7 @@
     color: $selected_fg_color;
   }
   &:selected,
-  &:selected:focus,
-  &:selected:backdrop {
+  &:selected:focus {
     @extend %selected_items;
   }
   &.progressbar {
@@ -217,8 +219,7 @@
     }
   }
   &:selected,
-  &:selected:focus,
-  &:selected:backdrop {
+  &:selected:focus {
     @extend %selected_items;
   }
   &:insensitive {
@@ -705,7 +706,7 @@ column-header { // FIXME: something better
 
 GtkPopover {
   border-radius: 5px;
-  background-clip: border-box;
+  //background-clip: border-box;
   background-color: $bg_color;
 
   border-color: $borders-color;
@@ -1083,6 +1084,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
     }    
   }
 
+/*
   // treeview, menu and popover
   GtkPopover GtkModelButton.button.#{$w},
   .menuitem.#{$w},
@@ -1106,6 +1108,64 @@ $asset_suffix: if($variant=='dark', '-dark', '');
   }
   GtkPopover GtkModelButton.button.#{$w} {
     &:hover, &:active:hover { color: $fg_color; }
+  }
+*/
+  .menuitem.#{$w} {
+    color: transparentize($fg_color,0.9);
+    background-image: none;
+    -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic');
+    &:hover { color: transparentize($selected_fg_color,0.9); }
+    &:active {
+      color: $fg_color;
+      &:hover { color: $selected_fg_color; }
+      &:insensitive {
+        color: $insensitive_fg_color;
+        background-image: none;
+        &:backdrop { color: $backdrop_insensitive_color; };
+      }
+      &:backdrop { color: $backdrop_fg_color; }
+    }
+    &:insensitive { 
+      color: transparentize($insensitive_fg_color,0.9); 
+      &:backdrop { color: transparent; }
+    }
+    &:inconsistent {
+      -gtk-icon-source: -gtk-icontheme('#{$a}-mixed-symbolic');
+    }
+  }
+
+  GtkTreeView.view.#{$w} {
+    color: transparentize($fg_color,0.9);
+    background-image: none;
+    -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic');
+    &:active {
+    color: $fg_color;
+      &:insensitive {
+        color: $insensitive_fg_color;
+        &:backdrop { color: $backdrop_insensitive_color; }
+      }
+      &:backdrop { color: $backdrop_fg_color; }
+    }
+    &:insensitive {
+      color: transparentize($insensitive_fg_color,0.9);
+      &:backdrop { color: transparent; }
+    }
+    &:inconsistent {
+      -gtk-icon-source: -gtk-icontheme('#{$a}-mixed-symbolic');
+    }
+    &:selected {
+      color: transparentize($selected_fg_color,0.9);
+      &:active {
+        color: $selected_fg_color;
+        &:backdrop { color: $backdrop_base_color; }
+      }
+      &:backdrop {
+        color: transparentize($backdrop_fg_color,0.9);
+      }
+    }
+  }
+  GtkPopover GtkModelButton.button.#{$w} {
+    //FIXME
   }
 }
 
@@ -1302,6 +1362,7 @@ GtkLevelBar.vertical {
 %selected_items {
   background-color: $selected_bg_color;
   color: $selected_fg_color;
+  &:backdrop { color: $backdrop_base_color; }
 }
 
 /**********
@@ -1496,8 +1557,9 @@ GtkInfoBar {
   color: white;
   padding: 4px; /* not working */
   border-radius: 5px;
-  background-color: transparentize(black,0.1);  //FIXME proper color
+  background-color: transparentize(black,0.2);  //FIXME proper color
   text-shadow: 0 1px black;
+//  border: 2px solid $borders_color; gnome shell style?
 }
 
 .tooltip * { //Yeah this is ugly
@@ -1530,10 +1592,16 @@ GtkInfoBar {
   &.tiled {
     border-radius: 0;
   }
-  &.csd.popup {
-    border-radius: 0;
-    box-shadow: 0 1px 2px transparentize(black, 0.6),
-                0 0 0 1px transparentize($_wm_border,0.1);
+  &.csd {
+    &.popup {
+      border-radius: 0;
+      box-shadow: 0 1px 2px transparentize(black, 0.6),
+                  0 0 0 1px transparentize($_wm_border,0.1);
+    }
+    &.tooltip { 
+      border-radius: 5px; 
+      box-shadow: none;
+    }
   }
 }
 
