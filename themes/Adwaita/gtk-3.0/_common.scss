@@ -898,7 +898,7 @@ GtkPopover {
           background-color: transparentize($bg_color, 0.3);
         }
         &:backdrop, &:active:backdrop {
-          border-color: $backdrop_borders_color;
+          border-color: lighten($backdrop_borders_color,10%);
           background-color: mix($backdrop_borders_color,$backdrop_bg_color, 8%);
         }
       }
