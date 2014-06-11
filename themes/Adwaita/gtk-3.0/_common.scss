@@ -740,9 +740,6 @@ GtkPopover {
     text-shadow: none;
     transition: none;
   }
-  .button:selected {
-    color:red;
-  }
   &.osd { // Also used for touch cutnpaste overlays
           // FIXME Doesn't work
     background-image: none;

@@ -803,8 +803,6 @@ GtkPopover {
   GtkPopover .button:hover {
     text-shadow: none;
     transition: none; }
-  GtkPopover .button:selected {
-    color: red; }
   GtkPopover.osd {
     background-image: none;
     background-color: rgba(0, 0, 0, 0.8);
