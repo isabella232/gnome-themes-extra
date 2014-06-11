@@ -984,7 +984,7 @@ GtkSwitch {
       border-color: #0f2b48;
       background-color: #215d9c;
       box-shadow: 0 1px rgba(238, 238, 236, 0.1);
-      text-shadow: 0 0 2px 1px white; }
+      text-shadow: 0 0 2px white; }
     GtkSwitch.trough:insensitive {
       color: #939695;
       border-color: #1c1f1f;
