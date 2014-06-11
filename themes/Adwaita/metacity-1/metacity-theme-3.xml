@@ -852,7 +852,7 @@
 		<color value="gtk:custom(wm_button_active_color_b,gtk:fg[NORMAL])" />
 		<color value="gtk:custom(wm_button_active_color_c,gtk:fg[NORMAL])" />
 	</gradient>
-  <line x1="5" y1="5" x2="width-6" y2="5" color="blend/#000000/gtk:custom(wm_button_active_color_a,gtk:fg[NORMAL])/0.9" />
+  <line x1="5" y1="5" x2="width-6" y2="5" color="blend/#000000/gtk:custom(wm_button_active_color_a,gtk:fg[NORMAL])" />
   <line x1="4" y1="6" x2="width-5" y2="6" color="gtk:custom(wm_button_active_color_a,gtk:fg[NORMAL])" />
 	<include name="button_border" />
 </draw_ops>
