@@ -1510,7 +1510,7 @@ GtkMessageDialog .titlebar {
 
 .sidebar,
 .sidebar .view {
-  border-style: solid solid solid none;
+  border: none;
   $_sidebar_bg: lighten($bg_color,5%);
   background-color: $_sidebar_bg;
   .scrollbar {
@@ -1529,11 +1529,7 @@ GtkMessageDialog .titlebar {
     background-color: $selected_bg_color;
   }
   &:backdrop {
-    border-color: $backdrop_borders_color;
-  }
-  // FIXME: we need a proper border removal logic...
-  &:dir(rtl) {
-    border-style: solid none solid solid;
+    background-color: lighten($backdrop_bg_color,5%);
   }
 }
 
@@ -1541,6 +1537,15 @@ GtkPaned {
   // This is actually the invisible area of the paned separator, not a margin...
   // Yeah it's not right... Aaaaaanyway
   margin: 16px; //drag area of the separator
+}
+
+.pane-separator {
+  //FIXME abusing a background-image to get rid of the handle decoration
+  //I'd like something better...
+  background-image: linear-gradient(to bottom, $borders_color);
+  &:backdrop {
+    background-image: linear-gradient(to bottom, $backdrop_borders_color);
+  }
 }
 
 /**************

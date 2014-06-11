@@ -1722,7 +1722,7 @@ GtkMessageDialog .titlebar {
  ***********/
 .sidebar,
 .sidebar .view {
-  border-style: solid solid solid none;
+  border: none;
   background-color: #454c4c; }
   .sidebar .scrollbar.trough,
   .sidebar .view .scrollbar.trough {
@@ -1741,13 +1741,15 @@ GtkMessageDialog .titlebar {
     background-color: #215d9c; }
   .sidebar:backdrop,
   .sidebar .view:backdrop {
-    border-color: #1e2222; }
-  .sidebar:dir(rtl),
-  .sidebar .view:dir(rtl) {
-    border-style: solid none solid solid; }
+    background-color: #454c4c; }
 
 GtkPaned {
   margin: 16px; }
+
+.pane-separator {
+  background-image: linear-gradient(to bottom, #1c1f1f); }
+  .pane-separator:backdrop {
+    background-image: linear-gradient(to bottom, #1e2222); }
 
 /**************
  * GtkInfoBar *
