@@ -35,6 +35,11 @@
   
   -GtkDialog-button-spacing: 0;
   -GtkDialog-action-area-border: 0;
+  
+  // Those two are to fix buttons shrinking issue, remove them if things
+  // gets properly fixed in the code
+  -GtkButton-default-outside-border: 1;
+  -GtkButton-default-border: 1;
 
   // We use the outline properties to signal the focus properties
   // to the adwaita engine: using real CSS properties is faster,
