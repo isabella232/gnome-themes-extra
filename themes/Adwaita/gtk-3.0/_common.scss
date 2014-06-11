@@ -379,6 +379,9 @@ GtkLinkButton.button {
   }
   &:backdrop {
     color: $selected_bg_color;
+    @extend %undecorated_button; //This shouldn't be needed but avoids
+                                 //a weird transition which for some reason
+                                 //makes borders blink on hover
   }
 }
 
