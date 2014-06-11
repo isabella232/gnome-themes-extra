@@ -1286,6 +1286,13 @@ GtkProgressBar {
     background-color: $selected_bg_color;
     box-shadow: none;
   }
+  &.osd {
+    border-width: 0;
+    border-radius: 0;
+    -GtkProgressBar-xspacing: 0;
+    -GtkProgressBar-yspacing: 2px;
+    -GtkProgressBar-min-horizontal-bar-height: 2px; //FIXME still too tall
+  }
 }
 
 // background
@@ -1301,6 +1308,12 @@ GtkProgressBar.trough {
     border-color: $backdrop_borders_color;
     background-color: mix($backdrop_borders_color,$backdrop_bg_color, 35%);
     box-shadow: 0 1px transparentize(white,1);
+  }
+  &.osd {
+    background-color: transparent;
+    box-shadow: none;
+    border-width: 0;
+    //FIXME: there is a margin on top
   }
 }
 
