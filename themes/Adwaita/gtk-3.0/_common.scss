@@ -7,7 +7,7 @@
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: $error_color;
-  -GtkPaned-handle-size: 0;
+  -GtkPaned-handle-size: 1;
 
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 16;
@@ -1551,8 +1551,7 @@ GtkMessageDialog .titlebar {
 GtkPaned {
   // This is actually the invisible area of the paned separator, not a margin...
   // Yeah it's not right... Aaaaaanyway
-  margin: 5px;
-  border: 0;
+  margin: 16px; //drag area of the separator
 }
 
 /**************

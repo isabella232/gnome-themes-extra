@@ -46,7 +46,7 @@ $wm_button_bg_d: darken($bg_color, 10%);
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #cc0000;
-  -GtkPaned-handle-size: 0;
+  -GtkPaned-handle-size: 1;
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 16;
   -GtkScrolledWindow-scrollbar-spacing: 0;
@@ -1789,8 +1789,7 @@ GtkMessageDialog .titlebar {
     border-style: solid none solid solid; }
 
 GtkPaned {
-  margin: 5px;
-  border: 0; }
+  margin: 16px; }
 
 /**************
  * GtkInfoBar *
