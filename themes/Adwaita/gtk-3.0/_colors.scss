@@ -44,6 +44,12 @@ $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 @define-color theme_selected_fg_color $selected_fg_color;
 @define-color insensitive_bg_color $insensitive_bg_color;
 @define-color insensitive_fg_color $insensitive_fg_color;
+@define-color insensitive_base_color $base_color;
+@define-color theme_unfocused_fg_color $backdrop_fg_color;
+@define-color theme_unfocused_bg_color $backdrop_bg_color;
+@define-color theme_unfocused_base_color $backdrop_base_color;
+@define-color theme_unfocused_selected_bg_color $selected_bg_color;
+@define-color theme_unfocused_selected_fg_color $selected_fg_color;
 
 @define-color warning_color $warning_color;
 @define-color error_color $error_color;
@@ -68,25 +74,7 @@ $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 @define-color wm_button_active_color_b shade($bg_color, 0.89);
 @define-color wm_button_active_color_c shade($bg_color, 0.9);
 
-/*
-$wm_button_bg_a: $bg_color;
-$wm_button_bg_b: darken($bg_color, 15%);
-$wm_button_bg_c: darken($bg_color, 20%);
-$wm_button_bg_d: darken($bg_color, 10%);
-@define-color wm_button_bg_a shade($bg_color, 1.0);
-@define-color wm_button_bg_b shade($bg_color, 0.85);
-@define-color wm_button_bg_c shade($bg_color, 0.8);
-@define-color wm_button_bg_d shade($bg_color, 0.9);
+//FIXME this is really an API
 
-@define-color wm_button_bg_hover_a shade($wm_button_bg_a, 1.1);
-@define-color wm_button_bg_hover_b shade($wm_button_bg_b, 1.1);
-@define-color wm_button_bg_hover_c shade($wm_button_bg_c, 1.1);
-@define-color wm_button_bg_hover_d shade($wm_button_bg_d, 1.1);
-
-@define-color wm_button_bg_active_a shade($bg_color, 0.7);
-@define-color wm_button_bg_active_b shade($bg_color, 0.9);
-@define-color wm_button_bg_active_c shade($bg_color, 0.9);
-*/
-
-//FIXME we probably need many more for mutter
+@define-color content_view_bg $base_color;
 
