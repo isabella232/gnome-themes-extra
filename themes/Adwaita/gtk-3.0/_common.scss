@@ -708,17 +708,16 @@ column-header { // FIXME: something better
  ***************/
 
 GtkPopover {
+  margin: 10px;
+  padding: 2px;
+  border-color: $borders-color;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 5px;
   //background-clip: border-box;
   background-color: $bg_color;
 
-  border-color: $borders-color;
-  border-width: 1px;
-  border-style: solid;
-
   box-shadow: 0 2px 3px transparentize(black, 0.5);
-  margin: 10px;
-  padding: 2px;
   &:backdrop {
     box-shadow: none;
   }
@@ -735,6 +734,14 @@ GtkPopover {
     background-color: transparent;
     icon-shadow: none;
     border: 0;
+  }
+  .button,
+  .button:hover {
+    text-shadow: none;
+    transition: none;
+  }
+  .button:selected {
+    color:red;
   }
   &.osd { // Also used for touch cutnpaste overlays
           // FIXME Doesn't work
@@ -1093,32 +1100,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
     }    
   }
 
-/*
-  // treeview, menu and popover
-  GtkPopover GtkModelButton.button.#{$w},
-  .menuitem.#{$w},
-  GtkTreeView.#{$w} {
-    color: transparentize($fg_color, 0.9);
-    background-image: none;
-    background-color: transparent;
-    -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic');
-    &:hover { background-image: none; }
-    &:selected:selected, &:selected:hover { //yeah, it's a gross hack
-      background-image: none;
-      color: transparentize($base_color,0.9);
-    }
-    &:active, &:active:hover { -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic'); color: $fg_color; }
-    &:selected:active, &:selected:active:hover { color: $selected_fg_color; };
-    &:inconsistent, &:inconsistent:hover { -gtk-icon-source: -gtk-icontheme('#{$a}-mixed-symbolic'); }
-    &:backdrop { background-image: none; }
-  }
-  .menuitem.#{$w} {
-    &:hover, &:active:hover { color: $selected_fg_color; }
-  }
-  GtkPopover GtkModelButton.button.#{$w} {
-    &:hover, &:active:hover { color: $fg_color; }
-  }
-*/
+  //menu
   .menuitem.#{$w} {
     color: transparentize($fg_color,0.9);
     background-image: none;
@@ -1143,6 +1125,7 @@ $asset_suffix: if($variant=='dark', '-dark', '');
     }
   }
 
+  //treeview
   GtkTreeView.view.#{$w} {
     color: transparentize($fg_color,0.9);
     background-image: none;
@@ -1173,8 +1156,17 @@ $asset_suffix: if($variant=='dark', '-dark', '');
       }
     }
   }
-  GtkPopover GtkModelButton.button.#{$w} {
-    //FIXME
+
+  //popover
+  GtkPopover .button.#{$w} {
+    &:hover {
+      color: transparentize($fg_color,0.9);
+      &:active {
+        color: $fg_color;
+        &:selected { color: $selected_fg_color; }
+        &:backdrop { color: $backdrop_fg_color; }
+      }
+    }
   }
 }
 
