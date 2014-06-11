@@ -52,7 +52,7 @@ $wm_button_bg_d: darken($bg_color, 10%);
   -GtkScrolledWindow-scrollbar-spacing: 0;
   -GtkScrolledWindow-scrollbars-within-bevel: 1;
   -GtkToolItemGroup-expander-size: 11;
-  -GtkExpander-expander-size: 11;
+  -GtkExpander-expander-size: 16;
   -GtkTreeView-expander-size: 11;
   -GtkTreeView-horizontal-separator: 4;
   -GtkMenu-horizontal-padding: 0;
@@ -1665,6 +1665,16 @@ GtkScrolledWindow GtkViewport.frame {
   padding: 0 4px; }
   .app-notification .button {
     padding: 6px; }
+
+/*************
+ * Expanders *
+ *************/
+GtkExpander {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+  GtkExpander:hover {
+    background-color: #454c4c; }
+  GtkExpander:active {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
 /************
  * Calendar *

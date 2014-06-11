@@ -21,7 +21,7 @@
   -GtkScrolledWindow-scrollbars-within-bevel: 1;
 
   -GtkToolItemGroup-expander-size: 11;
-  -GtkExpander-expander-size: 11;
+  -GtkExpander-expander-size: 16;
   -GtkTreeView-expander-size: 11;
 
   -GtkTreeView-horizontal-separator: 4;
@@ -1440,6 +1440,16 @@ GtkScrolledWindow {
   .button { padding: 6px; }
 }
 
+/*************
+ * Expanders *
+ *************/
+
+GtkExpander {
+  -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+  &:hover { background-color: lighten($bg_color,5%); }
+  &:active { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+}
+ 
 /************
  * Calendar *
  ***********/
