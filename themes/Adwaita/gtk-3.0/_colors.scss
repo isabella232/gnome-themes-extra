@@ -54,8 +54,39 @@ $backdrop_borders_color: $borders_color;
 @define-color wm_title shade($fg_color, 1.8);
 @define-color wm_unfocused_title $backdrop_fg_color;
 @define-color wm_highlight $borders_edge;
-@define-color wm_title_highlight $borders_edge;
-@define-color wm_title_shadow $borders_edge;
+@define-color wm_borders_edge $borders_edge;
+
+@define-color wm_bg_a shade($bg_color, 1.2);
+@define-color wm_bg_b $bg_color;
+
+@define-color wm_shadow alpha(black, 0.35);
+@define-color wm_border alpha(black, 0.18);
+
+@define-color wm_button_hover_color_a shade($bg_color, 1.3);
+@define-color wm_button_hover_color_b $bg_color;
+@define-color wm_button_active_color_a shade($bg_color, 0.85);
+@define-color wm_button_active_color_b shade($bg_color, 0.89);
+@define-color wm_button_active_color_c shade($bg_color, 0.9);
+
+/*
+$wm_button_bg_a: $bg_color;
+$wm_button_bg_b: darken($bg_color, 15%);
+$wm_button_bg_c: darken($bg_color, 20%);
+$wm_button_bg_d: darken($bg_color, 10%);
+@define-color wm_button_bg_a shade($bg_color, 1.0);
+@define-color wm_button_bg_b shade($bg_color, 0.85);
+@define-color wm_button_bg_c shade($bg_color, 0.8);
+@define-color wm_button_bg_d shade($bg_color, 0.9);
+
+@define-color wm_button_bg_hover_a shade($wm_button_bg_a, 1.1);
+@define-color wm_button_bg_hover_b shade($wm_button_bg_b, 1.1);
+@define-color wm_button_bg_hover_c shade($wm_button_bg_c, 1.1);
+@define-color wm_button_bg_hover_d shade($wm_button_bg_d, 1.1);
+
+@define-color wm_button_bg_active_a shade($bg_color, 0.7);
+@define-color wm_button_bg_active_b shade($bg_color, 0.9);
+@define-color wm_button_bg_active_c shade($bg_color, 0.9);
+*/
 
 //FIXME we probably need many more for mutter
 
