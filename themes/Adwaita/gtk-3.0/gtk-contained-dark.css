@@ -944,6 +944,11 @@ GtkPopover {
     .notebook tab.reorderable-page {
       border-width: 0;
       padding: 6px 19px; }
+      .notebook tab.reorderable-page:hover {
+        border-width: 0 0 3px 0;
+        border-color: rgba(28, 31, 31, 0.5);
+        background-color: rgba(57, 63, 63, 0.2);
+        color: #c0c2c0; }
       .notebook tab.reorderable-page:active {
         padding: 8px 19px 5px 19px;
         border-width: 0 1px 3px 1px;
