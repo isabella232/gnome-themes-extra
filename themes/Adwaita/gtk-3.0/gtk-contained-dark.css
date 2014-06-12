@@ -53,7 +53,7 @@
   -GtkWidget-focus-line-width: 1;
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
-  -GtkDialog-button-spacing: 0;
+  -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
   outline-color: rgba(238, 238, 236, 0.3);
   outline-style: dashed;
@@ -740,6 +740,7 @@ column-header .button:backdrop {
   background-image: none;
   background-color: #333333;
   color: #90908f;
+  text-shadow: none;
   font-weight: bold; }
 
 /*********
@@ -1656,6 +1657,9 @@ GtkCalendar {
 /***********
  * Dialogs *
  ***********/
+.message-dialog {
+  -GtkDialog-button-spacing: 0; }
+
 GtkMessageDialog .titlebar {
   border-style: none;
   box-shadow: inset 0 1px rgba(238, 238, 236, 0.1); }

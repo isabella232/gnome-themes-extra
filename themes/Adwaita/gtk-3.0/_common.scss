@@ -37,7 +37,7 @@
   -GtkWindow-resize-grip-width: 0;
   -GtkWindow-resize-grip-height: 0;
   
-  -GtkDialog-button-spacing: 0;
+  -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
 
   // We use the outline properties to signal the focus properties
@@ -654,6 +654,7 @@ column-header { // FIXME: something better
     background-image: none;
     background-color: $base_color;
     color: mix($fg_color,$base_color,50%);
+    text-shadow: none;
     font-weight: bold;
   }
 }
@@ -1464,6 +1465,11 @@ GtkCalendar {
 /***********
  * Dialogs *
  ***********/
+
+.message-dialog {
+  // no spacing in message dialogs and the likes
+  -GtkDialog-button-spacing: 0;
+}
 
 GtkMessageDialog .titlebar {
   border-style: none;
