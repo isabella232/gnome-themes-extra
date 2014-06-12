@@ -912,7 +912,8 @@ GtkPopover {
     border-width: 0;
     border-style: solid;
     border-color: transparent;
-    background-color: transparent; }
+    background-color: transparent;
+    outline-offset: 0; }
     .notebook tab.top, .notebook tab.bottom {
       padding: 8px 20px; }
     .notebook tab.left, .notebook tab.right {
@@ -956,6 +957,7 @@ GtkPopover {
           border-color: #c2c2c2;
           background-color: #e7e7e7; }
     .notebook tab GtkLabel {
+      padding: 0 2px;
       font-weight: bold;
       color: #8d9091; }
       .notebook tab GtkLabel.prelight-page {
