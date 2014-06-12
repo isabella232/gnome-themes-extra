@@ -12,6 +12,8 @@
 @define-color theme_unfocused_base_color #fcfcfc;
 @define-color theme_unfocused_selected_bg_color #4a90d9;
 @define-color theme_unfocused_selected_fg_color white;
+@define-color borders #a1a1a1;
+@define-color unfocused_borders #a8a8a8;
 @define-color warning_color #f57900;
 @define-color error_color #cc0000;
 @define-color success_color #73d216;
