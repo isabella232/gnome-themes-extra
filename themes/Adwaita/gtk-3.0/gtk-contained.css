@@ -436,7 +436,7 @@
     border-radius: 3px;
     border-style: solid; }
 
-GtkLinkButton.button, GtkLinkButton.button:hover, GtkLinkButton.button:active, GtkLinkButton.button:backdrop {
+GtkLinkButton.button, GtkLinkButton.button:hover, GtkLinkButton.button:active, GtkLinkButton.button:backdrop, .notebook tab .button {
   border-color: transparent;
   background-color: transparent;
   background-image: none;
@@ -938,24 +938,27 @@ GtkPopover {
       background-color: transparent;
       border-color: transparent; }
     .notebook tab.reorderable-page {
-      border-width: 0;
-      padding: 6px 19px; }
+      border-color: transparent;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent; }
       .notebook tab.reorderable-page:hover {
-        border-width: 0 0 3px 0;
-        border-color: rgba(161, 161, 161, 0.5);
-        background-color: rgba(237, 237, 237, 0.2);
-        color: #5d6263; }
-      .notebook tab.reorderable-page:active {
-        padding: 8px 19px 5px 19px;
-        border-width: 0 1px 3px 1px;
+        border-color: rgba(161, 161, 161, 0.3);
+        border-bottom-color: rgba(161, 161, 161, 0.3);
+        background-color: rgba(237, 237, 237, 0.2); }
+      .notebook tab.reorderable-page:active, .notebook tab.reorderable-page.active-page {
         background-color: rgba(237, 237, 237, 0.5);
         border-color: rgba(161, 161, 161, 0.5);
         border-bottom-color: #4a90d9; }
-        .notebook tab.reorderable-page:active:hover {
+        .notebook tab.reorderable-page:active:hover, .notebook tab.reorderable-page.active-page:hover {
           background-color: rgba(237, 237, 237, 0.7); }
-        .notebook tab.reorderable-page:active:backdrop, .notebook tab.reorderable-page:active:active:backdrop {
-          border-color: #c2c2c2;
-          background-color: #e7e7e7; }
+        .notebook tab.reorderable-page:active:backdrop, .notebook tab.reorderable-page.active-page:backdrop {
+          border-left-color: #a8a8a8;
+          border-right-color: #a8a8a8;
+          background-color: #ededed;
+          border-bottom-color: #4a90d9; }
+      .notebook tab.reorderable-page:backdrop {
+        border-color: transparent;
+        background-color: transparent; }
     .notebook tab GtkLabel {
       padding: 0 2px;
       font-weight: bold;
@@ -970,29 +973,16 @@ GtkPopover {
         color: #8d9090; }
     .notebook tab .button {
       border: 1px solid transparent;
-      box-shadow: none;
-      background-image: linear-gradient(to bottom, transparent);
-      color: rgba(46, 52, 54, 0.5); }
+      icon-shadow: none;
+      transition: none;
+      color: inherit; }
       .notebook tab .button:hover {
-        border-width: 1px;
-        border-style: solid;
-        color: #2e3436;
-        background-image: linear-gradient(to bottom, white, #ededed 40%, lightgray);
         border-color: #a1a1a1;
-        text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-        icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-        box-shadow: inset 0 1px white, 0 1px white; }
+        text-shadow: none; }
       .notebook tab .button:active {
-        border-width: 1px;
-        border-style: solid;
-        color: #2e3436;
-        border-color: #a1a1a1;
-        background-image: linear-gradient(to bottom, #c7c7c7, #d1d1d1 3%, lightgray);
-        text-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-        icon-shadow: 0 1px rgba(255, 255, 255, 0.76923);
-        box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.3), 0 1px white; }
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.3); }
       .notebook tab .button > GtkImage {
-        padding: 3px; }
+        padding: 2px; }
 
 .notebook > .frame,
 .notebook > .view {
