@@ -1440,7 +1440,7 @@ GtkScrolledWindow {
 
 GtkExpander {
   -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-  &:hover { background-color: lighten($bg_color,5%); }
+  &:hover { color: lighten($fg_color,30%); } //only lightens the arrow
   &:active { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
 }
  
@@ -1540,7 +1540,6 @@ GtkMessageDialog .titlebar {
 
 GtkPaned {
   // This is actually the invisible area of the paned separator, not a margin...
-  // Yeah it's not right... Aaaaaanyway
   margin: 16px; //drag area of the separator
 }
 

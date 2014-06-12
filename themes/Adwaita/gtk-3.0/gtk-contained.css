@@ -1632,7 +1632,7 @@ GtkScrolledWindow GtkViewport.frame {
 GtkExpander {
   -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
   GtkExpander:hover {
-    background-color: #fafafa; }
+    color: #748489; }
   GtkExpander:active {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 
