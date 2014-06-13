@@ -170,7 +170,7 @@
     color: #454c4c;
     background-image: linear-gradient(to bottom, #393f3f);
     box-shadow: 0 1px rgba(255, 255, 255, 0); }
-  .entry:selected, .entrybackdrop:selected {
+  .entry:selected, .entry:backdrop:selected {
     background-color: #215d9c;
     color: white; }
   .entry.progressbar {
