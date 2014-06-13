@@ -73,19 +73,8 @@
     <file preprocess="to-pixdata">assets/checkbox-unchecked-hover@2.png</file>
     <file preprocess="to-pixdata">assets/checkbox-unchecked.png</file>
     <file preprocess="to-pixdata">assets/checkbox-unchecked@2.png</file>
-    <file preprocess="to-pixdata">assets/dnd-counter.svg</file>
-    <file preprocess="to-pixdata">assets/grid-selection-checked.svg</file>
-    <file preprocess="to-pixdata">assets/grid-selection-unchecked.svg</file>
     <file preprocess="to-pixdata">assets/noise-texture-dark.png</file>
     <file preprocess="to-pixdata">assets/noise-texture-light.png</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-dark.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-prelight-dark.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-prelight.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical-dark.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical-prelight-dark.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical-prelight.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip-vertical.svg</file>
-    <file preprocess="to-pixdata">assets/pane-separator-grip.svg</file>
     <file preprocess="to-pixdata">assets/radio-checked-backdrop-dark.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-backdrop-dark@2.png</file>
     <file preprocess="to-pixdata">assets/radio-checked-backdrop-insensitive-dark.png</file>
@@ -154,14 +143,6 @@
     <file preprocess="to-pixdata">assets/radio-unchecked-hover@2.png</file>
     <file preprocess="to-pixdata">assets/radio-unchecked.png</file>
     <file preprocess="to-pixdata">assets/radio-unchecked@2.png</file>
-    <file preprocess="to-pixdata">assets/resize-grip.svg</file>
-    <file preprocess="to-pixdata">assets/sidebar-radio-checked-dark.svg</file>
-    <file preprocess="to-pixdata">assets/sidebar-radio-checked.svg</file>
-    <file preprocess="to-pixdata">assets/sidebar-radio-prelight.svg</file>
-    <file preprocess="to-pixdata">assets/sidebar-radio-selected-dark.svg</file>
-    <file preprocess="to-pixdata">assets/sidebar-radio-selected-prelight.svg</file>
-    <file preprocess="to-pixdata">assets/sidebar-radio-selected.svg</file>
-    <file preprocess="to-pixdata">assets/thumbnail-frame.png</file>
     <file>gtk.css</file>
     <file>gtk-dark.css</file>
     <file>gtk-contained.css</file>
