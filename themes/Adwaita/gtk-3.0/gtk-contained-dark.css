@@ -717,8 +717,9 @@ GtkComboBox {
   .header-bar.selection-mode {
     color: #14375d;
     text-shadow: 0 1px rgba(0, 0, 0, 0.5);
-    background-image: linear-gradient(to bottom, #256ab1, #2362a5);
-    box-shadow: inset 0 -1px #303535, inset 0 1px rgba(43, 100, 160, 0.55); }
+    background-image: linear-gradient(to bottom, #2a76c6, #1e5690);
+    box-shadow: inset 0 -1px #1c5187, inset 0 1px rgba(43, 100, 160, 0.55);
+    border-color: #06121e; }
     .titlebar.selection-mode .button,
     .header-bar.selection-mode .button {
       border-width: 1px;
