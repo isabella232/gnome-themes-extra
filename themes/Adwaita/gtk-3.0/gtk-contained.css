@@ -32,7 +32,6 @@
 @define-color wm_button_active_color_c shade(#ededed, 0.9);
 @define-color content_view_bg white;
 * {
-  engine: adwaita;
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #cc0000;
