@@ -1,3 +1,8 @@
+3.13.3
+======
+  - major code refactor using SASS
+  - moved gtk3 parts of the theme into gtk+
+  
 3.13.1
 ======
   - Window borders on dark variant
