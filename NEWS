@@ -1,3 +1,8 @@
+3.13.4
+======
+ - drop duplicate properties from metacity geometry
+ - keep a dummy gtk.css for Adwaita
+
 3.13.3
 ======
   - major code refactor using SASS
