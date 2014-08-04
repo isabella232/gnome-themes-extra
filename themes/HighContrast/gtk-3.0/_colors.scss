@@ -10,7 +10,7 @@ $selected_fg_color: #fff;
 $selected_bg_color: #000; //#4a90d9;
 $selected_borders_color: #000;
 
-$borders_color: $bg_color;
+$borders_color: mix($bg_color,$fg_color,50%);
 $borders_edge: #fff;
 $link_color: $selected_bg_color;
 
