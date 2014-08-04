@@ -144,12 +144,17 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
   // pushed button
   //
-    color: $tc;
     @if $c!=$bg_color { @include _button_border_color($c); }
     @else { border-color: $borders_color; }
-    background-image: linear-gradient(to bottom,
-                                      $borders_color);
-    color: $c;
+    @if $c!=$bg_color {
+      background-image: linear-gradient(to bottom, darken($c,25%));
+      color: $tc;
+    }
+    @else {
+      background-image: linear-gradient(to bottom,
+                                        $borders_color);
+      color: $bg_color;
+    }
   }
   @else if $t==insensitive {
   //
