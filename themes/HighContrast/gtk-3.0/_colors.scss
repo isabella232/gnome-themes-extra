@@ -31,8 +31,8 @@ $insensitive_borders_color: $borders_color;
 //colors for the backdrop state, derived from the main colors.
 $backdrop_base_color: $base_color;
 $backdrop_bg_color: $bg_color;
-$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 90%);
-$backdrop_insensitive_color: $backdrop_bg_color;
+$backdrop_fg_color: $fg_color;
+$backdrop_insensitive_color: $insensitive_fg_color;
 $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 
 //apps rely on some named colors to be exported
