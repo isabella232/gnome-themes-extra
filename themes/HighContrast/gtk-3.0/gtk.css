@@ -1727,61 +1727,158 @@ GtkCalendar {
 /***********
  * Dialogs *
  ***********/
+.message-dialog .dialog-action-area .button {
+  padding: 8px; }
+
 .message-dialog {
   -GtkDialog-button-spacing: 0; }
+  .message-dialog .titlebar {
+    border-style: none;
+    box-shadow: inset 0 1px white; }
+  .message-dialog.csd {
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px; }
+    .message-dialog.csd .dialog-action-area .button {
+      padding: 12px;
+      border-radius: 0;
+      border-width: 1px;
+      border-style: solid;
+      color: black;
+      background-image: linear-gradient(to bottom, white, white 40%, #f2f2f2);
+      border-color: #7f7f7f; }
+      .message-dialog.csd .dialog-action-area .button:hover {
+        border-width: 1px;
+        border-style: solid;
+        color: black;
+        border-color: #7f7f7f;
+        background-image: linear-gradient(to bottom, white, white 40%, white); }
+      .message-dialog.csd .dialog-action-area .button:active {
+        border-width: 1px;
+        border-style: solid;
+        color: black;
+        border-color: #7f7f7f;
+        background-image: linear-gradient(to bottom, #4d4d4d);
+        color: white; }
+      .message-dialog.csd .dialog-action-area .button:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: #7f7f7f;
+        border-color: #7f7f7f;
+        background-image: linear-gradient(to bottom, white);
+        text-shadow: none;
+        icon-shadow: none; }
+      .message-dialog.csd .dialog-action-area .button:backdrop {
+        border-width: 1px;
+        border-style: solid;
+        color: #191919;
+        border-color: #8b8b8b;
+        background-image: linear-gradient(to bottom, white);
+        text-shadow: none;
+        icon-shadow: none; }
+      .message-dialog.csd .dialog-action-area .button:backdrop:insensitive {
+        border-width: 1px;
+        border-style: solid;
+        color: white;
+        border-color: #8b8b8b;
+        background-image: linear-gradient(to bottom, white); }
+      .message-dialog.csd .dialog-action-area .button.suggested-action {
+        border-width: 1px;
+        border-style: solid;
+        color: white;
+        background-image: linear-gradient(to bottom, #0d0d0d, black 40%, black);
+        border-color: black; }
+        .message-dialog.csd .dialog-action-area .button.suggested-action:hover {
+          border-width: 1px;
+          border-style: solid;
+          color: white;
+          border-color: black;
+          background-image: linear-gradient(to bottom, #242424, #0a0a0a 40%, black); }
+        .message-dialog.csd .dialog-action-area .button.suggested-action:active {
+          border-width: 1px;
+          border-style: solid;
+          color: white;
+          border-color: black;
+          background-image: linear-gradient(to bottom, white);
+          color: black; }
+        .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop {
+          border-width: 1px;
+          border-style: solid;
+          color: white;
+          border-color: black;
+          background-image: linear-gradient(to bottom, black);
+          text-shadow: none;
+          icon-shadow: none; }
+          .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive {
+            border-width: 1px;
+            border-style: solid;
+            color: white;
+            border-color: #8b8b8b;
+            background-image: linear-gradient(to bottom, white); }
+        .message-dialog.csd .dialog-action-area .button.suggested-action:insensitive {
+          border-width: 1px;
+          border-style: solid;
+          color: #7f7f7f;
+          border-color: #7f7f7f;
+          background-image: linear-gradient(to bottom, white);
+          text-shadow: none;
+          icon-shadow: none; }
+      .message-dialog.csd .dialog-action-area .button.destructive-action {
+        border-width: 1px;
+        border-style: solid;
+        color: white;
+        background-image: linear-gradient(to bottom, #f14141, #ef2929 40%, #ed1212);
+        border-color: #8e0b0b; }
+        .message-dialog.csd .dialog-action-area .button.destructive-action:hover {
+          border-width: 1px;
+          border-style: solid;
+          color: white;
+          border-color: #8e0b0b;
+          background-image: linear-gradient(to bottom, #f46b6b, #f03c3c 40%, #ef2929); }
+        .message-dialog.csd .dialog-action-area .button.destructive-action:active {
+          border-width: 1px;
+          border-style: solid;
+          color: white;
+          border-color: #8e0b0b;
+          background-image: linear-gradient(to bottom, white);
+          color: #ef2929; }
+        .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop {
+          border-width: 1px;
+          border-style: solid;
+          color: white;
+          border-color: #ef2929;
+          background-image: linear-gradient(to bottom, #ef2929);
+          text-shadow: none;
+          icon-shadow: none; }
+          .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive {
+            border-width: 1px;
+            border-style: solid;
+            color: white;
+            border-color: #8b8b8b;
+            background-image: linear-gradient(to bottom, white); }
+        .message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+          border-width: 1px;
+          border-style: solid;
+          color: #7f7f7f;
+          border-color: #7f7f7f;
+          background-image: linear-gradient(to bottom, white);
+          text-shadow: none;
+          icon-shadow: none; }
+    .message-dialog.csd .dialog-action-area .button, .message-dialog.csd .dialog-action-area .button:hover, .message-dialog.csd .dialog-action-area .button:active, .message-dialog.csd .dialog-action-area .button:insensitive, .message-dialog.csd .dialog-action-area .button:backdrop, .message-dialog.csd .dialog-action-area .button:backdrop:insensitive, .message-dialog.csd .dialog-action-area .button.suggested-action, .message-dialog.csd .dialog-action-area .button.suggested-action:hover, .message-dialog.csd .dialog-action-area .button.suggested-action:active, .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop, .message-dialog.csd .dialog-action-area .button.suggested-action:backdrop:insensitive, .message-dialog.csd .dialog-action-area .button.suggested-action:insensitive, .message-dialog.csd .dialog-action-area .button.destructive-action, .message-dialog.csd .dialog-action-area .button.destructive-action:hover, .message-dialog.csd .dialog-action-area .button.destructive-action:active, .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop, .message-dialog.csd .dialog-action-area .button.destructive-action:backdrop:insensitive, .message-dialog.csd .dialog-action-area .button.destructive-action:insensitive {
+      border-right-style: none;
+      border-bottom-style: none; }
+    .message-dialog.csd .dialog-action-area .button:last-child {
+      border-bottom-right-radius: 7px; }
+    .message-dialog.csd .dialog-action-area .button:first-child {
+      border-left-style: none;
+      border-bottom-left-radius: 7px; }
 
-GtkMessageDialog .titlebar {
-  border-style: none;
-  box-shadow: inset 0 1px white; }
-
-.dialog-action-area.linked .button {
-  padding: 6px;
-  border-radius: 0;
-  border-width: 1px;
-  border-style: solid;
-  color: black;
-  background-image: linear-gradient(to bottom, white, white 40%, #f2f2f2);
-  border-color: #7f7f7f; }
-  .dialog-action-area.linked .button:hover {
-    border-width: 1px;
-    border-style: solid;
-    color: black;
-    border-color: #7f7f7f;
-    background-image: linear-gradient(to bottom, white, white 40%, white); }
-  .dialog-action-area.linked .button:active {
-    border-width: 1px;
-    border-style: solid;
-    color: black;
-    border-color: #7f7f7f;
-    background-image: linear-gradient(to bottom, #4d4d4d);
-    color: white; }
-  .dialog-action-area.linked .button:insensitive {
-    border-width: 1px;
-    border-style: solid;
-    color: #7f7f7f;
-    border-color: #7f7f7f;
-    background-image: linear-gradient(to bottom, white);
-    text-shadow: none;
-    icon-shadow: none; }
-  .dialog-action-area.linked .button:backdrop {
-    border-width: 1px;
-    border-style: solid;
-    color: #191919;
-    border-color: #8b8b8b;
-    background-image: linear-gradient(to bottom, white);
-    text-shadow: none;
-    icon-shadow: none; }
-  .dialog-action-area.linked .button:backdrop:insensitive {
-    border-width: 1px;
-    border-style: solid;
-    color: white;
-    border-color: #8b8b8b;
-    background-image: linear-gradient(to bottom, white); }
-.dialog-action-area.linked .button, .dialog-action-area.linked .button:hover, .dialog-action-area.linked .button:active, .dialog-action-area.linked .button:insensitive, .dialog-action-area.linked .button:backdrop, .dialog-action-area.linked .button:backdrop:insensitive {
-  border-style: solid none none solid; }
-.dialog-action-area.linked .button:first-child {
-  border-style: solid none none none; }
-
+GtkFileChooserDialog .search-bar {
+  background-color: white;
+  border-color: white;
+  box-shadow: none; }
+  GtkFileChooserDialog .search-bar:backdrop {
+    background-color: white;
+    border-color: white; }
 GtkFileChooserDialog .dialog-action-box {
   border-top: 1px solid #7f7f7f; }
   GtkFileChooserDialog .dialog-action-box:backdrop {

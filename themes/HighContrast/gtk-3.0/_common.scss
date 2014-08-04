@@ -1650,53 +1650,101 @@ GtkCalendar {
  * Dialogs *
  ***********/
 
-.message-dialog {
-  // no spacing in message dialogs and the likes
+.message-dialog .dialog-action-area .button {
+  padding: 8px;
+}
+
+.message-dialog { // Message Dialog styling
   -GtkDialog-button-spacing: 0;
+  .titlebar {
+    border-style: none;
+    box-shadow: inset 0 1px $borders_edge;
+  }
+  &.csd { // rounded bottom border styling for csd version
+    // bigger radius for better antialiasing
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    .dialog-action-area .button {
+      padding: 12px;
+      border-radius: 0;
+      @include button(normal, $noedge: true);
+      @extend %middle_button;
+      &:hover {
+        @include button(hover, $noedge: true);
+        @extend %middle_button;
+      }
+      &:active {
+        @include button(active, $noedge: true);
+        @extend %middle_button;
+      }
+      &:insensitive {
+        @include button(insensitive, $noedge: true);
+        @extend %middle_button;
+      }
+      &:backdrop {
+        @include button(backdrop, $noedge: true);
+        @extend %middle_button;
+      }
+      &:backdrop:insensitive {
+        @include button(backdrop-insensitive, $noedge: true);
+        @extend %middle_button;
+      }
+      @each $b_type, $b_color in (suggested-action, $selected_bg_color),
+                                 (destructive-action, $destructive_color) {
+        &.#{$b_type} {
+          @include button(normal, $b_color, white, $noedge: true);
+          @extend %middle_button;
+          &:hover {
+            @include button(hover, $b_color, white, $noedge: true);
+            @extend %middle_button;
+          }
+          &:active {
+            @include button(active, $b_color, white, $noedge: true);
+            @extend %middle_button;
+          }
+          &:backdrop {
+            @include button(backdrop, $b_color, white);
+            @extend %middle_button;
+            &:insensitive {
+              @include button(backdrop-insensitive);
+              @extend %middle_button;
+            }
+          }
+          &:insensitive {
+            @include button(insensitive);
+            @extend %middle_button;
+          }
+        }
+      }
+      &:first-child{ @extend %first_button; }
+      &:last-child { @extend %last_button; }
+    }
+    %middle_button {
+      border-right-style: none;
+      border-bottom-style: none;
+    }
+    %last_button { border-bottom-right-radius: 7px; }
+    %first_button {
+      border-left-style: none;
+      border-bottom-left-radius: 7px;
+    }
+  }
 }
 
-GtkMessageDialog .titlebar {
-  border-style: none;
-  box-shadow: inset 0 1px $borders_edge;
-}
-
-.dialog-action-area.linked {
-  & .button {
-    padding: 6px;
-    border-radius: 0;
-    @include button(normal, $noedge: true);
-    @extend %middle_button;
-    &:hover {
-      @include button(hover, $noedge: true);
-      @extend %middle_button;
-    }
-    &:active {
-      @include button(active, $noedge: true);
-      @extend %middle_button;
-    }
-    &:insensitive {
-      @include button(insensitive, $noedge: true);
-      @extend %middle_button;
-    }
+GtkFileChooserDialog {
+  .search-bar {
+    background-color: $base_color;
+    border-color: $bg_color;
+    box-shadow: none;
     &:backdrop {
-      @include button(backdrop, $noedge: true);
-      @extend %middle_button;
+      background-color: $backdrop_base_color;
+      border-color: $backdrop_bg_color;
     }
-    &:backdrop:insensitive {
-      @include button(backdrop-insensitive, $noedge: true);
-      @extend %middle_button;
-    }
-    &:first-child{ @extend %first_button; }
   }
-  %middle_button {
-    border-style: solid none none solid;
+  .dialog-action-box {
+    border-top: 1px solid $borders_color;
+    &:backdrop { border-top-color: $backdrop_borders_color; }
   }
-  %first_button { border-style: solid none none none; }
-}
-
-GtkFileChooserDialog .dialog-action-box {
-  border-top: 1px solid $borders_color;
-  &:backdrop { border-top-color: $backdrop_borders_color; }
 }
 
 /***********
