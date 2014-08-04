@@ -105,7 +105,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
 // normal, hover, active, insensitive, insensitive-active,
 // backdrop, backdrop-active, backdrop-insensitive, backdrop-insensitive-active
 //
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
 
   $_top_hilight: if(lightness($c)> 70%, white, transparentize(white,0.9)); //not just dark/light but colored buttons
@@ -148,7 +148,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
     @if $c!=$bg_color { @include _button_border_color($c); }
     @else { border-color: $borders_color; }
     background-image: linear-gradient(to bottom,
-                                      lighten($tc,30%));
+                                      $borders_color);
     color: $c;
   }
   @else if $t==insensitive {
