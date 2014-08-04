@@ -1407,6 +1407,64 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
   padding: 1px;
   outline-offset: 0; }
 
+.check {
+  color: rgba(0, 0, 0, 0.1);
+  background-image: none;
+  -gtk-icon-source: -gtk-icontheme("checkbox-checked-symbolic"); }
+  .check:active {
+    color: black; }
+    .check:active:insensitive {
+      color: #7f7f7f; }
+      .check:active:insensitive:backdrop {
+        color: white; }
+    .check:active:backdrop {
+      color: #191919; }
+  .check:insensitive {
+    color: rgba(127, 127, 127, 0.1); }
+    .check:insensitive:backdrop {
+      color: transparent; }
+  .check:inconsistent {
+    -gtk-icon-source: -gtk-icontheme("checkbox-mixed-symbolic"); }
+  .check:selected, .check:selected:focus {
+    color: rgba(255, 255, 255, 0.1); }
+    .check:selected:active, .check:selected:focus:active {
+      color: white; }
+      .check:selected:active:backdrop, .check:selected:focus:active:backdrop {
+        color: white; }
+  .check:backdrop {
+    color: rgba(25, 25, 25, 0.1); }
+    .check:backdrop:selected {
+      color: rgba(255, 255, 255, 0.1); }
+
+.radio {
+  color: rgba(0, 0, 0, 0.1);
+  background-image: none;
+  -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic"); }
+  .radio:active {
+    color: black; }
+    .radio:active:insensitive {
+      color: #7f7f7f; }
+      .radio:active:insensitive:backdrop {
+        color: white; }
+    .radio:active:backdrop {
+      color: #191919; }
+  .radio:insensitive {
+    color: rgba(127, 127, 127, 0.1); }
+    .radio:insensitive:backdrop {
+      color: transparent; }
+  .radio:inconsistent {
+    -gtk-icon-source: -gtk-icontheme("radio-mixed-symbolic"); }
+  .radio:selected, .radio:selected:focus {
+    color: rgba(255, 255, 255, 0.1); }
+    .radio:selected:active, .radio:selected:focus:active {
+      color: white; }
+      .radio:selected:active:backdrop, .radio:selected:focus:active:backdrop {
+        color: white; }
+  .radio:backdrop {
+    color: rgba(25, 25, 25, 0.1); }
+    .radio:backdrop:selected {
+      color: rgba(255, 255, 255, 0.1); }
+
 /************
  * GtkScale *
  ************/
