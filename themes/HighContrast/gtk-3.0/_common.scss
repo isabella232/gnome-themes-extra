@@ -1296,8 +1296,10 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     color: transparentize($fg_color,0.9);
     background-image: none;
     -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic');
+    &:hover { color: $borders_color; }
     &:active {
-    color: $fg_color;
+      color: $fg_color;
+      &:hover { color: $borders_color; }
       &:insensitive {
         color: $insensitive_fg_color;
         &:backdrop { color: $backdrop_insensitive_color; }
