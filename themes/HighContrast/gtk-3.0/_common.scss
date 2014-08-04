@@ -267,7 +267,7 @@ GtkLabel {
   //overlay / OSD style
   .osd & {
     padding: 6px;
-    border-width: 1px;
+    border-width: 1px 1px 2px 1px;
     @include button(osd);
     @extend %linked_buttons;
     &:hover {

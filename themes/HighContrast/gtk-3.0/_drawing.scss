@@ -261,10 +261,8 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
   // normal osd button
   //
-    background-image: linear-gradient(to bottom,
-                                  transparentize(#fff,0.9),
-                                  transparentize(#fff,0.95),
-                                  transparentize(#000,0.99));
+    background-image: none;
+    background-color: $osd_bg_color;
     border-color: $osd_borders_color;
     box-shadow: none;
   }
@@ -272,10 +270,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
   // active osd button
   //
-    background-image: linear-gradient(to bottom,
-                                  transparentize(#fff,0.85),
-                                  transparentize(#fff,0.9),
-                                  transparentize(#000,0.99));
+    background-color: transparentize(#fff,0.99);
     border-color: $osd_borders_color;
     box-shadow: none;
   }
@@ -283,10 +278,7 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
   // active osd button
   //
-    background-image: linear-gradient(to bottom,
-                                  transparentize(#000,0.95),
-                                  transparentize(#fff,0.95),
-                                  transparentize(#fff,0.9));
+    background-color: transparentize(#fff,0.97));
     border-color: $osd_borders_color;
     box-shadow: none;
   }
@@ -294,8 +286,6 @@ $widget_edge: 0 1px $borders_edge; //outer hilight "used" on
   //
   // insensitive osd button
   //
-    background-image: linear-gradient(to bottom,
-                      $osd_bg_color);
     border-color: $osd_borders_color;
     color: $insensitive_fg_color;
   }
