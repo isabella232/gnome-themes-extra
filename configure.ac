@@ -83,7 +83,6 @@ AC_CONFIG_FILES([
 Makefile
 themes/Makefile
 themes/Adwaita/Makefile
-themes/Adwaita/backgrounds/Makefile
 themes/Adwaita/gtk-2.0/Makefile
 themes/Adwaita/gtk-3.0/Makefile
 themes/Adwaita/metacity-1/Makefile
