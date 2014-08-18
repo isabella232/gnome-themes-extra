@@ -488,22 +488,24 @@
   border-radius: 3px;
   border-style: solid; }
 
-.osd .button, .osd .button:hover, .osd .button:active, .osd .button:checked, .osd .button:insensitive, .osd .button:backdrop, .inline-toolbar .button, .inline-toolbar .button:backdrop, .linked .button, .linked .button:backdrop {
+.osd .button, .osd .button:hover, .osd .button:active, .osd .button:checked, .osd .button:insensitive, .osd .button:backdrop, .inline-toolbar .button, .inline-toolbar .button:backdrop, .linked .button, .linked .button:backdrop, .linked > GtkComboBox > .button:dir(ltr) {
   border-radius: 0;
   border-left-style: none; }
-  .osd .button:dir(rtl), .inline-toolbar .button:dir(rtl), .linked .button:dir(rtl) {
+  .osd .button:dir(rtl), .inline-toolbar .button:dir(rtl), .linked .button:dir(rtl), .linked > GtkComboBox > .button:dir(rtl) {
+    border-radius: 0;
     border-right-style: none;
     border-left-style: solid; }
-  .osd .button:first-child, .inline-toolbar .button:first-child, .linked .button:first-child {
-    border-radius: 3px 0 0 3px;
-    border-left-style: solid; }
-  .osd .button:last-child, .inline-toolbar .button:last-child, .linked .button:last-child {
-    border-radius: 0 3px 3px 0; }
-    .osd .button:last-child:dir(rtl), .inline-toolbar .button:last-child:dir(rtl), .linked .button:last-child:dir(rtl) {
-      border-right-style: solid; }
-  .osd .button:only-child, .inline-toolbar .button:only-child, .linked .button:only-child {
-    border-radius: 3px;
-    border-style: solid; }
+
+.osd .button:first-child, .inline-toolbar .button:first-child, .linked .button:first-child, .linked > GtkComboBox:first-child > .button {
+  border-radius: 3px 0 0 3px;
+  border-left-style: solid; }
+.osd .button:last-child, .inline-toolbar .button:last-child, .linked .button:last-child, .linked > GtkComboBox:last-child > .button {
+  border-radius: 0 3px 3px 0; }
+  .osd .button:last-child:dir(rtl), .inline-toolbar .button:last-child:dir(rtl), .linked .button:last-child:dir(rtl), .linked > GtkComboBox:last-child > .button:dir(rtl) {
+    border-right-style: solid; }
+.osd .button:only-child, .inline-toolbar .button:only-child, .linked .button:only-child, .linked > GtkComboBox:only-child > .button {
+  border-radius: 3px;
+  border-style: solid; }
 
 .button.flat, .button.flat:backdrop, .menuitem.button.flat, .menuitem.button.flat:backdrop, .menuitem.button.flat:backdrop:hover, .button:link, .button:visited, .button:link:hover, .button:link:active, .button:visited:hover, .button:visited:active, .button:link:backdrop, .button:visited:backdrop, .notebook tab .button, .list-row.button, .list-row.button:backdrop:hover, GtkCalendar.button, GtkCalendar.button:hover, GtkCalendar.button:backdrop, GtkCalendar.button:backdrop:hover {
   border-color: transparent;

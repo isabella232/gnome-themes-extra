@@ -270,22 +270,22 @@ GtkLabel {
     padding: 6px;
     border-width: 1px 1px 2px 1px;
     @include button(osd);
-    @extend %linked_buttons;
+    @extend %linked;
     &:hover {
       @include button(osd-hover);
-      @extend %linked_buttons;
+      @extend %linked;
     }
     &:active, &:checked {
       @include button(osd-active);
-      @extend %linked_buttons;
+      @extend %linked;
     }
     &:insensitive {
       @include button(osd-insensitive);
-      @extend %linked_buttons;
+      @extend %linked;
     }
     &:backdrop {
       @include button(osd-backdrop);
-      @extend %linked_buttons;
+      @extend %linked;
     }
   }
   // Suggested and Destructive Action buttons
@@ -319,7 +319,7 @@ GtkLabel {
   .inline-toolbar &, .inline-toolbar &:backdrop {
     border-radius: 2px;
     border-width: 1px;
-    @extend %linked_buttons;
+    @extend %linked;
   }
 
   .primary-toolbar & { icon-shadow: none; } // tango icons don't need added shadows
@@ -328,7 +328,7 @@ GtkLabel {
 //    -GtkWidget-horizontal-separator: 0;
 //   }
   .linked &, .linked &:backdrop {
-    @extend %linked_buttons;
+    @extend %linked;
   }
 }
 
@@ -371,13 +371,19 @@ GtkLabel {
   }
 }
 
-%linked_buttons {
+
+%linked_middle {
   border-radius: 0;
   border-left-style: none;
   &:dir(rtl) {
+    border-radius: 0; // needed when including %linked_middle:dir(rtl)
     border-right-style: none;
     border-left-style: solid
-  };
+  }
+}
+
+%linked {
+  @extend %linked_middle;
   &:first-child {
     border-radius: 3px 0 0 3px;
     border-left-style: solid;
@@ -385,6 +391,22 @@ GtkLabel {
   &:last-child {
     border-radius: 0 3px 3px 0;
     &:dir(rtl) { border-right-style: solid; }
+  }
+  &:only-child {
+    border-radius: 3px;
+    border-style: solid;
+  }
+}
+
+%linked_vertical{
+  border-left-style: solid;
+  border-top-style: none;
+  &:first-child {
+    border-style: solid;
+    border-radius: 3px 3px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 3px 3px;
   }
   &:only-child {
     border-radius: 3px;
@@ -606,6 +628,23 @@ GtkComboBox {
       border-right-style: none;
     }
   }
+}
+
+.linked > GtkComboBox > .button {
+  // the combo is a composite widget so the way we do button linkind doesn't
+  // work, special case needed. See
+  // https://bugzilla.gnome.org/show_bug.cgi?id=733979
+  &:dir(ltr) { @extend %linked_middle; } // specificity bump
+  &:dir(rtl) { @extend %linked_middle:dir(rtl); }
+}
+.linked > GtkComboBox:first-child > .button {
+  @extend %linked:first-child;
+}
+.linked > GtkComboBox:last-child > .button {
+  @extend %linked:last-child;
+}
+.linked > GtkComboBox:only-child > .button {
+  @extend %linked:only-child;
 }
 
 /************
