@@ -235,13 +235,14 @@ GtkLabel {
     @include button(hover);
     -gtk-image-effect: highlight;
   }
-  &:active, &.flat:active {
+  &:active, &.flat:active,
+  &:checked, &.flat:checked {
     @include button(active);
     transition-duration: 50ms;
   }
   &:backdrop, &.flat:backdrop {
     @include button(backdrop);
-    &:active {
+    &:active, &:checked {
       @include button(backdrop-active);
     }
     &:insensitive {
@@ -274,7 +275,7 @@ GtkLabel {
       @include button(osd-hover);
       @extend %linked_buttons;
     }
-    &:active {
+    &:active, &:checked {
       @include button(osd-active);
       @extend %linked_buttons;
     }
@@ -295,7 +296,7 @@ GtkLabel {
       &:hover {
         @include button(hover,$b_color, white);
       }
-      &:active {
+      &:active, &:checked {
         @include button(active,$b_color, white);
       }
       &:backdrop {
@@ -1297,7 +1298,7 @@ GtkCheckButton.text-button, GtkRadioButton.text-button {
     background-image: none;
     -gtk-icon-source: -gtk-icontheme('#{$a}-checked-symbolic');
     &:hover { color: $borders_color; }
-    &:active {
+    &:checked {
       color: $fg_color;
       &:hover { color: $borders_color; }
       &:insensitive {
