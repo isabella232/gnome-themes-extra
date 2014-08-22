@@ -1,3 +1,9 @@
+3.13.90
+=======
+ - checkbox/radio updates
+ - improvements to the high contrast theme
+ - move default background to gnome-backgrounds
+
 3.13.4
 ======
  - drop duplicate properties from metacity geometry
