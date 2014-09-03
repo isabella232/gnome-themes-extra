@@ -4,7 +4,7 @@
 	<name>Adwaita</name>
 	<author>GNOME Art Team &lt;art.gnome.org&gt;</author>
 	<copyright>&#194; Intel, &#194; Red Hat, Lapo Calamandrei</copyright>
-	<date>2012</date>
+	<date>2014</date>
 	<description>Default GNOME 3 window theme</description>
 </info>
 
@@ -181,20 +181,12 @@
 
 <draw_ops name="hilight">
 	<line x1="0" y1="1" x2="width-1" y2="1" color="C_titlebar_focused_hilight" />
-	<gradient type="vertical" x="0" y="1" width="1" height="height-4">
-		<color value="C_titlebar_focused_hilight" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
-	</gradient>
 </draw_ops>
 
 <draw_ops name="rounded_hilight">
 	<line x1="5" y1="1" x2="width-6" y2="1" color="C_titlebar_focused_hilight" />
-	<arc color="C_titlebar_focused_hilight" x="1" y="1" width="7" height="7"  start_angle="270" extent_angle="90" />
+	<arc color="C_titlebar_focused_hilight" x="0" y="1" width="8" height="7"  start_angle="270" extent_angle="90" />
 	<arc color="C_titlebar_focused_hilight" x="width-10" y="1" width="9" height="7"  start_angle="0" extent_angle="90" />
-	<gradient type="vertical" x="1" y="5" width="1" height="height-9">
-		<color value="C_titlebar_focused_hilight" />
-		<color value="blend/gtk:bg[NORMAL]/#000000/0.03" />
-	</gradient>
 </draw_ops>
 
 <draw_ops name="titlebar_focused">
@@ -210,6 +202,16 @@
 <draw_ops name="rounded_titlebar_focused_alt">
 	<include name="titlebar_fill_focused" />
 	<include name="rounded_hilight" />
+</draw_ops>
+
+<draw_ops name="rounded_titlebar_unfocused">
+	<include name="titlebar_fill_unfocused" />
+	<include name="rounded_hilight" />
+</draw_ops>
+
+<draw_ops name="titlebar_unfocused">
+	<include name="titlebar_fill_unfocused" />
+	<include name="hilight" />
 </draw_ops>
 
 <draw_ops name="border_focused">
@@ -910,7 +912,7 @@
 
 <frame_style name="normal_unfocused" geometry="normal_unfocused">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="rounded_titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="rounded_border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
@@ -946,7 +948,7 @@
 
 <frame_style name="normal_max_focused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
+	<piece position="titlebar" draw_ops="titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<button function="close" state="normal" draw_ops="close_focused" />
 	<button function="close" state="pressed" draw_ops="close_focused_pressed" />
@@ -985,7 +987,7 @@
 
 <frame_style name="normal_max_unfocused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
 	<button function="close" state="prelight" draw_ops="close_unfocused_prelight"/>
@@ -1020,7 +1022,7 @@
 
 <frame_style name="normal_max_shaded_focused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_focused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_focused" />
+	<piece position="titlebar" draw_ops="titlebar_focused" />
 	<piece position="title" draw_ops="title_focused" />
 	<piece position="overlay"><draw_ops><line x1="0" y1="height-1" x2="width" y2="height-1" color="C_border_focused" /></draw_ops></piece>
 	<button function="close" state="normal" draw_ops="close_focused" />
@@ -1060,7 +1062,7 @@
 
 <frame_style name="normal_max_shaded_unfocused" geometry="max">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay"><draw_ops><line x1="0" y1="height-1" x2="width" y2="height-1" color="C_border_unfocused" /></draw_ops></piece>
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
@@ -1136,7 +1138,7 @@
 
 <frame_style name="dialog_unfocused" geometry="nobuttons">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="rounded_border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
@@ -1209,7 +1211,7 @@
 
 <frame_style name="modal_dialog_unfocused" geometry="modal">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
@@ -1285,7 +1287,7 @@
 
 <frame_style name="utility_unfocused" geometry="small_unfocused">
 	<piece position="entire_background" draw_ops="entire_background_unfocused" />
-	<piece position="titlebar" draw_ops="titlebar_fill_unfocused" />
+	<piece position="titlebar" draw_ops="titlebar_unfocused" />
 	<piece position="title" draw_ops="title_unfocused" />
 	<piece position="overlay" draw_ops="border_unfocused" />
 	<button function="close" state="normal" draw_ops="close_unfocused"/>
