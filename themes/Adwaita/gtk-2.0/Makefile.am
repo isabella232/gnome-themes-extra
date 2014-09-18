@@ -82,6 +82,11 @@ asset_data = \
 	Entry/entry-border-notebook.png \
 	Entry/entry-border-active-notebook.png \
 	Entry/entry-border-disabled-notebook.png \
+	Entry/entry-border-bg-solid-spin.png \
+	Entry/entry-border-active-bg-solid-spin.png \
+	Entry/notebook-entry-border-active-bg.png \
+	Entry/notebook-entry-border-bg.png \
+	Entry/notebook-entry-border-disabled-bg.png \
 	Expanders/minus.png \
 	Expanders/plus.png \
 	Handles/handle-h.png \
