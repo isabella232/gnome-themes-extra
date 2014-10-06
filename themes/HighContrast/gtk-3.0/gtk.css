@@ -36,6 +36,7 @@
   -GtkToolButton-icon-spacing: 4;
   -GtkTextView-error-underline-color: #cc0000;
   -GtkPaned-handle-size: 1;
+  -gtk-icon-style: symbolic;
   -GtkCheckButton-indicator-size: 16;
   -GtkCheckMenuItem-indicator-size: 16;
   -GtkScrolledWindow-scrollbar-spacing: 0;
