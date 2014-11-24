@@ -375,7 +375,7 @@ main (int argc,
 {
   if (argc == 1)
     {
-      g_critical ("Location of gnome-icon-theme-symbolic repo must be given");
+      g_critical ("Location of adwaita-icon-theme repo must be given");
       return 0;
     }
 
