@@ -322,7 +322,7 @@ static void
 process (int argc,
          char **argv)
 {
-  GList *svg_files = NULL;
+  GList *symbolic_icons = NULL;
   GQueue *descend_into_files;
   GFile *current_dir, *symbolic_theme, *file;
   gchar *str;
@@ -350,8 +350,9 @@ process (int argc,
         {
           if (g_file_info_get_file_type (child_info) == G_FILE_TYPE_DIRECTORY)
             g_queue_push_tail (descend_into_files, g_file_resolve_relative_path (file, g_file_info_get_name (child_info)));
-          else if (g_content_type_is_a (g_file_info_get_content_type (child_info), "image/svg+xml"))
-            svg_files = g_list_prepend (svg_files, g_file_resolve_relative_path (file, g_file_info_get_name (child_info)));
+          else if (g_content_type_is_a (g_file_info_get_content_type (child_info), "image/svg+xml") &&
+                   strstr (g_file_info_get_name (child_info), "-symbolic.svg"))
+            symbolic_icons = g_list_prepend (symbolic_icons, g_file_resolve_relative_path (file, g_file_info_get_name (child_info)));
 
           g_object_unref (child_info);
         }
@@ -361,9 +362,9 @@ process (int argc,
     }
 
   for (idx = 0; idx < G_N_ELEMENTS (icon_sizes); idx++)
-    write_png_theme (svg_files, icon_sizes[idx]);
+    write_png_theme (symbolic_icons, icon_sizes[idx]);
 
-  g_list_free_full (svg_files, g_object_unref);
+  g_list_free_full (symbolic_icons, g_object_unref);
   g_queue_free (descend_into_files);
   g_clear_object (&gnome_dir);
   g_clear_object (&hc_dir);
