@@ -1,9 +1,5 @@
 SUBDIRS = metacity-1 gtk-3.0
 
-if GTK2_ENGINE
-SUBDIRS += gtk-2.0
-endif
-
 THEME_NAME=Adwaita
 THEME_IN_FILES=index.theme.in
 
