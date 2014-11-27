@@ -155,7 +155,6 @@ EXTRA_DIST = \
 ./icons/16x16/apps/cheese.png  \
 ./icons/16x16/apps/config-firewall.png  \
 ./icons/16x16/apps/configuration-editor.png  \
-./icons/16x16/apps/dconf-editor.png  \
 ./icons/16x16/apps/deja-dup.png  \
 ./icons/16x16/apps/devhelp.png  \
 ./icons/16x16/apps/documents.png  \
@@ -173,11 +172,8 @@ EXTRA_DIST = \
 ./icons/16x16/apps/gnome-abrt.png  \
 ./icons/16x16/apps/gnome-aisleriot.png  \
 ./icons/16x16/apps/gnome-boxes.png  \
-./icons/16x16/apps/gnome-clocks.png  \
 ./icons/16x16/apps/gnome-freecell.png  \
-./icons/16x16/apps/gnome-music.png  \
 ./icons/16x16/apps/gnome-nettool.png  \
-./icons/16x16/apps/gnome-photos.png  \
 ./icons/16x16/apps/gnome-power-manager.png  \
 ./icons/16x16/apps/gnome-tweak-tool.png  \
 ./icons/16x16/apps/gnome-weather.png  \
@@ -189,7 +185,6 @@ EXTRA_DIST = \
 ./icons/16x16/apps/help-browser.png  \
 ./icons/16x16/apps/help-contents.png  \
 ./icons/16x16/apps/help-faq.png  \
-./icons/16x16/apps/iagno.png  \
 ./icons/16x16/apps/ifolder.png  \
 ./icons/16x16/apps/inkscape.png  \
 ./icons/16x16/apps/katello.png  \
@@ -699,7 +694,6 @@ EXTRA_DIST = \
 ./icons/22x22/apps/cheese.png  \
 ./icons/22x22/apps/config-firewall.png  \
 ./icons/22x22/apps/configuration-editor.png  \
-./icons/22x22/apps/dconf-editor.png  \
 ./icons/22x22/apps/deja-dup.png  \
 ./icons/22x22/apps/devhelp.png  \
 ./icons/22x22/apps/documents.png  \
@@ -717,11 +711,8 @@ EXTRA_DIST = \
 ./icons/22x22/apps/gnome-abrt.png  \
 ./icons/22x22/apps/gnome-aisleriot.png  \
 ./icons/22x22/apps/gnome-boxes.png  \
-./icons/22x22/apps/gnome-clocks.png  \
 ./icons/22x22/apps/gnome-freecell.png  \
-./icons/22x22/apps/gnome-music.png  \
 ./icons/22x22/apps/gnome-nettool.png  \
-./icons/22x22/apps/gnome-photos.png  \
 ./icons/22x22/apps/gnome-power-manager.png  \
 ./icons/22x22/apps/gnome-tweak-tool.png  \
 ./icons/22x22/apps/gnome-weather.png  \
@@ -733,7 +724,6 @@ EXTRA_DIST = \
 ./icons/22x22/apps/help-browser.png  \
 ./icons/22x22/apps/help-contents.png  \
 ./icons/22x22/apps/help-faq.png  \
-./icons/22x22/apps/iagno.png  \
 ./icons/22x22/apps/ifolder.png  \
 ./icons/22x22/apps/inkscape.png  \
 ./icons/22x22/apps/katello.png  \
@@ -1244,7 +1234,6 @@ EXTRA_DIST = \
 ./icons/24x24/apps/cheese.png  \
 ./icons/24x24/apps/config-firewall.png  \
 ./icons/24x24/apps/configuration-editor.png  \
-./icons/24x24/apps/dconf-editor.png  \
 ./icons/24x24/apps/deja-dup.png  \
 ./icons/24x24/apps/devhelp.png  \
 ./icons/24x24/apps/documents.png  \
@@ -1262,11 +1251,8 @@ EXTRA_DIST = \
 ./icons/24x24/apps/gnome-abrt.png  \
 ./icons/24x24/apps/gnome-aisleriot.png  \
 ./icons/24x24/apps/gnome-boxes.png  \
-./icons/24x24/apps/gnome-clocks.png  \
 ./icons/24x24/apps/gnome-freecell.png  \
-./icons/24x24/apps/gnome-music.png  \
 ./icons/24x24/apps/gnome-nettool.png  \
-./icons/24x24/apps/gnome-photos.png  \
 ./icons/24x24/apps/gnome-power-manager.png  \
 ./icons/24x24/apps/gnome-tweak-tool.png  \
 ./icons/24x24/apps/gnome-weather.png  \
@@ -1278,7 +1264,6 @@ EXTRA_DIST = \
 ./icons/24x24/apps/help-browser.png  \
 ./icons/24x24/apps/help-contents.png  \
 ./icons/24x24/apps/help-faq.png  \
-./icons/24x24/apps/iagno.png  \
 ./icons/24x24/apps/ifolder.png  \
 ./icons/24x24/apps/inkscape.png  \
 ./icons/24x24/apps/katello.png  \
@@ -1787,7 +1772,6 @@ EXTRA_DIST = \
 ./icons/256x256/apps/cheese.png  \
 ./icons/256x256/apps/config-firewall.png  \
 ./icons/256x256/apps/configuration-editor.png  \
-./icons/256x256/apps/dconf-editor.png  \
 ./icons/256x256/apps/deja-dup.png  \
 ./icons/256x256/apps/devhelp.png  \
 ./icons/256x256/apps/documents.png  \
@@ -1805,11 +1789,8 @@ EXTRA_DIST = \
 ./icons/256x256/apps/gnome-abrt.png  \
 ./icons/256x256/apps/gnome-aisleriot.png  \
 ./icons/256x256/apps/gnome-boxes.png  \
-./icons/256x256/apps/gnome-clocks.png  \
 ./icons/256x256/apps/gnome-freecell.png  \
-./icons/256x256/apps/gnome-music.png  \
 ./icons/256x256/apps/gnome-nettool.png  \
-./icons/256x256/apps/gnome-photos.png  \
 ./icons/256x256/apps/gnome-power-manager.png  \
 ./icons/256x256/apps/gnome-tweak-tool.png  \
 ./icons/256x256/apps/gnome-weather.png  \
@@ -1821,7 +1802,6 @@ EXTRA_DIST = \
 ./icons/256x256/apps/help-browser.png  \
 ./icons/256x256/apps/help-contents.png  \
 ./icons/256x256/apps/help-faq.png  \
-./icons/256x256/apps/iagno.png  \
 ./icons/256x256/apps/ifolder.png  \
 ./icons/256x256/apps/inkscape.png  \
 ./icons/256x256/apps/katello.png  \
@@ -2331,7 +2311,6 @@ EXTRA_DIST = \
 ./icons/32x32/apps/cheese.png  \
 ./icons/32x32/apps/config-firewall.png  \
 ./icons/32x32/apps/configuration-editor.png  \
-./icons/32x32/apps/dconf-editor.png  \
 ./icons/32x32/apps/deja-dup.png  \
 ./icons/32x32/apps/devhelp.png  \
 ./icons/32x32/apps/documents.png  \
@@ -2349,11 +2328,8 @@ EXTRA_DIST = \
 ./icons/32x32/apps/gnome-abrt.png  \
 ./icons/32x32/apps/gnome-aisleriot.png  \
 ./icons/32x32/apps/gnome-boxes.png  \
-./icons/32x32/apps/gnome-clocks.png  \
 ./icons/32x32/apps/gnome-freecell.png  \
-./icons/32x32/apps/gnome-music.png  \
 ./icons/32x32/apps/gnome-nettool.png  \
-./icons/32x32/apps/gnome-photos.png  \
 ./icons/32x32/apps/gnome-power-manager.png  \
 ./icons/32x32/apps/gnome-tweak-tool.png  \
 ./icons/32x32/apps/gnome-weather.png  \
@@ -2365,7 +2341,6 @@ EXTRA_DIST = \
 ./icons/32x32/apps/help-browser.png  \
 ./icons/32x32/apps/help-contents.png  \
 ./icons/32x32/apps/help-faq.png  \
-./icons/32x32/apps/iagno.png  \
 ./icons/32x32/apps/ifolder.png  \
 ./icons/32x32/apps/inkscape.png  \
 ./icons/32x32/apps/katello.png  \
@@ -2878,7 +2853,6 @@ EXTRA_DIST = \
 ./icons/48x48/apps/cheese.png  \
 ./icons/48x48/apps/config-firewall.png  \
 ./icons/48x48/apps/configuration-editor.png  \
-./icons/48x48/apps/dconf-editor.png  \
 ./icons/48x48/apps/deja-dup.png  \
 ./icons/48x48/apps/devhelp.png  \
 ./icons/48x48/apps/documents.png  \
@@ -2896,11 +2870,8 @@ EXTRA_DIST = \
 ./icons/48x48/apps/gnome-abrt.png  \
 ./icons/48x48/apps/gnome-aisleriot.png  \
 ./icons/48x48/apps/gnome-boxes.png  \
-./icons/48x48/apps/gnome-clocks.png  \
 ./icons/48x48/apps/gnome-freecell.png  \
-./icons/48x48/apps/gnome-music.png  \
 ./icons/48x48/apps/gnome-nettool.png  \
-./icons/48x48/apps/gnome-photos.png  \
 ./icons/48x48/apps/gnome-power-manager.png  \
 ./icons/48x48/apps/gnome-tweak-tool.png  \
 ./icons/48x48/apps/gnome-weather.png  \
@@ -2912,7 +2883,6 @@ EXTRA_DIST = \
 ./icons/48x48/apps/help-browser.png  \
 ./icons/48x48/apps/help-contents.png  \
 ./icons/48x48/apps/help-faq.png  \
-./icons/48x48/apps/iagno.png  \
 ./icons/48x48/apps/ifolder.png  \
 ./icons/48x48/apps/inkscape.png  \
 ./icons/48x48/apps/katello.png  \
