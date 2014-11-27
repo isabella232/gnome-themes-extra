@@ -1,3 +1,7 @@
+3.15.2.1
+========
+ - remove some HC app icons that are already shipped with apps
+
 3.15.2
 ======
  - update gtk2 theme (entries, spinbuttons, radios, checks...)
