@@ -1,4 +1,4 @@
-SUBDIRS = metacity-1 gtk-3.0
+SUBDIRS = gtk-3.0
 
 if GTK2_ENGINE
 SUBDIRS += gtk-2.0

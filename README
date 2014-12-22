@@ -10,7 +10,6 @@ themes/Adwaita/
   backgrounds/: the default GNOME 3 wallpaper
   gtk-2.0/: the default GNOME 3 theme for GTK+ 2 applications
   gtk-3.0/: the default GNOME 3 theme for GTK+ 3 applications
-  metacity-1/: the default GNOME 3 window manager theme
 
 themes/HighContrast/: the default HighContrast GNOME 3 theme for GTK+ 2 and
                       GTK+ 3 applications
