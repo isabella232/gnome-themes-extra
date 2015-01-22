@@ -204,7 +204,6 @@ EXTRA_DIST = \
 ./icons/16x16/apps/palimpsest.png  \
 ./icons/16x16/apps/pidgin.png  \
 ./icons/16x16/apps/pino.png  \
-./icons/16x16/apps/polari.png  \
 ./icons/16x16/apps/preferences-color.png  \
 ./icons/16x16/apps/preferences-desktop-accessibility.png  \
 ./icons/16x16/apps/preferences-desktop-display.png  \
@@ -742,7 +741,6 @@ EXTRA_DIST = \
 ./icons/22x22/apps/palimpsest.png  \
 ./icons/22x22/apps/pidgin.png  \
 ./icons/22x22/apps/pino.png  \
-./icons/22x22/apps/polari.png  \
 ./icons/22x22/apps/preferences-color.png  \
 ./icons/22x22/apps/preferences-desktop-accessibility.png  \
 ./icons/22x22/apps/preferences-desktop-display.png  \
@@ -1281,7 +1279,6 @@ EXTRA_DIST = \
 ./icons/24x24/apps/palimpsest.png  \
 ./icons/24x24/apps/pidgin.png  \
 ./icons/24x24/apps/pino.png  \
-./icons/24x24/apps/polari.png  \
 ./icons/24x24/apps/preferences-color.png  \
 ./icons/24x24/apps/preferences-desktop-accessibility.png  \
 ./icons/24x24/apps/preferences-desktop-display.png  \
@@ -1818,7 +1815,6 @@ EXTRA_DIST = \
 ./icons/256x256/apps/palimpsest.png  \
 ./icons/256x256/apps/pidgin.png  \
 ./icons/256x256/apps/pino.png  \
-./icons/256x256/apps/polari.png  \
 ./icons/256x256/apps/preferences-color.png  \
 ./icons/256x256/apps/preferences-desktop-accessibility.png  \
 ./icons/256x256/apps/preferences-desktop-display.png  \
@@ -2356,7 +2352,6 @@ EXTRA_DIST = \
 ./icons/32x32/apps/palimpsest.png  \
 ./icons/32x32/apps/pidgin.png  \
 ./icons/32x32/apps/pino.png  \
-./icons/32x32/apps/polari.png  \
 ./icons/32x32/apps/preferences-color.png  \
 ./icons/32x32/apps/preferences-desktop-accessibility.png  \
 ./icons/32x32/apps/preferences-desktop-display.png  \
@@ -2897,7 +2892,6 @@ EXTRA_DIST = \
 ./icons/48x48/apps/palimpsest.png  \
 ./icons/48x48/apps/pidgin.png  \
 ./icons/48x48/apps/pino.png  \
-./icons/48x48/apps/polari.png  \
 ./icons/48x48/apps/preferences-color.png  \
 ./icons/48x48/apps/preferences-desktop-accessibility.png  \
 ./icons/48x48/apps/preferences-desktop-display.png  \
