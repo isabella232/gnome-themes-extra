@@ -1,35 +1,18 @@
 =====================
-gnome-themes-standard 
+gnome-themes-standard
 =====================
 
-This package contains various components of the default GNOME 3 theme.
+This package used to contain various components of the default GNOME 3 theme.
+At this point, most of the contents has moved elsewhere. The Adwaita and
+HighContrast themes are now part of GTK+ 3 itself, and the HighContrastInverse
+and LowConstrast themes have been discontinued. Only the GTK+ 2 vresions of
+the Adwaita and HighConstrast themes still reside in this module.
 
-src/: the Adwaita GTK+ 3 theming engine
-
-themes/Adwaita/
-  backgrounds/: the default GNOME 3 wallpaper
-  gtk-2.0/: the default GNOME 3 theme for GTK+ 2 applications
-  gtk-3.0/: the default GNOME 3 theme for GTK+ 3 applications
-
-themes/HighContrast/: the default HighContrast GNOME 3 theme for GTK+ 2 and
-                      GTK+ 3 applications
-
-themes/HighContrastInverse: the default HighContrastInverse GNOME 3 theme for
-                            GTK+ 2 and GTK+ 3 applications
-
-themes/LowContrast/: a low contrast variation of the default GNOME 3 theme
-                     for GTK+ 2 and GTK+ 3 applications
-
-Installation
-============
-
-See the 'INSTALL' file for installation instructions. You will need an
-up-to-date GTK+ 3 development environment to build the package.
 
 How to report bugs
 ==================
 
-Bugs should be reported to the GNOME Bugzilla [1], choosing the 
-"gnome-themes-standard" product.
+Bugs should be reported to the GNOME Bugzilla[1], in the "gnome-themes-standard"
+product.
 
 [1] https://bugzilla.gnome.org
