@@ -1,6 +1,6 @@
 # Bridge | ScionicSpectre
 
-gtk-color-scheme	= "base_color:#FFFFFF\nfg_color:#2E3436\ntooltip_fg_color:#FFFFFF\nselected_bg_color:#4A90D9\nselected_fg_color:#FFFFFF\ntext_color:#313739\nbg_color:#EDEDED\ninsensitive_bg_color:#F4F4F2\ntooltip_bg_color:#343434"
+gtk-color-scheme                = "base_color:#FFFFFF\ntext_color:#313739\nbg_color:#EDEDED\nfg_color:#2E3436\nselected_fg_color:#FFFFFF\nselected_bg_color:#4A90D9\ntooltip_bg_color:#343434\ninsensitive_bg_color:#F4F4F2\ntooltip_fg_color:#FFFFFF\n"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
