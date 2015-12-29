@@ -1,6 +1,6 @@
 # Bridge | ScionicSpectre
 
-gtk-color-scheme                = "base_color:#FFFFFF\ntext_color:#313739\nbg_color:#EDEDED\nfg_color:#2E3436\nselected_fg_color:#FFFFFF\nselected_bg_color:#4A90D9\ntooltip_bg_color:#343434\ninsensitive_bg_color:#F4F4F2\ntooltip_fg_color:#FFFFFF\n"
+gtk-color-scheme                = "base_color:white\ntext_color:black\nbg_color:#e8e8e7\nfg_color:#2e3436\nselected_fg_color:#ffffff\nselected_bg_color:#4a90d9\ntooltip_fg_color:#ffffff\ntooltip_bg_color:#343434\ninsensitive_bg_color:#f4f4f2"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
@@ -64,26 +64,26 @@ style "default"
 	GtkTreeView::expander-size		= 11
 	GtkTreeView::vertical-separator		= 4
 	GtkTreeView::horizontal-separator	= 4
-	GtkTreeView::allow-rules		= 1
+	GtkTreeView::allow-rules		= 0
 
         GtkExpander::expander-size              = 11
 
 	# Colors
 
 	bg[NORMAL]		= @bg_color
-	bg[PRELIGHT]		= shade (1.02, @bg_color)
+	bg[PRELIGHT]		= @bg_color # Problem on white background
 	bg[SELECTED]		= @selected_bg_color
-	bg[INSENSITIVE] 	= @bg_color
-	bg[ACTIVE]		= shade (0.9, @bg_color)
+	bg[INSENSITIVE] 	= mix (0.6, @bg_color, @base_color)
+	bg[ACTIVE]		= "red" #shade (0.9, @bg_color) # I just can't find out where this is used
 
-	fg[NORMAL]		= @text_color
+	fg[NORMAL]		= @fg_color
 	fg[PRELIGHT]		= @fg_color
 	fg[SELECTED]		= @selected_fg_color
-	fg[INSENSITIVE]		= darker (@bg_color)
+	fg[INSENSITIVE]		= mix (0.5, @fg_color, @bg_color)
 	fg[ACTIVE]		= @fg_color
 
-	text[NORMAL]		= @text_color
-	text[PRELIGHT]		= @text_color
+	text[NORMAL]		= @fg_color
+	text[PRELIGHT]		= @fg_color
 	text[SELECTED]		= @selected_fg_color
 	text[INSENSITIVE]	= darker (@bg_color)
 	text[ACTIVE]		= @selected_fg_color
@@ -92,7 +92,7 @@ style "default"
 	base[PRELIGHT]		= shade (0.95, @bg_color)
 	base[SELECTED]		= @selected_bg_color
 	base[INSENSITIVE]	= @bg_color
-	base[ACTIVE]		= shade (0.9, @selected_bg_color)
+	base[ACTIVE]		= @selected_bg_color
 
 	# For succinctness, all reasonable pixmap options remain here
 
@@ -675,6 +675,9 @@ style "scrollbar"
 
 style "menubar"
 {
+	# Needed to fix Firefox's menubar text
+	bg[SELECTED]    = @selected_fg_color
+	fg[SELECTED]    = @selected_bg_color
 	engine "pixmap"
 	{
 	  image
@@ -758,6 +761,7 @@ style "menu_item"
         # See https://bugs.freedesktop.org/show_bug.cgi?id=38038
         bg[SELECTED]    = @selected_fg_color
 
+	text[NORMAL] = @text_color
 	bg[PRELIGHT]	= @selected_bg_color
 	fg[PRELIGHT]	= @selected_fg_color
 	text[PRELIGHT]	= @selected_fg_color
@@ -941,8 +945,7 @@ style "menubar_item"
 {
 	xthickness	= 2
 	ythickness	= 3
-	bg[PRELIGHT]	= @selected_fg_color
-	fg[PRELIGHT]	= @text_color
+	fg[PRELIGHT]    = @selected_bg_color
 }
 
 style "button"
@@ -1031,8 +1034,8 @@ style "button_nohilight"
 
 style "checkbutton"
 {
-  fg[PRELIGHT] = @text_color
-  fg[ACTIVE]   = @text_color
+#  fg[PRELIGHT] = @text_color
+#  fg[ACTIVE]   = @text_color
 }
 
 style "entry"
@@ -2098,12 +2101,18 @@ style "separator_menu_item"
     }
 }
 
+style "treeview"
+{
+  text[NORMAL] = @text_color
+  #base[ACTIVE] = @bg_color
+}
+
 style "treeview_header"
 {
         ythickness = 1
 
-        fg[NORMAL] = shade(0.55, @bg_color)
-        fg[PRELIGHT] = shade(0.80, @text_color)
+        fg[NORMAL] = mix(0.5, @fg_color, @base_color)
+        fg[PRELIGHT] = mix(0.5, mix(0.5, @fg_color, @base_color), @fg_color)
         font_name = "Bold"
 
 	engine "pixmap"
@@ -2350,6 +2359,7 @@ widget_class "*<GtkComboBox>"                   style "combobox"
 widget_class "*<GtkComboBox>*<GtkButton>"       style "combobox_button"
 widget_class "*<GtkButton>*<GtkSeparator>"	style "button_separator"
 widget_class "*HandleBox"                       style "handlebox"
+widget_class "*<GtkTreeView>"                   style "treeview"
 widget_class "*<GtkTreeView>*<GtkButton>*"      style "treeview_header"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>" style "inline_toolbar"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>*<GtkButton>" style "button_nohilight"
