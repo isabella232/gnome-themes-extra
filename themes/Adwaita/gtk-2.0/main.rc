@@ -667,7 +667,7 @@ style "menubar" {
 
   # Needed to fix Firefox's menubar text
   bg[SELECTED] = @selected_fg_color
-  fg[SELECTED] = @selected_bg_color
+  fg[SELECTED] = shade(0.9, @selected_bg_color)
 
   engine "pixmap" {
     image {
@@ -702,7 +702,7 @@ style "menubar_button" {
 style "menubar_item" {
   xthickness   = 2
   ythickness   = 3
-  fg[PRELIGHT] = @selected_bg_color
+  fg[PRELIGHT] = shade(0.9, @selected_bg_color)
 }
 
 style "menu" {
