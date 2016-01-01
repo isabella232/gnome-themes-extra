@@ -1,3 +1,5 @@
+# vim:set ft=gtkrc ts=2 sw=2 sts=2 ai et:
+
 style "ooo_stepper_hack" {
   GtkScrollbar::stepper-size         = 13
   GtkScrollbar::has-backward-stepper = 1
