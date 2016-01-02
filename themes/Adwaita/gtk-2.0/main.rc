@@ -692,7 +692,7 @@ style "menubar_button" {
       recolorable = TRUE
       state       = PRELIGHT
       file        = "Menu-Menubar/menubar_button.png"
-      border      = {4, 4, 4, 4}
+      border      = {0, 0, 0, 3}
       stretch     = TRUE
     }
   }
