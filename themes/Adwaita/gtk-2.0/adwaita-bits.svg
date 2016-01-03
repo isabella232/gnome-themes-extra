@@ -1416,9 +1416,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="369.51688"
-     inkscape:cy="468.8565"
+     inkscape:zoom="2"
+     inkscape:cx="159.26382"
+     inkscape:cy="432.34385"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -1476,6 +1476,22 @@
      id="layer1"
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
+    <rect
+       style="fill:#d7d7d5;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5030"
+       width="55"
+       height="30"
+       x="311"
+       y="0"
+       sodipodi:insensitive="true" />
+    <rect
+       style="fill:#e8e8e7;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5028"
+       width="300"
+       height="200"
+       x="0"
+       y="0"
+       sodipodi:insensitive="true" />
     <g
        id="Buttons_button-default"
        inkscape:label="#button-default">
@@ -3456,7 +3472,8 @@
        inkscape:label="#g9440"
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       transform="translate(14,0)">
       <rect
          y="1"
          x="298"
@@ -3487,7 +3504,8 @@
        inkscape:label="#g9445"
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-hover.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       transform="translate(14,0)">
       <rect
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect9413"
@@ -3516,7 +3534,8 @@
        inkscape:label="#g9450"
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-active.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       transform="translate(14,0)">
       <rect
          y="1"
          x="330"
@@ -3546,7 +3565,7 @@
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/trough-scrollbar-vert-test.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
-       transform="translate(-4,-2)">
+       transform="translate(8,-2)">
       <rect
          y="9"
          x="296"
@@ -3565,7 +3584,7 @@
     <g
        id="Scrollbars_trough-h"
        inkscape:label="#g9323"
-       transform="translate(-4,-7)"
+       transform="translate(8,-7)"
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/trough-scrollbar-h.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
@@ -3590,7 +3609,7 @@
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-h.png"
        inkscape:label="#g9440"
        id="Scrollbars_slider-h"
-       transform="matrix(0,1,-1,0,312,-281.5)">
+       transform="matrix(0,1,-1,0,326,-281.5)">
       <rect
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect4713"
@@ -3622,7 +3641,7 @@
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-hover-h.png"
        inkscape:label="#g9445"
        id="Scrollbars_slider-h-hover"
-       transform="matrix(0,1,-1,0,328,-297.5)">
+       transform="matrix(0,1,-1,0,342,-297.5)">
       <rect
          y="1"
          x="314"
@@ -3652,7 +3671,7 @@
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-active-h.png"
        inkscape:label="#g9450"
        id="Scrollbars_slider-h-active"
-       transform="matrix(0,1,-1,0,344,-313.5)">
+       transform="matrix(0,1,-1,0,358,-313.5)">
       <rect
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect4729"
@@ -3681,22 +3700,22 @@
        id="Menu-Menubar_menubar"
        width="1"
        height="1"
-       x="370"
+       x="286"
        y="7"
        inkscape:label="#rect4723"
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Menu-Menubar/menubar.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <rect
-       style="fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+       style="fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="Menu-Menubar_menubar-button"
        width="1"
        height="3"
-       x="372"
+       x="288"
        y="5"
-       inkscape:label="#rect4726"
        inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Menu-Menubar/menubar-button.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-ydpi="90"
+       inkscape:label="#rect4726" />
   </g>
 </svg>
