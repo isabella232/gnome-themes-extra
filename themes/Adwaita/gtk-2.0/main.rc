@@ -21,7 +21,7 @@ style "default" {
   GtkWidget::tooltip-alpha     = 235
   GtkWidget::new-tooltip-style = 1 #for compatibility
 
-  GtkSeparatorMenuItem::horizontal-padding = 3
+  GtkSeparatorMenuItem::horizontal-padding = 1
   GtkSeparatorMenuItem::wide-separators    = 1
   GtkSeparatorMenuItem::separator-height   = 1
 
@@ -712,7 +712,7 @@ style "menu" {
 
   GtkMenuItem::arrow-scaling = 0.4
 
-  bg[NORMAL]      = shade (1.08, @bg_color)
+  bg[NORMAL]      = @base_color
   bg[INSENSITIVE] = @base_color
   bg[PRELIGHT]    = @base_color
 
@@ -734,8 +734,8 @@ style "menu_framed_box" {
 
 style "menu_item" {
 
-  xthickness = 2
-  ythickness = 3
+  xthickness = 3
+  ythickness = 4
 
   # HACK: Gtk doesn't actually read this value
   # while rendering the menu items, but Libreoffice
@@ -1936,7 +1936,7 @@ style "separator_menu_item" {
     image {
       function = BOX
       file     = "Lines/menu_line_h.png"
-      border   = {0, 0, 1, 0}
+      border   = {0, 0, 0, 0}
       stretch  = TRUE
     }
   }
