@@ -555,13 +555,16 @@ style "default" {
 
 style "scrollbar" {
 
+  bg[ACTIVE] = "red"#shade(0.97, @bg_color)
+  bg[NORMAL] = "red"#shade(0.97, @bg_color)
+
   engine "pixmap" {
 
     image {
       function    = BOX
       detail      = "trough"
-      file        = "Scrollbars/trough-scrollbar-horiz.png"
-      border      = { 19, 19, 4, 4 }
+      file        = "Scrollbars/trough-h.png"
+      border      = {0, 0, 1, 0}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -569,8 +572,8 @@ style "scrollbar" {
     image {
       function    = BOX
       detail      = "trough"
-      file        = "Scrollbars/trough-scrollbar-vert.png"
-      border      = { 4, 4, 19, 19 }
+      file        = "Scrollbars/trough-v.png"
+      border      = {1, 0, 0, 0}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -582,8 +585,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = NORMAL
-      file        = "Scrollbars/slider-horiz.png"
-      border      = { 7, 7, 5, 5 }
+      file        = "Scrollbars/slider-h.png"
+      border      = {6, 6, 7, 6 }
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -591,8 +594,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = ACTIVE
-      file        = "Scrollbars/slider-horiz-active.png"
-      border      = { 7, 7, 5, 5 }
+      file        = "Scrollbars/slider-h-active.png"
+      border      = {6, 6, 7, 6 }
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -600,8 +603,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = PRELIGHT
-      file        = "Scrollbars/slider-horiz-prelight.png"
-      border      = { 7, 7, 5, 5 }
+      file        = "Scrollbars/slider-h-hover.png"
+      border      = {6, 6, 7, 6 }
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -609,8 +612,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = INSENSITIVE
-      file        = "Scrollbars/slider-horiz-insens.png"
-      border      = { 7, 7, 5, 5 }
+      file        = "Others/null.png"
+      border      = {0, 0, 0, 0}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -622,8 +625,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = NORMAL
-      file        = "Scrollbars/slider-vert.png"
-      border      = { 5, 5, 7, 7 }
+      file        = "Scrollbars/slider-v.png"
+      border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -631,8 +634,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = ACTIVE
-      file        = "Scrollbars/slider-vert-active.png"
-      border      = { 5, 5, 7, 7 }
+      file        = "Scrollbars/slider-v-active.png"
+      border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -640,8 +643,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = PRELIGHT
-      file        = "Scrollbars/slider-vert-prelight.png"
-      border      = { 5, 5, 7, 7 }
+      file        = "Scrollbars/slider-v-hover.png"
+      border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -649,8 +652,8 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = INSENSITIVE
-      file        = "Scrollbars/slider-vert-insens.png"
-      border      = { 5, 5, 7, 7 }
+      file        = "Others/null.png"
+      border      = {0, 0, 0, 0}
       stretch     = TRUE
       orientation = VERTICAL
     }
