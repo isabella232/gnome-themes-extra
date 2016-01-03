@@ -701,7 +701,7 @@ style "menubar_button" {
       function    = BOX
       recolorable = TRUE
       state       = PRELIGHT
-      file        = "Menu-Menubar/menubar_button.png"
+      file        = "Menu-Menubar/menubar-button.png"
       border      = {0, 0, 0, 3}
       stretch     = TRUE
     }
