@@ -21,12 +21,19 @@ style "default" {
   GtkWidget::tooltip-alpha     = 235
   GtkWidget::new-tooltip-style = 1 #for compatibility
 
+  GtkWidget::link-color              = shade(0.9, @selected_bg_color)
+  GtkWidget::visited-link-color      = shade(0.8, @selected_bg_color)
+  GnomeHRef::link_color              = shade(0.9, @selected_bg_color)
+  GtkHTML::link-color                = shade(0.9, @selected_bg_color)
+  GtkHTML::vlink-color               = shade(0.8, @selected_bg_color)
+  GtkIMHtml::hyperlink-color         = shade(0.9, @selected_bg_color)
+  GtkIMHtml::hyperlink-visited-color = shade(0.8, @selected_bg_color)
+
   GtkSeparatorMenuItem::horizontal-padding = 1
   GtkSeparatorMenuItem::wide-separators    = 1
   GtkSeparatorMenuItem::separator-height   = 1
 
   GtkButton::child-displacement-y = 0
-
 
   GtkButton::default-border         = { 0, 0, 0, 0 }
   GtkButton::default-outside_border = { 0, 0, 0, 0 }
