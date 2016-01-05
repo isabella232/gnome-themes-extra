@@ -1,0 +1,16 @@
+checkbox-checked
+checkbox-checked-hover
+checkbox-checked-active
+checkbox-checked-insensitive
+checkbox-unchecked
+checkbox-unchecked-hover
+checkbox-unchecked-active
+checkbox-unchecked-insensitive
+radio-checked
+radio-checked-hover
+radio-checked-active
+radio-checked-insensitive
+radio-unchecked
+radio-unchecked-hover
+radio-unchecked-active
+radio-unchecked-insensitive
