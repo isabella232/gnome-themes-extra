@@ -39,4 +39,14 @@ progressbar-horz-trough
 progressbar-vert-trough
 progressbar-horz
 progressbar-vert
+menubar
+menubar-button
+scrollbar-horz-trough
+scrollbar-vert-trough
+scrollbar-horz-slider
+scrollbar-horz-slider-hover
+scrollbar-horz-slider-active
+scrollbar-vert-slider
+scrollbar-vert-slider-hover
+scrollbar-vert-slider-active
 
