@@ -13,6 +13,6 @@ do
 		then mkdir $DIR; 
 	fi
 	ID=`echo $filename | tr '/' '_'`
-	$INKSCAPE $SVG -i $ID -e $filename.png
+	$INKSCAPE $SVG -i $ID -j -e $filename.png
 	$OPTIPNG -o7 --quiet $filename.png
 done
