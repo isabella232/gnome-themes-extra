@@ -81,7 +81,7 @@ style "default" {
   ##########
 
   bg[NORMAL]      = @bg_color
-  bg[PRELIGHT]    = @bg_color # Problem on white background
+  bg[PRELIGHT]    = @bg_color
   bg[SELECTED]    = @selected_bg_color
   bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
   bg[ACTIVE]      = "red" #shade (0.9, @bg_color) # I just can't find out where this is used
@@ -2173,6 +2173,10 @@ style "notebook_viewport" {
   bg[NORMAL] = @base_color
 }
 
+style "notebook_prelight" {
+  bg[PRELIGHT] = @base_color
+}
+
 style "tooltips" {
 
   xthickness = 8
@@ -2234,6 +2238,9 @@ widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook
 # something else in the middle that draws gray again
 widget_class "*<GtkNotebook>*<GtkEntry>"               style "notebook_entry"
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>" style "entry"
+
+# We need the prelight colour inside notebooks to be white so it won't change on hover
+widget_class "*<GtkNotebook>*"                         style "notebook_prelight"
 
 #widget_class "*<GtkNotebook>*<GtkComboBoxEntry>*<GtkEntry>" style "notebook_combobox_entry"
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>" style "combobox_entry"
