@@ -1804,7 +1804,7 @@ style "combobox_cellview" {
 }
 
 style "combobox_arrows" {
-  
+ 
   engine "pixmap" {
 
     image {
