@@ -117,7 +117,7 @@ style "default" {
       recolorable     = TRUE
       state           = NORMAL
       shadow          = OUT
-      overlay_file    = "Check-Radio/checkbox-unchecked.png"
+      overlay_file    = "assets/checkbox-unchecked.png"
       overlay_stretch = FALSE
     }
 
@@ -126,7 +126,7 @@ style "default" {
       recolorable     = TRUE
       state           = PRELIGHT
       shadow          = OUT
-      overlay_file    = "Check-Radio/checkbox-unchecked.png"
+      overlay_file    = "assets/checkbox-unchecked-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -135,7 +135,7 @@ style "default" {
       recolorable     = TRUE
       state           = ACTIVE
       shadow          = OUT
-      overlay_file    = "Check-Radio/checkbox-unchecked.png"
+      overlay_file    = "assets/checkbox-unchecked-active.png"
       overlay_stretch = FALSE
     }
 
@@ -144,7 +144,7 @@ style "default" {
       recolorable     = TRUE
       state           = SELECTED
       shadow          = OUT
-      overlay_file    = "Check-Radio/checkbox-unchecked.png"
+      overlay_file    = "assets/checkbox-unchecked.png"
       overlay_stretch = FALSE
     }
 
@@ -153,7 +153,7 @@ style "default" {
       recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = OUT
-      overlay_file    = "Check-Radio/checkbox-unchecked-insensitive.png"
+      overlay_file    = "assets/checkbox-unchecked-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -162,7 +162,7 @@ style "default" {
       recolorable     = TRUE
       state           = NORMAL
       shadow          = IN
-      overlay_file    = "Check-Radio/checkbox-checked.png"
+      overlay_file    = "assets/checkbox-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -171,7 +171,7 @@ style "default" {
       recolorable     = TRUE
       state           = PRELIGHT
       shadow          = IN
-      overlay_file    = "Check-Radio/checkbox-checked.png"
+      overlay_file    = "assets/checkbox-checked-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -180,7 +180,7 @@ style "default" {
       recolorable     = TRUE
       state           = ACTIVE
       shadow          = IN
-      overlay_file    = "Check-Radio/checkbox-checked.png"
+      overlay_file    = "assets/checkbox-checked-active.png"
       overlay_stretch = FALSE
     }
 
@@ -189,7 +189,7 @@ style "default" {
       recolorable     = TRUE
       state           = SELECTED
       shadow          = IN
-      overlay_file    = "Check-Radio/checkbox-checked.png"
+      overlay_file    = "assets/checkbox-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -198,7 +198,7 @@ style "default" {
       recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = IN
-      overlay_file    = "Check-Radio/checkbox-checked-insensitive.png"
+      overlay_file    = "assets/checkbox-checked-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -210,7 +210,7 @@ style "default" {
       function        = OPTION
       state           = NORMAL
       shadow          = OUT
-      overlay_file    = "Check-Radio/option-unchecked.png"
+      overlay_file    = "assets/radio-unchecked.png"
       overlay_stretch = FALSE
     }
 
@@ -218,7 +218,7 @@ style "default" {
       function        = OPTION
       state           = PRELIGHT
       shadow          = OUT
-      overlay_file    = "Check-Radio/option-unchecked.png"
+      overlay_file    = "assets/radio-unchecked-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -226,7 +226,7 @@ style "default" {
       function        = OPTION
       state           = ACTIVE
       shadow          = OUT
-      overlay_file    = "Check-Radio/option-unchecked.png"
+      overlay_file    = "assets/radio-unchecked-active.png"
       overlay_stretch = FALSE
     }
 
@@ -234,7 +234,7 @@ style "default" {
       function        = OPTION
       state           = SELECTED
       shadow          = OUT
-      overlay_file    = "Check-Radio/option-unchecked.png"
+      overlay_file    = "assets/radio-unchecked.png"
       overlay_stretch = FALSE
     }
 
@@ -242,7 +242,7 @@ style "default" {
       function        = OPTION
       state           = INSENSITIVE
       shadow          = OUT
-      overlay_file    = "Check-Radio/option-unchecked-insensitive.png"
+      overlay_file    = "assets/radio-unchecked-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -250,7 +250,7 @@ style "default" {
       function        = OPTION
       state           = NORMAL
       shadow          = IN
-      overlay_file    = "Check-Radio/option-checked.png"
+      overlay_file    = "assets/radio-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -258,7 +258,7 @@ style "default" {
       function        = OPTION
       state           = PRELIGHT
       shadow          = IN
-      overlay_file    = "Check-Radio/option-checked.png"
+      overlay_file    = "assets/radio-checked-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -266,7 +266,7 @@ style "default" {
       function        = OPTION
       state           = ACTIVE
       shadow          = IN
-      overlay_file    = "Check-Radio/option-checked.png"
+      overlay_file    = "assets/radio-checked-active.png"
       overlay_stretch = FALSE
     }
 
@@ -274,7 +274,7 @@ style "default" {
       function        = OPTION
       state           = SELECTED
       shadow          = IN
-      overlay_file    = "Check-Radio/option-checked.png"
+      overlay_file    = "assets/radio-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -282,7 +282,7 @@ style "default" {
       function        = OPTION
       state           = INSENSITIVE
       shadow          = IN
-      overlay_file    = "Check-Radio/option-checked-insensitive.png"
+      overlay_file    = "assets/radio-checked-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -292,7 +292,7 @@ style "default" {
 
     image {
       function        = ARROW
-      overlay_file    = "Arrows/arrow-up.png"
+      overlay_file    = "assets/arrow-up.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
@@ -301,7 +301,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "Arrows/arrow-up-prelight.png"
+      overlay_file    = "assets/arrow-up.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
@@ -310,7 +310,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "Arrows/arrow-up-prelight.png"
+      overlay_file    = "assets/arrow-up.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
@@ -319,7 +319,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "Arrows/arrow-up-insens.png"
+      overlay_file    = "assets/arrow-up-insensitive.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
@@ -328,7 +328,7 @@ style "default" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "Arrows/arrow-down.png"
+      overlay_file    = "assets/arrow-down.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
@@ -337,7 +337,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "Arrows/arrow-down-prelight.png"
+      overlay_file    = "assets/arrow-down.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
@@ -346,7 +346,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "Arrows/arrow-down-prelight.png"
+      overlay_file    = "assets/arrow-down.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
@@ -355,7 +355,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "Arrows/arrow-down-insens.png"
+      overlay_file    = "assets/arrow-down-insensitive.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
@@ -363,7 +363,7 @@ style "default" {
 
     image {
       function        = ARROW
-      overlay_file    = "Arrows/arrow-left.png"
+      overlay_file    = "assets/arrow-left.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
@@ -372,7 +372,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "Arrows/arrow-left-prelight.png"
+      overlay_file    = "assets/arrow-left.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
@@ -381,7 +381,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "Arrows/arrow-left-prelight.png"
+      overlay_file    = "assets/arrow-left.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
@@ -390,7 +390,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "Arrows/arrow-left-insens.png"
+      overlay_file    = "assets/arrow-left-insensitive.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
@@ -398,7 +398,7 @@ style "default" {
 
     image {
       function        = ARROW
-      overlay_file    = "Arrows/arrow-right.png"
+      overlay_file    = "assets/arrow-right.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -407,7 +407,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "Arrows/arrow-right-prelight.png"
+      overlay_file    = "assets/arrow-right.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -416,7 +416,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "Arrows/arrow-right-prelight.png"
+      overlay_file    = "assets/arrow-right.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -425,7 +425,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "Arrows/arrow-right-insens.png"
+      overlay_file    = "assets/arrow-right-insensitive.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -437,15 +437,8 @@ style "default" {
 
     image {
       function        = TAB
-      state           = INSENSITIVE
-      overlay_file    = "Arrows/arrow-down-insens.png"
-      overlay_stretch = FALSE
-    }
-
-    image {
-      function        = TAB
       state           = NORMAL
-      overlay_file    = "Arrows/arrow-down.png"
+      overlay_file    = "assets/pan-down.png"
       overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
     }
@@ -453,8 +446,23 @@ style "default" {
     image {
       function        = TAB
       state           = PRELIGHT
-      overlay_file    = "Arrows/arrow-down-prelight.png"
+      overlay_file    = "assets/pan-down.png"
       overlay_border  = { 0, 0, 0, 0 }
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = TAB
+      state           = ACTIVE
+      overlay_file    = "assets/pan-down.png"
+      overlay_border  = { 0, 0, 0, 0 }
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = TAB
+      state           = INSENSITIVE
+      overlay_file    = "assets/pan-down-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -512,25 +520,25 @@ style "default" {
     image {
       function       = EXPANDER
       expander_style = COLLAPSED
-      file           = "Expanders/plus.png"
+      file           = "assets/pan-right.png"
     }
 
     image {
       function       = EXPANDER
       expander_style = EXPANDED
-      file           = "Expanders/minus.png"
+      file           = "assets/pan-down.png"
     }
 
     image {
       function       = EXPANDER
       expander_style = SEMI_EXPANDED
-      file           = "Expanders/minus.png"
+      file           = "assets/pan-down.png"
     }
 
     image {
       function       = EXPANDER
       expander_style = SEMI_COLLAPSED
-      file           = "Expanders/plus.png"
+      file           = "assets/pan-right.png"
     }
 
     ##########
@@ -730,7 +738,7 @@ style "menu" {
   engine "pixmap" {
     image {
       function = HLINE
-      file     = "Lines/menu_line_h.png"
+      file     = "assets/line.png"
       border   = {0, 0, 0, 0}
       stretch  = TRUE
     }
@@ -772,7 +780,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = NORMAL
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-checkbox.png"
       overlay_stretch = FALSE
     }
 
@@ -781,7 +789,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = PRELIGHT
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-checkbox-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -790,7 +798,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = ACTIVE
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-checkbox.png"
       overlay_stretch = FALSE
     }
 
@@ -799,7 +807,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-checkbox-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -808,7 +816,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = NORMAL
       shadow          = IN
-      overlay_file    = "Check-Radio/menucheck.png"
+      overlay_file    = "assets/menu-checkbox-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -817,7 +825,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = PRELIGHT
       shadow          = IN
-      overlay_file    = "Check-Radio/menucheck_prelight.png"
+      overlay_file    = "assets/menu-checkbox-checked-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -826,7 +834,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = ACTIVE
       shadow          = IN
-      overlay_file    = "Check-Radio/menucheck.png"
+      overlay_file    = "assets/menu-checkbox-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -835,7 +843,7 @@ style "menu_item" {
       recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = IN
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-checkbox-checked-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -847,7 +855,7 @@ style "menu_item" {
       function        = OPTION
       state           = NORMAL
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-radio.png"
       overlay_stretch = FALSE
     }
 
@@ -855,7 +863,7 @@ style "menu_item" {
       function        = OPTION
       state           = PRELIGHT
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-radio-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -863,7 +871,7 @@ style "menu_item" {
       function        = OPTION
       state           = ACTIVE
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-radio.png"
       overlay_stretch = FALSE
     }
 
@@ -871,7 +879,7 @@ style "menu_item" {
       function        = OPTION
       state           = INSENSITIVE
       shadow          = OUT
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-radio-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -879,7 +887,7 @@ style "menu_item" {
       function        = OPTION
       state           = NORMAL
       shadow          = IN
-      overlay_file    = "Check-Radio/menuoption.png"
+      overlay_file    = "assets/menu-radio-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -887,7 +895,7 @@ style "menu_item" {
       function        = OPTION
       state           = PRELIGHT
       shadow          = IN
-      overlay_file    = "Check-Radio/menuoption_prelight.png"
+      overlay_file    = "assets/menu-radio-checked-hover.png"
       overlay_stretch = FALSE
     }
 
@@ -895,7 +903,7 @@ style "menu_item" {
       function        = OPTION
       state           = ACTIVE
       shadow          = IN
-      overlay_file    = "Check-Radio/menuoption.png"
+      overlay_file    = "assets/menu-radio-checked.png"
       overlay_stretch = FALSE
     }
 
@@ -903,7 +911,7 @@ style "menu_item" {
       function        = OPTION
       state           = INSENSITIVE
       shadow          = IN
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/menu-radio-checked-insensitive.png"
       overlay_stretch = FALSE
     }
 
@@ -922,7 +930,7 @@ style "menu_item" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "Arrows/menu-arrow.png"
+      overlay_file    = "assets/pan-right.png"
       overlay_border  = {0, 0, 0, 0}
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -931,7 +939,16 @@ style "menu_item" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "Arrows/menu-arrow-prelight.png"
+      overlay_file    = "assets/pan-right-hover.png"
+      overlay_border  = {0, 0, 0, 0}
+      overlay_stretch = FALSE
+      arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets/pan-right-insensitive.png"
       overlay_border  = {0, 0, 0, 0}
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -1776,6 +1793,7 @@ style "combobox" {
 }
 
 style "combobox_button" {
+
   xthickness = 2
   ythickness = 2
 }
@@ -1783,6 +1801,50 @@ style "combobox_button" {
 style "combobox_cellview" {
   text[NORMAL]   = @fg_color
   text[PRELIGHT] = @fg_color
+}
+
+style "combobox_arrows" {
+  
+  engine "pixmap" {
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets/pan-down.png"
+      overlay_border  = { 0, 0, 0, 0 }
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets/pan-down.png"
+      overlay_border  = { 0, 0, 0, 0 }
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets/pan-down.png"
+      overlay_border  = { 0, 0, 0, 0 }
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets/pan-down-insensitive.png"
+      overlay_border  = { 0, 0, 0, 0 }
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+  }
+
 }
 
 style "range" {
@@ -2181,6 +2243,9 @@ widget_class "*<GtkNotebook>.<GtkLabel>"    style "notebook_tab_label"
 
 # ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
 widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
+
+# Correct arrows on ComboBoxes
+widget_class "*<GtkComboBox>*<GtkArrow>" style "combobox_arrows"
 
 # GTK tooltips
 widget "gtk-tooltip*" style "tooltips"
