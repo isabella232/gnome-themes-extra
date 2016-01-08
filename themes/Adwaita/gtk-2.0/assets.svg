@@ -1586,9 +1586,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.8095378"
-     inkscape:cx="605.93539"
-     inkscape:cy="337.96594"
+     inkscape:zoom="45.254834"
+     inkscape:cx="213.75757"
+     inkscape:cy="463.96555"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -1614,7 +1614,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -5229,5 +5229,65 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccscsccsscscc" />
     </g>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="frame"
+       width="2"
+       height="2"
+       x="211.5"
+       y="12.518561"
+       inkscape:label="#rect4938" />
+    <rect
+       inkscape:label="#rect4938"
+       y="17"
+       x="211"
+       height="1"
+       width="1"
+       id="border"
+       style="opacity:1;fill:#9d9d99;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Menu-Menubar/menubar.png"
+       inkscape:label="#rect4723"
+       y="7.5"
+       x="476.5"
+       height="2"
+       width="2"
+       id="menu-border"
+       style="fill:none;fill-opacity:0.1;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       inkscape:label="#rect4938"
+       y="12.518561"
+       x="219.5"
+       height="2"
+       width="2"
+       id="frame-notebook"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="separator-treeview"
+       inkscape:label="#g4959">
+      <rect
+         y="8"
+         x="480"
+         height="2"
+         width="2"
+         id="rect4951"
+         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1" />
+      <path
+         inkscape:label="#rect4948"
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="rect4948"
+         d="m 481.5,8 0,1.5 -1.5,0"
+         style="fill:none;fill-opacity:0.1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1" />
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 217.5,13 0,1.518561 -2,0 L 215.5,13"
+       id="frame-inline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:label="#rect4963" />
   </g>
 </svg>

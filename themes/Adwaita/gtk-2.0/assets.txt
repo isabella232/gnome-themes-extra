@@ -57,7 +57,13 @@ entry-active
 entry-insensitive
 entry-background
 entry-background-insensitive
+border
+frame
+frame-inline
+frame-notebook
 line
+separator-treeview
+menu-border
 menubar-item-active
 progressbar-horz
 progressbar-horz-trough
