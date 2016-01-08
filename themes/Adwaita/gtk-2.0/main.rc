@@ -2040,8 +2040,8 @@ style "treeview_header" {
       stretch  = TRUE
     }
   }
-
 }
+
 style "treeview_header_label" {
 
   xthickness = 1
@@ -2053,6 +2053,61 @@ style "treeview_header_label" {
 
 }
 
+style "treeview_header_arrow" {
+
+  engine "pixmap" {
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets/pan-treeview-up.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets/pan-treeview-up-hover.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets/pan-treeview-up-active.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets/pan-treeview-down.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets/pan-treeview-down-hover.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = ACTIVE
+      overlay_file    = "assets/pan-treeview-down-active.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+  }
+
+}
 style "scrolled_window" {
 
   xthickness = 1
@@ -2254,6 +2309,7 @@ widget_class "*HandleBox"                                        style "handlebo
 widget_class "*<GtkTreeView>"                                    style "treeview"
 widget_class "*<GtkTreeView>*<GtkButton>*"                       style "treeview_header_label"
 widget_class "*<GtkTreeView>*<GtkButton>"                        style "treeview_header"
+widget_class "*<GtkTreeView>*<GtkArrow>"                         style "treeview_header_arrow"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"             style "inline_toolbar"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>*<GtkButton>" style "button_nohilight"
 widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                    style "combobox_entry"

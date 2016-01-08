@@ -1586,9 +1586,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="45.254834"
-     inkscape:cx="213.75757"
-     inkscape:cy="463.96555"
+     inkscape:zoom="8"
+     inkscape:cx="537.27639"
+     inkscape:cy="451.06152"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -5289,5 +5289,125 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
        inkscape:label="#rect4963" />
+    <g
+       transform="matrix(0,1,1,0,-191,-92.000198)"
+       id="pan-treeview-up-active"
+       inkscape:label="pan-up"
+       style="display:inline">
+      <path
+         style="fill:#2e3436;fill-opacity:1;stroke:none"
+         d="m 110.00019,760 -5,-5 5,-5 z"
+         id="path5020"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <rect
+         width="16"
+         height="16"
+         x="-116.0002"
+         y="747"
+         id="rect5022"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
+         transform="scale(-1,1)" />
+    </g>
+    <g
+       inkscape:label="pan-down"
+       id="pan-treeview-down-active"
+       transform="matrix(0,-1,1,0,-191,144.0002)"
+       style="display:inline">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path5026"
+         d="m 110.00021,760 -5,-5 5,-5 z"
+         style="fill:#2e3436;fill-opacity:1;stroke:none" />
+      <rect
+         transform="scale(-1,1)"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
+         id="rect5028"
+         y="747"
+         x="-116.0002"
+         height="16"
+         width="16" />
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(0,-1,1,0,-209,144.0002)"
+       id="pan-treeview-down-hover"
+       inkscape:label="pan-down">
+      <path
+         style="fill:#636769;fill-opacity:1;stroke:none"
+         d="m 110.00021,760 -5,-5 5,-5 z"
+         id="path5032"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <rect
+         width="16"
+         height="16"
+         x="-116.0002"
+         y="747"
+         id="rect5034"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
+         transform="scale(-1,1)" />
+    </g>
+    <g
+       inkscape:label="pan-down"
+       id="pan-treeview-down"
+       transform="matrix(0,-1,1,0,-227,144.0002)"
+       style="display:inline">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path5038"
+         d="m 110.00021,760 -5,-5 5,-5 z"
+         style="fill:#979a9b;fill-opacity:1;stroke:none" />
+      <rect
+         transform="scale(-1,1)"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
+         id="rect5040"
+         y="747"
+         x="-116.0002"
+         height="16"
+         width="16" />
+    </g>
+    <g
+       style="display:inline"
+       inkscape:label="pan-up"
+       id="pan-treeview-up-hover"
+       transform="matrix(0,1,1,0,-209,-92.000198)">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path5044"
+         d="m 110.00019,760 -5,-5 5,-5 z"
+         style="fill:#636769;fill-opacity:1;stroke:none" />
+      <rect
+         transform="scale(-1,1)"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
+         id="rect5046"
+         y="747"
+         x="-116.0002"
+         height="16"
+         width="16" />
+    </g>
+    <g
+       transform="matrix(0,1,1,0,-227,-92.000198)"
+       id="pan-treeview-up"
+       inkscape:label="pan-up"
+       style="display:inline">
+      <path
+         style="fill:#979a9b;fill-opacity:1;stroke:none"
+         d="m 110.00019,760 -5,-5 5,-5 z"
+         id="path5050"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <rect
+         width="16"
+         height="16"
+         x="-116.0002"
+         y="747"
+         id="rect5052"
+         style="color:#bebebe;display:inline;overflow:visible;visibility:visible;fill:none;stroke:none;stroke-width:1;marker:none;enable-background:new"
+         transform="scale(-1,1)" />
+    </g>
   </g>
 </svg>

@@ -34,6 +34,12 @@ pan-up-insensitive
 pan-down
 pan-down-hover
 pan-down-insensitive
+pan-treeview-up
+pan-treeview-up-hover
+pan-treeview-up-active
+pan-treeview-down
+pan-treeview-down-hover
+pan-treeview-down-active
 button
 button-hover
 button-active
