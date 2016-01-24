@@ -559,9 +559,6 @@ style "default" {
 
 style "scrollbar" {
 
-  bg[ACTIVE] = "red"#shade(0.97, @bg_color)
-  bg[NORMAL] = "red"#shade(0.97, @bg_color)
-
   engine "pixmap" {
 
     image {
