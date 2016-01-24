@@ -44,6 +44,10 @@ button
 button-hover
 button-active
 button-insensitive
+infobar-button
+infobar-button-hover
+infobar-button-active
+infobar-button-insensitive
 combo-entry-ltr-entry
 combo-entry-ltr-entry-active
 combo-entry-ltr-entry-insensitive

@@ -961,7 +961,7 @@ style "button" {
     image {
       function = BOX
       state    = NORMAL
-      file     = "Buttons/button-default.png"
+      file     = "assets/button.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -969,7 +969,7 @@ style "button" {
     image {
       function = BOX
       state    = PRELIGHT
-      file     = "Buttons/button-prelight.png"
+      file     = "assets/button-hover.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -977,7 +977,7 @@ style "button" {
     image {
       function = BOX
       state    = ACTIVE
-      file     = "Buttons/button-pressed.png"
+      file     = "assets/button-active.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -985,7 +985,7 @@ style "button" {
     image {
       function = BOX
       state    = INSENSITIVE
-      file     = "Buttons/button-insensitive.png"
+      file     = "assets/button-insensitive.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -994,17 +994,14 @@ style "button" {
 
 }
 
-style "button_nohilight" {
-
-  xthickness = 3
-  ythickness = 4
+style "button_infobar" {
 
   engine "pixmap" {
 
     image {
       function = BOX
       state    = NORMAL
-      file     = "Buttons/button-default-nohilight.png"
+      file     = "assets/infobar-button.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -1012,7 +1009,7 @@ style "button_nohilight" {
     image {
       function = BOX
       state    = PRELIGHT
-      file     = "Buttons/button-prelight-nohilight.png"
+      file     = "assets/infobar-button-hover.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -1020,7 +1017,7 @@ style "button_nohilight" {
     image {
       function = BOX
       state    = ACTIVE
-      file     = "Buttons/button-pressed-nohilight.png"
+      file     = "assets/infobar-button-active.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -1028,7 +1025,7 @@ style "button_nohilight" {
     image {
       function = BOX
       state    = INSENSITIVE
-      file     = "Buttons/button-insensitive-nohilight.png"
+      file     = "assets/infobar-button-insensitive.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -2311,10 +2308,9 @@ widget_class "*<GtkTreeView>*<GtkButton>*"                       style "treeview
 widget_class "*<GtkTreeView>*<GtkButton>"                        style "treeview_header"
 widget_class "*<GtkTreeView>*<GtkArrow>"                         style "treeview_header_arrow"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"             style "inline_toolbar"
-widget_class "*<GtkFileChooserDefault>*<GtkToolbar>*<GtkButton>" style "button_nohilight"
 widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                    style "combobox_entry"
 widget_class "*<GtkComboBoxEntry>*<GtkButton>"                   style "combobox_entry_button"
-widget_class "*<GtkInfoBar>*<GtkButton>"                         style "button_nohilight"
+widget_class "*<GtkInfoBar>*<GtkButton>"                         style "button_infobar"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
 
 # Entries in notebooks draw with notebook's base color, but not if there's
