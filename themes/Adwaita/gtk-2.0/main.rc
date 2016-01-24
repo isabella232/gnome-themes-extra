@@ -576,7 +576,7 @@ style "scrollbar" {
     image {
       function    = BOX
       detail      = "trough"
-      file        = "Scrollbars/trough-h.png"
+      file        = "assets/scrollbar-horz-trough.png"
       border      = {0, 0, 1, 0}
       stretch     = TRUE
       orientation = HORIZONTAL
@@ -585,7 +585,7 @@ style "scrollbar" {
     image {
       function    = BOX
       detail      = "trough"
-      file        = "Scrollbars/trough-v.png"
+      file        = "assets/scrollbar-vert-trough.png"
       border      = {1, 0, 0, 0}
       stretch     = TRUE
       orientation = VERTICAL
@@ -598,16 +598,7 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = NORMAL
-      file        = "Scrollbars/slider-h.png"
-      border      = {6, 6, 7, 6 }
-      stretch     = TRUE
-      orientation = HORIZONTAL
-    }
-
-    image {
-      function    = SLIDER
-      state       = ACTIVE
-      file        = "Scrollbars/slider-h-active.png"
+      file        = "assets/scrollbar-horz-slider.png"
       border      = {6, 6, 7, 6 }
       stretch     = TRUE
       orientation = HORIZONTAL
@@ -616,7 +607,16 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = PRELIGHT
-      file        = "Scrollbars/slider-h-hover.png"
+      file        = "assets/scrollbar-horz-slider-hover.png"
+      border      = {6, 6, 7, 6 }
+      stretch     = TRUE
+      orientation = HORIZONTAL
+    }
+
+    image {
+      function    = SLIDER
+      state       = ACTIVE
+      file        = "assets/scrollbar-horz-slider-active.png"
       border      = {6, 6, 7, 6 }
       stretch     = TRUE
       orientation = HORIZONTAL
@@ -638,16 +638,7 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = NORMAL
-      file        = "Scrollbars/slider-v.png"
-      border      = {7, 6, 6, 6}
-      stretch     = TRUE
-      orientation = VERTICAL
-    }
-
-    image {
-      function    = SLIDER
-      state       = ACTIVE
-      file        = "Scrollbars/slider-v-active.png"
+      file        = "assets/scrollbar-vert-slider.png"
       border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
@@ -656,7 +647,16 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = PRELIGHT
-      file        = "Scrollbars/slider-v-hover.png"
+      file        = "assets/scrollbar-vert-slider-hover.png"
+      border      = {7, 6, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+    }
+
+    image {
+      function    = SLIDER
+      state       = ACTIVE
+      file        = "assets/scrollbar-vert-slider-active.png"
       border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
