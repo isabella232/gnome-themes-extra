@@ -86,11 +86,15 @@ style "default" {
   bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
   bg[ACTIVE]      = "red" #shade (0.9, @bg_color) # I just can't find out where this is used
 
-  fg[NORMAL]      = @fg_color
-  fg[PRELIGHT]    = @fg_color
+  #fg[NORMAL]      = @fg_color
+  #fg[PRELIGHT]    = @fg_color
   fg[SELECTED]    = @selected_fg_color
   fg[INSENSITIVE] = mix (0.5, @fg_color, @bg_color)
-  fg[ACTIVE]      = @fg_color
+  #fg[ACTIVE]      = @fg_color
+
+  fg[NORMAL] = @focus_color
+  fg[PRELIGHT] = @focus_color
+  fg[ACTIVE] = @focus_color
 
   text[NORMAL]      = @text_color
   text[PRELIGHT]    = @text_color
@@ -557,6 +561,14 @@ style "default" {
   }
 }
 
+style "label" {
+
+  fg[NORMAL]      = @fg_color
+  fg[PRELIGHT]    = @fg_color
+  fg[ACTIVE]      = @fg_color
+
+}
+
 style "scrollbar" {
 
   engine "pixmap" {
@@ -949,10 +961,6 @@ style "button" {
   xthickness = 3
   ythickness = 3
 
-  fg[NORMAL] = @focus_color
-  fg[PRELIGHT] = @focus_color
-  fg[ACTIVE] = @focus_color
-
   engine "pixmap" {
 
     image {
@@ -1041,7 +1049,7 @@ style "entry" {
   xthickness = 3
   ythickness = 4
 
-  base[NORMAL]      = @base_color
+  # This is needed otherwise the background is drawn with fg
   base[INSENSITIVE] = @insensitive_bg_color
 
   engine "pixmap" {
@@ -1071,67 +1079,6 @@ style "entry" {
       detail   = "entry"
       state    = ACTIVE
       file     = "Entry/entry-border-active-bg.png"
-      border   = {4, 4, 4, 4}
-      stretch  = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail   = "entry_bg"
-      state    = NORMAL
-      file     = "Others/null.png"
-      border   = {0, 0, 0, 0}
-      stretch  = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail   = "entry_bg"
-      state    = ACTIVE
-      file     = "Others/null.png"
-      border   = {0, 0, 0, 0}
-      stretch  = TRUE
-    }
-
-  }
-
-}
-
-style "notebook_entry" {
-
-  xthickness = 3
-  ythickness = 4
-
-  base[NORMAL]      = @base_color
-  base[INSENSITIVE] = @insensitive_bg_color
-
-  engine "pixmap" {
-
-    image {
-      function = SHADOW
-      detail   = "entry"
-      state    = NORMAL
-      shadow   = IN
-      file     = "Entry/notebook-entry-border-bg.png"
-      border   = {4, 4, 4, 4}
-      stretch  = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail   = "entry"
-      state    = INSENSITIVE
-      shadow   = IN
-      file     = "Entry/notebook-entry-border-disabled-bg.png"
-      border   = {4, 4, 4, 4}
-      stretch  = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail   = "entry"
-      state    = ACTIVE
-      file     = "Entry/notebook-entry-border-active-bg.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
@@ -1336,8 +1283,6 @@ style "combobox_entry_button" {
 }
 
 style "spinbutton" {
-
-  bg[NORMAL] = @bg_color
 
   xthickness = 4
   ythickness = 4
@@ -1610,10 +1555,6 @@ style "notebook" {
   xthickness = 5
   ythickness = 2
 
-  fg[NORMAL]   = @focus_color
-  fg[PRELIGHT] = @focus_color
-  fg[ACTIVE]   = @focus_color
-
   engine "pixmap" {
 
     image {
@@ -1841,10 +1782,6 @@ style "combobox_arrows" {
 }
 
 style "range" {
-
-  fg[NORMAL]   = @focus_color
-  fg[PRELIGHT] = @focus_color
-  fg[ACTIVE]   = @focus_color
 
   engine "pixmap" {
 
@@ -2276,6 +2213,7 @@ style "null" {
 }
 
 class "GtkWidget"            style "default"
+class "GtkLabel"             style "label"
 class "GtkScrollbar"         style "scrollbar"
 class "GtkButton"            style "button"
 class "GtkEntry"             style "entry"
@@ -2309,11 +2247,6 @@ widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                    style "combobox
 widget_class "*<GtkComboBoxEntry>*<GtkButton>"                   style "combobox_entry_button"
 widget_class "*<GtkInfoBar>*<GtkButton>"                         style "button_infobar"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
-
-# Entries in notebooks draw with notebook's base color, but not if there's
-# something else in the middle that draws gray again
-widget_class "*<GtkNotebook>*<GtkEntry>"               style "notebook_entry"
-widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkEntry>" style "entry"
 
 # We need the prelight colour inside notebooks to be white so it won't change on hover
 widget_class "*<GtkNotebook>*"                         style "notebook_prelight"
