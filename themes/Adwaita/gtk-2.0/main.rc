@@ -297,7 +297,6 @@ style "default" {
     image {
       function        = ARROW
       overlay_file    = "assets/arrow-up.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -306,7 +305,6 @@ style "default" {
       function        = ARROW
       state           = PRELIGHT
       overlay_file    = "assets/arrow-up.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -315,7 +313,6 @@ style "default" {
       function        = ARROW
       state           = ACTIVE
       overlay_file    = "assets/arrow-up.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -324,7 +321,6 @@ style "default" {
       function        = ARROW
       state           = INSENSITIVE
       overlay_file    = "assets/arrow-up-insensitive.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -333,7 +329,6 @@ style "default" {
       function        = ARROW
       state           = NORMAL
       overlay_file    = "assets/arrow-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -342,7 +337,6 @@ style "default" {
       function        = ARROW
       state           = PRELIGHT
       overlay_file    = "assets/arrow-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -351,7 +345,6 @@ style "default" {
       function        = ARROW
       state           = ACTIVE
       overlay_file    = "assets/arrow-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -360,7 +353,6 @@ style "default" {
       function        = ARROW
       state           = INSENSITIVE
       overlay_file    = "assets/arrow-down-insensitive.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -368,7 +360,6 @@ style "default" {
     image {
       function        = ARROW
       overlay_file    = "assets/arrow-left.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -377,7 +368,6 @@ style "default" {
       function        = ARROW
       state           = PRELIGHT
       overlay_file    = "assets/arrow-left.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -386,7 +376,6 @@ style "default" {
       function        = ARROW
       state           = ACTIVE
       overlay_file    = "assets/arrow-left.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -395,7 +384,6 @@ style "default" {
       function        = ARROW
       state           = INSENSITIVE
       overlay_file    = "assets/arrow-left-insensitive.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -403,7 +391,6 @@ style "default" {
     image {
       function        = ARROW
       overlay_file    = "assets/arrow-right.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -412,7 +399,6 @@ style "default" {
       function        = ARROW
       state           = PRELIGHT
       overlay_file    = "assets/arrow-right.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -421,7 +407,6 @@ style "default" {
       function        = ARROW
       state           = ACTIVE
       overlay_file    = "assets/arrow-right.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -430,7 +415,6 @@ style "default" {
       function        = ARROW
       state           = INSENSITIVE
       overlay_file    = "assets/arrow-right-insensitive.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -443,7 +427,6 @@ style "default" {
       function        = TAB
       state           = NORMAL
       overlay_file    = "assets/pan-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
     }
 
@@ -451,7 +434,6 @@ style "default" {
       function        = TAB
       state           = PRELIGHT
       overlay_file    = "assets/pan-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
     }
 
@@ -459,7 +441,6 @@ style "default" {
       function        = TAB
       state           = ACTIVE
       overlay_file    = "assets/pan-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
     }
 
@@ -477,14 +458,12 @@ style "default" {
     image {
       function = VLINE
       file     = "Lines/line-v.png"
-      border   = { 0, 0, 0, 0 }
       stretch  = TRUE
     }
 
     image {
       function = HLINE
       file     = "Lines/line-h.png"
-      border   = { 0, 0, 0, 0 }
       stretch  = TRUE
     }
 
@@ -543,7 +522,6 @@ style "default" {
       state           = NORMAL
       detail          = "statusbar"
       overlay_file    = "Others/null.png"
-      overlay_border  = { 0,0,0,0 }
       overlay_stretch = FALSE
     }
 
@@ -1083,7 +1061,6 @@ style "entry" {
       detail   = "entry_bg"
       state    = NORMAL
       file     = "Others/null.png"
-      border   = {0, 0, 0, 0}
       stretch  = TRUE
     }
 
@@ -1092,7 +1069,6 @@ style "entry" {
       detail   = "entry_bg"
       state    = ACTIVE
       file     = "Others/null.png"
-      border   = {0, 0, 0, 0}
       stretch  = TRUE
     }
 
@@ -1510,7 +1486,6 @@ style "standalone_entry" {
       state    = ACTIVE
       file     = "Entry/entry-border-fill-plain.png"
       stretch  = TRUE
-      border   = {0, 0, 0, 0}
     }
 
     image {
@@ -1538,7 +1513,6 @@ style "standalone_entry" {
       state    = NORMAL
       file     = "Entry/entry-border-fill-plain.png"
       stretch  = TRUE
-      border   = {0, 0, 0, 0}
     }
 
   }
@@ -1740,7 +1714,6 @@ style "combobox_arrows" {
       function        = ARROW
       state           = NORMAL
       overlay_file    = "assets/pan-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -1749,7 +1722,6 @@ style "combobox_arrows" {
       function        = ARROW
       state           = PRELIGHT
       overlay_file    = "assets/pan-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -1758,7 +1730,6 @@ style "combobox_arrows" {
       function        = ARROW
       state           = ACTIVE
       overlay_file    = "assets/pan-down.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -1767,7 +1738,6 @@ style "combobox_arrows" {
       function        = ARROW
       state           = INSENSITIVE
       overlay_file    = "assets/pan-down-insensitive.png"
-      overlay_border  = { 0, 0, 0, 0 }
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -1806,7 +1776,6 @@ style "range" {
       function        = SLIDER
       state           = NORMAL
       file            = "Others/null.png"
-      border          = {0, 0, 0, 0}
       stretch         = TRUE
       overlay_file    = "Range/slider-horiz.png"
       overlay_stretch = FALSE
@@ -1817,7 +1786,6 @@ style "range" {
       function        = SLIDER
       state           = PRELIGHT
       file            = "Others/null.png"
-      border          = {0, 0, 0, 0}
       stretch         = TRUE
       overlay_file    = "Range/slider-horiz-prelight.png"
       overlay_stretch = FALSE
@@ -1828,7 +1796,6 @@ style "range" {
       function        = SLIDER
       state           = INSENSITIVE
       file            = "Others/null.png"
-      border          = {0, 0, 0, 0}
       stretch         = TRUE
       overlay_file    = "Range/slider-horiz.png"
       overlay_stretch = FALSE
@@ -1843,7 +1810,6 @@ style "range" {
       function        = SLIDER
       state           = NORMAL
       file            = "Others/null.png"
-      border          = {0, 0, 0, 0}
       stretch         = TRUE
       overlay_file    = "Range/slider-vert.png"
       overlay_stretch = FALSE
@@ -1854,7 +1820,6 @@ style "range" {
       function        = SLIDER
       state           = PRELIGHT
       file            = "Others/null.png"
-      border          = {0, 0, 0, 0}
       stretch         = TRUE
       overlay_file    = "Range/slider-vert-prelight.png"
       overlay_stretch = FALSE
@@ -1865,7 +1830,6 @@ style "range" {
       function        = SLIDER
       state           = INSENSITIVE
       file            = "Others/null.png"
-      border          = {0, 0, 0, 0}
       stretch         = TRUE
       overlay_file    = "Range/slider-vert.png"
       overlay_stretch = FALSE
