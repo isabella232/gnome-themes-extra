@@ -689,7 +689,7 @@ style "menubar" {
     image {
       function = BOX
       state    = NORMAL
-      file     = "Menu-Menubar/menubar.png"
+      file     = "assets/line.png"
       border   = {0, 0, 0, 1}
       stretch  = TRUE
     }
@@ -697,28 +697,23 @@ style "menubar" {
 
 }
 
-style "menubar_button" {
+style "menubar_item" {
 
   xthickness = 3
   ythickness = 4
 
+  fg[PRELIGHT] = shade(0.9, @selected_bg_color)
+
   engine "pixmap" {
     image {
       function    = BOX
-      recolorable = TRUE
       state       = PRELIGHT
-      file        = "Menu-Menubar/menubar-button.png"
+      file        = "assets/menubar-item-active.png"
       border      = {0, 0, 0, 3}
       stretch     = TRUE
     }
   }
 
-}
-
-style "menubar_item" {
-  xthickness   = 2
-  ythickness   = 3
-  fg[PRELIGHT] = shade(0.9, @selected_bg_color)
 }
 
 style "menu" {
@@ -2230,9 +2225,8 @@ class "GtkToolbar"           style "toolbar"
 widget_class "*<GtkMenu>*"                                       style "menu"
 widget_class "*<GtkMenu>*"                                       style "menu_framed_box"
 widget_class "*<GtkMenuItem>*"                                   style "menu_item"
-widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                      style "menubar_item"
 widget_class "*<GtkMenuBar>"                                     style "menubar"
-widget_class "*<GtkMenuBar>*"                                    style "menubar_button"
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                      style "menubar_item"
 widget_class "*<GtkCheckButton>*"                                style "checkbutton"
 widget_class "*<GtkComboBox>"                                    style "combobox"
 widget_class "*<GtkComboBox>*<GtkButton>"                        style "combobox_button"
