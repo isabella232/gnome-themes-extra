@@ -86,15 +86,15 @@ style "default" {
   bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
   bg[ACTIVE]      = "red" #shade (0.9, @bg_color) # I just can't find out where this is used
 
-  #fg[NORMAL]      = @fg_color
-  #fg[PRELIGHT]    = @fg_color
+  fg[NORMAL]      = @fg_color
+  fg[PRELIGHT]    = @fg_color
   fg[SELECTED]    = @selected_fg_color
   fg[INSENSITIVE] = mix (0.5, @fg_color, @bg_color)
-  #fg[ACTIVE]      = @fg_color
+  fg[ACTIVE]      = @fg_color
 
-  fg[NORMAL] = @focus_color
-  fg[PRELIGHT] = @focus_color
-  fg[ACTIVE] = @focus_color
+  #fg[NORMAL] = @focus_color
+  #fg[PRELIGHT] = @focus_color
+  #fg[ACTIVE] = @focus_color
 
   text[NORMAL]      = @text_color
   text[PRELIGHT]    = @text_color
