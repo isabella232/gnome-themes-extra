@@ -1858,8 +1858,8 @@ style "progressbar" {
     image {
       function    = BOX
       detail      = "trough"
-      file        = "ProgressBar/trough-progressbar.png"
-      border      = {4, 4, 4, 4}
+      file        = "assets/progressbar-horz-trough.png"
+      border      = {4, 4, 0, 10}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -1867,17 +1867,17 @@ style "progressbar" {
     image {
       function    = BOX
       detail      = "bar"
-      file        = "ProgressBar/progressbar.png"
+      file        = "assets/progressbar-horz.png"
       stretch     = TRUE
-      border      = {3, 3, 3, 3}
+      border      = {3, 3, 0, 10}
       orientation = HORIZONTAL
     }
 
     image {
       function    = BOX
       detail      = "trough"
-      file        = "ProgressBar/trough-progressbar_v.png"
-      border      = {4, 4, 4, 4}
+      file        = "assets/progressbar-vert-trough.png"
+      border      = {0, 10, 4, 4}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -1885,9 +1885,9 @@ style "progressbar" {
     image {
       function    = BOX
       detail      = "bar"
-      file        = "ProgressBar/progressbar_v.png"
+      file        = "assets/progressbar-vert.png"
       stretch     = TRUE
-      border      = {3, 3, 3, 3}
+      border      = {0, 10, 3, 3}
       orientation = VERTICAL
     }
 
