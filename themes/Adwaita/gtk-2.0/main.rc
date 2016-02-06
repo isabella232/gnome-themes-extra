@@ -206,6 +206,51 @@ style "default" {
       overlay_stretch = FALSE
     }
 
+    image {
+      function        = CHECK
+      recolorable     = TRUE
+      state           = NORMAL
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/checkbox-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      recolorable     = TRUE
+      state           = PRELIGHT
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/checkbox-mixed-hover.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      recolorable     = TRUE
+      state           = ACTIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/checkbox-mixed-active.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      recolorable     = TRUE
+      state           = SELECTED
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/checkbox-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      recolorable     = TRUE
+      state           = INSENSITIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/checkbox-mixed-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
     #################
     # Radio Buttons #
     #################
@@ -287,6 +332,46 @@ style "default" {
       state           = INSENSITIVE
       shadow          = IN
       overlay_file    = "assets/radio-checked-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = NORMAL
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/radio-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = PRELIGHT
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/radio-mixed-hover.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = ACTIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/radio-mixed-active.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = SELECTED
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/radio-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = INSENSITIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/radio-mixed-insensitive.png"
       overlay_stretch = FALSE
     }
 
