@@ -1558,26 +1558,6 @@
        y1="28.387304"
        x2="5.0000005"
        y2="3.6127" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4962"
-       id="linearGradient5049"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(30,0)"
-       x1="5.0000005"
-       y1="6.9609089"
-       x2="5.0000005"
-       y2="2.0659039" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4962"
-       id="linearGradient5155"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(30,0)"
-       x1="5.0000005"
-       y1="6.9609089"
-       x2="5.0000005"
-       y2="2.0659039" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1586,9 +1566,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="45.254832"
-     inkscape:cx="211.70163"
-     inkscape:cy="459.50679"
+     inkscape:zoom="15.999999"
+     inkscape:cx="141.71315"
+     inkscape:cy="441.76958"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -5452,7 +5432,7 @@
          id="g5043"
          transform="translate(107,7)">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5049);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#cececc;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5045"
            width="7"
            height="6"
@@ -5473,14 +5453,14 @@
     </g>
     <g
        id="progressbar-horz"
-       inkscape:label="#g5113">
+       inkscape:label="#g5033">
       <rect
          ry="0"
          rx="0"
-         y="67"
-         x="135"
-         height="10"
-         width="10"
+         y="68"
+         x="136"
+         height="8"
+         width="8"
          id="rect5097"
          style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
       <g
@@ -5489,7 +5469,7 @@
         <rect
            ry="3"
            rx="3"
-           y="1.5"
+           y="0.5"
            x="31.5"
            height="6"
            width="7"
@@ -5498,30 +5478,30 @@
         <rect
            ry="3"
            rx="3"
-           y="1.5"
+           y="0.5"
            x="31.5"
            height="6"
            width="7"
            id="rect5103"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#184472;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
       </g>
     </g>
     <g
-       inkscape:label="#g5113"
        id="progressbar-vert"
-       transform="matrix(0,-1,1,0,80,212)">
+       inkscape:label="#g5023">
       <rect
+         transform="matrix(0,-1,1,0,0,0)"
          style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
          id="rect5135"
-         width="10"
-         height="10"
-         x="135"
-         y="67"
+         width="9"
+         height="7"
+         x="-77"
+         y="149"
          rx="0"
          ry="0" />
       <g
          id="g5137"
-         transform="translate(105,68)">
+         transform="matrix(0,-1,1,0,148,107)">
         <rect
            style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5139"
@@ -5532,7 +5512,7 @@
            rx="3"
            ry="3" />
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#184472;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
            id="rect5141"
            width="7"
            height="6"
@@ -5543,14 +5523,13 @@
       </g>
     </g>
     <g
-       transform="translate(12,22)"
-       inkscape:label="#g5060"
-       id="progressbar-vert-trough">
+       id="progressbar-vert-trough"
+       inkscape:label="#g5002">
       <rect
          ry="3"
          rx="3"
-         y="9.5"
-         x="138.5"
+         y="31.5"
+         x="150.5"
          height="7"
          width="6"
          id="rect5145"
@@ -5558,14 +5537,14 @@
       <rect
          ry="0"
          rx="0"
-         y="7"
-         x="137"
-         height="10"
-         width="10"
+         y="29"
+         x="149"
+         height="11"
+         width="9"
          id="rect5147"
          style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
       <g
-         transform="translate(107,7)"
+         transform="translate(119,29)"
          id="g5149">
         <rect
            ry="3"
@@ -5575,7 +5554,7 @@
            height="7"
            width="6"
            id="rect5151"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5155);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#cececc;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
         <rect
            ry="3"
            rx="3"

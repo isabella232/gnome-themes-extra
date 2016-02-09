@@ -37,9 +37,10 @@ style "default" {
 
   GtkButton::default-border         = {0, 0, 0, 0}
   GtkButton::default-outside-border = {0, 0, 0, 0}
-  GtkButton::inner-border           = {5, 5, 2, 3}
+  GtkButton::inner-border           = {5, 5, 3, 3}
 
   GtkEntry::state-hint = 1
+  GtkEntry::inner-border = {7, 7, 4, 5}
 
   GtkScrollbar::trough-border = 0
   GtkRange::trough-border     = 0
@@ -53,10 +54,19 @@ style "default" {
   GtkScrolledWindow::scrollbar-spacing       = 0
   GtkScrolledWindow::scrollbars-within-bevel = 1
 
-  GtkVScale::slider_length = 16
-  GtkVScale::slider_width  = 16
-  GtkHScale::slider_length = 16
-  GtkHScale::slider_width  = 16
+  GtkScale::slider_length = 20
+  GtkScale::slider_width  = 26
+
+  # FIXME: progress bars should be 2px smaller, but doing so now makes
+  #        them fuzzy, it probably requires a change in the assets.
+  GtkProgressBar::min-horizontal-bar-height = 9
+  GtkProgressBar::min-vertical-bar-width    = 8
+  # Making this bigger than the min[height,width]-2*[y,x]spacing makes the
+  # whole progressbar thicker, so by setting it to the exact above value
+  # we get the maximum spacing between the text and the edges without
+  # doing so.
+  GtkProgressBar::xspacing = 6
+  GtkProgressBar::yspacing = 7
 
   GtkStatusbar::shadow_type    = GTK_SHADOW_NONE
   GtkSpinButton::shadow_type   = GTK_SHADOW_NONE
@@ -1128,7 +1138,7 @@ style "checkbutton" {
 style "entry" {
 
   xthickness = 3
-  ythickness = 4
+  ythickness = 3
 
   # This is needed otherwise the background is drawn with fg
   base[INSENSITIVE] = @insensitive_bg_color
@@ -1189,9 +1199,6 @@ style "notebook_tab_label" {
 }
 
 style "combobox_entry" {
-
-  xthickness = 2
-  ythickness = 4
 
   engine "pixmap" {
 
@@ -1362,9 +1369,6 @@ style "combobox_entry_button" {
 }
 
 style "spinbutton" {
-
-  xthickness = 4
-  ythickness = 4
 
   engine "pixmap" {
 
@@ -1962,13 +1966,15 @@ style "progressbar" {
   xthickness = 1
   ythickness = 1
 
+  fg[PRELIGHT] = @selected_fg_color
+
   engine "pixmap" {
 
     image {
       function    = BOX
       detail      = "trough"
       file        = "assets/progressbar-horz-trough.png"
-      border      = {4, 4, 0, 10}
+      border      = {4, 4, 4, 5}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -1978,7 +1984,7 @@ style "progressbar" {
       detail      = "bar"
       file        = "assets/progressbar-horz.png"
       stretch     = TRUE
-      border      = {3, 3, 0, 10}
+      border      = {3, 3, 3, 4}
       orientation = HORIZONTAL
     }
 
@@ -1986,7 +1992,7 @@ style "progressbar" {
       function    = BOX
       detail      = "trough"
       file        = "assets/progressbar-vert-trough.png"
-      border      = {0, 10, 4, 4}
+      border      = {4, 4, 4, 5}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -1996,7 +2002,7 @@ style "progressbar" {
       detail      = "bar"
       file        = "assets/progressbar-vert.png"
       stretch     = TRUE
-      border      = {0, 10, 3, 3}
+      border      = {3, 3, 3, 4}
       orientation = VERTICAL
     }
 
@@ -2218,7 +2224,7 @@ style "toolbar" {
 
 style "toolbar_button" {
 
-  GtkButton::inner-border = {4, 4, 4, 4}
+  #GtkButton::inner-border = {4, 4, 4, 4}
   #xthickness = 4
   #ythickness = 4
 
