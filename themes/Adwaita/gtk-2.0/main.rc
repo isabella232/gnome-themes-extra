@@ -1033,7 +1033,18 @@ style "button" {
     image {
       function = BOX
       state    = PRELIGHT
+      shadow   = OUT
       file     = "assets/button-hover.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    # Don't add hover effect on pressed buttons
+    image {
+      function = BOX
+      state    = PRELIGHT
+      shadow   = IN
+      file     = "assets/button-active.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
