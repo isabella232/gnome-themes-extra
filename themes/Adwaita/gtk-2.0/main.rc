@@ -35,8 +35,9 @@ style "default" {
 
   GtkButton::child-displacement-y = 0
 
-  GtkButton::default-border         = { 0, 0, 0, 0 }
-  GtkButton::default-outside_border = { 0, 0, 0, 0 }
+  GtkButton::default-border         = {0, 0, 0, 0}
+  GtkButton::default-outside-border = {0, 0, 0, 0}
+  GtkButton::inner-border           = {5, 5, 2, 3}
 
   GtkEntry::state-hint = 1
 
@@ -66,7 +67,7 @@ style "default" {
   GtkMenu::vertical-padding    = 0
 
   GtkCheckButton::indicator_spacing = 3
-  GtkOptionMenu::indicator_spacing  = { 8, 2, 0, 0 }
+  GtkOptionMenu::indicator_spacing  = {12, 12, 4, 6}
 
   GtkTreeView::row_ending_details   = 0
   GtkTreeView::expander-size        = 11
@@ -1782,8 +1783,9 @@ style "combobox" {
 
 style "combobox_button" {
 
-  xthickness = 2
-  ythickness = 2
+  xthickness = 3
+  ythickness = 3
+
 }
 
 style "combobox_cellview" {
@@ -2192,6 +2194,14 @@ style "toolbar" {
 
 }
 
+style "toolbar_button" {
+
+  GtkButton::inner-border = {4, 4, 4, 4}
+  #xthickness = 4
+  #ythickness = 4
+
+}
+
 style "inline_toolbar" {
 
   GtkToolbar::button-relief = GTK_RELIEF_NORMAL
@@ -2290,6 +2300,9 @@ widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                    style "combobox
 widget_class "*<GtkComboBoxEntry>*<GtkButton>"                   style "combobox_entry_button"
 widget_class "*<GtkInfoBar>*<GtkButton>"                         style "button_infobar"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
+
+# Toolbar buttons have different paddings
+widget_class "*<GtkToolbar>*<GtkButton>" style "toolbar_button"
 
 # We need the prelight colour inside notebooks to be white so it won't change on hover
 widget_class "*<GtkNotebook>*"                         style "notebook_prelight"
