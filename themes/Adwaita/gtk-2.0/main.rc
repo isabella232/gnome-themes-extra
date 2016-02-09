@@ -553,6 +553,17 @@ style "default" {
       stretch  = TRUE
     }
 
+    #########
+    # Focus #
+    #########
+
+    image {
+      function = FOCUS
+      file = "assets/focus.png"
+      border = {1, 1, 1, 1}
+      stretch = TRUE
+    }
+
     ###########
     # Handles #
     ###########

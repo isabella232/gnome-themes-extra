@@ -1586,9 +1586,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313708"
-     inkscape:cx="138.26137"
-     inkscape:cy="421.51787"
+     inkscape:zoom="45.254832"
+     inkscape:cx="211.70163"
+     inkscape:cy="459.50679"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -1614,7 +1614,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -5586,6 +5586,16 @@
            id="rect5153"
            style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
       </g>
+    </g>
+    <g
+       id="focus"
+       inkscape:label="#g4994">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         inkscape:connector-curvature="0"
+         id="rect4988"
+         d="m 212,20.5 2,0 m 0.5,0.5 0,2 m -0.5,0.5 -2,0 m -0.5,-0.5 0,-2"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#2e3436;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.3" />
     </g>
   </g>
 </svg>
