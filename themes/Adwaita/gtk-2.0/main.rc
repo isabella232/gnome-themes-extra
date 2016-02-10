@@ -59,8 +59,6 @@ style "default" {
   GtkScale::slider_width        = 26
   GtkScale::trough-side-details = 1
 
-  # FIXME: progress bars should be 2px smaller, but doing so now makes
-  #        them fuzzy, it probably requires a change in the assets.
   GtkProgressBar::min-horizontal-bar-height = 6
   GtkProgressBar::min-vertical-bar-width    = 6
   # Making this bigger than the min[height,width]-2*[y,x]spacing makes the
