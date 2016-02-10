@@ -104,3 +104,12 @@ spin-rtl-up
 spin-rtl-up-hover
 spin-rtl-up-active
 spin-rtl-up-insensitive
+scale-slider
+scale-slider-hover
+scale-slider-active
+scale-slider-insensitive
+scale-horz-focus
+scale-horz-trough
+scale-horz-trough-active
+scale-vert-trough
+scale-vert-trough-active

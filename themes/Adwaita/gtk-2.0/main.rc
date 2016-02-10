@@ -46,6 +46,7 @@ style "default" {
   GtkRange::trough-border     = 0
   GtkRange::slider-width      = 13
   GtkRange::stepper-size      = 0
+  GtkRange::activate-slider   = 1
 
   GtkScrollbar::activate-slider              = 1
   GtkScrollbar::has-backward-stepper         = 0
@@ -54,8 +55,9 @@ style "default" {
   GtkScrolledWindow::scrollbar-spacing       = 0
   GtkScrolledWindow::scrollbars-within-bevel = 1
 
-  GtkScale::slider_length = 20
-  GtkScale::slider_width  = 26
+  GtkScale::slider_length       = 26
+  GtkScale::slider_width        = 26
+  GtkScale::trough-side-details = 1
 
   # FIXME: progress bars should be 2px smaller, but doing so now makes
   #        them fuzzy, it probably requires a change in the assets.
@@ -95,7 +97,7 @@ style "default" {
   bg[PRELIGHT]    = @bg_color
   bg[SELECTED]    = @selected_bg_color
   bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
-  bg[ACTIVE]      = "red" #shade (0.9, @bg_color) # I just can't find out where this is used
+  bg[ACTIVE]      = @selected_bg_color
 
   fg[NORMAL]      = @fg_color
   fg[PRELIGHT]    = @fg_color
@@ -1863,98 +1865,82 @@ style "range" {
 
   engine "pixmap" {
 
+    #image {
+    #  function = FOCUS
+    #  file = "assets/scale-horz-focus.png"
+    #  border = {6, 6, 6, 6}
+    #}
+
+    image {
+      function = SLIDER
+      state    = NORMAL
+      file     = "assets/scale-slider-hover.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = PRELIGHT
+      file     = "assets/scale-slider-hover.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = ACTIVE
+      file     = "assets/scale-slider-active.png"
+    }
+
+    image {
+      function = SLIDER
+      state    = INSENSITIVE
+      file     = "assets/scale-slider-insensitive.png"
+    }
+
+  }
+
+}
+
+style "scale_h" {
+
+  engine "pixmap" {
+
     image {
       function    = BOX
-      detail      = "trough"
-      file        = "Range/trough-horizontal.png"
+      detail      = "trough-upper"
+      file        = "assets/scale-horz-trough.png"
       border      = {4, 4, 0, 0}
       stretch     = TRUE
-      orientation = HORIZONTAL
     }
 
     image {
       function    = BOX
-      detail      = "trough"
-      file        = "Range/trough-vertical.png"
+      detail      = "trough-lower"
+      file        = "assets/scale-horz-trough-active.png"
+      border      = {4, 4, 0, 0}
+      stretch     = TRUE
+    }
+
+  }
+
+}
+
+style "scale_v" {
+
+  engine "pixmap" {
+
+    image {
+      function    = BOX
+      detail      = "trough-upper"
+      file        = "assets/scale-vert-trough.png"
       border      = {0, 0, 4, 4}
       stretch     = TRUE
-      orientation = VERTICAL
-    }
-
-    ##############
-    # Horizontal #
-    ##############
-
-    image {
-      function        = SLIDER
-      state           = NORMAL
-      file            = "Others/null.png"
-      stretch         = TRUE
-      overlay_file    = "Range/slider-horiz.png"
-      overlay_stretch = FALSE
-      orientation     = HORIZONTAL
     }
 
     image {
-      function        = SLIDER
-      state           = PRELIGHT
-      file            = "Others/null.png"
-      stretch         = TRUE
-      overlay_file    = "Range/slider-horiz-prelight.png"
-      overlay_stretch = FALSE
-      orientation     = HORIZONTAL
-    }
-
-    image {
-      function        = SLIDER
-      state           = INSENSITIVE
-      file            = "Others/null.png"
-      stretch         = TRUE
-      overlay_file    = "Range/slider-horiz.png"
-      overlay_stretch = FALSE
-      orientation     = HORIZONTAL
-    }
-
-    ############
-    # Vertical #
-    ############
-
-    image {
-      function        = SLIDER
-      state           = NORMAL
-      file            = "Others/null.png"
-      stretch         = TRUE
-      overlay_file    = "Range/slider-vert.png"
-      overlay_stretch = FALSE
-      orientation     = VERTICAL
-    }
-
-    image {
-      function        = SLIDER
-      state           = PRELIGHT
-      file            = "Others/null.png"
-      stretch         = TRUE
-      overlay_file    = "Range/slider-vert-prelight.png"
-      overlay_stretch = FALSE
-      orientation     = VERTICAL
-    }
-
-    image {
-      function        = SLIDER
-      state           = INSENSITIVE
-      file            = "Others/null.png"
-      stretch         = TRUE
-      overlay_file    = "Range/slider-vert.png"
-      overlay_stretch = FALSE
-      orientation     = VERTICAL
-    }
-
-    # Function below removes ugly boxes
-    image {
-      function = BOX
-      file     = "Others/null.png"
-      border   = {3, 3, 3, 3}
-      stretch  = TRUE
+      function    = BOX
+      detail      = "trough-lower"
+      file        = "assets/scale-vert-trough-active.png"
+      border      = {0, 0, 4, 4}
+      stretch     = TRUE
     }
 
   }
@@ -2303,6 +2289,8 @@ class "GtkOldEditable"       style "entry"
 class "GtkSpinButton"        style "spinbutton"
 class "GtkNotebook"          style "notebook"
 class "GtkRange"             style "range"
+class "GtkHScale"            style "scale_h"
+class "GtkVScale"            style "scale_v"
 class "GtkProgressBar"       style "progressbar"
 class "GtkSeparatorMenuItem" style "separator_menu_item"
 class "GtkScrolledWindow"    style "scrolled_window"
