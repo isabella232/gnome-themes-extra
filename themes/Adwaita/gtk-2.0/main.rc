@@ -555,13 +555,13 @@ style "default" {
 
     image {
       function = VLINE
-      file     = "Lines/line-v.png"
+      file     = "assets/line.png"
       stretch  = TRUE
     }
 
     image {
       function = HLINE
-      file     = "Lines/line-h.png"
+      file     = "assets/line.png"
       stretch  = TRUE
     }
 
