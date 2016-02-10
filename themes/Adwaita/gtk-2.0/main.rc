@@ -61,14 +61,14 @@ style "default" {
 
   # FIXME: progress bars should be 2px smaller, but doing so now makes
   #        them fuzzy, it probably requires a change in the assets.
-  GtkProgressBar::min-horizontal-bar-height = 9
-  GtkProgressBar::min-vertical-bar-width    = 8
+  GtkProgressBar::min-horizontal-bar-height = 6
+  GtkProgressBar::min-vertical-bar-width    = 6
   # Making this bigger than the min[height,width]-2*[y,x]spacing makes the
   # whole progressbar thicker, so by setting it to the exact above value
   # we get the maximum spacing between the text and the edges without
   # doing so.
-  GtkProgressBar::xspacing = 6
-  GtkProgressBar::yspacing = 7
+  GtkProgressBar::xspacing = 4
+  GtkProgressBar::yspacing = 4
 
   GtkStatusbar::shadow_type    = GTK_SHADOW_NONE
   GtkSpinButton::shadow_type   = GTK_SHADOW_NONE
@@ -1960,7 +1960,7 @@ style "progressbar" {
       function    = BOX
       detail      = "trough"
       file        = "assets/progressbar-horz-trough.png"
-      border      = {4, 4, 4, 5}
+      border      = {3, 3, 2, 2}
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -1970,7 +1970,7 @@ style "progressbar" {
       detail      = "bar"
       file        = "assets/progressbar-horz.png"
       stretch     = TRUE
-      border      = {3, 3, 3, 4}
+      border      = {2, 2, 1, 1}
       orientation = HORIZONTAL
     }
 
@@ -1978,7 +1978,7 @@ style "progressbar" {
       function    = BOX
       detail      = "trough"
       file        = "assets/progressbar-vert-trough.png"
-      border      = {4, 4, 4, 5}
+      border      = {2, 2, 3, 3}
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -1988,7 +1988,7 @@ style "progressbar" {
       detail      = "bar"
       file        = "assets/progressbar-vert.png"
       stretch     = TRUE
-      border      = {3, 3, 3, 4}
+      border      = {1, 1, 2, 2}
       orientation = VERTICAL
     }
 
