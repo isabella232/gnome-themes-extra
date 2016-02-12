@@ -76,6 +76,7 @@ focus
 separator-treeview
 menu-border
 menubar-item-active
+null
 progressbar-horz
 progressbar-horz-trough
 progressbar-vert
@@ -113,3 +114,7 @@ scale-horz-trough
 scale-horz-trough-active
 scale-vert-trough
 scale-vert-trough-active
+tab-left-active
+tab-right-active
+tab-up-active
+tab-down-active
