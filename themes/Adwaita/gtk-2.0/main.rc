@@ -630,7 +630,7 @@ style "default" {
       function        = RESIZE_GRIP
       state           = NORMAL
       detail          = "statusbar"
-      overlay_file    = "Others/null.png"
+      overlay_file    = "assets/null.png"
       overlay_stretch = FALSE
     }
 
@@ -640,8 +640,7 @@ style "default" {
 
     image {
       function = SHADOW_GAP
-      file     = "Others/null.png"
-      border   = { 4, 4, 4, 4 }
+      file     = "assets/null.png"
       stretch  = TRUE
     }
 
@@ -712,8 +711,7 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = INSENSITIVE
-      file        = "Others/null.png"
-      border      = {0, 0, 0, 0}
+      file        = "assets/null.png"
       stretch     = TRUE
       orientation = HORIZONTAL
     }
@@ -752,8 +750,7 @@ style "scrollbar" {
     image {
       function    = SLIDER
       state       = INSENSITIVE
-      file        = "Others/null.png"
-      border      = {0, 0, 0, 0}
+      file        = "assets/null.png"
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -998,8 +995,7 @@ style "menu_item" {
     # This fixes boxy Qt menu items
     image {
       function = SHADOW
-      file     = "Others/null.png"
-      border   = {4, 4, 4, 4}
+      file     = "assets/null.png"
       stretch  = TRUE
     }
 
@@ -1180,7 +1176,7 @@ style "entry" {
       function = FLAT_BOX
       detail   = "entry_bg"
       state    = NORMAL
-      file     = "Others/null.png"
+      file     = "assets/null.png"
       stretch  = TRUE
     }
 
@@ -1188,7 +1184,7 @@ style "entry" {
       function = FLAT_BOX
       detail   = "entry_bg"
       state    = ACTIVE
-      file     = "Others/null.png"
+      file     = "assets/null.png"
       stretch  = TRUE
     }
 
@@ -1751,8 +1747,7 @@ style "handlebox" {
 
     image {
       function = BOX
-      file     = "Others/null.png"
-      border   = {4, 4, 4, 4}
+      file     = "assets/null.png"
       stretch  = TRUE
       detail   = "handlebox_bin"
       shadow   = IN
@@ -1760,8 +1755,7 @@ style "handlebox" {
 
     image {
       function = BOX
-      file     = "Others/null.png"
-      border   = {4, 4, 4, 4}
+      file     = "assets/null.png"
       stretch  = TRUE
       detail   = "handlebox_bin"
       shadow   = OUT
@@ -2243,7 +2237,7 @@ style "null" {
   engine "pixmap" {
     image {
       function = BOX
-      file     = "Others/null.png"
+      file     = "assets/null.png"
       stretch  = TRUE
     }
   }
