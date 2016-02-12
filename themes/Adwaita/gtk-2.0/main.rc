@@ -1872,7 +1872,7 @@ style "range" {
     image {
       function = SLIDER
       state    = NORMAL
-      file     = "assets/scale-slider-hover.png"
+      file     = "assets/scale-slider.png"
     }
 
     image {
@@ -1905,7 +1905,7 @@ style "scale_h" {
       function    = BOX
       detail      = "trough-upper"
       file        = "assets/scale-horz-trough.png"
-      border      = {4, 4, 0, 0}
+      border      = {10, 10, 0, 0}
       stretch     = TRUE
     }
 
@@ -1913,7 +1913,7 @@ style "scale_h" {
       function    = BOX
       detail      = "trough-lower"
       file        = "assets/scale-horz-trough-active.png"
-      border      = {4, 4, 0, 0}
+      border      = {10, 10, 0, 0}
       stretch     = TRUE
     }
 
@@ -1929,7 +1929,7 @@ style "scale_v" {
       function    = BOX
       detail      = "trough-upper"
       file        = "assets/scale-vert-trough.png"
-      border      = {0, 0, 4, 4}
+      border      = {0, 0, 10, 10}
       stretch     = TRUE
     }
 
@@ -1937,7 +1937,7 @@ style "scale_v" {
       function    = BOX
       detail      = "trough-lower"
       file        = "assets/scale-vert-trough-active.png"
-      border      = {0, 0, 4, 4}
+      border      = {0, 0, 10, 10}
       stretch     = TRUE
     }
 
