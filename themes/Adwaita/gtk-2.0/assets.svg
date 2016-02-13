@@ -19,16 +19,36 @@
   <defs
      id="defs3034">
     <linearGradient
-       id="linearGradient5254"
+       id="linearGradient5083"
        inkscape:collect="always">
       <stop
-         id="stop5256"
+         id="stop5085"
          offset="0"
-         style="stop-color:#ebebeb;stop-opacity:1" />
+         style="stop-color:#dededd;stop-opacity:1" />
       <stop
-         id="stop5258"
+         style="stop-color:#e8e8e7;stop-opacity:1"
+         offset="0.60000002"
+         id="stop5087" />
+      <stop
+         id="stop5089"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:1" />
+         style="stop-color:#f7f7f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5057"
+       inkscape:collect="always">
+      <stop
+         id="stop5059"
+         offset="0"
+         style="stop-color:#cfcfcd;stop-opacity:1" />
+      <stop
+         style="stop-color:#dededd;stop-opacity:1"
+         offset="0.60000002"
+         id="stop5063" />
+      <stop
+         id="stop5061"
+         offset="1"
+         style="stop-color:#e8e8e7;stop-opacity:1" />
     </linearGradient>
     <linearGradient
        id="linearGradient4962"
@@ -41,30 +61,6 @@
          id="stop4966"
          offset="1"
          style="stop-color:#c8c8c5;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       id="linearGradient4116"
-       inkscape:collect="always">
-      <stop
-         id="stop4118"
-         offset="0"
-         style="stop-color:#ebebeb;stop-opacity:1" />
-      <stop
-         id="stop4120"
-         offset="1"
-         style="stop-color:#ffffff;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient3919">
-      <stop
-         style="stop-color:#dbdbdb;stop-opacity:1"
-         offset="0"
-         id="stop3921" />
-      <stop
-         style="stop-color:#f7f7f7;stop-opacity:1"
-         offset="1"
-         id="stop3923" />
     </linearGradient>
     <linearGradient
        id="linearGradient3837">
@@ -91,7 +87,7 @@
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3919"
+       xlink:href="#linearGradient5057"
        id="linearGradient4056"
        gradientUnits="userSpaceOnUse"
        x1="5.0000005"
@@ -105,7 +101,7 @@
        x1="5.0000005"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4097"
-       xlink:href="#linearGradient4116"
+       xlink:href="#linearGradient5083"
        inkscape:collect="always"
        gradientTransform="translate(10,0)" />
     <linearGradient
@@ -1543,7 +1539,7 @@
        y2="82.123726" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3919"
+       xlink:href="#linearGradient5057"
        id="linearGradient5403"
        gradientUnits="userSpaceOnUse"
        x1="5.0000005"
@@ -1552,7 +1548,7 @@
        y2="3.6127" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4116"
+       xlink:href="#linearGradient5083"
        id="linearGradient5405"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(10,0)"
@@ -1572,7 +1568,7 @@
        y2="3.6127" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient3919"
+       xlink:href="#linearGradient5057"
        id="linearGradient5169"
        gradientUnits="userSpaceOnUse"
        x1="5.0000005"
@@ -1581,7 +1577,7 @@
        y2="3.6127" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5254"
+       xlink:href="#linearGradient5083"
        id="linearGradient5246"
        gradientUnits="userSpaceOnUse"
        x1="5.0000005"
@@ -1590,7 +1586,7 @@
        y2="3.6127" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient5254"
+       xlink:href="#linearGradient5083"
        id="linearGradient5272"
        gradientUnits="userSpaceOnUse"
        x1="5.0000005"
@@ -1605,9 +1601,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="31.999998"
-     inkscape:cx="216.40638"
-     inkscape:cy="460.95856"
+     inkscape:zoom="2.828427"
+     inkscape:cx="0.61932512"
+     inkscape:cy="397.9615"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -5288,7 +5284,7 @@
       <g
          id="g5358">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5403);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5403);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5360"
            width="7"
            height="29"
@@ -5329,7 +5325,7 @@
       <g
          id="g5371">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5405);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5405);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5373"
            width="7"
            height="29"
@@ -5517,7 +5513,7 @@
          transform="translate(135,86)"
          id="g5358-2">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5169);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5169);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5360-6"
            width="19"
            height="19"
@@ -5566,7 +5562,7 @@
            height="19"
            width="19"
            id="rect5240"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5246);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5246);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
         <path
            sodipodi:nodetypes="csc"
            inkscape:connector-curvature="0"
@@ -5601,7 +5597,7 @@
          transform="translate(135,86)"
          id="g5264">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5272);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient5272);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
            id="rect5266"
            width="19"
            height="19"
