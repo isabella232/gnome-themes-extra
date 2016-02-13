@@ -1435,9 +1435,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.828427"
-     inkscape:cx="184.4671"
-     inkscape:cy="412.10364"
+     inkscape:zoom="15.999999"
+     inkscape:cx="263.84969"
+     inkscape:cy="441.78536"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -2850,15 +2850,11 @@
        inkscape:label="#use3614" />
     <g
        id="scrollbar-vert-slider"
-       inkscape:label="#g9440"
-       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       transform="translate(-64,30)">
+       inkscape:label="#g5126">
       <rect
-         y="1"
-         x="298"
-         height="12"
+         y="31"
+         x="234"
+         height="13"
          width="13"
          id="rect9402"
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
@@ -2867,13 +2863,13 @@
          inkscape:export-xdpi="90"
          inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider.png"
          inkscape:label="#a5307"
-         transform="translate(2,4)"
+         transform="translate(-62,34)"
          id="a5307">
         <rect
            style="fill:#787c7d;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect5272"
            width="6"
-           height="6"
+           height="7"
            x="300"
            y="0"
            rx="3"
@@ -2882,28 +2878,24 @@
     </g>
     <g
        id="scrollbar-vert-slider-hover"
-       inkscape:label="#g9445"
-       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-hover.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       transform="translate(-64,30)">
+       inkscape:label="#g5134">
       <rect
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect9413"
          width="13"
-         height="12"
-         x="314"
-         y="1" />
+         height="13"
+         x="250"
+         y="31" />
       <a
          inkscape:label="#a5307-0"
          style="fill:#535859;fill-opacity:1"
-         transform="translate(18,4)"
+         transform="translate(-46,34)"
          id="a5307-0">
         <rect
            style="fill:#535859;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect5272-4"
            width="6"
-           height="6"
+           height="7"
            x="300"
            y="0"
            rx="3"
@@ -2912,28 +2904,24 @@
     </g>
     <g
        id="scrollbar-vert-slider-active"
-       inkscape:label="#g9450"
-       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-active.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"
-       transform="translate(-64,30)">
+       inkscape:label="#g5142">
       <rect
-         y="1"
-         x="330"
-         height="12"
+         y="31"
+         x="266"
+         height="13"
          width="13"
          id="rect9415"
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <a
          inkscape:label="#a5307-0-9"
          style="fill:#2a76c6;fill-opacity:1"
-         transform="translate(34,4)"
+         transform="translate(-30,34)"
          id="a5307-0-9">
         <rect
            style="fill:#2a76c6;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect5272-4-2"
            width="6"
-           height="6"
+           height="7"
            x="300"
            y="0"
            rx="3"
@@ -2985,22 +2973,20 @@
          style="fill:#d7d7d5;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-h.png"
-       inkscape:label="#g9440"
        id="scrollbar-horz-slider"
-       transform="matrix(0,1,-1,0,248,-283.5)">
+       inkscape:label="#g5094"
+       transform="translate(-1,0)">
       <rect
+         transform="matrix(0,1,-1,0,0,0)"
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect4713"
          width="13"
-         height="12"
-         x="298"
-         y="1" />
+         height="13"
+         x="14.5"
+         y="-248" />
       <a
          id="a4715"
-         transform="translate(2,4)"
+         transform="matrix(0,1,-1,0,244,-281.5)"
          inkscape:label="#a5307"
          inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider.png"
          inkscape:export-xdpi="90"
@@ -3008,31 +2994,28 @@
         <rect
            ry="3"
            rx="3"
-           y="0"
+           y="-1"
            x="300"
-           height="6"
+           height="7"
            width="6"
            id="rect4717"
            style="fill:#787c7d;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </a>
     </g>
     <g
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-hover-h.png"
-       inkscape:label="#g9445"
-       id="scrollbar-horz-slider-active"
-       transform="matrix(0,1,-1,0,264,-299.5)">
+       id="scrollbar-horz-slider-hover"
+       inkscape:label="#g5110">
       <rect
-         y="1"
-         x="314"
-         height="12"
+         transform="matrix(0,1,-1,0,0,0)"
+         y="-263"
+         x="14.5"
+         height="13"
          width="13"
          id="rect4721"
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <a
          id="a4723"
-         transform="translate(18,4)"
+         transform="matrix(0,1,-1,0,260,-281.5)"
          style="fill:#535859;fill-opacity:1"
          inkscape:label="#a5307-0">
         <rect
@@ -3040,29 +3023,26 @@
            rx="3"
            y="0"
            x="300"
-           height="6"
+           height="7"
            width="6"
            id="rect4725"
            style="fill:#535859;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </a>
     </g>
     <g
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/juraj/Projekty/gnome-themes-standard/themes/Adwaita/gtk-2.0/Scrollbars/slider-active-h.png"
-       inkscape:label="#g9450"
-       id="scrollbar-horz-slider-hover"
-       transform="matrix(0,1,-1,0,280,-315.5)">
+       id="scrollbar-horz-slider-active"
+       inkscape:label="#g5118">
       <rect
+         transform="matrix(0,1,-1,0,0,0)"
          style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="rect4729"
          width="13"
-         height="12"
-         x="330"
-         y="1" />
+         height="13"
+         x="14.5"
+         y="-279" />
       <a
          id="a4731"
-         transform="translate(34,4)"
+         transform="matrix(0,1,-1,0,276,-281.5)"
          style="fill:#2a76c6;fill-opacity:1"
          inkscape:label="#a5307-0-9">
         <rect
@@ -3070,7 +3050,7 @@
            rx="3"
            y="0"
            x="300"
-           height="6"
+           height="7"
            width="6"
            id="rect4733"
            style="fill:#2a76c6;fill-opacity:1;stroke:none;stroke-width:0.30000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
