@@ -1645,8 +1645,8 @@ style "notebook" {
 
     image {
       function = EXTENSION
-      file     = "assets/tab-left-active.png"
-      border   = {1, 2, 1, 1}
+      file     = "assets/tab-vert-active.png"
+      border   = {0, 3, 0, 0}
       stretch  = TRUE
       gap_side = RIGHT
     }
@@ -1662,8 +1662,8 @@ style "notebook" {
 
     image {
       function = EXTENSION
-      file     = "assets/tab-right-active.png"
-      border   = {2, 1, 1, 1}
+      file     = "assets/tab-vert-active.png"
+      border   = {3, 0, 0, 0}
       stretch  = TRUE
       gap_side = LEFT
     }
@@ -1679,8 +1679,8 @@ style "notebook" {
 
     image {
       function = EXTENSION
-      file     = "assets/tab-up-active.png"
-      border   = {1, 1, 1, 2}
+      file     = "assets/tab-horz-active.png"
+      border   = {0, 0, 0, 3}
       stretch  = TRUE
       gap_side = BOTTOM
     }
@@ -1696,8 +1696,8 @@ style "notebook" {
 
     image {
       function = EXTENSION
-      file     = "assets/tab-down-active.png"
-      border   = {1, 1, 2, 1}
+      file     = "assets/tab-horz-active.png"
+      border   = {0, 0, 3, 0}
       stretch  = TRUE
       gap_side = TOP
     }
