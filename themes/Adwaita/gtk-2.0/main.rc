@@ -1774,6 +1774,23 @@ style "button_separator" {
 
 }
 
+style "toolbar_separator" {
+
+  GtkWidget::wide-separators = 1
+  GtkWidget::separator-height = 1
+  GtkWidget::separator-width = 1
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file     = "assets/line.png"
+      border   = {0, 0, 0, 0}
+      stretch  = TRUE
+    }
+  }
+
+}
+
 style "combobox" {
 
   xthickness = 0
@@ -2270,6 +2287,7 @@ widget_class "*<GtkCheckButton>*"                                style "checkbut
 widget_class "*<GtkComboBox>"                                    style "combobox"
 widget_class "*<GtkComboBox>*<GtkButton>"                        style "combobox_button"
 widget_class "*<GtkButton>*<GtkSeparator>"                       style "button_separator"
+widget_class "*<GtkToolbar>*GtkSeparator*"                       style "toolbar_separator"
 widget_class "*HandleBox"                                        style "handlebox"
 widget_class "*<GtkTreeView>"                                    style "treeview"
 widget_class "*<GtkTreeView>*<GtkButton>*"                       style "treeview_header_label"
