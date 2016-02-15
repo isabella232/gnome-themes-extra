@@ -1646,7 +1646,7 @@ style "notebook" {
     image {
       function = EXTENSION
       file     = "assets/tab-vert-active.png"
-      border   = {0, 3, 0, 0}
+      border   = {0, 2, 0, 0}
       stretch  = TRUE
       gap_side = RIGHT
     }
@@ -1663,7 +1663,7 @@ style "notebook" {
     image {
       function = EXTENSION
       file     = "assets/tab-vert-active.png"
-      border   = {3, 0, 0, 0}
+      border   = {2, 0, 0, 0}
       stretch  = TRUE
       gap_side = LEFT
     }
@@ -1680,7 +1680,7 @@ style "notebook" {
     image {
       function = EXTENSION
       file     = "assets/tab-horz-active.png"
-      border   = {0, 0, 0, 3}
+      border   = {0, 0, 0, 2}
       stretch  = TRUE
       gap_side = BOTTOM
     }
@@ -1697,7 +1697,7 @@ style "notebook" {
     image {
       function = EXTENSION
       file     = "assets/tab-horz-active.png"
-      border   = {0, 0, 3, 0}
+      border   = {0, 0, 2, 0}
       stretch  = TRUE
       gap_side = TOP
     }
@@ -1705,12 +1705,45 @@ style "notebook" {
     # Draw the inner frame
 
     image {
-      function = BOX_GAP
-      file     = "assets/frame-notebook.png"
-      border   = {1, 1, 1, 1}
-      stretch  = TRUE
+      function   = BOX_GAP
+      file       = "assets/frame-notebook.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets/tab-gap.png"
+      gap_border = {1, 0, 0, 0}
+      gap_side   = LEFT
     }
-
+    
+    image {
+      function   = BOX_GAP
+      file       = "assets/frame-notebook.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets/tab-gap.png"
+      gap_border = {0, 1, 0, 0}
+      gap_side   = RIGHT
+    }
+    
+    image {
+      function   = BOX_GAP
+      file       = "assets/frame-notebook.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets/tab-gap.png"
+      gap_border = {0, 0, 1, 0}
+      gap_side   = TOP
+    }
+    
+    image {
+      function   = BOX_GAP
+      file       = "assets/frame-notebook.png"
+      border     = {1, 1, 1, 1}
+      stretch    = TRUE
+      gap_file   = "assets/tab-gap.png"
+      gap_border = {0, 0, 0, 1}
+      gap_side   = BOTTOM
+    }
+    
     # Standalone frame
 
     image {
@@ -1728,7 +1761,7 @@ style "notebook_tab_label" {
 
   font_name = "Bold"
   # Again, ACTIVE is actually inactive
-  fg[ACTIVE] = mix(0.5, @fg_color, @bg_color)
+  fg[NORMAL] = @selected_bg_color
 
 }
 

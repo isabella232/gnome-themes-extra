@@ -116,3 +116,4 @@ scale-vert-trough
 scale-vert-trough-active
 tab-horz-active
 tab-vert-active
+tab-gap
