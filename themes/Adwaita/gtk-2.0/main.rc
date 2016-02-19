@@ -1833,8 +1833,11 @@ style "combobox" {
 
 style "combobox_button" {
 
-  xthickness = 3
-  ythickness = 3
+  xthickness = 6
+  ythickness = 4
+
+  # This affects only the button beside an entry
+  GtkButton::inner-border = {0, 0, 0, 0}
 
 }
 
@@ -2310,6 +2313,7 @@ class "GtkSeparatorMenuItem" style "separator_menu_item"
 class "GtkScrolledWindow"    style "scrolled_window"
 class "GtkFrame"             style "frame"
 class "GtkToolbar"           style "toolbar"
+class "GtkComboBox"          style "combobox"
 
 widget_class "*<GtkMenu>*"                                       style "menu"
 widget_class "*<GtkMenu>*"                                       style "menu_framed_box"
@@ -2317,7 +2321,6 @@ widget_class "*<GtkMenuItem>*"                                   style "menu_ite
 widget_class "*<GtkMenuBar>"                                     style "menubar"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                      style "menubar_item"
 widget_class "*<GtkCheckButton>*"                                style "checkbutton"
-widget_class "*<GtkComboBox>"                                    style "combobox"
 widget_class "*<GtkComboBox>*<GtkButton>"                        style "combobox_button"
 widget_class "*<GtkButton>*<GtkSeparator>"                       style "button_separator"
 widget_class "*<GtkToolbar>*GtkSeparator*"                       style "toolbar_separator"
