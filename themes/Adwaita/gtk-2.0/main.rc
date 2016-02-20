@@ -42,6 +42,10 @@ style "default" {
   GtkEntry::state-hint = 1
   GtkEntry::inner-border = {7, 7, 4, 5}
 
+  GtkPaned::handle-size = 9
+  GtkHPaned::handle-size = 9
+  GtkVPaned::handle-size = 9
+
   GtkScrollbar::trough-border = 0
   GtkRange::trough-border     = 0
   GtkRange::slider-width      = 13
@@ -581,17 +585,17 @@ style "default" {
     ###########
 
     image {
-      function        = HANDLE
-      overlay_file    = "Handles/handle-h.png"
-      overlay_stretch = FALSE
-      orientation     = HORIZONTAL
+      function    = HANDLE
+      file        = "assets/handle-horz.png"
+      border      = {0, 0, 5, 5}
+      orientation = HORIZONTAL
     }
 
     image {
-      function        = HANDLE
-      overlay_file    = "Handles/handle-v.png"
-      overlay_stretch = FALSE
-      orientation     = VERTICAL
+      function    = HANDLE
+      file        = "assets/handle-vert.png"
+      border      = {5, 5, 0, 0}
+      orientation = VERTICAL
     }
 
     #############

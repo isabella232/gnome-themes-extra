@@ -1435,9 +1435,9 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="63.999996"
-     inkscape:cx="8.7836696"
-     inkscape:cy="247.62203"
+     inkscape:zoom="31.999998"
+     inkscape:cx="213.68051"
+     inkscape:cy="449.90983"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -5765,5 +5765,47 @@
        width="1"
        id="tab-gap"
        style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       id="handle-vert"
+       inkscape:label="#g5020">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5014"
+         width="9"
+         height="1"
+         x="212"
+         y="27"
+         inkscape:label="#rect4938" />
+      <rect
+         inkscape:label="#rect4938"
+         y="27"
+         x="216"
+         height="1"
+         width="1"
+         id="rect5012"
+         style="opacity:1;fill:#9d9d99;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="handle-horz"
+       inkscape:label="#g5026">
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         inkscape:label="#rect4938"
+         y="-211"
+         x="27"
+         height="1"
+         width="9"
+         id="rect5023"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         transform="matrix(0,1,-1,0,0,0)"
+         style="opacity:1;fill:#9d9d99;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5025"
+         width="1"
+         height="1"
+         x="31"
+         y="-211"
+         inkscape:label="#rect4938" />
+    </g>
   </g>
 </svg>

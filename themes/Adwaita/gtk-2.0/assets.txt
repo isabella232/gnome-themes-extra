@@ -73,6 +73,8 @@ frame-inline
 frame-notebook
 line
 focus
+handle-horz
+handle-vert
 separator-treeview
 menu-border
 menubar-item-active
