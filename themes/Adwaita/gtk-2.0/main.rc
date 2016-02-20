@@ -2348,8 +2348,10 @@ widget_class "*<GtkNotebook>*" style "notebook_prelight"
 #widget_class "*<GtkNotebook>*<GtkComboBoxEntry>*<GtkEntry>" style "notebook_combobox_entry"
 widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>" style "combobox_entry"
 
-# We also need to avoid changing fg color for the inactive notebook tab labels
+# Tab labels
 widget_class "*<GtkNotebook>.<GtkLabel>" style "notebook_tab_label"
+# Inkscape, and maybe other programs, put the notebook tab label into a box
+widget_class "*<GtkNotebook>.<GtkBox>.<GtkLabel>" style "notebook_tab_label"
 
 # ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
 widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
