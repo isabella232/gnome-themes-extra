@@ -101,7 +101,7 @@ style "default" {
   bg[PRELIGHT]    = @bg_color
   bg[SELECTED]    = @selected_bg_color
   bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
-  bg[ACTIVE]      = @selected_bg_color
+  bg[ACTIVE]      = @bg_color
 
   fg[NORMAL]      = @fg_color
   fg[PRELIGHT]    = @fg_color
