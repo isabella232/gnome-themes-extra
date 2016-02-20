@@ -1092,6 +1092,32 @@ style "button" {
 
 }
 
+style "link_button" {
+
+  engine "pixmap" {
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      file     = "assets/null.png"
+    }
+
+    image {
+      function = BOX
+      state    = ACTIVE
+      file     = "assets/null.png"
+    }
+
+    image {
+      function = BOX
+      state    = INSENSITIVE
+      file     = "assets/null.png"
+    }
+
+  }
+
+}
+
 style "button_infobar" {
 
   engine "pixmap" {
@@ -2305,6 +2331,7 @@ class "GtkWidget"            style "default"
 class "GtkLabel"             style "label"
 class "GtkScrollbar"         style "scrollbar"
 class "GtkButton"            style "button"
+class "GtkLinkButton"        style "link_button"
 class "GtkEntry"             style "entry"
 class "GtkOldEditable"       style "entry"
 class "GtkSpinButton"        style "spinbutton"
