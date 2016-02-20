@@ -84,12 +84,12 @@ style "default" {
   GtkOptionMenu::indicator_spacing  = {12, 12, 4, 6}
 
   GtkTreeView::row_ending_details   = 0
-  GtkTreeView::expander-size        = 11
+  GtkTreeView::expander-size        = 16
   GtkTreeView::vertical-separator   = 4
   GtkTreeView::horizontal-separator = 4
   GtkTreeView::allow-rules          = 0
 
-  GtkExpander::expander-size = 11
+  GtkExpander::expander-size = 16
 
   GtkNotebook::tab-overlap = -8
 
