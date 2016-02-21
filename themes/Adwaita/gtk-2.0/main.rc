@@ -29,7 +29,7 @@ style "default" {
   GtkIMHtml::hyperlink-color         = shade(0.9, @selected_bg_color)
   GtkIMHtml::hyperlink-visited-color = shade(0.8, @selected_bg_color)
 
-  GtkSeparatorMenuItem::horizontal-padding = 1
+  GtkSeparatorMenuItem::horizontal-padding = 0
   GtkSeparatorMenuItem::wide-separators    = 1
   GtkSeparatorMenuItem::separator-height   = 1
 
@@ -81,7 +81,7 @@ style "default" {
   GtkMenu::vertical-padding    = 0
 
   GtkCheckButton::indicator_spacing = 3
-  GtkOptionMenu::indicator_spacing  = {12, 12, 4, 6}
+  GtkOptionMenu::indicator_spacing  = {13, 13, 5, 8}
 
   GtkTreeView::row_ending_details   = 0
   GtkTreeView::expander-size        = 16
@@ -109,10 +109,6 @@ style "default" {
   fg[INSENSITIVE] = mix (0.5, @fg_color, @bg_color)
   fg[ACTIVE]      = @fg_color
 
-  #fg[NORMAL] = @focus_color
-  #fg[PRELIGHT] = @focus_color
-  #fg[ACTIVE] = @focus_color
-
   text[NORMAL]      = @text_color
   text[PRELIGHT]    = @text_color
   text[SELECTED]    = @selected_fg_color
@@ -135,7 +131,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = NORMAL
       shadow          = OUT
       overlay_file    = "assets/checkbox-unchecked.png"
@@ -144,7 +139,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = PRELIGHT
       shadow          = OUT
       overlay_file    = "assets/checkbox-unchecked-hover.png"
@@ -153,7 +147,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = ACTIVE
       shadow          = OUT
       overlay_file    = "assets/checkbox-unchecked-active.png"
@@ -162,7 +155,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = SELECTED
       shadow          = OUT
       overlay_file    = "assets/checkbox-unchecked.png"
@@ -171,7 +163,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = OUT
       overlay_file    = "assets/checkbox-unchecked-insensitive.png"
@@ -180,7 +171,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = NORMAL
       shadow          = IN
       overlay_file    = "assets/checkbox-checked.png"
@@ -189,7 +179,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = PRELIGHT
       shadow          = IN
       overlay_file    = "assets/checkbox-checked-hover.png"
@@ -198,7 +187,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = ACTIVE
       shadow          = IN
       overlay_file    = "assets/checkbox-checked-active.png"
@@ -207,7 +195,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = SELECTED
       shadow          = IN
       overlay_file    = "assets/checkbox-checked.png"
@@ -216,7 +203,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = IN
       overlay_file    = "assets/checkbox-checked-insensitive.png"
@@ -225,7 +211,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = NORMAL
       shadow          = ETCHED_IN
       overlay_file    = "assets/checkbox-mixed.png"
@@ -234,7 +219,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = PRELIGHT
       shadow          = ETCHED_IN
       overlay_file    = "assets/checkbox-mixed-hover.png"
@@ -243,7 +227,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = ACTIVE
       shadow          = ETCHED_IN
       overlay_file    = "assets/checkbox-mixed-active.png"
@@ -252,7 +235,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = SELECTED
       shadow          = ETCHED_IN
       overlay_file    = "assets/checkbox-mixed.png"
@@ -261,7 +243,6 @@ style "default" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = ETCHED_IN
       overlay_file    = "assets/checkbox-mixed-insensitive.png"
@@ -398,6 +379,7 @@ style "default" {
 
     image {
       function        = ARROW
+      state           = NORMAL
       overlay_file    = "assets/arrow-up.png"
       overlay_stretch = FALSE
       arrow_direction = UP
@@ -461,6 +443,7 @@ style "default" {
 
     image {
       function        = ARROW
+      state           = NORMAL
       overlay_file    = "assets/arrow-left.png"
       overlay_stretch = FALSE
       arrow_direction = LEFT
@@ -492,6 +475,7 @@ style "default" {
 
     image {
       function        = ARROW
+      state           = NORMAL
       overlay_file    = "assets/arrow-right.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
@@ -631,11 +615,7 @@ style "default" {
     ##########
 
     image {
-      function        = RESIZE_GRIP
-      state           = NORMAL
-      detail          = "statusbar"
-      overlay_file    = "assets/null.png"
-      overlay_stretch = FALSE
+      function = RESIZE_GRIP
     }
 
     ###########
@@ -649,14 +629,6 @@ style "default" {
     }
 
   }
-}
-
-style "label" {
-
-  fg[NORMAL]      = @fg_color
-  fg[PRELIGHT]    = @fg_color
-  fg[ACTIVE]      = @fg_color
-
 }
 
 style "scrollbar" {
@@ -681,9 +653,15 @@ style "scrollbar" {
       orientation = VERTICAL
     }
 
-    ###########
-    # Sliders #
-    ###########
+    # Disable insensitive sliders
+    image {
+      function = SLIDER
+      state    = INSENSITIVE
+    }
+
+    ######################
+    # Horizontal sliders #
+    ######################
 
     image {
       function    = SLIDER
@@ -712,17 +690,9 @@ style "scrollbar" {
       orientation = HORIZONTAL
     }
 
-    image {
-      function    = SLIDER
-      state       = INSENSITIVE
-      file        = "assets/null.png"
-      stretch     = TRUE
-      orientation = HORIZONTAL
-    }
-
-    ###############
-    # X Verticals #
-    ###############
+    ####################
+    # Vertical sliders #
+    ####################
 
     image {
       function    = SLIDER
@@ -747,14 +717,6 @@ style "scrollbar" {
       state       = ACTIVE
       file        = "assets/scrollbar-vert-slider-active.png"
       border      = {7, 6, 6, 6}
-      stretch     = TRUE
-      orientation = VERTICAL
-    }
-
-    image {
-      function    = SLIDER
-      state       = INSENSITIVE
-      file        = "assets/null.png"
       stretch     = TRUE
       orientation = VERTICAL
     }
@@ -820,15 +782,12 @@ style "menu" {
     image {
       function = HLINE
       file     = "assets/line.png"
-      border   = {0, 0, 0, 0}
       stretch  = TRUE
     }
   }
 
-}
-
-style "menu_framed_box" {
   engine "adwaita" {}
+
 }
 
 style "menu_item" {
@@ -858,7 +817,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = NORMAL
       shadow          = OUT
       overlay_file    = "assets/menu-checkbox.png"
@@ -867,7 +825,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = PRELIGHT
       shadow          = OUT
       overlay_file    = "assets/menu-checkbox-hover.png"
@@ -876,7 +833,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = ACTIVE
       shadow          = OUT
       overlay_file    = "assets/menu-checkbox.png"
@@ -885,7 +841,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = OUT
       overlay_file    = "assets/menu-checkbox-insensitive.png"
@@ -894,7 +849,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = NORMAL
       shadow          = IN
       overlay_file    = "assets/menu-checkbox-checked.png"
@@ -903,7 +857,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = PRELIGHT
       shadow          = IN
       overlay_file    = "assets/menu-checkbox-checked-hover.png"
@@ -912,7 +865,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = ACTIVE
       shadow          = IN
       overlay_file    = "assets/menu-checkbox-checked.png"
@@ -921,7 +873,6 @@ style "menu_item" {
 
     image {
       function        = CHECK
-      recolorable     = TRUE
       state           = INSENSITIVE
       shadow          = IN
       overlay_file    = "assets/menu-checkbox-checked-insensitive.png"
@@ -996,11 +947,9 @@ style "menu_item" {
       overlay_stretch = FALSE
     }
 
-    # This fixes boxy Qt menu items
+    # This stops Qt menu items using the Raleigh box effect on hover
     image {
       function = SHADOW
-      file     = "assets/null.png"
-      stretch  = TRUE
     }
 
     #################
@@ -1034,6 +983,21 @@ style "menu_item" {
       arrow_direction = RIGHT
     }
 
+  }
+
+}
+
+style "separator_menu_item" {
+
+  xthickness = 0
+  ythickness = 0
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file     = "assets/line.png"
+      stretch  = TRUE
+    }
   }
 
 }
@@ -1095,25 +1059,9 @@ style "button" {
 style "link_button" {
 
   engine "pixmap" {
-
     image {
       function = BOX
-      state    = PRELIGHT
-      file     = "assets/null.png"
     }
-
-    image {
-      function = BOX
-      state    = ACTIVE
-      file     = "assets/null.png"
-    }
-
-    image {
-      function = BOX
-      state    = INSENSITIVE
-      file     = "assets/null.png"
-    }
-
   }
 
 }
@@ -1635,14 +1583,10 @@ style "notebook" {
   engine "pixmap" {
 
     # Inactive tabs are drawn with ACTIVE for some reason
-
-    # Left
-
+    # And they don't need any kind of look
     image {
       function = EXTENSION
       state    = ACTIVE
-      file     = "assets/null.png"
-      gap_side = RIGHT
     }
 
     image {
@@ -1653,15 +1597,6 @@ style "notebook" {
       gap_side = RIGHT
     }
 
-    # Right
-
-    image {
-      function = EXTENSION
-      state    = ACTIVE
-      file     = "assets/null.png"
-      gap_side = LEFT
-    }
-
     image {
       function = EXTENSION
       file     = "assets/tab-vert-active.png"
@@ -1670,30 +1605,12 @@ style "notebook" {
       gap_side = LEFT
     }
 
-    # Up
-
-    image {
-      function = EXTENSION
-      state    = ACTIVE
-      file     = "assets/null.png"
-      gap_side = BOTTOM
-    }
-
     image {
       function = EXTENSION
       file     = "assets/tab-horz-active.png"
       border   = {0, 0, 0, 2}
       stretch  = TRUE
       gap_side = BOTTOM
-    }
-
-    # Down
-
-    image {
-      function = EXTENSION
-      state    = ACTIVE
-      file     = "assets/null.png"
-      gap_side = TOP
     }
 
     image {
@@ -1779,23 +1696,9 @@ style "notebook_prelight" {
 style "handlebox" {
 
   engine "pixmap" {
-
     image {
       function = BOX
-      file     = "assets/null.png"
-      stretch  = TRUE
-      detail   = "handlebox_bin"
-      shadow   = IN
     }
-
-    image {
-      function = BOX
-      file     = "assets/null.png"
-      stretch  = TRUE
-      detail   = "handlebox_bin"
-      shadow   = OUT
-    }
-
   }
 
 }
@@ -1819,7 +1722,6 @@ style "toolbar_separator" {
     image {
       function = BOX
       file     = "assets/line.png"
-      border   = {0, 0, 0, 0}
       stretch  = TRUE
     }
   }
@@ -1919,7 +1821,7 @@ style "range" {
 
 }
 
-style "scale_h" {
+style "scale_horz" {
 
   engine "pixmap" {
 
@@ -1943,7 +1845,7 @@ style "scale_h" {
 
 }
 
-style "scale_v" {
+style "scale_vert" {
 
   engine "pixmap" {
 
@@ -2012,19 +1914,6 @@ style "progressbar" {
       orientation = VERTICAL
     }
 
-  }
-
-}
-
-style "separator_menu_item" {
-
-  engine "pixmap" {
-    image {
-      function = BOX
-      file     = "assets/line.png"
-      border   = {0, 0, 0, 0}
-      stretch  = TRUE
-    }
   }
 
 }
@@ -2121,9 +2010,6 @@ style "treeview_header_arrow" {
 }
 style "scrolled_window" {
 
-  xthickness = 1
-  ythickness = 1
-
   engine "pixmap" {
     image {
       function = SHADOW
@@ -2137,9 +2023,6 @@ style "scrolled_window" {
 
 style "frame" {
 
-  xthickness = 1
-  ythickness = 1
-
   engine "pixmap" {
 
     image {
@@ -2151,13 +2034,13 @@ style "frame" {
     }
 
     image {
-      function         = SHADOW_GAP
-      shadow           = IN
-      file             = "assets/frame.png"
-      border           = {1, 1, 1, 1}
-      stretch          = TRUE
-      gap_start_file   = "assets/border.png"
-      gap_end_file     = "assets/border.png"
+      function       = SHADOW_GAP
+      shadow         = IN
+      file           = "assets/frame.png"
+      border         = {1, 1, 1, 1}
+      stretch        = TRUE
+      gap_start_file = "assets/border.png"
+      gap_end_file   = "assets/border.png"
     }
 
     image {
@@ -2169,13 +2052,13 @@ style "frame" {
     }
 
     image {
-      function         = SHADOW_GAP
-      shadow           = OUT
-      file             = "assets/frame.png"
-      border           = {1, 1, 1, 1}
-      stretch          = TRUE
-      gap_start_file   = "assets/border.png"
-      gap_end_file     = "assets/border.png"
+      function       = SHADOW_GAP
+      shadow         = OUT
+      file           = "assets/frame.png"
+      border         = {1, 1, 1, 1}
+      stretch        = TRUE
+      gap_start_file = "assets/border.png"
+      gap_end_file   = "assets/border.png"
     }
 
     image {
@@ -2187,13 +2070,13 @@ style "frame" {
     }
 
     image {
-      function         = SHADOW_GAP
-      shadow           = ETCHED_IN
-      file             = "assets/frame.png"
-      border           = {1, 1, 1, 1}
-      stretch          = TRUE
-      gap_start_file   = "assets/border.png"
-      gap_end_file     = "assets/border.png"
+      function       = SHADOW_GAP
+      shadow         = ETCHED_IN
+      file           = "assets/frame.png"
+      border         = {1, 1, 1, 1}
+      stretch        = TRUE
+      gap_start_file = "assets/border.png"
+      gap_end_file   = "assets/border.png"
     }
 
     image {
@@ -2205,13 +2088,13 @@ style "frame" {
     }
 
     image {
-      function                = SHADOW_GAP
-      shadow                  = ETCHED_OUT
-      file                    = "assets/frame.png"
-      border                  = {1, 1, 1, 1}
-      stretch                 = TRUE
-      gap_start_file          = "assets/border.png"
-      gap_end_file            = "assets/border.png"
+      function       = SHADOW_GAP
+      shadow         = ETCHED_OUT
+      file           = "assets/frame.png"
+      border         = {1, 1, 1, 1}
+      stretch        = TRUE
+      gap_start_file = "assets/border.png"
+      gap_end_file   = "assets/border.png"
     }
 
   }
@@ -2271,8 +2154,8 @@ style "separator" {
 
 style "tooltips" {
 
-  xthickness = 8
-  ythickness = 4
+  xthickness = 13
+  ythickness = 13
 
   bg[NORMAL]   = @tooltip_bg_color
   fg[NORMAL]   = @tooltip_fg_color
@@ -2292,40 +2175,40 @@ style "null" {
 
 }
 
-class "GtkWidget"            style "default"
-class "GtkLabel"             style "label"
-class "GtkScrollbar"         style "scrollbar"
-class "GtkButton"            style "button"
-class "GtkLinkButton"        style "link_button"
-class "GtkEntry"             style "entry"
-class "GtkOldEditable"       style "entry"
-class "GtkSpinButton"        style "spinbutton"
-class "GtkNotebook"          style "notebook"
-class "GtkRange"             style "range"
-class "GtkHScale"            style "scale_h"
-class "GtkVScale"            style "scale_v"
-class "GtkProgressBar"       style "progressbar"
-class "GtkSeparatorMenuItem" style "separator_menu_item"
-class "GtkScrolledWindow"    style "scrolled_window"
-class "GtkFrame"             style "frame"
-class "GtkToolbar"           style "toolbar"
+class "GtkWidget"         style "default"
+class "GtkScrollbar"      style "scrollbar"
+class "GtkButton"         style "button"
+class "GtkLinkButton"     style "link_button"
+class "GtkEntry"          style "entry"
+class "GtkOldEditable"    style "entry"
+class "GtkSpinButton"     style "spinbutton"
+class "GtkNotebook"       style "notebook"
+class "GtkRange"          style "range"
+class "GtkHScale"         style "scale_horz"
+class "GtkVScale"         style "scale_vert"
+class "GtkProgressBar"    style "progressbar"
+class "GtkScrolledWindow" style "scrolled_window"
+class "GtkFrame"          style "frame"
+class "GtkToolbar"        style "toolbar"
+class "GtkMenuBar"        style "menubar"
+class "GtkMenu"           style "menu"
 
-widget_class "*<GtkMenu>*"                                       style "menu"
-widget_class "*<GtkMenu>*"                                       style "menu_framed_box"
-widget_class "*<GtkMenuItem>*"                                   style "menu_item"
-widget_class "*<GtkMenuBar>"                                     style "menubar"
-widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                      style "menubar_item"
-widget_class "*<GtkCheckButton>*"                                style "checkbutton"
-widget_class "*<GtkButton>*<GtkSeparator>"                       style "button_separator"
-widget_class "*<GtkToolbar>*GtkSeparator*"                       style "toolbar_separator"
-widget_class "*HandleBox"                                        style "handlebox"
-widget_class "*<GtkTreeView>"                                    style "treeview"
-widget_class "*<GtkTreeView>*<GtkButton>*"                       style "treeview_header_label"
-widget_class "*<GtkTreeView>*<GtkButton>"                        style "treeview_header"
-widget_class "*<GtkTreeView>*<GtkArrow>"                         style "treeview_header_arrow"
-widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"             style "inline_toolbar"
-widget_class "*<GtkInfoBar>*<GtkButton>"                         style "button_infobar"
-widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
+# Menu and menubar items
+widget_class "*<GtkMenuItem>*"              style "menu_item"
+widget_class "*<GtkSeparatorMenuItem>*"     style "separator_menu_item"
+widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar_item"
+
+widget_class "*<GtkCheckButton>*"                               style "checkbutton"
+widget_class "*<GtkButton>*<GtkSeparator>"                      style "button_separator"
+widget_class "*<GtkToolbar>*GtkSeparator*"                      style "toolbar_separator"
+widget_class "*HandleBox"                                       style "handlebox"
+widget_class "*<GtkTreeView>"                                   style "treeview"
+widget_class "*<GtkTreeView>*<GtkButton>*"                      style "treeview_header_label"
+widget_class "*<GtkTreeView>*<GtkButton>"                       style "treeview_header"
+widget_class "*<GtkTreeView>*<GtkArrow>"                        style "treeview_header_arrow"
+widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"            style "inline_toolbar"
+widget_class "*<GtkInfoBar>*<GtkButton>"                        style "button_infobar"
+widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>" style "notebook_viewport"
 
 # Fix padding on regular comboboxes
 widget_class "*<GtkComboBox>*<GtkButton>" style "combobox"
@@ -2354,8 +2237,9 @@ widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>" style 
 
 # Tab labels
 widget_class "*<GtkNotebook>.<GtkLabel>" style "notebook_tab_label"
-# Inkscape, and maybe other programs, put the notebook tab label into a box
+# Inkscape, GVIM and maybe other programs do strange things with tab labels
 widget_class "*<GtkNotebook>.<GtkBox>.<GtkLabel>" style "notebook_tab_label"
+widget_class "*<GtkNotebook>.<GtkEventBox>.<GtkLabel>" style "notebook_tab_label"
 
 # ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
 widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
