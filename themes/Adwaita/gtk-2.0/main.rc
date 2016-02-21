@@ -1307,10 +1307,10 @@ style "combobox_entry" {
 
 }
 
-style "combobox_entry_button" {
+style "combobox_button" {
 
   # Since one side of the button is missing, we need to shift the arrow a little to the right
-  GtkButton::inner-border = {0, 1, 0, 0}
+  GtkButton::inner-border = {6, 8, 4, 4}
 
   engine "pixmap" {
 
@@ -1395,6 +1395,14 @@ style "combobox_entry_button" {
     }
 
   }
+
+}
+
+style "combobox_button_padding" {
+
+  # Since one side of the button is missing, we need to shift the arrow a little to the right
+  # This is the same thing we've done above but the combobox uses padding diffrerently than the combo
+  GtkButton::inner-border = {0, 1, 0, 0}
 
 }
 
@@ -1819,13 +1827,6 @@ style "toolbar_separator" {
 }
 
 style "combobox" {
-
-  xthickness = 0
-  ythickness = 0
-
-}
-
-style "combobox_button" {
 
   xthickness = 6
   ythickness = 4
@@ -2308,7 +2309,6 @@ class "GtkSeparatorMenuItem" style "separator_menu_item"
 class "GtkScrolledWindow"    style "scrolled_window"
 class "GtkFrame"             style "frame"
 class "GtkToolbar"           style "toolbar"
-class "GtkComboBox"          style "combobox"
 
 widget_class "*<GtkMenu>*"                                       style "menu"
 widget_class "*<GtkMenu>*"                                       style "menu_framed_box"
@@ -2316,7 +2316,6 @@ widget_class "*<GtkMenuItem>*"                                   style "menu_ite
 widget_class "*<GtkMenuBar>"                                     style "menubar"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                      style "menubar_item"
 widget_class "*<GtkCheckButton>*"                                style "checkbutton"
-widget_class "*<GtkComboBox>*<GtkButton>"                        style "combobox_button"
 widget_class "*<GtkButton>*<GtkSeparator>"                       style "button_separator"
 widget_class "*<GtkToolbar>*GtkSeparator*"                       style "toolbar_separator"
 widget_class "*HandleBox"                                        style "handlebox"
@@ -2325,10 +2324,24 @@ widget_class "*<GtkTreeView>*<GtkButton>*"                       style "treeview
 widget_class "*<GtkTreeView>*<GtkButton>"                        style "treeview_header"
 widget_class "*<GtkTreeView>*<GtkArrow>"                         style "treeview_header_arrow"
 widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"             style "inline_toolbar"
-widget_class "*<GtkComboBoxEntry>*<GtkEntry>"                    style "combobox_entry"
-widget_class "*<GtkComboBoxEntry>*<GtkButton>"                   style "combobox_entry_button"
 widget_class "*<GtkInfoBar>*<GtkButton>"                         style "button_infobar"
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>"  style "notebook_viewport"
+
+# Fix padding on regular comboboxes
+widget_class "*<GtkComboBox>*<GtkButton>" style "combobox"
+
+# Join together the ComboBoxEntry entry and button
+widget_class "*<GtkComboBoxEntry>*<GtkEntry>"  style "combobox_entry"
+widget_class "*<GtkComboBoxEntry>*<GtkButton>" style "combobox_button"
+# Tweak the padding on the button a little bit because it uses it a bit differently
+widget_class "*<GtkComboBoxEntry>*<GtkButton>" style "combobox_button_padding"
+
+# Join the Combo entry and button
+widget_class "*<GtkCombo>*<GtkEntry>"  style "combobox_entry"
+widget_class "*<GtkCombo>*<GtkButton>" style "combobox_button"
+
+# Alas we cannot do the same for ComboBoxText because there isn't a way to apply the style to only
+# the comboboxes that have an entry inside
 
 # Toolbar buttons have different paddings
 widget_class "*<GtkToolbar>*<GtkButton>" style "toolbar_button"
@@ -2349,6 +2362,7 @@ widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
 
 # Correct arrows on ComboBoxes
 widget_class "*<GtkComboBox>*<GtkArrow>" style "combobox_arrows"
+widget_class "*<GtkCombo>*<GtkArrow>" style "combobox_arrows"
 
 # Separators
 widget_class "*<GtkHSeparator>" style "separator"
