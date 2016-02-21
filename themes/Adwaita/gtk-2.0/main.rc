@@ -1165,57 +1165,66 @@ style "checkbutton" {
 
 style "entry" {
 
-  xthickness = 3
-  ythickness = 3
+  # We set this same as the border of the border of the entry
+  # This way there's no overlap
+  # TODO: find out what actually sets the size of the border
+  xthickness = 4
+  ythickness = 4
 
-  # This is needed otherwise the background is drawn with fg
-  base[INSENSITIVE] = @insensitive_bg_color
+  # The background of the entry cannot be drawn transparent
+  # This is going to be drawn on bg so we set it to bg
+  # This way it looks like one piece
+  base[NORMAL]      = @bg_color
+  base[INSENSITIVE] = @bg_color
 
   engine "pixmap" {
 
     image {
       function = SHADOW
-      detail   = "entry"
       state    = NORMAL
-      shadow   = IN
-      file     = "Entry/entry-border-bg.png"
+      detail   = "entry"
+      file     = "assets/entry.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
 
     image {
       function = SHADOW
+      state    = ACTIVE
       detail   = "entry"
+      file     = "assets/entry-active.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
       state    = INSENSITIVE
-      shadow   = IN
-      file     = "Entry/entry-border-disabled-bg.png"
-      border   = {4, 4, 4, 4}
-      stretch  = TRUE
-    }
-
-    image {
-      function = SHADOW
       detail   = "entry"
-      state    = ACTIVE
-      file     = "Entry/entry-border-active-bg.png"
+      file     = "assets/entry-insensitive.png"
       border   = {4, 4, 4, 4}
       stretch  = TRUE
     }
 
     image {
       function = FLAT_BOX
-      detail   = "entry_bg"
       state    = NORMAL
-      file     = "assets/null.png"
-      stretch  = TRUE
+      detail   = "entry_bg"
+      file     = "assets/entry-background.png"
     }
 
     image {
       function = FLAT_BOX
-      detail   = "entry_bg"
       state    = ACTIVE
-      file     = "assets/null.png"
-      stretch  = TRUE
+      detail   = "entry_bg"
+      file     = "assets/entry-background.png"
+    }
+
+    image {
+      function = FLAT_BOX
+      state    = INSENSITIVE
+      detail   = "entry_bg"
+      file     = "assets/entry-background-insensitive.png"
     }
 
   }
@@ -1232,10 +1241,9 @@ style "combobox_entry" {
 
     image {
       function  = SHADOW
-      detail    = "entry"
       state     = NORMAL
-      shadow    = IN
-      file      = "Entry/combo-entry-border-bg.png"
+      detail    = "entry"
+      file      = "assets/combo-entry-ltr-entry.png"
       border    = {4, 4, 4, 4}
       stretch   = TRUE
       direction = LTR
@@ -1243,21 +1251,20 @@ style "combobox_entry" {
 
     image {
       function  = SHADOW
+      state     = ACTIVE
       detail    = "entry"
-      state     = INSENSITIVE
-      shadow    = IN
-      file      = "Entry/combo-entry-border-disabled-bg.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-ltr-entry-active.png"
+      border    = {4, 4, 4, 4}
       stretch   = TRUE
       direction = LTR
     }
 
     image {
       function  = SHADOW
+      state     = INSENSITIVE
       detail    = "entry"
-      state     = ACTIVE
-      file      = "Entry/combo-entry-border-active-bg.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-ltr-entry-insensitive.png"
+      border    = {4, 4, 4, 4}
       stretch   = TRUE
       direction = LTR
     }
@@ -1268,32 +1275,30 @@ style "combobox_entry" {
 
     image {
       function  = SHADOW
-      detail    = "entry"
       state     = NORMAL
-      shadow    = IN
-      file      = "Entry/combo-entry-border-rtl-bg.png"
-      border    = {4, 4, 5, 4}
+      detail    = "entry"
+      file      = "assets/combo-entry-rtl-entry.png"
+      border    = {4, 4, 4, 4}
       stretch   = TRUE
       direction = RTL
     }
 
     image {
       function  = SHADOW
-      detail    = "entry"
-      state     = INSENSITIVE
-      shadow    = IN
-      file      = "Entry/combo-entry-border-disabled-rtl-bg.png"
-      border    = {4, 4, 5, 4}
-      stretch   = TRUE
-      direction = RTL
-    }
-
-    image {
-      function  = SHADOW
-      detail    = "entry"
       state     = ACTIVE
-      file      = "Entry/combo-entry-border-active-rtl-bg.png"
-      border    = {4, 4, 5, 4}
+      detail    = "entry"
+      file      = "assets/combo-entry-rtl-entry-active.png"
+      border    = {4, 4, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = SHADOW
+      state     = INSENSITIVE
+      detail    = "entry"
+      file      = "assets/combo-entry-rtl-entry-insensitive.png"
+      border    = {4, 4, 4, 4}
       stretch   = TRUE
       direction = RTL
     }
@@ -1304,7 +1309,8 @@ style "combobox_entry" {
 
 style "combobox_entry_button" {
 
-  fg[ACTIVE] = @text_color
+  # Since one side of the button is missing, we need to shift the arrow a little to the right
+  GtkButton::inner-border = {0, 1, 0, 0}
 
   engine "pixmap" {
 
@@ -1315,8 +1321,8 @@ style "combobox_entry_button" {
     image {
       function  = BOX
       state     = NORMAL
-      file      = "Entry/combo-entry-button.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-ltr-button.png"
+      border    = {0, 4, 4, 4}
       stretch   = TRUE
       direction = LTR
     }
@@ -1324,17 +1330,8 @@ style "combobox_entry_button" {
     image {
       function  = BOX
       state     = PRELIGHT
-      file      = "Entry/combo-entry-button.png"
-      border    = {4, 4, 5, 4}
-      stretch   = TRUE
-      direction = LTR
-    }
-
-    image {
-      function  = BOX
-      state     = INSENSITIVE
-      file      = "Entry/combo-entry-button-disabled.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-ltr-button-hover.png"
+      border    = {0, 4, 4, 4}
       stretch   = TRUE
       direction = LTR
     }
@@ -1342,8 +1339,17 @@ style "combobox_entry_button" {
     image {
       function  = BOX
       state     = ACTIVE
-      file      = "Entry/combo-entry-button-active.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-ltr-button-active.png"
+      border    = {0, 4, 4, 4}
+      stretch   = TRUE
+      direction = LTR
+    }
+
+    image {
+      function  = BOX
+      state     = INSENSITIVE
+      file      = "assets/combo-entry-ltr-button-insensitive.png"
+      border    = {0, 4, 4, 4}
       stretch   = TRUE
       direction = LTR
     }
@@ -1355,8 +1361,8 @@ style "combobox_entry_button" {
     image {
       function  = BOX
       state     = NORMAL
-      file      = "Entry/combo-entry-button-rtl.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-rtl-button.png"
+      border    = {4, 0, 4, 4}
       stretch   = TRUE
       direction = RTL
     }
@@ -1364,17 +1370,8 @@ style "combobox_entry_button" {
     image {
       function  = BOX
       state     = PRELIGHT
-      file      = "Entry/combo-entry-button-rtl.png"
-      border    = {4, 4, 5, 4}
-      stretch   = TRUE
-      direction = RTL
-    }
-
-    image {
-      function  = BOX
-      state     = INSENSITIVE
-      file      = "Entry/combo-entry-button-disabled-rtl.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-rtl-button-hover.png"
+      border    = {4, 0, 4, 4}
       stretch   = TRUE
       direction = RTL
     }
@@ -1382,8 +1379,17 @@ style "combobox_entry_button" {
     image {
       function  = BOX
       state     = ACTIVE
-      file      = "Entry/combo-entry-button-active-rtl.png"
-      border    = {4, 4, 5, 4}
+      file      = "assets/combo-entry-rtl-button-active.png"
+      border    = {4, 0, 4, 4}
+      stretch   = TRUE
+      direction = RTL
+    }
+
+    image {
+      function  = BOX
+      state     = INSENSITIVE
+      file      = "assets/combo-entry-rtl-button-insensitive.png"
+      border    = {4, 0, 4, 4}
       stretch   = TRUE
       direction = RTL
     }
@@ -1396,6 +1402,7 @@ style "spinbutton" {
 
   engine "pixmap" {
 
+    # Disable arrows
     image {
       function = ARROW
     }
@@ -1408,7 +1415,7 @@ style "spinbutton" {
       function        = BOX
       state           = NORMAL
       detail          = "spinbutton_up"
-      file            = "Spin/up-background.png"
+      file            = "assets/spin-ltr-up.png"
       border          = {1, 4, 5, 0}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-up-small.png"
@@ -1420,7 +1427,19 @@ style "spinbutton" {
       function        = BOX
       state           = PRELIGHT
       detail          = "spinbutton_up"
-      file            = "Spin/up-background.png"
+      file            = "assets/spin-ltr-up-hover.png"
+      border          = {1, 4, 5, 0}
+      stretch         = TRUE
+      overlay_file    = "Arrows/arrow-up-small-prelight.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_up"
+      file            = "assets/spin-ltr-up-active.png"
       border          = {1, 4, 5, 0}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-up-small-prelight.png"
@@ -1432,22 +1451,10 @@ style "spinbutton" {
       function        = BOX
       state           = INSENSITIVE
       detail          = "spinbutton_up"
-      file            = "Spin/up-background-disable.png"
+      file            = "assets/spin-ltr-up-insensitive.png"
       border          = {1, 4, 5, 0}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-up-small-insens.png"
-      overlay_stretch = FALSE
-      direction       = LTR
-    }
-
-    image {
-      function        = BOX
-      state           = ACTIVE
-      detail          = "spinbutton_up"
-      file            = "Spin/up-background.png"
-      border          = {1, 4, 5, 0}
-      stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-prelight.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1460,7 +1467,7 @@ style "spinbutton" {
       function        = BOX
       state           = NORMAL
       detail          = "spinbutton_up"
-      file            = "Spin/up-background-rtl.png"
+      file            = "assets/spin-rtl-up.png"
       border          = {4, 1, 5, 0}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-up-small.png"
@@ -1472,7 +1479,19 @@ style "spinbutton" {
       function        = BOX
       state           = PRELIGHT
       detail          = "spinbutton_up"
-      file            = "Spin/up-background-rtl.png"
+      file            = "assets/spin-rtl-up-hover.png"
+      border          = {4, 1, 5, 0}
+      stretch         = TRUE
+      overlay_file    = "Arrows/arrow-up-small-prelight.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_up"
+      file            = "assets/spin-rtl-up-hover.png"
       border          = {4, 1, 5, 0}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-up-small-prelight.png"
@@ -1484,22 +1503,10 @@ style "spinbutton" {
       function        = BOX
       state           = INSENSITIVE
       detail          = "spinbutton_up"
-      file            = "Spin/up-background-disable-rtl.png"
+      file            = "assets/spin-rtl-up-insensitive.png"
       border          = {4, 1, 5, 0}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-up-small-insens.png"
-      overlay_stretch = FALSE
-      direction       = RTL
-    }
-
-    image {
-      function        = BOX
-      state           = ACTIVE
-      detail          = "spinbutton_up"
-      file            = "Spin/up-background-rtl.png"
-      border          = {4, 1, 5, 0}
-      stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-prelight.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1512,7 +1519,7 @@ style "spinbutton" {
       function        = BOX
       state           = NORMAL
       detail          = "spinbutton_down"
-      file            = "Spin/down-background.png"
+      file            = "assets/spin-ltr-down.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-down-small.png"
@@ -1524,7 +1531,19 @@ style "spinbutton" {
       function        = BOX
       state           = PRELIGHT
       detail          = "spinbutton_down"
-      file            = "Spin/down-background.png"
+      file            = "assets/spin-ltr-down-hover.png"
+      border          = {1, 4, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "Arrows/arrow-down-small-prelight.png"
+      overlay_stretch = FALSE
+      direction       = LTR
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_down"
+      file            = "assets/spin-ltr-down-active.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-down-small-prelight.png"
@@ -1536,22 +1555,10 @@ style "spinbutton" {
       function        = BOX
       state           = INSENSITIVE
       detail          = "spinbutton_down"
-      file            = "Spin/down-background-disable.png"
+      file            = "assets/spin-ltr-down-insensitive.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-down-small-insens.png"
-      overlay_stretch = FALSE
-      direction       = LTR
-    }
-
-    image {
-      function        = BOX
-      state           = ACTIVE
-      detail          = "spinbutton_down"
-      file            = "Spin/down-background.png"
-      border          = {1, 4, 1, 4}
-      stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-prelight.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1564,7 +1571,7 @@ style "spinbutton" {
       function        = BOX
       state           = NORMAL
       detail          = "spinbutton_down"
-      file            = "Spin/down-background-rtl.png"
+      file            = "assets/spin-rtl-down.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-down-small.png"
@@ -1576,7 +1583,19 @@ style "spinbutton" {
       function        = BOX
       state           = PRELIGHT
       detail          = "spinbutton_down"
-      file            = "Spin/down-background-rtl.png"
+      file            = "assets/spin-rtl-down-hover.png"
+      border          = {4, 1, 1, 4}
+      stretch         = TRUE
+      overlay_file    = "Arrows/arrow-down-small-prelight.png"
+      overlay_stretch = FALSE
+      direction       = RTL
+    }
+
+    image {
+      function        = BOX
+      state           = ACTIVE
+      detail          = "spinbutton_down"
+      file            = "assets/spin-rtl-down-active.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-down-small-prelight.png"
@@ -1588,67 +1607,12 @@ style "spinbutton" {
       function        = BOX
       state           = INSENSITIVE
       detail          = "spinbutton_down"
-      file            = "Spin/down-background-disable-rtl.png"
+      file            = "assets/spin-rtl-down-insensitive.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
       overlay_file    = "Arrows/arrow-down-small-insens.png"
       overlay_stretch = FALSE
       direction       = RTL
-    }
-
-    image {
-      function        = BOX
-      state           = ACTIVE
-      detail          = "spinbutton_down"
-      file            = "Spin/down-background-rtl.png"
-      border          = {4, 1, 1, 4}
-      stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-prelight.png"
-      overlay_stretch = FALSE
-      direction       = RTL
-    }
-
-  }
-
-}
-
-style "standalone_entry" {
-
-  engine "pixmap" {
-
-    image {
-      function = FLAT_BOX
-      detail   = "entry_bg"
-      state    = ACTIVE
-      file     = "Entry/entry-border-fill-plain.png"
-      stretch  = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail   = "entry"
-      state    = NORMAL
-      shadow   = IN
-      file     = "Entry/entry-border-bg-solid.png"
-      border   = {4, 4, 4, 4}
-      stretch  = TRUE
-    }
-
-    image {
-      function = SHADOW
-      detail   = "entry"
-      state    = ACTIVE
-      file     = "Entry/entry-border-active-bg-solid.png"
-      border   = {4, 4, 4, 4}
-      stretch  = TRUE
-    }
-
-    image {
-      function = FLAT_BOX
-      detail   = "entry_bg"
-      state    = NORMAL
-      file     = "Entry/entry-border-fill-plain.png"
-      stretch  = TRUE
     }
 
   }

@@ -232,6 +232,49 @@ style "chrome_menu_item" {
   bg[SELECTED] = @selected_bg_color
 }
 
+style "standalone_entry" {
+
+  engine "pixmap" {
+
+    image {
+      function = FLAT_BOX
+      detail   = "entry_bg"
+      state    = ACTIVE
+      file     = "Entry/entry-border-fill-plain.png"
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      detail   = "entry"
+      state    = NORMAL
+      shadow   = IN
+      file     = "Entry/entry-border-bg-solid.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = SHADOW
+      detail   = "entry"
+      state    = ACTIVE
+      file     = "Entry/entry-border-active-bg-solid.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "entry_bg"
+      state    = NORMAL
+      file     = "Entry/entry-border-fill-plain.png"
+      stretch  = TRUE
+    }
+
+  }
+
+}
+
 # Xchat special cases
 widget "*xchat-inputbox"                                     style "entry"
 
