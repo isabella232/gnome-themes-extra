@@ -79,6 +79,8 @@ style "default" {
   GtkMenuBar::internal-padding = 0     #( every window is misaligned for the sake of menus ):
   GtkMenu::horizontal-padding  = 0
   GtkMenu::vertical-padding    = 0
+  GtkMenuItem::arrow-scaling   = 0.4
+  GtkMenuItem::toggle-spacing  = 10
 
   GtkCheckButton::indicator_spacing = 3
   GtkOptionMenu::indicator_spacing  = {13, 13, 5, 8}
@@ -588,26 +590,58 @@ style "default" {
 
     image {
       function       = EXPANDER
-      expander_style = COLLAPSED
-      file           = "assets/pan-right.png"
-    }
-
-    image {
-      function       = EXPANDER
       expander_style = EXPANDED
       file           = "assets/pan-down.png"
     }
 
+    #######
+    # LTR #
+    #######
+
     image {
       function       = EXPANDER
-      expander_style = SEMI_EXPANDED
-      file           = "assets/pan-down.png"
+      expander_style = COLLAPSED
+      file           = "assets/pan-right.png"
+      direction      = LTR
     }
 
     image {
       function       = EXPANDER
       expander_style = SEMI_COLLAPSED
-      file           = "assets/pan-right.png"
+      file           = "assets/pan-right-semi.png"
+      direction      = LTR
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_EXPANDED
+      file           = "assets/pan-right-semi.png"
+      direction      = LTR
+    }
+
+    #######
+    # RTL #
+    #######
+
+    image {
+      function       = EXPANDER
+      expander_style = COLLAPSED
+      file           = "assets/pan-left.png"
+      direction      = RTL
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_COLLAPSED
+      file           = "assets/pan-left-semi.png"
+      direction      = RTL
+    }
+
+    image {
+      function       = EXPANDER
+      expander_style = SEMI_EXPANDED
+      file           = "assets/pan-left-semi.png"
+      direction      = RTL
     }
 
     ##########
@@ -651,6 +685,17 @@ style "scrollbar" {
       border      = {1, 0, 0, 0}
       stretch     = TRUE
       orientation = VERTICAL
+      direction   = LTR
+    }
+
+    image {
+      function    = BOX
+      detail      = "trough"
+      file        = "assets/scrollbar-vert-trough-rtl.png"
+      border      = {0, 1, 0, 0}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
     }
 
     # Disable insensitive sliders
@@ -701,6 +746,7 @@ style "scrollbar" {
       border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
+      direction   = LTR
     }
 
     image {
@@ -710,6 +756,7 @@ style "scrollbar" {
       border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
+      direction   = LTR
     }
 
     image {
@@ -719,6 +766,37 @@ style "scrollbar" {
       border      = {7, 6, 6, 6}
       stretch     = TRUE
       orientation = VERTICAL
+      direction   = LTR
+    }
+
+    image {
+      function    = SLIDER
+      state       = NORMAL
+      file        = "assets/scrollbar-vert-slider-rtl.png"
+      border      = {6, 7, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
+    }
+
+    image {
+      function    = SLIDER
+      state       = PRELIGHT
+      file        = "assets/scrollbar-vert-slider-hover-rtl.png"
+      border      = {6, 7, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
+    }
+
+    image {
+      function    = SLIDER
+      state       = ACTIVE
+      file        = "assets/scrollbar-vert-slider-active-rtl.png"
+      border      = {6, 7, 6, 6}
+      stretch     = TRUE
+      orientation = VERTICAL
+      direction   = RTL
     }
 
   }
@@ -770,8 +848,6 @@ style "menu" {
 
   xthickness = 0
   ythickness = 0
-
-  GtkMenuItem::arrow-scaling = 0.4
 
   bg[NORMAL]      = @base_color
   bg[INSENSITIVE] = @base_color
@@ -879,6 +955,38 @@ style "menu_item" {
       overlay_stretch = FALSE
     }
 
+    image {
+      function        = CHECK
+      state           = NORMAL
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-checkbox-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = PRELIGHT
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-checkbox-mixed-hover.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = ACTIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-checkbox-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = CHECK
+      state           = INSENSITIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-checkbox-mixed-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
     #################
     # Radio Buttons #
     #################
@@ -947,6 +1055,38 @@ style "menu_item" {
       overlay_stretch = FALSE
     }
 
+    image {
+      function        = OPTION
+      state           = NORMAL
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-radio-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = PRELIGHT
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-radio-mixed-hover.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = ACTIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-radio-mixed.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = OPTION
+      state           = INSENSITIVE
+      shadow          = ETCHED_IN
+      overlay_file    = "assets/menu-radio-mixed-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
     # This stops Qt menu items using the Raleigh box effect on hover
     image {
       function = SHADOW
@@ -959,8 +1099,31 @@ style "menu_item" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/pan-right.png"
-      overlay_border  = {0, 0, 0, 0}
+      overlay_file    = "assets/menu-pan-left.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets/menu-pan-left-hover.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets/menu-pan-left-insensitive.png"
+      overlay_stretch = FALSE
+      arrow_direction = LEFT
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets/menu-pan-right.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -968,8 +1131,7 @@ style "menu_item" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/pan-right-hover.png"
-      overlay_border  = {0, 0, 0, 0}
+      overlay_file    = "assets/menu-pan-right-hover.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -977,10 +1139,57 @@ style "menu_item" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "assets/pan-right-insensitive.png"
-      overlay_border  = {0, 0, 0, 0}
+      overlay_file    = "assets/menu-pan-right-insensitive.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets/menu-pan-up.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets/menu-pan-up-hover.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets/menu-pan-up-insensitive.png"
+      overlay_stretch = FALSE
+      arrow_direction = UP
+    }
+
+    image {
+      function        = ARROW
+      state           = NORMAL
+      overlay_file    = "assets/menu-pan-down.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = PRELIGHT
+      overlay_file    = "assets/menu-pan-down-hover.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      overlay_file    = "assets/menu-pan-down-insensitive.png"
+      overlay_stretch = FALSE
+      arrow_direction = DOWN
     }
 
   }
@@ -1893,12 +2102,23 @@ style "treeview_header" {
   fg[ACTIVE]   = lighter(@focus_color)
 
   engine "pixmap" {
+
     image {
-      function = BOX
-      file     = "assets/separator-treeview.png"
-      border   = {0, 1, 0, 1}
-      stretch  = TRUE
+      function  = BOX
+      file      = "assets/treeview-separator-ltr.png"
+      border    = {0, 1, 0, 1}
+      stretch   = TRUE
+      direction = LTR
     }
+
+    image {
+      function  = BOX
+      file      = "assets/treeview-separator-rtl.png"
+      border    = {1, 0, 0, 1}
+      stretch   = TRUE
+      direction = RTL
+    }
+
   }
 }
 
@@ -1920,7 +2140,7 @@ style "treeview_header_arrow" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/pan-treeview-up.png"
+      overlay_file    = "assets/treeview-pan-up.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -1928,7 +2148,7 @@ style "treeview_header_arrow" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/pan-treeview-up-hover.png"
+      overlay_file    = "assets/treeview-pan-up-hover.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -1936,7 +2156,7 @@ style "treeview_header_arrow" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "assets/pan-treeview-up-active.png"
+      overlay_file    = "assets/treeview-pan-up-active.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -1944,7 +2164,7 @@ style "treeview_header_arrow" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/pan-treeview-down.png"
+      overlay_file    = "assets/treeview-pan-down.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -1952,7 +2172,7 @@ style "treeview_header_arrow" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/pan-treeview-down-hover.png"
+      overlay_file    = "assets/treeview-pan-down-hover.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -1960,7 +2180,7 @@ style "treeview_header_arrow" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "assets/pan-treeview-down-active.png"
+      overlay_file    = "assets/treeview-pan-down-active.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
