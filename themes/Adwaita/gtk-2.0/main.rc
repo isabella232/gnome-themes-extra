@@ -1968,6 +1968,7 @@ style "treeview_header_arrow" {
   }
 
 }
+
 style "scrolled_window" {
 
   engine "pixmap" {
