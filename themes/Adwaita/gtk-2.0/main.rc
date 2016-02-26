@@ -53,6 +53,7 @@ style "default" {
   GtkRange::activate-slider   = 1
 
   GtkScrollbar::activate-slider              = 1
+  GtkScrollbar::stepper-size                 = 0
   GtkScrollbar::has-backward-stepper         = 0
   GtkScrollbar::has-forward-stepper          = 0
   GtkScrollbar::min-slider-length            = 48 # 42 + 2*3 (margins)
@@ -668,6 +669,11 @@ style "default" {
 style "scrollbar" {
 
   engine "pixmap" {
+
+    # Disable arrows for qt
+    image {
+      function = ARROW
+    }
 
     image {
       function    = BOX
