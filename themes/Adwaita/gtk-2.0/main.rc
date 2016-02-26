@@ -659,8 +659,6 @@ style "default" {
 
     image {
       function = SHADOW_GAP
-      file     = "assets/null.png"
-      stretch  = TRUE
     }
 
   }
@@ -809,10 +807,6 @@ style "scrollbar" {
 
 }
 
-style "toplevel_hack" {
-  engine "adwaita" {}
-}
-
 style "menubar" {
 
   # Needed to fix Firefox's menubar text
@@ -858,6 +852,7 @@ style "menu" {
   bg[NORMAL]      = @base_color
   bg[INSENSITIVE] = @base_color
   bg[PRELIGHT]    = @base_color
+  bg[SELECTED] = @selected_bg_color
 
   # For menus that use horizontal lines rather than gtkseparator
   engine "pixmap" {
@@ -868,6 +863,8 @@ style "menu" {
     }
   }
 
+  # TODO: find out why/where this is needed
+  # This is used for some compatibilty issues
   engine "adwaita" {}
 
 }
@@ -877,18 +874,13 @@ style "menu_item" {
   xthickness = 3
   ythickness = 4
 
-  # HACK: Gtk doesn't actually read this value
-  # while rendering the menu items, but Libreoffice
-  # does; setting this value equal to the one in
-  # fg[PRELIGHT] ensures a code path in the LO theming code
-  # that falls back to a dark text color for menu item text
-  # highlight. The price to pay is black text on menus as well,
-  # but at least it's readable.
-  # See https://bugs.freedesktop.org/show_bug.cgi?id = 38038
-  bg[SELECTED] = @selected_fg_color
-
   bg[PRELIGHT]   = @selected_bg_color
+  # Chromium uses this setting
+  bg[SELECTED]   = @selected_bg_color
+
   fg[PRELIGHT]   = @selected_fg_color
+  # Some widgets use text, we need to handle that
+  text[NORMAL]   = @fg_color
   text[PRELIGHT] = @selected_fg_color
 
   engine "pixmap" {
@@ -2059,19 +2051,9 @@ style "progressbar" {
 
 }
 
-style "treeview" {
-  fg[NORMAL]   = lighter(@focus_color)
-  fg[PRELIGHT] = lighter(@focus_color)
-  fg[ACTIVE]   = lighter(@focus_color)
-}
-
 style "treeview_header" {
 
   GtkButton::inner-border = {3, 3, 0, 0}
-
-  fg[NORMAL]   = lighter(@focus_color)
-  fg[PRELIGHT] = lighter(@focus_color)
-  fg[ACTIVE]   = lighter(@focus_color)
 
   engine "pixmap" {
 
@@ -2316,18 +2298,6 @@ style "tooltips" {
 
 }
 
-style "null" {
-
-  engine "pixmap" {
-    image {
-      function = BOX
-      file     = "assets/null.png"
-      stretch  = TRUE
-    }
-  }
-
-}
-
 class "GtkWidget"         style "default"
 class "GtkScrollbar"      style "scrollbar"
 class "GtkButton"         style "button"
@@ -2355,7 +2325,6 @@ widget_class "*<GtkCheckButton>*"                               style "checkbutt
 widget_class "*<GtkButton>*<GtkSeparator>"                      style "button_separator"
 widget_class "*<GtkToolbar>*GtkSeparator*"                      style "toolbar_separator"
 widget_class "*HandleBox"                                       style "handlebox"
-widget_class "*<GtkTreeView>"                                   style "treeview"
 widget_class "*<GtkTreeView>*<GtkButton>*"                      style "treeview_header_label"
 widget_class "*<GtkTreeView>*<GtkButton>"                       style "treeview_header"
 widget_class "*<GtkTreeView>*<GtkArrow>"                        style "treeview_header_arrow"

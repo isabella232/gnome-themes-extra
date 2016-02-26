@@ -604,12 +604,12 @@
      borderopacity="1"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.828427"
-     inkscape:cx="401.03597"
-     inkscape:cy="370.88361"
+     inkscape:zoom="15.999999"
+     inkscape:cx="208.14671"
+     inkscape:cy="462.49072"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     showgrid="true"
+     showgrid="false"
      inkscape:snap-bbox="true"
      inkscape:snap-global="true"
      inkscape:snap-nodes="false"
@@ -2368,7 +2368,7 @@
     <g
        id="tab-vert-active"
        inkscape:label="#g5146"
-       transform="translate(190,-209.00006)">
+       transform="translate(194,-221.00006)">
       <rect
          y="232.00006"
          x="10"
@@ -2398,17 +2398,9 @@
          style="opacity:1;fill:#4a90d9;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <rect
-       style="opacity:1;fill:#ffffff;fill-opacity:0;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="null"
-       width="1"
-       height="1"
-       x="213"
-       y="17"
-       inkscape:label="#rect4938" />
-    <rect
        inkscape:label="#rect5015"
-       y="26"
-       x="204"
+       y="14"
+       x="208"
        height="1"
        width="1"
        id="tab-gap"

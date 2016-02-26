@@ -61,7 +61,6 @@ handle-horz
 handle-vert
 menu-border
 menubar-item-active
-null
 pan-left
 pan-left-semi
 pan-left-insensitive
