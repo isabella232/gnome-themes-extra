@@ -112,6 +112,10 @@ spin-rtl-up
 spin-rtl-up-hover
 spin-rtl-up-active
 spin-rtl-up-insensitive
+spin-up
+spin-down
+spin-up-insensitive
+spin-down-insensitive
 scale-slider
 scale-slider-hover
 scale-slider-active

@@ -1538,6 +1538,12 @@ style "spinbutton" {
       function = ARROW
     }
 
+    # Disable the shadow for qt
+    image {
+      function = SHADOW
+      detail   = "spinbutton"
+    }
+
     ###############
     # Spin-Up LTR #
     ###############
@@ -1547,9 +1553,10 @@ style "spinbutton" {
       state           = NORMAL
       detail          = "spinbutton_up"
       file            = "assets/spin-ltr-up.png"
-      border          = {1, 4, 5, 0}
+      border          = {1, 4, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small.png"
+      #overlay_file    = "Arrows/arrow-up-small-insens.png"
+      overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1559,9 +1566,9 @@ style "spinbutton" {
       state           = PRELIGHT
       detail          = "spinbutton_up"
       file            = "assets/spin-ltr-up-hover.png"
-      border          = {1, 4, 5, 0}
+      border          = {1, 4, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-prelight.png"
+      overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1571,9 +1578,9 @@ style "spinbutton" {
       state           = ACTIVE
       detail          = "spinbutton_up"
       file            = "assets/spin-ltr-up-active.png"
-      border          = {1, 4, 5, 0}
+      border          = {1, 4, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-prelight.png"
+      overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1583,9 +1590,9 @@ style "spinbutton" {
       state           = INSENSITIVE
       detail          = "spinbutton_up"
       file            = "assets/spin-ltr-up-insensitive.png"
-      border          = {1, 4, 5, 0}
+      border          = {1, 4, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-insens.png"
+      overlay_file    = "assets/spin-up-insensitive.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1599,9 +1606,9 @@ style "spinbutton" {
       state           = NORMAL
       detail          = "spinbutton_up"
       file            = "assets/spin-rtl-up.png"
-      border          = {4, 1, 5, 0}
+      border          = {4, 1, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small.png"
+      overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1611,9 +1618,9 @@ style "spinbutton" {
       state           = PRELIGHT
       detail          = "spinbutton_up"
       file            = "assets/spin-rtl-up-hover.png"
-      border          = {4, 1, 5, 0}
+      border          = {4, 1, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-prelight.png"
+      overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1623,9 +1630,9 @@ style "spinbutton" {
       state           = ACTIVE
       detail          = "spinbutton_up"
       file            = "assets/spin-rtl-up-hover.png"
-      border          = {4, 1, 5, 0}
+      border          = {4, 1, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-prelight.png"
+      overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1635,9 +1642,9 @@ style "spinbutton" {
       state           = INSENSITIVE
       detail          = "spinbutton_up"
       file            = "assets/spin-rtl-up-insensitive.png"
-      border          = {4, 1, 5, 0}
+      border          = {4, 1, 4, 0}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-up-small-insens.png"
+      overlay_file    = "assets/spin-up-insensitive.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1653,7 +1660,7 @@ style "spinbutton" {
       file            = "assets/spin-ltr-down.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small.png"
+      overlay_file    = "assets/spin-down.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1665,7 +1672,7 @@ style "spinbutton" {
       file            = "assets/spin-ltr-down-hover.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-prelight.png"
+      overlay_file    = "assets/spin-down.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1677,7 +1684,7 @@ style "spinbutton" {
       file            = "assets/spin-ltr-down-active.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-prelight.png"
+      overlay_file    = "assets/spin-down.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1689,7 +1696,7 @@ style "spinbutton" {
       file            = "assets/spin-ltr-down-insensitive.png"
       border          = {1, 4, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-insens.png"
+      overlay_file    = "assets/spin-down-insensitive.png"
       overlay_stretch = FALSE
       direction       = LTR
     }
@@ -1705,7 +1712,7 @@ style "spinbutton" {
       file            = "assets/spin-rtl-down.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small.png"
+      overlay_file    = "assets/spin-down.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1717,7 +1724,7 @@ style "spinbutton" {
       file            = "assets/spin-rtl-down-hover.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-prelight.png"
+      overlay_file    = "assets/spin-down.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1729,7 +1736,7 @@ style "spinbutton" {
       file            = "assets/spin-rtl-down-active.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-prelight.png"
+      overlay_file    = "assets/spin-down.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
@@ -1741,7 +1748,7 @@ style "spinbutton" {
       file            = "assets/spin-rtl-down-insensitive.png"
       border          = {4, 1, 1, 4}
       stretch         = TRUE
-      overlay_file    = "Arrows/arrow-down-small-insens.png"
+      overlay_file    = "assets/spin-down-insensitive.png"
       overlay_stretch = FALSE
       direction       = RTL
     }
