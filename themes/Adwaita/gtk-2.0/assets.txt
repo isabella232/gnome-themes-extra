@@ -28,14 +28,6 @@ menu-pan-up-insensitive
 menu-pan-down
 menu-pan-down-hover
 menu-pan-down-insensitive
-arrow-left
-arrow-left-insensitive
-arrow-right
-arrow-right-insensitive
-arrow-up
-arrow-up-insensitive
-arrow-down
-arrow-down-insensitive
 button
 button-hover
 button-active

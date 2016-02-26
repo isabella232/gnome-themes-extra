@@ -383,7 +383,7 @@ style "default" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/arrow-up.png"
+      overlay_file    = "assets/pan-up.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -391,7 +391,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/arrow-up.png"
+      overlay_file    = "assets/pan-up.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -399,7 +399,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "assets/arrow-up.png"
+      overlay_file    = "assets/pan-up.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -407,7 +407,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "assets/arrow-up-insensitive.png"
+      overlay_file    = "assets/pan-up-insensitive.png"
       overlay_stretch = FALSE
       arrow_direction = UP
     }
@@ -415,7 +415,7 @@ style "default" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/arrow-down.png"
+      overlay_file    = "assets/pan-down.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -423,7 +423,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/arrow-down.png"
+      overlay_file    = "assets/pan-down.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -431,7 +431,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "assets/arrow-down.png"
+      overlay_file    = "assets/pan-down.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -439,7 +439,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "assets/arrow-down-insensitive.png"
+      overlay_file    = "assets/pan-down-insensitive.png"
       overlay_stretch = FALSE
       arrow_direction = DOWN
     }
@@ -447,7 +447,7 @@ style "default" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/arrow-left.png"
+      overlay_file    = "assets/pan-left.png"
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -455,7 +455,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/arrow-left.png"
+      overlay_file    = "assets/pan-left.png"
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -463,7 +463,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "assets/arrow-left.png"
+      overlay_file    = "assets/pan-left.png"
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -471,7 +471,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "assets/arrow-left-insensitive.png"
+      overlay_file    = "assets/pan-left-insensitive.png"
       overlay_stretch = FALSE
       arrow_direction = LEFT
     }
@@ -479,7 +479,7 @@ style "default" {
     image {
       function        = ARROW
       state           = NORMAL
-      overlay_file    = "assets/arrow-right.png"
+      overlay_file    = "assets/pan-right.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -487,7 +487,7 @@ style "default" {
     image {
       function        = ARROW
       state           = PRELIGHT
-      overlay_file    = "assets/arrow-right.png"
+      overlay_file    = "assets/pan-right.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -495,7 +495,7 @@ style "default" {
     image {
       function        = ARROW
       state           = ACTIVE
-      overlay_file    = "assets/arrow-right.png"
+      overlay_file    = "assets/pan-right.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -503,7 +503,7 @@ style "default" {
     image {
       function        = ARROW
       state           = INSENSITIVE
-      overlay_file    = "assets/arrow-right-insensitive.png"
+      overlay_file    = "assets/pan-right-insensitive.png"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
@@ -1555,7 +1555,6 @@ style "spinbutton" {
       file            = "assets/spin-ltr-up.png"
       border          = {1, 4, 4, 0}
       stretch         = TRUE
-      #overlay_file    = "Arrows/arrow-up-small-insens.png"
       overlay_file    = "assets/spin-up.png"
       overlay_stretch = FALSE
       direction       = LTR
@@ -1923,46 +1922,6 @@ style "combobox" {
 style "combobox_cellview" {
   text[NORMAL]   = @fg_color
   text[PRELIGHT] = @fg_color
-}
-
-style "combobox_arrows" {
-
-  engine "pixmap" {
-
-    image {
-      function        = ARROW
-      state           = NORMAL
-      overlay_file    = "assets/pan-down.png"
-      overlay_stretch = FALSE
-      arrow_direction = DOWN
-    }
-
-    image {
-      function        = ARROW
-      state           = PRELIGHT
-      overlay_file    = "assets/pan-down.png"
-      overlay_stretch = FALSE
-      arrow_direction = DOWN
-    }
-
-    image {
-      function        = ARROW
-      state           = ACTIVE
-      overlay_file    = "assets/pan-down.png"
-      overlay_stretch = FALSE
-      arrow_direction = DOWN
-    }
-
-    image {
-      function        = ARROW
-      state           = INSENSITIVE
-      overlay_file    = "assets/pan-down-insensitive.png"
-      overlay_stretch = FALSE
-      arrow_direction = DOWN
-    }
-
-  }
-
 }
 
 style "range" {
@@ -2436,10 +2395,6 @@ widget_class "*<GtkNotebook>.<GtkEventBox>.<GtkLabel>" style "notebook_tab_label
 
 # ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
 widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
-
-# Correct arrows on ComboBoxes
-widget_class "*<GtkComboBox>*<GtkArrow>" style "combobox_arrows"
-widget_class "*<GtkCombo>*<GtkArrow>" style "combobox_arrows"
 
 # Separators
 widget_class "*<GtkHSeparator>" style "separator"
