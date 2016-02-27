@@ -1869,9 +1869,18 @@ style "notebook_prelight" {
 style "handlebox" {
 
   engine "pixmap" {
+
+    # We don't want any shadow effect
     image {
-      function = BOX
+      function = SHADOW
     }
+
+    image {
+      function        = HANDLE
+      overlay_file    = "assets/handle.png"
+      overlay_stretch = FALSE
+    }
+
   }
 
 }

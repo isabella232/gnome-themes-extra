@@ -57,6 +57,7 @@ frame-inline
 frame-notebook
 line
 focus
+handle
 handle-horz
 handle-vert
 menu-border
