@@ -2328,7 +2328,7 @@ widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>" style 
 widget_class "*<GtkNotebook>.<GtkLabel>" style "notebook_tab_label"
 # Inkscape, GVIM and maybe other programs do strange things with tab labels
 widget_class "*<GtkNotebook>.<GtkBox>.<GtkLabel>" style "notebook_tab_label"
-widget_class "*<GtkNotebook>.<GtkEventBox>.<GtkLabel>" style "notebook_tab_label"
+widget_class "*<GtkNotebook>.<GtkEventBox>*<GtkLabel>" style "notebook_tab_label"
 
 # ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
 widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
