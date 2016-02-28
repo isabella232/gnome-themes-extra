@@ -77,20 +77,24 @@ style "default" {
   GtkSpinButton::shadow_type   = GTK_SHADOW_NONE
   GtkMenuBar::shadow-type      = GTK_SHADOW_NONE
   GtkToolbar::shadow-type      = GTK_SHADOW_NONE
-  GtkMenuBar::internal-padding = 0     #( every window is misaligned for the sake of menus ):
+  # TODO: find out what this comment means:
+  # ( every window is misaligned for the sake of menus ):
+  GtkMenuBar::internal-padding = 0
   GtkMenu::horizontal-padding  = 0
   GtkMenu::vertical-padding    = 0
-  GtkMenuItem::arrow-scaling   = 0.4
+  GtkMenuItem::arrow-scaling   = 1
   GtkMenuItem::toggle-spacing  = 10
 
   GtkCheckButton::indicator_spacing = 3
   GtkOptionMenu::indicator_spacing  = {13, 13, 5, 8}
 
-  GtkTreeView::row_ending_details   = 0
   GtkTreeView::expander-size        = 16
-  GtkTreeView::vertical-separator   = 4
+  GtkTreeView::vertical-separator   = 0
   GtkTreeView::horizontal-separator = 4
   GtkTreeView::allow-rules          = 0
+  # Set this because some apps read it
+  GtkTreeView::odd-row-color        = @base_color
+  GtkTreeView::even-row-color       = @base_color
 
   GtkExpander::expander-size = 16
 
@@ -547,12 +551,14 @@ style "default" {
     image {
       function = VLINE
       file     = "assets/line.png"
+      border   = {1, 0, 0, 0}
       stretch  = TRUE
     }
 
     image {
       function = HLINE
       file     = "assets/line.png"
+      border   = {0, 0, 1, 0}
       stretch  = TRUE
     }
 
@@ -854,15 +860,6 @@ style "menu" {
   bg[PRELIGHT]    = @base_color
   bg[SELECTED] = @selected_bg_color
 
-  # For menus that use horizontal lines rather than gtkseparator
-  engine "pixmap" {
-    image {
-      function = HLINE
-      file     = "assets/line.png"
-      stretch  = TRUE
-    }
-  }
-
   # TODO: find out why/where this is needed
   # This is used for some compatibilty issues
   engine "adwaita" {}
@@ -884,6 +881,13 @@ style "menu_item" {
   text[PRELIGHT] = @selected_fg_color
 
   engine "pixmap" {
+
+    # For menus that use horizontal lines instead of separators
+    image {
+      function = HLINE
+      file     = "assets/line.png"
+      border   = {0, 0, 1, 0}
+    }
 
     #################
     # Check Buttons #
@@ -1271,11 +1275,6 @@ style "link_button" {
     }
   }
 
-}
-
-style "checkbutton" {
-  #fg[PRELIGHT] = @text_color
-  #fg[ACTIVE]   = @text_color
 }
 
 style "entry" {
@@ -1896,9 +1895,9 @@ style "button_separator" {
 
 style "toolbar_separator" {
 
-  GtkWidget::wide-separators = 1
+  GtkWidget::wide-separators  = 1
+  GtkWidget::separator-width  = 1
   GtkWidget::separator-height = 1
-  GtkWidget::separator-width = 1
 
   engine "pixmap" {
     image {
@@ -2060,9 +2059,40 @@ style "progressbar" {
 
 }
 
+style "treeview" {
+
+  # Disable active the column highlight
+  # We need to match specific cells or we break stuff
+  # Looking at you deadbeef
+  engine "pixmap" {
+
+    image {
+      function = FLAT_BOX
+      detail   = "cell_even_sorted"
+      state    = NORMAL
+    }
+
+    image {
+      function = FLAT_BOX
+      detail   = "cell_odd_sorted"
+      state    = NORMAL
+    }
+
+  }
+
+}
+
 style "treeview_header" {
 
-  GtkButton::inner-border = {3, 3, 0, 0}
+  xthickness = 1
+  ythickness = 0
+
+  fg[NORMAL]   = mix(0.5, @fg_color, @base_color)
+  fg[PRELIGHT] = mix(0.5, mix(0.5, @fg_color, @base_color), @fg_color)
+
+  font_name    = "Bold"
+
+  GtkButton::inner-border = {5, 5, 0, 1}
 
   engine "pixmap" {
 
@@ -2081,24 +2111,6 @@ style "treeview_header" {
       stretch   = TRUE
       direction = RTL
     }
-
-  }
-}
-
-style "treeview_header_label" {
-
-  xthickness = 1
-  ythickness = 1
-
-  fg[NORMAL]   = mix(0.5, @fg_color, @base_color)
-  fg[PRELIGHT] = mix(0.5, mix(0.5, @fg_color, @base_color), @fg_color)
-  font_name    = "Bold"
-
-}
-
-style "treeview_header_arrow" {
-
-  engine "pixmap" {
 
     image {
       function        = ARROW
@@ -2278,24 +2290,6 @@ style "inline_toolbar" {
 
 }
 
-style "separator" {
-
-  engine "pixmap" {
-    image {
-      function = HLINE
-      file     = "assets/line.png"
-      stretch  = TRUE
-    }
-
-    image {
-      function = VLINE
-      file     = "assets/line.png"
-      stretch  = TRUE
-    }
-  }
-
-}
-
 style "tooltips" {
 
   xthickness = 13
@@ -2307,51 +2301,56 @@ style "tooltips" {
 
 }
 
-class "GtkWidget"         style "default"
-class "GtkScrollbar"      style "scrollbar"
-class "GtkButton"         style "button"
-class "GtkLinkButton"     style "link_button"
-class "GtkEntry"          style "entry"
-class "GtkOldEditable"    style "entry"
-class "GtkSpinButton"     style "spinbutton"
-class "GtkNotebook"       style "notebook"
-class "GtkRange"          style "range"
-class "GtkHScale"         style "scale_horz"
-class "GtkVScale"         style "scale_vert"
-class "GtkProgressBar"    style "progressbar"
-class "GtkScrolledWindow" style "scrolled_window"
-class "GtkFrame"          style "frame"
-class "GtkToolbar"        style "toolbar"
-class "GtkMenuBar"        style "menubar"
-class "GtkMenu"           style "menu"
+class "GtkWidget"            style "default"
+class "GtkScrollbar"         style "scrollbar"
+class "GtkButton"            style "button"
+class "GtkLinkButton"        style "link_button"
+class "GtkEntry"             style "entry"
+class "GtkOldEditable"       style "entry"
+class "GtkSpinButton"        style "spinbutton"
+class "GtkNotebook"          style "notebook"
+class "GtkRange"             style "range"
+class "GtkHScale"            style "scale_horz"
+class "GtkVScale"            style "scale_vert"
+class "GtkProgressBar"       style "progressbar"
+class "GtkScrolledWindow"    style "scrolled_window"
+class "GtkFrame"             style "frame"
+class "GtkHandleBox"         style "handlebox"
+class "GtkTreeView"          style "treeview"
+class "GtkToolbar"           style "toolbar"
+class "GtkSeparatorToolItem" style "toolbar_separator"
+class "GtkMenuBar"           style "menubar"
+class "GtkMenu"              style "menu"
 
 # Menu and menubar items
 widget_class "*<GtkMenuItem>*"              style "menu_item"
-widget_class "*<GtkSeparatorMenuItem>*"     style "separator_menu_item"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar_item"
+widget_class "*<GtkSeparatorMenuItem>*"     style "separator_menu_item"
 
-widget_class "*<GtkCheckButton>*"                               style "checkbutton"
-widget_class "*<GtkButton>*<GtkSeparator>"                      style "button_separator"
-widget_class "*<GtkToolbar>*GtkSeparator*"                      style "toolbar_separator"
-widget_class "*HandleBox"                                       style "handlebox"
-widget_class "*<GtkTreeView>*<GtkButton>*"                      style "treeview_header_label"
-widget_class "*<GtkTreeView>*<GtkButton>"                       style "treeview_header"
-widget_class "*<GtkTreeView>*<GtkArrow>"                        style "treeview_header_arrow"
-widget_class "*<GtkFileChooserDefault>*<GtkToolbar>"            style "inline_toolbar"
+# Treeview buttons
+widget_class "*<GtkTreeView>*<GtkButton>*" style "treeview_header"
+
+# Give the file chooser toolbar a border
+widget_class "*<GtkFileChooserDefault>*<GtkToolbar>" style "inline_toolbar"
+
+# TODO: find out why this is needed
+# It appears to only set the bg color to base
 widget_class "*<GtkNotebook>*<GtkScrolledWindow>*<GtkViewport>" style "notebook_viewport"
 
 # Fix padding on regular comboboxes
-widget_class "*<GtkComboBox>*<GtkButton>" style "combobox"
+widget_class "*<GtkComboBox>.<GtkButton>" style "combobox"
+# And disable separators on them
+widget_class "*<GtkComboBox>.<GtkButton>*<GtkSeparator>" style "button_separator"
 
 # Join together the ComboBoxEntry entry and button
-widget_class "*<GtkComboBoxEntry>*<GtkEntry>"  style "combobox_entry"
-widget_class "*<GtkComboBoxEntry>*<GtkButton>" style "combobox_button"
+widget_class "*<GtkComboBoxEntry>.<GtkEntry>"  style "combobox_entry"
+widget_class "*<GtkComboBoxEntry>.<GtkButton>" style "combobox_button"
 # Tweak the padding on the button a little bit because it uses it a bit differently
-widget_class "*<GtkComboBoxEntry>*<GtkButton>" style "combobox_button_padding"
+widget_class "*<GtkComboBoxEntry>.<GtkButton>" style "combobox_button_padding"
 
 # Join the Combo entry and button
-widget_class "*<GtkCombo>*<GtkEntry>"  style "combobox_entry"
-widget_class "*<GtkCombo>*<GtkButton>" style "combobox_button"
+widget_class "*<GtkCombo>.<GtkEntry>"  style "combobox_entry"
+widget_class "*<GtkCombo>.<GtkButton>" style "combobox_button"
 
 # Alas we cannot do the same for ComboBoxText because there isn't a way to apply the style to only
 # the comboboxes that have an entry inside
@@ -2373,10 +2372,6 @@ widget_class "*<GtkNotebook>.<GtkEventBox>.<GtkLabel>" style "notebook_tab_label
 
 # ComboBoxes tend to draw the button label with text[] instead of fg[], we need to fix that
 widget_class "*<GtkComboBox>*<GtkCellView>" style "combobox_cellview"
-
-# Separators
-widget_class "*<GtkHSeparator>" style "separator"
-widget_class "*<GtkVSeparator>" style "separator"
 
 # GTK tooltips
 widget "gtk-tooltip*" style "tooltips"
