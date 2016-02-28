@@ -2257,6 +2257,8 @@ style "frame" {
 
 style "toolbar" {
 
+  # Some apps (like LibreOffice) don't respect the toolbar shadow setting
+  # So we turn it off entirely
   engine "pixmap" {
     image {
       function = SHADOW
@@ -2267,9 +2269,10 @@ style "toolbar" {
 
 style "toolbar_button" {
 
-  #GtkButton::inner-border = {4, 4, 4, 4}
-  #xthickness = 4
-  #ythickness = 4
+  xthickness = 2
+  ythickness = 2
+
+  GtkButton::inner-border = {2, 2, 2, 2}
 
 }
 
