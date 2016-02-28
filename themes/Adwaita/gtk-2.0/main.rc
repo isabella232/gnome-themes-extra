@@ -12,8 +12,6 @@ style "default" {
   GtkWidget::focus-line-width = 1
   GtkWidget::focus-line-pattern = "\2\1"
 
-  GtkMenuBar::window-dragging  = 1
-  GtkToolbar::window-dragging  = 1
   GtkToolbar::internal-padding = 4
   GtkToolButton::icon-spacing  = 4
 
