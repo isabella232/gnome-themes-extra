@@ -550,14 +550,12 @@ style "default" {
       function = VLINE
       file     = "assets/line.png"
       border   = {1, 0, 0, 0}
-      stretch  = TRUE
     }
 
     image {
       function = HLINE
       file     = "assets/line.png"
       border   = {0, 0, 1, 0}
-      stretch  = TRUE
     }
 
     #########
@@ -682,7 +680,6 @@ style "scrollbar" {
       detail      = "trough"
       file        = "assets/scrollbar-horz-trough.png"
       border      = {0, 0, 1, 0}
-      stretch     = TRUE
       orientation = HORIZONTAL
     }
 
@@ -691,7 +688,6 @@ style "scrollbar" {
       detail      = "trough"
       file        = "assets/scrollbar-vert-trough.png"
       border      = {1, 0, 0, 0}
-      stretch     = TRUE
       orientation = VERTICAL
       direction   = LTR
     }
@@ -701,7 +697,6 @@ style "scrollbar" {
       detail      = "trough"
       file        = "assets/scrollbar-vert-trough-rtl.png"
       border      = {0, 1, 0, 0}
-      stretch     = TRUE
       orientation = VERTICAL
       direction   = RTL
     }
@@ -823,7 +818,6 @@ style "menubar" {
       state    = NORMAL
       file     = "assets/line.png"
       border   = {0, 0, 0, 1}
-      stretch  = TRUE
     }
   }
 
@@ -842,7 +836,6 @@ style "menubar_item" {
       state       = PRELIGHT
       file        = "assets/menubar-item-active.png"
       border      = {0, 0, 0, 3}
-      stretch     = TRUE
     }
   }
 
@@ -1205,7 +1198,6 @@ style "separator_menu_item" {
     image {
       function = BOX
       file     = "assets/line.png"
-      stretch  = TRUE
     }
   }
 
@@ -1901,7 +1893,6 @@ style "toolbar_separator" {
     image {
       function = BOX
       file     = "assets/line.png"
-      stretch  = TRUE
     }
   }
 
