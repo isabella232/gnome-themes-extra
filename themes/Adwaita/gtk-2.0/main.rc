@@ -2181,7 +2181,6 @@ style "frame" {
 
     image {
       function = SHADOW
-      shadow   = IN
       file     = "assets/frame.png"
       border   = {1, 1, 1, 1}
       stretch  = TRUE
@@ -2189,7 +2188,6 @@ style "frame" {
 
     image {
       function       = SHADOW_GAP
-      shadow         = IN
       file           = "assets/frame.png"
       border         = {1, 1, 1, 1}
       stretch        = TRUE
@@ -2197,60 +2195,16 @@ style "frame" {
       gap_end_file   = "assets/border.png"
     }
 
+  }
+
+}
+
+style "disable-frame" {
+
+  engine "pixmap" {
     image {
       function = SHADOW
-      shadow   = OUT
-      file     = "assets/frame.png"
-      border   = {1, 1, 1, 1}
-      stretch  = TRUE
     }
-
-    image {
-      function       = SHADOW_GAP
-      shadow         = OUT
-      file           = "assets/frame.png"
-      border         = {1, 1, 1, 1}
-      stretch        = TRUE
-      gap_start_file = "assets/border.png"
-      gap_end_file   = "assets/border.png"
-    }
-
-    image {
-      function = SHADOW
-      shadow   = ETCHED_IN
-      file     = "assets/frame.png"
-      border   = {1, 1, 1, 1}
-      stretch  = TRUE
-    }
-
-    image {
-      function       = SHADOW_GAP
-      shadow         = ETCHED_IN
-      file           = "assets/frame.png"
-      border         = {1, 1, 1, 1}
-      stretch        = TRUE
-      gap_start_file = "assets/border.png"
-      gap_end_file   = "assets/border.png"
-    }
-
-    image {
-      function = SHADOW
-      shadow   = ETCHED_OUT
-      file     = "assets/frame.png"
-      border   = {1, 1, 1, 1}
-      stretch  = TRUE
-    }
-
-    image {
-      function       = SHADOW_GAP
-      shadow         = ETCHED_OUT
-      file           = "assets/frame.png"
-      border         = {1, 1, 1, 1}
-      stretch        = TRUE
-      gap_start_file = "assets/border.png"
-      gap_end_file   = "assets/border.png"
-    }
-
   }
 
 }
@@ -2327,6 +2281,11 @@ class "GtkMenu"              style "menu"
 widget_class "*<GtkMenuItem>*"              style "menu_item"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*" style "menubar_item"
 widget_class "*<GtkSeparatorMenuItem>*"     style "separator_menu_item"
+
+# Frames in statusbars look ugly, let's disable them
+widget_class "*<GtkStatusbar>*<GtkFrame>" style "disable-frame"
+# Disable the frame around poor Wilbert too
+widget_class "*<GimpToolbox>*<GtkFrame>"  style "disable-frame"
 
 # Treeview buttons
 widget_class "*<GtkTreeView>*<GtkButton>*" style "treeview_header"
