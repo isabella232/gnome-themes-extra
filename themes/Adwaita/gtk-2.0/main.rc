@@ -461,6 +461,36 @@ style "default" {
       arrow_direction = RIGHT
     }
 
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      detail          = "menu_scroll_arrow_up"
+      overlay_file    = "assets/menu-pan-up-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = ARROW
+      detail          = "menu_scroll_arrow_up"
+      overlay_file    = "assets/menu-pan-up.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = ARROW
+      state           = INSENSITIVE
+      detail          = "menu_scroll_arrow_down"
+      overlay_file    = "assets/menu-pan-down-insensitive.png"
+      overlay_stretch = FALSE
+    }
+
+    image {
+      function        = ARROW
+      detail          = "menu_scroll_arrow_down"
+      overlay_file    = "assets/menu-pan-down.png"
+      overlay_stretch = FALSE
+    }
+
     # Regular arrows
 
     image {

@@ -23,10 +23,8 @@ menu-pan-right
 menu-pan-right-hover
 menu-pan-right-insensitive
 menu-pan-up
-menu-pan-up-hover
 menu-pan-up-insensitive
 menu-pan-down
-menu-pan-down-hover
 menu-pan-down-insensitive
 button
 button-hover
