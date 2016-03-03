@@ -27,21 +27,21 @@
 #include <gdk/gdkx.h>
 #endif
 
-/***************************************/
-/* Register & Initialize Drawing Style */
-/***************************************/
+/***************************************
+ * Register & Initialize Drawing Style *
+ ***************************************/
 #define ADWAITA_TYPE_STYLE              (adwaita_style_get_type ())
 #define ADWAITA_STYLE(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), ADWAITA_TYPE_STYLE, AdwaitaStyle))
 #define ADWAITA_STYLE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), ADWAITA_TYPE_STYLE, AdwaitaStyleClass))
 #define ADWAITA_IS_STYLE(object)        (G_TYPE_CHECK_INSTANCE_TYPE ((object), ADWAITA_TYPE_STYLE))
 #define ADWAITA_IS_STYLE_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), ADWAITA_TYPE_STYLE))
 #define ADWAITA_STYLE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), ADWAITA_TYPE_STYLE, AdwaitaStyleClass))
- 
+
 typedef struct
 {
   GtkStyle parent_instance;
 } AdwaitaStyle;
- 
+
 typedef struct
 {
   GtkStyleClass parent_class;
@@ -77,7 +77,7 @@ wm_is_fallback (void)
 #endif
 }
 
-static cairo_t * 
+static cairo_t *
 drawable_to_cairo (GdkDrawable  *window,
                    GdkRectangle *area)
 {
@@ -107,10 +107,10 @@ adwaita_draw_box (GtkStyle * style,
                   GtkShadowType shadow_type,
                   GdkRectangle * area,
                   GtkWidget * widget,
-                  const gchar * detail, 
-                  gint x, 
-                  gint y, 
-                  gint width, 
+                  const gchar * detail,
+                  gint x,
+                  gint y,
+                  gint width,
                   gint height)
 {
   if (GTK_IS_MENU (widget) &&
@@ -118,26 +118,11 @@ adwaita_draw_box (GtkStyle * style,
       wm_is_fallback ())
     {
       cairo_t *cr = drawable_to_cairo (window, area);
-      cairo_pattern_t *pattern = cairo_pattern_create_linear (x, y, x, y + height);
-      gdouble stop_1, stop_2, stop_3;
-
-      stop_1 = MIN (1.0, 6.0 / (gdouble) height);
-      stop_2 = MAX (stop_1, 0.33);
-      stop_3 = MAX (stop_2, 0.66);
-
-      cairo_pattern_add_color_stop_rgba (pattern, 0.0, 0.66, 0.66, 0.66, 0.0);
-      cairo_pattern_add_color_stop_rgba (pattern, stop_1, 0.66, 0.66, 0.66, 0.25);
-      cairo_pattern_add_color_stop_rgba (pattern, stop_2, 0.66, 0.66, 0.66, 0.80);
-      cairo_pattern_add_color_stop_rgba (pattern, stop_3, 0.66, 0.66, 0.66, 1.0);
-      cairo_pattern_add_color_stop_rgba (pattern, 1.0, 0.66, 0.66, 0.66, 1.0);
-      cairo_pattern_set_extend (pattern, CAIRO_EXTEND_REPEAT);
-
-      cairo_set_source (cr, pattern);
+      cairo_set_source_rgb (cr, 0.34, 0.34, 0.33);
       cairo_rectangle (cr, x, y, width, height);
       cairo_stroke (cr);
 
       cairo_destroy (cr);
-      cairo_pattern_destroy (pattern);
     }
   else
     {
@@ -187,7 +172,7 @@ static void
 adwaita_style_class_init (AdwaitaStyleClass * klass)
 {
   GtkStyleClass *style_class = GTK_STYLE_CLASS (klass);
- 
+
   style_class->draw_box = adwaita_draw_box;
   style_class->draw_flat_box = adwaita_draw_flat_box;
 }
@@ -197,21 +182,21 @@ adwaita_style_class_finalize (AdwaitaStyleClass * klass)
 {
 }
 
-/**********************************/ 
-/* Register & Initialize RC Style */ 
-/**********************************/ 
+/**********************************
+ * Register & Initialize RC Style *
+ **********************************/
 #define ADWAITA_TYPE_RC_STYLE              (adwaita_rc_style_get_type ())
 #define ADWAITA_RC_STYLE(object)           (G_TYPE_CHECK_INSTANCE_CAST ((object), ADWAITA_TYPE_RC_STYLE, AdwaitaRcStyle))
 #define ADWAITA_RC_STYLE_CLASS(klass)      (G_TYPE_CHECK_CLASS_CAST ((klass), ADWAITA_TYPE_RC_STYLE, AdwaitaRcStyleClass))
 #define ADWAITA_IS_RC_STYLE(object)        (G_TYPE_CHECK_INSTANCE_TYPE ((object), ADWAITA_TYPE_RC_STYLE))
 #define ADWAITA_IS_RC_STYLE_CLASS(klass)   (G_TYPE_CHECK_CLASS_TYPE ((klass), ADWAITA_TYPE_RC_STYLE))
 #define ADWAITA_RC_STYLE_GET_CLASS(obj)    (G_TYPE_INSTANCE_GET_CLASS ((obj), ADWAITA_TYPE_RC_STYLE, AdwaitaRcStyleClass))
- 
+
 typedef struct
 {
   GtkRcStyle parent_instance;
 } AdwaitaRcStyle;
- 
+
 typedef struct
 {
   GtkRcStyleClass parent_class;
@@ -243,8 +228,8 @@ adwaita_rc_style_class_finalize (AdwaitaRcStyleClass * klass)
 {
 }
 
-/**************** 
- * Engine Hooks * 
+/****************
+ * Engine Hooks *
  ****************/
 void
 theme_init (GTypeModule * module)
@@ -252,12 +237,12 @@ theme_init (GTypeModule * module)
   adwaita_rc_style_register_type (module);
   adwaita_style_register_type (module);
 }
- 
+
 void
 theme_exit (void)
 {
 }
- 
+
 GtkRcStyle *
 theme_create_rc_style (void)
 {
