@@ -60,6 +60,15 @@ handle-horz
 handle-vert
 menu-border
 menubar-item-active
+notebook-entry
+notebook-entry-active
+notebook-entry-insensitive
+notebook-combo-entry-ltr-entry
+notebook-combo-entry-ltr-entry-active
+notebook-combo-entry-ltr-entry-insensitive
+notebook-combo-entry-rtl-entry
+notebook-combo-entry-rtl-entry-active
+notebook-combo-entry-rtl-entry-insensitive
 pan-left
 pan-left-semi
 pan-left-insensitive
