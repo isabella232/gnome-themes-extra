@@ -7,7 +7,7 @@ libadwaita_la_LDFLAGS = -module -avoid-version -no-undefined
 libadwaita_la_LIBADD =  $(GTK2_ENGINE_LIBS)
 
 themedir = $(datadir)/themes/Adwaita/gtk-2.0
-theme_data = gtkrc main.rc apps.rc
+theme_DATA = gtkrc main.rc apps.rc
 
 asset_dirs = "assets"
 
@@ -181,6 +181,7 @@ asset_data = \
 	assets/treeview-separator-ltr.png \
 	assets/treeview-separator-rtl.png
 
+
 install-data-local:
 	for dir in $(asset_dirs); do \
 		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
@@ -196,4 +197,4 @@ uninstall-local:
 		done; \
 	done
 
-EXTRA_DIST = $(theme_data) $(asset_data)
+EXTRA_DIST = $(theme_DATA) $(asset_data)
