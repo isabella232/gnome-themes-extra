@@ -79,7 +79,7 @@ style "default" {
   # ( every window is misaligned for the sake of menus ):
   GtkMenuBar::internal-padding = 0
   GtkMenu::horizontal-padding  = 0
-  GtkMenu::vertical-padding    = 0
+  GtkMenu::vertical-padding    = 2
   GtkMenu::double-arrows       = 0
   GtkMenuItem::arrow-scaling   = 1
   GtkMenuItem::toggle-spacing  = 10
