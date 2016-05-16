@@ -7,11 +7,11 @@ libadwaita_la_LDFLAGS = -module -avoid-version -no-undefined
 libadwaita_la_LIBADD =  $(GTK2_ENGINE_LIBS)
 
 themedir = $(datadir)/themes/Adwaita/gtk-2.0
-theme_data = gtkrc main.rc apps.rc
+theme_DATA = gtkrc main.rc apps.rc
 
-asset_dirs = "assets"
+assetdir = $(themedir)/assets
 
-asset_data = \
+asset_DATA = \
 	assets/border.png \
 	assets/button-active.png \
 	assets/button-hover.png \
@@ -181,19 +181,4 @@ asset_data = \
 	assets/treeview-separator-ltr.png \
 	assets/treeview-separator-rtl.png
 
-install-data-local:
-	for dir in $(asset_dirs); do \
-		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
-			$(mkdir_p) $(DESTDIR)$(datadir)/themes/Adwaita/gtk-2.0/$$dir; \
-			$(install_sh_DATA) $(srcdir)/$$dir/$$file $(DESTDIR)$(themedir)/$$dir/$$file; \
-		done; \
-	done
-
-uninstall-local:
-	for dir in $(asset_dirs); do \
-		for file in `cd $(srcdir)/$$dir && find . -maxdepth 1 \( -name "*.png" \)`; do \
-			rm -f $(DESTDIR)$(datadir)/themes/Adwaita/gtk-2.0/$$dir/$$file; \
-		done; \
-	done
-
-EXTRA_DIST = $(theme_data) $(asset_data)
+EXTRA_DIST = $(theme_DATA) $(asset_DATA)
