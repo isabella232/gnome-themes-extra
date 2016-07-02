@@ -80,7 +80,7 @@ ensure_dest_path (GFile *file,
 static void
 optimize_png (const gchar *png_path)
 {
-  gchar *cmd = g_strconcat ("optipng -quiet", " ", png_path, NULL);
+  gchar *cmd = g_strconcat ("zopflipng -ym ", png_path, " ", png_path, NULL);
   g_spawn_command_line_async (cmd, NULL);
   g_free (cmd);
 }
