@@ -7,6 +7,10 @@ gtk-color-scheme = "text_color:white\nbase_color:#292929"
 gtk-color-scheme = "fg_color:#eeeeec\nbg_color:#393f3f"
 # Selected foreground/background colors
 gtk-color-scheme = "selected_fg_color:#ffffff\nselected_bg_color:#215d9c"
+# Insensitive foreground/background colors
+gtk-color-scheme = "insensitive_fg_color:#949796\ninsensitive_bg_color:#333636"
+# Link colors
+gtk-color-scheme = "link_color:#4a90d9\nvisited_link_color:#2a76c6"
 # Tooltip colors
 gtk-color-scheme = "tooltip_fg_color:#ffffff\ntooltip_bg_color:#343434"
 
