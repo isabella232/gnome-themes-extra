@@ -723,9 +723,9 @@
      borderopacity="0.10196078"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="14.481547"
-     inkscape:cx="217.54688"
-     inkscape:cy="454.31228"
+     inkscape:zoom="81.920001"
+     inkscape:cx="484.50557"
+     inkscape:cy="469.70598"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -1663,14 +1663,14 @@
          height="2"
          width="2"
          id="rect4951"
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1" />
+         style="opacity:1;fill:#292929;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1" />
       <path
          inkscape:label="#rect4948"
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="rect4948"
          d="m 481.5,8 0,1.5 -1.5,0"
-         style="fill:none;fill-opacity:0.1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1" />
+         style="fill:none;fill-opacity:0.1;stroke:#393f3f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:1;stroke:#1c1f1f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3606,14 +3606,14 @@
        id="treeview-separator-rtl"
        transform="matrix(-1,0,0,1,966,0)">
       <rect
-         style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1"
+         style="opacity:1;fill:#292929;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1"
          id="rect5144"
          width="2"
          height="2"
          x="480"
          y="8" />
       <path
-         style="fill:none;fill-opacity:0.1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.1"
+         style="fill:none;fill-opacity:0.1;stroke:#393f3f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 481.5,8 0,1.5 -1.5,0"
          id="path5146"
          inkscape:connector-curvature="0"
