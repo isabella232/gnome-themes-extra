@@ -19,6 +19,21 @@
   <defs
      id="defs3034">
     <linearGradient
+       id="linearGradient4907">
+      <stop
+         style="stop-color:#292929;stop-opacity:1"
+         offset="0"
+         id="stop4909" />
+      <stop
+         id="stop4911"
+         offset="0.93000001"
+         style="stop-color:#242525;stop-opacity:1" />
+      <stop
+         style="stop-color:#1d2020;stop-opacity:1"
+         offset="1"
+         id="stop4913" />
+    </linearGradient>
+    <linearGradient
        inkscape:collect="always"
        id="linearGradient4916">
       <stop
@@ -190,7 +205,7 @@
        y2="3.6127" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6819"
+       xlink:href="#linearGradient4907"
        id="linearGradient6878"
        gradientUnits="userSpaceOnUse"
        x1="5"
@@ -200,7 +215,7 @@
        gradientTransform="translate(7,6)" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6819"
+       xlink:href="#linearGradient4907"
        id="linearGradient6913"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(50,-30)"
@@ -226,7 +241,7 @@
     </clipPath>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient6819"
+       xlink:href="#linearGradient4907"
        id="linearGradient6990"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(85,6)"
@@ -708,9 +723,9 @@
      borderopacity="0.10196078"
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.6203868"
-     inkscape:cx="200.61792"
-     inkscape:cy="460.70777"
+     inkscape:zoom="10.24"
+     inkscape:cx="78.104747"
+     inkscape:cy="421.15247"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
@@ -747,7 +762,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -799,7 +814,7 @@
          height="32"
          width="10"
          id="rect3078-81"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#e8e8e7;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#393f3f;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
       <rect
          ry="2.5"
          rx="2.5000005"
@@ -813,7 +828,7 @@
          transform="translate(7,6)"
          id="g4377">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#1c1f1f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
            id="use4309"
            width="7"
            height="29"
@@ -828,7 +843,7 @@
        id="entry-insensitive"
        transform="translate(50,50)">
       <rect
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#e8e8e7;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#393f3f;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
          id="rect3183"
          width="10"
          height="32"
@@ -844,11 +859,11 @@
          height="29"
          width="7"
          id="rect17861-3-2-1-0"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#f1f1f1;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#333636;fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate" />
       <g
          id="g3187">
         <rect
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#9d9d99;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#1c1f1f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate"
            id="use3191"
            width="7"
            height="29"
@@ -866,12 +881,12 @@
        height="29"
        width="7"
        id="entry-background"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient6990);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient6990);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
        clip-path="url(#clipPath7004)"
        inkscape:label="#rect6982"
        transform="translate(0,-38)" />
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#f4f4f2;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#333636;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate"
        id="entry-background-insensitive"
        width="4"
        height="24"
@@ -2482,9 +2497,9 @@
          height="32"
          width="10"
          id="rect3078-81-1"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#e8e8e7;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#393f3f;fill-opacity:1;stroke:none;stroke-width:2;marker:none;enable-background:accumulate" />
       <rect
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient6913);fill-opacity:1;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#linearGradient6913);fill-opacity:1.0;stroke:none;stroke-width:1;marker:none;enable-background:accumulate"
          id="rect6905"
          width="7"
          height="29"
@@ -2505,7 +2520,7 @@
            height="29"
            width="7"
            id="use6956"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#4a90d9;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#215d9c;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
       </g>
       <g
          id="g6909"
@@ -2518,7 +2533,7 @@
            height="29"
            width="7"
            id="use6911"
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#4a90d9;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
+           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;stroke:#0f2b48;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker:none;enable-background:accumulate" />
       </g>
     </g>
     <g
