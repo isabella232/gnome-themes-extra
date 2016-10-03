@@ -1526,9 +1526,9 @@ style "menu" {
   xthickness = 0
   ythickness = 0
 
-  bg[NORMAL]      = @base_color
-  bg[INSENSITIVE] = @base_color
-  bg[PRELIGHT]    = @base_color
+  bg[NORMAL]      = @menu_color
+  bg[INSENSITIVE] = @menu_color
+  bg[PRELIGHT]    = @menu_color
   bg[SELECTED]    = @selected_bg_color
 
 }
@@ -2291,8 +2291,8 @@ style "treeview_header" {
   xthickness = 1
   ythickness = 0
 
-  fg[NORMAL]   = mix(0.5, @fg_color, @base_color)
-  fg[PRELIGHT] = mix(0.5, mix(0.5, @fg_color, @base_color), @fg_color)
+  fg[NORMAL]   = @column_header_color
+  fg[PRELIGHT] = @hover_column_header_color
 
   font_name    = "Bold"
 
