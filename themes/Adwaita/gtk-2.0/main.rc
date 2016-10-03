@@ -19,13 +19,13 @@ style "default" {
   GtkWidget::tooltip-alpha     = 235
   GtkWidget::new-tooltip-style = 1 #for compatibility
 
-  GtkWidget::link-color              = shade(0.9, @selected_bg_color)
-  GtkWidget::visited-link-color      = shade(0.8, @selected_bg_color)
-  GnomeHRef::link_color              = shade(0.9, @selected_bg_color)
-  GtkHTML::link-color                = shade(0.9, @selected_bg_color)
-  GtkHTML::vlink-color               = shade(0.8, @selected_bg_color)
-  GtkIMHtml::hyperlink-color         = shade(0.9, @selected_bg_color)
-  GtkIMHtml::hyperlink-visited-color = shade(0.8, @selected_bg_color)
+  GtkWidget::link-color              = @link_color
+  GtkWidget::visited-link-color      = @visited_link_color
+  GnomeHRef::link_color              = @link_color
+  GtkHTML::link-color                = @link_color
+  GtkHTML::vlink-color               = @visited_link_color
+  GtkIMHtml::hyperlink-color         = @link_color
+  GtkIMHtml::hyperlink-visited-color = @visited_link_color
 
   GtkSeparatorMenuItem::horizontal-padding = 0
   GtkSeparatorMenuItem::wide-separators    = 1
@@ -106,25 +106,25 @@ style "default" {
   bg[NORMAL]      = @bg_color
   bg[PRELIGHT]    = @bg_color
   bg[SELECTED]    = @selected_bg_color
-  bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
+  bg[INSENSITIVE] = @insensitive_bg_color
   bg[ACTIVE]      = @bg_color
 
   fg[NORMAL]      = @fg_color
   fg[PRELIGHT]    = @fg_color
   fg[SELECTED]    = @selected_fg_color
-  fg[INSENSITIVE] = mix (0.5, @fg_color, @bg_color)
+  fg[INSENSITIVE] = @insensitive_fg_color
   fg[ACTIVE]      = @fg_color
 
   text[NORMAL]      = @text_color
   text[PRELIGHT]    = @text_color
   text[SELECTED]    = @selected_fg_color
-  text[INSENSITIVE] = darker (@bg_color)
+  text[INSENSITIVE] = @insensitive_fg_color
   text[ACTIVE]      = @selected_fg_color
 
   base[NORMAL]      = @base_color
   base[PRELIGHT]    = shade (0.95, @bg_color)
   base[SELECTED]    = @selected_bg_color
-  base[INSENSITIVE] = mix (0.5, @fg_color, @bg_color)
+  base[INSENSITIVE] = @insensitive_bg_color
   base[ACTIVE]      = @selected_bg_color
 
   # For succinctness, all reasonable pixmap options remain here
@@ -1495,7 +1495,7 @@ style "menubar" {
 
   # Needed to fix Firefox's menubar text
   bg[SELECTED] = @selected_fg_color
-  fg[SELECTED] = shade(0.9, @selected_bg_color)
+  fg[SELECTED] = @link_color
 
 }
 
@@ -1504,7 +1504,7 @@ style "menubar_item" {
   xthickness = 3
   ythickness = 4
 
-  fg[PRELIGHT] = shade(0.9, @selected_bg_color)
+  fg[PRELIGHT] = @link_color
 
   engine "pixmap" {
     image {
@@ -2087,7 +2087,7 @@ style "notebook_entry" {
 style "normal_bg" {
   bg[NORMAL]      = @bg_color
   bg[PRELIGHT]    = @bg_color
-  bg[INSENSITIVE] = mix (0.6, @bg_color, @base_color)
+  bg[INSENSITIVE] = @insensitive_bg_color
 }
 
 style "normal_entry" {
