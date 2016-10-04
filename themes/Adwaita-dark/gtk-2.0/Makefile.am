@@ -1,13 +1,5 @@
-enginedir = $(libdir)/gtk-2.0/$(GTK2_VERSION)/engines
-engine_LTLIBRARIES = libadwaita.la
-
-libadwaita_la_CFLAGS = $(GTK2_ENGINE_CFLAGS)
-libadwaita_la_SOURCES = adwaita_engine.c
-libadwaita_la_LDFLAGS = -module -avoid-version -no-undefined
-libadwaita_la_LIBADD =  $(GTK2_ENGINE_LIBS)
-
-themedir = $(datadir)/themes/Adwaita/gtk-2.0
-theme_DATA = gtkrc main.rc apps.rc hacks.rc
+themedir = $(datadir)/themes/Adwaita-dark/gtk-2.0
+theme_DATA = gtkrc main.rc apps.rc hacks.rc hacks-dark.rc
 
 assetdir = $(themedir)/assets
 
