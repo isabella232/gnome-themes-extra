@@ -7,7 +7,7 @@ libadwaita_la_LDFLAGS = -module -avoid-version -no-undefined
 libadwaita_la_LIBADD =  $(GTK2_ENGINE_LIBS)
 
 themedir = $(datadir)/themes/Adwaita/gtk-2.0
-theme_DATA = gtkrc main.rc apps.rc
+theme_DATA = gtkrc main.rc apps.rc hacks.rc
 
 assetdir = $(themedir)/assets
 
