@@ -85,6 +85,9 @@ themes/Makefile
 themes/Adwaita/Makefile
 themes/Adwaita/gtk-2.0/Makefile
 themes/Adwaita/gtk-3.0/Makefile
+themes/Adwaita-dark/Makefile
+themes/Adwaita-dark/gtk-2.0/Makefile
+themes/Adwaita-dark/gtk-3.0/Makefile
 themes/HighContrast/Makefile
 themes/HighContrast/gtk-2.0/Makefile
 themes/HighContrast/gtk-3.0/Makefile
