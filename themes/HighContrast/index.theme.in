@@ -4,7 +4,6 @@ Type=X-GNOME-Metatheme
 _Comment=High contrast theme
 Encoding=UTF-8
 GtkTheme=HighContrast
-MetacityTheme=HighContrast
 IconTheme=Adwaita
 CursorTheme=Adwaita
 CursorSize=24

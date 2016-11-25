@@ -4,7 +4,6 @@ Type=X-GNOME-Metatheme
 _Comment=There was only one
 Encoding=UTF-8
 GtkTheme=Adwaita-dark
-MetacityTheme=Adwaita
 IconTheme=Adwaita
 CursorTheme=Adwaita
 CursorSize=24
