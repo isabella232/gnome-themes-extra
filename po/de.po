@@ -8,19 +8,24 @@ msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "themes-standard&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-03-12 13:05+0000\n"
-"PO-Revision-Date: 2011-03-10 23:41+0100\n"
-"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"POT-Creation-Date: 2016-11-25 18:29+0000\n"
+"PO-Revision-Date: 2016-11-26 11:10+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
-msgid "Default Background"
-msgstr "Voreingestellter Hintergrund"
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+msgid "Adwaita-dark"
+msgstr "Adwaita dunkel"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+msgid "There was only one"
+msgstr "Es gab nur eines"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
@@ -38,18 +43,17 @@ msgstr "Hoher Kontrast"
 msgid "High contrast theme"
 msgstr "Thema mit hohem Kontrast"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:1
-msgid "High Contrast Inverse"
-msgstr "Hoher Kontrast, invertiert"
+#~ msgid "Default Background"
+#~ msgstr "Voreingestellter Hintergrund"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:2
-msgid "High contrast inverse theme"
-msgstr "Thema mit hohem, invertiertem Kontrast"
+#~ msgid "High Contrast Inverse"
+#~ msgstr "Hoher Kontrast, invertiert"
 
-#: ../themes/LowContrast/index.theme.in.h:1
-msgid "Low Contrast"
-msgstr "Geringer Kontrast"
+#~ msgid "High contrast inverse theme"
+#~ msgstr "Thema mit hohem, invertiertem Kontrast"
 
-#: ../themes/LowContrast/index.theme.in.h:2
-msgid "Low contrast theme"
-msgstr "Thema mit geringem Kontrast"
+#~ msgid "Low Contrast"
+#~ msgstr "Geringer Kontrast"
+
+#~ msgid "Low contrast theme"
+#~ msgstr "Thema mit geringem Kontrast"
