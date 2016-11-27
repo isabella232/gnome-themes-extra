@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-22 19:19+0200\n"
-"PO-Revision-Date: 2016-08-22 19:20+0200\n"
+"POT-Creation-Date: 2016-11-27 17:21+0100\n"
+"PO-Revision-Date: 2016-11-27 17:22+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -21,6 +21,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+msgid "Adwaita-dark"
+msgstr "Adwaita (ciemny)"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+msgid "There was only one"
+msgstr "Może być tylko dwóch"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
