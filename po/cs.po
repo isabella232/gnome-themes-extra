@@ -2,26 +2,30 @@
 # Copyright (C) 2010 gnome-themes-standard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-themes-standard package.
 #
-# Marek Černocký <marek@manet.cz>, 2010, 2011.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"themes-standard&component=general\n"
-"POT-Creation-Date: 2011-03-01 17:06+0000\n"
-"PO-Revision-Date: 2011-03-14 23:15+0100\n"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-11-25 18:29+0000\n"
+"PO-Revision-Date: 2016-11-29 14:31+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
-msgid "Default Background"
-msgstr "Výchozí pozadí"
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+msgid "Adwaita-dark"
+msgstr "Adwaita tmavá"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+msgid "There was only one"
+msgstr "Byla jen jedna"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
@@ -38,19 +42,3 @@ msgstr "Vysoký kontrast"
 #: ../themes/HighContrast/index.theme.in.h:2
 msgid "High contrast theme"
 msgstr "Motiv s vysokým kontrastem"
-
-#: ../themes/HighContrastInverse/index.theme.in.h:1
-msgid "High Contrast Inverse"
-msgstr "Vysoký kontrast inverzně"
-
-#: ../themes/HighContrastInverse/index.theme.in.h:2
-msgid "High contrast inverse theme"
-msgstr "Motiv s vysokým kontrastem a inverzí"
-
-#: ../themes/LowContrast/index.theme.in.h:1
-msgid "Low Contrast"
-msgstr "Nízký kontrast"
-
-#: ../themes/LowContrast/index.theme.in.h:2
-msgid "Low contrast theme"
-msgstr "Motiv s nízkým kontrastem"
