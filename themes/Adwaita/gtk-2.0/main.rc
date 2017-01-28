@@ -2387,6 +2387,11 @@ style "frame" {
 
     image {
       function = SHADOW
+      shadow   = NONE
+    }
+
+    image {
+      function = SHADOW
       file     = "assets/frame.png"
       border   = {1, 1, 1, 1}
       stretch  = TRUE
@@ -2455,17 +2460,6 @@ style "tooltip" {
 
 }
 
-
-style "disable_shadow" {
-
-  engine "pixmap" {
-    image {
-      function = SHADOW
-    }
-  }
-
-}
-
 style "disable_separator" {
 
   xthickness = 0
@@ -2505,11 +2499,6 @@ class "GtkTextView"                                                style "textvi
 widget_class "*<GtkMenuItem>*"                                     style "menu_item"
 widget_class "*<GtkMenuBar>.<GtkMenuItem>*"                        style "menubar_item"
 widget_class "*<GtkSeparatorMenuItem>*"                            style "separator_menu_item"
-
-# Frames in statusbars look ugly, let's disable them
-widget_class "*<GtkStatusbar>*<GtkFrame>"                          style "disable_shadow"
-# Disable the frame around poor Wilbert too
-widget_class "*<GimpToolbox>*<GtkFrame>"                           style "disable_shadow"
 
 # Treeview buttons
 widget_class "*<GtkTreeView>*<GtkButton>*"                         style "treeview_header"
