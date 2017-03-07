@@ -7,10 +7,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-30 22:39+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-11-25 18:29+0000\n"
 "PO-Revision-Date: 2011-03-28 23:59+0000\n"
-"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
-msgid "Default Background"
-msgstr "Standardbaggrund"
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+#| msgid "Adwaita"
+msgid "Adwaita-dark"
+msgstr "Adwaita-mørk"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+#| msgid "There is only one"
+msgid "There was only one"
+msgstr "Der var kun en"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
@@ -37,19 +44,3 @@ msgstr "Høj kontrast"
 #: ../themes/HighContrast/index.theme.in.h:2
 msgid "High contrast theme"
 msgstr "Tema med høj kontrast"
-
-#: ../themes/HighContrastInverse/index.theme.in.h:1
-msgid "High Contrast Inverse"
-msgstr "Omvendt høj kontrast"
-
-#: ../themes/HighContrastInverse/index.theme.in.h:2
-msgid "High contrast inverse theme"
-msgstr "Tema med omvendt høj kontrast"
-
-#: ../themes/LowContrast/index.theme.in.h:1
-msgid "Low Contrast"
-msgstr "Lav kontrast"
-
-#: ../themes/LowContrast/index.theme.in.h:2
-msgid "Low contrast theme"
-msgstr "Tema med lav kontrast"
