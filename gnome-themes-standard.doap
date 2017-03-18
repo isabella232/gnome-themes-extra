@@ -6,12 +6,24 @@
 
   <name xml:lang="en">gnome-themes-standard</name>
   <shortdesc xml:lang="en">Standard Themes for GNOME Applications</shortdesc>
+  <description>This package used to contain various components of the default GNOME 3 theme.
+At this point, most of the contents has moved elsewhere. The Adwaita and
+HighContrast themes are now part of GTK+ 3 itself, and the HighContrastInverse
+and LowConstrast themes have been discontinued. Only the GTK+ 2 versions of
+the Adwaita and HighConstrast themes still reside in this module.</description>
   <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-themes-list" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-themes-standard/" />
   <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=gnome-themes-standard" />
-
   <category rdf:resource="http://api.gnome.org/doap-extensions#core" />
+  <programming-language>gtkrc</programming-language>
 
+  <maintainer>
+    <foaf:Person>
+      <foaf:name>Juraj Fiala</foaf:name>
+      <foaf:mbox rdf:resource="mailto:jurf@riseup.net" />
+      <gnome:userid>jurf</gnome:userid>
+    </foaf:Person>
+  </maintainer>
   <maintainer>
     <foaf:Person>
       <foaf:name>William Jon McCann</foaf:name>
