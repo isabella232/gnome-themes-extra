@@ -60,8 +60,7 @@ so_locations
 stamp-h1
 tags
 themes/Adwaita/index.theme
-themes/Adwaita/backgrounds/*.xml
-themes/Adwaita/backgrounds/adwaita.xml.in
+themes/Adwaita-dark/index.theme
 themes/HighContrast/create-highcontrast
 themes/HighContrast/icons/index.theme
 themes/HighContrast/index.theme
