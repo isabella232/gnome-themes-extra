@@ -2,26 +2,32 @@
 # Copyright (C) 2010 gnome-themes-standard's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-themes-standard package.
 #
-# A S Alam <aalam@users.sf.net>, 2010, 2011.
+# A S Alam <aalam@users.sf.net>, 2010, 2011, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=gnome-themes-standard&component=general\n"
-"POT-Creation-Date: 2011-03-01 17:06+0000\n"
-"PO-Revision-Date: 2011-03-03 08:24+0530\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-t"
+"hemes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-26 07:57+0000\n"
+"PO-Revision-Date: 2017-09-08 19:00-0600\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
-"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"Language: pa\n"
 
-#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
-msgid "Default Background"
-msgstr "ਡਿਫਾਲਟ ਬੈਕਗਰਾਊਂਡ"
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+#| msgid "Adwaita"
+msgid "Adwaita-dark"
+msgstr "ਅਡਵੇਟਾ-ਗੂੜ੍ਹਾ"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+#| msgid "There is only one"
+msgid "There was only one"
+msgstr "ਸਿਰਫ਼ ਇੱਕ ਹੀ ਸੀ"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
@@ -39,19 +45,17 @@ msgstr "ਵੱਧ ਕਨਟਰਾਸਟ"
 msgid "High contrast theme"
 msgstr "ਵੱਧ ਕਨਟਰਾਸਟ ਥੀਮ"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:1
-msgid "High Contrast Inverse"
-msgstr "ਵਧੇਰੇ ਵਖਰੇਵਾਂ ਉਲਟ"
+#~ msgid "Default Background"
+#~ msgstr "ਡਿਫਾਲਟ ਬੈਕਗਰਾਊਂਡ"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:2
-msgid "High contrast inverse theme"
-msgstr "ਵਧੇਰੇ ਵਖਰੇਵਾਂ ਉਲਟ ਥੀਮ"
+#~ msgid "High Contrast Inverse"
+#~ msgstr "ਵਧੇਰੇ ਵਖਰੇਵਾਂ ਉਲਟ"
 
-#: ../themes/LowContrast/index.theme.in.h:1
-msgid "Low Contrast"
-msgstr "ਘੱਟ ਕਨਟਰਾਸਟ"
+#~ msgid "High contrast inverse theme"
+#~ msgstr "ਵਧੇਰੇ ਵਖਰੇਵਾਂ ਉਲਟ ਥੀਮ"
 
-#: ../themes/LowContrast/index.theme.in.h:2
-msgid "Low contrast theme"
-msgstr "ਘੱਟ ਕਨਟਰਾਸਟ ਥੀਮ"
+#~ msgid "Low Contrast"
+#~ msgstr "ਘੱਟ ਕਨਟਰਾਸਟ"
 
+#~ msgid "Low contrast theme"
+#~ msgstr "ਘੱਟ ਕਨਟਰਾਸਟ ਥੀਮ"
