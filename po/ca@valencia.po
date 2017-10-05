@@ -5,21 +5,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-29 18:42+0200\n"
-"PO-Revision-Date: 2011-03-25 00:04+0100\n"
-"Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"themes-standard&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-08-22 07:03+0000\n"
+"PO-Revision-Date: 2017-08-21 23:31+0200\n"
+"Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>\n"
 "Language-Team: Catalan <gnome-dl@llistes.softcatala.org>\n"
-"Language: ca@valencia\n"
+"Language: ca-valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
-msgid "Default Background"
-msgstr "Fons d'escriptori predeterminat"
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+msgid "Adwaita-dark"
+msgstr "Adwaita-fosc"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+msgid "There was only one"
+msgstr "Només n'hi havia un"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
@@ -37,18 +42,17 @@ msgstr "Alt contrast"
 msgid "High contrast theme"
 msgstr "Tema d'alt contrast"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:1
-msgid "High Contrast Inverse"
-msgstr "Alt contrast invers"
+#~ msgid "Default Background"
+#~ msgstr "Fons d'escriptori predeterminat"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:2
-msgid "High contrast inverse theme"
-msgstr "Tema d'alt contrast invers"
+#~ msgid "High Contrast Inverse"
+#~ msgstr "Alt contrast invers"
 
-#: ../themes/LowContrast/index.theme.in.h:1
-msgid "Low Contrast"
-msgstr "Poc contrast"
+#~ msgid "High contrast inverse theme"
+#~ msgstr "Tema d'alt contrast invers"
 
-#: ../themes/LowContrast/index.theme.in.h:2
-msgid "Low contrast theme"
-msgstr "Tema de poc contrast"
+#~ msgid "Low Contrast"
+#~ msgstr "Poc contrast"
+
+#~ msgid "Low contrast theme"
+#~ msgstr "Tema de poc contrast"
