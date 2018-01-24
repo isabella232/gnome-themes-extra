@@ -4,13 +4,23 @@
          xmlns:gnome="http://api.gnome.org/doap-extensions#"
          xmlns="http://usefulinc.com/ns/doap#">
 
-  <name xml:lang="en">gnome-themes-standard</name>
-  <shortdesc xml:lang="en">Standard Themes for GNOME Applications</shortdesc>
-  <description>This package used to contain various components of the default GNOME 3 theme.
-At this point, most of the contents has moved elsewhere. The Adwaita and
-HighContrast themes are now part of GTK+ 3 itself, and the HighContrastInverse
-and LowConstrast themes have been discontinued. Only the GTK+ 2 versions of
-the Adwaita and HighConstrast themes still reside in this module.</description>
+  <name xml:lang="en">GNOME Extra Themes</name>
+  <shortdesc xml:lang="en">Extra GNOME themes and theme-y tidbits</shortdesc>
+  <description>This module houses themes and theme-y tidbits that don’t really fit in anywhere
+else, or deserve their own module. At the moment this consists of:
+
+ * the GTK+ 2 version of Adwaita
+ * Adwaita-dark as a separate theme, along with its GTK+ 2 equivalent
+ * GTK+ 2 versions of the HighContrast themes
+ * index files needed for Adwaita to be used outside of GNOME
+
+Once named gnome-themes-standard, this module used to contain various
+components of the default GNOME 3 theme. However, at this point, most it has
+moved elsewhere. The GTK+ 3 versions of the Adwaita and HighContrast themes are
+now part of GTK+ 3 itself, and the HighContrastInverse and LowConstrast themes
+have been discontinued.
+
+Not to be confused with gnome-themes-extras.</description>
   <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-themes-list" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-themes-standard/" />
   <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=gnome-themes-standard" />
