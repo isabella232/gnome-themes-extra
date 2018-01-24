@@ -1,4 +1,4 @@
-gnome-themes-extra
+GNOME Extra Themes
 ==================
 
 This module houses themes and theme-y tidbits that don’t really fit in anywhere
