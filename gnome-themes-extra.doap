@@ -21,9 +21,9 @@ now part of GTK+ 3 itself, and the HighContrastInverse and LowConstrast themes
 have been discontinued.
 
 Not to be confused with gnome-themes-extras.</description>
-  <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-themes-list" />
-  <download-page rdf:resource="http://download.gnome.org/sources/gnome-themes-standard/" />
-  <bug-database rdf:resource="http://bugzilla.gnome.org/browse.cgi?product=gnome-themes-standard" />
+  <mailing-list rdf:resource="https://mail.gnome.org/mailman/listinfo/gnome-themes-list" />
+  <download-page rdf:resource="https://download.gnome.org/sources/gnome-themes-standard/" />
+  <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-themes-extra/issues" />
   <category rdf:resource="http://api.gnome.org/doap-extensions#core" />
   <programming-language>gtkrc</programming-language>
 
