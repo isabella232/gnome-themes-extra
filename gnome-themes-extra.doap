@@ -9,10 +9,11 @@
   <description>This module houses themes and theme-y tidbits that don’t really fit in anywhere
 else, or deserve their own module. At the moment this consists of:
 
- * the GTK+ 2 version of Adwaita
+ * The GTK+ 2 version of Adwaita
  * Adwaita-dark as a separate theme, along with its GTK+ 2 equivalent
  * GTK+ 2 versions of the HighContrast themes
- * index files needed for Adwaita to be used outside of GNOME
+ * The legacy HighContrast icon theme
+ * Index files needed for Adwaita to be used outside of GNOME
 
 Once named gnome-themes-standard, this module used to contain various
 components of the default GNOME 3 theme. However, at this point, most it has
