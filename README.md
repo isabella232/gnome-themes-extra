@@ -25,7 +25,7 @@ You can report issues you find on GNOME’s [GitLab][1], or chat about them on
 [IRC][2], in [#gnome-design][3].
 
 But please, if you are experiencing issues with the default GTK+ 3 themes,
-please report them [over at GTK+][4].
+report them [over at GTK+][4].
 
 [1]: https://gitlab.gnome.org/GNOME/gnome-themes-extra/issues
 [2]: https://wiki.gnome.org/Community/GettingInTouch/IRC
