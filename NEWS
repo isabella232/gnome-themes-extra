@@ -1,3 +1,12 @@
+3.27.90
+=======
+- rename to gnome-themes-extra
+- update README.md, various metafile updates
+- fix out-of-tree HC builds (Alexandre Rostovtsev)
+- use zopflipng (Ville Skyttä)
+- icon theme metadata updates (Jeremy Bicha, Dariusz Gadomski)
+- translation updates
+
 3.22.3
 ======
 - dark theme fix
