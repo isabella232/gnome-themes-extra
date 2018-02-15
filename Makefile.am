@@ -2,6 +2,10 @@ SUBDIRS = themes po
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
+EXTRA_DIST =			\
+	README.md		\
+	LICENSE
+
 MAINTAINERCLEANFILES =			\
 	Makefile.in			\
 	aclocal.m4			\
