@@ -1,3 +1,7 @@
+3.27.92
+=======
+- distribute README.md and LICENSE (again)
+
 3.27.90.1
 =========
 - update configure.ac to new name
