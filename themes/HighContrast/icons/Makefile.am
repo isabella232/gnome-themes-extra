@@ -3,10 +3,10 @@ theme_DATA = index.theme
 
 render_sizes = "16x16" "22x22" "24x24" "32x32" "48x48" "256x256" "scalable"
 
-THEME_DIRS=$(shell SIZES="$(render_sizes)"; for size in $$SIZES; do for dir in `find $(srcdir)/$$size/* -type d`; do printf "$$dir,"; done; done;)
+THEME_DIRS=$(shell set -e; cd "$(srcdir)"; SIZES="$(render_sizes)"; for size in $$SIZES; do for dir in `find $$size/* -type d`; do printf "$$dir,"; done; done;)
 
 %.theme: %.theme.in Makefile
-	dirs="`echo $(THEME_DIRS) | sed -e \"s#$(srcdir)/*##g\"`"; \
+	dirs="$(THEME_DIRS)"; \
 	sed -e "s|\@THEME_DIRS\@|$$dirs|g" < $< > $@; \
 	echo "" >> $@; \
 	for dir in `echo $$dirs | sed -e "s/,/ /g"`; do \
