@@ -1,3 +1,8 @@
+3.28
+====
+- fix HC index.theme generation (#17)
+- fix typo (!3)
+
 3.27.92
 =======
 - distribute README.md and LICENSE (again)
