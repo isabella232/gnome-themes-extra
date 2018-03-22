@@ -13,7 +13,7 @@ else, or deserve their own module. At the moment this consists of:
 Once named `gnome-themes-standard`, this module used to contain various
 components of the default GNOME 3 theme. However, at this point, most it has
 moved elsewhere. The GTK+ 3 versions of the Adwaita and HighContrast themes are
-now part of GTK+ 3 itself, and the HighContrastInverse and LowConstrast themes
+now part of GTK+ 3 itself, and the HighContrastInverse and LowContrast themes
 have been discontinued.
 
 Not to be confused with `gnome-themes-extras`.
