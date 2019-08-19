@@ -5,11 +5,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-themes-standard master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"themes-standard&component=general\n"
-"POT-Creation-Date: 2011-03-01 17:06+0000\n"
-"PO-Revision-Date: 2011-03-14 02:10+0200\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-themes-extra/"
+"issues\n"
+"POT-Creation-Date: 2018-03-22 17:32+0000\n"
+"PO-Revision-Date: 2019-08-19 13:40+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
+"com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
-#: ../themes/Adwaita/backgrounds/adwaita.xml.in.in.h:1
-msgid "Default Background"
-msgstr "Fundal implicit"
+#: ../themes/Adwaita-dark/index.theme.in.h:1
+msgid "Adwaita-dark"
+msgstr "Adwaita-închis"
+
+#: ../themes/Adwaita-dark/index.theme.in.h:2
+msgid "There was only one"
+msgstr "Exista doar unul singur"
 
 #: ../themes/Adwaita/index.theme.in.h:1
 msgid "Adwaita"
@@ -39,18 +44,17 @@ msgstr "Contrast puternic"
 msgid "High contrast theme"
 msgstr "Temă cu contrast puternic"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:1
-msgid "High Contrast Inverse"
-msgstr "Contrast puternic inversat"
+#~ msgid "Default Background"
+#~ msgstr "Fundal implicit"
 
-#: ../themes/HighContrastInverse/index.theme.in.h:2
-msgid "High contrast inverse theme"
-msgstr "Temă cu contrast puternic inversat"
+#~ msgid "High Contrast Inverse"
+#~ msgstr "Contrast puternic inversat"
 
-#: ../themes/LowContrast/index.theme.in.h:1
-msgid "Low Contrast"
-msgstr "Contrast scăzut"
+#~ msgid "High contrast inverse theme"
+#~ msgstr "Temă cu contrast puternic inversat"
 
-#: ../themes/LowContrast/index.theme.in.h:2
-msgid "Low contrast theme"
-msgstr "Temă cu contrast scăzut"
+#~ msgid "Low Contrast"
+#~ msgstr "Contrast scăzut"
+
+#~ msgid "Low contrast theme"
+#~ msgstr "Temă cu contrast scăzut"
